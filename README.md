@@ -1,5 +1,11 @@
 # Xylomorphic Infrastructure: Thermodynamic and Cognitive Foundations of Stable AI Systems
 
+[The Moon Should Not Be a Computer](https://standardgalactic.github.io/computation/moon-not-computer.pdf)
+
+[Xylomorphic Computation](https://standardgalactic.github.io/computation/xylomorphic-computation.pdf)
+
+* [Audio Overviews](https://standardgalactic.github.io/computation/) – Why AI Servers Fail in Space *and* Why Data Centers Must Mimic Trees
+
 This repository presents a unified framework for understanding artificial intelligence infrastructure as a thermodynamic and semantic system rather than a purely informational or computational one. The central thesis is that long-term stability in AI systems requires xylomorphic integration, in which computational residues—especially heat—are recursively reintegrated as substrates for future operation.
 
 The documents in this repository develop this idea across multiple domains, including thermodynamics, infrastructure engineering, epistemology, and regulatory policy. Together, they articulate a theory of dual closure, defined as the simultaneous achievement of thermodynamic contraction (λ < 1) and informational exogeneity.
