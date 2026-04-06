@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Moon Should Not Be a Computer</title>
+<title>Xylomorphic Infrastructure</title>
 
 <style>
 
@@ -21,9 +21,7 @@ max-width:900px;
 margin:auto;
 }
 
-h2{
-margin-bottom:10px;
-}
+h2{ margin-bottom:10px; }
 
 /* ===== description ===== */
 
@@ -32,10 +30,20 @@ font-size:0.9em;
 line-height:1.5em;
 color:#aaffaa;
 max-width:800px;
-margin-bottom:25px;
+margin-bottom:20px;
 border:1px solid #00ff0030;
 padding:14px;
 background:#001000;
+}
+
+/* ===== selector ===== */
+
+select{
+margin-bottom:20px;
+background:#001400;
+border:1px solid #00ff00;
+color:#7cff7c;
+padding:6px 10px;
 }
 
 /* ===== portal ===== */
@@ -106,10 +114,16 @@ padding:12px;
 margin-top:15px;
 }
 
-/* ===== link ===== */
+/* ===== links ===== */
+
+.links{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:8px;
+}
 
 a{
-margin-top:20px;
 color:#7cff7c;
 text-decoration:none;
 border-bottom:1px solid #00ff00;
@@ -124,11 +138,13 @@ color:#aaffaa;
 
 <body>
 
-<h2>The Moon Should Not Be a Computer</h2>
+<h2>Xylomorphic Infrastructure</h2>
 
 <div class="description">
-The paper <b>"The Moon Should Not Be a Computer"</b> argues against relocating AI infrastructure to space, suggesting instead that computation must be integrated into terrestrial ecosystems. The author introduces <b>xylomorphic computation</b>, a framework where AI systems are designed to recycle their own thermal and material byproducts, effectively turning "waste" heat into a resource. By applying the <b>xylomorphic order parameter (λ)</b>, the text demonstrates that orbital compute projects are fundamentally unstable because they lack the ability to reintegrate energy and information. This lack of closure is mirrored in cognitive development, where over-reliance on AI can prematurely fix a learner's reasoning within a narrow <b>attractor basin</b> of the model's own making. Ultimately, the source advocates for <b>dual closure</b>, requiring that large-scale AI maintain both thermodynamic efficiency and epistemic independence from its users. Stable scaling is only possible for systems that operate in a <b>contractive regime</b>, treating every output as a substrate for future growth.
+Xylomorphic computation proposes that infrastructure should behave like living systems, recycling heat and material outputs into future structure. Instead of exporting entropy, stable systems reintegrate it. This stands in contrast to orbital compute proposals, which lack closure and therefore accumulate unresolved thermodynamic debt.
 </div>
+
+<select id="track"></select>
 
 <div class="scope-wrap">
 <canvas id="scope"></canvas>
@@ -137,20 +153,52 @@ The paper <b>"The Moon Should Not Be a Computer"</b> argues against relocating A
 
 <div id="captions" class="captions"></div>
 
-<audio id="audio" src="Why_AI_servers_fail_in_space.mp3">
-<track kind="captions" src="Why_AI_servers_fail_in_space.vtt" default>
-</audio>
+<audio id="audio"></audio>
 
-<a href="moon-not-computer.pdf" target="_blank">
-Read the Essay
-</a>
+<div class="links">
+<a href="xylomorphic-infrastructure.pdf" target="_blank">Xylomorphic Infrastructure</a>
+<a href="moon-not-computer.pdf" target="_blank">The Moon Should Not Be a Computer</a>
+</div>
 
 <script>
 
-/* ===== audio ===== */
+/* ===== playlist ===== */
+
+const playlist = [
+{
+audio:"Why-data-centers-must-mimic-trees.mp3",
+vtt:"Why-data-centers-must-mimic-trees.vtt"
+},
+{
+audio:"Why_AI_servers_fail_in_space.mp3",
+vtt:"Why_AI_servers_fail_in_space.vtt"
+}
+]
+
+let current = 0
+
+/* ===== elements ===== */
 
 const audio = document.getElementById("audio")
 const captions = document.getElementById("captions")
+const trackSelect = document.getElementById("track")
+
+/* ===== helper ===== */
+
+function pretty(f){
+return f.replace(".mp3","").replace(/_/g," ").replace(/-/g," ")
+}
+
+/* ===== populate selector ===== */
+
+playlist.forEach((t,i)=>{
+const opt=document.createElement("option")
+opt.value=i
+opt.textContent=pretty(t.audio)
+trackSelect.appendChild(opt)
+})
+
+/* ===== audio ===== */
 
 let audioCtx, analyser, buffer, source
 
@@ -158,57 +206,93 @@ function initAudio(){
 
 if(audioCtx) return
 
-audioCtx = new (window.AudioContext||window.webkitAudioContext)()
+audioCtx=new(window.AudioContext||window.webkitAudioContext)()
 
-analyser = audioCtx.createAnalyser()
-analyser.fftSize = 2048
+analyser=audioCtx.createAnalyser()
+analyser.fftSize=2048
 
-source = audioCtx.createMediaElementSource(audio)
+source=audioCtx.createMediaElementSource(audio)
 
-const gain = audioCtx.createGain()
+const gain=audioCtx.createGain()
 
 source.connect(analyser)
 analyser.connect(gain)
 gain.connect(audioCtx.destination)
 
-/* playback characteristics */
-audio.playbackRate = 0.92
-audio.preservesPitch = false
-if(source.detune){
-source.detune.value = -300
+/* fixed characteristics */
+audio.playbackRate=0.92
+audio.preservesPitch=false
+if(source.detune) source.detune.value=-300
+
+buffer=new Uint8Array(analyser.fftSize)
+
 }
 
-buffer = new Uint8Array(analyser.fftSize)
+/* ===== load track ===== */
 
+function loadTrack(i){
+
+current=i
+trackSelect.value=i
+
+audio.pause()
+
+audio.src=playlist[i].audio
+audio.innerHTML=`<track kind="captions" src="${playlist[i].vtt}" default>`
+
+captions.textContent=""
+
+audio.load()
+
+audio.addEventListener("loadedmetadata",()=>{
+attachTrack()
+},{once:true})
+
+}
+
+/* ===== selector ===== */
+
+trackSelect.onchange=(e)=>{
+loadTrack(parseInt(e.target.value))
+audio.play()
 }
 
 /* ===== subtitles ===== */
 
-audio.addEventListener("loadedmetadata", ()=>{
-const track = audio.textTracks[0]
-if(!track) return
-track.mode="hidden"
-track.oncuechange=()=>{
-const cue = track.activeCues[0]
-captions.textContent = cue ? cue.text : ""
+function attachTrack(){
+const t=audio.textTracks[0]
+if(!t) return
+t.mode="hidden"
+t.oncuechange=()=>{
+const cue=t.activeCues[0]
+captions.textContent=cue?cue.text:""
+}
+}
+
+/* ===== autoplay chain ===== */
+
+audio.addEventListener("ended",()=>{
+if(current<playlist.length-1){
+loadTrack(current+1)
+audio.play()
 }
 })
 
-/* ===== autoplay trigger ===== */
+/* ===== start ===== */
 
-document.body.addEventListener("click", ()=>{
+document.body.addEventListener("click",()=>{
 initAudio()
 audioCtx.resume().then(()=>audio.play())
 },{once:true})
 
 /* ===== canvas ===== */
 
-const canvas = document.getElementById("scope")
-const ctx = canvas.getContext("2d")
+const canvas=document.getElementById("scope")
+const ctx=canvas.getContext("2d")
 
-const dpr = window.devicePixelRatio || 1
-canvas.width = 330*dpr
-canvas.height = 330*dpr
+const dpr=window.devicePixelRatio||1
+canvas.width=330*dpr
+canvas.height=330*dpr
 ctx.setTransform(dpr,0,0,dpr,0,0)
 
 /* ===== entropy ===== */
@@ -237,9 +321,9 @@ if(analyser){
 
 analyser.getByteTimeDomainData(buffer)
 
-const e = entropy(buffer)
-eSmooth += (e - eSmooth)*0.05
-const en = Math.min(eSmooth/5000,1)
+const e=entropy(buffer)
+eSmooth+=(e-eSmooth)*0.05
+const en=Math.min(eSmooth/5000,1)
 
 ctx.fillStyle="rgba(0,0,0,0.18)"
 ctx.fillRect(0,0,330,330)
@@ -251,14 +335,10 @@ for(let i=0;i<buffer.length;i++){
 const t=i/buffer.length*2*Math.PI
 const a=(buffer[i]-128)/128
 
-const f1=3+en*2
-const f2=4+en*3
+const shimmer=en*8
 
-/* thermal shimmer distortion */
-const shimmer = en * 8
-
-const x=Math.sin(f1*t + phase + Math.sin(t*6)*shimmer)*a*140*(1+en*0.4)
-const y=Math.sin(f2*t + Math.cos(t*5)*shimmer)*a*140*(1+en*0.4)
+const x=Math.sin((3+en*2)*t+phase+Math.sin(t*6)*shimmer)*a*140*(1+en*0.4)
+const y=Math.sin((4+en*3)*t+Math.cos(t*5)*shimmer)*a*140*(1+en*0.4)
 
 const px=165+x
 const py=165+y
@@ -275,8 +355,8 @@ ctx.shadowBlur=15+en*25
 ctx.stroke()
 ctx.shadowBlur=0
 
-phase += 0.01 + en*0.025
-colorPhase += 0.01
+phase+=0.01+en*0.025
+colorPhase+=0.01
 
 }
 
@@ -286,9 +366,9 @@ requestAnimationFrame(draw)
 
 draw()
 
-audio.addEventListener("error",()=>{
-captions.textContent="Audio failed to load."
-})
+/* ===== init ===== */
+
+loadTrack(0)
 
 </script>
 
