@@ -1,5 +1,3 @@
-(Transcribed by TurboScribe. Go Unlimited to remove this message.)
-
 Think about the space heater sitting in your living room right now, or I don't know, maybe the boiler in your basement, or even a massive industrial smokestack on the edge of town. When you look at those things, or just, you know, feel the heat coming off them, you have a deeply ingrained, intuitive understanding of what you are experiencing. Right, it's a very visceral thing.
 
 Exactly. You are experiencing either the intentional generation of heat, or the messy, unavoidable byproduct of just getting something done. And for the entire history of the digital age, we've looked at the blistering hot air blowing out the back of our computers in the exact same way.
@@ -18,7 +16,7 @@ They basically want to launch the problem into the void. But what if that entire
 
 Right. We are treating computation like a 19th century coal plant when the physics suggests it needs to be treated like an entirely different category of system. Welcome to our deep dive.
 
-Get ready, because we are completely flipping the script on the physical architecture of the Internet today. OK, let's unpack this. Today, we are exploring a really dense, highly rigorous and frankly, paradigm shifting 2025 paper by an independent researcher named Fliction.
+Get ready, because we are completely flipping the script on the physical architecture of the Internet today. OK, let's unpack this. Today, we are exploring a really dense, highly rigorous and frankly, paradigm shifting 2025 paper by an independent researcher named Flyxion.
 
 It's titled Xylomorphic Computation. And we really need to set expectations clearly up front here, because this isn't some fluffy tech blog post about, you know, buying carbon offsets or making servers 5 percent more energy efficient. No, not at all. 
 
@@ -266,6 +264,4 @@ Are the resources, the spare parts, the economic capital, the technicians moving
 
 They run a specific numerical simulation for a steady state system and they find a terrifyingly exact threshold. Let's talk about the 36 percent line. Right. 
 
-Fliction calculates a scenario assuming a baseline degradation rate of 0.5 and a system cycle time of one.
-
-(This file is longer than 30 minutes. Go Unlimited at https://turboscribe.ai/ to transcribe files up to 10 hours long.)
+Flyxion calculates a scenario assuming a baseline degradation rate of 0.5 and a system cycle time of one.
