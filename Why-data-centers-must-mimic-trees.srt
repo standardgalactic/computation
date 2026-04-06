@@ -1,0 +1,3463 @@
+1
+00:00:00,230 --> 00:00:01,910
+(Transcribed by TurboScribe. Go Unlimited to remove this message.) Think about the space heater sitting in your
+
+2
+00:00:01,910 --> 00:00:03,690
+living room right now, or I don't know,
+
+3
+00:00:03,750 --> 00:00:05,270
+maybe the boiler in your basement, or even
+
+4
+00:00:05,270 --> 00:00:07,810
+a massive industrial smokestack on the edge of
+
+5
+00:00:07,810 --> 00:00:08,050
+town.
+
+6
+00:00:08,450 --> 00:00:10,550
+When you look at those things, or just,
+
+7
+00:00:10,610 --> 00:00:12,770
+you know, feel the heat coming off them,
+
+8
+00:00:13,190 --> 00:00:17,050
+you have a deeply ingrained, intuitive understanding of
+
+9
+00:00:17,050 --> 00:00:18,110
+what you are experiencing.
+
+10
+00:00:18,230 --> 00:00:19,610
+Right, it's a very visceral thing.
+
+11
+00:00:19,970 --> 00:00:20,410
+Exactly.
+
+12
+00:00:20,630 --> 00:00:23,630
+You are experiencing either the intentional generation of
+
+13
+00:00:23,630 --> 00:00:27,130
+heat, or the messy, unavoidable byproduct of just
+
+14
+00:00:27,130 --> 00:00:28,150
+getting something done.
+
+15
+00:00:28,810 --> 00:00:30,710
+And for the entire history of the digital
+
+16
+00:00:30,710 --> 00:00:33,210
+age, we've looked at the blistering hot air
+
+17
+00:00:33,210 --> 00:00:34,650
+blowing out the back of our computers in
+
+18
+00:00:34,650 --> 00:00:35,750
+the exact same way.
+
+19
+00:00:36,110 --> 00:00:37,950
+Yeah, as just, well, garbage.
+
+20
+00:00:38,070 --> 00:00:38,230
+Right.
+
+21
+00:00:38,370 --> 00:00:38,990
+It's exhaust.
+
+22
+00:00:39,150 --> 00:00:41,330
+It's the thermodynamic garbage of playing a video
+
+23
+00:00:41,330 --> 00:00:42,530
+game or rendering a video.
+
+24
+00:00:42,950 --> 00:00:45,870
+But we are rapidly approaching a physical wall
+
+25
+00:00:45,870 --> 00:00:49,170
+here, because artificial intelligence, massive language models, and
+
+26
+00:00:49,170 --> 00:00:52,150
+global scale computation are currently devouring energy at
+
+27
+00:00:52,150 --> 00:00:53,290
+just a staggering rate.
+
+28
+00:00:53,730 --> 00:00:57,450
+We are looking at estimated figures of 200
+
+29
+00:00:57,450 --> 00:01:00,470
+to 500 terawatt hours annually, just to keep
+
+30
+00:01:00,470 --> 00:01:01,210
+the servers running.
+
+31
+00:01:01,790 --> 00:01:03,610
+And just to put that into perspective for
+
+32
+00:01:03,610 --> 00:01:07,490
+a second, 500 terawatt hours is significantly more
+
+33
+00:01:07,490 --> 00:01:09,870
+electricity than the entire country of the United
+
+34
+00:01:09,870 --> 00:01:11,350
+Kingdom uses in a year.
+
+35
+00:01:11,510 --> 00:01:12,070
+Wow.
+
+36
+00:01:12,230 --> 00:01:13,850
+I mean, it's a planetary scale footprint.
+
+37
+00:01:14,210 --> 00:01:18,270
+We are essentially running a medium sized industrialized
+
+38
+00:01:18,270 --> 00:01:21,990
+nation that produces absolutely nothing but invisible math
+
+39
+00:01:21,990 --> 00:01:22,850
+and blistering heat.
+
+40
+00:01:23,450 --> 00:01:25,350
+And the tech industry is panicking about the
+
+41
+00:01:25,350 --> 00:01:26,050
+heat specifically.
+
+42
+00:01:26,310 --> 00:01:28,570
+I mean, you see these multi-billion dollar
+
+43
+00:01:28,570 --> 00:01:33,130
+proposals, entirely serious engineering initiatives, being floated right
+
+44
+00:01:33,130 --> 00:01:36,430
+now to literally load massive server farms onto
+
+45
+00:01:36,430 --> 00:01:36,890
+rockets.
+
+46
+00:01:36,910 --> 00:01:38,370
+Yeah, the orbital data centers.
+
+47
+00:01:38,470 --> 00:01:38,750
+Yes.
+
+48
+00:01:39,110 --> 00:01:41,670
+They want to shoot data centers into Earth
+
+49
+00:01:41,670 --> 00:01:43,610
+orbit or build them in the craters of
+
+50
+00:01:43,610 --> 00:01:45,430
+the moon just to get their waste heat
+
+51
+00:01:45,430 --> 00:01:46,190
+away from our atmosphere.
+
+52
+00:01:46,410 --> 00:01:48,310
+They basically want to launch the problem into
+
+53
+00:01:48,310 --> 00:01:48,750
+the void.
+
+54
+00:01:49,710 --> 00:01:51,810
+But what if that entire premise, the very
+
+55
+00:01:51,810 --> 00:01:53,890
+idea that the heat coming off a microchip
+
+56
+00:01:53,890 --> 00:01:55,710
+is like waste to be ejected?
+
+57
+00:01:56,130 --> 00:01:59,490
+What if that is scientifically, mathematically and thermodynamically
+
+58
+00:01:59,490 --> 00:02:00,050
+backwards?
+
+59
+00:02:00,470 --> 00:02:02,190
+Which is exactly what we're looking at today.
+
+60
+00:02:02,570 --> 00:02:04,730
+Because what if the exhaust isn't the problem,
+
+61
+00:02:04,910 --> 00:02:07,370
+but literally the only possible solution?
+
+62
+00:02:07,789 --> 00:02:10,650
+We might be actively spending billions of dollars
+
+63
+00:02:10,650 --> 00:02:12,990
+trying to solve a problem that we fundamentally
+
+64
+00:02:12,990 --> 00:02:14,910
+misunderstand at a physics level.
+
+65
+00:02:14,910 --> 00:02:15,230
+Right.
+
+66
+00:02:15,330 --> 00:02:17,870
+We are treating computation like a 19th century
+
+67
+00:02:17,870 --> 00:02:20,750
+coal plant when the physics suggests it needs
+
+68
+00:02:20,750 --> 00:02:22,730
+to be treated like an entirely different category
+
+69
+00:02:22,730 --> 00:02:23,310
+of system.
+
+70
+00:02:23,490 --> 00:02:24,750
+Welcome to our deep dive.
+
+71
+00:02:24,970 --> 00:02:27,370
+Get ready, because we are completely flipping the
+
+72
+00:02:27,370 --> 00:02:29,450
+script on the physical architecture of the Internet
+
+73
+00:02:29,450 --> 00:02:29,750
+today.
+
+74
+00:02:29,930 --> 00:02:30,990
+OK, let's unpack this.
+
+75
+00:02:31,750 --> 00:02:34,690
+Today, we are exploring a really dense, highly
+
+76
+00:02:34,690 --> 00:02:40,070
+rigorous and frankly, paradigm shifting 2025 paper by
+
+77
+00:02:40,070 --> 00:02:42,010
+an independent researcher named Fliction.
+
+78
+00:02:42,290 --> 00:02:44,770
+It's titled Xylomorphic Computation.
+
+79
+00:02:44,910 --> 00:02:47,430
+And we really need to set expectations clearly
+
+80
+00:02:47,430 --> 00:02:49,750
+up front here, because this isn't some fluffy
+
+81
+00:02:49,750 --> 00:02:52,550
+tech blog post about, you know, buying carbon
+
+82
+00:02:52,550 --> 00:02:54,770
+offsets or making servers 5 percent more energy
+
+83
+00:02:54,770 --> 00:02:55,090
+efficient.
+
+84
+00:02:55,230 --> 00:02:55,750
+No, not at all.
+
+85
+00:02:55,990 --> 00:02:58,410
+This is a formidable piece of theoretical physics
+
+86
+00:02:58,410 --> 00:02:59,890
+and infrastructure engineering.
+
+87
+00:03:00,290 --> 00:03:02,610
+We are going to be diving into categorical
+
+88
+00:03:02,610 --> 00:03:07,150
+resource theory, thermodynamics, partial differential equations and the
+
+89
+00:03:07,150 --> 00:03:09,270
+fundamental laws of the universe applied to silicon.
+
+90
+00:03:09,270 --> 00:03:12,610
+Yeah, the central thesis Fliction puts forward is
+
+91
+00:03:12,610 --> 00:03:15,010
+that if we want our digital infrastructure to
+
+92
+00:03:15,010 --> 00:03:18,250
+survive its own thermodynamic appetite, if we want
+
+93
+00:03:18,250 --> 00:03:20,450
+the AI revolution to not simply burn itself
+
+94
+00:03:20,450 --> 00:03:22,910
+out, we have to stop treating computation like
+
+95
+00:03:22,910 --> 00:03:24,850
+a factory that produces a product and a
+
+96
+00:03:24,850 --> 00:03:25,310
+waste stream.
+
+97
+00:03:25,590 --> 00:03:27,490
+We have to start treating it like a
+
+98
+00:03:27,490 --> 00:03:31,070
+living, self-sustaining organism, specifically a tree.
+
+99
+00:03:31,370 --> 00:03:31,750
+Right.
+
+100
+00:03:32,130 --> 00:03:33,510
+And the author doesn't just use this as
+
+101
+00:03:33,510 --> 00:03:34,510
+a poetic metaphor either.
+
+102
+00:03:34,770 --> 00:03:36,610
+They use some of the heaviest math available
+
+103
+00:03:36,610 --> 00:03:38,570
+to prove it is structurally mandatory.
+
+104
+00:03:38,570 --> 00:03:41,110
+So our mission today is to understand that
+
+105
+00:03:41,110 --> 00:03:43,810
+math, to grasp why a data center in
+
+106
+00:03:43,810 --> 00:03:45,930
+space is just a terrible idea, and to
+
+107
+00:03:45,930 --> 00:03:49,070
+figure out how a computer can somehow grow
+
+108
+00:03:49,070 --> 00:03:50,330
+its own replacement parts.
+
+109
+00:03:50,630 --> 00:03:52,050
+But to get to the tree, we actually
+
+110
+00:03:52,050 --> 00:03:54,070
+have to start with a concept from 1961.
+
+111
+00:03:54,610 --> 00:03:55,090
+Landauer's principle.
+
+112
+00:03:55,370 --> 00:03:55,690
+Right.
+
+113
+00:03:55,970 --> 00:03:58,890
+Because the paper launches its argument by attacking
+
+114
+00:03:58,890 --> 00:04:02,210
+something Fliction calls the heat misclassification.
+
+115
+00:04:02,990 --> 00:04:05,810
+Now, I hear Landauer's principle thrown around a
+
+116
+00:04:05,810 --> 00:04:07,730
+lot when people talk about microchips, usually as
+
+117
+00:04:07,730 --> 00:04:09,690
+a sort of ultimate speed limit for computers.
+
+118
+00:04:10,030 --> 00:04:11,950
+But let's actually break down the mechanics of
+
+119
+00:04:11,950 --> 00:04:12,050
+it.
+
+120
+00:04:12,430 --> 00:04:14,070
+Why does a computer get hot?
+
+121
+00:04:14,250 --> 00:04:16,170
+It's not just bad wiring or friction from
+
+122
+00:04:16,170 --> 00:04:16,870
+the cooling fans.
+
+123
+00:04:17,029 --> 00:04:17,829
+Yeah, not at all.
+
+124
+00:04:17,870 --> 00:04:20,170
+It has absolutely nothing to do with engineering
+
+125
+00:04:20,170 --> 00:04:20,890
+inefficiencies.
+
+126
+00:04:21,690 --> 00:04:23,690
+Rolf Landauer, who was working at IBM in
+
+127
+00:04:23,690 --> 00:04:26,990
+the early 60s, discovered a fundamental bridge between
+
+128
+00:04:26,990 --> 00:04:29,510
+information theory and physical thermodynamics.
+
+129
+00:04:29,510 --> 00:04:29,910
+OK.
+
+130
+00:04:30,330 --> 00:04:33,170
+Before Landauer, people treated information like an abstract
+
+131
+00:04:33,170 --> 00:04:33,530
+ghost.
+
+132
+00:04:33,670 --> 00:04:35,290
+It was just, you know, math floating in
+
+133
+00:04:35,290 --> 00:04:35,570
+the ether.
+
+134
+00:04:35,870 --> 00:04:39,330
+But Landauer proved that information is fundamentally physical,
+
+135
+00:04:39,470 --> 00:04:41,470
+meaning it actually exists in the real world.
+
+136
+00:04:41,670 --> 00:04:42,110
+Exactly.
+
+137
+00:04:42,370 --> 00:04:44,430
+It must be encoded in a physical substrate,
+
+138
+00:04:44,830 --> 00:04:47,410
+an electron in a trap, a magnetic orientation
+
+139
+00:04:47,410 --> 00:04:48,890
+on a hard drive, a photon.
+
+140
+00:04:49,230 --> 00:04:51,850
+And because it is physical, the universe demands
+
+141
+00:04:51,850 --> 00:04:53,450
+a toll for manipulating it.
+
+142
+00:04:53,630 --> 00:04:55,210
+So doing math takes energy.
+
+143
+00:04:55,790 --> 00:04:57,930
+But the weird part about Landauer's principle that
+
+144
+00:04:57,930 --> 00:04:59,690
+always trips me up is that it's not
+
+145
+00:04:59,690 --> 00:05:02,650
+the calculating that necessarily produces the heat, is
+
+146
+00:05:02,650 --> 00:05:02,850
+it?
+
+147
+00:05:03,050 --> 00:05:04,010
+It's the erasing.
+
+148
+00:05:04,430 --> 00:05:05,510
+That is the brilliant insight.
+
+149
+00:05:05,630 --> 00:05:05,850
+Yes.
+
+150
+00:05:06,370 --> 00:05:08,890
+You can actually perform certain types of logical
+
+151
+00:05:08,890 --> 00:05:12,910
+operations like copying data or performing reversible logic
+
+152
+00:05:12,910 --> 00:05:16,730
+gates theoretically without dissipating any heat at all,
+
+153
+00:05:17,050 --> 00:05:19,130
+assuming you have perfect superconducting materials.
+
+154
+00:05:19,230 --> 00:05:19,790
+Wait, really?
+
+155
+00:05:20,230 --> 00:05:21,050
+Zero heat?
+
+156
+00:05:21,410 --> 00:05:22,250
+Theoretically, yes.
+
+157
+00:05:22,610 --> 00:05:24,670
+But the moment you erase a bit of
+
+158
+00:05:24,670 --> 00:05:27,070
+information, when you take a physical system that
+
+159
+00:05:27,070 --> 00:05:28,310
+could be in a one state or a
+
+160
+00:05:28,310 --> 00:05:30,490
+zero state and you force it back to
+
+161
+00:05:30,490 --> 00:05:34,130
+a baseline zero, you are decreasing the logical
+
+162
+00:05:34,130 --> 00:05:35,550
+entropy of that specific system.
+
+163
+00:05:35,870 --> 00:05:37,630
+You are compressing its possible states.
+
+164
+00:05:37,750 --> 00:05:38,090
+Exactly.
+
+165
+00:05:38,350 --> 00:05:40,970
+And the second law of thermodynamics strictly forbids
+
+166
+00:05:40,970 --> 00:05:42,830
+the total entropy of the universe from decreasing.
+
+167
+00:05:43,030 --> 00:05:46,010
+Because the universe always trends toward maximum messiness.
+
+168
+00:05:46,250 --> 00:05:46,530
+Right.
+
+169
+00:05:46,590 --> 00:05:48,490
+So if I organize my hard drive, making
+
+170
+00:05:48,490 --> 00:05:51,650
+it less messy mathematically, the physical universe demands
+
+171
+00:05:51,650 --> 00:05:53,670
+that I make something else messier to compensate.
+
+172
+00:05:54,250 --> 00:05:56,010
+You are squeezing the entropy out of the
+
+173
+00:05:56,010 --> 00:05:57,930
+information and it has to go somewhere.
+
+174
+00:05:58,650 --> 00:06:00,850
+It bleeds out into the surrounding environment as
+
+175
+00:06:00,850 --> 00:06:01,590
+physical heat.
+
+176
+00:06:01,950 --> 00:06:04,010
+Landauer mathematically defined this limit.
+
+177
+00:06:04,430 --> 00:06:07,250
+Erasing one single bit of information dissipates an
+
+178
+00:06:07,250 --> 00:06:10,170
+absolute minimal amount of heat defined by Boltzmann's
+
+179
+00:06:10,170 --> 00:06:12,570
+constant, the temperature of the environment and the
+
+180
+00:06:12,570 --> 00:06:13,990
+natural logarithm of two.
+
+181
+00:06:14,250 --> 00:06:14,670
+Wow.
+
+182
+00:06:15,150 --> 00:06:16,970
+It is a non-negotiable law of the
+
+183
+00:06:16,970 --> 00:06:17,350
+universe.
+
+184
+00:06:17,350 --> 00:06:19,370
+No matter if we build computers out of
+
+185
+00:06:19,370 --> 00:06:23,710
+silicon, carbon nanotubes or biological neurons, erasing information
+
+186
+00:06:23,710 --> 00:06:25,170
+will always generate heat.
+
+187
+00:06:25,390 --> 00:06:28,690
+Which leads directly to the classification inversion Flixentian
+
+188
+00:06:28,690 --> 00:06:29,190
+talks about.
+
+189
+00:06:29,310 --> 00:06:31,230
+Because we are conditioned to think of heat
+
+190
+00:06:31,230 --> 00:06:31,950
+as a mistake.
+
+191
+00:06:32,350 --> 00:06:34,330
+If my car engine gets too hot, it's
+
+192
+00:06:34,330 --> 00:06:35,470
+losing efficiency, right?
+
+193
+00:06:35,650 --> 00:06:37,490
+The heat is energy that failed to turn
+
+194
+00:06:37,490 --> 00:06:38,470
+into forward motion.
+
+195
+00:06:38,610 --> 00:06:39,170
+Yes, exactly.
+
+196
+00:06:39,310 --> 00:06:40,930
+But in a computer, the forward motion is
+
+197
+00:06:40,930 --> 00:06:42,010
+just abstract logic.
+
+198
+00:06:42,010 --> 00:06:43,670
+It doesn't physically go anywhere.
+
+199
+00:06:43,670 --> 00:06:45,950
+Let's trace the electricity from the power plant
+
+200
+00:06:45,950 --> 00:06:47,750
+to really visualize this.
+
+201
+00:06:48,570 --> 00:06:50,770
+A joule of electrical energy travels down the
+
+202
+00:06:50,770 --> 00:06:52,450
+wire and enters your laptop.
+
+203
+00:06:53,130 --> 00:06:55,590
+It flows through millions of microscopic transistors.
+
+204
+00:06:56,030 --> 00:06:56,690
+It flips gates.
+
+205
+00:06:56,910 --> 00:06:57,690
+It moves electrons.
+
+206
+00:06:58,150 --> 00:07:01,070
+It performs a highly complex choreography of informational
+
+207
+00:07:01,070 --> 00:07:01,530
+work.
+
+208
+00:07:01,670 --> 00:07:02,830
+OK, doing all the math.
+
+209
+00:07:03,070 --> 00:07:03,250
+Right.
+
+210
+00:07:03,410 --> 00:07:05,450
+But after the math is done, where does
+
+211
+00:07:05,450 --> 00:07:07,390
+the physical joule of energy actually go?
+
+212
+00:07:07,810 --> 00:07:08,750
+It doesn't vanish.
+
+213
+00:07:08,970 --> 00:07:10,170
+The equation is absolute.
+
+214
+00:07:10,590 --> 00:07:12,490
+Energy equals work plus heat.
+
+215
+00:07:13,190 --> 00:07:14,770
+But the work was purely informational.
+
+216
+00:07:15,210 --> 00:07:17,710
+It has no physical mass or potential energy
+
+217
+00:07:17,710 --> 00:07:18,570
+stored at the end.
+
+218
+00:07:18,810 --> 00:07:19,130
+Oh, I see.
+
+219
+00:07:19,170 --> 00:07:21,330
+So 100 percent of the electrical energy pumped
+
+220
+00:07:21,330 --> 00:07:24,190
+into a computing device ultimately degrades into its
+
+221
+00:07:24,190 --> 00:07:26,470
+terminal physical state, which is thermal entropy.
+
+222
+00:07:27,070 --> 00:07:27,250
+Heat.
+
+223
+00:07:27,430 --> 00:07:29,730
+Electricity goes in, invisible math happens, and heat
+
+224
+00:07:29,730 --> 00:07:31,910
+comes out every single time.
+
+225
+00:07:32,190 --> 00:07:33,170
+Every single time.
+
+226
+00:07:33,910 --> 00:07:35,870
+Which brings us back to that space heater
+
+227
+00:07:35,870 --> 00:07:36,350
+you mentioned.
+
+228
+00:07:37,030 --> 00:07:39,910
+Flixion introduces a concept here that completely rewrites
+
+229
+00:07:39,910 --> 00:07:41,530
+how you look at household appliances.
+
+230
+00:07:42,490 --> 00:07:45,150
+Consider the standard resistive space heater sitting in
+
+231
+00:07:45,150 --> 00:07:45,670
+a living room.
+
+232
+00:07:45,930 --> 00:07:47,130
+You plug it into the wall.
+
+233
+00:07:47,590 --> 00:07:49,710
+It draws electrical current through a high resistance
+
+234
+00:07:49,710 --> 00:07:51,150
+wire and it gets hot.
+
+235
+00:07:51,950 --> 00:07:53,990
+What is it actually doing thermodynamically?
+
+236
+00:07:54,330 --> 00:07:57,730
+Well, it's converting electricity directly into heat to
+
+237
+00:07:57,730 --> 00:07:58,510
+warm my feet.
+
+238
+00:07:58,930 --> 00:08:02,350
+Thermodynamically, it is converting electricity directly into entropy
+
+239
+00:08:02,350 --> 00:08:05,210
+without doing any intermediate informational work.
+
+240
+00:08:05,990 --> 00:08:08,850
+Because of this, Flixion classifies the common space
+
+241
+00:08:08,850 --> 00:08:11,330
+heater as a degenerate computer.
+
+242
+00:08:11,330 --> 00:08:12,770
+Wait, wait, I need to wrap my head
+
+243
+00:08:12,770 --> 00:08:13,210
+around this.
+
+244
+00:08:13,270 --> 00:08:14,810
+You're saying my space heater is just a
+
+245
+00:08:14,810 --> 00:08:16,110
+terribly lazy laptop.
+
+246
+00:08:16,390 --> 00:08:17,210
+Basically, yes.
+
+247
+00:08:17,410 --> 00:08:19,650
+It's pulling the exact same electricity from the
+
+248
+00:08:19,650 --> 00:08:22,090
+grid, reaching the exact same terminal state of
+
+249
+00:08:22,090 --> 00:08:22,790
+physical heat.
+
+250
+00:08:22,970 --> 00:08:25,350
+But it simply refuses to run any algorithms
+
+251
+00:08:25,350 --> 00:08:26,470
+before it gets hot.
+
+252
+00:08:26,710 --> 00:08:28,910
+That is the precise thermodynamic reality.
+
+253
+00:08:29,750 --> 00:08:31,669
+Both the billion dollar A.I. data center
+
+254
+00:08:31,669 --> 00:08:34,789
+and the 30 dollar space heater are electrical
+
+255
+00:08:34,789 --> 00:08:36,429
+to thermal conversion devices.
+
+256
+00:08:37,110 --> 00:08:39,929
+Both turn 100 percent of their input electricity
+
+257
+00:08:39,929 --> 00:08:40,630
+into heat.
+
+258
+00:08:41,330 --> 00:08:44,430
+The only distinction, literally the absolute only physical
+
+259
+00:08:44,430 --> 00:08:47,550
+difference between the two is whether structured logical
+
+260
+00:08:47,550 --> 00:08:50,690
+computation happens in the microsecond before the heat
+
+261
+00:08:50,690 --> 00:08:51,330
+is dissipated.
+
+262
+00:08:51,730 --> 00:08:53,390
+So a data center is literally just a
+
+263
+00:08:53,390 --> 00:08:56,570
+giant, highly sophisticated space heater that happens to
+
+264
+00:08:56,570 --> 00:08:58,730
+be exceptionally good at algebra before it warms
+
+265
+00:08:58,730 --> 00:08:59,150
+the room.
+
+266
+00:08:59,210 --> 00:08:59,430
+Yes.
+
+267
+00:08:59,830 --> 00:09:02,430
+And understanding that equivalence reveals what the paper
+
+268
+00:09:02,430 --> 00:09:05,630
+calls a massive boundary error in our current
+
+269
+00:09:05,630 --> 00:09:06,130
+society.
+
+270
+00:09:06,170 --> 00:09:07,350
+A boundary error.
+
+271
+00:09:07,490 --> 00:09:08,230
+How so?
+
+272
+00:09:08,310 --> 00:09:09,650
+Let's look at the boundaries we draw around
+
+273
+00:09:09,650 --> 00:09:10,370
+our infrastructure.
+
+274
+00:09:10,370 --> 00:09:12,490
+In a typical modern city, you have millions
+
+275
+00:09:12,490 --> 00:09:14,630
+of human beings expending massive amounts of energy
+
+276
+00:09:14,630 --> 00:09:18,010
+to run degenerate computers, space heaters, domestic water
+
+277
+00:09:18,010 --> 00:09:20,910
+boilers, industrial furnaces solely to generate heat.
+
+278
+00:09:21,110 --> 00:09:21,310
+Right.
+
+279
+00:09:21,430 --> 00:09:23,610
+We burn natural gas or draw grid power
+
+280
+00:09:23,610 --> 00:09:25,010
+just to get the temperature up.
+
+281
+00:09:25,270 --> 00:09:27,450
+Meanwhile, perhaps a mile away, you have a
+
+282
+00:09:27,450 --> 00:09:28,430
+hyperscale data center.
+
+283
+00:09:28,950 --> 00:09:31,350
+It is pulling massive amounts of electricity from
+
+284
+00:09:31,350 --> 00:09:33,630
+the grid to do computation, and it is
+
+285
+00:09:33,630 --> 00:09:35,230
+generating an ocean of heat.
+
+286
+00:09:35,870 --> 00:09:38,590
+But because we draw a conceptual boundary around
+
+287
+00:09:38,590 --> 00:09:40,430
+the data center and label it an information
+
+288
+00:09:40,430 --> 00:09:43,690
+factory, we classify that heat as waste.
+
+289
+00:09:44,070 --> 00:09:45,490
+So it's treated like exhaust.
+
+290
+00:09:45,830 --> 00:09:46,270
+Exactly.
+
+291
+00:09:46,830 --> 00:09:49,130
+So the data center operator spends massive amounts
+
+292
+00:09:49,130 --> 00:09:51,610
+of additional energy running massive air conditioners and
+
+293
+00:09:51,610 --> 00:09:54,650
+water chillers to destroy the exact heat that
+
+294
+00:09:54,650 --> 00:09:55,890
+the city desperately needs.
+
+295
+00:09:55,950 --> 00:09:56,590
+Oh, my God.
+
+296
+00:09:56,850 --> 00:09:59,270
+We are paying a massive premium twice.
+
+297
+00:09:59,870 --> 00:10:02,330
+We pay to extract or generate the heat
+
+298
+00:10:02,330 --> 00:10:03,610
+we want in our homes, and we pay
+
+299
+00:10:03,610 --> 00:10:06,390
+millions of dollars to actively destroy the identical
+
+300
+00:10:06,390 --> 00:10:07,630
+heat the computers are making.
+
+301
+00:10:07,850 --> 00:10:09,730
+We are fighting the universe on both fronts.
+
+302
+00:10:09,970 --> 00:10:12,650
+It's a catastrophic misallocation of resources.
+
+303
+00:10:13,450 --> 00:10:15,550
+When you draw a system boundary tightly around
+
+304
+00:10:15,550 --> 00:10:17,970
+just the server rack, the heat looks like
+
+305
+00:10:17,970 --> 00:10:19,150
+a pesky waste product.
+
+306
+00:10:19,330 --> 00:10:21,650
+But when you expand the boundary to encompass
+
+307
+00:10:21,650 --> 00:10:24,470
+the whole municipality or the whole society, the
+
+308
+00:10:24,470 --> 00:10:26,610
+computational heat is revealed to be a highly
+
+309
+00:10:26,610 --> 00:10:28,490
+productive, necessary output.
+
+310
+00:10:28,490 --> 00:10:28,870
+Wow.
+
+311
+00:10:29,190 --> 00:10:32,310
+If heat isn't waste, but the unavoidable terminal
+
+312
+00:10:32,310 --> 00:10:34,990
+state of the computational process, we have to
+
+313
+00:10:34,990 --> 00:10:36,710
+completely rethink the architecture.
+
+314
+00:10:37,130 --> 00:10:39,150
+We can't build standalone factories anymore.
+
+315
+00:10:39,310 --> 00:10:40,790
+Which brings us to the title of the
+
+316
+00:10:40,790 --> 00:10:41,050
+paper.
+
+317
+00:10:41,690 --> 00:10:43,990
+If we aren't building factories that just burn
+
+318
+00:10:43,990 --> 00:10:46,470
+energy and dump waste, what should we be
+
+319
+00:10:46,470 --> 00:10:46,730
+building?
+
+320
+00:10:47,410 --> 00:10:49,250
+And Fliction points to biology.
+
+321
+00:10:49,910 --> 00:10:53,850
+Specifically, the paper introduces xylomorphic computation.
+
+322
+00:10:54,050 --> 00:10:54,250
+Right.
+
+323
+00:10:54,250 --> 00:10:56,790
+Let's break down that word, because it sounds
+
+324
+00:10:56,790 --> 00:10:59,250
+intimidating, but the roots are actually pretty organic.
+
+325
+00:10:59,730 --> 00:11:01,950
+The terminology is incredibly deliberate here.
+
+326
+00:11:02,770 --> 00:11:05,910
+Xylomorphic comes from the Greek words xylon, meaning
+
+327
+00:11:05,910 --> 00:11:09,010
+wood, and morphe, meaning form or structure.
+
+328
+00:11:09,530 --> 00:11:11,850
+It refers directly to the way an arboreal
+
+329
+00:11:11,850 --> 00:11:13,470
+system, a tree operates.
+
+330
+00:11:13,630 --> 00:11:15,790
+Let's trace the actual metabolism of a tree,
+
+331
+00:11:15,910 --> 00:11:17,650
+because people say things are like a tree
+
+332
+00:11:17,650 --> 00:11:18,950
+all the time just to mean they are
+
+333
+00:11:18,950 --> 00:11:20,330
+green or eco-friendly.
+
+334
+00:11:20,570 --> 00:11:23,330
+But Fliction means something very specific mechanically here.
+
+335
+00:11:23,330 --> 00:11:24,290
+Very specific.
+
+336
+00:11:24,590 --> 00:11:26,190
+A tree absorbs solar radiation.
+
+337
+00:11:26,890 --> 00:11:29,350
+It uses that energy to perform chemical computation
+
+338
+00:11:29,350 --> 00:11:29,970
+photosynthesis.
+
+339
+00:11:30,570 --> 00:11:32,650
+It builds structural material, cellulose.
+
+340
+00:11:32,930 --> 00:11:34,590
+But inevitably, parts of the tree degrade.
+
+341
+00:11:35,130 --> 00:11:36,450
+Leaves fall to the forest floor.
+
+342
+00:11:37,310 --> 00:11:38,130
+Branches break.
+
+343
+00:11:38,830 --> 00:11:41,550
+In an industrial mindset, those dead leaves are
+
+344
+00:11:41,550 --> 00:11:42,010
+waste.
+
+345
+00:11:42,610 --> 00:11:44,450
+But in the biological system, it is a
+
+346
+00:11:44,450 --> 00:11:45,090
+phase transition.
+
+347
+00:11:45,690 --> 00:11:48,250
+The leaf falls, and a completely different organism,
+
+348
+00:11:48,850 --> 00:11:52,670
+mycorrhizal fungi, bacteria, the soil biome, digests it.
+
+349
+00:11:53,090 --> 00:11:56,650
+The decomposition process releases nitrogen, phosphorus, and other
+
+350
+00:11:56,650 --> 00:11:59,070
+essential nutrients back into the soil matrix.
+
+351
+00:11:59,230 --> 00:11:59,630
+OK, I'm with you.
+
+352
+00:11:59,950 --> 00:12:02,810
+The tree's root system then absorbs those exact
+
+353
+00:12:02,810 --> 00:12:05,870
+nutrients to fuel the synthesis of new cellulose,
+
+354
+00:12:06,130 --> 00:12:07,690
+growing new branches and new leaves.
+
+355
+00:12:08,030 --> 00:12:10,730
+The output of the operation is literally the
+
+356
+00:12:10,730 --> 00:12:13,170
+foundational input for its own physical continuation.
+
+357
+00:12:13,510 --> 00:12:14,750
+The tree doesn't have a trash can.
+
+358
+00:12:14,830 --> 00:12:16,150
+Its exhaust is its food.
+
+359
+00:12:16,270 --> 00:12:16,590
+Exactly.
+
+360
+00:12:16,950 --> 00:12:19,390
+But translate this to silicon and fiber optics
+
+361
+00:12:19,390 --> 00:12:19,770
+for me.
+
+362
+00:12:19,870 --> 00:12:21,670
+How on earth does a server rack mimic
+
+363
+00:12:21,670 --> 00:12:22,330
+a pine tree?
+
+364
+00:12:22,670 --> 00:12:24,630
+Because the GPU can't literally print a new
+
+365
+00:12:24,630 --> 00:12:26,210
+microchip out of hot air and use copper.
+
+366
+00:12:26,830 --> 00:12:28,990
+No, the physical server cannot forward its own
+
+367
+00:12:28,990 --> 00:12:29,830
+replacement parts.
+
+368
+00:12:30,530 --> 00:12:33,570
+But the combined economic and thermodynamic system can.
+
+369
+00:12:34,150 --> 00:12:37,390
+In technical terms, Flick-Shenoy defines a xylomorphic
+
+370
+00:12:37,390 --> 00:12:41,830
+infrastructure as one whose operational outputs autoregressively feedback
+
+371
+00:12:41,830 --> 00:12:43,990
+as inputs to form its own substrate.
+
+372
+00:12:44,550 --> 00:12:45,550
+Autoregressively feedback.
+
+373
+00:12:45,870 --> 00:12:46,110
+OK.
+
+374
+00:12:46,270 --> 00:12:49,110
+The author models this using categorical resource theory,
+
+375
+00:12:49,470 --> 00:12:52,270
+specifically defining a xylomorphic endofunctor.
+
+376
+00:12:52,270 --> 00:12:54,930
+OK, xylomorphic endofunctor, we have to translate that.
+
+377
+00:12:55,450 --> 00:12:57,210
+I know a functor is like a mapping
+
+378
+00:12:57,210 --> 00:12:58,490
+between categories in math.
+
+379
+00:12:58,610 --> 00:13:01,090
+But what is an endofunctor doing in infrastructure
+
+380
+00:13:01,090 --> 00:13:01,550
+design?
+
+381
+00:13:02,050 --> 00:13:04,950
+Categorical resource theory is basically the mathematics of
+
+382
+00:13:04,950 --> 00:13:08,930
+mapping physical resources, economic value and information states
+
+383
+00:13:08,930 --> 00:13:10,850
+onto each other to see how they flow.
+
+384
+00:13:11,670 --> 00:13:13,610
+An endofunctor is a mapping that loops back
+
+385
+00:13:13,610 --> 00:13:14,670
+into its own category.
+
+386
+00:13:14,830 --> 00:13:16,650
+Meaning it outputs what it started with.
+
+387
+00:13:16,750 --> 00:13:16,950
+Yes.
+
+388
+00:13:17,010 --> 00:13:19,350
+It means the process eventually outputs the same
+
+389
+00:13:19,350 --> 00:13:20,750
+type of thing it started with.
+
+390
+00:13:20,750 --> 00:13:23,010
+Flick-Shen visualizes this loop as an equation
+
+391
+00:13:23,010 --> 00:13:25,630
+with three distinct non-negotiable stages.
+
+392
+00:13:26,230 --> 00:13:27,610
+Shed, digest and print.
+
+393
+00:13:27,910 --> 00:13:29,190
+Shed, digest, print.
+
+394
+00:13:29,350 --> 00:13:30,750
+Walk me through the cycle as it would
+
+395
+00:13:30,750 --> 00:13:31,670
+exist in a real city.
+
+396
+00:13:32,030 --> 00:13:33,290
+Stage one is shed.
+
+397
+00:13:33,650 --> 00:13:36,010
+This is the operation of the infrastructure performing
+
+398
+00:13:36,010 --> 00:13:39,530
+its primary task and inevitably producing residues.
+
+399
+00:13:39,930 --> 00:13:42,630
+The data center processes AI training data.
+
+400
+00:13:43,190 --> 00:13:45,050
+In doing so, it sheds immense heat.
+
+401
+00:13:45,630 --> 00:13:48,290
+And over time, its physical components, the fans,
+
+402
+00:13:48,430 --> 00:13:50,570
+the hard drives, the silicon itself, degrade.
+
+403
+00:13:50,750 --> 00:13:52,350
+The leaves falling from the tree?
+
+404
+00:13:52,770 --> 00:13:53,810
+Stage two is digest.
+
+405
+00:13:54,250 --> 00:13:56,670
+This is the critical missing link in modern
+
+406
+00:13:56,670 --> 00:13:57,330
+technology.
+
+407
+00:13:57,890 --> 00:14:00,050
+Digest is the process of converting those shed
+
+408
+00:14:00,050 --> 00:14:01,890
+residues into usable feedstock.
+
+409
+00:14:02,410 --> 00:14:03,930
+The data center doesn't vent the heat to
+
+410
+00:14:03,930 --> 00:14:04,410
+the sky.
+
+411
+00:14:04,710 --> 00:14:06,570
+It pumps it into a municipal district heating
+
+412
+00:14:06,570 --> 00:14:08,490
+system, warming thousands of homes.
+
+413
+00:14:08,650 --> 00:14:10,250
+It doesn't throw away old servers.
+
+414
+00:14:10,570 --> 00:14:13,050
+It sends them to highly efficient local reclamation
+
+415
+00:14:13,050 --> 00:14:15,590
+facilities that extract the rare earth metals.
+
+416
+00:14:15,790 --> 00:14:18,270
+But wait, heat and reclaimed metals don't automatically
+
+417
+00:14:18,270 --> 00:14:19,650
+assemble into a new server.
+
+418
+00:14:19,650 --> 00:14:21,770
+How do we get to the print stage?
+
+419
+00:14:22,470 --> 00:14:24,270
+Through economics as a proxy for energy.
+
+420
+00:14:24,790 --> 00:14:26,250
+When the data center provides heat to the
+
+421
+00:14:26,250 --> 00:14:28,770
+municipality, the city pays the data center for
+
+422
+00:14:28,770 --> 00:14:31,250
+that utility, offsetting natural gas costs.
+
+423
+00:14:31,550 --> 00:14:33,810
+The data center generates a massive economic and
+
+424
+00:14:33,810 --> 00:14:34,690
+energetic surplus.
+
+425
+00:14:35,390 --> 00:14:36,850
+The money is the bridge.
+
+426
+00:14:37,250 --> 00:14:37,470
+Yes.
+
+427
+00:14:38,330 --> 00:14:41,210
+Stage three, print, is taking that surplus feedstock,
+
+428
+00:14:41,310 --> 00:14:43,810
+the recovered materials, and the utility revenue and
+
+429
+00:14:43,810 --> 00:14:46,490
+using it to purchase, manufacture, and install the
+
+430
+00:14:46,490 --> 00:14:48,970
+next generation of replacement servers when the current
+
+431
+00:14:48,970 --> 00:14:49,630
+ones finally die.
+
+432
+00:14:49,650 --> 00:14:52,550
+So the data center's own physical exhaustion, its
+
+433
+00:14:52,550 --> 00:14:55,410
+heat, and its wear and tear literally pays
+
+434
+00:14:55,410 --> 00:14:57,550
+for and powers its own physical renewal.
+
+435
+00:14:57,750 --> 00:14:58,670
+It's a closed loop.
+
+436
+00:14:59,190 --> 00:15:01,230
+And Fliction connects this to a concept from
+
+437
+00:15:01,230 --> 00:15:02,910
+theoretical biology, right?
+
+438
+00:15:03,510 --> 00:15:07,490
+Stuart Kaufman's collectively autocatalytic sets, or CAS.
+
+439
+00:15:07,850 --> 00:15:08,070
+Yes.
+
+440
+00:15:08,290 --> 00:15:09,390
+Kaufman's theory is beautiful.
+
+441
+00:15:09,590 --> 00:15:11,630
+It originally explains how life might have emerged
+
+442
+00:15:11,630 --> 00:15:12,550
+from dead chemicals.
+
+443
+00:15:13,030 --> 00:15:14,970
+The idea is that in a complex soup
+
+444
+00:15:14,970 --> 00:15:17,890
+of molecules, no single molecule can copy itself.
+
+445
+00:15:17,890 --> 00:15:20,030
+Molecule A can't make another molecule A.
+
+446
+00:15:20,530 --> 00:15:22,410
+But molecule A can act as a catalyst
+
+447
+00:15:22,410 --> 00:15:25,110
+to help build molecule B, and B catalyzes
+
+448
+00:15:25,110 --> 00:15:26,810
+C, and C catalyzes A.
+
+449
+00:15:27,010 --> 00:15:29,410
+The individual components aren't self-replicating, but the
+
+450
+00:15:29,410 --> 00:15:31,970
+entire set as a cluck of network catalyzes
+
+451
+00:15:31,970 --> 00:15:33,110
+its own production rules.
+
+452
+00:15:33,290 --> 00:15:35,130
+So the server can't build a server.
+
+453
+00:15:35,690 --> 00:15:37,610
+The district heating pipe can't build a pipe.
+
+454
+00:15:37,610 --> 00:15:39,950
+But the network of the server, the heating
+
+455
+00:15:39,950 --> 00:15:42,910
+pipe, the municipal economy, and the silicon foundry
+
+456
+00:15:42,910 --> 00:15:45,670
+all interact in a loop where the whole
+
+457
+00:15:45,670 --> 00:15:48,250
+city acts as a single organism that sustains
+
+458
+00:15:48,250 --> 00:15:48,690
+itself.
+
+459
+00:15:48,950 --> 00:15:50,090
+That is the essence of it, yes.
+
+460
+00:15:50,150 --> 00:15:51,490
+That is incredibly elegant.
+
+461
+00:15:51,830 --> 00:15:53,790
+But, you know, elegance doesn't keep the lights
+
+462
+00:15:53,790 --> 00:15:54,090
+on.
+
+463
+00:15:54,470 --> 00:15:56,250
+How do we know if this actually works
+
+464
+00:15:56,250 --> 00:15:56,750
+in practice?
+
+465
+00:15:56,930 --> 00:15:59,050
+How do we mathematically prove if our hypothetical
+
+466
+00:15:59,050 --> 00:16:01,970
+city tree is growing or if it's quietly
+
+467
+00:16:01,970 --> 00:16:03,190
+dying from the inside?
+
+468
+00:16:03,190 --> 00:16:06,390
+This is where Flitching leaves philosophy behind and
+
+469
+00:16:06,390 --> 00:16:09,410
+draws a brutal, strictly mathematical line in the
+
+470
+00:16:09,410 --> 00:16:09,730
+sand.
+
+471
+00:16:10,490 --> 00:16:13,810
+The paper introduces a fundamental order parameter to
+
+472
+00:16:13,810 --> 00:16:15,290
+measure the health of this loop.
+
+473
+00:16:15,410 --> 00:16:16,250
+They call it lambda.
+
+474
+00:16:16,670 --> 00:16:17,050
+Lambda.
+
+475
+00:16:17,430 --> 00:16:19,090
+Now, my first instinct when I hear about
+
+476
+00:16:19,090 --> 00:16:20,730
+a metric for data center health is to
+
+477
+00:16:20,730 --> 00:16:24,410
+think of energy efficiency, like PUE, power usage
+
+478
+00:16:24,410 --> 00:16:26,450
+effectiveness, which the industry loves to brag about.
+
+479
+00:16:26,670 --> 00:16:28,370
+Is lambda just a better version of an
+
+480
+00:16:28,370 --> 00:16:29,250
+energy star rating?
+
+481
+00:16:29,650 --> 00:16:31,610
+No, and it's vital to separate the two.
+
+482
+00:16:32,270 --> 00:16:35,010
+Metrics like PUE only measure how much power
+
+483
+00:16:35,010 --> 00:16:37,190
+goes into the computer versus how much goes
+
+484
+00:16:37,190 --> 00:16:38,150
+to the cooling fans.
+
+485
+00:16:38,710 --> 00:16:40,790
+It's a static snapshot of internal friction.
+
+486
+00:16:41,450 --> 00:16:42,670
+Lambda is entirely different.
+
+487
+00:16:43,270 --> 00:16:45,770
+Lambda is the per cycle contraction ratio of
+
+488
+00:16:45,770 --> 00:16:47,230
+exogenous entropy dependence.
+
+489
+00:16:47,710 --> 00:16:50,550
+OK, let's break down exogenous entropy dependence.
+
+490
+00:16:51,230 --> 00:16:53,010
+Exogenous means coming from the outside.
+
+491
+00:16:53,490 --> 00:16:55,870
+Entropy dependence means relying on the universe to
+
+492
+00:16:55,870 --> 00:16:56,830
+clean up your mess.
+
+493
+00:16:57,390 --> 00:16:57,830
+Precisely.
+
+494
+00:16:58,350 --> 00:17:00,910
+To run one cycle, to compute, to shed,
+
+495
+00:17:01,110 --> 00:17:03,630
+to digest, to print, how much outside help
+
+496
+00:17:03,630 --> 00:17:04,210
+did you need?
+
+497
+00:17:04,369 --> 00:17:06,010
+How much fresh coal had to be burned?
+
+498
+00:17:06,250 --> 00:17:08,050
+How much virgin copper had to be mined?
+
+499
+00:17:08,329 --> 00:17:10,290
+How much active cooling water from a local
+
+500
+00:17:10,290 --> 00:17:11,650
+river did you have to evaporate?
+
+501
+00:17:12,210 --> 00:17:14,690
+Lambda measures your reliance on the external environment
+
+502
+00:17:14,690 --> 00:17:16,630
+just to survive one more cycle.
+
+503
+00:17:16,829 --> 00:17:17,630
+So it's a ratio.
+
+504
+00:17:17,790 --> 00:17:19,490
+It compares how much outside help I need
+
+505
+00:17:19,490 --> 00:17:21,349
+today versus how much outside help I needed
+
+506
+00:17:21,349 --> 00:17:23,210
+yesterday to do the same amount of work.
+
+507
+00:17:23,210 --> 00:17:23,710
+Yes.
+
+508
+00:17:24,690 --> 00:17:29,190
+And friction identifies three strict mathematical regimes based
+
+509
+00:17:29,190 --> 00:17:30,310
+on where your lambda falls.
+
+510
+00:17:31,050 --> 00:17:33,510
+The first is the expansive regime where lambda
+
+511
+00:17:33,510 --> 00:17:34,850
+is strictly greater than one.
+
+512
+00:17:35,310 --> 00:17:37,870
+In this regime, every single time the loop
+
+513
+00:17:37,870 --> 00:17:41,010
+runs, it requires slightly more outside help than
+
+514
+00:17:41,010 --> 00:17:41,730
+the time before.
+
+515
+00:17:41,870 --> 00:17:43,290
+It's like putting a charge on a credit
+
+516
+00:17:43,290 --> 00:17:45,510
+card to pay the minimum balance of another
+
+517
+00:17:45,510 --> 00:17:46,150
+credit card.
+
+518
+00:17:46,370 --> 00:17:48,550
+You are accumulating a structural deficit.
+
+519
+00:17:48,850 --> 00:17:49,770
+That's a great analogy.
+
+520
+00:17:49,770 --> 00:17:51,490
+So if your lambda is greater than one,
+
+521
+00:17:51,550 --> 00:17:52,670
+it doesn't matter how rich you are.
+
+522
+00:17:52,850 --> 00:17:55,230
+You are mathematically doomed to collapse as you
+
+523
+00:17:55,230 --> 00:17:55,570
+scale.
+
+524
+00:17:55,910 --> 00:17:58,030
+You can delay the collapse by throwing more
+
+525
+00:17:58,030 --> 00:17:59,190
+money or coal at it.
+
+526
+00:17:59,310 --> 00:18:01,250
+But the equation eventually breaks you.
+
+527
+00:18:02,030 --> 00:18:04,230
+The math proves that an expansive system has
+
+528
+00:18:04,230 --> 00:18:05,610
+no stable attractor.
+
+529
+00:18:05,770 --> 00:18:07,770
+It will invariably end in systemic failure.
+
+530
+00:18:08,350 --> 00:18:10,170
+Then you have the critical regime where lambda
+
+531
+00:18:10,170 --> 00:18:11,350
+exactly equals one.
+
+532
+00:18:11,430 --> 00:18:12,690
+You are hovering stagnant.
+
+533
+00:18:13,190 --> 00:18:16,050
+But the goal, the only mathematically proven path
+
+534
+00:18:16,050 --> 00:18:18,990
+to long term thermodynamic survival is the contractive
+
+535
+00:18:18,990 --> 00:18:19,270
+regime.
+
+536
+00:18:19,270 --> 00:18:21,170
+This is where lambda is strictly less than
+
+537
+00:18:21,170 --> 00:18:21,590
+one.
+
+538
+00:18:21,950 --> 00:18:24,270
+If lambda is less than one, the system
+
+539
+00:18:24,270 --> 00:18:27,090
+is absorbing and reusing enough of its own
+
+540
+00:18:27,090 --> 00:18:29,850
+output that its dependence on the outside world
+
+541
+00:18:29,850 --> 00:18:31,370
+physically shrinks over time.
+
+542
+00:18:31,830 --> 00:18:34,110
+The tree is feeding itself from its own
+
+543
+00:18:34,110 --> 00:18:34,830
+dropped leaves.
+
+544
+00:18:35,310 --> 00:18:37,390
+And friction cues the stability of this state
+
+545
+00:18:37,390 --> 00:18:39,210
+using the Banach fixed point theorem.
+
+546
+00:18:39,390 --> 00:18:40,590
+OK, wait, I want to start on the
+
+547
+00:18:40,590 --> 00:18:43,390
+Banach fixed point theorem because I've heard this
+
+548
+00:18:43,390 --> 00:18:45,450
+used in topology and calculus.
+
+549
+00:18:45,950 --> 00:18:47,910
+How does it apply to data centers?
+
+550
+00:18:48,350 --> 00:18:50,010
+Give me a visual analogy of how this
+
+551
+00:18:50,010 --> 00:18:51,970
+theorem works, because the paper leans on it
+
+552
+00:18:51,970 --> 00:18:54,190
+heavily to prove the system won't just spiral
+
+553
+00:18:54,190 --> 00:18:54,930
+out of control.
+
+554
+00:18:55,450 --> 00:18:57,770
+Imagine you have a highly detailed map of
+
+555
+00:18:57,770 --> 00:18:59,190
+the city you are currently standing in.
+
+556
+00:18:59,590 --> 00:19:01,430
+You lay that map down on the sidewalk.
+
+557
+00:19:02,430 --> 00:19:04,970
+The Banach fixed point theorem states that there
+
+558
+00:19:04,970 --> 00:19:07,470
+is exactly one unique point on that map
+
+559
+00:19:07,470 --> 00:19:10,470
+that perfectly aligns with the physical ground directly
+
+560
+00:19:10,470 --> 00:19:10,910
+beneath it.
+
+561
+00:19:11,270 --> 00:19:12,890
+The point on the map of the sidewalk
+
+562
+00:19:12,890 --> 00:19:14,330
+is touching the actual sidewalk.
+
+563
+00:19:14,330 --> 00:19:16,430
+If you take the map, crumple it up
+
+564
+00:19:16,430 --> 00:19:18,050
+and throw it on the ground, there is
+
+565
+00:19:18,050 --> 00:19:20,390
+still exactly one point on the crumpled paper
+
+566
+00:19:20,390 --> 00:19:23,090
+that perfectly matches its geographic location.
+
+567
+00:19:23,470 --> 00:19:26,630
+It's a guarantee of a specific inescapable destination,
+
+568
+00:19:26,850 --> 00:19:28,050
+regardless of how you start.
+
+569
+00:19:28,310 --> 00:19:28,650
+Exactly.
+
+570
+00:19:29,250 --> 00:19:31,990
+When you apply the mathematics of contraction mapping
+
+571
+00:19:31,990 --> 00:19:34,870
+to infrastructure, the theorem proved that if your
+
+572
+00:19:34,870 --> 00:19:37,330
+lambda is less than one, if the system
+
+573
+00:19:37,330 --> 00:19:39,850
+contracts its dependence, even a microscopic fraction each
+
+574
+00:19:39,850 --> 00:19:43,810
+cycle, it creates a unique, inescapable basin of
+
+575
+00:19:43,810 --> 00:19:44,250
+attraction.
+
+576
+00:19:44,790 --> 00:19:47,790
+It magnetically pulls the entire infrastructure into a
+
+577
+00:19:47,790 --> 00:19:48,590
+stable state.
+
+578
+00:19:49,050 --> 00:19:50,310
+So if a storm knocks out a power
+
+579
+00:19:50,310 --> 00:19:52,650
+line or a server rack melts down, the
+
+580
+00:19:52,650 --> 00:19:53,710
+perturbations decay.
+
+581
+00:19:54,130 --> 00:19:57,030
+The system mathematically guarantees its own geometric convergence
+
+582
+00:19:57,030 --> 00:19:57,850
+back to stability.
+
+583
+00:19:58,050 --> 00:19:59,230
+That is profound.
+
+584
+00:19:59,410 --> 00:20:00,750
+If you can get the math under one,
+
+585
+00:20:00,930 --> 00:20:02,890
+physics basically does the rest of the stabilizing
+
+586
+00:20:02,890 --> 00:20:03,450
+for you.
+
+587
+00:20:03,970 --> 00:20:05,650
+And what struck me in the paper is
+
+588
+00:20:05,650 --> 00:20:08,290
+that lambda is presented as a unique multiplier.
+
+589
+00:20:08,810 --> 00:20:11,870
+It's the only invariant that survives monoidal composition.
+
+590
+00:20:12,550 --> 00:20:14,850
+What does that mean in plain English for,
+
+591
+00:20:15,470 --> 00:20:16,470
+say, a network engineer?
+
+592
+00:20:16,750 --> 00:20:19,530
+Monoidal composition is the math of combining different
+
+593
+00:20:19,530 --> 00:20:20,930
+systems into a larger whole.
+
+594
+00:20:21,050 --> 00:20:21,230
+Yeah.
+
+595
+00:20:21,390 --> 00:20:22,770
+If you have two different data centers, you
+
+596
+00:20:22,770 --> 00:20:24,870
+can't just average their energy bills to understand
+
+597
+00:20:24,870 --> 00:20:25,810
+the health of the grid.
+
+598
+00:20:26,010 --> 00:20:27,170
+It doesn't scale linearly.
+
+599
+00:20:27,830 --> 00:20:30,090
+But lambda works perfectly across scales.
+
+600
+00:20:30,250 --> 00:20:30,670
+Yes.
+
+601
+00:20:30,670 --> 00:20:33,270
+Yes, if you calculate the lambda for a
+
+602
+00:20:33,270 --> 00:20:35,470
+single GPU and the lambda for a thousand
+
+603
+00:20:35,470 --> 00:20:37,630
+server data center and the lambda for the
+
+604
+00:20:37,630 --> 00:20:40,950
+entire global Internet grid, the parameter remains a
+
+605
+00:20:40,950 --> 00:20:44,290
+perfectly accurate diagnostic tool for the stability of
+
+606
+00:20:44,290 --> 00:20:45,270
+the entire structure.
+
+607
+00:20:45,550 --> 00:20:47,250
+It scales infinitely.
+
+608
+00:20:47,690 --> 00:20:49,450
+So to really put the power of the
+
+609
+00:20:49,450 --> 00:20:51,610
+lambda equation to the test, we need to
+
+610
+00:20:51,610 --> 00:20:52,870
+apply it to something massive.
+
+611
+00:20:53,590 --> 00:20:55,970
+And Fliction aims it directly at one of
+
+612
+00:20:55,970 --> 00:20:59,390
+the most heavily funded, futuristic tech pipe dreams
+
+613
+00:20:59,390 --> 00:21:02,130
+in Silicon Valley right now, the orbital data
+
+614
+00:21:02,130 --> 00:21:02,490
+center.
+
+615
+00:21:02,930 --> 00:21:05,090
+Yeah, the idea of putting massive data centers
+
+616
+00:21:05,090 --> 00:21:08,150
+into low Earth orbit or building server farms
+
+617
+00:21:08,150 --> 00:21:10,390
+in the permanently shadowed craters of the moon
+
+618
+00:21:10,390 --> 00:21:11,910
+is gaining immense traction.
+
+619
+00:21:12,050 --> 00:21:13,110
+It's everywhere right now.
+
+620
+00:21:13,550 --> 00:21:15,810
+And the venture capital logic seems unassailable at
+
+621
+00:21:15,810 --> 00:21:16,590
+a glance, right?
+
+622
+00:21:16,710 --> 00:21:18,290
+The Earth is running out of energy and
+
+623
+00:21:18,290 --> 00:21:19,510
+the atmosphere is getting too hot.
+
+624
+00:21:19,510 --> 00:21:22,570
+So put the computers in space, power them
+
+625
+00:21:22,570 --> 00:21:25,930
+with infinite, unfiltered solar energy arrays and let
+
+626
+00:21:25,930 --> 00:21:27,830
+them radiate their waste heat out into the
+
+627
+00:21:27,830 --> 00:21:28,970
+infinite cold of the cosmos.
+
+628
+00:21:29,470 --> 00:21:31,430
+It sounds like an ultimate solution to the
+
+629
+00:21:31,430 --> 00:21:32,570
+terrestrial energy crisis.
+
+630
+00:21:32,910 --> 00:21:35,770
+It sounds like sci-fi perfection, but Fliction
+
+631
+00:21:35,770 --> 00:21:38,130
+absolutely eviscerates this idea.
+
+632
+00:21:38,630 --> 00:21:41,550
+The paper states with mathematical certainty that orbital
+
+633
+00:21:41,550 --> 00:21:45,730
+computation is thermodynamically non-xylomorphic by construction.
+
+634
+00:21:46,350 --> 00:21:48,610
+It declares that a space data center's lambda
+
+635
+00:21:48,610 --> 00:21:51,270
+is strictly greater than or equal to one.
+
+636
+00:21:51,730 --> 00:21:54,470
+It is permanently, irreversibly expansive.
+
+637
+00:21:55,470 --> 00:21:55,950
+Why?
+
+638
+00:21:56,110 --> 00:21:58,330
+I mean, if space is so incredibly cold,
+
+639
+00:21:58,430 --> 00:21:59,590
+why is heat a problem?
+
+640
+00:21:59,830 --> 00:22:01,810
+Because space isn't actually cold in the way
+
+641
+00:22:01,810 --> 00:22:03,450
+we intuitively understand cold.
+
+642
+00:22:03,770 --> 00:22:04,430
+Space is empty.
+
+643
+00:22:04,930 --> 00:22:06,750
+Temperature is a measure of the kinetic movement
+
+644
+00:22:06,750 --> 00:22:07,290
+of atoms.
+
+645
+00:22:08,050 --> 00:22:09,510
+Down here on Earth, if your computer gets
+
+646
+00:22:09,510 --> 00:22:11,910
+hot, you use conduction or convection to cool
+
+647
+00:22:11,910 --> 00:22:12,050
+it.
+
+648
+00:22:12,350 --> 00:22:14,150
+You blow ambient air over the heat sink
+
+649
+00:22:14,150 --> 00:22:15,670
+or you run chilled water over it.
+
+650
+00:22:15,730 --> 00:22:17,930
+The rapidly moving hot atoms of the silicon
+
+651
+00:22:17,930 --> 00:22:20,530
+bump into the slower, cooler atoms of the
+
+652
+00:22:20,530 --> 00:22:22,370
+air or water, transferring the heat away.
+
+653
+00:22:22,710 --> 00:22:24,630
+You're dumping the thermal energy into a surrounding
+
+654
+00:22:24,630 --> 00:22:25,410
+physical medium.
+
+655
+00:22:25,550 --> 00:22:27,430
+You're using the atmosphere as a sponge.
+
+656
+00:22:27,550 --> 00:22:27,890
+Exactly.
+
+657
+00:22:28,350 --> 00:22:30,170
+But in the vacuum of space, there is
+
+658
+00:22:30,170 --> 00:22:30,510
+no air.
+
+659
+00:22:30,670 --> 00:22:31,270
+There is no water.
+
+660
+00:22:31,470 --> 00:22:32,370
+There is no surrounding medium.
+
+661
+00:22:32,650 --> 00:22:33,650
+You are surrounded by nothing.
+
+662
+00:22:33,950 --> 00:22:35,590
+You cannot dump heat into nothing.
+
+663
+00:22:35,810 --> 00:22:37,310
+So you can't use a fan in space.
+
+664
+00:22:37,450 --> 00:22:39,410
+How do satellites currently cool themselves?
+
+665
+00:22:39,730 --> 00:22:42,450
+The only physical mechanism to shed heat in
+
+666
+00:22:42,450 --> 00:22:44,390
+a vacuum is thermal radiation.
+
+667
+00:22:44,390 --> 00:22:47,190
+You have to force the heat to emit
+
+668
+00:22:47,190 --> 00:22:49,590
+as infrared electromagnetic waves.
+
+669
+00:22:50,190 --> 00:22:52,090
+This is governed by the 7 Boltzmann law.
+
+670
+00:22:52,890 --> 00:22:56,270
+And radiating massive compute scale heat megawatts of
+
+671
+00:22:56,270 --> 00:22:59,890
+thermal energy at the relatively low operating temperatures
+
+672
+00:22:59,890 --> 00:23:03,670
+of standard silicon chips requires an astonishing amount
+
+673
+00:23:03,670 --> 00:23:04,450
+of surface area.
+
+674
+00:23:04,770 --> 00:23:06,350
+How much surface area are we talking about?
+
+675
+00:23:06,410 --> 00:23:08,450
+To prevent a space data center from immediately
+
+676
+00:23:08,450 --> 00:23:11,090
+melting into a sphere of liquid metal, you
+
+677
+00:23:11,090 --> 00:23:13,130
+would need radiator panels the size of Manhattan.
+
+678
+00:23:13,610 --> 00:23:16,310
+The mass of the radiators alone makes the
+
+679
+00:23:16,310 --> 00:23:17,170
+physics impossible.
+
+680
+00:23:17,470 --> 00:23:20,190
+The International Space Station has massive radiator panels
+
+681
+00:23:20,190 --> 00:23:21,550
+just to handle the heat of a few
+
+682
+00:23:21,550 --> 00:23:23,410
+astronauts and some life support equipment.
+
+683
+00:23:23,830 --> 00:23:25,490
+Scaling that to an A.I. training cluster
+
+684
+00:23:25,490 --> 00:23:26,230
+is absurd.
+
+685
+00:23:26,430 --> 00:23:28,110
+But let's play devil's advocate for a second.
+
+686
+00:23:28,270 --> 00:23:30,590
+Let's say a tech billionaire says, I don't
+
+687
+00:23:30,590 --> 00:23:31,970
+care if the radiators are the size of
+
+688
+00:23:31,970 --> 00:23:32,310
+a city.
+
+689
+00:23:32,590 --> 00:23:35,070
+Rockets at Starship are bringing launch costs down
+
+690
+00:23:35,070 --> 00:23:35,970
+to pennies on the dollar.
+
+691
+00:23:36,450 --> 00:23:38,110
+I'm going to mine asteroids to build the
+
+692
+00:23:38,110 --> 00:23:40,750
+radiators and the solar energy is completely free.
+
+693
+00:23:40,970 --> 00:23:42,430
+Fliction anticipates this, right?
+
+694
+00:23:42,430 --> 00:23:44,550
+They call it the cost compression fallacy.
+
+695
+00:23:44,770 --> 00:23:47,390
+The cost compression fallacy is the belief that
+
+696
+00:23:47,390 --> 00:23:49,270
+if you make the inputs cheap enough, you
+
+697
+00:23:49,270 --> 00:23:50,770
+can ignore the structure of the system.
+
+698
+00:23:51,410 --> 00:23:53,790
+But Lambda doesn't care about your profit margins.
+
+699
+00:23:54,430 --> 00:23:56,810
+Lambda is about the structure of physical dissipation.
+
+700
+00:23:57,570 --> 00:23:59,790
+Even if your solar energy is completely free
+
+701
+00:23:59,790 --> 00:24:02,870
+and your rocket launches cost zero dollars, a
+
+702
+00:24:02,870 --> 00:24:05,450
+space data center takes the energy, performs the
+
+703
+00:24:05,450 --> 00:24:08,030
+math and expels 100 percent of its thermal
+
+704
+00:24:08,030 --> 00:24:10,610
+entropy out into the infinite void of the
+
+705
+00:24:10,610 --> 00:24:10,890
+universe.
+
+706
+00:24:11,470 --> 00:24:13,930
+It absorbs absolutely zero back.
+
+707
+00:24:14,410 --> 00:24:16,630
+So the digest stage of the xylomorphic loop
+
+708
+00:24:16,630 --> 00:24:18,250
+is just structurally impossible.
+
+709
+00:24:18,610 --> 00:24:19,030
+Exactly.
+
+710
+00:24:19,550 --> 00:24:21,930
+You are venting your thermodynamic exhaust into a
+
+711
+00:24:21,930 --> 00:24:24,210
+vacuum where it can never be captured, reused
+
+712
+00:24:24,210 --> 00:24:25,830
+or recycled to sustain the system.
+
+713
+00:24:26,390 --> 00:24:28,850
+Furthermore, space is an incredibly hostile environment.
+
+714
+00:24:29,330 --> 00:24:31,870
+You have extreme cosmic radiation degrading the silicon
+
+715
+00:24:31,870 --> 00:24:35,970
+arrays and micrometeoroid impacts constantly damaging the infrastructure.
+
+716
+00:24:36,450 --> 00:24:39,110
+Your degradation rate skyrockets and you have zero
+
+717
+00:24:39,110 --> 00:24:41,390
+capacity to use the system's own outputs to
+
+718
+00:24:41,390 --> 00:24:43,030
+fund or power its physical repair.
+
+719
+00:24:43,450 --> 00:24:45,950
+You are permanently locked into an expansive regime.
+
+720
+00:24:46,330 --> 00:24:48,090
+It is mathematically unsustainable.
+
+721
+00:24:48,250 --> 00:24:50,070
+You are building a factory in a vacuum
+
+722
+00:24:50,070 --> 00:24:52,290
+where you pay a fortune to eject your
+
+723
+00:24:52,290 --> 00:24:53,550
+trash into the eternal void.
+
+724
+00:24:53,970 --> 00:24:55,310
+You can never recycle anything.
+
+725
+00:24:55,770 --> 00:24:58,050
+And the factory is constantly being bombarded by
+
+726
+00:24:58,050 --> 00:24:59,290
+rocks that you can never fix.
+
+727
+00:24:59,610 --> 00:25:02,410
+And that's entirely ignoring the actual data transmission.
+
+728
+00:25:03,190 --> 00:25:05,430
+Let's talk about the latency constraints, because this
+
+729
+00:25:05,430 --> 00:25:07,750
+is where the A.I. use case completely
+
+730
+00:25:07,750 --> 00:25:08,570
+falls apart.
+
+731
+00:25:08,930 --> 00:25:11,130
+Latency is the absolute speed limit of the
+
+732
+00:25:11,130 --> 00:25:11,470
+universe.
+
+733
+00:25:12,410 --> 00:25:14,890
+Light speed is fast, but it is finite.
+
+734
+00:25:15,690 --> 00:25:18,110
+An electromagnetic signal traveling from the Earth to
+
+735
+00:25:18,110 --> 00:25:20,950
+the moon and back takes approximately 1.3
+
+736
+00:25:20,950 --> 00:25:22,330
+seconds under perfect conditions.
+
+737
+00:25:23,030 --> 00:25:26,230
+Even a low Earth orbit constellation introduces a
+
+738
+00:25:26,230 --> 00:25:28,190
+delay of two to four milliseconds due to
+
+739
+00:25:28,190 --> 00:25:29,650
+distance and atmospheric routing.
+
+740
+00:25:29,650 --> 00:25:31,730
+A few milliseconds doesn't sound that bad if
+
+741
+00:25:31,730 --> 00:25:32,830
+I'm just streaming a movie.
+
+742
+00:25:33,010 --> 00:25:34,390
+For streaming a movie, it's fine.
+
+743
+00:25:34,610 --> 00:25:37,090
+But the justification for these mega projects is
+
+744
+00:25:37,090 --> 00:25:38,870
+training frontier A.I. models.
+
+745
+00:25:39,750 --> 00:25:42,250
+Modern distributed A.I. training requires thousands of
+
+746
+00:25:42,250 --> 00:25:45,090
+GPUs constantly talking to each other, updating weights
+
+747
+00:25:45,090 --> 00:25:47,390
+and parameters millions of times a second.
+
+748
+00:25:47,610 --> 00:25:50,390
+They require optical interconnects operating at sub millisecond
+
+749
+00:25:50,390 --> 00:25:50,790
+latencies.
+
+750
+00:25:51,170 --> 00:25:53,630
+If you introduce a three millisecond delay between
+
+751
+00:25:53,630 --> 00:25:55,930
+the GPU in space and the data repository
+
+752
+00:25:55,930 --> 00:25:58,850
+on Earth or even between two satellites, the
+
+753
+00:25:58,850 --> 00:26:01,790
+entire training run grinds to a halt.
+
+754
+00:26:01,970 --> 00:26:04,130
+The processors spend 99 percent of their time
+
+755
+00:26:04,130 --> 00:26:05,150
+waiting for the speed of light.
+
+756
+00:26:05,430 --> 00:26:07,930
+You literally cannot train a frontier A.I.
+
+757
+00:26:07,970 --> 00:26:09,590
+model across lunar distance.
+
+758
+00:26:09,750 --> 00:26:12,550
+So the Space Data Center is thermodynamically doomed
+
+759
+00:26:12,550 --> 00:26:15,690
+to expand its entropy dependence, physically impossible to
+
+760
+00:26:15,690 --> 00:26:19,150
+maintain without infinite external inputs and too slow
+
+761
+00:26:19,150 --> 00:26:21,050
+to actually do the A.I. tasks it
+
+762
+00:26:21,050 --> 00:26:21,750
+was built to solve.
+
+763
+00:26:21,830 --> 00:26:24,890
+It's an absolute dead end, which forcefully grounds
+
+764
+00:26:24,890 --> 00:26:25,590
+us back on Earth.
+
+765
+00:26:25,590 --> 00:26:27,870
+If the vacuum of space breaks the lambda
+
+766
+00:26:27,870 --> 00:26:30,930
+math, what are the actual physical dials we
+
+767
+00:26:30,930 --> 00:26:32,650
+can turn here on the surface to get
+
+768
+00:26:32,650 --> 00:26:33,750
+our lambda below one?
+
+769
+00:26:34,030 --> 00:26:36,530
+To map out the terrestrial solution, FlickShin models
+
+770
+00:26:36,530 --> 00:26:39,570
+the Earth's compute infrastructure as a continuous system
+
+771
+00:26:39,570 --> 00:26:42,630
+of partial differential equations, a PDE system.
+
+772
+00:26:42,870 --> 00:26:44,450
+Let's pause to make sure everyone is on
+
+773
+00:26:44,450 --> 00:26:45,090
+the same page.
+
+774
+00:26:45,630 --> 00:26:48,470
+A partial differential equation isn't just a static
+
+775
+00:26:48,470 --> 00:26:49,310
+algebra formula.
+
+776
+00:26:49,930 --> 00:26:52,570
+It's a way to mathematically model how multiple
+
+777
+00:26:52,570 --> 00:26:55,010
+different things like the spread of heat through
+
+778
+00:26:55,010 --> 00:26:56,890
+a metal plate or the flow of a
+
+779
+00:26:56,890 --> 00:27:00,210
+fluid are changing simultaneously across space and time.
+
+780
+00:27:00,530 --> 00:27:00,790
+Exactly.
+
+781
+00:27:01,490 --> 00:27:03,930
+It maps continuous interacting change.
+
+782
+00:27:04,750 --> 00:27:08,250
+FlickShin's PDE model distills the entire infrastructure down
+
+783
+00:27:08,250 --> 00:27:10,410
+to three fundamental interacting variables.
+
+784
+00:27:10,890 --> 00:27:13,770
+The first is rho, which represents the usable
+
+785
+00:27:13,770 --> 00:27:17,330
+physical substrate, the actual servers, the silicon, the
+
+786
+00:27:17,330 --> 00:27:17,950
+copper wires.
+
+787
+00:27:18,030 --> 00:27:18,950
+OK, rho is the hardware.
+
+788
+00:27:18,950 --> 00:27:21,310
+The second is theta, which is the excess
+
+789
+00:27:21,310 --> 00:27:23,530
+thermal field, the heat generated by the computation.
+
+790
+00:27:24,010 --> 00:27:26,210
+And the third is M, which represents the
+
+791
+00:27:26,210 --> 00:27:28,990
+ongoing degradation, the physical wear and tear of
+
+792
+00:27:28,990 --> 00:27:29,490
+the substrate.
+
+793
+00:27:29,790 --> 00:27:31,070
+Substrate, heat and wear.
+
+794
+00:27:31,430 --> 00:27:33,690
+Everything built relies on those three things interacting.
+
+795
+00:27:34,010 --> 00:27:36,390
+From the complex interaction of those three variables
+
+796
+00:27:36,390 --> 00:27:39,870
+over time, the paper derives three distinct dimensionless
+
+797
+00:27:39,870 --> 00:27:40,230
+numbers.
+
+798
+00:27:40,770 --> 00:27:42,590
+These are the physical dials that dictate whether
+
+799
+00:27:42,590 --> 00:27:43,830
+the system lives or dies.
+
+800
+00:27:44,370 --> 00:27:47,570
+The first dial is T, the thermal reintegration
+
+801
+00:27:47,570 --> 00:27:47,870
+number.
+
+802
+00:27:47,870 --> 00:27:50,130
+The thermal reintegration number.
+
+803
+00:27:50,950 --> 00:27:52,750
+This sounds like the engine of the digest
+
+804
+00:27:52,750 --> 00:27:53,130
+phase.
+
+805
+00:27:53,690 --> 00:27:55,950
+How efficiently does our waste heat actually help
+
+806
+00:27:55,950 --> 00:27:56,970
+generate new substrate?
+
+807
+00:27:57,650 --> 00:27:58,090
+Exactly.
+
+808
+00:27:58,370 --> 00:28:00,290
+It measures the coupling strength between the heat
+
+809
+00:28:00,290 --> 00:28:02,570
+you shed and the productive renewal of your
+
+810
+00:28:02,570 --> 00:28:02,970
+infrastructure.
+
+811
+00:28:04,030 --> 00:28:05,890
+If T is low, your heat is just
+
+812
+00:28:05,890 --> 00:28:07,430
+blowing out a fan into the sky.
+
+813
+00:28:07,870 --> 00:28:10,310
+If T is high, your heat is actively
+
+814
+00:28:10,310 --> 00:28:13,750
+powering municipal water heaters, which generates economic offset
+
+815
+00:28:13,750 --> 00:28:14,650
+to buy new servers.
+
+816
+00:28:14,830 --> 00:28:15,330
+Makes sense.
+
+817
+00:28:15,470 --> 00:28:16,270
+What's the second dial?
+
+818
+00:28:16,270 --> 00:28:18,890
+The second dial is Dr., the degradation to
+
+819
+00:28:18,890 --> 00:28:19,590
+repair ratio.
+
+820
+00:28:19,970 --> 00:28:22,090
+This is a very simple, brutal metric.
+
+821
+00:28:22,490 --> 00:28:24,010
+Does the wear and tear of your system
+
+822
+00:28:24,010 --> 00:28:25,910
+outpace your ability to fix it?
+
+823
+00:28:26,150 --> 00:28:27,970
+And for any system to be stable, Dr.
+
+824
+00:28:28,010 --> 00:28:30,030
+has to be strictly less than one.
+
+825
+00:28:30,330 --> 00:28:32,190
+You must be able to repair things faster
+
+826
+00:28:32,190 --> 00:28:34,250
+than they break, which is another reason the
+
+827
+00:28:34,250 --> 00:28:35,230
+Space Data Center fails.
+
+828
+00:28:35,610 --> 00:28:37,990
+The radiation damage pushes Dr. away over one.
+
+829
+00:28:38,130 --> 00:28:39,750
+Can you think of a terrestrial example where
+
+830
+00:28:39,750 --> 00:28:41,810
+Dr. exceeded one and the system collapsed?
+
+831
+00:28:41,810 --> 00:28:44,590
+Look at the Rust Belt Industrial Decline, or
+
+832
+00:28:44,590 --> 00:28:46,290
+a deferred maintenance subway system.
+
+833
+00:28:46,810 --> 00:28:48,790
+If the rails are degrading faster than the
+
+834
+00:28:48,790 --> 00:28:51,070
+city can afford to replace them, Dr.'s is
+
+835
+00:28:51,070 --> 00:28:51,830
+greater than one.
+
+836
+00:28:52,390 --> 00:28:53,790
+The system doesn't collapse overnight.
+
+837
+00:28:54,170 --> 00:28:55,230
+It degrades slowly.
+
+838
+00:28:55,450 --> 00:28:56,590
+The trains slow down.
+
+839
+00:28:56,950 --> 00:28:59,770
+Efficiency drops, which lowers revenue, which further decreases
+
+840
+00:28:59,770 --> 00:29:00,550
+repair capacity.
+
+841
+00:29:00,950 --> 00:29:02,330
+It is an expansive spiral.
+
+842
+00:29:02,710 --> 00:29:05,410
+You must design infrastructure where the repair capacity
+
+843
+00:29:05,410 --> 00:29:07,610
+inherently overwhelms the physical degradation.
+
+844
+00:29:08,290 --> 00:29:10,070
+And the third dial is Da, the diffusion
+
+845
+00:29:10,070 --> 00:29:11,090
+to reaction ratio.
+
+846
+00:29:11,090 --> 00:29:11,910
+What does that one track?
+
+847
+00:29:12,470 --> 00:29:13,910
+Da measures geographical mixing.
+
+848
+00:29:14,550 --> 00:29:16,950
+Are the resources, the spare parts, the economic
+
+849
+00:29:16,950 --> 00:29:20,210
+capital, the technicians moving fast enough across the
+
+850
+00:29:20,210 --> 00:29:22,290
+geographic space to reach the places where the
+
+851
+00:29:22,290 --> 00:29:23,230
+degradation is happening?
+
+852
+00:29:23,950 --> 00:29:25,770
+If a server farm in a remote desert
+
+853
+00:29:25,770 --> 00:29:28,030
+breaks down, but the spare parts are trapped
+
+854
+00:29:28,030 --> 00:29:30,450
+in a warehouse thousands of miles away, your
+
+855
+00:29:30,450 --> 00:29:32,470
+diffusion is too slow to support the reaction.
+
+856
+00:29:32,790 --> 00:29:34,350
+I want to focus on a very specific,
+
+857
+00:29:34,650 --> 00:29:37,230
+fascinating moment in the paper involving these PDEs.
+
+858
+00:29:37,890 --> 00:29:40,270
+Fliction doesn't just leave these as abstract concepts.
+
+859
+00:29:40,270 --> 00:29:43,210
+They run a specific numerical simulation for a
+
+860
+00:29:43,210 --> 00:29:46,090
+steady state system and they find a terrifyingly
+
+861
+00:29:46,090 --> 00:29:47,350
+exact threshold.
+
+862
+00:29:47,890 --> 00:29:49,690
+Let's talk about the 36 percent line.
+
+863
+00:29:50,130 --> 00:29:50,310
+Right.
+
+864
+00:29:50,910 --> 00:29:53,830
+Fliction calculates a scenario assuming a baseline degradation
+
+865
+00:29:53,830 --> 00:29:56,670
+rate of 0.5 and a system cycle
+
+866
+00:29:56,670 --> 00:29:57,570
+time of one.
