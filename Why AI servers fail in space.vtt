@@ -1,0 +1,3649 @@
+WEBVTT
+
+1
+00:00:00.150 --> 00:00:01.750
+(Transcribed by TurboScribe. Go Unlimited to remove this message.) I want you to just close your eyes
+
+2
+00:00:01.750 --> 00:00:03.190
+for a second, I mean, assuming you're not
+
+3
+00:00:03.190 --> 00:00:03.830
+driving or anything.
+
+4
+00:00:03.950 --> 00:00:05.350
+Right, definitely keep your eyes open if you're
+
+5
+00:00:05.350 --> 00:00:05.550
+driving.
+
+6
+00:00:05.610 --> 00:00:06.130
+Yeah, please.
+
+7
+00:00:06.630 --> 00:00:10.510
+But imagine this really specific, honestly very plausible
+
+8
+00:00:10.510 --> 00:00:10.990
+future.
+
+9
+00:00:11.390 --> 00:00:13.550
+You're looking up at the night sky, and
+
+10
+00:00:13.550 --> 00:00:14.210
+you see the moon.
+
+11
+00:00:15.070 --> 00:00:16.210
+Okay, I'm picturing it.
+
+12
+00:00:16.230 --> 00:00:18.070
+But instead of, you know, just that pale
+
+13
+00:00:18.070 --> 00:00:21.050
+cratered rock we're all completely used to, imagine
+
+14
+00:00:21.050 --> 00:00:24.150
+that it's just completely tiled, edge to edge,
+
+15
+00:00:24.390 --> 00:00:26.210
+with massive computer servers.
+
+16
+00:00:26.370 --> 00:00:28.450
+Like just a whole planet of metal and
+
+17
+00:00:28.450 --> 00:00:29.190
+blinking lights.
+
+18
+00:00:29.190 --> 00:00:29.690
+Exactly.
+
+19
+00:00:30.150 --> 00:00:33.190
+Millions of GPUs just humming away in the
+
+20
+00:00:33.190 --> 00:00:36.110
+absolute dead vacuum of space, powered by this
+
+21
+00:00:36.110 --> 00:00:37.850
+endless, unfiltered sunlight.
+
+22
+00:00:38.150 --> 00:00:39.730
+I mean, it sounds incredible, right?
+
+23
+00:00:39.870 --> 00:00:40.830
+Oh, it's totally seductive.
+
+24
+00:00:40.890 --> 00:00:43.530
+It sounds like this ultimate peak sci-fi
+
+25
+00:00:43.530 --> 00:00:46.230
+solution to, well, the Earth's energy crisis.
+
+26
+00:00:46.570 --> 00:00:46.790
+Right.
+
+27
+00:00:46.910 --> 00:00:48.490
+You just take all the heavy computing, all
+
+28
+00:00:48.490 --> 00:00:50.650
+the AI that's currently just draining our power
+
+29
+00:00:50.650 --> 00:00:53.410
+grids, package it all up, and shoot it
+
+30
+00:00:53.410 --> 00:00:53.790
+off-world.
+
+31
+00:00:53.790 --> 00:00:55.950
+It feels so clean.
+
+32
+00:00:56.150 --> 00:00:59.070
+Like it's this beautiful binary solution to a
+
+33
+00:00:59.070 --> 00:01:00.710
+really messy terrestrial problem.
+
+34
+00:01:00.970 --> 00:01:02.810
+You know, you just put the demanding part
+
+35
+00:01:02.810 --> 00:01:04.470
+of human advancement in a neat little box
+
+36
+00:01:04.470 --> 00:01:05.210
+and send it to the moon.
+
+37
+00:01:05.270 --> 00:01:06.550
+Out of sight, out of mind.
+
+38
+00:01:06.750 --> 00:01:08.290
+And the Earth gets to go back to
+
+39
+00:01:08.290 --> 00:01:09.470
+being this pristine garden.
+
+40
+00:01:09.610 --> 00:01:11.030
+It's the ultimate have-your-cake-and-eat
+
+41
+00:01:11.030 --> 00:01:11.970
+-it-too scenario.
+
+42
+00:01:12.090 --> 00:01:12.710
+There really is.
+
+43
+00:01:12.710 --> 00:01:16.250
+But today, we're going to explore why that
+
+44
+00:01:16.250 --> 00:01:22.730
+whole multi-billion dollar fantasy of orbital computation
+
+45
+00:01:22.730 --> 00:01:26.070
+might actually be based on a massive fundamental
+
+46
+00:01:26.070 --> 00:01:27.470
+misunderstanding of physics.
+
+47
+00:01:27.630 --> 00:01:29.430
+Yeah, a really expensive misunderstanding.
+
+48
+00:01:29.790 --> 00:01:30.010
+Right.
+
+49
+00:01:30.130 --> 00:01:31.610
+And we're doing this by jumping into this
+
+50
+00:01:31.610 --> 00:01:35.910
+brilliant, highly provocative 2026 paper by the researcher
+
+51
+00:01:35.910 --> 00:01:36.330
+Fliction.
+
+52
+00:01:36.710 --> 00:01:38.710
+It's titled, and I love how direct this
+
+53
+00:01:38.710 --> 00:01:40.550
+is, The Moon Should Not Be a Computer.
+
+54
+00:01:40.550 --> 00:01:42.730
+It doesn't really mince words, does it?
+
+55
+00:01:42.950 --> 00:01:43.630
+Not at all.
+
+56
+00:01:44.030 --> 00:01:45.930
+So our mission for this deep dive is
+
+57
+00:01:45.930 --> 00:01:49.110
+to basically use Fliction's paper to completely reframe
+
+58
+00:01:49.110 --> 00:01:50.090
+how you think about AI.
+
+59
+00:01:50.430 --> 00:01:53.470
+Not as this energy-wasting parasite that we
+
+60
+00:01:53.470 --> 00:01:55.370
+need to banish to space, but as what
+
+61
+00:01:55.370 --> 00:01:58.110
+the author calls a thermodynamic and semantic infrastructure.
+
+62
+00:01:58.290 --> 00:01:59.690
+Which is a phrase we'll definitely need to
+
+63
+00:01:59.690 --> 00:02:00.130
+unpack.
+
+64
+00:02:00.410 --> 00:02:00.970
+Oh, for sure.
+
+65
+00:02:01.510 --> 00:02:04.010
+We're going to explore exactly why sending computers
+
+66
+00:02:04.010 --> 00:02:05.910
+into the vacuum of space is a terrible
+
+67
+00:02:05.910 --> 00:02:10.470
+idea, how AI's so-called waste heat might
+
+68
+00:02:10.470 --> 00:02:12.390
+actually be the key to saving our physical
+
+69
+00:02:12.390 --> 00:02:13.070
+infrastructure.
+
+70
+00:02:13.590 --> 00:02:15.110
+And this is the part that is just
+
+71
+00:02:15.110 --> 00:02:15.750
+wild.
+
+72
+00:02:15.990 --> 00:02:16.110
+Right.
+
+73
+00:02:16.210 --> 00:02:17.850
+In a twist that completely blew my mind,
+
+74
+00:02:18.110 --> 00:02:20.270
+we're going to see how those exact same
+
+75
+00:02:20.270 --> 00:02:23.990
+physical laws of thermodynamics map perfectly onto the
+
+76
+00:02:23.990 --> 00:02:26.870
+way AI is currently reshaping the developing minds
+
+77
+00:02:26.870 --> 00:02:27.330
+of children.
+
+78
+00:02:27.630 --> 00:02:29.390
+It's an incredibly sweeping journey.
+
+79
+00:02:29.630 --> 00:02:32.110
+I mean, you're moving from the really hard
+
+80
+00:02:32.110 --> 00:02:34.790
+equations of thermodynamics straight into child psychology.
+
+81
+00:02:35.130 --> 00:02:35.270
+Yeah.
+
+82
+00:02:35.270 --> 00:02:37.250
+And they're connected by the exact same mathematical
+
+83
+00:02:37.250 --> 00:02:37.730
+principles.
+
+84
+00:02:38.270 --> 00:02:40.310
+And if there is one core theme to
+
+85
+00:02:40.310 --> 00:02:41.630
+just kind of keep in mind as we
+
+86
+00:02:41.630 --> 00:02:42.830
+go through this, it's this.
+
+87
+00:02:43.650 --> 00:02:46.090
+Whenever human beings try to externalize a problem,
+
+88
+00:02:46.530 --> 00:02:48.410
+we create an unstable system.
+
+89
+00:02:48.690 --> 00:02:50.670
+Externalize, meaning like pushing it away so we
+
+90
+00:02:50.670 --> 00:02:51.510
+don't have to look at it.
+
+91
+00:02:51.750 --> 00:02:52.150
+Exactly.
+
+92
+00:02:52.430 --> 00:02:54.490
+Whether we're trying to dump our industrial waste
+
+93
+00:02:54.490 --> 00:02:56.430
+heat into the vacuum of space or, you
+
+94
+00:02:56.430 --> 00:02:59.010
+know, offloading our critical thinking to a chatbot,
+
+95
+00:02:59.550 --> 00:03:02.030
+we are drawing the boundaries of our world
+
+96
+00:03:02.030 --> 00:03:03.050
+too narrowly.
+
+97
+00:03:03.050 --> 00:03:06.790
+And as the paper proves mathematically, physics always
+
+98
+00:03:06.790 --> 00:03:08.250
+comes to collect the bill.
+
+99
+00:03:08.810 --> 00:03:10.610
+Man, physics always collects the bill.
+
+100
+00:03:10.730 --> 00:03:11.670
+I love that phrasing.
+
+101
+00:03:12.030 --> 00:03:14.490
+So, okay, to understand why we shouldn't pave
+
+102
+00:03:14.490 --> 00:03:16.330
+the moon with servers, we really have to
+
+103
+00:03:16.330 --> 00:03:19.230
+start by accurately measuring the problem we're supposedly
+
+104
+00:03:19.230 --> 00:03:20.470
+trying to solve here on Earth.
+
+105
+00:03:20.590 --> 00:03:20.770
+Right.
+
+106
+00:03:20.830 --> 00:03:21.970
+The terrestrial problem.
+
+107
+00:03:22.190 --> 00:03:22.430
+Exactly.
+
+108
+00:03:22.610 --> 00:03:26.170
+The problem of how much energy artificial intelligence
+
+109
+00:03:26.170 --> 00:03:27.490
+actually uses.
+
+110
+00:03:27.710 --> 00:03:27.930
+Right.
+
+111
+00:03:28.010 --> 00:03:29.630
+Because the way we talk about it right
+
+112
+00:03:29.630 --> 00:03:31.270
+now in the media is, I mean, it's
+
+113
+00:03:31.270 --> 00:03:32.270
+just completely skewed.
+
+114
+00:03:32.270 --> 00:03:33.470
+It is entirely skewed.
+
+115
+00:03:33.590 --> 00:03:35.810
+Fliction makes a very compelling case for why
+
+116
+00:03:35.810 --> 00:03:38.490
+our current energy accounting is essentially just broken.
+
+117
+00:03:39.130 --> 00:03:40.590
+Like, if you look at the public discourse,
+
+118
+00:03:40.750 --> 00:03:42.930
+the panic is almost entirely focused on data
+
+119
+00:03:42.930 --> 00:03:43.270
+centers.
+
+120
+00:03:43.450 --> 00:03:46.070
+Yeah, you see those massive intimidating numbers all
+
+121
+00:03:46.070 --> 00:03:46.490
+the time.
+
+122
+00:03:47.030 --> 00:03:49.470
+Global data center consumption is estimated at, what,
+
+123
+00:03:49.570 --> 00:03:51.970
+somewhere between 200 and 500 terawatt hours annually?
+
+124
+00:03:52.230 --> 00:03:53.410
+Something like that, yeah.
+
+125
+00:03:53.790 --> 00:03:55.470
+Which is a staggering number.
+
+126
+00:03:55.570 --> 00:03:57.770
+I mean, it's the energy consumption of entire
+
+127
+00:03:57.770 --> 00:03:58.790
+industrialized countries.
+
+128
+00:03:58.790 --> 00:04:00.910
+But the paper points out that this is
+
+129
+00:04:00.910 --> 00:04:03.130
+an incredibly incomplete ledger.
+
+130
+00:04:03.550 --> 00:04:05.450
+It's a balance sheet with only the expenses
+
+131
+00:04:05.450 --> 00:04:07.290
+listed, right, and none of the savings.
+
+132
+00:04:07.530 --> 00:04:07.850
+Exactly.
+
+133
+00:04:08.130 --> 00:04:10.030
+You have to ask, what is the AI
+
+134
+00:04:10.030 --> 00:04:11.890
+actually doing with all that power?
+
+135
+00:04:12.050 --> 00:04:13.890
+Because it isn't just spinning its wheels for
+
+136
+00:04:13.890 --> 00:04:14.130
+fun.
+
+137
+00:04:14.190 --> 00:04:15.110
+It's doing work.
+
+138
+00:04:15.250 --> 00:04:15.450
+Right.
+
+139
+00:04:15.510 --> 00:04:18.310
+And the paper provides some really fascinating life
+
+140
+00:04:18.310 --> 00:04:21.070
+cycle analysis data to show what that work
+
+141
+00:04:21.070 --> 00:04:22.410
+replaces in the real world.
+
+142
+00:04:22.770 --> 00:04:25.810
+So, let's look at code completion, for example.
+
+143
+00:04:25.810 --> 00:04:29.170
+The paper maps out the human baseline of
+
+144
+00:04:29.170 --> 00:04:31.610
+energy required for a software engineer to sit
+
+145
+00:04:31.610 --> 00:04:32.890
+down and write a block of code.
+
+146
+00:04:33.470 --> 00:04:35.630
+And that baseline is 1.8 kilowatt hours.
+
+147
+00:04:35.830 --> 00:04:36.050
+Right.
+
+148
+00:04:36.210 --> 00:04:38.110
+And we should clarify what actually goes into
+
+149
+00:04:38.110 --> 00:04:40.010
+that 1.8 kilowatt hours, because it's not
+
+150
+00:04:40.010 --> 00:04:42.170
+just, you know, the electricity for the programmer's
+
+151
+00:04:42.170 --> 00:04:42.470
+laptop.
+
+152
+00:04:42.610 --> 00:04:42.970
+Oh, no.
+
+153
+00:04:43.050 --> 00:04:45.330
+It's a completely holistic life cycle analysis.
+
+154
+00:04:45.510 --> 00:04:47.450
+So, it accounts for the overhead lighting in
+
+155
+00:04:47.450 --> 00:04:50.250
+the office, the HVAC system keeping the building
+
+156
+00:04:50.250 --> 00:04:53.490
+comfortable, the physical energy burned during the employee's
+
+157
+00:04:53.490 --> 00:04:53.790
+commute.
+
+158
+00:04:53.890 --> 00:04:54.750
+Wow, even the commute.
+
+159
+00:04:54.750 --> 00:04:57.410
+Yeah, even their bodily caloric requirements.
+
+160
+00:04:57.690 --> 00:05:01.130
+It's the total infrastructural load required to support
+
+161
+00:05:01.130 --> 00:05:03.190
+that human for the time it takes to
+
+162
+00:05:03.190 --> 00:05:04.570
+execute that specific task.
+
+163
+00:05:05.190 --> 00:05:06.830
+Which obviously makes total sense when you think
+
+164
+00:05:06.830 --> 00:05:08.210
+about it as a systemic cost.
+
+165
+00:05:08.670 --> 00:05:10.310
+Like, the human has to exist and be
+
+166
+00:05:10.310 --> 00:05:11.230
+comfortable to do the work.
+
+167
+00:05:11.630 --> 00:05:13.930
+But then the paper compares that to an
+
+168
+00:05:13.930 --> 00:05:16.890
+AI-assisted code completion model, and the AI
+
+169
+00:05:16.890 --> 00:05:19.550
+uses just 0.12 kilowatt hours to accomplish
+
+170
+00:05:19.550 --> 00:05:20.770
+the exact same task.
+
+171
+00:05:20.850 --> 00:05:22.990
+Yeah, 0.12 compared to 1.8. So,
+
+172
+00:05:23.050 --> 00:05:24.730
+when you do the math, that's a massive
+
+173
+00:05:24.730 --> 00:05:27.770
+net savings of 1.68 kilowatt hours per
+
+174
+00:05:27.770 --> 00:05:28.550
+coding task.
+
+175
+00:05:28.870 --> 00:05:31.590
+You're dramatically compressing the energy footprint of that
+
+176
+00:05:31.590 --> 00:05:33.290
+specific economic output.
+
+177
+00:05:33.770 --> 00:05:35.510
+And it scales up even more aggressively when
+
+178
+00:05:35.510 --> 00:05:37.510
+you look at complex operational tasks.
+
+179
+00:05:37.830 --> 00:05:40.690
+So, take logistics optimization, like routing a fleet
+
+180
+00:05:40.690 --> 00:05:43.470
+of delivery trucks or managing a global supply
+
+181
+00:05:43.470 --> 00:05:43.850
+chain.
+
+182
+00:05:43.950 --> 00:05:44.170
+Okay.
+
+183
+00:05:44.350 --> 00:05:47.150
+The human baseline energy cost for calculating that
+
+184
+00:05:47.150 --> 00:05:50.570
+optimization is estimated at 22.new kilowatt hours
+
+185
+00:05:50.570 --> 00:05:51.250
+per task.
+
+186
+00:05:51.250 --> 00:05:53.730
+The AI energy cost for the exact same
+
+187
+00:05:53.730 --> 00:05:56.390
+routing algorithm is just 2.5 kilowatt hours.
+
+188
+00:05:56.650 --> 00:05:56.750
+Wow.
+
+189
+00:05:56.870 --> 00:05:59.290
+So, you're saving an astounding 19.5 kilowatt
+
+190
+00:05:59.290 --> 00:06:01.270
+hours every single time that task is run.
+
+191
+00:06:01.550 --> 00:06:02.950
+Every single time.
+
+192
+00:06:03.230 --> 00:06:05.550
+When you factor in the massive reductions in
+
+193
+00:06:05.550 --> 00:06:08.390
+human labor hours, the physical commuting that no
+
+194
+00:06:08.390 --> 00:06:12.030
+longer happens, the optimization of physical infrastructure loads.
+
+195
+00:06:12.190 --> 00:06:14.430
+I mean, AI is at its core a
+
+196
+00:06:14.430 --> 00:06:17.730
+massive compression algorithm for human energy expenditure.
+
+197
+00:06:17.730 --> 00:06:19.830
+So, okay, if you just look at that
+
+198
+00:06:19.830 --> 00:06:22.530
+math on paper, AI is saving us an
+
+199
+00:06:22.530 --> 00:06:23.850
+unbelievable amount of energy.
+
+200
+00:06:23.990 --> 00:06:25.910
+It looks like the ultimate green technology.
+
+201
+00:06:26.170 --> 00:06:27.030
+It does, doesn't it?
+
+202
+00:06:27.030 --> 00:06:27.570
+It really does.
+
+203
+00:06:28.030 --> 00:06:29.790
+But the paper doesn't stop there.
+
+204
+00:06:30.590 --> 00:06:33.850
+Fliction introduces a concept that completely complicates this
+
+205
+00:06:33.850 --> 00:06:36.310
+rosy picture, and it's called the rebound effect.
+
+206
+00:06:36.430 --> 00:06:38.250
+Ah, yes, the rebound effect.
+
+207
+00:06:38.550 --> 00:06:40.450
+And to really understand the mechanics of this,
+
+208
+00:06:40.510 --> 00:06:41.790
+we have to travel all the way back
+
+209
+00:06:41.790 --> 00:06:45.170
+to 1865 to an economist named William Stanley
+
+210
+00:06:45.170 --> 00:06:45.630
+Jevons.
+
+211
+00:06:45.750 --> 00:06:47.130
+This is the Jevons paradox, right?
+
+212
+00:06:47.130 --> 00:06:47.590
+Exactly.
+
+213
+00:06:48.150 --> 00:06:51.070
+So, during the Industrial Revolution, Jevons was observing
+
+214
+00:06:51.070 --> 00:06:52.230
+the coal industry.
+
+215
+00:06:52.830 --> 00:06:54.310
+Engineers at the time had just figured out
+
+216
+00:06:54.310 --> 00:06:56.630
+how to make coal-powered steam engines much,
+
+217
+00:06:56.830 --> 00:06:57.570
+much more efficient.
+
+218
+00:06:57.750 --> 00:07:00.490
+Meaning they required significantly less coal to produce
+
+219
+00:07:00.490 --> 00:07:02.530
+the exact same amount of mechanical work.
+
+220
+00:07:02.730 --> 00:07:03.230
+Precisely.
+
+221
+00:07:03.790 --> 00:07:06.590
+Now, the logical assumption, and this was the
+
+222
+00:07:06.590 --> 00:07:08.290
+assumption the government was making at the time,
+
+223
+00:07:08.370 --> 00:07:10.650
+was that total coal consumption across the country
+
+224
+00:07:10.650 --> 00:07:12.190
+would obviously go down.
+
+225
+00:07:12.410 --> 00:07:14.170
+Right, because the engines are more efficient.
+
+226
+00:07:14.410 --> 00:07:14.610
+Yeah.
+
+227
+00:07:14.610 --> 00:07:16.330
+If you only need half the fuel to
+
+228
+00:07:16.330 --> 00:07:18.490
+run a factory, you mine half the coal.
+
+229
+00:07:18.750 --> 00:07:20.730
+I mean, it seems like basic arithmetic.
+
+230
+00:07:21.190 --> 00:07:22.730
+It seems totally intuitive.
+
+231
+00:07:23.410 --> 00:07:26.890
+But Jevons noticed that total coal consumption actually
+
+232
+00:07:26.890 --> 00:07:28.010
+skyrocketed.
+
+233
+00:07:28.290 --> 00:07:30.490
+Because what happens when you make a service,
+
+234
+00:07:30.650 --> 00:07:33.350
+in this case mechanical power, cheaper and more
+
+235
+00:07:33.350 --> 00:07:34.410
+efficient to produce?
+
+236
+00:07:34.690 --> 00:07:36.630
+Oh, people don't just maintain their current usage,
+
+237
+00:07:36.770 --> 00:07:38.930
+they find vastly more ways to use it.
+
+238
+00:07:38.930 --> 00:07:39.410
+Exactly.
+
+239
+00:07:39.830 --> 00:07:43.150
+The efficiency lowers the economic cost, which drastically
+
+240
+00:07:43.150 --> 00:07:44.110
+drives up demand.
+
+241
+00:07:44.630 --> 00:07:47.590
+And that new explosive demand ends up offsetting
+
+242
+00:07:47.590 --> 00:07:49.490
+the original energy savings entirely.
+
+243
+00:07:49.890 --> 00:07:51.390
+I can completely relate to this on a
+
+244
+00:07:51.390 --> 00:07:51.890
+micro level.
+
+245
+00:07:52.030 --> 00:07:53.750
+Like, a few years ago, I started using
+
+246
+00:07:53.750 --> 00:07:55.890
+an AI tool to help draft some of
+
+247
+00:07:55.890 --> 00:07:57.390
+my more, you know, tedious emails.
+
+248
+00:07:57.510 --> 00:07:58.530
+Oh, I think we've all done that.
+
+249
+00:07:58.690 --> 00:07:58.890
+Right.
+
+250
+00:07:59.170 --> 00:08:01.390
+And my thought process was, great, this will
+
+251
+00:08:01.390 --> 00:08:02.590
+save me an hour a day, and I'll
+
+252
+00:08:02.590 --> 00:08:03.830
+use that hour to go for a walk
+
+253
+00:08:03.830 --> 00:08:04.870
+or, like, read a book.
+
+254
+00:08:05.030 --> 00:08:06.790
+I thought I was becoming more efficient.
+
+255
+00:08:07.210 --> 00:08:08.290
+But what actually happened...
+
+256
+00:08:08.290 --> 00:08:09.210
+You sent more emails.
+
+257
+00:08:09.430 --> 00:08:09.670
+Exactly.
+
+258
+00:08:10.190 --> 00:08:12.830
+Because writing emails became so frictionless and cheap
+
+259
+00:08:12.830 --> 00:08:15.230
+in terms of my time, I just ended
+
+260
+00:08:15.230 --> 00:08:17.310
+up taking on more projects and sending ten
+
+261
+00:08:17.310 --> 00:08:18.370
+times as many emails.
+
+262
+00:08:18.750 --> 00:08:19.570
+I didn't save time at all.
+
+263
+00:08:19.830 --> 00:08:22.090
+I just increased my output volume to fill
+
+264
+00:08:22.090 --> 00:08:23.290
+the newly available capacity.
+
+265
+00:08:23.570 --> 00:08:26.790
+That is a perfect, localized example of Jevons'
+
+266
+00:08:26.950 --> 00:08:27.210
+paradox.
+
+267
+00:08:28.050 --> 00:08:29.390
+You didn't conserve your energy.
+
+268
+00:08:29.830 --> 00:08:32.470
+You reinvested the saved energy into a higher
+
+269
+00:08:32.470 --> 00:08:34.610
+volume of the exact same activity.
+
+270
+00:08:35.360 --> 00:08:38.510
+And the paper applies this exact thermodynamic modeling
+
+271
+00:08:38.510 --> 00:08:40.250
+to the macro scale of AI.
+
+272
+00:08:40.669 --> 00:08:40.950
+Right.
+
+273
+00:08:41.070 --> 00:08:42.650
+Because AI compresses workflows.
+
+274
+00:08:42.929 --> 00:08:44.610
+It saves immense amounts of time and energy.
+
+275
+00:08:44.790 --> 00:08:46.930
+But what does human society do with saved
+
+276
+00:08:46.930 --> 00:08:48.050
+time and cheaper computing?
+
+277
+00:08:48.830 --> 00:08:50.370
+We don't just sit in the dark and
+
+278
+00:08:50.370 --> 00:08:51.150
+conserve the grid.
+
+279
+00:08:51.470 --> 00:08:52.050
+Not at all.
+
+280
+00:08:52.190 --> 00:08:55.010
+We redirect that saved capacity into even more
+
+281
+00:08:55.010 --> 00:08:56.310
+resource-heavy activities.
+
+282
+00:08:56.710 --> 00:08:59.470
+If AI makes software development cheaper and faster,
+
+283
+00:08:59.750 --> 00:09:01.630
+we don't just stop coding at 5 p
+
+284
+00:09:01.630 --> 00:09:02.670
+.m. and call it a day.
+
+285
+00:09:02.670 --> 00:09:04.810
+We demand vastly more software.
+
+286
+00:09:05.350 --> 00:09:06.630
+We write more complex code.
+
+287
+00:09:07.030 --> 00:09:08.930
+We push the computational system harder.
+
+288
+00:09:09.790 --> 00:09:11.890
+And Fliction models this explicitly with what the
+
+289
+00:09:11.890 --> 00:09:13.810
+paper calls high rebound scenarios.
+
+290
+00:09:14.310 --> 00:09:17.210
+They use an elasticity coefficient of 0.6,
+
+291
+00:09:17.690 --> 00:09:20.690
+meaning for every bit of efficiency you gain,
+
+292
+00:09:20.990 --> 00:09:23.310
+demand bounces back and eats up 60%
+
+293
+00:09:23.310 --> 00:09:24.590
+of the supposed savings.
+
+294
+00:09:24.890 --> 00:09:25.070
+Yep.
+
+295
+00:09:25.250 --> 00:09:27.210
+60% just wiped out by new demand.
+
+296
+00:09:27.430 --> 00:09:29.110
+So let's go back to our code completion
+
+297
+00:09:29.110 --> 00:09:29.610
+example.
+
+298
+00:09:29.610 --> 00:09:32.150
+Initially, we calculated a net savings of 1
+
+299
+00:09:32.150 --> 00:09:34.290
+.68 kilowatt hours per task.
+
+300
+00:09:34.750 --> 00:09:36.890
+But in this high rebound scenario where cheaper
+
+301
+00:09:36.890 --> 00:09:39.350
+coding just incentivizes everyone to build more apps
+
+302
+00:09:39.350 --> 00:09:41.610
+and run more models, that net savings drops
+
+303
+00:09:41.610 --> 00:09:43.510
+all the way down to 0.99 kilowatt
+
+304
+00:09:43.510 --> 00:09:43.770
+hours.
+
+305
+00:09:44.050 --> 00:09:45.850
+The more efficient the AI gets, the more
+
+306
+00:09:45.850 --> 00:09:46.950
+aggressively we consume it.
+
+307
+00:09:47.310 --> 00:09:49.010
+And this leads to a really critical synthesis
+
+308
+00:09:49.010 --> 00:09:49.630
+in the paper.
+
+309
+00:09:50.190 --> 00:09:52.310
+If the rebound effect is constantly eating up
+
+310
+00:09:52.310 --> 00:09:55.070
+our efficiency gains, doesn't that basically prove the
+
+311
+00:09:55.070 --> 00:09:55.630
+critics right?
+
+312
+00:09:55.770 --> 00:09:56.550
+That's what I'm wondering.
+
+313
+00:09:56.550 --> 00:09:59.530
+Doesn't this mean that AI's recursive demand, you
+
+314
+00:09:59.530 --> 00:10:00.630
+know, the fact that it acts as an
+
+315
+00:10:00.630 --> 00:10:03.470
+agent generating its own tasks, looping over its
+
+316
+00:10:03.470 --> 00:10:06.810
+own code, finding new ways to optimize, doesn't
+
+317
+00:10:06.810 --> 00:10:08.610
+that just lead to an infinite energy sink?
+
+318
+00:10:09.310 --> 00:10:11.190
+That's exactly what I'm thinking right now.
+
+319
+00:10:11.730 --> 00:10:13.490
+If the AI is just prompting us to
+
+320
+00:10:13.490 --> 00:10:16.330
+use more AI and the demand is basically
+
+321
+00:10:16.330 --> 00:10:19.590
+elastic, aren't we just inevitably draining the global
+
+322
+00:10:19.590 --> 00:10:19.990
+grid?
+
+323
+00:10:20.070 --> 00:10:21.770
+It sounds like an unmitigated disaster.
+
+324
+00:10:22.030 --> 00:10:24.350
+Well, if the system is not closed, yes,
+
+325
+00:10:24.750 --> 00:10:25.450
+it is a disaster.
+
+326
+00:10:25.450 --> 00:10:28.130
+The paper explicitly confirms this fear.
+
+327
+00:10:28.650 --> 00:10:31.210
+It states mathematically that non-closed systems will
+
+328
+00:10:31.210 --> 00:10:33.490
+diverge infinitely under agentic demand.
+
+329
+00:10:33.710 --> 00:10:36.010
+Agentic demand meaning AI that can act autonomously
+
+330
+00:10:36.010 --> 00:10:38.230
+to spin up new tasks and consume resources
+
+331
+00:10:38.230 --> 00:10:39.890
+without a human bottleneck, right?
+
+332
+00:10:40.050 --> 00:10:40.570
+Exactly.
+
+333
+00:10:41.210 --> 00:10:43.870
+But, and this is crucial, Fliption offers a
+
+334
+00:10:43.870 --> 00:10:45.050
+radical solution.
+
+335
+00:10:45.410 --> 00:10:47.850
+The answer, according to the paper, isn't to
+
+336
+00:10:47.850 --> 00:10:50.410
+artificially cap the demand or like bam the
+
+337
+00:10:50.410 --> 00:10:50.690
+technology.
+
+338
+00:10:51.130 --> 00:10:52.310
+Which probably wouldn't work anyway.
+
+339
+00:10:52.310 --> 00:10:53.510
+Right, it never does.
+
+340
+00:10:53.790 --> 00:10:55.810
+The answer is that we have to structurally,
+
+341
+00:10:56.090 --> 00:10:58.270
+physically change how our infrastructure deals with its
+
+342
+00:10:58.270 --> 00:10:59.070
+own byproducts.
+
+343
+00:10:59.110 --> 00:11:00.350
+We have to change the math of the
+
+344
+00:11:00.350 --> 00:11:01.150
+system entirely.
+
+345
+00:11:01.590 --> 00:11:02.910
+Okay, so this is where we have to
+
+346
+00:11:02.910 --> 00:11:04.410
+fundamentally rethink our definitions.
+
+347
+00:11:04.670 --> 00:11:04.870
+Yeah.
+
+348
+00:11:04.970 --> 00:11:06.610
+Because if we know that AI demand is
+
+349
+00:11:06.610 --> 00:11:08.390
+only going to increase, we have to look
+
+350
+00:11:08.390 --> 00:11:10.230
+at the physical byproduct of all that demand.
+
+351
+00:11:10.490 --> 00:11:12.370
+And that byproduct is heat.
+
+352
+00:11:12.550 --> 00:11:13.250
+Right, heat.
+
+353
+00:11:13.250 --> 00:11:16.010
+And the author argues that calling the heat
+
+354
+00:11:16.010 --> 00:11:20.330
+generated by computers waste heat is essentially the
+
+355
+00:11:20.330 --> 00:11:23.470
+original sin of modern technological infrastructure.
+
+356
+00:11:24.070 --> 00:11:27.810
+It is a profound, almost philosophical framing error.
+
+357
+00:11:28.210 --> 00:11:30.470
+And it's an error that has essentially crippled
+
+358
+00:11:30.470 --> 00:11:31.130
+our engineering.
+
+359
+00:11:31.970 --> 00:11:34.630
+Let's think about a conventional electric space heater.
+
+360
+00:11:34.790 --> 00:11:36.430
+Like the kind you might plug in under
+
+361
+00:11:36.430 --> 00:11:37.330
+your desk in the winter.
+
+362
+00:11:37.470 --> 00:11:38.750
+Yeah, just a basic coil heater.
+
+363
+00:11:38.850 --> 00:11:39.250
+Exactly.
+
+364
+00:11:39.250 --> 00:11:42.410
+It draws electrical energy from the wall and
+
+365
+00:11:42.410 --> 00:11:45.190
+it converts that electrical energy directly into thermal
+
+366
+00:11:45.190 --> 00:11:45.650
+energy.
+
+367
+00:11:45.950 --> 00:11:46.590
+It makes heat.
+
+368
+00:11:46.750 --> 00:11:47.850
+That is its sole purpose.
+
+369
+00:11:48.470 --> 00:11:51.130
+And globally, dedicated heat-only systems like this,
+
+370
+00:11:51.190 --> 00:11:53.450
+whether they're space heaters or industrial kilns or
+
+371
+00:11:53.450 --> 00:11:56.650
+water boilers, they consume something on the order
+
+372
+00:11:56.650 --> 00:11:58.310
+of 10 petajoules annually.
+
+373
+00:11:58.450 --> 00:11:59.910
+10 petajoules, wow.
+
+374
+00:12:00.510 --> 00:12:04.290
+That number absolutely dwarfs the 200 terawatt hours
+
+375
+00:12:04.290 --> 00:12:06.630
+used by all the world's data centers.
+
+376
+00:12:06.630 --> 00:12:10.530
+I mean, human society spends an unbelievable, almost
+
+377
+00:12:10.530 --> 00:12:14.270
+unfathomable amount of energy purely on generating raw
+
+378
+00:12:14.270 --> 00:12:17.550
+heat for homes, for industrial processes, for curing
+
+379
+00:12:17.550 --> 00:12:18.130
+materials.
+
+380
+00:12:18.230 --> 00:12:18.330
+Right.
+
+381
+00:12:18.550 --> 00:12:20.630
+We are absolutely desperate for heat.
+
+382
+00:12:21.050 --> 00:12:22.670
+And then you look at a computer, a
+
+383
+00:12:22.670 --> 00:12:24.390
+computer also draws electrical energy.
+
+384
+00:12:24.770 --> 00:12:26.830
+And it also converts that electrical energy entirely
+
+385
+00:12:26.830 --> 00:12:27.450
+into heat.
+
+386
+00:12:28.210 --> 00:12:28.310
+Exactly.
+
+387
+00:12:28.430 --> 00:12:29.810
+And that is an engineering flaw.
+
+388
+00:12:29.950 --> 00:12:31.630
+That is a fundamental law of physics.
+
+389
+00:12:31.630 --> 00:12:35.070
+The paper cites the Landauer bound here, which
+
+390
+00:12:35.070 --> 00:12:37.030
+I think we really need to unpack, because
+
+391
+00:12:37.030 --> 00:12:39.390
+it blew my mind that computation is physically
+
+392
+00:12:39.390 --> 00:12:40.250
+linked to heat.
+
+393
+00:12:40.730 --> 00:12:42.870
+The Landauer bound is absolutely crucial here.
+
+394
+00:12:43.070 --> 00:12:45.570
+It was proposed by Rolf Landauer in 1961,
+
+395
+00:12:45.990 --> 00:12:49.150
+and it establishes the absolute theoretical minimum energy
+
+396
+00:12:49.150 --> 00:12:51.770
+required to erase a single bit of information.
+
+397
+00:12:52.010 --> 00:12:54.010
+Okay, erase a bit, meaning what exactly?
+
+398
+00:12:54.130 --> 00:12:57.030
+Well, it proves that computation is inextricably, fundamentally
+
+399
+00:12:57.030 --> 00:12:57.950
+linked to entropy.
+
+400
+00:12:57.950 --> 00:13:00.950
+When a computer processes information, when it flips
+
+401
+00:13:00.950 --> 00:13:02.070
+a bit from a 1 to a 0,
+
+402
+00:13:02.270 --> 00:13:04.650
+it decreases the logical entropy inside the machine.
+
+403
+00:13:04.770 --> 00:13:05.710
+It's organizing things.
+
+404
+00:13:06.010 --> 00:13:06.230
+Right.
+
+405
+00:13:06.750 --> 00:13:08.770
+But the second law of thermodynamics says that
+
+406
+00:13:08.770 --> 00:13:11.430
+overall entropy in the universe must always increase.
+
+407
+00:13:12.030 --> 00:13:15.110
+So to balance the equation, that erased information
+
+408
+00:13:15.110 --> 00:13:17.750
+is essentially expelled into the environment as physical
+
+409
+00:13:17.750 --> 00:13:17.990
+heat.
+
+410
+00:13:18.450 --> 00:13:20.950
+You literally cannot do math in a physical
+
+411
+00:13:20.950 --> 00:13:22.550
+universe without creating heat.
+
+412
+00:13:23.070 --> 00:13:25.450
+A computer is, by the strict laws of
+
+413
+00:13:25.450 --> 00:13:27.290
+physics, a space heater.
+
+414
+00:13:27.290 --> 00:13:29.210
+But, and this is the absolute crux of
+
+415
+00:13:29.210 --> 00:13:29.850
+the argument, right?
+
+416
+00:13:30.170 --> 00:13:31.870
+The only difference between a space heater and
+
+417
+00:13:31.870 --> 00:13:34.450
+a computer is that the computer does useful,
+
+418
+00:13:34.670 --> 00:13:37.250
+complex math before the energy becomes heat.
+
+419
+00:13:37.310 --> 00:13:38.030
+That's it, exactly.
+
+420
+00:13:38.530 --> 00:13:40.830
+The terminal state of both devices is identical,
+
+421
+00:13:41.470 --> 00:13:41.790
+heat.
+
+422
+00:13:42.370 --> 00:13:45.350
+But the space heater does zero structured informational
+
+423
+00:13:45.350 --> 00:13:46.450
+work along the way.
+
+424
+00:13:46.710 --> 00:13:48.830
+The electrical current just hits a resistor and
+
+425
+00:13:48.830 --> 00:13:49.490
+scatters.
+
+426
+00:13:49.550 --> 00:13:50.490
+It's just brute force.
+
+427
+00:13:50.590 --> 00:13:50.730
+Yeah.
+
+428
+00:13:51.430 --> 00:13:53.390
+Flitchin argues that a space heater is essentially
+
+429
+00:13:53.390 --> 00:13:54.450
+a degenerate computer.
+
+430
+00:13:54.450 --> 00:13:57.150
+It's a computer that produces entropy without extracting
+
+431
+00:13:57.150 --> 00:13:58.850
+any informational value whatsoever.
+
+432
+00:13:59.450 --> 00:14:02.030
+Yet society accepts the massive energy used by
+
+433
+00:14:02.030 --> 00:14:04.430
+a dumb space heater as necessary for survival,
+
+434
+00:14:04.710 --> 00:14:06.650
+while the energy used by a data center
+
+435
+00:14:06.650 --> 00:14:07.630
+is labeled wasteful.
+
+436
+00:14:08.170 --> 00:14:09.910
+That's such an incredible paradigm shift.
+
+437
+00:14:10.030 --> 00:14:11.790
+It's an entirely artificial boundary.
+
+438
+00:14:12.130 --> 00:14:14.110
+If we need the heat anyway, and we
+
+439
+00:14:14.110 --> 00:14:16.630
+desperately do, why are we generating it with
+
+440
+00:14:16.630 --> 00:14:19.250
+dumb resistance coils instead of generating it with
+
+441
+00:14:19.250 --> 00:14:22.430
+GPUs that are, I don't know, solving protein
+
+442
+00:14:22.430 --> 00:14:24.290
+folding for cancer research along the way?
+
+443
+00:14:24.290 --> 00:14:24.810
+Exactly.
+
+444
+00:14:25.210 --> 00:14:26.830
+When you put it like that, building a
+
+445
+00:14:26.830 --> 00:14:28.910
+dedicated heater seems almost offensive.
+
+446
+00:14:29.430 --> 00:14:30.990
+Like, if you need to heat an apartment
+
+447
+00:14:30.990 --> 00:14:33.970
+building, using a bank of GPUs is strictly
+
+448
+00:14:33.970 --> 00:14:36.730
+more efficient than using a standard boiler, because
+
+449
+00:14:36.730 --> 00:14:38.850
+you get the computation essentially for free on
+
+450
+00:14:38.850 --> 00:14:40.010
+the way to making the heat you already
+
+451
+00:14:40.010 --> 00:14:40.330
+needed.
+
+452
+00:14:40.370 --> 00:14:40.650
+Wow.
+
+453
+00:14:41.250 --> 00:14:42.310
+Getting the math for free.
+
+454
+00:14:42.850 --> 00:14:45.330
+And this realization leads directly into the central
+
+455
+00:14:45.330 --> 00:14:47.070
+conceptual framework of the whole paper.
+
+456
+00:14:47.310 --> 00:14:50.410
+The author introduces a term called xylomorphic computation.
+
+457
+00:14:50.670 --> 00:14:51.010
+Yes.
+
+458
+00:14:51.230 --> 00:14:53.130
+X-Y-L-M-O-R-P-H
+
+459
+00:14:53.130 --> 00:14:53.490
+-I-C.
+
+460
+00:14:53.490 --> 00:14:53.790
+Right.
+
+461
+00:14:54.230 --> 00:14:56.130
+It comes from the Greek xylo, meaning wood,
+
+462
+00:14:56.350 --> 00:14:57.570
+and morphic, meaning form.
+
+463
+00:14:57.910 --> 00:14:59.990
+But what does that actually mean for, like,
+
+464
+00:15:00.030 --> 00:15:01.210
+a literal data center?
+
+465
+00:15:01.610 --> 00:15:03.590
+It's a really beautiful, evocative term.
+
+466
+00:15:04.310 --> 00:15:07.190
+Aristotle used xylomorphism to describe how matter and
+
+467
+00:15:07.190 --> 00:15:08.710
+form are fundamentally linked.
+
+468
+00:15:09.530 --> 00:15:13.030
+Fliction adapts this to xylomorphic, referring specifically to
+
+469
+00:15:13.030 --> 00:15:16.230
+infrastructure that recursively generates its own substrates from
+
+470
+00:15:16.230 --> 00:15:17.650
+its computational residues.
+
+471
+00:15:17.710 --> 00:15:18.610
+Okay, that's a mouthful.
+
+472
+00:15:18.870 --> 00:15:19.810
+In plain English.
+
+473
+00:15:19.810 --> 00:15:22.470
+In plain practical terms, it means a physical
+
+474
+00:15:22.470 --> 00:15:24.810
+system that uses its own waste products to
+
+475
+00:15:24.810 --> 00:15:27.150
+build the literal materials it needs to keep
+
+476
+00:15:27.150 --> 00:15:27.470
+running.
+
+477
+00:15:27.730 --> 00:15:29.190
+So we're talking about a snake eating its
+
+478
+00:15:29.190 --> 00:15:31.910
+own tail, but, like, in a highly productive,
+
+479
+00:15:32.330 --> 00:15:32.830
+good way.
+
+480
+00:15:33.050 --> 00:15:35.190
+A system that literally eats its own exhaust
+
+481
+00:15:35.190 --> 00:15:36.390
+to survive and grow.
+
+482
+00:15:37.090 --> 00:15:37.450
+Yes.
+
+483
+00:15:38.010 --> 00:15:39.830
+And Fliction doesn't just leave this as a
+
+484
+00:15:39.830 --> 00:15:40.330
+neat metaphor.
+
+485
+00:15:40.730 --> 00:15:43.270
+They formalize it with a strict mathematical variable.
+
+486
+00:15:43.270 --> 00:15:45.950
+This is the central formal contribution of the
+
+487
+00:15:45.950 --> 00:15:49.450
+paper, the xylomorphic order parameter, denoted by the
+
+488
+00:15:49.450 --> 00:15:50.470
+Greek letter lambda.
+
+489
+00:15:51.370 --> 00:15:54.490
+This parameter mathematically measures whether a physical system
+
+490
+00:15:54.490 --> 00:15:57.430
+is internalizing its waste or externalizing it into
+
+491
+00:15:57.430 --> 00:15:57.870
+the void.
+
+492
+00:15:58.050 --> 00:16:00.610
+And it allows us to classify all computational
+
+493
+00:16:00.610 --> 00:16:03.850
+infrastructure into three distinct thermodynamic regimes.
+
+494
+00:16:04.310 --> 00:16:06.150
+Okay, if you're listening to this and your
+
+495
+00:16:06.150 --> 00:16:07.750
+eyes are glazing over at the mention of
+
+496
+00:16:07.750 --> 00:16:09.770
+a Greek letter parameter, stick with us.
+
+497
+00:16:09.770 --> 00:16:12.490
+Because this lambda value is the lens through
+
+498
+00:16:12.490 --> 00:16:14.870
+which we really have to view the entire
+
+499
+00:16:14.870 --> 00:16:16.050
+future of technology.
+
+500
+00:16:16.490 --> 00:16:18.530
+So let's break down these three regimes.
+
+501
+00:16:18.810 --> 00:16:21.410
+It's actually very intuitive once you visualize it.
+
+502
+00:16:21.670 --> 00:16:23.990
+First, you have the contractive regime.
+
+503
+00:16:24.230 --> 00:16:26.410
+This is where the xylomorphic order parameter lambda
+
+504
+00:16:26.410 --> 00:16:28.130
+is less than one.
+
+505
+00:16:28.170 --> 00:16:28.930
+Okay, less than one.
+
+506
+00:16:28.930 --> 00:16:31.410
+In this regime, the system captures a significant
+
+507
+00:16:31.410 --> 00:16:33.930
+portion of its own waste heat, and routes
+
+508
+00:16:33.930 --> 00:16:36.390
+it into productive uses that actually reduce the
+
+509
+00:16:36.390 --> 00:16:39.250
+system's need for external energy on the next
+
+510
+00:16:39.250 --> 00:16:39.670
+cycle.
+
+511
+00:16:39.810 --> 00:16:41.050
+It internalizes its waste.
+
+512
+00:16:41.210 --> 00:16:41.670
+Exactly.
+
+513
+00:16:42.250 --> 00:16:44.510
+Because it's recycling its own output, it becomes
+
+514
+00:16:44.510 --> 00:16:47.150
+more stable and requires fewer outside resources over
+
+515
+00:16:47.150 --> 00:16:48.390
+time, even as it scales.
+
+516
+00:16:49.290 --> 00:16:50.310
+This is the ultimate goal.
+
+517
+00:16:50.430 --> 00:16:52.690
+This is what Fliction calls xylomorphic stability.
+
+518
+00:16:52.930 --> 00:16:54.670
+Okay, so less than one is the holy
+
+519
+00:16:54.670 --> 00:16:55.370
+grail.
+
+520
+00:16:55.370 --> 00:16:57.470
+Then you have the critical regime, where lambda
+
+521
+00:16:57.470 --> 00:16:58.750
+exactly equals one.
+
+522
+00:16:58.990 --> 00:16:59.210
+Right.
+
+523
+00:16:59.610 --> 00:17:02.150
+Here, the system is perfectly balanced in terms
+
+524
+00:17:02.150 --> 00:17:03.010
+of its current state.
+
+525
+00:17:03.530 --> 00:17:06.050
+It's capturing just enough waste to offset its
+
+526
+00:17:06.050 --> 00:17:08.010
+growth, but it isn't gaining ground.
+
+527
+00:17:08.390 --> 00:17:11.569
+It relies on a persistent, unchanging dependence on
+
+528
+00:17:11.569 --> 00:17:12.990
+an external energy tether.
+
+529
+00:17:13.130 --> 00:17:14.089
+Like it's treading water.
+
+530
+00:17:14.369 --> 00:17:14.750
+Exactly.
+
+531
+00:17:14.970 --> 00:17:16.770
+It isn't getting dramatically better, it isn't getting
+
+532
+00:17:16.770 --> 00:17:17.210
+worse.
+
+533
+00:17:17.430 --> 00:17:20.369
+But it is entirely dependent on that external
+
+534
+00:17:20.369 --> 00:17:22.130
+lifeline remaining perfectly stable.
+
+535
+00:17:22.130 --> 00:17:25.329
+And finally, the expansive regime, where lambda is
+
+536
+00:17:25.329 --> 00:17:26.030
+greater than one.
+
+537
+00:17:26.550 --> 00:17:27.870
+This is the danger zone.
+
+538
+00:17:28.090 --> 00:17:30.090
+And unfortunately, this is where almost all of
+
+539
+00:17:30.090 --> 00:17:31.790
+our current infrastructure lives right now.
+
+540
+00:17:32.590 --> 00:17:36.530
+In an expansive regime, exogenous dependence, meaning the
+
+541
+00:17:36.530 --> 00:17:39.970
+need for outside energy and raw materials, diverges
+
+542
+00:17:39.970 --> 00:17:40.490
+infinitely.
+
+543
+00:17:40.610 --> 00:17:41.390
+It just keeps growing.
+
+544
+00:17:41.550 --> 00:17:41.790
+Yeah.
+
+545
+00:17:42.030 --> 00:17:44.710
+The system dumps its waste heat uselessly into
+
+546
+00:17:44.710 --> 00:17:47.590
+the atmosphere, and constantly demands fresh energy from
+
+547
+00:17:47.590 --> 00:17:50.030
+the grid to run the next cycle, Without
+
+548
+00:17:50.030 --> 00:17:51.830
+finding a way to close the loop and
+
+549
+00:17:51.830 --> 00:17:54.830
+capture that heat, an expansive system will inevitably,
+
+550
+00:17:55.250 --> 00:17:58.250
+mathematically, collapse under its own scaling demands.
+
+551
+00:17:58.410 --> 00:18:00.330
+Now, to give this some heavy mathematical backing,
+
+552
+00:18:00.490 --> 00:18:02.630
+Flickchuan breaks this down using what the paper
+
+553
+00:18:02.630 --> 00:18:05.250
+calls the RSVP field theory.
+
+554
+00:18:05.610 --> 00:18:08.390
+That stands for Relativistic Scalar Vector Plenum.
+
+555
+00:18:09.450 --> 00:18:10.530
+I want to spend a minute here, because
+
+556
+00:18:10.530 --> 00:18:11.430
+we can't just skip the map.
+
+557
+00:18:11.870 --> 00:18:16.170
+How does this RSVP theory actually map to
+
+558
+00:18:16.170 --> 00:18:18.310
+a physical building full of computers?
+
+559
+00:18:18.310 --> 00:18:21.870
+Well, the RSVP field theory is Flickchuan's way
+
+560
+00:18:21.870 --> 00:18:23.690
+of mapping the flow of energy, not just
+
+561
+00:18:23.690 --> 00:18:25.590
+as a straight line, but as a topological
+
+562
+00:18:25.590 --> 00:18:26.030
+field.
+
+563
+00:18:26.410 --> 00:18:28.010
+You have energy coming in as a vector,
+
+564
+00:18:28.470 --> 00:18:31.610
+computation happening as a scalar transformation, and heat
+
+565
+00:18:31.610 --> 00:18:32.470
+radiating out.
+
+566
+00:18:32.730 --> 00:18:33.530
+Okay, I'm following.
+
+567
+00:18:34.030 --> 00:18:37.270
+The absolute key variable in these differential equations
+
+568
+00:18:37.270 --> 00:18:37.950
+is eta cap.
+
+569
+00:18:38.110 --> 00:18:38.550
+Eta cap.
+
+570
+00:18:38.630 --> 00:18:39.210
+What does that measure?
+
+571
+00:18:39.390 --> 00:18:41.610
+That variable represents the capture efficiency.
+
+572
+00:18:41.610 --> 00:18:44.410
+The literal fraction of dissipated heat that a
+
+573
+00:18:44.410 --> 00:18:47.290
+xylomorphic system manages to capture and successfully route
+
+574
+00:18:47.290 --> 00:18:48.910
+into productive physical sinks.
+
+575
+00:18:49.230 --> 00:18:49.730
+Oh, I see.
+
+576
+00:18:49.810 --> 00:18:51.390
+So if a data center just vents its
+
+577
+00:18:51.390 --> 00:18:53.590
+hot air into the sky, its eta cap
+
+578
+00:18:53.590 --> 00:18:54.730
+is basically zero.
+
+579
+00:18:55.030 --> 00:18:56.990
+It's a completely expansive, wasteful system.
+
+580
+00:18:57.430 --> 00:18:59.550
+But if it captures that heat, the eta
+
+581
+00:18:59.550 --> 00:19:01.690
+cap goes up, and the lambda value drops
+
+582
+00:19:01.690 --> 00:19:02.410
+below one.
+
+583
+00:19:02.790 --> 00:19:05.670
+And the paper provides some incredible, real-world
+
+584
+00:19:05.670 --> 00:19:09.610
+examples of this actually happening right now, categorized
+
+585
+00:19:09.610 --> 00:19:11.730
+into weak and strong xylomorphy.
+
+586
+00:19:12.250 --> 00:19:14.590
+Let's talk about weak xylomorphy first, because the
+
+587
+00:19:14.590 --> 00:19:16.970
+example they use in Stockholm is just fascinating.
+
+588
+00:19:17.510 --> 00:19:17.610
+Yes.
+
+589
+00:19:17.910 --> 00:19:20.250
+Stockholm Data Parks in Sweden is a perfect
+
+590
+00:19:20.250 --> 00:19:23.310
+real-world illustration of lambda, less than one
+
+591
+00:19:23.310 --> 00:19:25.210
+in a weak, xylomorphic sense.
+
+592
+00:19:25.670 --> 00:19:27.430
+There's a mid-scale data center there that
+
+593
+00:19:27.430 --> 00:19:29.630
+operates differently than almost any other in the
+
+594
+00:19:29.630 --> 00:19:29.870
+world.
+
+595
+00:19:30.310 --> 00:19:32.350
+When the servers get hot, they don't just
+
+596
+00:19:32.350 --> 00:19:34.810
+spin up massive fans to vent that heat
+
+597
+00:19:34.810 --> 00:19:35.570
+into the atmosphere.
+
+598
+00:19:35.770 --> 00:19:36.810
+Which is what everyone else does.
+
+599
+00:19:36.810 --> 00:19:37.090
+Right.
+
+600
+00:19:37.290 --> 00:19:38.950
+Instead, they capture that thermal energy.
+
+601
+00:19:39.070 --> 00:19:40.310
+Their eta cap is very high.
+
+602
+00:19:40.550 --> 00:19:42.770
+And they route that hot water directly into
+
+603
+00:19:42.770 --> 00:19:44.630
+a nearby concrete curing facility.
+
+604
+00:19:45.070 --> 00:19:47.450
+Which is just a brilliant piece of industrial
+
+605
+00:19:47.450 --> 00:19:47.990
+symbiosis.
+
+606
+00:19:48.130 --> 00:19:49.150
+I read the details on this.
+
+607
+00:19:49.270 --> 00:19:51.190
+The GPUs in that data center are running
+
+608
+00:19:51.190 --> 00:19:52.950
+at 90% exergy efficiency.
+
+609
+00:19:53.770 --> 00:19:56.330
+By routing their exhaust, they are actively offsetting
+
+610
+00:19:56.330 --> 00:19:59.190
+800 kilowatts of heating demand for the concrete
+
+611
+00:19:59.190 --> 00:20:00.010
+plant next door.
+
+612
+00:20:00.110 --> 00:20:01.170
+800 kilowatts?
+
+613
+00:20:01.190 --> 00:20:01.770
+That's massive.
+
+614
+00:20:02.190 --> 00:20:02.710
+It really is.
+
+615
+00:20:02.830 --> 00:20:04.830
+The concrete plant doesn't have to burn fossil
+
+616
+00:20:04.830 --> 00:20:05.790
+fuels to get its heat.
+
+617
+00:20:05.790 --> 00:20:08.270
+It just uses the computer's math exhaust.
+
+618
+00:20:08.630 --> 00:20:08.950
+Yeah.
+
+619
+00:20:08.970 --> 00:20:11.710
+But the absolute best part of this example,
+
+620
+00:20:11.850 --> 00:20:15.230
+the part that makes it truly xylomorphic, the
+
+621
+00:20:15.230 --> 00:20:18.590
+cured concrete is literally being used to build
+
+622
+00:20:18.590 --> 00:20:21.470
+the structural shell of the next data center
+
+623
+00:20:21.470 --> 00:20:22.690
+expansion down the road.
+
+624
+00:20:22.810 --> 00:20:23.070
+I know.
+
+625
+00:20:23.110 --> 00:20:23.630
+It's amazing.
+
+626
+00:20:23.890 --> 00:20:26.310
+The data center is sweating out the exact
+
+627
+00:20:26.310 --> 00:20:28.970
+thermal energy required to build its own future
+
+628
+00:20:28.970 --> 00:20:29.430
+home.
+
+629
+00:20:29.690 --> 00:20:32.610
+That is lambda, strictly less than one.
+
+630
+00:20:32.610 --> 00:20:34.810
+It is a profound proof of concept.
+
+631
+00:20:35.210 --> 00:20:37.670
+The system is physically building itself out of
+
+632
+00:20:37.670 --> 00:20:39.230
+its own residue, and then the paper takes
+
+633
+00:20:39.230 --> 00:20:40.810
+it a step further and gives an example
+
+634
+00:20:40.810 --> 00:20:43.290
+of strong xylomorphy, which is even more tightly
+
+635
+00:20:43.290 --> 00:20:43.610
+coupled.
+
+636
+00:20:43.790 --> 00:20:44.230
+Let's hear it.
+
+637
+00:20:44.510 --> 00:20:47.430
+Imagine a highly advanced industrial 3D printer.
+
+638
+00:20:47.850 --> 00:20:50.750
+This printer receives spools of raw filament shipped
+
+639
+00:20:50.750 --> 00:20:52.010
+in heavy cardboard boxes.
+
+640
+00:20:52.410 --> 00:20:54.790
+Now, a normal expansive system just throws those
+
+641
+00:20:54.790 --> 00:20:57.090
+boxes in the trash, requiring garbage trucks to
+
+642
+00:20:57.090 --> 00:20:59.290
+haul them away, which is more energy lost.
+
+643
+00:20:59.290 --> 00:21:02.590
+But this strongly xylomorphic printer has a built
+
+644
+00:21:02.590 --> 00:21:03.870
+-in shredder module.
+
+645
+00:21:04.610 --> 00:21:07.450
+It shreds its own cardboard shipping boxes, chemically
+
+646
+00:21:07.450 --> 00:21:10.290
+processes the cellulose from the cardboard, and extrudes
+
+647
+00:21:10.290 --> 00:21:14.030
+it as new, recycled 3D printing filament.
+
+648
+00:21:14.350 --> 00:21:14.750
+Whoa!
+
+649
+00:21:15.130 --> 00:21:15.310
+Yeah.
+
+650
+00:21:15.610 --> 00:21:18.030
+It then uses that filament to print replacement
+
+651
+00:21:18.030 --> 00:21:20.810
+gears and structural supports for its own mechanisms.
+
+652
+00:21:21.250 --> 00:21:24.210
+The physical residue of its operation directly forms
+
+653
+00:21:24.210 --> 00:21:26.150
+the substrate of its continued existence.
+
+654
+00:21:26.150 --> 00:21:27.710
+Okay, let me try to ground this with
+
+655
+00:21:27.710 --> 00:21:29.610
+a more everyday analogy.
+
+656
+00:21:29.810 --> 00:21:31.750
+It's like looking at two different chefs in
+
+657
+00:21:31.750 --> 00:21:32.610
+two different restaurants.
+
+658
+00:21:33.250 --> 00:21:35.890
+The first chef roasts a whole chicken, carves
+
+659
+00:21:35.890 --> 00:21:37.410
+off the meat for a dish, and then
+
+660
+00:21:37.410 --> 00:21:39.190
+looks at the carcass and just throws the
+
+661
+00:21:39.190 --> 00:21:39.930
+bones in the garbage.
+
+662
+00:21:40.070 --> 00:21:41.630
+A completely expansive process.
+
+663
+00:21:41.730 --> 00:21:41.890
+Right.
+
+664
+00:21:42.090 --> 00:21:43.370
+Tomorrow they have to buy a whole new
+
+665
+00:21:43.370 --> 00:21:45.150
+chicken and a whole new set of vegetables
+
+666
+00:21:45.150 --> 00:21:45.970
+to make a soup.
+
+667
+00:21:46.550 --> 00:21:49.850
+They are constantly relying on external exogenous inputs.
+
+668
+00:21:50.250 --> 00:21:51.770
+That's lambda greater than one.
+
+669
+00:21:51.770 --> 00:21:53.430
+But the second chef.
+
+670
+00:21:53.930 --> 00:21:56.210
+The second chef carves the meat and then
+
+671
+00:21:56.210 --> 00:21:58.610
+takes those perfectly good chicken bones, throws them
+
+672
+00:21:58.610 --> 00:22:00.630
+in a massive pot with some water, and
+
+673
+00:22:00.630 --> 00:22:03.090
+boils them down for 24 hours to make
+
+674
+00:22:03.090 --> 00:22:06.170
+a rich, dense, incredibly flavorful stock.
+
+675
+00:22:06.250 --> 00:22:07.310
+Ah, I see where you're going.
+
+676
+00:22:07.710 --> 00:22:11.090
+And that stock becomes the base that flavors
+
+677
+00:22:11.090 --> 00:22:12.630
+the next 10 meals on the menu.
+
+678
+00:22:13.070 --> 00:22:16.050
+They are recycling the structural residue of the
+
+679
+00:22:16.050 --> 00:22:19.210
+previous process to power the future process.
+
+680
+00:22:19.210 --> 00:22:21.870
+That is an excellent way to conceptualize it.
+
+681
+00:22:22.110 --> 00:22:24.650
+But to make the analogy fit Flixian's math
+
+682
+00:22:24.650 --> 00:22:27.230
+perfectly, you have to imagine that the second
+
+683
+00:22:27.230 --> 00:22:29.950
+chef's restaurant is experiencing exponential demand.
+
+684
+00:22:30.170 --> 00:22:32.150
+Like they're getting twice as busy every single
+
+685
+00:22:32.150 --> 00:22:32.350
+day.
+
+686
+00:22:32.450 --> 00:22:32.910
+Exactly.
+
+687
+00:22:33.170 --> 00:22:34.990
+If they throw the bones away, the sheer
+
+688
+00:22:34.990 --> 00:22:37.470
+cost of buying new base ingredients for every
+
+689
+00:22:37.470 --> 00:22:39.630
+single dish will eventually bankrupt them.
+
+690
+00:22:40.290 --> 00:22:42.630
+The stock isn't just a nice, eco-friendly
+
+691
+00:22:42.630 --> 00:22:43.730
+culinary trick.
+
+692
+00:22:44.290 --> 00:22:46.670
+Mathematically, it is the only possible way the
+
+693
+00:22:46.670 --> 00:22:49.030
+restaurant can survive scaling up its operations.
+
+694
+00:22:49.790 --> 00:22:50.310
+I love that.
+
+695
+00:22:50.550 --> 00:22:52.090
+But I have to play devil's advocate here
+
+696
+00:22:52.090 --> 00:22:52.570
+for a second.
+
+697
+00:22:52.670 --> 00:22:55.390
+Because as elegant as this is, the real
+
+698
+00:22:55.390 --> 00:22:56.830
+world is messy, right?
+
+699
+00:22:57.310 --> 00:22:58.870
+Surely there are limits to this kind of
+
+700
+00:22:58.870 --> 00:22:59.610
+perfect recycling.
+
+701
+00:22:59.750 --> 00:23:00.270
+Oh, definitely.
+
+702
+00:23:00.470 --> 00:23:02.330
+You can't just power a data center forever
+
+703
+00:23:02.330 --> 00:23:03.870
+on its own recycled exhaust.
+
+704
+00:23:04.030 --> 00:23:06.070
+You're still losing some energy to friction and
+
+705
+00:23:06.070 --> 00:23:07.070
+entropy along the way.
+
+706
+00:23:07.530 --> 00:23:09.550
+And what about the timing?
+
+707
+00:23:09.650 --> 00:23:10.570
+What about intermittency?
+
+708
+00:23:10.790 --> 00:23:11.910
+That is the big question.
+
+709
+00:23:11.910 --> 00:23:15.550
+A concrete plant doesn't need to cure concrete
+
+710
+00:23:15.550 --> 00:23:17.530
+24 hours a day, 7 days a week.
+
+711
+00:23:17.890 --> 00:23:20.090
+A city doesn't need its district heating grid
+
+712
+00:23:20.090 --> 00:23:21.430
+running in the middle of July.
+
+713
+00:23:21.790 --> 00:23:24.550
+So if your entire computational model relies on
+
+714
+00:23:24.550 --> 00:23:27.030
+someone meeting your heat, what happens to your
+
+715
+00:23:27.030 --> 00:23:29.290
+AI when no one wants the heat?
+
+716
+00:23:29.450 --> 00:23:30.910
+Do you just have to turn the servers
+
+717
+00:23:30.910 --> 00:23:31.190
+off?
+
+718
+00:23:31.310 --> 00:23:34.310
+That is exactly the pushback Flixian anticipates.
+
+719
+00:23:34.650 --> 00:23:36.830
+If you are coupled to a heatsink, you
+
+720
+00:23:36.830 --> 00:23:39.010
+are inherently bound by the demand of that
+
+721
+00:23:39.010 --> 00:23:39.470
+heatsink.
+
+722
+00:23:39.470 --> 00:23:43.030
+The author addresses this intermittency problem by introducing
+
+723
+00:23:43.030 --> 00:23:45.870
+a computational scheduling solution based on what they
+
+724
+00:23:45.870 --> 00:23:47.470
+call bioeconomic thermoregulation.
+
+725
+00:23:48.550 --> 00:23:49.670
+Bioeconomic thermoregulation.
+
+726
+00:23:49.750 --> 00:23:50.010
+Yes.
+
+727
+00:23:50.290 --> 00:23:52.130
+And this requires us to stop thinking about
+
+728
+00:23:52.130 --> 00:23:54.210
+a data center like an industrial factory that
+
+729
+00:23:54.210 --> 00:23:56.970
+just churns out widgets continuously and start treating
+
+730
+00:23:56.970 --> 00:23:58.890
+it like an ecological trophic network.
+
+731
+00:23:59.010 --> 00:23:59.850
+A trophic network.
+
+732
+00:24:00.050 --> 00:24:02.150
+Like a food web in a biological ecosystem.
+
+733
+00:24:02.650 --> 00:24:03.210
+Precisely.
+
+734
+00:24:03.710 --> 00:24:04.650
+Think about a forest.
+
+735
+00:24:05.230 --> 00:24:07.650
+Energy doesn't flow in a constant brute force
+
+736
+00:24:07.650 --> 00:24:08.230
+stream.
+
+737
+00:24:08.230 --> 00:24:12.450
+It flows dynamically based on availability, seasons, and
+
+738
+00:24:12.450 --> 00:24:12.790
+need.
+
+739
+00:24:13.450 --> 00:24:18.130
+Flixian proposes that computational jobs, especially massive, highly
+
+740
+00:24:18.130 --> 00:24:21.430
+asynchronous tasks like training a new large language
+
+741
+00:24:21.430 --> 00:24:23.870
+model, which can take months, well, they don't
+
+742
+00:24:23.870 --> 00:24:25.510
+actually need to be run at a specific
+
+743
+00:24:25.510 --> 00:24:26.370
+millisecond.
+
+744
+00:24:26.450 --> 00:24:28.570
+They aren't real-time tasks like serving a
+
+745
+00:24:28.570 --> 00:24:30.730
+web page or processing a credit card.
+
+746
+00:24:30.830 --> 00:24:31.170
+Right.
+
+747
+00:24:31.270 --> 00:24:34.730
+So you dynamically schedule these heavy computational loads
+
+748
+00:24:34.730 --> 00:24:37.450
+to align perfectly with the heating windows of
+
+749
+00:24:37.450 --> 00:24:38.990
+the surrounding physical infrastructure.
+
+750
+00:24:39.290 --> 00:24:39.650
+Oh, wow.
+
+751
+00:24:39.950 --> 00:24:41.710
+So if the district heating grid in Stockholm
+
+752
+00:24:41.710 --> 00:24:43.850
+detects a massive cold front moving in on
+
+753
+00:24:43.850 --> 00:24:46.570
+a Tuesday, the grid signals the data center.
+
+754
+00:24:46.850 --> 00:24:48.610
+The data center says, OK, the city needs
+
+755
+00:24:48.610 --> 00:24:49.190
+massive heat.
+
+756
+00:24:49.310 --> 00:24:51.530
+Let's spin up our heaviest AI training modules
+
+757
+00:24:51.530 --> 00:24:51.990
+right now.
+
+758
+00:24:52.310 --> 00:24:52.730
+Exactly.
+
+759
+00:24:53.030 --> 00:24:55.490
+They throttle up the GPUs, generating exactly the
+
+760
+00:24:55.490 --> 00:24:57.530
+heat required to keep the citizens warm, and
+
+761
+00:24:57.530 --> 00:24:59.790
+they're effectively getting the computational progress on their
+
+762
+00:24:59.790 --> 00:25:02.070
+AI model for free during that thermal window.
+
+763
+00:25:02.070 --> 00:25:02.650
+Yes.
+
+764
+00:25:03.450 --> 00:25:06.010
+It's treating computation not as a primary isolated
+
+765
+00:25:06.010 --> 00:25:08.630
+activity, but as a flexible thermal utility.
+
+766
+00:25:09.310 --> 00:25:10.690
+You only do the heavy lifting when the
+
+767
+00:25:10.690 --> 00:25:12.350
+environment demands the resulting heat.
+
+768
+00:25:12.750 --> 00:25:15.570
+It solves the intermittency problem by making the
+
+769
+00:25:15.570 --> 00:25:18.850
+computation subservient to the thermal needs of the
+
+770
+00:25:18.850 --> 00:25:19.790
+surrounding society.
+
+771
+00:25:20.010 --> 00:25:22.190
+That is genuinely brilliant, and it brings us
+
+772
+00:25:22.190 --> 00:25:24.370
+to a massive, massive turning point in the
+
+773
+00:25:24.370 --> 00:25:24.630
+paper.
+
+774
+00:25:24.830 --> 00:25:26.790
+Because once you understand this, once you truly
+
+775
+00:25:26.790 --> 00:25:29.370
+grasp that computational heat is not waste, but
+
+776
+00:25:29.370 --> 00:25:32.510
+a critical trophic resource that must be recycled
+
+777
+00:25:32.510 --> 00:25:36.150
+into physical infrastructure to achieve that contractive stability.
+
+778
+00:25:36.570 --> 00:25:36.710
+Then what?
+
+779
+00:25:37.170 --> 00:25:39.890
+Then the entire popular proposal to launch data
+
+780
+00:25:39.890 --> 00:25:42.850
+centers into space completely and utterly unravels.
+
+781
+00:25:42.850 --> 00:25:43.250
+Oh, wow.
+
+782
+00:25:43.510 --> 00:25:46.070
+This is where affliction just systematically dismantles the
+
+783
+00:25:46.070 --> 00:25:47.810
+whole moon server fantasy, isn't it?
+
+784
+00:25:47.870 --> 00:25:48.990
+Completely dismantles it.
+
+785
+00:25:49.150 --> 00:25:51.930
+The main argument pushed by certain tech billionaires
+
+786
+00:25:51.930 --> 00:25:54.390
+for, you know, tiling the moon with GPUs
+
+787
+00:25:54.390 --> 00:25:56.750
+or putting massive constellations of data centers in
+
+788
+00:25:56.750 --> 00:26:00.650
+orbit is that space offers continuous, unfiltered solar
+
+789
+00:26:00.650 --> 00:26:01.470
+exposure.
+
+790
+00:26:01.570 --> 00:26:01.690
+Right.
+
+791
+00:26:02.030 --> 00:26:03.050
+Unbounded solar power.
+
+792
+00:26:03.470 --> 00:26:05.650
+And by moving the servers off-world, you
+
+793
+00:26:05.650 --> 00:26:08.370
+are no longer burdening the Earth's fragile electrical
+
+794
+00:26:08.370 --> 00:26:08.670
+grid.
+
+795
+00:26:08.950 --> 00:26:11.670
+It sounds so beautifully logical until you remember
+
+796
+00:26:11.670 --> 00:26:15.110
+one tiny, inconvenient detail about space.
+
+797
+00:26:15.250 --> 00:26:16.030
+That it's a vacuum.
+
+798
+00:26:16.210 --> 00:26:16.790
+It is a vacuum.
+
+799
+00:26:17.110 --> 00:26:19.510
+And heat transfer in a vacuum is a
+
+800
+00:26:19.510 --> 00:26:20.390
+physical nightmare.
+
+801
+00:26:20.590 --> 00:26:21.630
+An absolute nightmare.
+
+802
+00:26:21.910 --> 00:26:24.150
+To understand why, we have to look at
+
+803
+00:26:24.150 --> 00:26:25.490
+the three ways heat moves.
+
+804
+00:26:25.490 --> 00:26:28.230
+Down here on Earth, if your laptop gets
+
+805
+00:26:28.230 --> 00:26:30.810
+hot, a fan kicks on and blows air
+
+806
+00:26:30.810 --> 00:26:32.910
+across the heat sink, carrying the heat away,
+
+807
+00:26:33.170 --> 00:26:33.910
+that's convection.
+
+808
+00:26:34.190 --> 00:26:34.370
+Right.
+
+809
+00:26:34.550 --> 00:26:36.190
+Or you put your laptop on a cool
+
+810
+00:26:36.190 --> 00:26:38.510
+metal desk and the heat physically bleeds into
+
+811
+00:26:38.510 --> 00:26:38.830
+the metal.
+
+812
+00:26:39.130 --> 00:26:39.790
+That's conduction.
+
+813
+00:26:40.410 --> 00:26:41.910
+But in the vacuum of space, you have
+
+814
+00:26:41.910 --> 00:26:43.390
+no atmosphere for convection.
+
+815
+00:26:43.530 --> 00:26:44.790
+You have no ground for conduction.
+
+816
+00:26:45.270 --> 00:26:47.570
+The only physical mechanism available to get rid
+
+817
+00:26:47.570 --> 00:26:50.210
+of heat is to reject it radiatively into
+
+818
+00:26:50.210 --> 00:26:50.670
+the vacuum.
+
+819
+00:26:51.010 --> 00:26:53.070
+You have to literally shine the heat away
+
+820
+00:26:53.070 --> 00:26:54.790
+as infrared light.
+
+821
+00:26:54.790 --> 00:26:57.050
+And Fliction dives deep into the math of
+
+822
+00:26:57.050 --> 00:26:59.310
+this, detailing what's called Stefan-Boltzmann scaling.
+
+823
+00:26:59.810 --> 00:27:00.890
+Let's not gloss over this.
+
+824
+00:27:00.970 --> 00:27:03.270
+What does the Stefan-Boltzmann law actually tell
+
+825
+00:27:03.270 --> 00:27:05.010
+us about putting a server farm in space?
+
+826
+00:27:05.330 --> 00:27:08.150
+Well, the Stefan-Boltzmann law dictates that the
+
+827
+00:27:08.150 --> 00:27:10.830
+power radiated by a black body is proportional
+
+828
+00:27:10.830 --> 00:27:13.610
+to the fourth power of its thermodynamic temperature.
+
+829
+00:27:14.290 --> 00:27:16.990
+What that means in practical engineering terms is
+
+830
+00:27:16.990 --> 00:27:19.090
+that to radiate a meaningful amount of heat
+
+831
+00:27:19.090 --> 00:27:22.230
+into the vacuum, especially the massive megawatt-level
+
+832
+00:27:22.230 --> 00:27:24.630
+heat of a data center, you need massive,
+
+833
+00:27:24.910 --> 00:27:26.990
+incredibly heavy radiator panels.
+
+834
+00:27:27.490 --> 00:27:28.770
+Because you can't recycle the heat.
+
+835
+00:27:29.050 --> 00:27:30.890
+There's no concrete plant on the moon to
+
+836
+00:27:30.890 --> 00:27:31.490
+absorb it.
+
+837
+00:27:31.690 --> 00:27:32.110
+Exactly.
+
+838
+00:27:32.450 --> 00:27:35.630
+So thermal management absolutely dominates the entire system
+
+839
+00:27:35.630 --> 00:27:36.090
+design.
+
+840
+00:27:36.570 --> 00:27:39.410
+These giant radiator panels are essentially dead weight.
+
+841
+00:27:39.690 --> 00:27:42.630
+They contribute zero useful computational work.
+
+842
+00:27:42.770 --> 00:27:45.270
+They exist purely to dump entropy into the
+
+843
+00:27:45.270 --> 00:27:45.510
+void.
+
+844
+00:27:45.730 --> 00:27:47.630
+It's just an incredibly expensive exhaust pipe.
+
+845
+00:27:47.630 --> 00:27:49.150
+And from what I understand, it gets even
+
+846
+00:27:49.150 --> 00:27:51.270
+worse when you factor in the space environment
+
+847
+00:27:51.270 --> 00:27:51.750
+itself.
+
+848
+00:27:52.150 --> 00:27:53.530
+Space isn't just an empty vacuum.
+
+849
+00:27:54.010 --> 00:27:56.150
+It is a hostile environment flooded with high
+
+850
+00:27:56.150 --> 00:27:57.450
+-energy cosmic radiation.
+
+851
+00:27:57.670 --> 00:27:57.870
+Yes.
+
+852
+00:27:58.250 --> 00:28:01.650
+Cosmic rays and solar radiation physically degrade silicon
+
+853
+00:28:01.650 --> 00:28:03.110
+semiconductors over time.
+
+854
+00:28:03.390 --> 00:28:05.670
+They cause bit flips and physical damage to
+
+855
+00:28:05.670 --> 00:28:06.250
+the microchips.
+
+856
+00:28:06.310 --> 00:28:07.970
+Which is obviously bad for an AI trying
+
+857
+00:28:07.970 --> 00:28:08.850
+to do precise math.
+
+858
+00:28:09.210 --> 00:28:09.770
+Very bad.
+
+859
+00:28:10.210 --> 00:28:12.330
+So to survive in that environment, you have
+
+860
+00:28:12.330 --> 00:28:13.190
+two bad choices.
+
+861
+00:28:13.190 --> 00:28:17.150
+You either use heavily radiation-hardened parts, which
+
+862
+00:28:17.150 --> 00:28:20.170
+are physically thick, heavy, and generationally much slower
+
+863
+00:28:20.170 --> 00:28:21.090
+than standard chips.
+
+864
+00:28:21.290 --> 00:28:24.770
+Or you use standard chips, but implement triple
+
+865
+00:28:24.770 --> 00:28:25.450
+redundancy.
+
+866
+00:28:25.550 --> 00:28:27.670
+Triple redundancy meaning you literally have to send
+
+867
+00:28:27.670 --> 00:28:29.990
+three separate computers to space to do the
+
+868
+00:28:29.990 --> 00:28:30.670
+job of one.
+
+869
+00:28:30.770 --> 00:28:31.050
+Yes.
+
+870
+00:28:31.450 --> 00:28:34.210
+You run the exact same calculation on three
+
+871
+00:28:34.210 --> 00:28:36.510
+separate chips, and they vote on the correct
+
+872
+00:28:36.510 --> 00:28:36.890
+answer.
+
+873
+00:28:37.350 --> 00:28:39.870
+That way, if a cosmic ray strikes one
+
+874
+00:28:39.870 --> 00:28:42.010
+chip and corrupts its math, the other two
+
+875
+00:28:42.010 --> 00:28:42.830
+outvote it.
+
+876
+00:28:43.210 --> 00:28:43.570
+That's clever.
+
+877
+00:28:43.810 --> 00:28:44.830
+But think about the cost.
+
+878
+00:28:45.310 --> 00:28:47.510
+You are tripling your hardware mass, tripling your
+
+879
+00:28:47.510 --> 00:28:49.890
+power draw, and tripling your heat generation.
+
+880
+00:28:50.130 --> 00:28:52.830
+All to achieve the exact same computational output
+
+881
+00:28:52.830 --> 00:28:53.750
+you would get on Earth.
+
+882
+00:28:53.870 --> 00:28:56.570
+It completely drops your compute density to the
+
+883
+00:28:56.570 --> 00:28:56.890
+floor.
+
+884
+00:28:57.070 --> 00:28:58.850
+So if we look at orbital compute through
+
+885
+00:28:58.850 --> 00:29:01.430
+our new favorite metric, the xylomorphic order parameter
+
+886
+00:29:01.430 --> 00:29:01.790
+lambda.
+
+887
+00:29:01.950 --> 00:29:05.290
+Orbital compute is structurally permanently locked into the
+
+888
+00:29:05.290 --> 00:29:06.210
+expansive regime.
+
+889
+00:29:06.850 --> 00:29:10.010
+Lambda is inherently and inevitably greater than one.
+
+890
+00:29:10.010 --> 00:29:13.390
+You are constantly drawing exogenous power from solar
+
+891
+00:29:13.390 --> 00:29:13.790
+panels.
+
+892
+00:29:14.310 --> 00:29:17.030
+You are producing massive amounts of heat that
+
+893
+00:29:17.030 --> 00:29:20.350
+you mathematically cannot reintegrate into any physical substrate.
+
+894
+00:29:20.990 --> 00:29:24.130
+And your hardware is actively degrading, requiring constant
+
+895
+00:29:24.130 --> 00:29:25.530
+replacement launches from Earth.
+
+896
+00:29:25.750 --> 00:29:28.570
+It literally cannot achieve thermodynamic closure.
+
+897
+00:29:29.210 --> 00:29:31.230
+The laws of physics strictly forbid it.
+
+898
+00:29:31.410 --> 00:29:33.870
+I have to say, this completely shattered an
+
+899
+00:29:33.870 --> 00:29:35.550
+assumption I didn't even realize I had.
+
+900
+00:29:35.550 --> 00:29:39.430
+The informal intuition that almost everyone has is
+
+901
+00:29:39.430 --> 00:29:40.430
+that space is cold.
+
+902
+00:29:40.930 --> 00:29:43.410
+We see movies where things instantly freeze in
+
+903
+00:29:43.410 --> 00:29:43.770
+space.
+
+904
+00:29:44.170 --> 00:29:46.630
+So you intuitively think, wow, space must be
+
+905
+00:29:46.630 --> 00:29:49.270
+the ultimate natural refrigerator to keep servers cool.
+
+906
+00:29:49.330 --> 00:29:50.550
+Right, everyone thinks that.
+
+907
+00:29:50.610 --> 00:29:51.610
+But that is totally wrong.
+
+908
+00:29:51.850 --> 00:29:53.550
+Space is not a giant refrigerator, it's a
+
+909
+00:29:53.550 --> 00:29:54.190
+giant thermos.
+
+910
+00:29:54.250 --> 00:29:55.630
+That is the exact right analogy.
+
+911
+00:29:56.010 --> 00:29:57.130
+Space is a thermos.
+
+912
+00:29:57.650 --> 00:29:58.970
+Think about how a high-end thermos works.

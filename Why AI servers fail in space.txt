@@ -1,0 +1,301 @@
+(Transcribed by TurboScribe. Go Unlimited to remove this message.)
+
+I want you to just close your eyes for a second, I mean, assuming you're not driving or anything. Right, definitely keep your eyes open if you're driving. Yeah, please. 
+
+But imagine this really specific, honestly very plausible future. You're looking up at the night sky, and you see the moon. Okay, I'm picturing it.
+
+But instead of, you know, just that pale cratered rock we're all completely used to, imagine that it's just completely tiled, edge to edge, with massive computer servers. Like just a whole planet of metal and blinking lights. Exactly. 
+
+Millions of GPUs just humming away in the absolute dead vacuum of space, powered by this endless, unfiltered sunlight. I mean, it sounds incredible, right? Oh, it's totally seductive. It sounds like this ultimate peak sci-fi solution to, well, the Earth's energy crisis.
+
+Right. You just take all the heavy computing, all the AI that's currently just draining our power grids, package it all up, and shoot it off-world. It feels so clean. 
+
+Like it's this beautiful binary solution to a really messy terrestrial problem. You know, you just put the demanding part of human advancement in a neat little box and send it to the moon. Out of sight, out of mind.
+
+And the Earth gets to go back to being this pristine garden. It's the ultimate have-your-cake-and-eat-it-too scenario. There really is.
+
+But today, we're going to explore why that whole multi-billion dollar fantasy of orbital computation might actually be based on a massive fundamental misunderstanding of physics. Yeah, a really expensive misunderstanding. Right. 
+
+And we're doing this by jumping into this brilliant, highly provocative 2026 paper by the researcher Fliction. It's titled, and I love how direct this is, The Moon Should Not Be a Computer. It doesn't really mince words, does it? Not at all. 
+
+So our mission for this deep dive is to basically use Fliction's paper to completely reframe how you think about AI. Not as this energy-wasting parasite that we need to banish to space, but as what the author calls a thermodynamic and semantic infrastructure. Which is a phrase we'll definitely need to unpack.
+
+Oh, for sure. We're going to explore exactly why sending computers into the vacuum of space is a terrible idea, how AI's so-called waste heat might actually be the key to saving our physical infrastructure. And this is the part that is just wild.
+
+Right. In a twist that completely blew my mind, we're going to see how those exact same physical laws of thermodynamics map perfectly onto the way AI is currently reshaping the developing minds of children. It's an incredibly sweeping journey.
+
+I mean, you're moving from the really hard equations of thermodynamics straight into child psychology. Yeah. And they're connected by the exact same mathematical principles.
+
+And if there is one core theme to just kind of keep in mind as we go through this, it's this. Whenever human beings try to externalize a problem, we create an unstable system. Externalize, meaning like pushing it away so we don't have to look at it.
+
+Exactly. Whether we're trying to dump our industrial waste heat into the vacuum of space or, you know, offloading our critical thinking to a chatbot, we are drawing the boundaries of our world too narrowly. And as the paper proves mathematically, physics always comes to collect the bill.
+
+Man, physics always collects the bill. I love that phrasing. So, okay, to understand why we shouldn't pave the moon with servers, we really have to start by accurately measuring the problem we're supposedly trying to solve here on Earth.
+
+Right. The terrestrial problem. Exactly. 
+
+The problem of how much energy artificial intelligence actually uses. Right. Because the way we talk about it right now in the media is, I mean, it's just completely skewed.
+
+It is entirely skewed. Fliction makes a very compelling case for why our current energy accounting is essentially just broken. Like, if you look at the public discourse, the panic is almost entirely focused on data centers.
+
+Yeah, you see those massive intimidating numbers all the time. Global data center consumption is estimated at, what, somewhere between 200 and 500 terawatt hours annually? Something like that, yeah. Which is a staggering number. 
+
+I mean, it's the energy consumption of entire industrialized countries. But the paper points out that this is an incredibly incomplete ledger. It's a balance sheet with only the expenses listed, right, and none of the savings.
+
+Exactly. You have to ask, what is the AI actually doing with all that power? Because it isn't just spinning its wheels for fun. It's doing work.
+
+Right. And the paper provides some really fascinating life cycle analysis data to show what that work replaces in the real world. So, let's look at code completion, for example.
+
+The paper maps out the human baseline of energy required for a software engineer to sit down and write a block of code. And that baseline is 1.8 kilowatt hours. Right. 
+
+And we should clarify what actually goes into that 1.8 kilowatt hours, because it's not just, you know, the electricity for the programmer's laptop. Oh, no. It's a completely holistic life cycle analysis.
+
+So, it accounts for the overhead lighting in the office, the HVAC system keeping the building comfortable, the physical energy burned during the employee's commute. Wow, even the commute. Yeah, even their bodily caloric requirements. 
+
+It's the total infrastructural load required to support that human for the time it takes to execute that specific task. Which obviously makes total sense when you think about it as a systemic cost. Like, the human has to exist and be comfortable to do the work.
+
+But then the paper compares that to an AI-assisted code completion model, and the AI uses just 0.12 kilowatt hours to accomplish the exact same task. Yeah, 0.12 compared to 1.8. So, when you do the math, that's a massive net savings of 1.68 kilowatt hours per coding task. You're dramatically compressing the energy footprint of that specific economic output.
+
+And it scales up even more aggressively when you look at complex operational tasks. So, take logistics optimization, like routing a fleet of delivery trucks or managing a global supply chain. Okay.
+
+The human baseline energy cost for calculating that optimization is estimated at 22.new kilowatt hours per task. The AI energy cost for the exact same routing algorithm is just 2.5 kilowatt hours. Wow. 
+
+So, you're saving an astounding 19.5 kilowatt hours every single time that task is run. Every single time. When you factor in the massive reductions in human labor hours, the physical commuting that no longer happens, the optimization of physical infrastructure loads.
+
+I mean, AI is at its core a massive compression algorithm for human energy expenditure. So, okay, if you just look at that math on paper, AI is saving us an unbelievable amount of energy. It looks like the ultimate green technology.
+
+It does, doesn't it? It really does. But the paper doesn't stop there. Fliction introduces a concept that completely complicates this rosy picture, and it's called the rebound effect.
+
+Ah, yes, the rebound effect. And to really understand the mechanics of this, we have to travel all the way back to 1865 to an economist named William Stanley Jevons. This is the Jevons paradox, right? Exactly. 
+
+So, during the Industrial Revolution, Jevons was observing the coal industry. Engineers at the time had just figured out how to make coal-powered steam engines much, much more efficient. Meaning they required significantly less coal to produce the exact same amount of mechanical work.
+
+Precisely. Now, the logical assumption, and this was the assumption the government was making at the time, was that total coal consumption across the country would obviously go down. Right, because the engines are more efficient.
+
+Yeah. If you only need half the fuel to run a factory, you mine half the coal. I mean, it seems like basic arithmetic.
+
+It seems totally intuitive. But Jevons noticed that total coal consumption actually skyrocketed. Because what happens when you make a service, in this case mechanical power, cheaper and more efficient to produce? Oh, people don't just maintain their current usage, they find vastly more ways to use it.
+
+Exactly. The efficiency lowers the economic cost, which drastically drives up demand. And that new explosive demand ends up offsetting the original energy savings entirely.
+
+I can completely relate to this on a micro level. Like, a few years ago, I started using an AI tool to help draft some of my more, you know, tedious emails. Oh, I think we've all done that.
+
+Right. And my thought process was, great, this will save me an hour a day, and I'll use that hour to go for a walk or, like, read a book. I thought I was becoming more efficient. 
+
+But what actually happened... You sent more emails. Exactly. Because writing emails became so frictionless and cheap in terms of my time, I just ended up taking on more projects and sending ten times as many emails.
+
+I didn't save time at all. I just increased my output volume to fill the newly available capacity. That is a perfect, localized example of Jevons' paradox.
+
+You didn't conserve your energy. You reinvested the saved energy into a higher volume of the exact same activity. And the paper applies this exact thermodynamic modeling to the macro scale of AI.
+
+Right. Because AI compresses workflows. It saves immense amounts of time and energy.
+
+But what does human society do with saved time and cheaper computing? We don't just sit in the dark and conserve the grid. Not at all. We redirect that saved capacity into even more resource-heavy activities.
+
+If AI makes software development cheaper and faster, we don't just stop coding at 5 p.m. and call it a day. We demand vastly more software. We write more complex code. 
+
+We push the computational system harder. And Fliction models this explicitly with what the paper calls high rebound scenarios. They use an elasticity coefficient of 0.6, meaning for every bit of efficiency you gain, demand bounces back and eats up 60% of the supposed savings.
+
+Yep. 60% just wiped out by new demand. So let's go back to our code completion example.
+
+Initially, we calculated a net savings of 1.68 kilowatt hours per task. But in this high rebound scenario where cheaper coding just incentivizes everyone to build more apps and run more models, that net savings drops all the way down to 0.99 kilowatt hours. The more efficient the AI gets, the more aggressively we consume it.
+
+And this leads to a really critical synthesis in the paper. If the rebound effect is constantly eating up our efficiency gains, doesn't that basically prove the critics right? That's what I'm wondering. Doesn't this mean that AI's recursive demand, you know, the fact that it acts as an agent generating its own tasks, looping over its own code, finding new ways to optimize, doesn't that just lead to an infinite energy sink? That's exactly what I'm thinking right now.
+
+If the AI is just prompting us to use more AI and the demand is basically elastic, aren't we just inevitably draining the global grid? It sounds like an unmitigated disaster. Well, if the system is not closed, yes, it is a disaster. The paper explicitly confirms this fear.
+
+It states mathematically that non-closed systems will diverge infinitely under agentic demand. Agentic demand meaning AI that can act autonomously to spin up new tasks and consume resources without a human bottleneck, right? Exactly. But, and this is crucial, Fliption offers a radical solution.
+
+The answer, according to the paper, isn't to artificially cap the demand or like bam the technology. Which probably wouldn't work anyway. Right, it never does. 
+
+The answer is that we have to structurally, physically change how our infrastructure deals with its own byproducts. We have to change the math of the system entirely. Okay, so this is where we have to fundamentally rethink our definitions.
+
+Yeah. Because if we know that AI demand is only going to increase, we have to look at the physical byproduct of all that demand. And that byproduct is heat.
+
+Right, heat. And the author argues that calling the heat generated by computers waste heat is essentially the original sin of modern technological infrastructure. It is a profound, almost philosophical framing error.
+
+And it's an error that has essentially crippled our engineering. Let's think about a conventional electric space heater. Like the kind you might plug in under your desk in the winter.
+
+Yeah, just a basic coil heater. Exactly. It draws electrical energy from the wall and it converts that electrical energy directly into thermal energy.
+
+It makes heat. That is its sole purpose. And globally, dedicated heat-only systems like this, whether they're space heaters or industrial kilns or water boilers, they consume something on the order of 10 petajoules annually.
+
+10 petajoules, wow. That number absolutely dwarfs the 200 terawatt hours used by all the world's data centers. I mean, human society spends an unbelievable, almost unfathomable amount of energy purely on generating raw heat for homes, for industrial processes, for curing materials.
+
+Right. We are absolutely desperate for heat. And then you look at a computer, a computer also draws electrical energy.
+
+And it also converts that electrical energy entirely into heat. Exactly. And that is an engineering flaw.
+
+That is a fundamental law of physics. The paper cites the Landauer bound here, which I think we really need to unpack, because it blew my mind that computation is physically linked to heat. The Landauer bound is absolutely crucial here.
+
+It was proposed by Rolf Landauer in 1961, and it establishes the absolute theoretical minimum energy required to erase a single bit of information. Okay, erase a bit, meaning what exactly? Well, it proves that computation is inextricably, fundamentally linked to entropy. When a computer processes information, when it flips a bit from a 1 to a 0, it decreases the logical entropy inside the machine.
+
+It's organizing things. Right. But the second law of thermodynamics says that overall entropy in the universe must always increase.
+
+So to balance the equation, that erased information is essentially expelled into the environment as physical heat. You literally cannot do math in a physical universe without creating heat. A computer is, by the strict laws of physics, a space heater.
+
+But, and this is the absolute crux of the argument, right? The only difference between a space heater and a computer is that the computer does useful, complex math before the energy becomes heat. That's it, exactly. The terminal state of both devices is identical, heat.
+
+But the space heater does zero structured informational work along the way. The electrical current just hits a resistor and scatters. It's just brute force.
+
+Yeah. Flitchin argues that a space heater is essentially a degenerate computer. It's a computer that produces entropy without extracting any informational value whatsoever.
+
+Yet society accepts the massive energy used by a dumb space heater as necessary for survival, while the energy used by a data center is labeled wasteful. That's such an incredible paradigm shift. It's an entirely artificial boundary.
+
+If we need the heat anyway, and we desperately do, why are we generating it with dumb resistance coils instead of generating it with GPUs that are, I don't know, solving protein folding for cancer research along the way? Exactly. When you put it like that, building a dedicated heater seems almost offensive. Like, if you need to heat an apartment building, using a bank of GPUs is strictly more efficient than using a standard boiler, because you get the computation essentially for free on the way to making the heat you already needed.
+
+Wow. Getting the math for free. And this realization leads directly into the central conceptual framework of the whole paper.
+
+The author introduces a term called xylomorphic computation. Yes. X-Y-L-M-O-R-P-H-I-C.
+
+Right. It comes from the Greek xylo, meaning wood, and morphic, meaning form. But what does that actually mean for, like, a literal data center? It's a really beautiful, evocative term.
+
+Aristotle used xylomorphism to describe how matter and form are fundamentally linked. Fliction adapts this to xylomorphic, referring specifically to infrastructure that recursively generates its own substrates from its computational residues. Okay, that's a mouthful.
+
+In plain English. In plain practical terms, it means a physical system that uses its own waste products to build the literal materials it needs to keep running. So we're talking about a snake eating its own tail, but, like, in a highly productive, good way.
+
+A system that literally eats its own exhaust to survive and grow. Yes. And Fliction doesn't just leave this as a neat metaphor.
+
+They formalize it with a strict mathematical variable. This is the central formal contribution of the paper, the xylomorphic order parameter, denoted by the Greek letter lambda. This parameter mathematically measures whether a physical system is internalizing its waste or externalizing it into the void.
+
+And it allows us to classify all computational infrastructure into three distinct thermodynamic regimes. Okay, if you're listening to this and your eyes are glazing over at the mention of a Greek letter parameter, stick with us. Because this lambda value is the lens through which we really have to view the entire future of technology.
+
+So let's break down these three regimes. It's actually very intuitive once you visualize it. First, you have the contractive regime.
+
+This is where the xylomorphic order parameter lambda is less than one. Okay, less than one. In this regime, the system captures a significant portion of its own waste heat, and routes it into productive uses that actually reduce the system's need for external energy on the next cycle.
+
+It internalizes its waste. Exactly. Because it's recycling its own output, it becomes more stable and requires fewer outside resources over time, even as it scales.
+
+This is the ultimate goal. This is what Fliction calls xylomorphic stability. Okay, so less than one is the holy grail.
+
+Then you have the critical regime, where lambda exactly equals one. Right. Here, the system is perfectly balanced in terms of its current state.
+
+It's capturing just enough waste to offset its growth, but it isn't gaining ground. It relies on a persistent, unchanging dependence on an external energy tether. Like it's treading water.
+
+Exactly. It isn't getting dramatically better, it isn't getting worse. But it is entirely dependent on that external lifeline remaining perfectly stable.
+
+And finally, the expansive regime, where lambda is greater than one. This is the danger zone. And unfortunately, this is where almost all of our current infrastructure lives right now.
+
+In an expansive regime, exogenous dependence, meaning the need for outside energy and raw materials, diverges infinitely. It just keeps growing. Yeah. 
+
+The system dumps its waste heat uselessly into the atmosphere, and constantly demands fresh energy from the grid to run the next cycle, Without finding a way to close the loop and capture that heat, an expansive system will inevitably, mathematically, collapse under its own scaling demands. Now, to give this some heavy mathematical backing, Flickchuan breaks this down using what the paper calls the RSVP field theory. That stands for Relativistic Scalar Vector Plenum.
+
+I want to spend a minute here, because we can't just skip the map. How does this RSVP theory actually map to a physical building full of computers? Well, the RSVP field theory is Flickchuan's way of mapping the flow of energy, not just as a straight line, but as a topological field. You have energy coming in as a vector, computation happening as a scalar transformation, and heat radiating out.
+
+Okay, I'm following. The absolute key variable in these differential equations is eta cap. Eta cap. 
+
+What does that measure? That variable represents the capture efficiency. The literal fraction of dissipated heat that a xylomorphic system manages to capture and successfully route into productive physical sinks. Oh, I see. 
+
+So if a data center just vents its hot air into the sky, its eta cap is basically zero. It's a completely expansive, wasteful system. But if it captures that heat, the eta cap goes up, and the lambda value drops below one.
+
+And the paper provides some incredible, real-world examples of this actually happening right now, categorized into weak and strong xylomorphy. Let's talk about weak xylomorphy first, because the example they use in Stockholm is just fascinating. Yes. 
+
+Stockholm Data Parks in Sweden is a perfect real-world illustration of lambda, less than one in a weak, xylomorphic sense. There's a mid-scale data center there that operates differently than almost any other in the world. When the servers get hot, they don't just spin up massive fans to vent that heat into the atmosphere.
+
+Which is what everyone else does. Right. Instead, they capture that thermal energy. 
+
+Their eta cap is very high. And they route that hot water directly into a nearby concrete curing facility. Which is just a brilliant piece of industrial symbiosis. 
+
+I read the details on this. The GPUs in that data center are running at 90% exergy efficiency. By routing their exhaust, they are actively offsetting 800 kilowatts of heating demand for the concrete plant next door.
+
+800 kilowatts? That's massive. It really is. The concrete plant doesn't have to burn fossil fuels to get its heat.
+
+It just uses the computer's math exhaust. Yeah. But the absolute best part of this example, the part that makes it truly xylomorphic, the cured concrete is literally being used to build the structural shell of the next data center expansion down the road.
+
+I know. It's amazing. The data center is sweating out the exact thermal energy required to build its own future home.
+
+That is lambda, strictly less than one. It is a profound proof of concept. The system is physically building itself out of its own residue, and then the paper takes it a step further and gives an example of strong xylomorphy, which is even more tightly coupled.
+
+Let's hear it. Imagine a highly advanced industrial 3D printer. This printer receives spools of raw filament shipped in heavy cardboard boxes.
+
+Now, a normal expansive system just throws those boxes in the trash, requiring garbage trucks to haul them away, which is more energy lost. But this strongly xylomorphic printer has a built-in shredder module. It shreds its own cardboard shipping boxes, chemically processes the cellulose from the cardboard, and extrudes it as new, recycled 3D printing filament.
+
+Whoa! Yeah. It then uses that filament to print replacement gears and structural supports for its own mechanisms. The physical residue of its operation directly forms the substrate of its continued existence.
+
+Okay, let me try to ground this with a more everyday analogy. It's like looking at two different chefs in two different restaurants. The first chef roasts a whole chicken, carves off the meat for a dish, and then looks at the carcass and just throws the bones in the garbage.
+
+A completely expansive process. Right. Tomorrow they have to buy a whole new chicken and a whole new set of vegetables to make a soup.
+
+They are constantly relying on external exogenous inputs. That's lambda greater than one. But the second chef.
+
+The second chef carves the meat and then takes those perfectly good chicken bones, throws them in a massive pot with some water, and boils them down for 24 hours to make a rich, dense, incredibly flavorful stock. Ah, I see where you're going. And that stock becomes the base that flavors the next 10 meals on the menu.
+
+They are recycling the structural residue of the previous process to power the future process. That is an excellent way to conceptualize it. But to make the analogy fit Flixian's math perfectly, you have to imagine that the second chef's restaurant is experiencing exponential demand.
+
+Like they're getting twice as busy every single day. Exactly. If they throw the bones away, the sheer cost of buying new base ingredients for every single dish will eventually bankrupt them.
+
+The stock isn't just a nice, eco-friendly culinary trick. Mathematically, it is the only possible way the restaurant can survive scaling up its operations. I love that. 
+
+But I have to play devil's advocate here for a second. Because as elegant as this is, the real world is messy, right? Surely there are limits to this kind of perfect recycling. Oh, definitely.
+
+You can't just power a data center forever on its own recycled exhaust. You're still losing some energy to friction and entropy along the way. And what about the timing? What about intermittency? That is the big question.
+
+A concrete plant doesn't need to cure concrete 24 hours a day, 7 days a week. A city doesn't need its district heating grid running in the middle of July. So if your entire computational model relies on someone meeting your heat, what happens to your AI when no one wants the heat? Do you just have to turn the servers off? That is exactly the pushback Flixian anticipates.
+
+If you are coupled to a heatsink, you are inherently bound by the demand of that heatsink. The author addresses this intermittency problem by introducing a computational scheduling solution based on what they call bioeconomic thermoregulation. Bioeconomic thermoregulation.
+
+Yes. And this requires us to stop thinking about a data center like an industrial factory that just churns out widgets continuously and start treating it like an ecological trophic network. A trophic network. 
+
+Like a food web in a biological ecosystem. Precisely. Think about a forest.
+
+Energy doesn't flow in a constant brute force stream. It flows dynamically based on availability, seasons, and need. Flixian proposes that computational jobs, especially massive, highly asynchronous tasks like training a new large language model, which can take months, well, they don't actually need to be run at a specific millisecond.
+
+They aren't real-time tasks like serving a web page or processing a credit card. Right. So you dynamically schedule these heavy computational loads to align perfectly with the heating windows of the surrounding physical infrastructure.
+
+Oh, wow. So if the district heating grid in Stockholm detects a massive cold front moving in on a Tuesday, the grid signals the data center. The data center says, OK, the city needs massive heat.
+
+Let's spin up our heaviest AI training modules right now. Exactly. They throttle up the GPUs, generating exactly the heat required to keep the citizens warm, and they're effectively getting the computational progress on their AI model for free during that thermal window.
+
+Yes. It's treating computation not as a primary isolated activity, but as a flexible thermal utility. You only do the heavy lifting when the environment demands the resulting heat.
+
+It solves the intermittency problem by making the computation subservient to the thermal needs of the surrounding society. That is genuinely brilliant, and it brings us to a massive, massive turning point in the paper. Because once you understand this, once you truly grasp that computational heat is not waste, but a critical trophic resource that must be recycled into physical infrastructure to achieve that contractive stability.
+
+Then what? Then the entire popular proposal to launch data centers into space completely and utterly unravels. Oh, wow. This is where affliction just systematically dismantles the whole moon server fantasy, isn't it? Completely dismantles it.
+
+The main argument pushed by certain tech billionaires for, you know, tiling the moon with GPUs or putting massive constellations of data centers in orbit is that space offers continuous, unfiltered solar exposure. Right. Unbounded solar power.
+
+And by moving the servers off-world, you are no longer burdening the Earth's fragile electrical grid. It sounds so beautifully logical until you remember one tiny, inconvenient detail about space. That it's a vacuum.
+
+It is a vacuum. And heat transfer in a vacuum is a physical nightmare. An absolute nightmare.
+
+To understand why, we have to look at the three ways heat moves. Down here on Earth, if your laptop gets hot, a fan kicks on and blows air across the heat sink, carrying the heat away, that's convection. Right.
+
+Or you put your laptop on a cool metal desk and the heat physically bleeds into the metal. That's conduction. But in the vacuum of space, you have no atmosphere for convection.
+
+You have no ground for conduction. The only physical mechanism available to get rid of heat is to reject it radiatively into the vacuum. You have to literally shine the heat away as infrared light.
+
+And Fliction dives deep into the math of this, detailing what's called Stefan-Boltzmann scaling. Let's not gloss over this. What does the Stefan-Boltzmann law actually tell us about putting a server farm in space? Well, the Stefan-Boltzmann law dictates that the power radiated by a black body is proportional to the fourth power of its thermodynamic temperature.
+
+What that means in practical engineering terms is that to radiate a meaningful amount of heat into the vacuum, especially the massive megawatt-level heat of a data center, you need massive, incredibly heavy radiator panels. Because you can't recycle the heat. There's no concrete plant on the moon to absorb it.
+
+Exactly. So thermal management absolutely dominates the entire system design. These giant radiator panels are essentially dead weight.
+
+They contribute zero useful computational work. They exist purely to dump entropy into the void. It's just an incredibly expensive exhaust pipe.
+
+And from what I understand, it gets even worse when you factor in the space environment itself. Space isn't just an empty vacuum. It is a hostile environment flooded with high-energy cosmic radiation.
+
+Yes. Cosmic rays and solar radiation physically degrade silicon semiconductors over time. They cause bit flips and physical damage to the microchips.
+
+Which is obviously bad for an AI trying to do precise math. Very bad. So to survive in that environment, you have two bad choices.
+
+You either use heavily radiation-hardened parts, which are physically thick, heavy, and generationally much slower than standard chips. Or you use standard chips, but implement triple redundancy. Triple redundancy meaning you literally have to send three separate computers to space to do the job of one.
+
+Yes. You run the exact same calculation on three separate chips, and they vote on the correct answer. That way, if a cosmic ray strikes one chip and corrupts its math, the other two outvote it.
+
+That's clever. But think about the cost. You are tripling your hardware mass, tripling your power draw, and tripling your heat generation.
+
+All to achieve the exact same computational output you would get on Earth. It completely drops your compute density to the floor. So if we look at orbital compute through our new favorite metric, the xylomorphic order parameter lambda.
+
+Orbital compute is structurally permanently locked into the expansive regime. Lambda is inherently and inevitably greater than one. You are constantly drawing exogenous power from solar panels.
+
+You are producing massive amounts of heat that you mathematically cannot reintegrate into any physical substrate. And your hardware is actively degrading, requiring constant replacement launches from Earth. It literally cannot achieve thermodynamic closure.
+
+The laws of physics strictly forbid it. I have to say, this completely shattered an assumption I didn't even realize I had. The informal intuition that almost everyone has is that space is cold.
+
+We see movies where things instantly freeze in space. So you intuitively think, wow, space must be the ultimate natural refrigerator to keep servers cool. Right, everyone thinks that.
+
+But that is totally wrong. Space is not a giant refrigerator, it's a giant thermos. That is the exact right analogy.
+
+Space is a thermos. Think about how a high-end thermos works.
+
+(This file is longer than 30 minutes. Go Unlimited at https://turboscribe.ai/ to transcribe files up to 10 hours long.)
