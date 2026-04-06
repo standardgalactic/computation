@@ -23,8 +23,6 @@ margin:auto;
 
 h2{ margin-bottom:10px; }
 
-/* ===== description ===== */
-
 .description{
 font-size:0.9em;
 line-height:1.5em;
@@ -36,8 +34,6 @@ padding:14px;
 background:#001000;
 }
 
-/* ===== selector ===== */
-
 select{
 margin-bottom:20px;
 background:#001400;
@@ -45,8 +41,6 @@ border:1px solid #00ff00;
 color:#7cff7c;
 padding:6px 10px;
 }
-
-/* ===== portal ===== */
 
 .scope-wrap{
 position:relative;
@@ -103,8 +97,6 @@ transparent 4px
 pointer-events:none;
 }
 
-/* ===== captions ===== */
-
 .captions{
 max-width:720px;
 min-height:2.4em;
@@ -113,8 +105,6 @@ background:#001000;
 padding:12px;
 margin-top:15px;
 }
-
-/* ===== links ===== */
 
 .links{
 margin-top:20px;
@@ -141,7 +131,7 @@ color:#aaffaa;
 <h2>Xylomorphic Infrastructure</h2>
 
 <div class="description">
-Xylomorphic computation proposes that infrastructure should behave like living systems, recycling heat and material outputs into future structure. Instead of exporting entropy, stable systems reintegrate it. This stands in contrast to orbital compute proposals, which lack closure and therefore accumulate unresolved thermodynamic debt.
+Xylomorphic computation proposes that infrastructure should behave like living systems, recycling heat and material outputs into future structure.
 </div>
 
 <select id="track"></select>
@@ -167,15 +157,41 @@ Xylomorphic computation proposes that infrastructure should behave like living s
 const playlist = [
 {
 audio:"Why-data-centers-must-mimic-trees.mp3",
-vtt:"Why-data-centers-must-mimic-trees.vtt"
+vtt:"Why-data-centers-must-mimic-trees.vtt",
+key:"trees"
 },
 {
 audio:"Why_AI_servers_fail_in_space.mp3",
-vtt:"Why_AI_servers_fail_in_space.vtt"
+vtt:"Why_AI_servers_fail_in_space.vtt",
+key:"moon"
 }
 ]
 
 let current = 0
+
+/* ===== URL selection ===== */
+
+function getStartIndex(){
+
+const params = new URLSearchParams(window.location.search)
+const val = params.get("track")
+
+if(!val) return 0
+
+/* numeric */
+if(!isNaN(val)){
+const i = parseInt(val)
+if(i >= 0 && i < playlist.length) return i
+}
+
+/* keyword */
+for(let i=0;i<playlist.length;i++){
+if(playlist[i].key === val.toLowerCase()) return i
+}
+
+return 0
+
+}
 
 /* ===== elements ===== */
 
@@ -183,13 +199,11 @@ const audio = document.getElementById("audio")
 const captions = document.getElementById("captions")
 const trackSelect = document.getElementById("track")
 
-/* ===== helper ===== */
+/* ===== populate selector ===== */
 
 function pretty(f){
-return f.replace(".mp3","").replace(/_/g," ").replace(/-/g," ")
+return f.replace(".mp3","").replace(/[-_]/g," ")
 }
-
-/* ===== populate selector ===== */
 
 playlist.forEach((t,i)=>{
 const opt=document.createElement("option")
@@ -219,7 +233,6 @@ source.connect(analyser)
 analyser.connect(gain)
 gain.connect(audioCtx.destination)
 
-/* fixed characteristics */
 audio.playbackRate=0.92
 audio.preservesPitch=false
 if(source.detune) source.detune.value=-300
@@ -244,9 +257,7 @@ captions.textContent=""
 
 audio.load()
 
-audio.addEventListener("loadedmetadata",()=>{
-attachTrack()
-},{once:true})
+audio.addEventListener("loadedmetadata", attachTrack, {once:true})
 
 }
 
@@ -272,13 +283,18 @@ captions.textContent=cue?cue.text:""
 /* ===== autoplay chain ===== */
 
 audio.addEventListener("ended",()=>{
-if(current<playlist.length-1){
-loadTrack(current+1)
+
+if(current < playlist.length - 1){
+loadTrack(current + 1)
 audio.play()
 }
+
 })
 
 /* ===== start ===== */
+
+const startIndex = getStartIndex()
+loadTrack(startIndex)
 
 document.body.addEventListener("click",()=>{
 initAudio()
@@ -365,10 +381,6 @@ requestAnimationFrame(draw)
 }
 
 draw()
-
-/* ===== init ===== */
-
-loadTrack(0)
 
 </script>
 
