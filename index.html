@@ -163,17 +163,22 @@ let current = 0
 
 function getStartIndex(){
 const params = new URLSearchParams(window.location.search)
+
+/* explicit form: ?track=moon or ?track=1 */
 const val = params.get("track")
-
-if(!val) return 0
-
-if(!isNaN(val)){
-const i = parseInt(val)
-if(i >= 0 && i < playlist.length) return i
+if(val){
+  if(!isNaN(val)){
+    const i = parseInt(val,10)
+    if(i >= 0 && i < playlist.length) return i
+  }
+  for(let i=0;i<playlist.length;i++){
+    if(playlist[i].key === val.toLowerCase()) return i
+  }
 }
 
+/* bare flag form: ?moon or ?trees */
 for(let i=0;i<playlist.length;i++){
-if(playlist[i].key === val.toLowerCase()) return i
+  if(params.has(playlist[i].key)) return i
 }
 
 return 0
