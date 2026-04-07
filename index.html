@@ -6,7 +6,6 @@
 <title>Xylomorphic Infrastructure</title>
 
 <style>
-
 body{
 margin:0;
 background:#000;
@@ -122,7 +121,6 @@ border-bottom:1px solid #00ff00;
 a:hover{
 color:#aaffaa;
 }
-
 </style>
 </head>
 
@@ -146,7 +144,7 @@ Xylomorphic computation proposes that infrastructure should behave like living s
 <audio id="audio"></audio>
 
 <div class="links">
-<a href="xylomorphic-infrastructure.pdf" target="_blank">Xylomorphic Infrastructure</a>
+<a href="xylomorphic_computation.pdf" target="_blank">Xylomorphic Computation</a>
 <a href="moon-not-computer.pdf" target="_blank">The Moon Should Not Be a Computer</a>
 </div>
 
@@ -155,16 +153,8 @@ Xylomorphic computation proposes that infrastructure should behave like living s
 /* ===== playlist ===== */
 
 const playlist = [
-{
-audio:"Why-data-centers-must-mimic-trees.mp3",
-vtt:"Why-data-centers-must-mimic-trees.vtt",
-key:"trees"
-},
-{
-audio:"Why_AI_servers_fail_in_space.mp3",
-vtt:"Why_AI_servers_fail_in_space.vtt",
-key:"moon"
-}
+{ audio:"Why-data-centers-must-mimic-trees.mp3", vtt:"Why-data-centers-must-mimic-trees.vtt", key:"trees" },
+{ audio:"Why_AI_servers_fail_in_space.mp3", vtt:"Why_AI_servers_fail_in_space.vtt", key:"moon" }
 ]
 
 let current = 0
@@ -172,25 +162,21 @@ let current = 0
 /* ===== URL selection ===== */
 
 function getStartIndex(){
-
 const params = new URLSearchParams(window.location.search)
 const val = params.get("track")
 
 if(!val) return 0
 
-/* numeric */
 if(!isNaN(val)){
 const i = parseInt(val)
 if(i >= 0 && i < playlist.length) return i
 }
 
-/* keyword */
 for(let i=0;i<playlist.length;i++){
 if(playlist[i].key === val.toLowerCase()) return i
 }
 
 return 0
-
 }
 
 /* ===== elements ===== */
@@ -212,33 +198,24 @@ opt.textContent=pretty(t.audio)
 trackSelect.appendChild(opt)
 })
 
-/* ===== audio ===== */
+/* ===== audio engine ===== */
 
 let audioCtx, analyser, buffer, source
 
 function initAudio(){
-
 if(audioCtx) return
-
 audioCtx=new(window.AudioContext||window.webkitAudioContext)()
-
 analyser=audioCtx.createAnalyser()
 analyser.fftSize=2048
-
 source=audioCtx.createMediaElementSource(audio)
-
 const gain=audioCtx.createGain()
-
 source.connect(analyser)
 analyser.connect(gain)
 gain.connect(audioCtx.destination)
-
 audio.playbackRate=0.92
 audio.preservesPitch=false
 if(source.detune) source.detune.value=-300
-
 buffer=new Uint8Array(analyser.fftSize)
-
 }
 
 /* ===== load track ===== */
@@ -246,14 +223,16 @@ buffer=new Uint8Array(analyser.fftSize)
 function loadTrack(i){
 
 current=i
-trackSelect.value=i
+
+/* CRITICAL FIX: sync selector */
+trackSelect.value = i
 
 audio.pause()
 
-audio.src=playlist[i].audio
-audio.innerHTML=`<track kind="captions" src="${playlist[i].vtt}" default>`
+audio.src = playlist[i].audio
+audio.innerHTML = `<track kind="captions" src="${playlist[i].vtt}" default>`
 
-captions.textContent=""
+captions.textContent = ""
 
 audio.load()
 
@@ -283,25 +262,28 @@ captions.textContent=cue?cue.text:""
 /* ===== autoplay chain ===== */
 
 audio.addEventListener("ended",()=>{
-
 if(current < playlist.length - 1){
 loadTrack(current + 1)
 audio.play()
 }
-
 })
 
-/* ===== start ===== */
+/* ===== init ===== */
 
 const startIndex = getStartIndex()
+
+/* set selector BEFORE loading (extra safety) */
+trackSelect.value = startIndex
+
 loadTrack(startIndex)
 
+/* start audio on first interaction */
 document.body.addEventListener("click",()=>{
 initAudio()
 audioCtx.resume().then(()=>audio.play())
 },{once:true})
 
-/* ===== canvas ===== */
+/* ===== canvas + visualizer ===== */
 
 const canvas=document.getElementById("scope")
 const ctx=canvas.getContext("2d")
@@ -310,8 +292,6 @@ const dpr=window.devicePixelRatio||1
 canvas.width=330*dpr
 canvas.height=330*dpr
 ctx.setTransform(dpr,0,0,dpr,0,0)
-
-/* ===== entropy ===== */
 
 function entropy(buf){
 let m=0
@@ -324,8 +304,6 @@ v+=d*d
 }
 return v/buf.length
 }
-
-/* ===== draw ===== */
 
 let phase=0
 let eSmooth=0
