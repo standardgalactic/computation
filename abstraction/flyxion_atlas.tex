@@ -1,0 +1,1437 @@
+% !TEX program = pdflatex
+\documentclass[11pt, a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\geometry{top=1.1in, bottom=1.1in, left=1.2in, right=1.2in}
+\onehalfspacing
+
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+\newmdenv[linewidth=0.7pt, innertopmargin=9pt, innerbottommargin=9pt,
+  innerleftmargin=12pt, innerrightmargin=12pt,
+  skipabove=10pt, skipbelow=10pt]{notebox}
+
+\newmdenv[linewidth=1.2pt, innertopmargin=10pt, innerbottommargin=10pt,
+  innerleftmargin=14pt, innerrightmargin=14pt,
+  skipabove=12pt, skipbelow=12pt, backgroundcolor=gray!6]{candbox}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalsize\itshape}{}{}{}
+
+\title{%
+  \textbf{The Flyxion Dependency Atlas}\\[0.4em]
+  \large Definitions, Theorems, Machinery, Applications,\\
+  and Equivalence Candidates Across the Corpus
+}
+\author{Flyxion}
+\date{June 2026 --- Internal Working Document. Not for distribution.}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+This atlas inventories the theoretical corpus at four levels: primitive
+definitions, major theorems and results, mathematical machinery, and
+applications. Its primary purpose is to identify equivalences ---
+objects that appear under different names in different frameworks but
+are mathematically identical or related by a natural transformation.
+Every confirmed equivalence eliminates redundant content from the
+projected fifteen-volume curriculum and potentially collapses several
+apparent volumes into one. The atlas is a living document updated as
+new identifications are made.
+
+\medskip
+\noindent\textbf{Central thesis}: All Flyxion frameworks are constrained
+gradient flows on admissibility spaces. The fifteen volumes are fifteen
+instantiations of one variational principle, not fifteen independent
+theories.
+
+\medskip
+\noindent\textbf{Strongest unification candidate (§5.3)}: There exists
+a functor $\mathfrak{T}$ from frameworks to energy landscapes such that
+$\mathfrak{T}(\text{RSVP}) = V$, $\mathfrak{T}(\text{Agency}) = F$,
+$\mathfrak{T}(\text{Repair}) = d^2$, etc. If this functor exists,
+Volume~XV becomes a theorem about equivalence classes of energy
+functionals rather than a narrative integration.
+
+\medskip
+\noindent\textbf{Missing primitive (§1.5)}: An admissible trajectory
+object $\gamma: [0,T] \to \mathcal{A}$ is absent from the current
+primitive list despite being implicitly required by memory, repair,
+agency, ecphory, Yarncrawler, and TARTAN. Adding it resolves multiple
+apparent equivalences as instances of one path-theoretic structure.
+
+\medskip
+\noindent\textbf{Repair Theory elevation}: Repair appears across
+cognitive, semantic, institutional, and physical domains. It is more
+foundational than its current placement in the Application tier
+suggests and should be elevated to the Core tier.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ================================================================
+\section{Level 1: Primitive Definitions}
+% ================================================================
+
+The following objects appear across the corpus. Each entry records the
+canonical name, its mathematical type, its first formal appearance,
+alternative names used elsewhere, and any suspected equivalences with
+other entries.
+
+% ----------------------------------------------------------------
+\subsection{Geometric and Topological Objects}
+
+\subsubsection{Admissibility Space / Admissibility Manifold}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathcal{A} \subseteq \mathcal{S}$ \\
+\textbf{Type} & Sub-manifold (or sub-variety) of state space $\mathcal{S}$ \\
+\textbf{Definition} & Subset of states satisfying all active constraints:
+  $\mathcal{A} = \{x \in \mathcal{S} \mid C_i(x) \leq 0\; \forall i\}$ \\
+\textbf{First appearance} & \textit{Hidden Curvature}, Chapter 2 \\
+\textbf{Alternative names} & Constraint manifold (Vol.~I), admissible set
+  (Institutional Attractors essay), reachable set $R(x)$ in computational
+  contexts, fiber preimage $\pi^{-1}(m)$ in projection contexts,
+  world-state $\Omega_t$ in Spherepop, possibility space $\mathcal{P}$
+  in MEM\textbar{}8 \\
+\textbf{Metric} & Fisher information metric $g_{ij} = \mathbb{E}[
+  \partial_i \log p\, \partial_j \log p]$ induced by KL divergence \\
+\textbf{Equivalence candidates} & \textit{See §5.1}: $\mathcal{A}$,
+  $\pi^{-1}(m)$, $\Omega_t$, $\mathcal{P}$, $R(x)$ may all be instances
+  of one object under different projections \\
+\end{longtable}
+
+\subsubsection{Reachability Set / Reachability Volume}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $R(x)$; $\Omega(x) = \mathrm{Vol}(R(x))$ \\
+\textbf{Type} & Subset of $\mathcal{S}$; real-valued functional \\
+\textbf{Definition} & $R(x) = \{x' \in \mathcal{S} \mid \exists$
+  admissible path from $x$ to $x'\}$; $\Omega(x) = \mathrm{Vol}(R(x))$ \\
+\textbf{First appearance} & \textit{Computation Beyond Data}, §8 \\
+\textbf{Alternative names} & Accessibility (Portuguese version),
+  reachability (English version), admissible future set,
+  $\mathrm{Vol}(\mathcal{A}_i)$ in social freedom formalism \\
+\textbf{Note} & $R(x) \subseteq \mathcal{A}$: reachability is accessibility
+  from a specific starting point, not the full admissibility space \\
+\end{longtable}
+
+\subsubsection{Projection Operator}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\pi: X \to M$ \\
+\textbf{Type} & Smooth surjective map between manifolds \\
+\textbf{Definition} & Map from full state space $X$ to observable manifold
+  $M$; in general non-injective \\
+\textbf{First appearance} & \textit{Hidden Curvature}, Chapter 3 \\
+\textbf{Alternative names} & Compression map, visibility operator $\pi$
+  (Institutional Attractors), rendering operator $\mathcal{R}$ (CLIO),
+  coarse-graining map (RSVP-RG connection), realization functor $F:
+  \mathcal{H} \to \mathcal{C}$ (Spherepop) \\
+\textbf{Equivalence candidates} & \textit{See §5.2}: all projection-like
+  maps across the corpus \\
+\end{longtable}
+
+\subsubsection{Fiber / Preimage}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\pi^{-1}(m) = \{x \in X \mid \pi(x) = m\}$ \\
+\textbf{Type} & Subset of $X$; sub-manifold when $\pi$ is a submersion \\
+\textbf{First appearance} & \textit{Hidden Curvature}, Chapter 3 \\
+\textbf{Alternative names} & Preimage (CLIO), possibility space
+  $\mathcal{P}_{i-1}$ (MEM\textbar{}8), event fiber (Spherepop),
+  exclusion complement $\mathcal{S} \setminus \mathcal{E}$ (Spherepop) \\
+\textbf{Key quantity} & $\mu(\mathcal{P}_m) \to 0$: operational fiber death \\
+\end{longtable}
+
+\subsubsection{Inadmissibility Functional}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathcal{I}(x)$; also $d(f(x), f^*)^2$ in repair context \\
+\textbf{Type} & Non-negative real-valued functional on $\mathcal{S}$ \\
+\textbf{Definition} & Measure of how far $x$ is from $\mathcal{A}$;
+  $\mathcal{I}(x) = 0 \iff x \in \mathcal{A}$ \\
+\textbf{First appearance} & Formal spine document (Vol.~I master equation) \\
+\textbf{Alternative names} & Constraint violation, tension $V(x,t)$
+  (Institutional Attractors), free energy $F(q,o)$ (Simulated Agency),
+  merge obstruction $\mathcal{O}_\mathrm{merge}$ (Semantic Infrastructure) \\
+\textbf{Note} & This object unifies ``tension,'' ``free energy,'' and
+  ``constraint violation'' across the corpus. Strong equivalence candidate. \\
+\end{longtable}
+
+% ----------------------------------------------------------------
+\subsection{Field Objects (RSVP)}
+
+\subsubsection{Scalar Field}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\Phi(x,t)$ \\
+\textbf{Type} & Scalar field on spacetime or state space \\
+\textbf{Interpretation} & Structural potential / likelihood landscape /
+  scalar density / salience \\
+\textbf{Alternative names} & Scalar persistence $\Phi$ (MEM\textbar{}8
+  memory context), scalar density (cosmological context) \\
+\end{longtable}
+
+\subsubsection{Vector Field (RSVP)}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathbf{v}(x,t)$ \\
+\textbf{Type} & Vector field \\
+\textbf{Interpretation} & Admissibility flow / information transport /
+  lamphrodyne direction \\
+\textbf{Alternative names} & Vector transport $\mathbf{v}$ (MEM\textbar{}8) \\
+\end{longtable}
+
+\subsubsection{Entropy / Accessibility Field}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $S(x,t)$ \\
+\textbf{Type} & Scalar field; in RSVP treated as a dynamical variable \\
+\textbf{Interpretation} & Local accessibility density; configurational
+  entropy; information compression at each scale \\
+\textbf{Alternative names} & Accessibility functional $\mathcal{A}(x,t) =
+  \log|\mathcal{P}(x,t)|$ (MEM\textbar{}8), opacity $\Omega$ (Institutional
+  Attractors) \\
+\textbf{Warning} & Three distinct uses in corpus: (a) RSVP dynamical field,
+  (b) Shannon entropy $H$ in information-theoretic contexts, (c) path
+  degradation measure in memory contexts. These must be carefully
+  distinguished in every volume. \\
+\end{longtable}
+
+% ----------------------------------------------------------------
+\subsection{Operator Objects}
+
+\subsubsection{Pop Operator}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathsf{Pop}$ \\
+\textbf{Type} & Transition operator on Spherepop configurations \\
+\textbf{Effect} & Reduces local entropy $S(x_0)$ at site $x_0$ when it
+  exceeds threshold $\theta_P$; records event in history \\
+\textbf{Continuous analog} & Entropy reduction term in RSVP $S$-equation \\
+\end{longtable}
+
+\subsubsection{Refuse Operator}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathsf{Refuse}$ / $\mathbf{Refuse}$ \\
+\textbf{Type} & Transition operator with typed annotation \\
+\textbf{Effect} & Excludes trajectory $x$ with responsibility weight
+  $\rho_x \neq 0$; marks event as \textsc{Refused} rather than
+  \textsc{Committed} \\
+\textbf{Role} & Principled exclusion preserving Hausdorff separation
+  of event manifold $\mathcal{H}$ \\
+\textbf{Equivalence candidates} & Constraint enforcement in constraint
+  geometry; inadmissibility boundary enforcement; ``firing'' in
+  threshold-based systems \\
+\end{longtable}
+
+\subsubsection{Collapse Operator}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathbf{Collapse}$ / $\mathsf{Collapse}$ \\
+\textbf{Type} & Projection / realization functor $F: \mathcal{H} \to
+  \mathcal{C}$ \\
+\textbf{Effect} & Recovers observable state from history:
+  $\mathbf{Collapse}(H_t) = T_{x_n} \circ \cdots \circ T_{x_1}(s_0)$ \\
+\textbf{Alternative names} & Realization functor, MEM\textbar{}8 state
+  reconstruction $s_n = \bigcap_i \mathcal{C}(e_i)$, ecphory (cognitive
+  context) \\
+\end{longtable}
+
+\subsubsection{Repair Operator / Repair Morphism}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $R_\epsilon$; formally a morphism in category of
+  admissibility manifolds \\
+\textbf{Type} & Map $R_\epsilon: \mathcal{S}_\mathrm{broken} \to
+  \mathcal{S}$ \\
+\textbf{Formal conditions (proposed)} & (a) admissibility-preserving:
+  image lies in $\mathcal{A}$; (b) divergence-reducing:
+  $d(f(R_\epsilon(x)), f^*) < d(f(x), f^*)$; (c) path-constrained:
+  follows trajectory within current $\mathcal{A}$ \\
+\textbf{Note} & This definition is the central gap in Volume~IX.
+  It must be developed before that volume can be written. \\
+\textbf{Alternative names} & Approximate repair, functional recovery,
+  $\epsilon$-repair \\
+\end{longtable}
+
+\subsubsection{Ecphory / Memory Retrieval Operator}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathcal{E}_\mathrm{cph}$ (proposed notation) \\
+\textbf{Type} & Wave propagation operator on semantic manifold \\
+\textbf{Effect} & Generates retrieval wave from present state;
+  wave must reach activation threshold $\theta_E$ at target state \\
+\textbf{Equivalence candidates} & Repair operator restricted to cognitive
+  domain; Collapse operator applied to memory history; reconstruction
+  in projection theory \\
+\end{longtable}
+
+\subsubsection{Lamphrodyne Operator}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\mathcal{L}_\mathrm{lp}(X) =
+  (-\nabla\cdot\mathbf{v},\; -\lambda\nabla\Phi,\; D_S\nabla^2 S)$ \\
+\textbf{Type} & Linear relaxation operator on RSVP field triple \\
+\textbf{Effect} & Separates linear lamphrodyne relaxation from nonlinear
+  forcing $\mathcal{N}(X)$ in $\partial_t X = \mathcal{L}_\mathrm{lp}(X)
+  + \mathcal{N}(X)$ \\
+\end{longtable}
+
+% ----------------------------------------------------------------
+\subsection{Memory and History Objects}
+
+\subsubsection{Event History}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $H_t = (e_1, e_2, \ldots, e_n)$; also $\mu$ in MEM\textbar{}8 \\
+\textbf{Type} & Finite sequence of typed events \\
+\textbf{Role} & Primary object in MEM\textbar{}8 and Spherepop; state is
+  derived from history, not stored directly \\
+\textbf{State recovery} & $s_n = \bigcap_{i=1}^n \mathcal{C}(e_i)$ \\
+\end{longtable}
+
+\subsubsection{Memory Residue / Memory Trace}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $M(t)$; wave memory field \\
+\textbf{Type} & Continuous field of influences decaying with time \\
+\textbf{Dynamics} & Damped wave equation with viscosity $\eta(x,t)$ and
+  relaxation timescale $\tau(x,t)$ \\
+\textbf{Alternative names} & Wave memory, collapse residue, memory state
+  $M$ in formal spine Vol.~VI \\
+\end{longtable}
+
+\subsubsection{Procedural vs.\ Declarative Memory}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbols} & $A_p(t)$, $A_d(t)$ \\
+\textbf{Decay rates} & $\lambda_p \gg \lambda_d$: procedural decays faster \\
+\textbf{Significance} & $A_p(t) \to 0$ while $A_d(t)$ remains:
+  operational fiber death \\
+\textbf{Source} & Institutional Attractors essay \\
+\end{longtable}
+
+% ----------------------------------------------------------------
+\subsection{The Missing Primitive: Admissible Trajectory}
+
+\begin{notebox}
+\textbf{Finding from atlas review}: An admissible trajectory object is
+absent from all formal definitions despite being implicitly required
+by at least six frameworks. Its absence is the most surprising gap in
+the primitive list.
+\end{notebox}
+
+\subsubsection{Admissible Trajectory}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $\gamma: [0,T] \to \mathcal{A}$ (continuous);
+  $(\gamma_0, \gamma_1, \ldots, \gamma_n) \in \mathcal{A}^{n+1}$
+  (discrete) \\
+\textbf{Type} & Path in admissibility space; element of trajectory
+  space $\Gamma(\mathcal{A})$ \\
+\textbf{Proposed definition} & A trajectory $\gamma$ is admissible if
+  $\gamma(t) \in \mathcal{A}$ for all $t \in [0,T]$ and the velocity
+  $\dot{\gamma}(t)$ is tangent to $\mathcal{A}$ wherever $\mathcal{A}$
+  has boundary \\
+\textbf{Trajectory space} & $\Gamma(\mathcal{A}) = \{\gamma: [0,T]
+  \to \mathcal{A} \mid \gamma \text{ admissible}\}$ with appropriate
+  topology \\
+\textbf{Why it is missing} & The gradient flow master equation
+  $\dot{x} = -\nabla_g \mathcal{I}(x) + \xi_t$ implicitly defines
+  trajectories but never names them as a primitive. All downstream
+  frameworks that use paths inherit this unnamed object. \\
+\end{longtable}
+
+\medskip
+Once named, this object unifies the following as specializations:
+
+\medskip
+\begin{longtable}{lll}
+\textbf{Framework object} & \textbf{Framework} & \textbf{As trajectory} \\
+\hline
+Memory trace $\mu = (e_1,\ldots,e_n)$ & MEM\textbar{}8 &
+  Discrete trajectory in event space \\
+Repair path & Repair Theory &
+  Trajectory in $\mathcal{A}$ reducing $d(f(\gamma(t)), f^*)$ \\
+Agency trajectory & Simulated Agency &
+  Trajectory maximizing $\mathbb{E}[\Omega(\gamma(T))]$ \\
+Ecphoric path & Cognitive / MEM\textbar{}8 &
+  Trajectory from present state to target memory \\
+Yarncrawler route & Semantic Infrastructure &
+  Trajectory completing partial world-state \\
+TARTAN trajectory & TARTAN &
+  Trajectory preserved under decomposition \\
+\end{longtable}
+
+\medskip
+\begin{notebox}
+\textbf{Structural consequence}: The five-level hierarchy proposed in
+the review (state spaces → admissibility → trajectory spaces →
+projection structures → energy functionals → dynamics) places trajectory
+spaces at Level~2, between admissibility (Level~1) and projection
+(Level~3). Many frameworks differ primarily at Levels 2--4 while
+sharing Levels 0--1. The trajectory object is where the hierarchy begins
+to branch.
+\end{notebox}
+
+
+
+% ================================================================
+\section{Level 2: Major Theorems and Results}
+% ================================================================
+
+Status codes: \textbf{Pr} = proved; \textbf{Sk} = sketch exists;
+\textbf{Co} = conjecture with proof strategy; \textbf{Nu} = numerical
+evidence; \textbf{As} = asserted without proof or strategy;
+\textbf{Ph} = philosophical proposal; \textbf{Ga} = gap, not yet
+stated precisely.
+
+\subsection{Technical Gaps --- affect one or two volumes if failed}
+
+\medskip
+\begin{longtable}{p{5cm}lp{1.5cm}p{3.5cm}}
+\toprule
+\textbf{Result} & \textbf{Status} & \textbf{Home} & \textbf{Used by} \\
+\midrule
+Projection-Collapse Principle (weak) & Pr & I & II, III, IV, VI, VII \\
+Projection-Collapse Principle (strong) & Co & I & II, III \\
+Constraint-Information Equivalence & Pr & I & II, III, VIII \\
+Fiber Divergence Lemma & Pr & I & III, VI \\
+Reconstruction Stability ($L^2$) & Pr & I & III, VI, IX \\
+Bishop-Gromov for admissibility & Pr & I & II, X \\
+Persistent admissibility topology & Pr & I & VII, IX \\
+Admissibility geodesics existence & Pr & I & II, X \\
+Scale invariance of RSVP action & Pr & II & XIII \\
+RSVP-RG equivalence & Co & II & XIII \\
+Asymptotic safety as RSVP equilibrium & Co & II & XIII \\
+Hausdorff preservation (Refuse) & Pr & VII & VIII \\
+RSVP-Spherepop functor & Pr & VII & VIII \\
+Projection-Induced Irreversibility & Pr & VII & VIII, IX \\
+Operational Fiber Death & Pr & III & VI, IX \\
+Reconstructability Loss & Pr & III & VI, IX \\
+Approximate Repair theorem & Pr & IX & XII, XV \\
+Emergent Agency theorem & Pr & IV & XV \\
+Self-Concealment Principle & Pr & IV & XV \\
+TARTAN structure-preservation & Pr & XI & XII \\
+Yarncrawler divergence control & Pr & VIII & VIII \\
+Transjective functor faithfulness & Pr & VIII & VIII \\
+Coordination alignment convergence & As & X & X \\
+HYDRA cognitive emergence & As & V & V, XIV \\
+Spherepop confluence & Ga & VII & VII \\
+HYDRA stability analysis & Ga & V & V \\
+Kuramoto reduction from RSVP & Ga & X & X \\
+CLIO inverse problem (ill-posedness) & Ga & III & III \\
+MEM\textbar{}8 reconstruction theorem & Ga & VI & VI \\
+AI Admissible Stabilization (convergence cert.) & As & III & III, XV \\
+\bottomrule
+\end{longtable}
+
+\subsection{Foundational Gaps --- affect nearly every volume if failed}
+
+\begin{notebox}
+\textbf{Priority}: Attack these before writing begins. A failed
+confluence theorem changes one volume. A failed Reachability Principle
+changes nearly every volume. A failed Master Claim restructures
+the entire project.
+\end{notebox}
+
+\medskip
+\begin{longtable}{p{5cm}lp{1.5cm}p{3.8cm}}
+\toprule
+\textbf{Result} & \textbf{Status} & \textbf{Home} & \textbf{Risk if false} \\
+\midrule
+Master Claim (all systems are gradient flows) & Ph & XV & Affects all volumes \\
+Reachability Principle & Sk & I & Affects IV, VI, IX, XII, XV \\
+RSVP Second Law ($dS/dt \leq 0$) & As & II & Affects II, XIII \\
+Lamphrodyne attractor stability & As & II & Affects II, XIII, XIV \\
+Ecphoric threshold existence & As & VI & Affects IV, IX \\
+Energy Functor existence ($\mathfrak{T}$) & Ph & XV & Affects XV; determines
+  whether XV is synthesis or narrative \\
+Invariant Discovery Principle & As & XV & Affects XV \\
+Armillary Principle & Ph & XII & Affects XII \\
+Optimal Opacity ($\Omega^* = \kappa/2\eta$) & Sk & IV & Affects IV (optimum proved; functional form derivation pending) \\
+\bottomrule
+\end{longtable}
+
+
+
+% ================================================================
+\section{Level 3: Mathematical Machinery}
+% ================================================================
+
+For each volume's content, what prior mathematics must a reader know?
+This determines the prerequisites chapter of each volume.
+
+\medskip
+\begin{longtable}{p{5cm}p{8cm}}
+\toprule
+\textbf{Machinery} & \textbf{Where required} \\
+\midrule
+Riemannian geometry (manifolds, geodesics, curvature) &
+  I, II, X \\
+Fisher information / information geometry &
+  I, II, III \\
+PDEs (existence, uniqueness, regularity) &
+  II, VI, XI \\
+Functional analysis ($L^2$, Sobolev spaces) &
+  I, II, VI \\
+Dynamical systems (attractors, stability, Lyapunov functions) &
+  II, IV, V, X \\
+Category theory (functors, natural transformations, fibered categories) &
+  I, VII, VIII \\
+Sheaf theory &
+  VIII \\
+Optimal transport &
+  I, IX, X \\
+Statistical mechanics (entropy, partition functions) &
+  II, XIII \\
+Quantum field theory (path integrals, renormalization) &
+  II, XIII, XIV \\
+Operational semantics / type theory &
+  VII \\
+Graph theory and synchronization (Kuramoto) &
+  X \\
+Bayesian inference / variational methods &
+  III, IV, V \\
+Homotopy / persistent homology &
+  I (topology section) \\
+Stochastic processes / SDEs &
+  I, II, IV \\
+Linear algebra (SVD, Tikhonov regularization) &
+  I (reconstruction section) \\
+\bottomrule
+\end{longtable}
+
+\medskip
+\begin{notebox}
+\textbf{Finding.} Category theory and Riemannian geometry are required
+by the most volumes (eight and six respectively). These two bodies of
+machinery should be given full treatment in Volume~I rather than being
+introduced piecemeal in later volumes. Every later volume can then
+assume the reader has covered them.
+
+The current Volume~I draft covers Riemannian geometry adequately.
+The category theory chapter is the identified gap.
+\end{notebox}
+
+% ================================================================
+\section{Level 4: Applications vs.\ Foundations}
+% ================================================================
+
+The following table distinguishes foundational frameworks (where new
+mathematics is introduced) from application domains (where existing
+mathematics is instantiated).
+
+\medskip
+\begin{longtable}{p{4cm}lp{7cm}}
+\toprule
+\textbf{Framework / Domain} & \textbf{Type} & \textbf{Notes} \\
+\midrule
+Constraint Geometry & Foundation & Volume I; source of all primitives \\
+RSVP Field Theory & Foundation & Volume II; introduces PDE system \\
+Projection Theory / CLIO & Foundation & Volume III; introduces inference
+  pipeline \\
+Spherepop Calculus & Foundation & Volume VII; introduces event language \\
+Simulated Agency & Mixed & Volume IV; applies III + VI; adds agency
+  formalism \\
+HYDRA Architecture & Application & Volume V; applies III + V; needs
+  formal coordination theory \\
+MEM\textbar{}8 / Memory & Foundation & Volume VI; introduces trajectory
+  memory as primary object \\
+Semantic Infrastructure & Application & Volume VIII; applies VII + I \\
+Repair Theory & Mixed & Volume IX; applies I + VI + VII; needs new
+  repair morphism definition \\
+Coordination Geometry & Application & Volume X; applies II + VIII \\
+TARTAN & Mixed & Volume XI; applies I + III + VII; tiling formalism
+  underdeveloped \\
+Xylomorphic Computation & Application & Volume XII; applies XI; formal
+  theory essentially absent \\
+Cosmological Alternatives & Application & Volume XIII; applies II \\
+Consciousness / Qualia & Application & Volume XIV; applies II + IV + V \\
+Unified Theory & Synthesis & Volume XV; no new foundations; synthesis
+  theorems only \\
+\bottomrule
+\end{longtable}
+
+\medskip
+\begin{notebox}
+\textbf{Finding.} Five volumes are genuinely foundational (I, II, III,
+VI, VII). Five are mixed (IV, IX, XI, and two others). Five are pure
+applications. This means a reader who has mastered the five foundational
+volumes can in principle derive the contents of the application volumes
+themselves. The application volumes are valuable as guidance and
+worked examples, not as sources of new mathematics.
+\end{notebox}
+
+% ================================================================
+\section{Level 5: Equivalence Candidates}
+% ================================================================
+
+This is the most important section. Each entry here, if confirmed,
+eliminates redundant content and potentially restructures multiple
+volumes.
+
+% ----------------------------------------------------------------
+\subsection{Candidate 1: The Admissibility Cluster --- Common Parent, Not Equivalence}
+
+\begin{candbox}
+\textbf{Revised status}: The objects listed below are \emph{not} equivalent.
+They occupy different categorical levels. Forcing them into a single
+definition would conflate dynamical accessibility (which depends on a
+starting state) with epistemic ambiguity (which depends on an observation)
+and historical possibility (which depends on an event sequence). The correct
+claim is weaker and more useful:
+
+\medskip
+\textbf{Claim}: $\mathcal{A}$, $R(x)$, $\pi^{-1}(m)$, $\mathcal{P}$,
+$\Omega_t$ are all \emph{subobjects generated from} a common admissibility
+structure. They are not the same object; they are specializations of it
+under different constraints.
+
+\medskip
+\begin{tabular}{lll}
+\textbf{Name} & \textbf{Framework} & \textbf{Relationship to $\mathcal{A}$} \\
+\hline
+Admissibility space & Vol.~I & $\mathcal{A}$ itself \\
+Reachability set & Computation Beyond Data & $R(x) \subseteq \mathcal{A}$;
+  path-connected component from $x$ \\
+Fiber preimage & CLIO & $\pi^{-1}(m) \subseteq X$; epistemic, not dynamical \\
+Possibility space & MEM\textbar{}8 & $\mathcal{P}_{i-1}$; collapsed by
+  events, not by paths \\
+World-state & Spherepop & $\Omega_t$; a distribution, not a set \\
+\end{tabular}
+
+\medskip
+\textbf{Consequence}: Rather than a unified definition, Volume~I should
+define the \emph{admissibility structure} $(\mathcal{S}, \mathcal{A},
+\pi, g)$ as a tuple, and define $R(x)$, $\pi^{-1}(m)$, and $\mathcal{P}$
+as derived objects with their respective constructions. This eliminates
+conflation while preserving the insight that all are controlled by
+admissibility.
+
+\medskip
+\textbf{Status}: Reclassified from equivalence to common parent structure.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 2: The Projection Cluster}
+
+\begin{candbox}
+\textbf{Claim}: The following are all instances of the projection
+operator $\pi: X \to M$.
+
+\medskip
+\begin{tabular}{lll}
+\textbf{Name} & \textbf{Framework} & \textbf{Symbol} \\
+\hline
+Projection operator & Vol.~I & $\pi: X \to M$ \\
+Rendering operator & CLIO & $\mathcal{R}$ \\
+Visibility operator & Institutional Attractors & $\pi: X \to M$ \\
+Coarse-graining map & RSVP-RG & (unnamed) \\
+Realization functor & Spherepop & $F: \mathcal{H} \to \mathcal{C}$ \\
+Compression map & Semantic Infrastructure & (various) \\
+Collapse operator & MEM\textbar{}8 & $\mathbf{Collapse}$ \\
+\end{tabular}
+
+\medskip
+\textbf{Key distinction}: The Spherepop realization functor and the
+CLIO rendering operator both instantiate $\pi$, but they go in opposite
+directions: $\pi$ maps from large to small (compression), while the
+realization functor maps from history (small) to state (large).
+The realization functor is closer to a \emph{section} of $\pi$ than
+to $\pi$ itself. This asymmetry must be made precise before the
+equivalence is confirmed.
+
+\medskip
+\textbf{Status}: Partial. The compression direction is confirmed.
+The realization / section direction needs separate treatment.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 3: The Tension / Free Energy Cluster}
+
+\begin{candbox}
+\textbf{Claim}: The following are all instances of the inadmissibility
+functional $\mathcal{I}(x)$ --- the potential whose gradient drives
+the master gradient flow in every volume.
+
+\medskip
+\begin{tabular}{lll}
+\textbf{Name} & \textbf{Framework} & \textbf{Symbol} \\
+\hline
+Inadmissibility functional & Vol.~I & $\mathcal{I}(x)$ \\
+Tension / potential & Institutional Attractors & $V(x,t)$ \\
+Variational free energy & Simulated Agency & $F(q,o)$ \\
+Merge obstruction & Semantic Infrastructure & $\mathcal{O}_\mathrm{merge}$ \\
+Entropy drift & Semantic Infrastructure & $\mathcal{E}_\mathrm{drift}$ \\
+Repair divergence & Repair Theory & $d(f(x), f^*)^2$ \\
+Incoherence penalty & HYDRA & $\Omega(\mathbf{z})$ \\
+\end{tabular}
+
+\medskip
+\textbf{Formal spine confirmation}: The formal spine (document 21)
+confirms this cluster. Every volume's master equation has the form
+$\dot{x} = -\nabla \mathcal{I}(x) + \text{terms}$. The objects in
+the table are all the $\mathcal{I}$ of their respective volumes.
+
+\medskip
+\textbf{If confirmed}: this is the most important equivalence in the
+corpus. It means all fifteen volumes are studying the same gradient flow
+under different names and in different state spaces. Volume~XV's unified
+Lagrangian $\mathcal{L}_\mathrm{Unified} = \frac{1}{2}\|\dot{\mathfrak{X}}
+\|^2_\mathfrak{g} - \mathfrak{F}(\mathfrak{X})$ is already written; the
+question is whether $\mathfrak{F}$ is genuinely a sum or whether some
+terms are the same term appearing in different coordinates.
+
+\medskip
+\textbf{Status}: Confirmed at the structural level. Whether the
+individual $\mathcal{I}$ objects are related by coordinate change or are
+genuinely independent requires per-case analysis.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 4: The Collapse / Reconstruction Cluster}
+
+\begin{candbox}
+\textbf{Claim}: The following are all instances of the same operation:
+recovering a richer state from a compressed representation.
+
+\medskip
+\begin{tabular}{lll}
+\textbf{Name} & \textbf{Framework} & \textbf{Symbol} \\
+\hline
+Reconstruction operator & Vol.~I & $\mathcal{R}_\epsilon$ \\
+Ecphory & MEM\textbar{}8 / cognitive & $\mathcal{E}_\mathrm{cph}$ \\
+Collapse (Spherepop) & Spherepop & $\mathbf{Collapse}$ \\
+MEM\textbar{}8 state recovery & MEM\textbar{}8 & $s_n = \bigcap_i
+  \mathcal{C}(e_i)$ \\
+Approximate repair & Repair Theory & $R_\epsilon$ \\
+Inverse problem solution & Vol.~III & $\hat{x}(m)$ \\
+\end{tabular}
+
+\medskip
+\textbf{Key distinction}: Reconstruction in Vol.~I minimizes a
+regularized inverse problem; ecphory is activation-threshold-based;
+Spherepop Collapse is a functional composition; repair is a path
+through admissibility space. These are not identical --- they differ in
+the constraints imposed on the recovery process. But they share
+the same logical form: given a compressed representation, recover
+(approximately) the original.
+
+\medskip
+\textbf{Proposed unification}: A general recovery operator
+$\mathcal{Q}: M \to X$ defined as a right inverse of $\pi$ under
+some optimality criterion, with each specific operator corresponding
+to a different criterion:
+\begin{itemize}
+\item Tikhonov: minimize $\|x\|^2$ subject to $\pi(x) = m$
+\item Ecphory: maximize activation given viscosity-damped wave
+\item Repair: stay within $\mathcal{A}$ while minimizing $d(f(x), f^*)$
+\end{itemize}
+
+\medskip
+\textbf{Status}: Promising. Needs a unifying definition.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 5: The Accessibility / Freedom Cluster}
+
+\begin{candbox}
+\textbf{Claim}: The following are all instances of the reachability
+volume $\Omega(x) = \mathrm{Vol}(R(x))$.
+
+\medskip
+\begin{tabular}{lll}
+\textbf{Name} & \textbf{Framework} & \textbf{Symbol} \\
+\hline
+Reachability volume & Vol.~I & $\Omega(x)$ \\
+Social freedom & Institutional Attractors & $\mathcal{F} = \sum_i
+  \mathrm{Vol}(\mathcal{A}_i)$ \\
+Simulated reachability & Simulated Agency & $\mathcal{R}(q)$ \\
+Repair bound & Repair Theory & $\eta\mathcal{R}(x)$ \\
+Geometric invariance & Consciousness & $\mathcal{G}(Q)$ \\
+Diagnostic volume & Institutional Attractors & $V(t)$ \\
+\end{tabular}
+
+\medskip
+\textbf{Note}: The diagnostic volume $V(t)$ (number of accessible
+vantage points from which a mechanism can be identified) is a
+reachability volume in the space of \emph{epistemological} positions,
+not physical states. This is a different type of state space but the
+same mathematical structure.
+
+\medskip
+\textbf{Status}: Strong candidate. The geometric invariance
+$\mathcal{G}(Q)$ in consciousness theory needs the most work to
+confirm --- it may be a reachability volume in quale-state space.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 6: CLIO / Agency / HYDRA / MEM|8 --- Coherent Sequence, Not One Volume}
+
+\begin{candbox}
+\textbf{Revised claim}: CLIO, Simulated Agency, HYDRA, and MEM\textbar{}8
+share a common mathematical substrate but operate on different objects
+and serve different pedagogical purposes. They belong in one
+\emph{branch} of the curriculum, not one \emph{volume}.
+
+\medskip
+The objects genuinely differ:
+\begin{itemize}
+\item CLIO studies $X \xrightarrow{\pi} M$: compression and inference
+\item MEM\textbar{}8 studies $(e_1,\ldots,e_n)$: sequential collapse
+  and reconstruction
+\item Simulated Agency studies $\arg\max_a \mathbb{E}[\Omega]$:
+  future-directed optimization
+\item HYDRA studies $\{f_i\}$ and coordination: distributed architecture
+\end{itemize}
+
+The analogy is probability theory, statistics, decision theory, and
+control theory. They share substrate; nobody merges them into one
+textbook; instead they form a coherent sequence.
+
+\medskip
+\textbf{Recommended structure}:
+\begin{itemize}
+\item Volume~III: Projection Theory (CLIO inference pipeline, inverse
+  problems, representation entropy)
+\item Volume~IV: Memory and Reconstruction (MEM\textbar{}8, ecphory,
+  wave memory, trajectory residue)
+\item Volume~V: Agency and Planning (Simulated Agency, free energy
+  minimization, anticipated reachability)
+\item Volume~VI: Modular Architectures (HYDRA coordination theory,
+  stability analysis, geometric control)
+\end{itemize}
+
+The renumbering shifts the original Volumes IV--VI to a four-volume
+cognitive-systems branch (new Volumes III--VI), with original Volume~VI
+(MEM\textbar{}8) becoming the new Volume~IV.
+
+\medskip
+\textbf{Unifying formal object}: An agent is a tuple
+$(\mathcal{A}, \pi, \mu, \mathcal{G})$ where $\mathcal{A}$ is its
+admissibility space, $\pi$ its projection, $\mu$ its MEM\textbar{}8
+history, and $\mathcal{G}$ its generative model. This definition
+provides the common thread across all four volumes without merging them.
+
+\medskip
+\textbf{Status}: Architectural recommendation. Replaces earlier
+merging proposal.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 7: Repair / Yarncrawler / Semantic Infrastructure / Xylomorphic as One Scale Hierarchy}
+
+\begin{candbox}
+\textbf{Claim}: Repair theory, the Yarncrawler framework, Semantic
+Infrastructure, and Xylomorphic Computation are the same
+persistence-and-restoration mathematics applied at four different scales.
+
+\medskip
+\begin{tabular}{lll}
+\textbf{Scale} & \textbf{Framework} & \textbf{Object being repaired} \\
+\hline
+Cognitive & Ecphory / MEM\textbar{}8 & Retrieval pathways \\
+Semantic & Yarncrawler / Semantic Infrastructure & Knowledge structures \\
+Institutional & Repair Theory & Institutional functions \\
+Physical & Xylomorphic Computation & Physical infrastructure \\
+\end{tabular}
+
+\medskip
+\textbf{Formal statement}: At each scale, repair is an instance of
+the repair morphism $R_\epsilon$ operating on different state spaces
+$\mathcal{S}$ under different constraint families $C$.
+
+\medskip
+\textbf{Consequence}: If confirmed, Volumes VIII, IX, and XII share
+a common chapter on repair morphisms (citing Volume~IX for the formal
+definition) and then each applies the definition to its domain.
+This eliminates the gap in each volume individually and replaces it
+with one central definition.
+
+\medskip
+\textbf{Status}: Strong structural case. The scale hierarchy is
+real. Whether the repair morphism definition is literally the same
+at each scale or merely analogous requires per-case formalization.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 8: The Reachability Field as a Primitive}
+
+\begin{candbox}
+\textbf{Proposed new primitive}: Introduce a reachability field
+$\mathfrak{R}(x)$ as a primitive object, with $\Omega(x) =
+\mathrm{Vol}(\mathfrak{R}(x))$ as a derived quantity. Then many
+objects across the corpus become instances of derivatives or
+transformations of $\mathfrak{R}$.
+
+\medskip
+\begin{tabular}{ll}
+\textbf{Derived quantity} & \textbf{Expression in terms of $\mathfrak{R}$} \\
+\hline
+Reachability volume & $\Omega(x) = \mathrm{Vol}(\mathfrak{R}(x))$ \\
+Accessibility functional & $\mathcal{A}(x) = \log\Omega(x)$ \\
+Inadmissibility functional & $\mathcal{I}(x) = -\log\Omega(x)$ \\
+Collapse condition & $\frac{d\Omega}{dt} < 0$ \\
+Repair condition & $\frac{d\Omega}{dt} > 0$ \\
+Agency objective & $\arg\max_a \mathbb{E}[\Omega(x_{t+1})]$ \\
+\end{tabular}
+
+\medskip
+This formulation collapses accessibility, admissibility, continuation
+potential, reachability volume, and repairability into one family. The
+gradient flow master equation then becomes:
+\[
+  \frac{dx}{dt} = \nabla_g \log\Omega(x) + \xi_t
+  = -\nabla_g \mathcal{I}(x) + \xi_t,
+\]
+which is the Volume~I master equation rewritten in terms of
+$\mathfrak{R}$. The system naturally moves toward states with
+larger reachability volume.
+
+\medskip
+\textbf{If confirmed}: the reachability field $\mathfrak{R}$ replaces
+several loosely related concepts with one object. The repair condition
+$d\Omega/dt > 0$ becomes the formal definition of repair at all scales
+(cognitive, semantic, institutional, physical), resolving the central
+gap in Volume~IX without introducing new machinery.
+
+\medskip
+\textbf{Status}: Highly promising. Needs verification that
+$\mathcal{I}(x) = -\log\Omega(x)$ is consistent with the existing
+RSVP entropy field $S$ (which encodes similar information but is a
+dynamical field, not a derived quantity). The relationship between
+$\mathfrak{R}$, $S$, and $\mathcal{A}$ needs to be formalized before
+Candidate~8 can be confirmed.
+\end{candbox}
+
+% ----------------------------------------------------------------
+\subsection{Candidate 9: The Energy Functor $\mathfrak{T}$}
+
+\begin{candbox}
+\textbf{Claim}: There exists a functor
+\[
+  \mathfrak{T}: \mathbf{Frameworks} \to \mathbf{EnergyLandscapes}
+\]
+such that $\mathfrak{T}(\text{RSVP}) = V(x,t)$,
+$\mathfrak{T}(\text{Agency}) = F(q,o)$,
+$\mathfrak{T}(\text{Repair}) = d(f(x),f^*)^2$,
+$\mathfrak{T}(\text{HYDRA}) = \Omega(\mathbf{z})$, etc.
+
+\medskip
+If this functor exists:
+\begin{itemize}
+\item The Tension/Free Energy cluster (Candidate~3) is not merely
+  analogous; the individual inadmissibility functionals are related
+  by morphisms in $\mathbf{EnergyLandscapes}$.
+\item Volume~XV becomes a theorem about equivalence classes of energy
+  functionals under $\mathfrak{T}$ rather than a narrative integration.
+\item The question ``are these the same framework?'' becomes a question
+  about whether $\mathfrak{T}(F_1) \cong \mathfrak{T}(F_2)$ in
+  $\mathbf{EnergyLandscapes}$.
+\end{itemize}
+
+\medskip
+\textbf{What $\mathbf{Frameworks}$ must be}: A category whose objects
+are Flyxion frameworks and whose morphisms are admissibility-preserving
+transformations between their state spaces.
+
+\medskip
+\textbf{What $\mathbf{EnergyLandscapes}$ must be}: A category whose
+objects are pairs $(\mathcal{S}, \mathcal{I})$ of a state space and
+an inadmissibility functional, and whose morphisms are smooth maps
+$f: \mathcal{S}_1 \to \mathcal{S}_2$ satisfying
+$\mathcal{I}_2(f(x)) \leq \mathcal{I}_1(x)$ (admissibility-preserving).
+
+\medskip
+\textbf{Where to spend mathematical effort}: This is the single most
+productive direction for the next several months. If the functor
+$\mathfrak{T}$ exists and is well-behaved, it provides the synthesis
+theorem for Volume~XV and simultaneously confirms Candidate~3 and
+the Master Claim.
+
+\medskip
+\textbf{Status}: Philosophical proposal. Needs formal construction.
+\end{candbox}
+% ================================================================
+\section{The Master Claim and Its Consequences}
+% ================================================================
+
+\begin{candbox}
+\textbf{Master Claim}: All Flyxion systems are constrained gradient
+flows on admissibility spaces.
+
+\medskip
+\textbf{Five-level hierarchy}: Many frameworks differ primarily at
+Levels 2--4 while sharing Levels 0--1. The trajectory object (§1.5)
+is where the hierarchy begins to branch.
+
+\medskip
+\begin{tabular}{lll}
+\textbf{Level} & \textbf{Object} & \textbf{Symbol} \\
+\hline
+0 & State spaces & $\mathcal{S}$ \\
+1 & Admissibility structures & $\mathcal{A} \subseteq \mathcal{S}$ \\
+2 & Trajectory spaces & $\Gamma(\mathcal{A})$ \\
+3 & Projection structures & $\pi: X \to M$ \\
+4 & Energy functionals & $\mathcal{I}: \mathcal{S} \to \mathbb{R}_{\geq 0}$ \\
+5 & Dynamics & $\dot{x} = -\nabla_g \mathcal{I}(x) + \xi_t$ \\
+\end{tabular}
+
+\medskip
+\textbf{Formal version}: For any Flyxion framework $\mathcal{F}$,
+there exist $(\mathcal{S}_\mathcal{F}, \mathcal{A}_\mathcal{F},
+\Gamma_\mathcal{F}, \pi_\mathcal{F}, g_\mathcal{F},
+\mathcal{I}_\mathcal{F})$ such that:
+\[
+  \frac{dx}{dt} = -\nabla_{g_\mathcal{F}} \mathcal{I}_\mathcal{F}(x)
+  + \xi_t + \text{source terms},
+  \quad x(t) \in \Gamma_\mathcal{F}(\mathcal{A}_\mathcal{F}).
+\]
+
+\medskip
+\textbf{Candidate synthesis theorem for Volume~XV}:
+
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{
+Every persistent system can be represented as a constrained transformation
+process on a reachability structure. Formally: the category of Flyxion
+frameworks embeds into $(\mathbf{AdmissibilityStructures},
+\mathbf{ConstrainedGradientFlows})$.
+}}
+\end{center}
+
+\medskip
+\textbf{What Volume~XV must prove}: That the specific instantiations
+for each framework are related by morphisms under the Energy Functor
+$\mathfrak{T}$ (Candidate~9), not merely analogous.
+\end{candbox}
+
+\subsection{Repair Theory Elevation}
+
+\begin{notebox}
+\textbf{Finding}: Repair appears as a transformation class at every
+scale of the corpus: ecphory (cognitive repair), Yarncrawler (semantic
+repair), institutional approximate repair, and xylomorphic systems
+(physical repair). The unified definition $d\Omega/dt > 0$ (Candidate~8)
+makes Repair Theory a foundational result, not an application.
+
+\medskip
+\textbf{Revised dependency structure}: Volume~IX (Repair Theory) is
+elevated from the Application tier to the Core tier:
+\[
+  \text{Vol.~I}
+  \;\to\;
+  \{\text{II, III, IV, VI, VII, VIII, IX}\}
+\]
+with Volumes V, X, XI, XII, XIII, XIV, XV as downstream consumers.
+\end{notebox}
+
+
+
+Based on the equivalence analysis, the following restructuring is
+recommended before writing begins.
+
+\subsection{Merging Candidates}
+
+\textbf{Candidate A}: Merge Volumes IV (Simulated Agency), V (HYDRA),
+and most of VI (MEM\textbar{}8) into a single volume called
+\emph{Projection-Memory Agents}, with three parts:
+Part~1 (MEM\textbar{}8 memory theory), Part~2 (CLIO inference
+pipeline), Part~3 (HYDRA modular architecture). Simulated Agency
+becomes the synthesis chapter of this merged volume. This reduces
+three volumes to one.
+
+\medskip
+\textbf{Candidate B}: Merge Volume~VIII (Semantic Infrastructure)
+and Volume~IX (Repair Theory) into \emph{Persistence and Repair
+in Semantic Systems}. The repair morphism definition serves both.
+
+\medskip
+\textbf{Candidate C}: Reduce Volume~XII (Xylomorphic Computation)
+from a full volume to two long chapters: one in the merged
+Persistence and Repair volume (physical repair), one in Volume~XI
+(physical tiling). Xylomorphic computation does not currently have
+enough formal mathematics to sustain a full volume.
+
+\medskip
+If Candidates A, B, and C are adopted, the fifteen volumes reduce to
+eleven, each with clearer thematic identity and less redundancy.
+
+\subsection{Definite Separations}
+
+The following volumes must remain separate regardless of merging:
+
+\begin{itemize}
+\item Volume~I (Constraint Geometry): foundational definitions only
+\item Volume~II (RSVP): independent PDE system and field theory
+\item Volume~VII (Spherepop): independent event calculus with distinct machinery
+\item Volume~X (Coordination Geometry): Kuramoto and synchronization
+  theory is sufficiently distinct
+\item Volume~XIII (Cosmology): domain-specific application requiring
+  separate treatment
+\item Volume~XIV (Consciousness): domain-specific application
+\item Volume~XV (Unified Theory): synthesis
+\end{itemize}
+
+\subsection{New Volume~0 Recommendation}
+
+\begin{notebox}
+Before any volume is written, produce a 40--60 page internal document
+containing:
+\begin{enumerate}
+\item Canonical symbols table (every object, one notation, used
+  everywhere)
+\item Statement of every asserted-but-unproved result (11 items from §2)
+\item Formal statement of the Master Claim with proof sketch
+\item Per-equivalence-candidate: a one-page formal argument for or
+  against each of the seven candidates in §5
+\end{enumerate}
+This document is not Volume~0 in the curriculum. It is the internal
+consistency check. When it is complete, writing can begin with
+confidence that the architecture is sound.
+\end{notebox}
+
+% ================================================================
+\section{Symbol Consistency Requirements}
+% ================================================================
+
+The following conflicts in notation must be resolved before writing
+begins. The right column gives the recommended canonical choice.
+
+\medskip
+\begin{longtable}{p{3cm}p{5cm}p{4cm}}
+\toprule
+\textbf{Conflict} & \textbf{Current usage} & \textbf{Recommended canonical} \\
+\midrule
+Entropy & $S$ (RSVP field), $H$ (Shannon), path degradation & $S$ for RSVP
+  field; $H$ for Shannon throughout; $\sigma$ for path degradation \\
+Admissibility & $\mathcal{A}$ (Vol.~I), $\Omega_t$ (Spherepop),
+  $\mathcal{P}$ (MEM\textbar{}8) & $\mathcal{A}(\pi, \mathcal{S}, C)$
+  canonical; others as derived notation \\
+Reachability & $R(x)$, $\Omega(x)$, $\mathcal{F}$ (social freedom) &
+  $R(x)$ for set; $\Omega(x)$ for volume; $\mathcal{F}_\mathrm{soc}$ for
+  social freedom \\
+Repair & $R_\epsilon$, $\mathcal{R}$, $\mathcal{R}(q)$ in agency &
+  $R_\epsilon$ for repair morphism; $\mathcal{R}(q)$ for simulated
+  reachability (different object) \\
+Projection & $\pi$, $\mathcal{R}$ (rendering), $F$ (realization) &
+  $\pi$ for compression direction; $\sigma$ for section direction;
+  $F$ reserved for free energy \\
+Free energy & $F(q,o)$, $\mathcal{I}$, $V(x,t)$, $\mathfrak{F}$ &
+  $\mathcal{I}$ for inadmissibility in all non-thermodynamic contexts;
+  $F$ for variational free energy in Bayesian contexts only \\
+\bottomrule
+\end{longtable}
+
+% ================================================================
+\section{State Functionals vs.\ Path Actions}
+% ================================================================
+
+\begin{notebox}
+\textbf{Key finding}: Once trajectories are primitive objects (§1.5),
+many frameworks naturally migrate from state-space optimization to
+path-space optimization. The distinction between a state functional
+$\mathcal{I}(x)$ and a path action $\mathcal{J}[\gamma]$ is not
+cosmetic. It changes what the theory is fundamentally about.
+\end{notebox}
+
+\subsection{The Distinction}
+
+A \emph{state functional} $\mathcal{I}: \mathcal{S} \to \mathbb{R}$
+assigns a cost to a point. The gradient flow $\dot{x} =
+-\nabla_g \mathcal{I}(x)$ describes how the system moves to reduce
+cost instantaneously.
+
+A \emph{path action} $\mathcal{J}: \Gamma(\mathcal{A}) \to \mathbb{R}$
+assigns a cost to an entire trajectory:
+\[
+  \mathcal{J}[\gamma] = \int_0^T L(\gamma(t), \dot\gamma(t), t)\, dt.
+\]
+The extremal trajectory $\gamma^* = \operatorname{arg\,ext}_\gamma
+\mathcal{J}[\gamma]$ is not a point-by-point descent but a globally
+optimal path. The Euler-Lagrange equations for $\mathcal{J}$ govern
+$\gamma^*$ and are generally different from the gradient flow of
+$\mathcal{I}$ evaluated pointwise.
+
+The two formulations coincide when $L(\gamma, \dot\gamma, t) =
+\frac{1}{2}g(\dot\gamma, \dot\gamma) + \mathcal{I}(\gamma)$ and
+the boundary conditions are fixed — this is Hamilton's principle.
+In that case, gradient descent on $\mathcal{I}$ recovers the
+Euler-Lagrange equations for $\mathcal{J}$. But in the general case,
+they differ, and for the Flyxion corpus the general case is likely more
+appropriate.
+
+\subsection{Which Frameworks Naturally Use Which}
+
+\medskip
+\begin{longtable}{p{3.5cm}lp{6.5cm}}
+\toprule
+\textbf{Framework} & \textbf{Natural form} & \textbf{Reason} \\
+\midrule
+RSVP & State functional $\mathcal{I}(x,t)$ & PDE system; instantaneous
+  field evolution; no memory of path \\
+CLIO & State functional & Optimizes over current observation $m$;
+  no trajectory structure required \\
+Spherepop & Path action & Events are irreversible; the history is the
+  primary object; Collapse reconstructs from history \\
+MEM\textbar{}8 & Path action & Memory is a trajectory residue;
+  identity is continuity of path, not current state \\
+Agency & Path action & Optimizes over anticipated future trajectories,
+  not current state; $\arg\max_a \mathbb{E}[\Omega(x_{t+1})]$ is a
+  one-step path integral \\
+Repair & Path action & Repair is a trajectory correction; the
+  path must remain in $\mathcal{A}$ while reducing divergence \\
+Ecphory & Path action & Retrieval wave propagates along trajectories;
+  tip-of-the-tongue is a path that fails to reach threshold \\
+Yarncrawler & Path action & Route completion is path optimization;
+  divergence control is a path-level property \\
+TARTAN & Path action & Trajectory-preserving decomposition; the
+  trajectory is what is preserved, not the state \\
+Coordination & Mixed & Kuramoto phases are states, but synchronization
+  is a path property (convergence over time) \\
+\bottomrule
+\end{longtable}
+
+\medskip
+\begin{notebox}
+\textbf{Finding}: RSVP and CLIO are naturally state-functional theories.
+Spherepop, MEM\textbar{}8, Agency, Repair, Ecphory, Yarncrawler, and
+TARTAN are naturally path-action theories. This is a genuine theoretical
+distinction, not a matter of preference or notation.
+
+The current corpus expresses all frameworks in state-functional language
+because the gradient flow master equation $\dot{x} = -\nabla\mathcal{I}$
+is state-based. This is an artifact of how the frameworks were developed,
+not a feature of the frameworks themselves.
+
+Translating the path-action frameworks into their natural language is
+likely to produce cleaner results and expose currently hidden structure.
+\end{notebox}
+
+\subsection{The Revised Master Claim}
+
+If the path-action frameworks are translated into their natural language,
+the ultimate master claim shifts from a gradient flow statement to a
+variational statement:
+
+\medskip
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{\centering
+\textbf{Original master claim}:
+$\dot{x} = -\nabla_g \mathcal{I}(x) + \xi_t$
+
+\medskip
+\textbf{Revised master claim}:
+$\gamma^* = \operatorname{arg\,ext}_{\gamma \in \Gamma(\mathcal{A})}
+\mathcal{J}[\gamma]$
+
+\medskip
+The gradient flow is a special case of the variational problem when
+$L = \frac{1}{2}g(\dot\gamma,\dot\gamma) + \mathcal{I}(\gamma)$ and
+boundary conditions are fixed.
+}}
+\end{center}
+
+\medskip
+The revised claim is strictly more general. It accommodates both
+state-functional frameworks (where the Lagrangian is kinetic plus
+potential) and path-action frameworks (where the Lagrangian encodes
+path-level properties like irreversibility, memory, and coherence).
+
+The Volume~I master equation $\dot{x} = -\nabla_g \mathcal{I}$ remains
+correct as a special case and as the primary tool for Volumes II and III.
+The full variational form $\gamma^* = \operatorname{arg\,ext}\mathcal{J}$
+is needed for Volumes VI (MEM\textbar{}8), VII (Spherepop), IX (Repair),
+and XI (TARTAN).
+
+\subsection{New Primitive Required: Path Lagrangian}
+
+\begin{longtable}{lp{10cm}}
+\textbf{Symbol} & $L: T\mathcal{A} \times [0,T] \to \mathbb{R}$;
+  $\mathcal{J}[\gamma] = \int_0^T L(\gamma, \dot\gamma, t)\,dt$ \\
+\textbf{Type} & Function on the tangent bundle of admissibility space,
+  possibly time-dependent \\
+\textbf{Role} & Encodes the cost of being at a point $\gamma(t)$ with
+  velocity $\dot\gamma(t)$ at time $t$; more general than a state potential \\
+\textbf{Special cases} &
+  $L = \frac{1}{2}g_{ij}\dot\gamma^i\dot\gamma^j + \mathcal{I}(\gamma)$:
+  recovers gradient flow (Vol.~I, II) \newline
+  $L = \mathcal{I}(\gamma) + \lambda\|\dot\gamma\|_\mathcal{H}^2$:
+  viscosity-regularized path (MEM\textbar{}8, ecphory) \newline
+  $L = d(f(\gamma), f^*)^2 - \eta\Omega(\gamma)$:
+  repair Lagrangian (Vol.~IX) \newline
+  $L = -\log p(e_t \mid H_t)$:
+  Spherepop event log-likelihood (Vol.~VII) \\
+\textbf{Add to Section 1} & This primitive belongs in the geometric
+  objects subsection of Section~1, immediately after the admissible
+  trajectory definition. \\
+\end{longtable}
+
+% ================================================================
+\section{The Three-Layer Architecture}
+% ================================================================
+
+\begin{notebox}
+\textbf{Most important structural finding of the atlas}: The corpus
+has a three-layer architecture that is more compact than the
+fifteen-volume decomposition. Once this architecture is visible,
+the individual frameworks are recognizable as specializations of
+three foundational theories.
+\end{notebox}
+
+\subsection{The Three Layers}
+
+\medskip
+\begin{longtable}{p{3cm}p{4cm}p{6cm}}
+\toprule
+\textbf{Layer} & \textbf{What it provides} & \textbf{Core object} \\
+\midrule
+Layer 1: Constraint Geometry &
+  Admissibility spaces, metrics, and the inadmissibility functional &
+  $(\mathcal{S}, \mathcal{A}, g, \mathcal{I})$ \\
+Layer 2: Projection Theory &
+  Observation, compression, and reconstruction &
+  $\pi: X \to M$, fiber $\pi^{-1}(m)$, reconstruction operator \\
+Layer 3: Trajectory Theory &
+  Memory, repair, planning, and persistence &
+  $\Gamma(\mathcal{A})$, $\mathcal{J}[\gamma]$, path extremals \\
+\bottomrule
+\end{longtable}
+
+\subsection{How the Frameworks Distribute Across Layers}
+
+\medskip
+\begin{longtable}{p{3.5cm}lp{6.5cm}}
+\toprule
+\textbf{Framework} & \textbf{Primary layer} & \textbf{Note} \\
+\midrule
+Constraint Geometry (Vol.~I) & Layer 1 & Defines all three layers \\
+RSVP (Vol.~II) & Layer 1 & Field equations on admissibility space \\
+CLIO (Vol.~III) & Layer 2 & Inference as fiber navigation \\
+MEM\textbar{}8 & Layer 3 & Memory as trajectory residue \\
+Spherepop & Layer 3 & Event calculus as path algebra \\
+Simulated Agency & Layer 2 + 3 & Projection plus anticipated trajectory \\
+HYDRA & Layer 3 & Coordination of module trajectories \\
+Repair Theory & Layer 3 & Trajectory correction toward function \\
+Semantic Infrastructure & Layer 2 + 3 & Sheaf structure over projection
+  with trajectory maintenance \\
+TARTAN & Layer 3 & Trajectory-preserving decomposition \\
+Coordination Geometry & Layer 1 + 3 & Coupling between trajectories
+  on shared admissibility space \\
+Xylomorphic Computation & Layer 3 & Physical trajectory infrastructure \\
+Cosmology & Layer 1 & RSVP at cosmological scale \\
+Consciousness & Layer 2 + 3 & Qualia as projection-stable trajectory
+  invariants \\
+Unified Theory & All & Synthesis across all three layers \\
+\bottomrule
+\end{longtable}
+
+\subsection{Consequences for the Curriculum}
+
+This three-layer picture suggests a more compact volume structure
+organized around layers rather than individual frameworks:
+
+\medskip
+\begin{longtable}{p{1cm}p{4cm}p{7.5cm}}
+\toprule
+\textbf{Vol} & \textbf{Title} & \textbf{Content} \\
+\midrule
+I & Constraint Geometry &
+  Layer 1: admissibility spaces, metrics, inadmissibility functional,
+  gradient flows. All three layers defined here. \\
+II & RSVP Field Theory &
+  Layer 1 instantiated: coupled PDE system, lamphrodyne dynamics,
+  cosmological and computational interpretations. \\
+III & Projection and Inference &
+  Layer 2: CLIO pipeline, fiber preimages, reconstruction theory,
+  projection failure, representation entropy. \\
+IV & Trajectory Theory &
+  Layer 3 foundations: path actions, path Lagrangians, Euler-Lagrange
+  on $\Gamma(\mathcal{A})$, trajectory spaces and their topology. \\
+V & Memory and Reconstruction &
+  Layer 3 applied: MEM\textbar{}8, wave memory, ecphory, viscosity,
+  event histories as discrete trajectories. \\
+VI & Agency and Planning &
+  Layer 3 applied: simulated agency, anticipated reachability, free
+  energy minimization, trajectory selection. \\
+VII & Modular Architectures &
+  Layer 3 applied: HYDRA coordination, stability analysis, distributed
+  trajectory management. \\
+VIII & Repair Theory &
+  Layer 3 applied: repair morphisms, approximate repair, repair condition
+  $d\Omega/dt > 0$, scales from cognitive to physical. \\
+IX & Semantic Systems &
+  Layer 2 + 3: Spherepop, Yarncrawler, Semantic Infrastructure, sheaf
+  structure, trajectory completion. \\
+X & Decomposition and Tiling &
+  Layer 3: TARTAN, trajectory-preserving decompositions, simulation
+  fidelity, annotated noise. \\
+XI & Coordination Geometry &
+  Layer 1 + 3: Kuramoto derivation, synchronization as trajectory
+  coupling, distributed intelligence. \\
+XII & Physical Systems &
+  Layer 3 applied: Xylomorphic computation, repair-oriented
+  infrastructure, ecological trajectories. \\
+XIII & Cosmological Applications &
+  Layer 1: RSVP cosmology, lamphrodyne smoothing, entropic redshift,
+  comparison with standard models. \\
+XIV & Consciousness and Qualia &
+  Layer 2 + 3: field-theoretic consciousness, qualia as stable
+  projection-trajectory invariants, neural mappings. \\
+XV & Unified Theory &
+  All layers: Energy Functor $\mathfrak{T}$, equivalence classes,
+  synthesis theorem, open problems. \\
+\bottomrule
+\end{longtable}
+
+\medskip
+\begin{notebox}
+\textbf{Comparison with previous structure}: This reorganization
+moves from a framework-centric structure (each volume is a named
+framework) to a layer-centric structure (each volume covers one
+layer or one application of a layer). The number of volumes remains
+fifteen, but the thematic identity of each volume is now determined
+by its position in the three-layer hierarchy rather than by its
+association with a named framework.
+
+The individual framework names (CLIO, MEM\textbar{}8, HYDRA, etc.)
+become chapter titles within volumes, not volume titles. This is
+exactly the organizational shift that distinguishes a library of
+theories from a coherent academic field.
+\end{notebox}
+
+\subsection{What Layer~4 Would Be}
+
+The three-layer architecture raises an implicit question: is there a
+Layer~4? If Layer~1 provides spaces, Layer~2 provides projections, and
+Layer~3 provides trajectories, the natural next layer would provide
+transformations between frameworks: the morphisms and functors that
+relate one instantiation of the architecture to another. This is
+precisely what the Energy Functor $\mathfrak{T}$ (Candidate~9) provides.
+Layer~4, if it exists, is the content of Volume~XV.
+
+\end{document}

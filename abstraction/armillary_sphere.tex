@@ -1,0 +1,924 @@
+% !TEX program = lualatex
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+
+\geometry{
+  top=1.25in,
+  bottom=1.25in,
+  left=1.35in,
+  right=1.35in
+}
+
+\onehalfspacing
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+\newtheoremstyle{named}
+  {12pt}{12pt}{\itshape}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{named}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+\newmdenv[
+  linewidth=0.8pt,
+  innertopmargin=10pt,
+  innerbottommargin=10pt,
+  innerleftmargin=14pt,
+  innerrightmargin=14pt,
+  skipabove=14pt,
+  skipbelow=14pt
+]{keybox}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+\title{%
+  \textbf{The Armillary Sphere and the Thought Experiment}\\[0.4em]
+  \large On Proposals That Are Neither Blueprints Nor Metaphors
+}
+\author{Flyxion}
+\date{}
+
+% ---------------------------------------------------------------
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+Speculative proposals — imagined cities, hypothetical organisms,
+impossible machines, impossible institutions — are routinely
+misclassified. They are read either as blueprints (literal plans for
+construction) or as metaphors (ornamental illustrations of something
+already known). This essay argues that a significant class of
+speculative proposals belongs to neither category. Following the logic
+of the thought experiment in physics and the armillary sphere in
+navigation, these proposals function as coordinate transformations:
+instruments for making visible the assumptions that ordinarily remain
+hidden inside our frameworks for understanding civilization, design,
+ecology, and infrastructure. The essay develops a formal apparatus for
+this claim, representing civilizations as points in a five-dimensional
+parameter manifold $\mathcal{C}$ and armillary proposals as directional
+vectors in the tangent space $T_C\mathcal{C}$. A visibility functional
+$V(T)$ measures the epistemic value of a proposal by the significance
+of the assumptions it makes visible rather than the feasibility of the
+configuration it imagines. The Invariant Discovery Principle identifies
+the true objects of study: not optimal civilizational configurations but
+structural invariants that persist under broad families of
+transformations. The Armillary Principle closes the formal account:
+the value of a proposal is determined by $\Delta I$ and $\Delta\Omega$
+— new invariants revealed and new reachable possibilities exposed —
+not by the magnitude of its departure from present reality. The essay
+concludes by identifying five civilizational axes — maintenance,
+ecology, persistence, accessibility, and coordination — as the
+invariant structure that a large body of otherwise disparate speculative
+work collectively orbits.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ---------------------------------------------------------------
+\section{The Satirist's Error}
+
+There is a reliable genre of online commentary that applies to
+speculative proposals. The format is consistent. A list of ambitious,
+unusual, or technically extreme ideas is assembled and presented in the
+flattest possible prose — the surface features rendered faithfully, the
+structural purpose systematically ignored. The result reads as satire
+even when it is not intended to be. The ideas sound absurd because
+abstraction has been collapsed into literalism: the thought experiment
+has been read as a building permit.
+
+The genre is not without value. It exposes a real risk in speculative
+thinking — the risk of mistaking a conceptual probe for an engineering
+proposal, of treating a coordinate transformation as a destination. But
+it also systematically misreads what it is satirizing, because it
+applies a single interpretive lens — \emph{is this a plan?} — to
+objects that require a different question entirely.
+
+Consider what twentieth-century civilization would look like if
+described in the same register:
+
+\begin{keybox}
+The plan is to cover the planet with black rivers of asphalt, fill them
+with exploding metal boxes powered by liquefied remains of ancient
+organisms, connect everything with copper nerves suspended from wooden
+poles, then teach billions of people to stare into glowing glass
+rectangles for the majority of their waking hours.
+\end{keybox}
+
+This description is accurate. It sounds ridiculous. The ridiculousness
+is not a property of the civilization but of the descriptive register
+applied to it. Existing systems are not usually described at the level
+of their physical substrates without their functions and purposes
+supplied. Speculative systems almost always are. The asymmetry is the
+source of most satirical energy directed at ambitious proposals.
+
+The deeper error is epistemic. Treating all proposals as candidates
+for literal implementation misses the category of proposals whose
+primary function is not to be built but to be thought. The armillary
+sphere is the instrument for understanding this category.
+
+% ---------------------------------------------------------------
+\section{The Armillary Sphere}
+
+An armillary sphere is a model of the heavens consisting of a nest of
+rings representing celestial circles — the equator, the ecliptic, the
+meridian, the tropics — arranged around a small central Earth. It was
+used for teaching, for computation, and for navigation across more than
+fifteen centuries of astronomical practice. It was carried on ships
+and installed in observatories and given as gifts to rulers.
+
+The armillary sphere is not a model of reality. The celestial circles
+it represents do not exist as physical objects. The equator is not a
+ring hanging in space; the ecliptic is not a track the Sun runs along.
+These are coordinate systems — constructs that organize observation and
+make certain calculations possible. The armillary sphere makes those
+coordinate systems tangible. It is a model of a model, an instrument
+for operating with abstractions that would otherwise remain merely
+abstract.
+
+What the armillary sphere provides is not a picture of the world but a
+framework within which the world can be navigated. Its rings do not
+represent features of reality; they represent the relationships between
+features of reality — the angles, the cycles, the periodicities that
+allow a navigator to situate a ship in the ocean or an astronomer to
+predict a solstice. The instrument is useful not because the rings are
+real but because the relationships they encode are real.
+
+A civilization-scale thought experiment functions the same way. The
+proposal for a city built from living forest structures is not primarily
+a claim that such a city should or could be built. It is a ring on an
+armillary sphere. It encodes a relationship: the relationship between
+construction and ecology, between the timescales of human habitation and
+the timescales of biological growth, between infrastructure as a fixed
+artifact and infrastructure as an ongoing process. Rotating this ring
+relative to others makes certain things visible that were not visible
+before.
+
+% ---------------------------------------------------------------
+\section{Proposals as Coordinate Transformations}
+
+In mathematics, a change of coordinates does not alter the underlying
+object. It alters which features of the object are easy to see and which
+are hidden. A circle expressed in Cartesian coordinates is the set of
+points satisfying $x^2 + y^2 = r^2$; in polar coordinates, it is the
+trivially simple $r = \text{const}$. The coordinate transformation does
+not change the circle. It changes what is visible about the circle.
+
+Speculative proposals function similarly. They change coordinates.
+
+\begin{definition}[Coordinate Transformation Proposal]
+A coordinate transformation proposal is a speculative design,
+institutional arrangement, or technological system whose primary
+epistemic function is to vary parameters that are ordinarily held fixed
+in conventional analysis, thereby making visible the assumptions
+embedded in conventional arrangements.
+\end{definition}
+
+When someone proposes habitation modules that float on the ocean, they
+are varying a parameter — the fixity of land as the substrate of
+civilization — that is so rarely varied that it has become invisible as
+a parameter. It appears to be a natural feature of civilization rather
+than a contingent choice. The proposal reveals that it is a choice by
+imagining what follows if it is made differently.
+
+When someone proposes that cities be organized around biological nutrient
+cycles rather than economic sectors, they are varying the parameter that
+treats ecology as an externality of civilization rather than its
+substrate. The proposal does not primarily advance a plan; it asks a
+question: what becomes visible if ecology is the primitive unit rather
+than property?
+
+When someone proposes that maintenance be the primary function of
+infrastructure rather than construction, they are varying the parameter
+that treats built environments as finished artifacts. Most infrastructure
+planning proceeds as if the relevant question is \emph{what to build};
+the proposal rotates this to \emph{what to sustain}, exposing the
+degree to which maintenance is systematically undervalued by the
+incentive structures of contemporary economies.
+
+The individual proposals — yogurt-culturing robots exploring self-repair
+mechanisms, SCOBY-based structural materials exploring low-energy
+manufacturing, forest-integrated cities exploring ecological embedding,
+modular floating habitats exploring flexible occupation, kelp cultivation
+systems exploring carbon and nutrient cycling, distributed maintenance
+organisms exploring repair infrastructure — are each rings on the
+armillary sphere.
+
+Each ring is a coordinate. Each explores a different axis along which
+the assumptions of contemporary civilization can be varied. Each makes
+visible a different set of contingencies that habituation has rendered
+invisible.
+
+Taken together they probe a single underlying question, which is neither
+the question of any individual proposal nor their sum but the invariant
+that all of them orbit:
+
+\begin{keybox}
+What does a civilization look like when maintenance, repair, persistence,
+accessibility, ecology, and coordination are treated as first-class
+design variables rather than externalities?
+\end{keybox}
+
+The individual proposals are not answers to this question. They are
+instruments for approaching it.
+
+\subsection{Civilizational Parameter Space}
+
+To make the coordinate transformation language mathematically precise,
+represent a civilization as a point in a five-dimensional configuration
+space:
+\[
+  C = (m,\, e,\, p,\, a,\, c),
+\]
+where the coordinates are normalized in $[0,1]$ and denote:
+\[
+  m = \text{maintenance intensity}, \quad
+  e = \text{ecological integration},
+\]
+\[
+  p = \text{persistence orientation}, \quad
+  a = \text{accessibility orientation}, \quad
+  c = \text{coordination explicitness}.
+\]
+The set of possible civilizational configurations forms a manifold:
+\[
+  \mathcal{C} = \bigl\{(m,e,p,a,c) \in [0,1]^5\bigr\}.
+\]
+A coordinate transformation proposal acts as an operator
+$T: \mathcal{C} \to \mathcal{C}$ which perturbs one or more
+coordinates while holding others approximately fixed. Contemporary
+industrial civilization occupies a region of $\mathcal{C}$ with low
+$m$, low $e$, low $p$, low $a$, and low $c$: construction-dominant,
+ecologically extractive, production-oriented, location-bound, and
+coordination-emergent.
+
+\begin{definition}[Armillary Proposal]
+An armillary proposal specifies a direction vector
+\[
+  v \in T_C\mathcal{C}
+\]
+in the tangent space of civilizational configurations at the current
+point $C$. The proposal's primary purpose is to explore the structural
+consequences of moving in the direction $v$ — to reveal what features
+of the current configuration are contingent rather than necessary.
+An armillary proposal is not an optimal destination $C^\star$ but a
+directional derivative: a probe into what the configuration manifold
+looks like in a direction that conventional analysis does not explore.
+\end{definition}
+
+This formalizes the intuition that the yogurt robot is not about
+yogurt, the kelp city is not about kelp, and the floating habitat is
+not about floating. Each is a vector $v$ pointing away from the current
+civilizational configuration along one of the five axes. The object
+imagined is the arrow, not the destination.
+
+
+
+Thought experiments in physics are the closest analog to what
+speculative proposals at the civilizational scale are attempting.
+Understanding how thought experiments work clarifies what speculative
+proposals are doing and why the blueprint/metaphor dichotomy fails to
+capture them.
+
+No frictionless plane exists. No perfectly rigid body exists. No
+adiabatic container is perfectly insulated. No Maxwell's demon hides
+in any thermodynamic system. Schrödinger's cat is not an actual
+laboratory protocol. The twin paradox does not describe two specific
+people who have traveled in rockets. The thought experiments of physics
+are populated by idealized objects that cannot be constructed and in
+some cases cannot even be coherently imagined in full physical detail.
+
+Yet these imaginary objects have been among the most productive epistemic
+instruments in the history of science. Maxwell's demon forced a
+reconceptualization of the relationship between information and
+thermodynamics that eventually produced the modern understanding of
+entropy, information theory, and computation. The twin paradox forced a
+precise articulation of what simultaneity means in special relativity.
+Schrödinger's cat forced a confrontation with the measurement problem
+that is still generating productive work a century later. The
+frictionless plane does not need to exist for Newton's laws to be stated
+precisely; the idealization strips away complicating factors and reveals
+the underlying structure.
+
+What thought experiments share is the operation of selective idealization:
+certain parameters are set to extreme or impossible values — friction to
+zero, walls to perfect insulators, observers to perfect demons — in order
+to see what the theory implies without the confounding effects of
+realistic complexity. The result is not a description of a possible
+experiment but a description of a possible world in which certain
+features of the actual world are made maximally clear.
+
+Civilizational thought experiments operate similarly but at a different
+scale. Instead of setting friction to zero, they set ecology to primary.
+Instead of making walls perfectly insulating, they make maintenance the
+central function. Instead of introducing a perfect demon, they
+introduce organisms whose purpose is repair rather than production.
+
+\begin{proposition}[Thought Experiment Invariance]
+The epistemic value of a thought experiment is not determined by the
+feasibility of the imagined scenario but by whether the scenario
+isolates a structural relationship that holds in the actual world and
+is difficult to see without the idealization.
+\end{proposition}
+
+This can be made precise using a visibility functional. Let
+$\mathcal{A}(C)$ denote the set of assumptions embedded in a
+civilizational configuration $C$ — the parameters that are held fixed
+and therefore invisible as parameters. For a transformation $T$, define:
+
+\begin{definition}[Visibility Functional]
+\[
+  V(T) = \mu\!\bigl(\mathcal{A}(C) \setminus \mathcal{A}(T(C))\bigr),
+\]
+where $\mu$ measures the conceptual significance of the assumptions
+made visible. An assumption becomes visible under $T$ when it was
+treated as a constant in $C$ but is forced to vary in $T(C)$.
+\end{definition}
+
+\begin{proposition}[Visibility Principle]
+The epistemic value of a coordinate transformation proposal is
+proportional to $V(T)$ — the measure of previously invisible
+assumptions it makes visible — rather than to the feasibility of
+$T(C)$.
+\end{proposition}
+
+A proposal involving forty billion floating habitat modules is not
+valuable because forty billion floating modules are a realistic
+near-term objective. It is valuable if it isolates a structural
+relationship — between occupation density, ecological throughput, energy
+source, and maintenance infrastructure — that is difficult to see as
+long as land-based urban settlement is treated as a fixed parameter.
+
+The question to ask of any speculative proposal is not ``is this
+feasible?'' but ``what does this make visible?''
+
+\subsection{Model Organisms and Toy Problems}
+
+Every mature field of inquiry maintains a collection of objects that
+are valuable precisely because they are not the thing being studied.
+These are intentionally simplified, idealized, or distorted objects
+that expose hidden structure by removing the complexity that ordinarily
+conceals it.
+
+Biology uses \textit{Drosophila melanogaster} — the fruit fly — not
+because geneticists want to understand fruit flies but because the
+fly's short generation time, large chromosomes, and small genome make
+visible relationships between genotype and phenotype that are present
+in all organisms but difficult to observe in more complex ones. The
+fly is a model organism: an intentionally chosen proxy that reveals
+structural relationships at the cost of direct representational
+accuracy.
+
+Economists use the representative agent: a single maximizing individual
+whose choices are taken to characterize the behavior of an entire
+economy. The representative agent does not exist and no economist
+believes it does. It is a model organism for economic analysis — a
+simplification that makes certain equilibrium properties visible while
+deliberately setting aside distributional complexity.
+
+Computer scientists use toy problems: the traveling salesman, the
+halting problem, the eight queens puzzle. These are not the problems
+practitioners actually solve. They are chosen because their simplified
+structure exposes algorithmic properties — complexity classes,
+decidability boundaries, search space geometry — that are present in
+real problems but obscured by irrelevant detail.
+
+\begin{keybox}
+A kelp city is to civilization what a frictionless plane is to
+mechanics: an intentionally distorted object used to expose hidden
+structure. The distortion is the point, not the defect.
+\end{keybox}
+
+Armillary proposals function as model organisms for civilizational
+analysis. The yogurt robot is not proposed because self-repairing
+yogurt cultures are the optimal maintenance technology. It is a model
+organism for the relationship between biological processes and
+mechanical infrastructure — a simplified object in which that
+relationship is made visible without the confounding complexity of
+actual maintenance systems. The floating city is a model organism for
+the relationship between habitation, ecology, and land tenure — a
+simplified object in which the contingency of land-based settlement
+becomes observable.
+
+The appropriate response to a model organism is not to evaluate whether
+it is a good representation of the actual system. It is to ask what
+structural properties it reveals. The fruit fly is a poor model of
+mammalian development and an excellent model of genetic inheritance.
+The kelp city is a poor model of near-term urban planning and an
+excellent model of the relationship between occupation, nutrient cycling,
+and carbon metabolism.
+
+
+
+There is a genuine and serious criticism of ambitious speculative
+proposals that survives the reframing offered above. It is the strongest
+objection in the satirical genre, and it deserves engagement rather than
+dismissal.
+
+The objection is this: utopian technical proposals routinely assume that
+replacing infrastructure automatically solves social problems. This
+assumption is historically false.
+
+A city made of living forest can still be oppressive. A city powered by
+fusion can still be unequal. A city managed by artificial intelligence
+can still be alienating. A city floating on the ocean can still become a
+platform for extraction and enclosure. The technical substrate does not
+automatically generate the social arrangements. History provides no
+shortage of evidence. Garden cities were designed to solve industrial
+alienation and became suburban dormitories. Brutalist housing was
+designed to provide dignified space for working-class lives and became a
+synonym for social failure. The technological utopianism of the early
+internet promised a radical democratization of information and produced
+surveillance capitalism and epistemic fragmentation.
+
+The technical system and the social system are related but not identical.
+Changing one does not automatically change the other.
+
+This criticism lands, and it would land against any proposal that
+implicitly treats technical redesign as social reform. But the armillary
+sphere framing suggests a response. The proposals under consideration
+are not primarily claiming that ecological infrastructure generates just
+social arrangements. They are claiming something more specific and more
+modest: that certain technical assumptions constrain the social
+possibilities that remain reachable.
+
+A civilization organized around extractive land use and disposable
+infrastructure makes certain social arrangements very easy and others
+very difficult. The goal of coordinate transformation proposals is not
+to build a new utopia but to expand the set of reachable configurations
+by varying the assumptions that currently constrain it. This is the
+language of admissibility and reachability: the technical system does
+not determine the social system, but it shapes which social systems
+remain accessible.
+
+\begin{keybox}
+The question is not: does ecological infrastructure produce justice?
+
+The question is: does disposable infrastructure foreclose it?
+\end{keybox}
+
+If certain technical arrangements make it structurally difficult for
+communities to persist, to repair themselves, to maintain their
+accumulated knowledge and social infrastructure across generations, then
+the technical question is also a social question — not because the
+technical determines the social but because the technical constrains the
+reachable social space.
+
+This is exactly the reachability analysis developed in institutional
+contexts: institutions do not merely distribute resources within a fixed
+space; they shape the space itself. The same logic applies to technical
+infrastructure. The proposal for maintenance-first civilization is not
+a plan for utopia; it is a proposal for expanding the admissible set of
+social futures by treating continuity, repair, and ecological integration
+as primary rather than derivative.
+
+% ---------------------------------------------------------------
+\section{The Intermediate Space}
+
+The satirist cannot quite decide whether speculative proposals of this
+kind are blueprints, jokes, manifestos, or philosophical thought
+experiments. The indecision is correct. The proposals occupy a genuine
+intermediate space that does not reduce to any of these categories.
+
+They are not blueprints: the level of technical specification is
+insufficient, and the purpose is not primarily construction. They are
+not jokes: the underlying structural questions are serious and the
+analysis motivating them is careful. They are not manifestos: they do
+not primarily prescribe political action or assert moral imperatives.
+They are not exactly thought experiments in the physics sense: they
+involve multiple systems interacting in realistic complexity rather than
+idealized single-parameter variation.
+
+What they are is closer to what designers call provocations and what
+philosophers call hypothetical imperatives: \emph{if} certain parameters
+are varied, \emph{then} certain features of our current arrangements
+become visible as contingent. The if is not a plan. The then is not a
+promise. Together they constitute an invitation to think differently
+about what is fixed and what is variable.
+
+The armillary sphere captures this intermediate status precisely. An
+armillary sphere is not a model of the Earth. It is not a toy. It is
+not a work of art (though it can be beautiful). It is an instrument
+for navigating a coordinate system that cannot be directly perceived.
+The rings are real objects that represent abstract relationships. The
+instrument is useful not when its rings are mistaken for real celestial
+circles but when they enable a user to reason about real celestial
+circles without being able to see them directly.
+
+Civilizational proposals function the same way. The yogurt robot is a
+real object in the imagination that represents an abstract relationship:
+the relationship between biological processes and mechanical
+maintenance, between living systems and manufactured ones, between
+repair and production. The kelp farm is a real imagined object that
+represents the relationship between food systems, carbon cycles, coastal
+ecology, and distributed infrastructure. Each imagined object is a ring
+on the sphere. The sphere is not the civilization; it is an instrument
+for thinking about civilization.
+
+% ---------------------------------------------------------------
+\section{Ideas as Candidates for Exploration}
+
+Most people treat ideas as candidates for belief. An idea is encountered,
+evaluated against existing commitments, and either accepted or rejected.
+The question asked of an idea in this mode is: is this true?
+
+A different relationship to ideas treats them as candidates for
+exploration. An idea is encountered, inhabited temporarily, followed
+out into its implications, and then compared to other inhabited
+frameworks. The question asked of an idea in this mode is not
+\emph{is this true?} but \emph{what does this make visible?}
+
+These are genuinely different activities. The first is appropriate for
+claims about matters of fact — whether a particular bridge will hold,
+whether a particular medication is effective, whether a particular
+historical event occurred. The second is appropriate for frameworks —
+coordinate systems, interpretive schemes, design principles, theoretical
+vocabularies.
+
+The confusion between these two activities generates most of the
+misreadings of speculative work. When a proposal for floating cities is
+evaluated as if it were a claim about matters of fact, the obvious
+response is to ask whether floating cities are feasible, whether they
+would be stable, whether people would want to live in them, whether the
+economics work. These are reasonable questions about a blueprint. They
+are the wrong questions to ask of a coordinate transformation.
+
+The appropriate questions for a coordinate transformation proposal are:
+
+What assumptions are being varied? What becomes visible when those
+assumptions are released? What features of the current arrangement
+appear contingent that appeared necessary before? What constraints
+on social possibility are revealed as technical rather than natural?
+What structural relationships does the imagined scenario isolate?
+
+These questions cannot be answered by asking whether the proposal is
+feasible. Frictionless planes are not feasible. They are among the most
+productive thought experiments in the history of physics.
+
+% ---------------------------------------------------------------
+\section{The Invariant Structure}
+
+If the individual proposals are rings on the armillary sphere, what is
+the sphere itself? What is the invariant structure that all of them are
+instruments for navigating?
+
+The proposals listed above — self-repairing organisms, biological
+construction materials, ecologically integrated settlements, modular
+occupation units, nutrient-cycling aquaculture, distributed maintenance
+infrastructure, wave-based memory architectures, admissibility-based
+field theories — appear unrelated when examined at the level of their
+surface content. Yogurt and field theory share no obvious domain.
+Kelp and memory architectures share no obvious mechanism.
+
+But at the level of the questions they probe, a common structure
+emerges. Each proposal varies a parameter that contemporary industrial
+civilization treats as fixed, and each varied parameter belongs to a
+cluster:
+
+\medskip
+
+\noindent\textbf{Maintenance vs.\ construction.} Contemporary
+infrastructure is organized around construction as the primary act and
+maintenance as a secondary cost. The proposals collectively vary this
+ratio, asking what follows if maintenance is primary.
+
+\medskip
+
+\noindent\textbf{Ecology as substrate vs.\ ecology as externality.}
+Contemporary economic organization treats ecological processes as
+externalities — inputs and outputs that are real but not directly
+represented in the accounting. The proposals vary this by imagining
+systems in which ecological processes are the primary organizing
+principle.
+
+\medskip
+
+\noindent\textbf{Persistence vs.\ production.} Contemporary value
+systems reward production — the creation of new objects, new
+information, new services — and systematically undervalue persistence:
+the maintenance of existing knowledge, social bonds, biological systems,
+and physical infrastructure. The proposals vary this by imagining systems
+organized around persistence as the primary value.
+
+\medskip
+
+\noindent\textbf{Accessibility vs.\ location.} Contemporary geography
+treats location as a primary determinant of social possibility. The
+proposals vary this by imagining systems in which what matters is
+accessibility — the range of futures reachable from a given state —
+rather than fixed spatial coordinates.
+
+\medskip
+
+\noindent\textbf{Coordination as first-class design vs.\ coordination as
+emergent.} Contemporary technical systems typically treat coordination
+as an emergent property of individual optimization. The proposals vary
+this by imagining systems in which coordination mechanisms are
+explicitly designed rather than assumed to arise spontaneously.
+
+\medskip
+
+These five parameters — maintenance, ecology, persistence,
+accessibility, coordination — define the invariant structure that the
+individual proposals orbit. The armillary sphere is not any one ring.
+The armillary sphere is the five-dimensional coordinate system within
+which civilization's design choices can be situated and varied.
+
+These parameters can be treated as the objects of formal study.
+
+\begin{definition}[Civilizational Invariant]
+A quantity $I: \mathcal{C} \to \mathbb{R}$ is a \emph{civilizational
+invariant} under a family of transformations $\{T_i\}$ if
+\[
+  I(T_i(C)) = I(C) \quad \text{for all } i.
+\]
+An invariant is a structural feature of civilizational configurations
+that persists across the variation introduced by armillary proposals.
+\end{definition}
+
+\begin{proposition}[Invariant Discovery Principle]
+The purpose of an armillary proposal is not to identify an optimal
+configuration $C^\star$ but to discover quantities $I$ that remain
+invariant under broad families of transformations. What is preserved
+under variation is more informative about the deep structure of
+civilization than what is changed.
+\end{proposition}
+
+The reachability volume connects this to the admissibility analysis
+developed elsewhere. For a configuration $C$, let $R(C)$ denote the
+set of future configurations reachable under admissible transitions,
+and define:
+
+\begin{definition}[Reachability Volume]
+\[
+  \Omega(C) = \mathrm{Vol}(R(C)).
+\]
+\end{definition}
+
+\begin{proposition}[Reachability Expansion]
+A successful armillary proposal increases understanding when it reveals
+directions $v$ in $T_C\mathcal{C}$ such that
+\[
+  \frac{d}{d\epsilon}\,\Omega(C + \epsilon v) > 0.
+\]
+That is: moving in direction $v$ expands the set of reachable futures,
+not merely the set of imagined ones.
+\end{proposition}
+
+The Armillary Principle can now be stated precisely:
+
+\begin{proposition}[Armillary Principle]
+Let $T$ be a coordinate transformation proposal. Its value is
+determined not by $\|T(C) - C\|$ — the magnitude of the imagined
+departure from present reality — but by $\Delta I$ and $\Delta\Omega$:
+the new invariants it reveals and the reachable possibilities it
+exposes.
+\end{proposition}
+
+The individual proposals are not answers to the question of how to
+organize civilization. They are instruments for making the question
+more precise.
+
+% ---------------------------------------------------------------
+\section{What the Satire Reveals}
+
+The satirical reading of speculative proposals is not simply an error.
+It is revealing. The indecision that characterizes the best satirical
+commentary on this kind of work — the oscillation between mockery and
+fascination, the inability to decide whether one is looking at a plan, a
+joke, or something else — is a symptom of encountering an object that
+does not fit available categories.
+
+When a reader cannot decide whether a proposal is serious or absurd,
+they are often experiencing a genuine category problem. The proposal is
+occupying the intermediate space between blueprint and metaphor that the
+armillary sphere represents, and the reader's interpretive framework
+offers only two slots: literal or figurative. Neither slot fits.
+
+The most productive response to this discomfort is not to force the
+proposal into one of the available categories but to recognize the
+discomfort as diagnostic. Something is being exposed. The familiar
+coordinate system is insufficient for locating this object. A new
+coordinate is needed.
+
+That recognition — the experience of a familiar framework proving
+insufficient — is precisely what the thought experiment and the
+coordinate transformation proposal are designed to provoke. The
+discomfort is not a failure of the proposal. It is its purpose.
+
+When someone describes forty billion floating habitat modules and the
+description sounds absurd, the absurdity is a signal. It is revealing
+that the parameters being varied — the substrate of settlement, the
+fixity of location, the centralization of infrastructure — are so
+deeply embedded that varying them sounds like nonsense rather than like
+a question. The satire works because the assumptions are invisible.
+The proposal works because it makes them visible.
+
+The satirist and the speculative designer are, in this moment, pointing
+at the same thing from opposite directions.
+
+% ---------------------------------------------------------------
+\section*{Conclusion}
+
+An armillary sphere does not tell you where to sail. It tells you how
+to think about where you are. Its rings are not real celestial circles;
+they are instruments for navigating real celestial relationships. The
+sphere is not a model of the world; it is a model of the coordinate
+system within which the world can be understood and traversed.
+
+Speculative proposals that vary the fundamental parameters of
+civilization — that treat maintenance as primary, ecology as substrate,
+persistence as value, accessibility as geography, coordination as
+design — are armillary spheres. They are not blueprints for a future
+civilization. They are instruments for thinking about what civilization
+is, what it assumes, and which of those assumptions are contingent
+rather than necessary.
+
+The question these proposals collectively probe is not: what should we
+build? It is: what becomes visible when we release the parameters that
+habituation has rendered invisible?
+
+Rotating civilization around the axis of maintenance: what was hidden
+becomes visible about the costs of disposability.
+
+Rotating civilization around the axis of ecology: what was hidden becomes
+visible about the subsidy of extraction.
+
+Rotating civilization around the axis of persistence: what was hidden
+becomes visible about the systematic undervaluation of continuity.
+
+Rotating civilization around the axis of accessibility: what was hidden
+becomes visible about the political geography of possibility.
+
+None of these rotations produce a plan. All of them produce a question.
+The questions are the point. The proposals are the instrument for
+generating the questions. The armillary sphere is not the Earth.
+
+It helps you find your position in relation to it.
+
+% ---------------------------------------------------------------
+\begin{thebibliography}{99}
+
+% Thought experiments in philosophy and physics
+\bibitem{sorensen1992}
+Sorensen, R. A. (1992).
+\textit{Thought Experiments}.
+Oxford University Press.
+
+\bibitem{brown1991}
+Brown, J. R. (1991).
+\textit{The Laboratory of the Mind: Thought Experiments in the Natural Sciences}.
+Routledge.
+
+\bibitem{mach1883}
+Mach, E. (1883).
+\textit{The Science of Mechanics}.
+[English trans.: Open Court, 1960.]
+
+\bibitem{norton1996}
+Norton, J. D. (1996).
+Are Thought Experiments Just What You Thought?
+\textit{Canadian Journal of Philosophy}, 26(3), 333--366.
+
+% Coordinate systems and the history of navigation
+\bibitem{neugebauer1975}
+Neugebauer, O. (1975).
+\textit{A History of Ancient Mathematical Astronomy}.
+Springer.
+
+\bibitem{dreyer1906}
+Dreyer, J. L. E. (1906).
+\textit{History of the Planetary Systems from Thales to Kepler}.
+Cambridge University Press.
+
+% Design theory and provocation
+\bibitem{dunne2013}
+Dunne, A., \& Raby, F. (2013).
+\textit{Speculative Everything: Design, Fiction, and Social Dreaming}.
+MIT Press.
+
+\bibitem{schon1983}
+Sch\"{o}n, D. A. (1983).
+\textit{The Reflective Practitioner: How Professionals Think in Action}.
+Basic Books.
+
+% Philosophy of science and models
+\bibitem{cartwright1983}
+Cartwright, N. (1983).
+\textit{How the Laws of Physics Lie}.
+Oxford University Press.
+
+\bibitem{giere1988}
+Giere, R. N. (1988).
+\textit{Explaining Science: A Cognitive Approach}.
+University of Chicago Press.
+
+\bibitem{morgan2012}
+Morgan, M. S. (2012).
+\textit{The World in the Model: How Economists Work and Think}.
+Cambridge University Press.
+
+% Maps, representations, and territory
+\bibitem{korzybski1933}
+Korzybski, A. (1933).
+\textit{Science and Sanity}.
+International Non-Aristotelian Library.
+
+\bibitem{borges1946}
+Borges, J. L. (1946).
+Del rigor en la ciencia.
+\textit{Los Anales de Buenos Aires}, 1(3).
+[English: On Exactitude in Science.]
+
+\bibitem{bateson1972}
+Bateson, G. (1972).
+\textit{Steps to an Ecology of Mind}.
+Chandler.
+
+% Utopia, design failure, and social systems
+\bibitem{jacobs1961}
+Jacobs, J. (1961).
+\textit{The Death and Life of Great American Cities}.
+Random House.
+
+\bibitem{scott1998}
+Scott, J. C. (1998).
+\textit{Seeing Like a State: How Certain Schemes to Improve the Human
+Condition Have Failed}.
+Yale University Press.
+
+\bibitem{winner1980}
+Winner, L. (1980).
+Do Artifacts Have Politics?
+\textit{Daedalus}, 109(1), 121--136.
+
+% Reachability and admissibility
+\bibitem{ostrom1990}
+Ostrom, E. (1990).
+\textit{Governing the Commons: The Evolution of Institutions for
+Collective Action}.
+Cambridge University Press.
+
+\bibitem{meadows2008}
+Meadows, D. H. (2008).
+\textit{Thinking in Systems: A Primer}.
+Chelsea Green.
+
+% Maintenance and repair
+\bibitem{graham2001}
+Graham, S., \& Thrift, N. (2007).
+Out of Order: Understanding Repair and Maintenance.
+\textit{Theory, Culture \& Society}, 24(3), 1--25.
+
+\bibitem{jackson2014}
+Jackson, S. J. (2014).
+Rethinking Repair.
+In T. Gillespie, P. Boczkowski, \& K. Foot (Eds.),
+\textit{Media Technologies: Essays on Communication, Materiality, and Society}.
+MIT Press.
+
+% Ecology and design
+\bibitem{mcdounough2002}
+McDonough, W., \& Braungart, M. (2002).
+\textit{Cradle to Cradle: Remaking the Way We Make Things}.
+North Point Press.
+
+\bibitem{odum1971}
+Odum, H. T. (1971).
+\textit{Environment, Power, and Society}.
+Wiley-Interscience.
+
+% Complexity, emergence, and civilization
+\bibitem{holland1995}
+Holland, J. H. (1995).
+\textit{Hidden Order: How Adaptation Builds Complexity}.
+Addison-Wesley.
+
+\bibitem{simon1962}
+Simon, H. A. (1962).
+The Architecture of Complexity.
+\textit{Proceedings of the American Philosophical Society}, 106(6), 467--482.
+
+\end{thebibliography}
+
+% ---------------------------------------------------------------
+\end{document}

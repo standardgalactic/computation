@@ -1,0 +1,1428 @@
+% !TEX program = pdflatex
+\documentclass[11pt, a4paper]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage{palatino}
+\usepackage{mathrsfs}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tocloft}
+\usepackage{fancyhdr}
+
+\geometry{top=1.1in, bottom=1.1in, left=1.25in, right=1.25in}
+\onehalfspacing
+
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+% Theorem environments
+\newtheoremstyle{flyxion}
+  {10pt}{10pt}{\itshape}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{flyxion}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+
+% Remark style
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{openq}[theorem]{Open Question}
+
+% Box environments
+\newmdenv[linewidth=0.8pt, innertopmargin=10pt, innerbottommargin=10pt,
+  innerleftmargin=13pt, innerrightmargin=13pt,
+  skipabove=12pt, skipbelow=12pt]{flybox}
+
+\newmdenv[linewidth=1.2pt, innertopmargin=11pt, innerbottommargin=11pt,
+  innerleftmargin=14pt, innerrightmargin=14pt,
+  skipabove=12pt, skipbelow=12pt, backgroundcolor=gray!5]{masterbox}
+
+\newmdenv[linewidth=0.6pt, innertopmargin=9pt, innerbottommargin=9pt,
+  innerleftmargin=12pt, innerrightmargin=12pt,
+  skipabove=10pt, skipbelow=10pt, backgroundcolor=yellow!8]{warningbox}
+
+% Section formatting
+\titleformat{\chapter}[display]
+  {\large\bfseries}{\chaptername\ \thechapter}{1em}{\Large\bfseries}
+\titleformat{\section}{\normalsize\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\itshape}{\thesubsection.}{0.5em}{}
+
+% Shorthand macros
+\newcommand{\Sadm}{\mathcal{A}}
+\newcommand{\Sstate}{\mathcal{S}}
+\newcommand{\Inad}{\mathcal{I}}
+\newcommand{\Reach}{R(x)}
+\newcommand{\OmVol}{\Omega(x)}
+\newcommand{\proj}{\pi}
+\newcommand{\traj}{\gamma}
+\newcommand{\TrajSp}{\Gamma(\mathcal{A})}
+\newcommand{\PathAct}{\mathcal{J}[\gamma]}
+\newcommand{\PathLag}{L(\gamma,\dot\gamma,t)}
+\newcommand{\Efun}{\mathfrak{T}}
+\newcommand{\RSVP}{(\Phi,\mathbf{v},S)}
+\newcommand{\RepMor}{R_\epsilon}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Volume 0: Internal Consistency Document}}
+\fancyhead[LO]{\textit{\leftmark}}
+
+\title{%
+  \textbf{Volume 0}\\[0.5em]
+  \large\textit{Internal Consistency Document}\\[0.3em]
+  \normalsize Canonical Symbols, Proof Sketches, Equivalence Briefs,\\
+  and the Master Claim Formalization\\[1em]
+  \normalsize\textit{Flyxion Fifteen-Volume Curriculum --- Pre-Publication Archive}
+}
+\author{Flyxion}
+\date{June 2026\\[0.3em]
+  \small Not for distribution. For internal use only.}
+
+% ================================================================
+\begin{document}
+% ================================================================
+
+\maketitle
+\thispagestyle{empty}
+
+\chapter*{Purpose and Scope}
+\addcontentsline{toc}{chapter}{Purpose and Scope}
+
+Volume~0 is not part of the curriculum. It is the document that makes
+the curriculum possible to write without introducing contradictions.
+It has four components, each corresponding to one class of consistency
+problem that, if unresolved, will propagate errors across all fifteen
+volumes.
+
+\medskip
+
+\noindent\textbf{Chapter~1: Canonical Symbol Table.} Every object in the
+corpus is assigned exactly one symbol. All collisions are resolved.
+No volume may introduce a symbol not listed here without amending this
+table first.
+
+\noindent\textbf{Chapter~2: Primitive Object Definitions.} Every primitive
+object is formally defined. Objects that are derived from primitives
+are identified as such. No derived object is treated as primitive
+elsewhere in the corpus.
+
+\noindent\textbf{Chapter~3: Asserted Results and Proof Sketches.} Every
+result in the corpus that is currently asserted without proof is stated
+precisely, assigned an epistemic status, and given a proof sketch,
+a proof strategy, or an explicit flag that it is a philosophical proposal
+requiring validation before the volume that uses it can be finalized.
+
+\noindent\textbf{Chapter~4: Equivalence Candidate Briefs.} Each of
+the nine equivalence candidates identified in the Atlas is given a
+one-page formal argument establishing whether it is a genuine
+equivalence, a common parent structure, or a shared dynamical form.
+
+\noindent\textbf{Chapter~5: The Master Claim and Path-Action Transition.}
+The Master Claim is formalized at two levels (state-functional and
+path-variational), the relationship between them is stated precisely,
+and the proof obligations for Volume~XV are identified.
+
+\medskip
+
+\begin{warningbox}
+\noindent\textbf{Rule}: Writing on any of the fifteen volumes may not
+begin until this document has been reviewed and the items flagged as
+foundational risks have been addressed. A failed foundational result
+changes nearly every volume; a failed technical result changes one
+or two. Chapters~3 and 5 identify which is which.
+\end{warningbox}
+
+\tableofcontents
+
+% ================================================================
+\chapter{Canonical Symbol Table}
+% ================================================================
+
+Every symbol in this table is canonical. Where a legacy symbol
+conflicts with the canonical assignment, the legacy symbol is
+immediately retired for all new writing. Existing documents using
+legacy symbols must be updated before submission.
+
+\section{Foundational Geometric Objects}
+
+\medskip
+\begin{longtable}{p{3.5cm}p{3cm}p{6.5cm}}
+\toprule
+\textbf{Concept} & \textbf{Symbol} & \textbf{Notes} \\
+\midrule
+State space & $\mathcal{S}$ & Full space of all possible configurations.
+  Not to be confused with the entropy field $S$. \\
+Admissibility space & $\mathcal{A}$ & Sub-manifold of $\mathcal{S}$
+  where constraints are satisfied. \\
+Admissibility metric & $g$ & Fisher information metric on $\mathcal{A}$.
+  In RSVP context, may be extended to $g_\mathrm{RSVP}$. \\
+Inadmissibility functional & $\mathcal{I}$ & Non-negative functional;
+  $\mathcal{I}(x) = 0 \iff x \in \mathcal{A}$. Not $V$, not $F$,
+  not $d^2$ — those are domain-specific instances. \\
+Reachability set & $R(x)$ & Set of states reachable from $x$ via
+  admissible paths. \\
+Reachability volume & $\Omega(x)$ & $\mathrm{Vol}(R(x))$. Measure of
+  local future freedom. \\
+Constraint family & $C = \{C_i\}$ & $\mathcal{A} = \{x \mid C_i(x)
+  \leq 0\;\forall i\}$. \\
+\bottomrule
+\end{longtable}
+
+\section{Projection and Observation Objects}
+
+\medskip
+\begin{longtable}{p{3.5cm}p{3cm}p{6.5cm}}
+\toprule
+\textbf{Concept} & \textbf{Symbol} & \textbf{Notes} \\
+\midrule
+Projection (compression) & $\pi: X \to M$ & Smooth surjective map
+  from state space to observable manifold. \\
+Fiber / preimage & $\pi^{-1}(m)$ & States consistent with observation
+  $m$. Epistemic object, not dynamical. \\
+Section / reconstruction & $\sigma: M \to X$ & Right inverse of $\pi$;
+  $\pi \circ \sigma = \mathrm{id}_M$. Replaces $\mathcal{R}$ for
+  reconstruction direction to avoid collision with reachability. \\
+General recovery operator & $\mathcal{Q}: M \to X$ & Umbrella for
+  all reconstruction operators ($\sigma$, ecphory, Collapse). \\
+Observable manifold & $M$ & Target of projection $\pi$. \\
+Observation & $m \in M$ & A single observation; $m = \pi(x)$
+  for some $x$. \\
+Opacity & $\Omega_S + \Omega_M$ & Structural ($\Omega_S$) and
+  manufactured ($\Omega_M$) components. Not to be confused with
+  reachability volume $\Omega(x)$; subscripts required when both
+  appear together. \\
+\bottomrule
+\end{longtable}
+
+\section{Trajectory and Path Objects}
+
+\medskip
+\begin{longtable}{p{3.5cm}p{3cm}p{6.5cm}}
+\toprule
+\textbf{Concept} & \textbf{Symbol} & \textbf{Notes} \\
+\midrule
+Admissible trajectory & $\gamma: [0,T] \to \mathcal{A}$ & Primary
+  trajectory object; primitive from Volume~IV onward. \\
+Trajectory space & $\Gamma(\mathcal{A})$ & Space of all admissible
+  trajectories. \\
+Path action & $\mathcal{J}[\gamma]$ & $\int_0^T L(\gamma,\dot\gamma,t)
+  \, dt$. \\
+Path Lagrangian & $L$ & $L: T\mathcal{A} \times [0,T] \to \mathbb{R}$.
+  Defined on the tangent bundle of $\mathcal{A}$. \\
+Extremal trajectory & $\gamma^*$ & $\operatorname{arg\,ext}_{\gamma
+  \in \Gamma(\mathcal{A})} \mathcal{J}[\gamma]$. \\
+Repair path & $\gamma_\mathrm{rep}$ & Trajectory satisfying
+  $d\Omega/dt > 0$ along its length. \\
+Event history & $H_t = (e_1,\ldots,e_n)$ & MEM\textbar{}8 discrete
+  trajectory in event space; $H_t \in \Gamma_\mathrm{disc}
+  (\mathcal{A})$. \\
+\bottomrule
+\end{longtable}
+
+\section{RSVP Field Objects}
+
+\medskip
+\begin{longtable}{p{3.5cm}p{3cm}p{6.5cm}}
+\toprule
+\textbf{Concept} & \textbf{Symbol} & \textbf{Notes} \\
+\midrule
+Scalar field & $\Phi$ & Structural potential / salience / likelihood
+  landscape. \\
+Vector field & $\mathbf{v}$ & Admissibility flow / information
+  transport. \\
+Entropy field & $S$ & RSVP dynamical entropy; local accessibility
+  density. Distinct from Shannon entropy $H$ and path
+  degradation $\sigma_\mathrm{deg}$. \\
+RSVP triple & $X = (\Phi, \mathbf{v}, S)$ & Full field state. \\
+Lamphron & $\lambda^+$ region & Local maximum of $S$; accessibility
+  source. \\
+Lamphrodyne & $\lambda^-$ region & Local minimum of $S$; accessibility
+  sink; site of structure formation. \\
+\bottomrule
+\end{longtable}
+
+\section{Operator Objects}
+
+\medskip
+\begin{longtable}{p{3.5cm}p{3cm}p{6.5cm}}
+\toprule
+\textbf{Concept} & \textbf{Symbol} & \textbf{Notes} \\
+\midrule
+Pop & $\mathsf{Pop}$ & Reduces local entropy at site exceeding
+  threshold $\theta_P$. \\
+Bind & $\mathsf{Bind}$ & Joins causally compatible events. \\
+Collapse & $\mathsf{Collapse}$ & Realization functor $F: \mathcal{H}
+  \to \mathcal{C}$; state derived from history. \\
+Refuse & $\mathsf{Refuse}$ & Principled exclusion with responsibility
+  weight $\rho_x$. \\
+Repair morphism & $R_\epsilon$ & Admissibility-preserving map
+  reducing $\mathcal{I}$; formal definition pending (see §3.9). \\
+Ecphory operator & $\mathcal{E}_\mathrm{cph}$ & Wave-propagation
+  retrieval; fires when activation exceeds threshold $\theta_E$. \\
+Lamphrodyne operator & $\mathcal{L}_\mathrm{lp}$ & Linear relaxation
+  component of RSVP dynamics. \\
+Energy functor & $\mathfrak{T}$ & Maps frameworks to energy landscapes;
+  see Chapter~5. Not $\mathbb{T}$ (torus). \\
+\bottomrule
+\end{longtable}
+
+\section{Resolved Symbol Conflicts}
+
+The following conflicts existed in the prior corpus. The canonical
+resolution is mandatory in all new and revised writing.
+
+\medskip
+\begin{longtable}{p{3cm}p{4cm}p{4cm}p{3cm}}
+\toprule
+\textbf{Concept} & \textbf{Retired symbols} & \textbf{Canonical} &
+\textbf{Reason} \\
+\midrule
+Entropy (three kinds) & $S$ (all three uses) & $S$ for RSVP field;
+  $H$ for Shannon; $\sigma_\mathrm{deg}$ for path degradation &
+  Three genuinely different objects \\
+Inadmissibility & $V$, $F$, $d^2$, $\mathcal{O}$ & $\mathcal{I}$
+  universally & Domain-specific names are instances \\
+Reachability (set vs.\ volume) & $\Omega$, $\mathcal{F}_\mathrm{soc}$
+  for same concept & $R(x)$ for set; $\Omega(x)$ for volume;
+  $\mathcal{F}_\mathrm{soc}$ for social freedom & Prevents
+  conflation \\
+Reconstruction direction & $\mathcal{R}$, $F$, $\sigma$ & $\sigma$
+  for section; $\mathcal{Q}$ for general recovery & $\mathcal{R}$
+  collides with reachability \\
+Free energy (Bayesian) & $F$, $\mathcal{I}$ & $F$ reserved for
+  variational free energy in Bayesian contexts; $\mathcal{I}$ for
+  inadmissibility elsewhere & Prevents thermodynamic confusion \\
+Energy functor & $\mathbb{T}$, $\mathscr{T}$ & $\mathfrak{T}$ &
+  $\mathbb{T}$ is the torus; $\mathscr{T}$ is non-standard \\
+\bottomrule
+\end{longtable}
+
+% ================================================================
+\chapter{Primitive Object Definitions}
+% ================================================================
+
+This chapter defines every primitive object in the corpus. Derived
+objects are defined in terms of primitives and labeled as such.
+No derived object is to be treated as foundational elsewhere.
+
+\section{The Admissibility Structure}
+
+\begin{definition}[Admissibility Structure]
+An \emph{admissibility structure} is a quadruple
+$(\mathcal{S}, \mathcal{A}, g, \mathcal{I})$ where:
+\begin{itemize}
+\item $\mathcal{S}$ is a smooth manifold (the state space).
+\item $\mathcal{A} \subseteq \mathcal{S}$ is a sub-manifold defined
+  by $\mathcal{A} = \{x \in \mathcal{S} \mid C_i(x) \leq 0\;\forall i
+  \in I\}$ for a constraint family $\{C_i\}_{i \in I}$.
+\item $g$ is a Riemannian metric on $\mathcal{A}$; the canonical
+  choice is the Fisher information metric
+  $g_{jk} = \mathbb{E}[\partial_j \log p\, \partial_k \log p]$.
+\item $\mathcal{I}: \mathcal{S} \to \mathbb{R}_{\geq 0}$ is a
+  smooth inadmissibility functional with $\mathcal{I}(x) = 0
+  \iff x \in \mathcal{A}$ and $\mathcal{I}(x) > 0$ otherwise.
+\end{itemize}
+\end{definition}
+
+\begin{remark}
+The admissibility structure is the common parent of several objects
+that appear under different names across frameworks. These are
+\emph{not} equivalent to each other; they are \emph{derived from}
+the admissibility structure by additional specifications:
+$R(x) \subseteq \mathcal{A}$ (dynamical subobject),
+$\pi^{-1}(m) \subseteq X$ (epistemic subobject),
+$\mathcal{P}$ in MEM\textbar{}8 (historical subobject). See
+Chapter~4, Candidate~1.
+\end{remark}
+
+\section{The Projection Structure}
+
+\begin{definition}[Projection Structure]
+A \emph{projection structure} is a triple $(X, M, \pi)$ where
+$X$ is a state space, $M$ is an observable manifold, and
+$\pi: X \to M$ is a smooth surjective map (a projection or
+submersion). The \emph{fiber} over $m \in M$ is
+$\pi^{-1}(m) = \{x \in X \mid \pi(x) = m\}$.
+\end{definition}
+
+\begin{definition}[Operational Fiber Death]
+A state $m \in M$ exhibits \emph{operational fiber death} when
+$\pi^{-1}(m) \neq \varnothing$ but the measure of admissible
+reconstruction pathways satisfies $\mu(\mathcal{P}_m) \to 0$.
+That is: the preimage is non-empty in principle but unreachable
+in practice.
+\end{definition}
+
+\section{The Admissible Trajectory}
+
+\begin{definition}[Admissible Trajectory]
+\label{def:traj}
+An \emph{admissible trajectory} is a curve
+$\gamma: [0,T] \to \mathcal{A}$ such that:
+\begin{enumerate}
+\item $\gamma(t) \in \mathcal{A}$ for all $t \in [0,T]$.
+\item $\dot\gamma(t) \in T_{\gamma(t)}\mathcal{A}$ wherever
+  $\partial\mathcal{A}$ is non-empty.
+\end{enumerate}
+The \emph{trajectory space} is $\Gamma(\mathcal{A}) = \{\gamma:
+[0,T] \to \mathcal{A} \mid \gamma\text{ admissible}\}$ with the
+$C^1$ topology.
+
+A \emph{discrete admissible trajectory} is a finite sequence
+$(\gamma_0, \gamma_1, \ldots, \gamma_n) \in \mathcal{A}^{n+1}$
+where consecutive pairs $(\gamma_k, \gamma_{k+1})$ are connected
+by a short admissible path.
+\end{definition}
+
+\begin{remark}
+The following objects across the corpus are all specializations
+of Definition~\ref{def:traj}: MEM\textbar{}8 event history $H_t$
+(discrete trajectory in event space), repair path $\gamma_\mathrm{rep}$
+(trajectory reducing $\mathcal{I}$ along its length), agency plan
+(trajectory maximizing $\mathbb{E}[\Omega(\gamma(T))]$),
+ecphoric path (trajectory from present state to target memory),
+Yarncrawler route (trajectory completing partial world-state),
+TARTAN trajectory (trajectory preserved under decomposition).
+\end{remark}
+
+\section{The Path Lagrangian}
+
+\begin{definition}[Path Lagrangian]
+A \emph{path Lagrangian} is a smooth function
+$L: T\mathcal{A} \times [0,T] \to \mathbb{R}$
+on the tangent bundle of $\mathcal{A}$. The associated
+\emph{path action} is
+\[
+\mathcal{J}[\gamma] = \int_0^T L(\gamma(t), \dot\gamma(t), t)\, dt.
+\]
+An \emph{extremal trajectory} $\gamma^*$ satisfies the
+Euler-Lagrange equations:
+\[
+\frac{d}{dt}\frac{\partial L}{\partial \dot\gamma^i}
+- \frac{\partial L}{\partial \gamma^i} = 0.
+\]
+\end{definition}
+
+\begin{definition}[Canonical Lagrangian Instantiations]
+The following are the specific Lagrangians used by path-action
+frameworks in the corpus:
+\begin{align*}
+L_\mathrm{mech}(\gamma,\dot\gamma) &=
+  \tfrac{1}{2}g_{ij}\dot\gamma^i\dot\gamma^j - \mathcal{I}(\gamma)
+  &\text{(recovers gradient flow)}\\
+L_\mathrm{visc}(\gamma,\dot\gamma) &=
+  \mathcal{I}(\gamma) + \lambda\|\dot\gamma\|^2_\eta
+  &\text{(MEM\textbar{}8, ecphory with viscosity)}\\
+L_\mathrm{rep}(\gamma,\dot\gamma) &=
+  d(f(\gamma), f^*)^2 - \eta\Omega(\gamma)
+  &\text{(repair Lagrangian, Volume IX)}\\
+L_\mathrm{SP}(\gamma, e_t) &=
+  -\log p(e_t \mid H_t)
+  &\text{(Spherepop event log-likelihood)}
+\end{align*}
+\end{definition}
+
+\section{The Repair Morphism (Provisional Definition)}
+
+\begin{definition}[Repair Morphism --- Provisional]
+\label{def:repair}
+A map $R_\epsilon: \mathcal{S} \to \mathcal{S}$ is a
+\emph{repair morphism} if it satisfies:
+\begin{enumerate}
+\item \textbf{Admissibility}: $R_\epsilon(x) \in \mathcal{A}$ for
+  all $x$ in a neighborhood of $\mathcal{A}$.
+\item \textbf{Inadmissibility reduction}:
+  $\mathcal{I}(R_\epsilon(x)) \leq \mathcal{I}(x)$ with equality
+  only if $x \in \mathcal{A}$.
+\item \textbf{Path consistency}: There exists an admissible
+  trajectory $\gamma: [0,1] \to \mathcal{A}$ with $\gamma(0) = x$
+  and $\gamma(1) = R_\epsilon(x)$.
+\end{enumerate}
+\end{definition}
+
+\begin{warningbox}
+\textbf{Foundational gap}: Definition~\ref{def:repair} is provisional.
+The repair morphism is characterized by $d\Omega/dt > 0$ along its
+trajectory, but this characterization is a candidate proposition
+(§3.9), not a theorem. The definition above gives conditions; a
+satisfying construction that meets them requires either: (a) proof
+that $L_\mathrm{rep}$ above has well-defined extremals in
+$\Gamma(\mathcal{A})$, or (b) an explicit construction of
+$R_\epsilon$ as a flow map. Volume~VIII (Repair Theory) cannot be
+finalized until one of these is provided.
+\end{warningbox}
+
+% ================================================================
+\chapter{Asserted Results and Proof Sketches}
+% ================================================================
+
+\noindent\textbf{Epistemic status codes:}
+\textbf{Pr} = proved in existing document;
+\textbf{Sk} = proof sketch exists;
+\textbf{Co} = conjecture with identified proof strategy;
+\textbf{Nu} = numerical evidence only;
+\textbf{As} = asserted without proof strategy;
+\textbf{Ph} = philosophical proposal requiring validation;
+\textbf{Ga} = gap, not yet precisely stated.
+
+\bigskip
+\noindent Results marked \textbf{As} or \textbf{Ph} that appear in
+the \emph{foundational gap} category must be addressed before writing
+the volumes that depend on them. Results marked \textbf{Ga} must be
+precisely stated before appearing in any volume.
+
+\section{Volume I: Constraint Geometry}
+
+\begin{theorem}[Projection-Collapse Principle, Weak Form] \textbf{(Pr)}
+Let $\pi: X \to M$ be a smooth projection and let
+$f: \pi^{-1}(U) \to \mathbb{R}$ be a function on a fiber over
+an open $U \subseteq M$. Then information loss under $\pi$
+satisfies $H(X) - H(\pi(X)) \geq 0$ with equality iff $\pi$
+is bijective on $U$.
+\end{theorem}
+\begin{proof}[Proof sketch]
+Data-processing inequality applied to the Markov chain
+$X \to \pi(X)$. Equality condition follows from injectivity.
+\end{proof}
+
+\begin{conjecture}[Projection-Collapse Principle, Strong Form] \textbf{(Co)}
+Let $\pi: X \to M$ have positive-dimensional fibers. Then
+the reconstruction operator $\mathcal{Q}: M \to X$ satisfying
+$\pi \circ \mathcal{Q} = \mathrm{id}_M$ is generically ill-posed:
+small perturbations in $m$ produce large perturbations in
+$\mathcal{Q}(m)$.
+\end{conjecture}
+\begin{proof}[Proof strategy]
+Apply Hadamard's three conditions for well-posedness. Non-injectivity
+of $\pi$ implies non-uniqueness of $\mathcal{Q}$, violating the
+second condition. Continuity failure follows from fiber
+non-compactness or high curvature. Tikhonov regularization provides
+a stable approximation, formalizing $\mathcal{Q}_\lambda$ as a
+regularized inverse.
+\end{proof}
+
+\begin{proposition}[Constraint-Information Equivalence] \textbf{(Pr)}
+Let $\mathcal{S}$ be a finite state space of size $N$ and
+$\mathcal{A} \subseteq \mathcal{S}$ the admissible subset of size
+$k$. The information encoded by the constraint family
+$\{C_i\}$ is $\log N - \log k = \log(N/k)$.
+\end{proposition}
+
+\begin{theorem}[Bishop-Gromov Comparison for Admissibility] \textbf{(Pr)}
+Let $(\mathcal{A}, g)$ have Ricci curvature bounded below by
+$(n-1)\kappa$. Then the volume of metric balls
+$B(x,r) \subset \mathcal{A}$ satisfies
+$\mathrm{Vol}(B(x,r)) \leq V_\kappa(r)$
+where $V_\kappa(r)$ is the volume of a ball of radius $r$ in the
+model space of constant curvature $\kappa$.
+\end{theorem}
+\begin{proof}[Proof sketch]
+Standard Bishop-Gromov, applied to the Fisher information metric
+on $\mathcal{A}$. Requires $\mathcal{A}$ to be complete as a
+Riemannian manifold.
+\end{proof}
+
+\section{Volume II: RSVP Field Theory}
+
+\begin{claim}[RSVP Second Law] \textbf{(As)}
+For solutions $(\Phi, \mathbf{v}, S)$ of the RSVP field equations,
+global accessibility satisfies
+$\frac{d}{dt}\int_\Omega S\,dx \leq 0$
+under appropriate boundary conditions.
+\end{claim}
+\begin{proof}[Proof obligation]
+Integrate the $S$-equation $\partial_t S = D_S\nabla^2 S +
+R(\Phi,\mathbf{v},S)$ over $\Omega$. The Laplacian term vanishes
+with Neumann boundary conditions. A sufficient condition is
+$\int_\Omega R(\Phi,\mathbf{v},S)\,dx \leq 0$, which constrains the
+reaction term. The physical interpretation is that lamphrodyne
+processes are net entropy-consuming. \textbf{Status: must be proved
+before Volume~XIII can be finalized.}
+\end{proof}
+
+\begin{claim}[Lamphrodyne Attractor Stability] \textbf{(As)}
+A lamphrodyne region (local minimum of $S$) is Lyapunov stable
+under the RSVP dynamics.
+\end{claim}
+\begin{proof}[Proof obligation]
+Construct a Lyapunov functional $V[\Phi,\mathbf{v},S]$ that decreases
+along RSVP trajectories near a lamphrodyne configuration. The
+candidate is $V = \int_\Omega |\nabla S|^2 + \alpha(\Phi - \Phi_0)^2
++ \beta|\mathbf{v}|^2\,dx$. Show $\dot V \leq 0$. \textbf{Status:
+must be proved before Volumes~XIII and~XIV.}
+\end{proof}
+
+\begin{conjecture}[RSVP-RG Equivalence] \textbf{(Co)}
+The coarse-graining flow induced by lamphrodyne relaxation is
+equivalent, in appropriate limits, to Wilsonian renormalization
+group flow on the space of effective field theories.
+\end{conjecture}
+\begin{proof}[Proof strategy]
+Show that integrating out high-frequency modes in the RSVP path
+integral $Z = \int \mathcal{D}\Phi\,\mathcal{D}\mathbf{v}\,\mathcal{D}S
+\, e^{-\mathcal{A}[X]}$ produces a flow equation on the coupling
+constants of the effective action equivalent to the Wetterinck
+equation (functional RG). The entropy diffusion coefficient $D_S$
+plays the role of the RG scale parameter.
+\end{proof}
+
+\section{Volume III: Projection and Inference}
+
+\begin{definition}[CLIO Intelligence]
+A system is \emph{CLIO-intelligent} to degree $\alpha$ at
+observation $m$ if it can identify a subset
+$\mathcal{A}(m) \subseteq \pi^{-1}(m)$ satisfying
+$|\mathcal{A}(m)| \leq \alpha |\pi^{-1}(m)|$
+using only constraints derivable from context and memory.
+\end{definition}
+
+\begin{claim}[CLIO Inverse Problem Ill-Posedness] \textbf{(Ga)}
+The reconstruction problem of recovering $x \in \pi^{-1}(m)$ from
+observation $m$ alone is generically ill-posed in the sense of Hadamard.
+\end{claim}
+\begin{proof}[Proof obligation]
+State precisely: for which class of projections $\pi$ and which
+topology on $X$ is the problem ill-posed? Then prove the three
+conditions fail. Note: the Projection-Collapse strong form (§3.1)
+is the precursor result; this is a specialization to the inference
+setting. \textbf{Gap: precise statement needed before Volume~III
+is drafted.}
+\end{proof}
+
+\begin{theorem}[Reconstruction Stability] \textbf{(Pr)}
+The Tikhonov-regularized reconstruction $\mathcal{Q}_\lambda(m) =
+\operatorname{arg\,min}_{x \in X}\{\|x\|^2 + \lambda^{-1}
+\|\pi(x) - m\|^2\}$ satisfies an $L^2$ stability estimate:
+$\|\mathcal{Q}_\lambda(m_1) - \mathcal{Q}_\lambda(m_2)\|
+\leq C_\lambda\|m_1 - m_2\|$ for a constant $C_\lambda$ depending on
+$\lambda$ and the spectral properties of $\pi^*\pi$.
+\end{theorem}
+
+\begin{theorem}[Operational Fiber Death] \textbf{(Pr)}
+Let $\mathcal{P}_m$ denote the set of admissible reconstruction
+pathways to the fiber $\pi^{-1}(m)$. If $\mu(\mathcal{P}_m) \to 0$
+while $\pi^{-1}(m) \neq \varnothing$, the state $m$ exhibits
+operational fiber death: it is theoretically reachable but
+practically unrecoverable.
+\end{theorem}
+
+\begin{claim}[Admissible Stabilization --- AI Convergence Certification]
+\textbf{(As)}
+\label{claim:ai-cert}
+Let $s_t \in M$ be the observable state of a computational system
+at time $t$, let $x_t \in X$ be the latent state with
+$\pi(x_t) = s_t$, and let $\mathcal{A} \subseteq X$ be the
+admissibility space encoding safety constraints. Define:
+\begin{itemize}
+\item $d_M(s_t, s_{t-1})$: metric distance between consecutive
+  observable states (motion in operational space);
+\item $C_t \in [0,1]$: corrected consistency score measuring
+  agreement of $s_t$ against an independent prior or prospective
+  candidate (not self-referential);
+\item $E_\pi(s_t)$: surrogate error, measuring agreement across
+  independent projections of the latent state.
+\end{itemize}
+Then the joint condition:
+\[
+d_M(s_t, s_{t-1}) \to 0
+\;\;\text{AND}\;\;
+C_t \to 1
+\;\;\text{AND}\;\;
+E_\pi(s_t) \leq \eta
+\;\;\Longrightarrow\;\;
+P\!\left(\mathrm{Stable}_{\mathcal{A}}(x_t)\right) \to 1
+\]
+constitutes \emph{admissible stabilization}: the system has
+converged to an admissible latent state with high probability.
+\end{claim}
+
+\begin{proof}[Proof obligation and theoretical context]
+The claim addresses the \emph{Ouroboros trap}: a system that
+measures only $d_M(s_t, s_{t-1}) \to 0$ certifies convergence
+in observable space $M$ without confirming convergence in latent
+space $X$. Since $\pi$ is non-injective, a system can refine an
+incorrect plan into a perfectly self-consistent incorrect plan ---
+converging in the projection without converging in the fiber.
+
+The three-condition conjunction is designed to break this trap:
+\begin{enumerate}
+\item $d_M \to 0$ (Ouroboros signal): motion ceases in operational
+  space. Necessary but not sufficient.
+\item $C_t \to 1$ (CLIO condition): real comparison against an
+  independent candidate, not a tautology. Catches shadow-space
+  convergence.
+\item $E_\pi \leq \eta$ (surjective consistency): agreement across
+  multiple independent projections $\{\pi_k\}$ of the latent state
+  confirms that the convergence is not an artifact of one projection.
+\end{enumerate}
+
+\textbf{What must be proved}: (a) that the conjunction is sufficient
+for $P(\mathrm{Stable}_\mathcal{A}(x_t)) \to 1$ under appropriate
+conditions on $\pi$ and the dynamics; (b) that $C_t$ is computable
+without access to $x_t$ directly; (c) that the three conditions are
+independent (no two are jointly sufficient without the third).
+
+\textbf{Source}: Epistemic Architecture slides, Slide~5.
+\textbf{Status}: \textbf{As}. The three conditions are identified
+and motivated; no formal proof of sufficiency exists.
+
+\textbf{Why it matters}: This result, if proved, provides the first
+formally grounded AI safety certification criterion derived from
+CLIO projection theory. It appears in Volume~III as a worked
+application of the CLIO pipeline. It also connects to the Invariant
+Discovery Principle: what the three-condition test certifies is
+that the structural invariant $\mathcal{I}(T_i(C)) = \mathcal{I}(C)$
+is preserved across observable transformations, not merely that
+the surface has stopped moving.
+\end{proof}
+
+\begin{remark}[The Projection Trap and Sealed Systems]
+The Ouroboros trap is the computational instance of a more general
+failure mode identified across the corpus: a sealed interpretive
+system that progressively eliminates reachable futures by
+reinterpreting all evidence as confirmation of its current state.
+In the Szukalski analysis (Epistemic Blueprint), Zermatism
+exemplifies this: every disconfirming piece of evidence is
+reinterpreted as evidence of the debasement the system diagnoses.
+In AI systems, the analogous failure is a trajectory classifier
+that evaluates $d(s_t, s_{t-1}) \to 0$ while remaining blind to
+the latent space structure it is converging on. The three-condition
+certification is the formal antidote to sealed-system convergence
+in computational contexts.
+\end{remark}
+
+\begin{claim}[MEM|8 Reconstruction Theorem] \textbf{(Ga)}
+Let $H_n = (e_1,\ldots,e_n)$ be a MEM\textbar{}8 event history
+and $s_n = \bigcap_i \mathcal{C}(e_i)$ the reconstructed state.
+Under what conditions on the event algebra is $s_n$ uniquely
+determined by $H_n$, and when is the reconstruction continuous
+with respect to perturbations of the event sequence?
+\end{claim}
+\begin{proof}[Proof obligation]
+This is the MEM\textbar{}8 analog of the Reconstruction Stability
+theorem. The reconstruction is intersection of constraint sets; its
+well-posedness depends on the intersection being non-empty and
+having non-degenerate geometry. \textbf{Gap: precise statement and
+proof needed before Volume~V is finalized.}
+\end{proof}
+
+\begin{claim}[Ecphoric Threshold Existence] \textbf{(As)}
+For any memory state $m^* \in \Gamma(\mathcal{A})$ and any present
+state $x_0 \in \mathcal{A}$, there exists a threshold $\theta_E > 0$
+such that the ecphoric retrieval wave initiated at $x_0$ reaches
+$m^*$ if and only if the wave amplitude at $x_0$ exceeds $\theta_E$.
+\end{claim}
+\begin{proof}[Proof obligation]
+Model ecphory as a damped wave equation on $\mathcal{A}$ with
+initial condition at $x_0$. The threshold $\theta_E$ is determined
+by the viscosity $\eta(x,t)$ of the semantic manifold between $x_0$
+and $m^*$. Existence requires the wave equation to have a unique
+solution; the threshold exists if the solution operator is continuous.
+\textbf{Must be proved before Volumes~V and~VIII.}
+\end{proof}
+
+\begin{claim}[HYDRA Cognitive Emergence] \textbf{(As)}
+In a HYDRA system with modules $\{f_i\}_{i=1}^N$ and coordination
+penalty $\Omega(\mathbf{z})$, complex cognitive behaviors emerge
+from coordination without any individual module possessing those
+behaviors.
+\end{claim}
+\begin{proof}[Proof obligation]
+Formalize "emergence" as: behavior $B$ is emergent if it is
+expressed by the system's aggregate output but not by any individual
+module's output restricted to its input domain. Show that the
+coordination penalty $\Omega$ induces global coherence not implied
+by any local $f_i$. This requires a formal stability analysis of the
+coupled system $\dot{\mathbf{z}} = \sum_a W_a f_a(\mathbf{z}_a)
+- \nabla_\mathbf{z}\Omega(\mathbf{z})$. \textbf{Gap: stability
+analysis is the central missing piece in Volume~VII.}
+\end{proof}
+
+\begin{claim}[HYDRA Stability] \textbf{(Ga)}
+The coupled HYDRA system with $N$ modules converges to a coherent
+equilibrium $\mathbf{z}^*$ satisfying $\sum_a W_a f_a(\mathbf{z}^*_a)
+= \nabla_\mathbf{z}\Omega(\mathbf{z}^*)$ under conditions on the
+coupling weights $\{W_a\}$ and the coordination penalty $\Omega$.
+\end{claim}
+\begin{proof}[Proof obligation]
+Construct a Lyapunov function for the coupled system. Natural
+candidate: $V(\mathbf{z}) = \Omega(\mathbf{z}) +
+\sum_a\frac{W_a}{2}\|f_a(\mathbf{z}_a)\|^2$. Show $\dot V \leq 0$.
+Identify sufficient conditions on $\Omega$ (e.g., strong convexity)
+for global convergence. \textbf{Must be proved before Volume~VII.}
+\end{proof}
+
+\begin{claim}[Repair Characterization Candidate] \textbf{(As)}
+The condition $d\Omega(\gamma(t))/dt > 0$ along an admissible
+trajectory $\gamma$ is equivalent to the trajectory satisfying the
+repair Lagrangian Euler-Lagrange equations for
+$L_\mathrm{rep} = d(f(\gamma),f^*)^2 - \eta\Omega(\gamma)$.
+\end{claim}
+\begin{proof}[Proof obligation]
+Compute the Euler-Lagrange equations for $L_\mathrm{rep}$ and show
+they imply $d\Omega/dt > 0$ along solutions. This requires
+(a) $\Omega$ to be differentiable along $\gamma$, and (b) the
+coupling $\eta > 0$ to be sufficiently large. \textbf{This is the
+central proof obligation for Volume~VIII. Resolve before drafting.}
+\end{proof}
+
+\section{Volume VII: Spherepop}
+
+\begin{claim}[Spherepop Confluence] \textbf{(Ga)}
+The Spherepop reduction system is confluent: for any initial
+configuration $C_0$, all maximal reduction sequences terminate
+at the same normal form up to trace-equivalence.
+\end{claim}
+\begin{proof}[Proof obligation]
+Apply Newman's lemma: confluence follows from local confluence and
+strong normalization. (1) Strong normalization: show that every
+Spherepop reduction sequence terminates (no infinite chains). Natural
+measure: the total entropy $\int S\,dx$ of the associated RSVP
+state is non-increasing under Pop, and bounded below by zero.
+(2) Local confluence: show that if $C_0 \to C_1$ and $C_0 \to C_2$
+by single steps, then $C_1$ and $C_2$ have a common reduct.
+Check this for all pairs of rules. \textbf{Must be proved before
+Volume~IX is finalized.}
+\end{proof}
+
+\section{Volume X: Coordination Geometry}
+
+\begin{claim}[Kuramoto Reduction from RSVP] \textbf{(Co)}
+In the limit where $\Phi$ and $S$ are slowly varying compared to
+$\mathbf{v}$, the RSVP vector field equation reduces to a
+generalized Kuramoto model $\dot\theta_i = \omega_i +
+\sum_j K_{ij}\sin(\theta_j - \theta_i)$ where $\theta_i$ are
+phases of the $\mathbf{v}$ field and $K_{ij}$ are coupling
+constants derived from $\nabla S$.
+\end{claim}
+\begin{proof}[Proof strategy]
+Project the RSVP $\mathbf{v}$-equation onto a phase representation
+$v_i = A_i e^{i\theta_i}$ using Stuart-Landau normal form near
+a Hopf bifurcation. The entropy gradient $\gamma\nabla S$ becomes
+the coupling term. Amplitude variations decouple to leading order,
+leaving a pure phase equation. The coupling strength $K_{ij}$ depends
+on the overlap integrals of the entropy gradient with the phase
+mode functions. Requires the RSVP $\mathbf{v}$-equation to have
+a Hopf bifurcation at the relevant parameter values.
+\end{proof}
+
+\section{Foundational Results: High Priority}
+
+These results are foundational in the sense that their failure
+restructures nearly all volumes. They are listed separately from
+the technical gaps above.
+
+\begin{claim}[Reachability Principle] \textbf{(Sk)}
+\label{claim:rp}
+The effective freedom of an agent or system at state $x$ is
+proportional to the reachability volume $\Omega(x) =
+\mathrm{Vol}(R(x))$. Formally, the optimal policy for any
+persistence-oriented objective is equivalent to maximizing
+$\Omega$ along the system's trajectory.
+\end{claim}
+\begin{proof}[Proof sketch --- from Institutional Attractors, Appendix A]
+Define the local contraction rate
+$\Lambda(x,t) = -\frac{d}{dt}\log\mathcal{V}(x,t)$
+where $\mathcal{V}(x,t) = \int_{R(x,t)}d\mu$ is the reachable
+future volume. If $\Lambda(x,t) > 0$ over $[t_0,t_1]$, then:
+\[
+\mathcal{V}(t_1) = \mathcal{V}(t_0)\exp\!\left(
+  -\int_{t_0}^{t_1}\Lambda(\tau)\,d\tau\right).
+\]
+Persistent reachability closure therefore produces exponential
+loss of admissible futures. A persistence-oriented policy must
+hold $\Lambda(x,t) \leq 0$ along its trajectory, which is
+equivalent to non-decreasing $\Omega$. The Bellman formulation
+follows by setting the value function $V(x) = \log\Omega(x)$.
+
+\textbf{Status upgraded from As to Sk.} The contraction-rate
+argument is in Appendix~A of the Institutional Attractors essay.
+What remains unproved: (a) that $\Lambda \leq 0$ is sufficient
+as well as necessary for persistence, and (b) that maximizing
+$\Omega$ is optimal across all persistence-objective classes, not
+only those that reduce to reachability volume.
+\textbf{If false, affects Volumes IV, VI, VIII, XII, XV.}
+\end{proof}
+
+\begin{claim}[Reachability-Inadmissibility Candidate Identity] \textbf{(As)}
+\label{claim:ident}
+$\mathcal{I}(x) = -\log\Omega(x)$.
+\end{claim}
+\begin{proof}[Proof obligation]
+This is a candidate definition, not a theorem. Two steps required:
+(1) Show that $-\log\Omega(x)$ satisfies the defining properties
+of $\mathcal{I}$: non-negative, zero iff $x \in \mathcal{A}$, smooth.
+For $\Omega$ this requires $R(x) = \mathcal{A}$ when $x \in \mathcal{A}$
+(which is true) and $R(x) \subsetneq \mathcal{A}$ otherwise.
+(2) Verify consistency with the RSVP entropy field $S$. Since $S$
+encodes local accessibility density and $\Omega(x)$ is global
+reachability volume, they are related but not identical. The
+precise relationship is: $S(x) \sim -\nabla_x\log\Omega(x)$
+(accessibility gradient equals entropy gradient) is a conjecture
+requiring verification. \textbf{Until verified, present as
+candidate identity, not theorem.}
+\end{proof}
+
+\begin{claim}[Optimal Opacity] \textbf{(Sk)}
+The fitness functional $F(\Omega_M) = F_0 + \kappa\Omega_M -
+\eta\Omega_M^2$ has a maximum at $\Omega_M^* = \kappa/2\eta$,
+predicting that institutions under opacity selection converge to
+locally optimal rather than maximal opacity.
+\end{claim}
+\begin{proof}[Proof sketch --- from Institutional Attractors, §7.1]
+The optimum follows directly: $F'(\Omega_M) = \kappa - 2\eta\Omega_M
+= 0$ gives $\Omega_M^* = \kappa/2\eta$, and $F''(\Omega_M^*)
+= -2\eta < 0$ confirms it is a maximum. The systemic fragility
+corollary ($\Omega_M > \Omega_M^*$ implies internal coordination
+costs dominate) follows from the concavity. The 2008 financial
+crisis is cited as an instance: securitization opacity exceeded
+the institutional coordination threshold, making risk-modeling
+impossible from within.
+
+\textbf{Status upgraded from As to Sk.} The optimum derivation
+is complete. What remains unproved is the derivation of the
+quadratic fitness functional from first principles:
+(a) the linear term $\kappa\Omega_M$ must be derived from the
+replicator dynamics as the fitness advantage of external
+impermeability; (b) the quadratic term $-\eta\Omega_M^2$ must
+be derived from coordination-cost theory as the penalty for
+internal opacity. Without this derivation, the functional form
+is an ansatz, not a theorem. Provide derivation before
+Volume~IV (Simulated Agency / Institutional Attractors
+application) is finalized.
+\end{proof}
+
+% ================================================================
+\chapter{Equivalence Candidate Briefs}
+% ================================================================
+
+Each candidate receives a one-page formal brief establishing
+its status: \textbf{GE} (genuine equivalence), \textbf{CP}
+(common parent), or \textbf{SD} (shared dynamical form).
+
+\section{Candidate 1: The Admissibility Cluster}
+
+\begin{flybox}
+\textbf{Objects}: $\mathcal{A}$, $R(x)$, $\pi^{-1}(m)$,
+$\mathcal{P}$ (MEM\textbar{}8), $\Omega_t$ (Spherepop).
+
+\textbf{Verdict}: \textbf{CP} --- Common Parent Structure.
+
+\textbf{Argument}: The objects occupy different categorical levels.
+$R(x) \subseteq \mathcal{A}$: reachability is a dynamical subobject
+depending on a starting point. $\pi^{-1}(m) \subseteq X$: a fiber
+is an epistemic subobject depending on an observation. $\mathcal{P}$
+in MEM\textbar{}8: a historical subobject depending on an event
+sequence. $\Omega_t$ in Spherepop: a probability distribution, not
+a set. These are not the same object, and defining them identically
+would confuse dynamical accessibility, epistemic ambiguity, and
+historical possibility.
+
+\textbf{Correct claim}: All are generated from the admissibility
+structure $(\mathcal{S}, \mathcal{A}, g, \mathcal{I})$ by additional
+specifications. Volume~I defines the tuple; subsequent volumes specify
+which projection $\pi$, which starting state, and which event history
+they are working with.
+
+\textbf{Consequence}: No merger. Volume~I defines the parent structure;
+each downstream volume defines its specialized subobject by
+explicit construction.
+\end{flybox}
+
+\section{Candidate 2: The Projection Cluster}
+
+\begin{flybox}
+\textbf{Objects}: $\pi: X \to M$, rendering operator $\mathcal{R}$
+(CLIO), realization functor $F: \mathcal{H} \to \mathcal{C}$
+(Spherepop), coarse-graining map (RSVP-RG), compression maps
+(Semantic Infrastructure).
+
+\textbf{Verdict}: \textbf{CP} --- Common Parent, with important
+directionality distinction.
+
+\textbf{Argument}: The compression-direction maps (CLIO rendering,
+RSVP coarse-graining, semantic compression) are all instances of
+$\pi: X \to M$. The Spherepop realization functor goes in the
+opposite direction: from history (small) to state (large). It is
+closer to a \emph{section} $\sigma: M \to X$ than to $\pi$.
+
+\textbf{Correct claim}: All compression maps are instances of $\pi$.
+All reconstruction/realization maps are instances of $\sigma$ or the
+general recovery operator $\mathcal{Q}$. The two directions must
+not be conflated.
+
+\textbf{Consequence}: No merger. Use $\pi$ for compression, $\sigma$
+for section, $\mathcal{Q}$ for general recovery.
+\end{flybox}
+
+\section{Candidate 3: The Tension / Free Energy Cluster}
+
+\begin{flybox}
+\textbf{Objects}: $V(x,t)$ (Institutional Attractors), $F(q,o)$
+(Simulated Agency), $d(f(x),f^*)^2$ (Repair), $\Omega(\mathbf{z})$
+(HYDRA incoherence), $\mathcal{O}_\mathrm{merge}$ (Semantic
+Infrastructure).
+
+\textbf{Verdict}: \textbf{SD} --- Shared Dynamical Form, pending
+verification of Energy Functor.
+
+\textbf{Argument}: Every object in this cluster is the potential
+$\mathcal{I}$ in the gradient flow master equation for its respective
+framework. The formal spine document confirms this: every volume's
+master equation has the form $\dot{x} = -\nabla\mathcal{I} +
+\text{terms}$. This is more than analogy: the gradient flow structure
+is genuinely shared.
+
+\textbf{Pending}: Whether the individual $\mathcal{I}$ objects are
+related by coordinate change (genuine equivalence) or are genuinely
+independent potentials on genuinely different state spaces (shared
+form only) depends on whether the Energy Functor $\mathfrak{T}$
+exists and is faithful (see Candidate~9). If $\mathfrak{T}$ is
+confirmed, this cluster upgrades to \textbf{GE}.
+
+\textbf{Consequence}: Use $\mathcal{I}$ as the canonical symbol
+universally. Domain-specific names ($V$, $F$, $d^2$) become
+instantiation labels, not independent primitives.
+\end{flybox}
+
+\section{Candidate 4: The Collapse / Reconstruction Cluster}
+
+\begin{flybox}
+\textbf{Objects}: Reconstruction $\mathcal{Q}_\lambda$ (Vol.~I),
+ecphory $\mathcal{E}_\mathrm{cph}$ (cognitive), Collapse
+$\mathsf{Collapse}$ (Spherepop), MEM\textbar{}8 state recovery
+$s_n = \bigcap_i \mathcal{C}(e_i)$, repair morphism $R_\epsilon$.
+
+\textbf{Verdict}: \textbf{CP} --- Common Parent with different
+optimality criteria.
+
+\textbf{Argument}: All are instances of the general recovery
+operator $\mathcal{Q}: M \to X$ defined as a right inverse of
+$\pi$ under some optimality criterion. The criterion determines
+the specific operator:
+\begin{itemize}
+\item Tikhonov: minimize $\|x\|^2$ subject to $\pi(x) \approx m$
+\item Ecphory: maximize activation given viscosity-damped wave propagation
+\item Spherepop Collapse: functional composition
+  $T_{x_n} \circ \cdots \circ T_{x_1}(s_0)$
+\item MEM\textbar{}8: constraint intersection
+  $\bigcap_i \mathcal{C}(e_i)$
+\end{itemize}
+Note: the repair morphism $R_\epsilon$ is \emph{not} an instance of
+$\mathcal{Q}$. It operates on broken states in $\mathcal{S}$, not
+on observations in $M$. Repair does not invert a projection; it
+corrects a trajectory. Keep separate.
+
+\textbf{Consequence}: Define $\mathcal{Q}$ as a primitive with
+criterion as parameter. Each framework specifies its criterion.
+\end{flybox}
+
+\section{Candidate 5: The Reachability Cluster}
+
+\begin{flybox}
+\textbf{Objects}: Reachability volume $\Omega(x)$, social freedom
+$\mathcal{F}_\mathrm{soc} = \sum_i\mathrm{Vol}(\mathcal{A}_i)$,
+simulated reachability $\mathcal{R}(q)$, repair bound
+$\eta\mathcal{R}(x)$, diagnostic volume $V(t)$ (Self-Concealment),
+geometric invariance $\mathcal{G}(Q)$ (consciousness).
+
+\textbf{Verdict}: \textbf{SD} --- Shared Dynamical Form.
+
+\textbf{Argument}: All are instances of $\Omega(x) =
+\mathrm{Vol}(R(x))$ in different state spaces. Social freedom
+measures reachability in social configuration space. The diagnostic
+volume $V(t)$ measures reachability in the space of epistemological
+positions (the vantage points from which the mechanism can be
+identified). Geometric invariance $\mathcal{G}(Q)$ is conjectured
+to measure reachability in quale-state space.
+
+\textbf{Consequence}: Use $\Omega$ with appropriate subscripts
+identifying the state space. Unify under the reachability field
+$\mathfrak{R}(x)$ as a primitive if Candidate~8 is confirmed.
+\end{flybox}
+
+\section{Candidate 6: Cognitive Branch Sequence}
+
+\begin{flybox}
+\textbf{Objects}: CLIO, MEM\textbar{}8, Simulated Agency, HYDRA.
+
+\textbf{Verdict}: \textbf{CP} --- Common Parent, organized as
+coherent four-volume sequence, not merged into one volume.
+
+\textbf{Argument}: The objects are genuinely distinct. CLIO studies
+compression $\pi: X \to M$ and inference. MEM\textbar{}8 studies
+event sequences $H_t$. Simulated Agency studies trajectory
+optimization $\arg\max_a \mathbb{E}[\Omega]$. HYDRA studies
+distributed module coordination. The analogy is probability theory,
+statistics, decision theory, and control theory: shared substrate,
+pedagogically distinct.
+
+\textbf{Unifying formal object}: An agent is a tuple
+$(\mathcal{A}, \pi, \mu, \mathcal{G})$ where $\mathcal{A}$ is its
+admissibility space, $\pi$ its projection, $\mu$ its MEM\textbar{}8
+history, and $\mathcal{G}$ its generative model. Each volume adds
+one component to this tuple.
+
+\textbf{Consequence}: Four-volume sequence (Volumes III--VII in
+layer-centric curriculum). No merger.
+\end{flybox}
+
+\section{Candidate 7: Repair Scale Hierarchy}
+
+\begin{flybox}
+\textbf{Objects}: Ecphory (cognitive), Yarncrawler (semantic),
+Institutional Repair (social), Xylomorphic Repair (physical).
+
+\textbf{Verdict}: \textbf{SD} --- Shared Dynamical Form.
+
+\textbf{Argument}: All are instances of the repair morphism
+$R_\epsilon$ applied to different state spaces and domains. The
+condition $d\Omega/dt > 0$ is the universal characterization at
+all four scales.
+
+\textbf{Scale table}:
+\begin{center}
+\begin{tabular}{lll}
+Scale & Framework & Object repaired \\
+\hline
+Cognitive & Ecphory / MEM\textbar{}8 & Retrieval pathways \\
+Semantic & Yarncrawler / Sem.\ Infra. & Knowledge structures \\
+Institutional & Institutional Attractors & Institutional functions \\
+Physical & Xylomorphic & Physical infrastructure \\
+\end{tabular}
+\end{center}
+
+\textbf{Consequence}: Volume~VIII (Repair Theory) defines $R_\epsilon$
+canonically. All other volumes cite this definition and specify their
+domain-specific state space. This eliminates the central gap in
+Volume~VIII while providing the connective tissue for Volumes V,
+IX, and XII.
+\end{flybox}
+
+\section{Candidate 8: The Reachability Field}
+
+\begin{flybox}
+\textbf{Proposed object}: Reachability field $\mathfrak{R}(x)$
+as a primitive, with derived quantities $\Omega(x) =
+\mathrm{Vol}(\mathfrak{R}(x))$, $\mathcal{A}(x) = \log\Omega(x)$,
+$\mathcal{I}(x) = -\log\Omega(x)$.
+
+\textbf{Verdict}: \textbf{Promising but unconfirmed.}
+
+\textbf{Argument for}: The identification $\mathcal{I}(x) =
+-\log\Omega(x)$ unifies the tension landscape with the reachability
+structure. If confirmed, repair ($d\Omega/dt > 0$), collapse
+($d\Omega/dt < 0$), and agency ($\arg\max_a \mathbb{E}[\Omega]$)
+all become instances of one geometric condition.
+
+\textbf{Argument against (critical check)}: The RSVP entropy field
+$S(x)$ encodes local accessibility density and the reachability
+volume $\Omega(x)$ encodes global reachability. These are related
+but not identical. Specifically:
+$S(x) \sim -\nabla_x\log\Omega(x)$ is a gradient relationship
+(accessibility gradient = entropy gradient), not an identity.
+This means $\mathcal{I}(x) = -\log\Omega(x)$ must be verified
+to be consistent with the RSVP field equations before adoption.
+
+\textbf{Verification required}: Show that defining $\mathcal{I} =
+-\log\Omega$ produces RSVP-compatible dynamics under the gradient
+flow $\dot{x} = -\nabla\mathcal{I}$.
+
+\textbf{Status}: Candidate identity (Claim~\ref{claim:ident}).
+Present as conjecture until verified. Do not use as a theorem.
+\end{flybox}
+
+\section{Candidate 9: The Energy Functor}
+
+\begin{flybox}
+\textbf{Proposed object}: A functor $\mathfrak{T}:
+\mathbf{Frameworks} \to \mathbf{EnergyLandscapes}$.
+
+\textbf{Verdict}: \textbf{Philosophical proposal. Highest priority
+for Volume XV.}
+
+\textbf{Formal construction required}:
+
+\noindent\textbf{Category $\mathbf{Frameworks}$}:
+\begin{itemize}[nosep]
+\item Objects: Flyxion frameworks $\mathcal{F} =
+  (\mathcal{S}_\mathcal{F}, \mathcal{A}_\mathcal{F},
+  g_\mathcal{F}, \mathcal{I}_\mathcal{F})$.
+\item Morphisms: Admissibility-preserving smooth maps
+  $\phi: \mathcal{S}_{\mathcal{F}_1} \to \mathcal{S}_{\mathcal{F}_2}$
+  with $\phi(\mathcal{A}_{\mathcal{F}_1}) \subseteq
+  \mathcal{A}_{\mathcal{F}_2}$.
+\end{itemize}
+
+\noindent\textbf{Category $\mathbf{EnergyLandscapes}$}:
+\begin{itemize}[nosep]
+\item Objects: Pairs $(\mathcal{S}, \mathcal{I})$.
+\item Morphisms: Smooth $f: \mathcal{S}_1 \to \mathcal{S}_2$
+  satisfying $\mathcal{I}_2(f(x)) \leq \mathcal{I}_1(x)$
+  (inadmissibility non-increasing).
+\end{itemize}
+
+\noindent\textbf{Functor $\mathfrak{T}$}: $\mathfrak{T}(\mathcal{F})
+= (\mathcal{S}_\mathcal{F}, \mathcal{I}_\mathcal{F})$; morphisms
+map to the corresponding smooth maps on state spaces.
+
+\textbf{What must be proved}:
+(a) $\mathfrak{T}$ is well-defined (morphisms in
+$\mathbf{Frameworks}$ map to morphisms in $\mathbf{EnergyLandscapes}$).
+(b) $\mathfrak{T}$ is faithful (distinct frameworks give distinct
+energy landscapes, i.e., the functor detects framework differences).
+(c) $\mathfrak{T}$ is full (every admissibility-preserving map
+between landscapes arises from a framework morphism).
+
+\textbf{Consequence if confirmed}: Volume~XV is a theorem about
+equivalence classes under $\mathfrak{T}$, not a narrative synthesis.
+Frameworks $\mathcal{F}_1 \cong \mathcal{F}_2$ (same up to
+morphism) iff $\mathfrak{T}(\mathcal{F}_1) \cong
+\mathfrak{T}(\mathcal{F}_2)$ in $\mathbf{EnergyLandscapes}$.
+
+\textbf{Status}: Define the categories formally. Prove (a) first.
+(b) and (c) may require additional structure on $\mathbf{Frameworks}$.
+\end{flybox}
+
+% ================================================================
+\chapter{The Master Claim and Path-Action Transition}
+% ================================================================
+
+\section{Two Levels of the Master Claim}
+
+The corpus supports two formulations of the Master Claim at
+different levels of generality.
+
+\begin{masterbox}
+\textbf{Master Claim, Level 1 (State-Functional Form)}:
+
+For any Flyxion framework $\mathcal{F}$ with state space
+$\mathcal{S}_\mathcal{F}$, admissibility space
+$\mathcal{A}_\mathcal{F}$, metric $g_\mathcal{F}$, and
+inadmissibility functional $\mathcal{I}_\mathcal{F}$, the
+dynamics of $\mathcal{F}$ are governed by:
+\[
+\frac{dx}{dt} = -\nabla_{g_\mathcal{F}}
+\mathcal{I}_\mathcal{F}(x) + \xi_t + \text{source terms},
+\]
+where $\xi_t$ is exploratory noise and source terms are
+framework-specific.
+
+\textbf{Status}: Confirmed as a structural organizing principle
+by the formal spine document. Not yet a theorem because
+``source terms'' are framework-specific and $\mathcal{I}_\mathcal{F}$
+is derived from each framework rather than axiomatically imposed.
+Becomes a theorem if the Energy Functor $\mathfrak{T}$ is proved
+faithful.
+\end{masterbox}
+
+\begin{masterbox}
+\textbf{Master Claim, Level 2 (Path-Variational Form)}:
+
+For any Flyxion framework $\mathcal{F}$ whose dynamics are
+path-dependent (Spherepop, MEM\textbar{}8, Agency, Repair,
+Yarncrawler, TARTAN, HYDRA), the dynamics are governed by:
+\[
+\gamma^* = \operatorname{arg\,ext}_{\gamma \in \Gamma
+(\mathcal{A}_\mathcal{F})} \mathcal{J}_\mathcal{F}[\gamma]
+\]
+where $\mathcal{J}_\mathcal{F}[\gamma] = \int_0^T
+L_\mathcal{F}(\gamma,\dot\gamma,t)\,dt$ for a framework-specific
+path Lagrangian $L_\mathcal{F}$.
+
+\textbf{Status}: Structural claim. Level~2 subsumes Level~1 as
+a special case.
+\end{masterbox}
+
+\section{Relationship Between the Two Levels}
+
+\begin{proposition}[Level 1 as Special Case of Level 2]
+Level~1 (gradient flow) is a special case of Level~2 (path
+variational) when the path Lagrangian takes the form
+$L(\gamma,\dot\gamma) = \frac{1}{2}g_{ij}\dot\gamma^i\dot\gamma^j
++ \mathcal{I}(\gamma)$
+and boundary conditions $\gamma(0) = x_0$, $\gamma(T)$ free.
+\end{proposition}
+\begin{proof}
+The Euler-Lagrange equations for this $L$ are:
+$g_{ij}\ddot\gamma^j + \Gamma^i_{jk}\dot\gamma^j\dot\gamma^k
+= -\nabla^i_g \mathcal{I}(\gamma)$,
+which in the overdamped limit ($\ddot\gamma \to 0$) reduce to
+$\dot\gamma^i = -g^{ij}\partial_j\mathcal{I}$, the gradient flow.
+\end{proof}
+
+\begin{warningbox}
+\textbf{Critical asymmetry}: Level~2 does NOT reduce to Level~1 in
+general. For path-action frameworks with irreversibility or
+history-dependence (Spherepop, MEM\textbar{}8), the Lagrangian
+encodes non-local path properties that cannot be expressed as
+the gradient of any state functional. The proof strategy for
+Volume~XV must use Euler-Lagrange arguments for these frameworks,
+not gradient flow arguments. These are different proofs, not one
+proof with two cases.
+\end{warningbox}
+
+\section{The Five-Level Hierarchy}
+
+\begin{longtable}{p{0.5cm}p{3cm}p{3.5cm}p{5.5cm}}
+\toprule
+\textbf{L} & \textbf{Object} & \textbf{Symbol} & \textbf{Where frameworks diverge} \\
+\midrule
+0 & State spaces & $\mathcal{S}$ & All frameworks share this level \\
+1 & Admissibility & $\mathcal{A} \subseteq \mathcal{S}$ & All frameworks share this level \\
+2 & Trajectory spaces & $\Gamma(\mathcal{A})$ & \textbf{Branching point}. State-functional
+  frameworks (RSVP, CLIO) do not require $\Gamma$. Path-action frameworks define their
+  core objects here. \\
+3 & Projection & $\pi: X \to M$ & Observation frameworks (CLIO, Agency) add this. \\
+4 & Energy functionals & $\mathcal{I}$ & Different frameworks instantiate with different
+  $\mathcal{I}$. Candidate~3 claims these are instances of one object. \\
+5 & Dynamics & $\dot x = -\nabla_g \mathcal{I}$ & The master equation; special case of
+  path variational. \\
+\bottomrule
+\end{longtable}
+
+\section{Proof Obligations for Volume XV}
+
+Volume~XV earns its place if and only if it proves that the
+frameworks are related by explicit morphisms, not merely
+analogous. The following proof obligations must all be discharged:
+
+\medskip
+\begin{enumerate}[leftmargin=1.5em]
+\item \textbf{Construct $\mathbf{Frameworks}$ and
+  $\mathbf{EnergyLandscapes}$} as formal categories (see
+  Candidate~9 brief).
+
+\item \textbf{Define $\mathfrak{T}$ explicitly} on objects and
+  morphisms and verify it is a functor (preserves identity
+  morphisms and composition).
+
+\item \textbf{Prove $\mathfrak{T}$ is faithful}: if
+  $\mathfrak{T}(\phi_1) = \mathfrak{T}(\phi_2)$ for morphisms
+  $\phi_1, \phi_2: \mathcal{F}_1 \to \mathcal{F}_2$, then
+  $\phi_1 = \phi_2$.
+
+\item \textbf{Classify equivalence classes} under $\mathfrak{T}$:
+  which frameworks are isomorphic in $\mathbf{EnergyLandscapes}$?
+
+\item \textbf{State the synthesis theorem}:
+
+\begin{center}
+\fbox{\parbox{0.8\textwidth}{
+Every persistent Flyxion system can be represented as an
+admissibility-preserving transformation process. The category
+of Flyxion frameworks embeds into $\mathbf{EnergyLandscapes}$
+via the Energy Functor $\mathfrak{T}$, and frameworks
+$\mathcal{F}_1 \cong \mathcal{F}_2$ iff
+$\mathfrak{T}(\mathcal{F}_1) \cong \mathfrak{T}(\mathcal{F}_2)$.
+}}
+\end{center}
+
+\item \textbf{Handle path-action frameworks}: the synthesis theorem
+  must cover path-variational systems (Level~2 master claim), not
+  only gradient flows (Level~1). This requires either extending
+  $\mathbf{EnergyLandscapes}$ to include path Lagrangians as
+  objects, or proving that every path-action framework has an
+  equivalent state-functional reformulation (which is false in
+  general, see §5.2).
+\end{enumerate}
+
+\section{What the Path-Action Transition Changes}
+
+The recognition that the corpus contains both state-functional and
+path-action frameworks has immediate consequences for Volume
+organization:
+
+\medskip
+\begin{longtable}{p{4cm}lp{6.5cm}}
+\toprule
+\textbf{Framework} & \textbf{Form} & \textbf{Consequence for writing} \\
+\midrule
+RSVP & State & PDE-based; gradient flow language appropriate \\
+CLIO & State & Fiber navigation; projection language appropriate \\
+Spherepop & Path & Event irreversibility; Lagrangian
+  $L = -\log p(e_t|H_t)$ \\
+MEM\textbar{}8 & Path & History as primary object; Euler-Lagrange
+  for viscous wave \\
+Agency & Path & Trajectory selection;
+  $\arg\max \mathbb{E}[\Omega(\gamma(T))]$ \\
+Repair & Path & Trajectory correction; $L_\mathrm{rep}$ Lagrangian \\
+Ecphory & Path & Wave propagation; activation threshold \\
+Yarncrawler & Path & Route completion; divergence control \\
+TARTAN & Path & Trajectory preservation; decomposition \\
+Coordination & Mixed & Phase states; synchronization is path property \\
+\bottomrule
+\end{longtable}
+
+% ================================================================
+\chapter*{Closing Note: When Writing May Begin}
+\addcontentsline{toc}{chapter}{Closing Note}
+% ================================================================
+
+Volume~0 is complete when the following have been addressed:
+
+\begin{enumerate}
+\item The symbol table in Chapter~1 has been adopted universally.
+  All existing documents have been updated to use canonical symbols.
+
+\item Every result flagged \textbf{As} in Chapter~3 has been
+  either (a) provided with a proof or proof sketch, (b) downgraded
+  to \textbf{Ph} (philosophical proposal), or (c) removed from
+  the volumes that depend on it.
+
+\item The foundational claims have been resolved as follows:
+  the Reachability Principle (Claim~\ref{claim:rp}) is now
+  \textbf{Sk} --- the contraction-rate exponential decay argument
+  in Institutional Attractors Appendix~A constitutes a sketch,
+  with two proof gaps remaining (necessity vs.\ sufficiency of
+  $\Lambda \leq 0$, and universality across objective classes).
+  The Reachability-Inadmissibility Identity (Claim~\ref{claim:ident})
+  remains \textbf{As} and must be verified against the RSVP $S$ field
+  before adoption. The Optimal Opacity claim is now \textbf{Sk} ---
+  the optimum derivation is complete; the functional form derivation
+  from first principles is the remaining obligation. The AI
+  Convergence Certification (Claim~\ref{claim:ai-cert}) is newly
+  added with status \textbf{As}; sufficiency of the three-condition
+  conjunction must be proved before Volume~III is finalized.
+
+\item The repair morphism (Definition~\ref{def:repair}) has been
+  given a satisfying construction: either an explicit flow map or
+  a proof that the repair Lagrangian Euler-Lagrange equations are
+  well-posed.
+
+\item The Equivalence Candidate briefs in Chapter~4 have been
+  reviewed and their verdicts adopted as the canonical position.
+  In particular: Candidate~1 is a common parent (not an
+  equivalence); Candidates~3 and~5 are shared dynamical forms
+  pending the Energy Functor; Candidate~9 is a philosophical
+  proposal requiring formal construction.
+
+\item The proof obligations for Volume~XV listed in §5.4 have
+  been reviewed and a research plan for each has been assigned.
+\end{enumerate}
+
+\begin{warningbox}
+None of the fifteen volumes should be submitted for publication
+until Volume~0 is complete and all items above are resolved.
+This is not a bureaucratic requirement. It is the condition under
+which the fifteen volumes form a coherent field rather than a
+library of theories.
+\end{warningbox}
+
+% ================================================================
+\end{document}
+% ================================================================

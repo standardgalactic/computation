@@ -1,0 +1,457 @@
+start	end	text
+0	5160	okay let's um let's just unpack this right out of the gate have you ever actually thought about
+5160	10580	what your brain is doing when it you know ignores the chaotic mess of the world and just sees a tree
+10580	15500	or like a car right it's something we do so automatically we never even question it exactly
+15500	20280	i mean if you really stop and look around you right now wherever you are listening to this
+20280	27060	the sheer amount of sensory data flooding into your eyes and ears is just it's staggering oh
+27060	32640	absolutely it's overwhelming yeah there are like millions of photons bouncing off different
+32640	38280	textures subtle gradients of light individual leaves trembling in the wind you've got overlapping sound
+38280	43680	waves from i don't know distant traffic the hum of a refrigerator the rustle of your own clothes
+43680	52160	it is an absolute unmitigated chaotic mess of raw data raw data yes and yet you don't experience it
+52160	57100	like that you don't walk down the street completely paralyzed by the infinite complexity of reality
+57100	64240	your brain somehow almost instantly strips away almost all of that information and serves you this
+64240	71700	neat tidy little package who just says hey that's a tree or watch out that's a car and it is a profound
+71700	77940	neurological feat we take it entirely for granted because well because it happens automatically but
+77940	84740	that process of siltering of reducing the infinite down to the manageable is literally the foundation of our
+84740	90600	ability to function i mean without it cognition would just shatter completely shatter right and the term we
+90600	96300	generally apply to this process is abstraction abstraction yeah which is you know it's a word we throw around
+96300	100360	all the time usually when we're talking about like modern art or trying to get out of a tedious
+100360	106600	conversation about spreadsheet formatting true but today we are going on a deep dive into a text
+106600	113220	that is going to fundamentally rewire how you view that concept yeah and i am not exaggerating when
+113220	117120	i say this might change the way you look at everything from your computer to your society to
+117120	121940	your own identity it really is that expansive yeah so our sole source for today's deep dive is this
+121940	130260	dense incredibly revolutionary 2026 monograph it's by an author named flixion and it's titled abstraction
+130260	137560	as reduction a unified account of evaluation structure and proof and it is just a monumental
+137560	144160	piece of work the scope of what the author attempts here and honestly arguably succeeds at is breathtaking
+144160	151020	what we are looking at is an attempt to unify several completely disparate fields of human knowledge
+151020	158700	under one single underlying structural mechanism right and the mission of our deep dive today is to take this
+158700	165420	massive intimidating mathematical and philosophical text and just sort of extract the core paradigm
+165420	170340	shift it offers because flixion argues that we have been completely misunderstanding what abstraction
+170340	175300	actually is fundamentally misunderstanding it right because if i ask you the listener what abstraction
+175300	179940	means you'd probably say it's a mental shortcut a way to hide complicated details like i don't know
+179940	184000	throwing a tarp over a messy pile of machinery so you don't have to look at all the gears in greece which is
+184000	189540	the classic definition we're taught exactly but this monograph argues that abstraction is not hiding
+189540	196360	at all it is a literal physical and computational execution of the world and the stakes here are just
+196360	203820	fascinating because what we are going to do today is trace a single unbroken mathematical line starting
+203820	209020	from elementary school algebra moving through the architecture of computer chips into the ethical
+209020	214200	physical treatment of human beings and culminating in the geometric shape of your own identity
+214200	221300	it's wild it really is the author proves that these aren't just analogous concepts or like poetic metaphors
+221300	229020	they are structurally mathematically identical processes okay so let's start by dismantling that basic assumption
+229020	235440	we just talked about if you think abstraction is just putting a complex mechanism in a black box the monograph
+235440	241840	argues you were entirely wrong we are taught this all the time especially in fields like computer science
+241840	246520	or engineering people always say just abstract it away right right put it in a box ignore what's inside
+246520	251780	just look at the label on the outside exactly but fliction says this pedagogical story is a total failure
+251780	258560	abstraction isn't the negation of detail no to abstract is to evaluate it is a reduction and the text
+258560	264660	begins by grounding this entire thesis in one of the purest most austere forms of computation we have
+264660	269980	which is the lambda calculus okay i have to admit when i saw the math start appearing in the first
+269980	275620	chapter my eyes glazed over for a second so for those of us who aren't knee-deep in theoretical computer
+275620	282820	science what exactly is the lambda calculus and why is the author starting there so it was invented in
+282820	288700	the 1930s by alonzo church he was a logician who was trying to formalize the concept of mathematical
+288700	295140	computation itself and what makes the lambda calculus so remarkable is its poverty its poverty
+295140	301440	yeah it has no primitive data types no numbers no strings no booleans it has no loops no arrays no
+301440	306040	memory storage nothing like that wow okay so what does it have it consists entirely of variables
+306040	311180	functions and the application of those functions that's it it is computation stripped down to its
+311180	316200	absolute bare bones if you want to understand the true nature of computation you look at it in this
+316200	322400	completely sterile minimalist environment okay so how does this austere environment prove that
+322400	326780	abstraction isn't just hiding things under a tarp well because in the lambda calculus you have these
+326780	332380	structures called redexes which stands for reducible expressions you can think of a redex as a pending
+332380	338100	computational obligation a pending obligation i like that right it's a piece of code a mathematical
+338100	343900	phrase that hasn't finished doing its job yet it contains internal dependencies that have yet to be
+343900	349980	resolved now to move forward the system must perform what is called beta reduction it systematically
+349980	356780	executes these obligations it substitutes variables it resolves dependencies and churns through the logic
+356780	362760	step by step so it's actively doing the work it's not ignoring the messy details it's literally churning
+362760	368620	through them yes exactly and the crucial part affliction's argument centers on what happens at the end of that
+368620	374540	process if the computation terminates meaning it doesn't just loop infinitely you eventually reach
+374540	381580	a state called a normal form a normal form right a normal form is a term where no more redexes remain
+381580	387900	every single internal obligation has been completely resolved and stabilized there is no more work left to do
+387900	394380	and the text argues that this exact moment the achievement of the normal form is the only conceptual point
+394380	399820	at which abstraction becomes legitimate precisely a computation only becomes abstract when it has paid
+399820	406140	all its internal debts the complexity wasn't shoved into a closet and ignored the complexity was fully
+406140	410940	rigorously worked through until it settled into a mathematically stable state okay so the surface
+410940	416700	of an abstraction only becomes available to us because the depth has been fully executed yes a normal
+416700	421500	form is a complete abstraction you can take that normal form and use it as a building block in larger more
+421500	426620	complex structures not because it lacks internal complexity but because that complexity is finished
+426620	432860	that makes so much sense let's try to ground this for you the listener right now think back to doing
+432860	439180	your high school algebra homework maybe it wasn't your favorite memory but bear with me here imagine a
+439180	446380	simple linear equation written on a piece of notebook paper let's say 3x plus 5 equals 20. it's a classic
+446380	451420	constraint satisfaction problem and a perfect parallel to what we just discussed right so when you
+451420	457020	are sitting there at your kitchen table pencil in hand staring at that equation you are not just
+457020	462780	blindly moving symbols around according to arbitrary rules according to this monograph you are literally
+462780	469260	acting as a parser an interpreter and a compiler i love the way the author phrases this in that moment
+469260	475580	the student is a distributed embodied implementation of a reduction engine i love that phrasing too it's so
+475580	482700	cool so you look at 3x plus 5 equals 20. that whole line is an unresolved obligation in church's terms
+482700	488620	it's a redex it has a dependency that needs resolving so what do you do you perform a reduction you subtract
+488620	495340	5 from both sides of the equation now on the next line you write 3x equals 15. that new line is a normal
+495340	499820	form relative to the line above it you've eliminated one dependency you've stabilized the equation just a
+499820	505820	little bit more the system has cooled down by one degree essentially yes then you do it again you
+505820	511180	look at 3x equals 15 and you divide both sides by three you draw a line at the bottom of the page you
+511180	518060	write x equals five you have just reached the final normal form there are no more operations to perform
+518060	522460	and you know think about how your math teacher was always yelling at you to show your work why do they
+522460	527820	care because showing your work is literally just exposing the intermediate computational reductions it's
+527820	533340	exposing the trace of the execution when a student tries to skip steps and just writes the final
+533340	538860	answer down they are performing the exact same reductions in their head but they are withholding
+538860	545740	that trace from the teacher they are abstracting the process and the final answer x equals five is an
+545740	551100	abstraction it is a highly stable compressed package of meaning you can now take that five and plug it
+551100	556940	into a completely different equation on the next page of your homework but it only works it only serves as
+556940	562220	a valid abstraction because you actually perform the internal evaluation to get there you didn't
+562220	569020	just hide the 3x plus 5 you executed it that is the core difference if abstraction were merely hiding
+569020	575980	you could just draw a box around 3x plus 5 equals 20 label it equation one and try to plug that entire
+575980	582060	unresolved mess into another formula which would be a disaster a complete disaster the result would be a
+582060	589260	chaotic unmanageable proliferation of dependencies the system would choke true abstraction requires the
+589260	594060	furnace of execution okay see where the author is going but i have to test my understanding here
+594060	599020	because i feel like this definition breaks down outside of strict mathematics okay let's hear it let's
+599020	606060	say i read a dense 500 page historical biography a week later we get coffee and i summarize the entire book
+606060	611580	for you in three sentences i am not executing that book in the same way a computer executes a program
+611580	617260	i'm just leaving things out right i'm taking a big thing and making it smaller by deleting the details
+617260	623580	isn't that what abstraction is for most of us in our daily lives it's a very common intuition and fliction
+623580	630540	actually explicitly anticipates this counter argument in the text the monograph argues that true abstraction
+630540	637420	even in human cognition is never just arbitrary deletion it uses this great term epistemic compression
+637420	642620	epistemic compression okay so when you summarize that 500 page book effectively you aren't just
+642620	648860	taking a pair of scissors to the pages and randomly throwing away 99 of the paper you are engaging in an
+648860	655100	incredibly complex active process you read the text you digest the historical timeline you understand
+655100	660220	the character arcs you evaluate the underlying themes and then your brain finds the invariant structure
+660220	665500	that survives all of that processing the variant structure so like the load-bearing walls of the
+665500	670060	narrative so to speak exactly you eliminate the details that do not affect the core structural
+670060	674780	interactions of the story the intermediate complexity you know the descriptive paragraphs about the
+674780	680220	weather the minor subplots about peripheral characters it hasn't just disappeared into the void
+680220	686220	it was executed by your cognitive machinery to yield a stable compressed form which is your three
+686220	693100	sentence summary ah so the idea is that my brain did the beta reduction i processed the redexes of the
+693100	700780	subplots until i found the normal form of the main plot yes consider the alternative if you just arbitrarily
+700780	706700	deleted 499 pages and handed me one random page from the middle of the book that wouldn't be a summary
+706700	711580	it wouldn't be an abstraction it would just be a fragment right it wouldn't make any sense an abstraction
+711580	717420	works yeah it conveys the meaning of the book to me over coffee precisely because the underlying
+717420	723260	computation was completed by you you did the work which allows you to discard the scaffolding
+723260	729820	and keep the structural essence the summary is the normal form of the book man that actually clarifies a
+729820	735820	lot so if everything is just executing dependencies to reach a normal form what happens when two of those
+735820	741580	normal forms bump into each other in the real world like once a computation or a thought or a summary is
+741580	746300	fully executed and stabilized how does it interact with the rest of the universe i mean it can't just
+746300	751660	float and avoid it needs some kind of boundary and this naturally leads to the second major movement of
+751660	758300	the text which is the architecture of affordances once we have a stable normal form how does it compose
+758300	764780	with other stable forms this requires us to look at interfaces and to illustrate this ontological shift
+764780	769740	flicksheen turns to the architecture of programming languages yeah the text sets up a battle between
+769740	774060	two different ways of looking at objects and software and it makes the case this translates
+774060	780300	perfectly to how we look at objects in the real world we have object-oriented programming or oop
+780940	786300	and we have interface-based programming and i gotta say flicksheen does not hold back on oop the text
+786300	792460	basically calls it an ontological failure it is a rather scathing critique honestly so in object-oriented
+792460	797420	programming which has dominated software engineering for decades you build systems based on inheritance
+797420	803260	hierarchies you define objects by their ancestry for example you might create a class called animal and
+803260	808780	then you create a subclass called mammal which inherits from animal then you create a subclass called dog
+808780	814780	which inherits from mammal the logic is that a dog is a mammal and therefore it inherits all the
+814780	821580	properties data and methods of an animal it inherits the source code of its ancestors like if an animal has an
+821580	827020	attribute called metabolism the dog automatically gets metabolism even if the specific program you
+827020	832620	were writing never once cares about the dog's metabolism that is exactly the flaw affliction points
+832620	839340	out by defining a thing by its ancestry and its internal substance oop forces the object to carry around
+839340	845900	a massive compounding amount of irrelevant historical detail the subclass accumulates obligations and data
+845900	851580	structures it might not even need for the task at hand the text refers to this as the reification of
+851580	856940	irrelevant detail you are defining an object by what it is made of and where it came from rather than
+856940	862060	by what it actually does it's like judging someone entirely based on their family tree instead of their own
+862060	866940	actions you're forcing them to carry the baggage of their great-grandparents just to get a job it feels
+866940	874620	very i don't know heavy it is the exact opposite of reduction it proliferates complexity but the text contrasts
+874620	879820	this with languages like haskell or the use of interfaces in more modern functional programming
+880540	886620	in an interface-based paradigm a type is not defined by its internal constitution or its ancestry
+886620	892780	it is defined purely by its behavioral contracts its affordances affordances that's such a great word
+892780	897900	let's break down what an affordance is in this context it basically means an interface defines an
+897900	903340	entity purely by what it can do what it permits other things to do with it right so in software
+903340	908300	something might be defined as drawable not because it has a specific sequence of ancestral code but
+908300	913340	simply because it fulfills the contract of being drawn on a screen like a geometric shape is drawable
+913340	917820	a line of text is drawable an image file is drawable they have entirely different internal mechanisms
+917820	923820	and absolutely no shared ancestry but they share the same affordance yes and to elevate this beyond
+923820	930620	software the monograph brings in category theory to formalize this concept oh boy and category theory is
+930620	936860	notorious for being some of the most abstract insanely complex map out there how does the author use it
+936860	942940	here without losing the reader entirely it's a fair point but fliction uses it quite elegantly by focusing
+942940	949100	on its core philosophical implication in traditional set theory you look inside a set to see what elements
+949100	955340	it contains you define it by its internal guts but in category theory an object is treated as completely opaque
+955340	960540	it doesn't come with a description of its internal substance it is simply a node in a structure its
+960540	966700	entire identity mathematically speaking is exhausted by its morphisms exhausted by its morphisms okay let's
+966700	973420	translate that what is a morphism a morphism is an arrow it is a relationship a transformation
+973420	981420	an interaction between two objects imagine a city's subway map if you were looking at a station on the map you
+981420	985740	don't need to know what the station is made of whether it's concrete or steel or what color the tiles
+985740	990700	are you define the station entirely by the lines that connect to it the trains that pass through it
+990700	996300	where you can go from there those connections are the morphisms oh that makes perfect sense yeah and
+996300	1001180	category theory says that if you know every single arrow going into and coming out of an object
+1001180	1006220	you know absolutely everything there is to know about that object so the inside is permanently hidden
+1006220	1013260	but the boundary the interface is where existence actually happens yes to design an interface is to
+1013260	1018540	make a profound philosophical claim about the world you are asserting that the being of a thing is
+1018540	1024700	determined by the roles it occupies and the transformations it sustains in relation to other things not by its
+1024700	1030220	hidden internal mechanics wow so let's apply this to you the listener what does this mean for you it means
+1030220	1035100	that functionally and ontologically you aren't defined by your source code you aren't defined by your
+1035100	1040380	past baggage or the arbitrary hierarchy you were born into or even the internal monologue you have with
+1040380	1046140	yourself that nobody else hears you were defined by your interfaces you were defined by your affordances
+1046140	1051020	how you interact with the world around you right now what you permit the relationships you sustain
+1051020	1057020	the promises you fulfill it is a deeply relational metaphysics to be is to participate through an
+1057020	1063500	interface the interface is the semi-permeable boundary where your internal executed complexity your normal form
+1063500	1068700	meets the external world and interoperability whether we are talking about software modules
+1068700	1073980	communicating or human beings empathizing with each other is simply the alignment of those interfaces
+1073980	1079980	it is shared ontology that is incredibly empowering it means we have agency over the interfaces we project
+1080700	1085020	but i know what a skeptical listener is thinking right now because honestly i was thinking it too
+1085020	1091340	while reading this is all very beautiful philosophy and it works great in the realm of math and software code
+1091340	1097980	but is it real like is the physical universe actually operating this way or is this just a neat conceptual
+1097980	1104700	metaphor we've invented and that is the exact question flick shin addresses next the monograph proves that this
+1104700	1111420	principle of abstraction as executed reduction isn't just a mental trick it is literally baked into
+1111420	1119180	physical hardware and the fundamental laws of logic the text shifts into an exploration of the physics of stabilization
+1119180	1124780	right let's get into the hardware the text talks about something called null convention logic or ncl and
+1124780	1128940	asynchronous dual rail circuits this was one of the most fascinating parts of the book for me it's
+1128940	1134380	brilliant let's break down how a normal computer chip works first just to set the baseline in your
+1134380	1140780	standard laptop a bit of data is a one or zero it travels on a single physical wire and the whole
+1140780	1147740	system is governed by a master clock it's a literal crystal oscillator ticking away tick tick tick billions of times a
+1147740	1154540	second that clock tells every component in the system exactly when to look at the wire and read the
+1154540	1160860	one or the zero exactly it assumes that between the ticks of the clock the signal has arrived and stabilized
+1160860	1166380	but in an asynchronous dual rail circuit there is no master clock the system is completely decentralized
+1166380	1171580	there is no global timekeeper telling components when to read data because of this a single bit of
+1171580	1177420	information requires two physical wires rail zero and rail one wait two wires for one bit why
+1177420	1182300	because if the system wants to send a logical zero it asserts voltage on rail zero if it wants
+1182300	1186780	to send a logical one it asserts voltage on rail one but because there is no clock telling the next
+1186780	1190940	component down the line when to read the signal there has to be a physical way for the receiving
+1190940	1195980	component to know if the computation is actually finished right and this is where it connects back to the
+1195980	1203260	lambda calculus what happens if neither wire has voltage what if neither rail is asserted if neither rail is
+1203260	1210460	asserted the signal is physically considered incomplete it is the hardware equivalent of a redex it means the
+1210460	1215820	internal circuitry further up the line is still grinding away it's still executing its internal
+1215820	1221100	obligations it's still computing and the kicker is that the rest of the circuit literally has to wait
+1221660	1228540	it cannot proceed abstraction in this physical hardware only occurs at the exact microscopic moment of
+1228540	1235020	stabilization once exactly one of those rails fires say rail one gets voltage the value becomes
+1235020	1240460	determinate the inner complexity is settled and only then is the outer circuit permitted to treat that
+1240460	1246700	signal as a simple abstract one it proves that the system must physically electrically stabilize before
+1246700	1253260	it can be abstracted you cannot abstract an incomplete computation the physics simply won't allow it i love this
+1253260	1259340	think about a busy restaurant kitchen that is our asynchronous dual rail circuit imagine a waiter
+1259340	1264620	standing at the pass waiting for a dish the waiter represents the outer circuit the rest of the system
+1264620	1270380	waiting for the data inside the kitchen the chef is chopping onions sauteing meat reducing a sauce
+1270380	1276940	plating the food that is the incomplete state it's chaotic it's complex it's a redex the waiter cannot simply
+1276940	1282300	grab the pan while the sauce is still reducing exactly the waiter literally has to wait finally the chef
+1282300	1288060	finishes they wipe the rim of the plate set it on the counter and ring the bell ding that bell is
+1288060	1293500	stabilization at that exact moment all the chaotic complexity of the cooking process the heat the
+1293500	1299420	timing the mess is abstracted away the waiter just picks up a finished unit table four is ordered they
+1299420	1303740	don't need to know how the sauce was reduced they only interact with the final affordance of the plate
+1303740	1309980	but the crucial part is you cannot abstract an unfinished meal the bell has to ring it is a brilliant
+1309980	1315580	analogy the interface between the kitchen and the dining room relies entirely on that stabilization
+1316220	1324060	and what fliction does next is link this physical hardware reality directly to pure logic through
+1324060	1329100	something called the curry howard correspondence okay this was the part that absolutely blew my mind
+1329740	1335660	propositions as types proofs as programs can we explore the history of this a little bit yeah because
+1335660	1340940	it sounds like magic it is arguably one of the deepest structural bridges ever discovered in
+1340940	1346780	mathematics in the mid-20th century logicians like haskell curry and william howard noticed a bizarre
+1346780	1352460	coincidence the mathematical symbols and rules they were using to write logical proofs were structurally
+1352460	1357020	identical to the symbols and rules computer scientists were using to write computer programs
+1357020	1362620	it wasn't just a similarity it was an exact isomorphism so writing mathematical proof and writing a computer
+1362620	1368220	program are literally the exact same activity just expressed in two different languages yes in this
+1368220	1374140	correspondence a logical proposition like a statement you want to prove is true is exactly the same thing as
+1374140	1379900	a type in programming and the proof of that proposition is exactly the same thing as a computer program that
+1379900	1386940	inhabits that type to prove a theorem is to write a program that successfully compiles proving something
+1386940	1394220	is computing something that is wild and how does flixion use this correspondence to cement the idea of
+1394220	1400460	abstraction as reduction by focusing on a specific theorem within logic known as genson's cut elimination
+1400460	1406620	theorem in mathematical logic making a cut is essentially taking a detour if you are trying to prove a
+1406620	1413340	leads to c you might insert a lemma an intermediate step b you prove a leads to b and b leads to c that b is
+1413340	1418220	the cut it's a shortcut to get to your conclusion faster it's like um borrowing a tool from a
+1418220	1422620	neighbor to finish building a shed but then you have to prove you had the right to borrow the tool
+1422620	1426860	and the neighbor has to prove they owned it it introduces secondary obligations that's a really
+1426860	1433340	good way to look at it but gerhard genson proved that any proof that contains these detours these cuts
+1433340	1440140	can be systematically transformed into a direct cut-free proof a normalized proof and through the lens of
+1440140	1444940	the curry howard correspondence what the monograph points out is that eliminating these cuts is the
+1444940	1451660	exact same computational process as executing a program a proof with cuts is an unexecuted program
+1451660	1457580	with pending redexes normalizing the proof executes those obligations away so whether we are looking at
+1457580	1462380	the math of lambda calculus the physical voltage of a computer chip or the pure logic of a mathematical
+1462380	1469500	proof the conclusion is inescapable true abstraction is just the result of fully executing the messy
+1469500	1474620	intermediate details until you reach a stable normal form the universe demands that the work be
+1474620	1480860	done it is a tremendously elegant unified system it is but and i have to admit this as i was reading
+1480860	1485260	this section a feeling of deep unease started creeping in and i think a lot of listeners might
+1485260	1491180	be feeling it right now too oh you are sensing the phenomenological clash yes because at this point
+1491180	1496540	this entire world view feels intensely cold it's clinical if everything in the universe from computer
+1496540	1501740	hardware to human relationships is just about reducing detail executing dependencies and finding
+1501740	1508140	sterile little interfaces to interact with aren't we losing the rich messy beautiful reality of human
+1508140	1513980	experience are we just fleshy algorithms compressing data if my identity is just a normal form that i
+1513980	1521100	present to the world what happens to the poetry of existing it is a vital urgent question and it's a testament
+1521100	1526540	to the author's thoroughness that fliction anticipates this exact revulsion the text does not dismiss this
+1526540	1531420	unease it elevates it this is why the monograph engages deeply with phenomenology the philosophical
+1531420	1537340	tradition championed by thinkers like edmund husserl martin heidegger and maurice merleponte and there's a
+1537340	1543500	huge misconception here that the text tries to clear up right away a lot of people hear about husserl's
+1543500	1549420	core concept the epochy or the bracketing of the natural attitude and they think it sounds a lot like
+1549420	1555580	computational abstraction they think hustle is saying ignore the distracting details of the outside world
+1555580	1561340	so you can focus on the pure data of your mind right but fliction explicitly calls this out as
+1561340	1567580	completely false it is a linguistic confusion a trap both the computational tradition and the
+1567580	1573820	phenomenological tradition use the word reduction but they are moving in diametrically opposite directions
+1573820	1579260	the difference between thinning and thickening let's explore this okay so computational reduction
+1579260	1585100	what we've been talking about with code dual rail circuits and gensen's proofs eliminates detail it
+1585100	1590860	intentionally thins the world out to find an invariant structure it suppresses the messy internal
+1590860	1596380	dependencies so that things can be composed together neatly as interfaces it wants closure it wants the
+1596380	1601420	chef to ring the bell so the waiter can take the plate and move on exactly but phenomenological
+1601420	1607020	reduction does the exact opposite when husserl talks about bracketing assumptions he isn't trying to
+1607020	1613180	simplify the world into a neat interface he is trying to suspend our habitual automatic computational
+1613180	1620140	shortcuts so that we can restore the massive dense irreducible detail of lived experience he wants to
+1620140	1625260	thicken the world he wants you to look at the tree we talked about in the very beginning of the deep dive
+1625260	1631580	and stop just seeing the interface labeled tree he wants you to suspend that zip file and actually
+1631580	1637100	experience the infinite complexity of the rough bark against your hand the way the light filters green
+1637100	1643260	to the leaves the sway of the branches precisely computational reduction seeks closure and composability
+1643260	1649340	phenomenology seeks disclosure and depth one compresses complexity into a manageable interface the other
+1649340	1654780	expands our attention to include everything the interface left behind merlot ponty in particular argued
+1654780	1660860	that the embodied phenomenological reality fundamentally resists abstraction because it is a field of irreducible
+1660860	1667020	thickness you cannot normalize the human body or human grief or human joy into a cut-free proof without violently
+1667020	1674300	distorting it okay i feel that but we need that computational thinning to survive right going back to the sensory overload
+1674300	1682060	idea if we walked around constantly perceiving the raw phenomenological depth of every single leaf every grain of
+1682060	1688380	concrete every sound wave our brains would literally crash we wouldn't be able to cross the street without weeping at the beauty of the
+1688380	1694940	asphalt we have to thin the world out to function we have to use interfaces that is absolutely correct
+1694940	1701180	and the author does not view computational abstraction as an evil as we've seen it is the fundamental enabling
+1701180	1707820	condition for all higher order thought language and complex societal systems we must thin the world to
+1707820	1713820	survive to build to communicate but and this is the pivot of the entire text because we possess this immense
+1713820	1719020	god-like power to thin the world we hold a terrifying responsibility and this leads us to the most
+1719020	1724700	sobering chapter of the monograph yeah this part hit incredibly hard section 5 the ethics of reduction
+1724700	1729180	because since we hold this mathematical power what happens when we apply it not to numbers or computer
+1729180	1734140	chips but to other human beings fliction makes a sharp vital distinction here between abstraction and
+1734140	1741340	extraction when we apply mathematical reduction to human beings ecosystems or societies we cross a dangerous
+1741340	1747820	threshold the text defines abstraction as a tool of understanding it simplifies to make things legible
+1747820	1754620	to allow us to navigate the world extraction however is a weapon of control the author calls this section
+1754620	1760460	crimes committed in the name of abstraction and the examples are chilling fliction asks us to think
+1760460	1766620	about the builder of the pyramids in ancient egypt to build a structure that massive that mathematically
+1766620	1772140	perfect the architect cannot look at the workforce phenomenologically when they look at a human
+1772140	1777500	being with a broken back suffering in the desert sun they have to strip away all that humanity the person's
+1777500	1784060	family their pain their inner life had to mathematically reduce that human into a generic interchangeable
+1784060	1791180	unit of labor the human becomes a variable a symbol in an equation of stone or the text talks about
+1791180	1797900	the abstraction of the closed eye the intentional cognitive choice to look away from the moral thickness of your own actions
+1798460	1805020	you simplify your internal model of the world so that you are justified ignoring the complex harm you might be causing
+1805820	1811740	but the most relatable modern example flishon gives is the spreadsheet bureaucrat the quantification of existence
+1811740	1817580	this is where the mathematical and the ethical collide violently right imagine a bureaucrat sitting in an office
+1817580	1824540	looking at a living breathing watershed ecosystem or a struggling family facing eviction the bureaucrat takes
+1824540	1830380	all of that massive tragic phenomenological thickness and turns it into a single numerical data point
+1830380	1835820	in an excel grid the text states that quantification is the engine of extraction because a number does not
+1835820	1842300	protest a number doesn't weep this raises the critical philosophical question of the text when does a model
+1842300	1849100	stop being a map and start replacing the territory extraction occurs when the abstraction the number
+1849100	1855740	the metric the demographic category is treated as the entirety of the subject's identity the system
+1855740	1861420	begins to optimize the metric completely ignoring the destruction of the underlying reality it's the
+1861420	1867740	ultimate bureaucratic fallacy if a person is reduced to a productivity metric and we implement a policy that
+1867740	1874220	improves the metric by 10 we tell ourselves we improve the person even if the policy means the person is
+1874220	1879820	starving or working themselves to death the metric went up so the normal form is stable exactly the
+1879820	1885180	system only cares about the affordance it can extract and to combat this the author offers what we might
+1885180	1892540	call an ethical master formula ethical abstraction requires remembrance extraction conversely is a reduction
+1892540	1897500	that actively violently forgets what it omitted let me make sure i understand the nuance here an
+1897500	1904060	ethical abstraction knows it's an abstraction yes it acknowledges its own incompleteness it uses the
+1904060	1909740	interface to function but it leaves a conceptual pathway open to the messy reality it left behind
+1910460	1915980	it knows that the interface is not the whole entity the waiter knows the plate of food was produced by
+1915980	1920860	human effort and heat even if they didn't see it the bureaucrat must remember that the cell in the
+1920860	1927180	spreadsheet represents a human life capable of suffering i want you the listener to think about your
+1927180	1933820	own job right now when you look at user data or sales metrics or productivity scores you are looking
+1933820	1939980	at an abstraction you are looking at a computationally thinned out world are you remembering the messy
+1939980	1945020	phenomenological reality that got stripped away to make that number or to make it even more personal
+1945020	1949660	what about your dating app you're sitting on your couch swiping through profiles reducing entire
+1949660	1955660	complex phenomenologically dense human lives into a handful of pixels a few selected photos and a catchy
+1955660	1960860	bio that is an abstraction it has to be or you couldn't process it but are you practicing extraction
+1960860	1965740	by forgetting their humanity the moment you swipe left or are you remembering what was left out of
+1965740	1971500	the interface the text calls for a discipline of responsible forgetting you must forget what is
+1971500	1977020	necessary to function in a complex society but you must fiercely remember that you have forgotten it
+1977020	1983660	that is heavy but is so profoundly necessary and it shifts our perspective perfectly because up until now
+1983660	1988140	we've been looking outward we've looked at math on a page software in a machine hardware physics
+1988140	1995100	and society at large but for our final two sections we are going to turn the lens inward how does your
+1995100	2001180	physical brain apply these exact same principles of reduction affordances and interfaces to you how does
+2001180	2007340	it build the thing you call i this brings us to the neuroscientific frontier of the monograph active
+2007340	2013500	inference and predictive coding this is how the text unifies the math of lambda calculus with the biology of the brain
+2013740	2019580	predictive coding is a fascinating theory let's unpack how it works traditional we think of the brain as
+2019580	2025820	a passive receiver light goes into the eyes sound goes into the ears the brain processes it and then
+2025820	2032220	tells you what's there but predictive coding flips this entirely it says your brain is a hierarchical
+2032220	2039340	generative model your brain is locked in a dark silent skull it is constantly actively hallucinating
+2039340	2045260	what it thinks the world outside is like and then it compares its hallucination against the sensory data
+2045260	2050700	coming in through the nerves it is trying to minimize surprise or what neuroscientists call prediction
+2050700	2057180	errors perception is not passive reception perception is the active reduction of surprise let's walk
+2057180	2062540	through a scenario if you walk into your kitchen at night your brain's generative model predicts that when
+2062540	2067500	you reach your hand out to the wall you will feel the plastic of a light switch you are hallucinating
+2067500	2073420	the light switch before you even touch it exactly if your hand touches the wall and feels the plastic
+2073420	2078780	switch exactly where it expected to there is no surprise the sensory data matches the prediction the
+2078780	2085660	internal model is validated but if you reach out and instead of a light switch your hand touches a cold wet
+2085660	2091660	sponge taped to the wall you would jump out of your skin yes because there is a massive mismatch between
+2091660	2098060	what the brain expected and what the senses reported a massive error signal is generated that feeling of
+2098060	2104300	shock is literally the feeling of surprise when this happens the brain has two choices it can either update
+2104300	2110060	its internal model to match reality okay there is a sponge on the wall now or it can initiate an action
+2110060	2115500	to change reality to match the model like turn on a flashlight to figure out what went wrong so we are
+2115500	2120700	constantly reducing surprise to navigate the world but where does identity fit into this where is the
+2120700	2126220	self flickening argues that the predictive self is simply the highest slowest moving layer of this
+2126220	2132700	predictive hierarchy it is a radical almost unsettling reframing of human identity under this model
+2132700	2138380	identity is not a hidden soul it is not a metaphorical hard drive of stored memories that you access
+2138380	2144540	identity is a generative rule it is a compression algorithm designed to process long-term experience
+2144540	2150700	and maintain temporal continuity over a lifespan the ultimate zip file think about all the things
+2150700	2155340	you've done in your life the people you've loved the traumas you faced your daily habits your career
+2155340	2161020	goals the millions of mundane conversations your brain cannot actively process all of that raw
+2161020	2166700	phenomenological data every second of every day if it tried to hold all of that in active working
+2166700	2172700	memory your cognitive architecture would crash so it runs a compression algorithm it beta reduces your life
+2172700	2177660	it zips it all up into a minimal narrative i am a person who works hard loves dogs gets anxious in
+2177660	2183020	crowds and values honesty that narrative isn't who you are at a cellular level it is a mathematical rule
+2183020	2188380	your brain uses to predict what you are going to do next based on what you've done before the self is a
+2188380	2194140	compression architecture it is the normal form of your biography and what's fascinating here is that
+2194140	2200060	the text grounds this deeply in the physical body long before you have a complex narrative identity about
+2200060	2206460	your career or your anxieties you have deep interoceptive priors your body is the foundational interface
+2206460	2211340	interoception meaning the signals from inside your body right signals about your heartbeat your respiration
+2211340	2217580	your blood sugar your core temperature your body is the basement level of the predictive hierarchy
+2218300	2225260	your brain has a deeply embedded prediction that your core temperature should be roughly 98.6 degrees fahrenheit
+2225900	2231100	that is a highly stable prior if you walk outside in the winter and your skin gets cold that temperature
+2231100	2237660	drop is a prediction error it is a biological surprise so your brain says wait i predict i am 98.6 degrees
+2237660	2243980	but the sensory data says i am 97 degrees this is an error exactly so you act in the world to make your
+2243980	2249660	prediction true you put on a sweater you are governing your physical existence by minimizing surprise
+2249660	2256220	and fliction argues that narrative identity is just the highest most abstract level of this exact same
+2256220	2262380	dynamic equilibrium you act in the world in ways that confirm your narrative zip file if your zip file
+2262380	2268060	says i am a helpful person and you see someone drop their groceries you predict that you will help them
+2268620	2274540	if you don't help them you generate an internal prediction error you feel guilt guilt is the surprise of
+2274540	2280380	violating your own narrative algorithm that is incredible but what happens when that zip file
+2280380	2286860	breaks what happens when the predictive geometry fails the text maps cognitive pathologies directly
+2286860	2292060	onto the failure of this predictive geometry if your priors are too strong meaning your zip file is
+2292060	2298380	completely rigid and refuses to update you ignore the sensory reality of the world you force the data to fit
+2298380	2304460	the model this manifests as dogmatism extreme stubbornness or in clinical terms delusion you keep
+2304460	2310060	predicting the light switches there even as you stare at the sponge yes but conversely if your priors
+2310060	2315740	are too weak if your zip file is corrupted or lacks confidence you get completely overwhelmed by the
+2315740	2322380	sensory flux every minor fluctuation in the environment feels like a massive surprise you cannot stabilize a
+2322380	2329740	normal form this leads to profound anxiety dissociation or a fragmented sense of self a healthy identity
+2329740	2335820	therefore is a geometry capable of absorbing error without losing coherence it is stable enough to
+2335820	2341900	preserve continuity but flexible enough to accommodate revision when reality firmly challenges it the
+2341900	2347340	geometry of belief that phrase brings us to our final section we just called the self a generative model
+2347340	2352700	an algorithm a zip file we talked about strong priors and weak priors but what does that actually look
+2352700	2358300	like on a physical mathematical level inside the cognitive architecture of the brain how is a belief
+2358300	2363500	physically structured in tissue and synapses to answer this the monograph concludes by mapping
+2363500	2369180	everything we've discussed onto markov boundaries and neural directed acyclic graphs or DAGs this is
+2369180	2374780	where the math of ai and the math of human cognition converge okay let's start with the markov boundary we
+2374780	2382140	need to make this intuitive imagine a biological cell a cell has a membrane that membrane is semi-permeable
+2382140	2387740	it lets nutrients in and pushes waste out it separates the inside of the cell from the outside environment
+2388300	2393820	a markov boundary is the mathematical equivalent of that cell membrane it is a statistical barrier
+2393820	2399580	that separate internal states from external states and the mathematical rule of a markov boundary is that
+2399580	2405180	all information passing between the inside and the outside must travel through this boundary the
+2405180	2410460	internal states cannot interact with the external world directly they only interact with the boundary
+2410460	2417740	states the text shows mathematically that at a microscopic level these boundaries can be locally linearized
+2417740	2423820	linearized meaning they can be expressed as lines on a graph yes they can be expressed as linear equations
+2423820	2430220	with weights and biases slopes and intercepts wait a second slopes and intercepts like y equals mx plus b
+2430220	2435420	the exact same high school algebra equation we talked about in section one yeah the student at the kitchen table
+2435420	2441900	it is precisely the same mathematics a neural network whether it is a large language model in a server farm
+2441900	2449020	or the visual cortex in your brain is essentially a chain of these linearized interfaces a directed
+2449020	2455340	acyclic graph the data moves in one direction through the graph passing through layer after layer of markov
+2455340	2460380	boundaries and what is happening at each layer each layer takes the complex high dimensional space of
+2460380	2466380	the previous layer and performs a geometric operation on it it scales it it twists it it rotates it and it
+2466380	2473260	translates it it is literally reshaping the geometry of the data it's taking the messy chaotic sensory data
+2473260	2479980	from the world and ironing it out folding it stretching it shaping it layer by layer until it makes sense
+2479980	2486620	until it reaches a normal form yes reduction whether it's beta reduction in the lambda calculus or cognitive
+2486620	2492860	abstraction in the human brain is fundamentally a traversal through a semantic vector space deep learning
+2492860	2498300	models and human cognition are both iterative constructions of higher dimensional complex
+2498300	2504460	planes you navigate the geometry to find meaning so belief isn't a sentence stored in a file cabinet
+2504460	2511260	in your head no belief is a geometric structure it is the shape of the manifold your brain is constructed
+2511260	2517660	and surprise that feeling of being wrong or shocked we talked about earlier is literally a curvature
+2517660	2522300	signal it is the mathematical friction of the data telling you that your internal geometry
+2522300	2527100	doesn't match the geometry of the world this is where i just have to sit back and marvel at the sheer
+2527100	2533340	unbroken unity of this source text we literally started this deep dive with a hypothetical teenager
+2533340	2539340	sitting at a kitchen table chewing on a pencil doing basic high school algebra homework and by following the
+2539340	2544620	mathematical truth of what they were doing executing dependencies to reach a normal form we ended up
+2544620	2550860	defining human identity as a projectory through a high dimensional semantic vector space constrained by the
+2550860	2556220	ethical necessity of remembering the humanity we abstract away it is all the exact same process it
+2556220	2561900	is a unified theory of reality built on the premise that the universe demands the work of reduction be done
+2561900	2568620	that is just it's a staggering way to view reality okay we need to land this plane this has been an
+2568620	2574540	incredibly dense journey let's briefly recap the monumental ground we just covered we started by learning that
+2574540	2580620	abstraction is not hiding it is the rigorous physical and logical execution of detail you don't get the
+2580620	2585980	normal form until you do the work we learned that existence both in software and in life
+2585980	2591660	is defined by interfaces and affordances what we permit and how we interact not the heavy historical
+2591660	2596780	baggage we carry we saw how this need for stabilization is literally built into asynchronous
+2596780	2601980	computer hardware and the foundational mathematics of logical proof we contrasted this computational
+2601980	2607500	necessity of thinning the world with a phenomenological desire to thicken the world to experience its raw
+2607500	2612540	irreducible depth we then examined the immense ethical weight of this power recognizing that
+2612540	2618540	extraction is simply abstraction that has violently forgotten its own omissions we explored the predictive
+2618540	2624620	self understanding human identity as a generative model a narrative compression a grip file designed
+2624620	2630700	to minimize surprise and maintain continuity and finally we grounded all of this in the geometry of belief
+2630700	2636620	seeing that learning and perceiving are the reshaping of our internal high dimensional dimensions it is a totally
+2636620	2642220	unified world view and flixian's monograph is going to take a long time to fully digest but i want to
+2642220	2648300	leave you the listener with a final thought to mull over on your own as you go about your day we talked
+2648300	2653580	extensively about how an ethical abstraction must keep a pathway open to the messy reality it left behind
+2654220	2660140	it must remember what it has forgotten so i want you to think about the interface you present to the world
+2660140	2664540	think about the predictive self you've constructed that narrative zip file you run every day to
+2664540	2670780	keep your life stable predictable and safe from surprise what wild unpredictable beautiful parts
+2670780	2676460	of your own raw phenomenological experience are you actively extracting and ignoring just to maintain
+2676460	2681260	your current identity what messy truths about yourself are you refusing to process because they
+2681260	2686060	don't fit the neat normal form you've chosen and what would happen to your geometry of belief if you
+2686060	2694540	you finally let that surprise back in thanks for going on this deep dive with us today

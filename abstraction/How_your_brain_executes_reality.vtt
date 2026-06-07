@@ -1,0 +1,1370 @@
+WEBVTT
+
+00:00.000 --> 00:05.160
+okay let's um let's just unpack this right out of the gate have you ever actually thought about
+
+00:05.160 --> 00:10.580
+what your brain is doing when it you know ignores the chaotic mess of the world and just sees a tree
+
+00:10.580 --> 00:15.500
+or like a car right it's something we do so automatically we never even question it exactly
+
+00:15.500 --> 00:20.280
+i mean if you really stop and look around you right now wherever you are listening to this
+
+00:20.280 --> 00:27.060
+the sheer amount of sensory data flooding into your eyes and ears is just it's staggering oh
+
+00:27.060 --> 00:32.640
+absolutely it's overwhelming yeah there are like millions of photons bouncing off different
+
+00:32.640 --> 00:38.280
+textures subtle gradients of light individual leaves trembling in the wind you've got overlapping sound
+
+00:38.280 --> 00:43.680
+waves from i don't know distant traffic the hum of a refrigerator the rustle of your own clothes
+
+00:43.680 --> 00:52.160
+it is an absolute unmitigated chaotic mess of raw data raw data yes and yet you don't experience it
+
+00:52.160 --> 00:57.100
+like that you don't walk down the street completely paralyzed by the infinite complexity of reality
+
+00:57.100 --> 01:04.240
+your brain somehow almost instantly strips away almost all of that information and serves you this
+
+01:04.240 --> 01:11.700
+neat tidy little package who just says hey that's a tree or watch out that's a car and it is a profound
+
+01:11.700 --> 01:17.940
+neurological feat we take it entirely for granted because well because it happens automatically but
+
+01:17.940 --> 01:24.740
+that process of siltering of reducing the infinite down to the manageable is literally the foundation of our
+
+01:24.740 --> 01:30.600
+ability to function i mean without it cognition would just shatter completely shatter right and the term we
+
+01:30.600 --> 01:36.300
+generally apply to this process is abstraction abstraction yeah which is you know it's a word we throw around
+
+01:36.300 --> 01:40.360
+all the time usually when we're talking about like modern art or trying to get out of a tedious
+
+01:40.360 --> 01:46.600
+conversation about spreadsheet formatting true but today we are going on a deep dive into a text
+
+01:46.600 --> 01:53.220
+that is going to fundamentally rewire how you view that concept yeah and i am not exaggerating when
+
+01:53.220 --> 01:57.120
+i say this might change the way you look at everything from your computer to your society to
+
+01:57.120 --> 02:01.940
+your own identity it really is that expansive yeah so our sole source for today's deep dive is this
+
+02:01.940 --> 02:10.260
+dense incredibly revolutionary 2026 monograph it's by an author named Flyxion and it's titled abstraction
+
+02:10.260 --> 02:17.560
+as reduction a unified account of evaluation structure and proof and it is just a monumental
+
+02:17.560 --> 02:24.160
+piece of work the scope of what the author attempts here and honestly arguably succeeds at is breathtaking
+
+02:24.160 --> 02:31.020
+what we are looking at is an attempt to unify several completely disparate fields of human knowledge
+
+02:31.020 --> 02:38.700
+under one single underlying structural mechanism right and the mission of our deep dive today is to take this
+
+02:38.700 --> 02:45.420
+massive intimidating mathematical and philosophical text and just sort of extract the core paradigm
+
+02:45.420 --> 02:50.340
+shift it offers because Flyxion argues that we have been completely misunderstanding what abstraction
+
+02:50.340 --> 02:55.300
+actually is fundamentally misunderstanding it right because if i ask you the listener what abstraction
+
+02:55.300 --> 02:59.940
+means you'd probably say it's a mental shortcut a way to hide complicated details like i don't know
+
+02:59.940 --> 03:04.000
+throwing a tarp over a messy pile of machinery so you don't have to look at all the gears in greece which is
+
+03:04.000 --> 03:09.540
+the classic definition we're taught exactly but this monograph argues that abstraction is not hiding
+
+03:09.540 --> 03:16.360
+at all it is a literal physical and computational execution of the world and the stakes here are just
+
+03:16.360 --> 03:23.820
+fascinating because what we are going to do today is trace a single unbroken mathematical line starting
+
+03:23.820 --> 03:29.020
+from elementary school algebra moving through the architecture of computer chips into the ethical
+
+03:29.020 --> 03:34.200
+physical treatment of human beings and culminating in the geometric shape of your own identity
+
+03:34.200 --> 03:41.300
+it's wild it really is the author proves that these aren't just analogous concepts or like poetic metaphors
+
+03:41.300 --> 03:49.020
+they are structurally mathematically identical processes okay so let's start by dismantling that basic assumption
+
+03:49.020 --> 03:55.440
+we just talked about if you think abstraction is just putting a complex mechanism in a black box the monograph
+
+03:55.440 --> 04:01.840
+argues you were entirely wrong we are taught this all the time especially in fields like computer science
+
+04:01.840 --> 04:06.520
+or engineering people always say just abstract it away right right put it in a box ignore what's inside
+
+04:06.520 --> 04:11.780
+just look at the label on the outside exactly but Flyxion says this pedagogical story is a total failure
+
+04:11.780 --> 04:18.560
+abstraction isn't the negation of detail no to abstract is to evaluate it is a reduction and the text
+
+04:18.560 --> 04:24.660
+begins by grounding this entire thesis in one of the purest most austere forms of computation we have
+
+04:24.660 --> 04:29.980
+which is the lambda calculus okay i have to admit when i saw the math start appearing in the first
+
+04:29.980 --> 04:35.620
+chapter my eyes glazed over for a second so for those of us who aren't knee-deep in theoretical computer
+
+04:35.620 --> 04:42.820
+science what exactly is the lambda calculus and why is the author starting there so it was invented in
+
+04:42.820 --> 04:48.700
+the 1930s by alonzo church he was a logician who was trying to formalize the concept of mathematical
+
+04:48.700 --> 04:55.140
+computation itself and what makes the lambda calculus so remarkable is its poverty its poverty
+
+04:55.140 --> 05:01.440
+yeah it has no primitive data types no numbers no strings no booleans it has no loops no arrays no
+
+05:01.440 --> 05:06.040
+memory storage nothing like that wow okay so what does it have it consists entirely of variables
+
+05:06.040 --> 05:11.180
+functions and the application of those functions that's it it is computation stripped down to its
+
+05:11.180 --> 05:16.200
+absolute bare bones if you want to understand the true nature of computation you look at it in this
+
+05:16.200 --> 05:22.400
+completely sterile minimalist environment okay so how does this austere environment prove that
+
+05:22.400 --> 05:26.780
+abstraction isn't just hiding things under a tarp well because in the lambda calculus you have these
+
+05:26.780 --> 05:32.380
+structures called redexes which stands for reducible expressions you can think of a redex as a pending
+
+05:32.380 --> 05:38.100
+computational obligation a pending obligation i like that right it's a piece of code a mathematical
+
+05:38.100 --> 05:43.900
+phrase that hasn't finished doing its job yet it contains internal dependencies that have yet to be
+
+05:43.900 --> 05:49.980
+resolved now to move forward the system must perform what is called beta reduction it systematically
+
+05:49.980 --> 05:56.780
+executes these obligations it substitutes variables it resolves dependencies and churns through the logic
+
+05:56.780 --> 06:02.760
+step by step so it's actively doing the work it's not ignoring the messy details it's literally churning
+
+06:02.760 --> 06:08.620
+through them yes exactly and the crucial part affliction's argument centers on what happens at the end of that
+
+06:08.620 --> 06:14.540
+process if the computation terminates meaning it doesn't just loop infinitely you eventually reach
+
+06:14.540 --> 06:21.580
+a state called a normal form a normal form right a normal form is a term where no more redexes remain
+
+06:21.580 --> 06:27.900
+every single internal obligation has been completely resolved and stabilized there is no more work left to do
+
+06:27.900 --> 06:34.380
+and the text argues that this exact moment the achievement of the normal form is the only conceptual point
+
+06:34.380 --> 06:39.820
+at which abstraction becomes legitimate precisely a computation only becomes abstract when it has paid
+
+06:39.820 --> 06:46.140
+all its internal debts the complexity wasn't shoved into a closet and ignored the complexity was fully
+
+06:46.140 --> 06:50.940
+rigorously worked through until it settled into a mathematically stable state okay so the surface
+
+06:50.940 --> 06:56.700
+of an abstraction only becomes available to us because the depth has been fully executed yes a normal
+
+06:56.700 --> 07:01.500
+form is a complete abstraction you can take that normal form and use it as a building block in larger more
+
+07:01.500 --> 07:06.620
+complex structures not because it lacks internal complexity but because that complexity is finished
+
+07:06.620 --> 07:12.860
+that makes so much sense let's try to ground this for you the listener right now think back to doing
+
+07:12.860 --> 07:19.180
+your high school algebra homework maybe it wasn't your favorite memory but bear with me here imagine a
+
+07:19.180 --> 07:26.380
+simple linear equation written on a piece of notebook paper let's say 3x plus 5 equals 20. it's a classic
+
+07:26.380 --> 07:31.420
+constraint satisfaction problem and a perfect parallel to what we just discussed right so when you
+
+07:31.420 --> 07:37.020
+are sitting there at your kitchen table pencil in hand staring at that equation you are not just
+
+07:37.020 --> 07:42.780
+blindly moving symbols around according to arbitrary rules according to this monograph you are literally
+
+07:42.780 --> 07:49.260
+acting as a parser an interpreter and a compiler i love the way the author phrases this in that moment
+
+07:49.260 --> 07:55.580
+the student is a distributed embodied implementation of a reduction engine i love that phrasing too it's so
+
+07:55.580 --> 08:02.700
+cool so you look at 3x plus 5 equals 20. that whole line is an unresolved obligation in church's terms
+
+08:02.700 --> 08:08.620
+it's a redex it has a dependency that needs resolving so what do you do you perform a reduction you subtract
+
+08:08.620 --> 08:15.340
+5 from both sides of the equation now on the next line you write 3x equals 15. that new line is a normal
+
+08:15.340 --> 08:19.820
+form relative to the line above it you've eliminated one dependency you've stabilized the equation just a
+
+08:19.820 --> 08:25.820
+little bit more the system has cooled down by one degree essentially yes then you do it again you
+
+08:25.820 --> 08:31.180
+look at 3x equals 15 and you divide both sides by three you draw a line at the bottom of the page you
+
+08:31.180 --> 08:38.060
+write x equals five you have just reached the final normal form there are no more operations to perform
+
+08:38.060 --> 08:42.460
+and you know think about how your math teacher was always yelling at you to show your work why do they
+
+08:42.460 --> 08:47.820
+care because showing your work is literally just exposing the intermediate computational reductions it's
+
+08:47.820 --> 08:53.340
+exposing the trace of the execution when a student tries to skip steps and just writes the final
+
+08:53.340 --> 08:58.860
+answer down they are performing the exact same reductions in their head but they are withholding
+
+08:58.860 --> 09:05.740
+that trace from the teacher they are abstracting the process and the final answer x equals five is an
+
+09:05.740 --> 09:11.100
+abstraction it is a highly stable compressed package of meaning you can now take that five and plug it
+
+09:11.100 --> 09:16.940
+into a completely different equation on the next page of your homework but it only works it only serves as
+
+09:16.940 --> 09:22.220
+a valid abstraction because you actually perform the internal evaluation to get there you didn't
+
+09:22.220 --> 09:29.020
+just hide the 3x plus 5 you executed it that is the core difference if abstraction were merely hiding
+
+09:29.020 --> 09:35.980
+you could just draw a box around 3x plus 5 equals 20 label it equation one and try to plug that entire
+
+09:35.980 --> 09:42.060
+unresolved mess into another formula which would be a disaster a complete disaster the result would be a
+
+09:42.060 --> 09:49.260
+chaotic unmanageable proliferation of dependencies the system would choke true abstraction requires the
+
+09:49.260 --> 09:54.060
+furnace of execution okay see where the author is going but i have to test my understanding here
+
+09:54.060 --> 09:59.020
+because i feel like this definition breaks down outside of strict mathematics okay let's hear it let's
+
+09:59.020 --> 10:06.060
+say i read a dense 500 page historical biography a week later we get coffee and i summarize the entire book
+
+10:06.060 --> 10:11.580
+for you in three sentences i am not executing that book in the same way a computer executes a program
+
+10:11.580 --> 10:17.260
+i'm just leaving things out right i'm taking a big thing and making it smaller by deleting the details
+
+10:17.260 --> 10:23.580
+isn't that what abstraction is for most of us in our daily lives it's a very common intuition and Flyxion
+
+10:23.580 --> 10:30.540
+actually explicitly anticipates this counter argument in the text the monograph argues that true abstraction
+
+10:30.540 --> 10:37.420
+even in human cognition is never just arbitrary deletion it uses this great term epistemic compression
+
+10:37.420 --> 10:42.620
+epistemic compression okay so when you summarize that 500 page book effectively you aren't just
+
+10:42.620 --> 10:48.860
+taking a pair of scissors to the pages and randomly throwing away 99 of the paper you are engaging in an
+
+10:48.860 --> 10:55.100
+incredibly complex active process you read the text you digest the historical timeline you understand
+
+10:55.100 --> 11:00.220
+the character arcs you evaluate the underlying themes and then your brain finds the invariant structure
+
+11:00.220 --> 11:05.500
+that survives all of that processing the variant structure so like the load-bearing walls of the
+
+11:05.500 --> 11:10.060
+narrative so to speak exactly you eliminate the details that do not affect the core structural
+
+11:10.060 --> 11:14.780
+interactions of the story the intermediate complexity you know the descriptive paragraphs about the
+
+11:14.780 --> 11:20.220
+weather the minor subplots about peripheral characters it hasn't just disappeared into the void
+
+11:20.220 --> 11:26.220
+it was executed by your cognitive machinery to yield a stable compressed form which is your three
+
+11:26.220 --> 11:33.100
+sentence summary ah so the idea is that my brain did the beta reduction i processed the redexes of the
+
+11:33.100 --> 11:40.780
+subplots until i found the normal form of the main plot yes consider the alternative if you just arbitrarily
+
+11:40.780 --> 11:46.700
+deleted 499 pages and handed me one random page from the middle of the book that wouldn't be a summary
+
+11:46.700 --> 11:51.580
+it wouldn't be an abstraction it would just be a fragment right it wouldn't make any sense an abstraction
+
+11:51.580 --> 11:57.420
+works yeah it conveys the meaning of the book to me over coffee precisely because the underlying
+
+11:57.420 --> 12:03.260
+computation was completed by you you did the work which allows you to discard the scaffolding
+
+12:03.260 --> 12:09.820
+and keep the structural essence the summary is the normal form of the book man that actually clarifies a
+
+12:09.820 --> 12:15.820
+lot so if everything is just executing dependencies to reach a normal form what happens when two of those
+
+12:15.820 --> 12:21.580
+normal forms bump into each other in the real world like once a computation or a thought or a summary is
+
+12:21.580 --> 12:26.300
+fully executed and stabilized how does it interact with the rest of the universe i mean it can't just
+
+12:26.300 --> 12:31.660
+float and avoid it needs some kind of boundary and this naturally leads to the second major movement of
+
+12:31.660 --> 12:38.300
+the text which is the architecture of affordances once we have a stable normal form how does it compose
+
+12:38.300 --> 12:44.780
+with other stable forms this requires us to look at interfaces and to illustrate this ontological shift
+
+12:44.780 --> 12:49.740
+Flyxion turns to the architecture of programming languages yeah the text sets up a battle between
+
+12:49.740 --> 12:54.060
+two different ways of looking at objects and software and it makes the case this translates
+
+12:54.060 --> 13:00.300
+perfectly to how we look at objects in the real world we have object-oriented programming or oop
+
+13:00.940 --> 13:06.300
+and we have interface-based programming and i gotta say Flyxion does not hold back on oop the text
+
+13:06.300 --> 13:12.460
+basically calls it an ontological failure it is a rather scathing critique honestly so in object-oriented
+
+13:12.460 --> 13:17.420
+programming which has dominated software engineering for decades you build systems based on inheritance
+
+13:17.420 --> 13:23.260
+hierarchies you define objects by their ancestry for example you might create a class called animal and
+
+13:23.260 --> 13:28.780
+then you create a subclass called mammal which inherits from animal then you create a subclass called dog
+
+13:28.780 --> 13:34.780
+which inherits from mammal the logic is that a dog is a mammal and therefore it inherits all the
+
+13:34.780 --> 13:41.580
+properties data and methods of an animal it inherits the source code of its ancestors like if an animal has an
+
+13:41.580 --> 13:47.020
+attribute called metabolism the dog automatically gets metabolism even if the specific program you
+
+13:47.020 --> 13:52.620
+were writing never once cares about the dog's metabolism that is exactly the flaw affliction points
+
+13:52.620 --> 13:59.340
+out by defining a thing by its ancestry and its internal substance oop forces the object to carry around
+
+13:59.340 --> 14:05.900
+a massive compounding amount of irrelevant historical detail the subclass accumulates obligations and data
+
+14:05.900 --> 14:11.580
+structures it might not even need for the task at hand the text refers to this as the reification of
+
+14:11.580 --> 14:16.940
+irrelevant detail you are defining an object by what it is made of and where it came from rather than
+
+14:16.940 --> 14:22.060
+by what it actually does it's like judging someone entirely based on their family tree instead of their own
+
+14:22.060 --> 14:26.940
+actions you're forcing them to carry the baggage of their great-grandparents just to get a job it feels
+
+14:26.940 --> 14:34.620
+very i don't know heavy it is the exact opposite of reduction it proliferates complexity but the text contrasts
+
+14:34.620 --> 14:39.820
+this with languages like haskell or the use of interfaces in more modern functional programming
+
+14:40.540 --> 14:46.620
+in an interface-based paradigm a type is not defined by its internal constitution or its ancestry
+
+14:46.620 --> 14:52.780
+it is defined purely by its behavioral contracts its affordances affordances that's such a great word
+
+14:52.780 --> 14:57.900
+let's break down what an affordance is in this context it basically means an interface defines an
+
+14:57.900 --> 15:03.340
+entity purely by what it can do what it permits other things to do with it right so in software
+
+15:03.340 --> 15:08.300
+something might be defined as drawable not because it has a specific sequence of ancestral code but
+
+15:08.300 --> 15:13.340
+simply because it fulfills the contract of being drawn on a screen like a geometric shape is drawable
+
+15:13.340 --> 15:17.820
+a line of text is drawable an image file is drawable they have entirely different internal mechanisms
+
+15:17.820 --> 15:23.820
+and absolutely no shared ancestry but they share the same affordance yes and to elevate this beyond
+
+15:23.820 --> 15:30.620
+software the monograph brings in category theory to formalize this concept oh boy and category theory is
+
+15:30.620 --> 15:36.860
+notorious for being some of the most abstract insanely complex map out there how does the author use it
+
+15:36.860 --> 15:42.940
+here without losing the reader entirely it's a fair point but Flyxion uses it quite elegantly by focusing
+
+15:42.940 --> 15:49.100
+on its core philosophical implication in traditional set theory you look inside a set to see what elements
+
+15:49.100 --> 15:55.340
+it contains you define it by its internal guts but in category theory an object is treated as completely opaque
+
+15:55.340 --> 16:00.540
+it doesn't come with a description of its internal substance it is simply a node in a structure its
+
+16:00.540 --> 16:06.700
+entire identity mathematically speaking is exhausted by its morphisms exhausted by its morphisms okay let's
+
+16:06.700 --> 16:13.420
+translate that what is a morphism a morphism is an arrow it is a relationship a transformation
+
+16:13.420 --> 16:21.420
+an interaction between two objects imagine a city's subway map if you were looking at a station on the map you
+
+16:21.420 --> 16:25.740
+don't need to know what the station is made of whether it's concrete or steel or what color the tiles
+
+16:25.740 --> 16:30.700
+are you define the station entirely by the lines that connect to it the trains that pass through it
+
+16:30.700 --> 16:36.300
+where you can go from there those connections are the morphisms oh that makes perfect sense yeah and
+
+16:36.300 --> 16:41.180
+category theory says that if you know every single arrow going into and coming out of an object
+
+16:41.180 --> 16:46.220
+you know absolutely everything there is to know about that object so the inside is permanently hidden
+
+16:46.220 --> 16:53.260
+but the boundary the interface is where existence actually happens yes to design an interface is to
+
+16:53.260 --> 16:58.540
+make a profound philosophical claim about the world you are asserting that the being of a thing is
+
+16:58.540 --> 17:04.700
+determined by the roles it occupies and the transformations it sustains in relation to other things not by its
+
+17:04.700 --> 17:10.220
+hidden internal mechanics wow so let's apply this to you the listener what does this mean for you it means
+
+17:10.220 --> 17:15.100
+that functionally and ontologically you aren't defined by your source code you aren't defined by your
+
+17:15.100 --> 17:20.380
+past baggage or the arbitrary hierarchy you were born into or even the internal monologue you have with
+
+17:20.380 --> 17:26.140
+yourself that nobody else hears you were defined by your interfaces you were defined by your affordances
+
+17:26.140 --> 17:31.020
+how you interact with the world around you right now what you permit the relationships you sustain
+
+17:31.020 --> 17:37.020
+the promises you fulfill it is a deeply relational metaphysics to be is to participate through an
+
+17:37.020 --> 17:43.500
+interface the interface is the semi-permeable boundary where your internal executed complexity your normal form
+
+17:43.500 --> 17:48.700
+meets the external world and interoperability whether we are talking about software modules
+
+17:48.700 --> 17:53.980
+communicating or human beings empathizing with each other is simply the alignment of those interfaces
+
+17:53.980 --> 17:59.980
+it is shared ontology that is incredibly empowering it means we have agency over the interfaces we project
+
+18:00.700 --> 18:05.020
+but i know what a skeptical listener is thinking right now because honestly i was thinking it too
+
+18:05.020 --> 18:11.340
+while reading this is all very beautiful philosophy and it works great in the realm of math and software code
+
+18:11.340 --> 18:17.980
+but is it real like is the physical universe actually operating this way or is this just a neat conceptual
+
+18:17.980 --> 18:24.700
+metaphor we've invented and that is the exact question flick shin addresses next the monograph proves that this
+
+18:24.700 --> 18:31.420
+principle of abstraction as executed reduction isn't just a mental trick it is literally baked into
+
+18:31.420 --> 18:39.180
+physical hardware and the fundamental laws of logic the text shifts into an exploration of the physics of stabilization
+
+18:39.180 --> 18:44.780
+right let's get into the hardware the text talks about something called null convention logic or ncl and
+
+18:44.780 --> 18:48.940
+asynchronous dual rail circuits this was one of the most fascinating parts of the book for me it's
+
+18:48.940 --> 18:54.380
+brilliant let's break down how a normal computer chip works first just to set the baseline in your
+
+18:54.380 --> 19:00.780
+standard laptop a bit of data is a one or zero it travels on a single physical wire and the whole
+
+19:00.780 --> 19:07.740
+system is governed by a master clock it's a literal crystal oscillator ticking away tick tick tick billions of times a
+
+19:07.740 --> 19:14.540
+second that clock tells every component in the system exactly when to look at the wire and read the
+
+19:14.540 --> 19:20.860
+one or the zero exactly it assumes that between the ticks of the clock the signal has arrived and stabilized
+
+19:20.860 --> 19:26.380
+but in an asynchronous dual rail circuit there is no master clock the system is completely decentralized
+
+19:26.380 --> 19:31.580
+there is no global timekeeper telling components when to read data because of this a single bit of
+
+19:31.580 --> 19:37.420
+information requires two physical wires rail zero and rail one wait two wires for one bit why
+
+19:37.420 --> 19:42.300
+because if the system wants to send a logical zero it asserts voltage on rail zero if it wants
+
+19:42.300 --> 19:46.780
+to send a logical one it asserts voltage on rail one but because there is no clock telling the next
+
+19:46.780 --> 19:50.940
+component down the line when to read the signal there has to be a physical way for the receiving
+
+19:50.940 --> 19:55.980
+component to know if the computation is actually finished right and this is where it connects back to the
+
+19:55.980 --> 20:03.260
+lambda calculus what happens if neither wire has voltage what if neither rail is asserted if neither rail is
+
+20:03.260 --> 20:10.460
+asserted the signal is physically considered incomplete it is the hardware equivalent of a redex it means the
+
+20:10.460 --> 20:15.820
+internal circuitry further up the line is still grinding away it's still executing its internal
+
+20:15.820 --> 20:21.100
+obligations it's still computing and the kicker is that the rest of the circuit literally has to wait
+
+20:21.660 --> 20:28.540
+it cannot proceed abstraction in this physical hardware only occurs at the exact microscopic moment of
+
+20:28.540 --> 20:35.020
+stabilization once exactly one of those rails fires say rail one gets voltage the value becomes
+
+20:35.020 --> 20:40.460
+determinate the inner complexity is settled and only then is the outer circuit permitted to treat that
+
+20:40.460 --> 20:46.700
+signal as a simple abstract one it proves that the system must physically electrically stabilize before
+
+20:46.700 --> 20:53.260
+it can be abstracted you cannot abstract an incomplete computation the physics simply won't allow it i love this
+
+20:53.260 --> 20:59.340
+think about a busy restaurant kitchen that is our asynchronous dual rail circuit imagine a waiter
+
+20:59.340 --> 21:04.620
+standing at the pass waiting for a dish the waiter represents the outer circuit the rest of the system
+
+21:04.620 --> 21:10.380
+waiting for the data inside the kitchen the chef is chopping onions sauteing meat reducing a sauce
+
+21:10.380 --> 21:16.940
+plating the food that is the incomplete state it's chaotic it's complex it's a redex the waiter cannot simply
+
+21:16.940 --> 21:22.300
+grab the pan while the sauce is still reducing exactly the waiter literally has to wait finally the chef
+
+21:22.300 --> 21:28.060
+finishes they wipe the rim of the plate set it on the counter and ring the bell ding that bell is
+
+21:28.060 --> 21:33.500
+stabilization at that exact moment all the chaotic complexity of the cooking process the heat the
+
+21:33.500 --> 21:39.420
+timing the mess is abstracted away the waiter just picks up a finished unit table four is ordered they
+
+21:39.420 --> 21:43.740
+don't need to know how the sauce was reduced they only interact with the final affordance of the plate
+
+21:43.740 --> 21:49.980
+but the crucial part is you cannot abstract an unfinished meal the bell has to ring it is a brilliant
+
+21:49.980 --> 21:55.580
+analogy the interface between the kitchen and the dining room relies entirely on that stabilization
+
+21:56.220 --> 22:04.060
+and what Flyxion does next is link this physical hardware reality directly to pure logic through
+
+22:04.060 --> 22:09.100
+something called the curry howard correspondence okay this was the part that absolutely blew my mind
+
+22:09.740 --> 22:15.660
+propositions as types proofs as programs can we explore the history of this a little bit yeah because
+
+22:15.660 --> 22:20.940
+it sounds like magic it is arguably one of the deepest structural bridges ever discovered in
+
+22:20.940 --> 22:26.780
+mathematics in the mid-20th century logicians like haskell curry and william howard noticed a bizarre
+
+22:26.780 --> 22:32.460
+coincidence the mathematical symbols and rules they were using to write logical proofs were structurally
+
+22:32.460 --> 22:37.020
+identical to the symbols and rules computer scientists were using to write computer programs
+
+22:37.020 --> 22:42.620
+it wasn't just a similarity it was an exact isomorphism so writing mathematical proof and writing a computer
+
+22:42.620 --> 22:48.220
+program are literally the exact same activity just expressed in two different languages yes in this
+
+22:48.220 --> 22:54.140
+correspondence a logical proposition like a statement you want to prove is true is exactly the same thing as
+
+22:54.140 --> 22:59.900
+a type in programming and the proof of that proposition is exactly the same thing as a computer program that
+
+22:59.900 --> 23:06.940
+inhabits that type to prove a theorem is to write a program that successfully compiles proving something
+
+23:06.940 --> 23:14.220
+is computing something that is wild and how does Flyxion use this correspondence to cement the idea of
+
+23:14.220 --> 23:20.460
+abstraction as reduction by focusing on a specific theorem within logic known as genson's cut elimination
+
+23:20.460 --> 23:26.620
+theorem in mathematical logic making a cut is essentially taking a detour if you are trying to prove a
+
+23:26.620 --> 23:33.340
+leads to c you might insert a lemma an intermediate step b you prove a leads to b and b leads to c that b is
+
+23:33.340 --> 23:38.220
+the cut it's a shortcut to get to your conclusion faster it's like um borrowing a tool from a
+
+23:38.220 --> 23:42.620
+neighbor to finish building a shed but then you have to prove you had the right to borrow the tool
+
+23:42.620 --> 23:46.860
+and the neighbor has to prove they owned it it introduces secondary obligations that's a really
+
+23:46.860 --> 23:53.340
+good way to look at it but gerhard genson proved that any proof that contains these detours these cuts
+
+23:53.340 --> 24:00.140
+can be systematically transformed into a direct cut-free proof a normalized proof and through the lens of
+
+24:00.140 --> 24:04.940
+the curry howard correspondence what the monograph points out is that eliminating these cuts is the
+
+24:04.940 --> 24:11.660
+exact same computational process as executing a program a proof with cuts is an unexecuted program
+
+24:11.660 --> 24:17.580
+with pending redexes normalizing the proof executes those obligations away so whether we are looking at
+
+24:17.580 --> 24:22.380
+the math of lambda calculus the physical voltage of a computer chip or the pure logic of a mathematical
+
+24:22.380 --> 24:29.500
+proof the conclusion is inescapable true abstraction is just the result of fully executing the messy
+
+24:29.500 --> 24:34.620
+intermediate details until you reach a stable normal form the universe demands that the work be
+
+24:34.620 --> 24:40.860
+done it is a tremendously elegant unified system it is but and i have to admit this as i was reading
+
+24:40.860 --> 24:45.260
+this section a feeling of deep unease started creeping in and i think a lot of listeners might
+
+24:45.260 --> 24:51.180
+be feeling it right now too oh you are sensing the phenomenological clash yes because at this point
+
+24:51.180 --> 24:56.540
+this entire world view feels intensely cold it's clinical if everything in the universe from computer
+
+24:56.540 --> 25:01.740
+hardware to human relationships is just about reducing detail executing dependencies and finding
+
+25:01.740 --> 25:08.140
+sterile little interfaces to interact with aren't we losing the rich messy beautiful reality of human
+
+25:08.140 --> 25:13.980
+experience are we just fleshy algorithms compressing data if my identity is just a normal form that i
+
+25:13.980 --> 25:21.100
+present to the world what happens to the poetry of existing it is a vital urgent question and it's a testament
+
+25:21.100 --> 25:26.540
+to the author's thoroughness that Flyxion anticipates this exact revulsion the text does not dismiss this
+
+25:26.540 --> 25:31.420
+unease it elevates it this is why the monograph engages deeply with phenomenology the philosophical
+
+25:31.420 --> 25:37.340
+tradition championed by thinkers like edmund husserl martin heidegger and maurice merleponte and there's a
+
+25:37.340 --> 25:43.500
+huge misconception here that the text tries to clear up right away a lot of people hear about husserl's
+
+25:43.500 --> 25:49.420
+core concept the epochy or the bracketing of the natural attitude and they think it sounds a lot like
+
+25:49.420 --> 25:55.580
+computational abstraction they think hustle is saying ignore the distracting details of the outside world
+
+25:55.580 --> 26:01.340
+so you can focus on the pure data of your mind right but Flyxion explicitly calls this out as
+
+26:01.340 --> 26:07.580
+completely false it is a linguistic confusion a trap both the computational tradition and the
+
+26:07.580 --> 26:13.820
+phenomenological tradition use the word reduction but they are moving in diametrically opposite directions
+
+26:13.820 --> 26:19.260
+the difference between thinning and thickening let's explore this okay so computational reduction
+
+26:19.260 --> 26:25.100
+what we've been talking about with code dual rail circuits and gensen's proofs eliminates detail it
+
+26:25.100 --> 26:30.860
+intentionally thins the world out to find an invariant structure it suppresses the messy internal
+
+26:30.860 --> 26:36.380
+dependencies so that things can be composed together neatly as interfaces it wants closure it wants the
+
+26:36.380 --> 26:41.420
+chef to ring the bell so the waiter can take the plate and move on exactly but phenomenological
+
+26:41.420 --> 26:47.020
+reduction does the exact opposite when husserl talks about bracketing assumptions he isn't trying to
+
+26:47.020 --> 26:53.180
+simplify the world into a neat interface he is trying to suspend our habitual automatic computational
+
+26:53.180 --> 27:00.140
+shortcuts so that we can restore the massive dense irreducible detail of lived experience he wants to
+
+27:00.140 --> 27:05.260
+thicken the world he wants you to look at the tree we talked about in the very beginning of the deep dive
+
+27:05.260 --> 27:11.580
+and stop just seeing the interface labeled tree he wants you to suspend that zip file and actually
+
+27:11.580 --> 27:17.100
+experience the infinite complexity of the rough bark against your hand the way the light filters green
+
+27:17.100 --> 27:23.260
+to the leaves the sway of the branches precisely computational reduction seeks closure and composability
+
+27:23.260 --> 27:29.340
+phenomenology seeks disclosure and depth one compresses complexity into a manageable interface the other
+
+27:29.340 --> 27:34.780
+expands our attention to include everything the interface left behind merlot ponty in particular argued
+
+27:34.780 --> 27:40.860
+that the embodied phenomenological reality fundamentally resists abstraction because it is a field of irreducible
+
+27:40.860 --> 27:47.020
+thickness you cannot normalize the human body or human grief or human joy into a cut-free proof without violently
+
+27:47.020 --> 27:54.300
+distorting it okay i feel that but we need that computational thinning to survive right going back to the sensory overload
+
+27:54.300 --> 28:02.060
+idea if we walked around constantly perceiving the raw phenomenological depth of every single leaf every grain of
+
+28:02.060 --> 28:08.380
+concrete every sound wave our brains would literally crash we wouldn't be able to cross the street without weeping at the beauty of the
+
+28:08.380 --> 28:14.940
+asphalt we have to thin the world out to function we have to use interfaces that is absolutely correct
+
+28:14.940 --> 28:21.180
+and the author does not view computational abstraction as an evil as we've seen it is the fundamental enabling
+
+28:21.180 --> 28:27.820
+condition for all higher order thought language and complex societal systems we must thin the world to
+
+28:27.820 --> 28:33.820
+survive to build to communicate but and this is the pivot of the entire text because we possess this immense
+
+28:33.820 --> 28:39.020
+god-like power to thin the world we hold a terrifying responsibility and this leads us to the most
+
+28:39.020 --> 28:44.700
+sobering chapter of the monograph yeah this part hit incredibly hard section 5 the ethics of reduction
+
+28:44.700 --> 28:49.180
+because since we hold this mathematical power what happens when we apply it not to numbers or computer
+
+28:49.180 --> 28:54.140
+chips but to other human beings Flyxion makes a sharp vital distinction here between abstraction and
+
+28:54.140 --> 29:01.340
+extraction when we apply mathematical reduction to human beings ecosystems or societies we cross a dangerous
+
+29:01.340 --> 29:07.820
+threshold the text defines abstraction as a tool of understanding it simplifies to make things legible
+
+29:07.820 --> 29:14.620
+to allow us to navigate the world extraction however is a weapon of control the author calls this section
+
+29:14.620 --> 29:20.460
+crimes committed in the name of abstraction and the examples are chilling Flyxion asks us to think
+
+29:20.460 --> 29:26.620
+about the builder of the pyramids in ancient egypt to build a structure that massive that mathematically
+
+29:26.620 --> 29:32.140
+perfect the architect cannot look at the workforce phenomenologically when they look at a human
+
+29:32.140 --> 29:37.500
+being with a broken back suffering in the desert sun they have to strip away all that humanity the person's
+
+29:37.500 --> 29:44.060
+family their pain their inner life had to mathematically reduce that human into a generic interchangeable
+
+29:44.060 --> 29:51.180
+unit of labor the human becomes a variable a symbol in an equation of stone or the text talks about
+
+29:51.180 --> 29:57.900
+the abstraction of the closed eye the intentional cognitive choice to look away from the moral thickness of your own actions
+
+29:58.460 --> 30:05.020
+you simplify your internal model of the world so that you are justified ignoring the complex harm you might be causing
+
+30:05.820 --> 30:11.740
+but the most relatable modern example flishon gives is the spreadsheet bureaucrat the quantification of existence
+
+30:11.740 --> 30:17.580
+this is where the mathematical and the ethical collide violently right imagine a bureaucrat sitting in an office
+
+30:17.580 --> 30:24.540
+looking at a living breathing watershed ecosystem or a struggling family facing eviction the bureaucrat takes
+
+30:24.540 --> 30:30.380
+all of that massive tragic phenomenological thickness and turns it into a single numerical data point
+
+30:30.380 --> 30:35.820
+in an excel grid the text states that quantification is the engine of extraction because a number does not
+
+30:35.820 --> 30:42.300
+protest a number doesn't weep this raises the critical philosophical question of the text when does a model
+
+30:42.300 --> 30:49.100
+stop being a map and start replacing the territory extraction occurs when the abstraction the number
+
+30:49.100 --> 30:55.740
+the metric the demographic category is treated as the entirety of the subject's identity the system
+
+30:55.740 --> 31:01.420
+begins to optimize the metric completely ignoring the destruction of the underlying reality it's the
+
+31:01.420 --> 31:07.740
+ultimate bureaucratic fallacy if a person is reduced to a productivity metric and we implement a policy that
+
+31:07.740 --> 31:14.220
+improves the metric by 10 we tell ourselves we improve the person even if the policy means the person is
+
+31:14.220 --> 31:19.820
+starving or working themselves to death the metric went up so the normal form is stable exactly the
+
+31:19.820 --> 31:25.180
+system only cares about the affordance it can extract and to combat this the author offers what we might
+
+31:25.180 --> 31:32.540
+call an ethical master formula ethical abstraction requires remembrance extraction conversely is a reduction
+
+31:32.540 --> 31:37.500
+that actively violently forgets what it omitted let me make sure i understand the nuance here an
+
+31:37.500 --> 31:44.060
+ethical abstraction knows it's an abstraction yes it acknowledges its own incompleteness it uses the
+
+31:44.060 --> 31:49.740
+interface to function but it leaves a conceptual pathway open to the messy reality it left behind
+
+31:50.460 --> 31:55.980
+it knows that the interface is not the whole entity the waiter knows the plate of food was produced by
+
+31:55.980 --> 32:00.860
+human effort and heat even if they didn't see it the bureaucrat must remember that the cell in the
+
+32:00.860 --> 32:07.180
+spreadsheet represents a human life capable of suffering i want you the listener to think about your
+
+32:07.180 --> 32:13.820
+own job right now when you look at user data or sales metrics or productivity scores you are looking
+
+32:13.820 --> 32:19.980
+at an abstraction you are looking at a computationally thinned out world are you remembering the messy
+
+32:19.980 --> 32:25.020
+phenomenological reality that got stripped away to make that number or to make it even more personal
+
+32:25.020 --> 32:29.660
+what about your dating app you're sitting on your couch swiping through profiles reducing entire
+
+32:29.660 --> 32:35.660
+complex phenomenologically dense human lives into a handful of pixels a few selected photos and a catchy
+
+32:35.660 --> 32:40.860
+bio that is an abstraction it has to be or you couldn't process it but are you practicing extraction
+
+32:40.860 --> 32:45.740
+by forgetting their humanity the moment you swipe left or are you remembering what was left out of
+
+32:45.740 --> 32:51.500
+the interface the text calls for a discipline of responsible forgetting you must forget what is
+
+32:51.500 --> 32:57.020
+necessary to function in a complex society but you must fiercely remember that you have forgotten it
+
+32:57.020 --> 33:03.660
+that is heavy but is so profoundly necessary and it shifts our perspective perfectly because up until now
+
+33:03.660 --> 33:08.140
+we've been looking outward we've looked at math on a page software in a machine hardware physics
+
+33:08.140 --> 33:15.100
+and society at large but for our final two sections we are going to turn the lens inward how does your
+
+33:15.100 --> 33:21.180
+physical brain apply these exact same principles of reduction affordances and interfaces to you how does
+
+33:21.180 --> 33:27.340
+it build the thing you call i this brings us to the neuroscientific frontier of the monograph active
+
+33:27.340 --> 33:33.500
+inference and predictive coding this is how the text unifies the math of lambda calculus with the biology of the brain
+
+33:33.740 --> 33:39.580
+predictive coding is a fascinating theory let's unpack how it works traditional we think of the brain as
+
+33:39.580 --> 33:45.820
+a passive receiver light goes into the eyes sound goes into the ears the brain processes it and then
+
+33:45.820 --> 33:52.220
+tells you what's there but predictive coding flips this entirely it says your brain is a hierarchical
+
+33:52.220 --> 33:59.340
+generative model your brain is locked in a dark silent skull it is constantly actively hallucinating
+
+33:59.340 --> 34:05.260
+what it thinks the world outside is like and then it compares its hallucination against the sensory data
+
+34:05.260 --> 34:10.700
+coming in through the nerves it is trying to minimize surprise or what neuroscientists call prediction
+
+34:10.700 --> 34:17.180
+errors perception is not passive reception perception is the active reduction of surprise let's walk
+
+34:17.180 --> 34:22.540
+through a scenario if you walk into your kitchen at night your brain's generative model predicts that when
+
+34:22.540 --> 34:27.500
+you reach your hand out to the wall you will feel the plastic of a light switch you are hallucinating
+
+34:27.500 --> 34:33.420
+the light switch before you even touch it exactly if your hand touches the wall and feels the plastic
+
+34:33.420 --> 34:38.780
+switch exactly where it expected to there is no surprise the sensory data matches the prediction the
+
+34:38.780 --> 34:45.660
+internal model is validated but if you reach out and instead of a light switch your hand touches a cold wet
+
+34:45.660 --> 34:51.660
+sponge taped to the wall you would jump out of your skin yes because there is a massive mismatch between
+
+34:51.660 --> 34:58.060
+what the brain expected and what the senses reported a massive error signal is generated that feeling of
+
+34:58.060 --> 35:04.300
+shock is literally the feeling of surprise when this happens the brain has two choices it can either update
+
+35:04.300 --> 35:10.060
+its internal model to match reality okay there is a sponge on the wall now or it can initiate an action
+
+35:10.060 --> 35:15.500
+to change reality to match the model like turn on a flashlight to figure out what went wrong so we are
+
+35:15.500 --> 35:20.700
+constantly reducing surprise to navigate the world but where does identity fit into this where is the
+
+35:20.700 --> 35:26.220
+self Flyxion argues that the predictive self is simply the highest slowest moving layer of this
+
+35:26.220 --> 35:32.700
+predictive hierarchy it is a radical almost unsettling reframing of human identity under this model
+
+35:32.700 --> 35:38.380
+identity is not a hidden soul it is not a metaphorical hard drive of stored memories that you access
+
+35:38.380 --> 35:44.540
+identity is a generative rule it is a compression algorithm designed to process long-term experience
+
+35:44.540 --> 35:50.700
+and maintain temporal continuity over a lifespan the ultimate zip file think about all the things
+
+35:50.700 --> 35:55.340
+you've done in your life the people you've loved the traumas you faced your daily habits your career
+
+35:55.340 --> 36:01.020
+goals the millions of mundane conversations your brain cannot actively process all of that raw
+
+36:01.020 --> 36:06.700
+phenomenological data every second of every day if it tried to hold all of that in active working
+
+36:06.700 --> 36:12.700
+memory your cognitive architecture would crash so it runs a compression algorithm it beta reduces your life
+
+36:12.700 --> 36:17.660
+it zips it all up into a minimal narrative i am a person who works hard loves dogs gets anxious in
+
+36:17.660 --> 36:23.020
+crowds and values honesty that narrative isn't who you are at a cellular level it is a mathematical rule
+
+36:23.020 --> 36:28.380
+your brain uses to predict what you are going to do next based on what you've done before the self is a
+
+36:28.380 --> 36:34.140
+compression architecture it is the normal form of your biography and what's fascinating here is that
+
+36:34.140 --> 36:40.060
+the text grounds this deeply in the physical body long before you have a complex narrative identity about
+
+36:40.060 --> 36:46.460
+your career or your anxieties you have deep interoceptive priors your body is the foundational interface
+
+36:46.460 --> 36:51.340
+interoception meaning the signals from inside your body right signals about your heartbeat your respiration
+
+36:51.340 --> 36:57.580
+your blood sugar your core temperature your body is the basement level of the predictive hierarchy
+
+36:58.300 --> 37:05.260
+your brain has a deeply embedded prediction that your core temperature should be roughly 98.6 degrees fahrenheit
+
+37:05.900 --> 37:11.100
+that is a highly stable prior if you walk outside in the winter and your skin gets cold that temperature
+
+37:11.100 --> 37:17.660
+drop is a prediction error it is a biological surprise so your brain says wait i predict i am 98.6 degrees
+
+37:17.660 --> 37:23.980
+but the sensory data says i am 97 degrees this is an error exactly so you act in the world to make your
+
+37:23.980 --> 37:29.660
+prediction true you put on a sweater you are governing your physical existence by minimizing surprise
+
+37:29.660 --> 37:36.220
+and Flyxion argues that narrative identity is just the highest most abstract level of this exact same
+
+37:36.220 --> 37:42.380
+dynamic equilibrium you act in the world in ways that confirm your narrative zip file if your zip file
+
+37:42.380 --> 37:48.060
+says i am a helpful person and you see someone drop their groceries you predict that you will help them
+
+37:48.620 --> 37:54.540
+if you don't help them you generate an internal prediction error you feel guilt guilt is the surprise of
+
+37:54.540 --> 38:00.380
+violating your own narrative algorithm that is incredible but what happens when that zip file
+
+38:00.380 --> 38:06.860
+breaks what happens when the predictive geometry fails the text maps cognitive pathologies directly
+
+38:06.860 --> 38:12.060
+onto the failure of this predictive geometry if your priors are too strong meaning your zip file is
+
+38:12.060 --> 38:18.380
+completely rigid and refuses to update you ignore the sensory reality of the world you force the data to fit
+
+38:18.380 --> 38:24.460
+the model this manifests as dogmatism extreme stubbornness or in clinical terms delusion you keep
+
+38:24.460 --> 38:30.060
+predicting the light switches there even as you stare at the sponge yes but conversely if your priors
+
+38:30.060 --> 38:35.740
+are too weak if your zip file is corrupted or lacks confidence you get completely overwhelmed by the
+
+38:35.740 --> 38:42.380
+sensory flux every minor fluctuation in the environment feels like a massive surprise you cannot stabilize a
+
+38:42.380 --> 38:49.740
+normal form this leads to profound anxiety dissociation or a fragmented sense of self a healthy identity
+
+38:49.740 --> 38:55.820
+therefore is a geometry capable of absorbing error without losing coherence it is stable enough to
+
+38:55.820 --> 39:01.900
+preserve continuity but flexible enough to accommodate revision when reality firmly challenges it the
+
+39:01.900 --> 39:07.340
+geometry of belief that phrase brings us to our final section we just called the self a generative model
+
+39:07.340 --> 39:12.700
+an algorithm a zip file we talked about strong priors and weak priors but what does that actually look
+
+39:12.700 --> 39:18.300
+like on a physical mathematical level inside the cognitive architecture of the brain how is a belief
+
+39:18.300 --> 39:23.500
+physically structured in tissue and synapses to answer this the monograph concludes by mapping
+
+39:23.500 --> 39:29.180
+everything we've discussed onto markov boundaries and neural directed acyclic graphs or DAGs this is
+
+39:29.180 --> 39:34.780
+where the math of ai and the math of human cognition converge okay let's start with the markov boundary we
+
+39:34.780 --> 39:42.140
+need to make this intuitive imagine a biological cell a cell has a membrane that membrane is semi-permeable
+
+39:42.140 --> 39:47.740
+it lets nutrients in and pushes waste out it separates the inside of the cell from the outside environment
+
+39:48.300 --> 39:53.820
+a markov boundary is the mathematical equivalent of that cell membrane it is a statistical barrier
+
+39:53.820 --> 39:59.580
+that separate internal states from external states and the mathematical rule of a markov boundary is that
+
+39:59.580 --> 40:05.180
+all information passing between the inside and the outside must travel through this boundary the
+
+40:05.180 --> 40:10.460
+internal states cannot interact with the external world directly they only interact with the boundary
+
+40:10.460 --> 40:17.740
+states the text shows mathematically that at a microscopic level these boundaries can be locally linearized
+
+40:17.740 --> 40:23.820
+linearized meaning they can be expressed as lines on a graph yes they can be expressed as linear equations
+
+40:23.820 --> 40:30.220
+with weights and biases slopes and intercepts wait a second slopes and intercepts like y equals mx plus b
+
+40:30.220 --> 40:35.420
+the exact same high school algebra equation we talked about in section one yeah the student at the kitchen table
+
+40:35.420 --> 40:41.900
+it is precisely the same mathematics a neural network whether it is a large language model in a server farm
+
+40:41.900 --> 40:49.020
+or the visual cortex in your brain is essentially a chain of these linearized interfaces a directed
+
+40:49.020 --> 40:55.340
+acyclic graph the data moves in one direction through the graph passing through layer after layer of markov
+
+40:55.340 --> 41:00.380
+boundaries and what is happening at each layer each layer takes the complex high dimensional space of
+
+41:00.380 --> 41:06.380
+the previous layer and performs a geometric operation on it it scales it it twists it it rotates it and it
+
+41:06.380 --> 41:13.260
+translates it it is literally reshaping the geometry of the data it's taking the messy chaotic sensory data
+
+41:13.260 --> 41:19.980
+from the world and ironing it out folding it stretching it shaping it layer by layer until it makes sense
+
+41:19.980 --> 41:26.620
+until it reaches a normal form yes reduction whether it's beta reduction in the lambda calculus or cognitive
+
+41:26.620 --> 41:32.860
+abstraction in the human brain is fundamentally a traversal through a semantic vector space deep learning
+
+41:32.860 --> 41:38.300
+models and human cognition are both iterative constructions of higher dimensional complex
+
+41:38.300 --> 41:44.460
+planes you navigate the geometry to find meaning so belief isn't a sentence stored in a file cabinet
+
+41:44.460 --> 41:51.260
+in your head no belief is a geometric structure it is the shape of the manifold your brain is constructed
+
+41:51.260 --> 41:57.660
+and surprise that feeling of being wrong or shocked we talked about earlier is literally a curvature
+
+41:57.660 --> 42:02.300
+signal it is the mathematical friction of the data telling you that your internal geometry
+
+42:02.300 --> 42:07.100
+doesn't match the geometry of the world this is where i just have to sit back and marvel at the sheer
+
+42:07.100 --> 42:13.340
+unbroken unity of this source text we literally started this deep dive with a hypothetical teenager
+
+42:13.340 --> 42:19.340
+sitting at a kitchen table chewing on a pencil doing basic high school algebra homework and by following the
+
+42:19.340 --> 42:24.620
+mathematical truth of what they were doing executing dependencies to reach a normal form we ended up
+
+42:24.620 --> 42:30.860
+defining human identity as a projectory through a high dimensional semantic vector space constrained by the
+
+42:30.860 --> 42:36.220
+ethical necessity of remembering the humanity we abstract away it is all the exact same process it
+
+42:36.220 --> 42:41.900
+is a unified theory of reality built on the premise that the universe demands the work of reduction be done
+
+42:41.900 --> 42:48.620
+that is just it's a staggering way to view reality okay we need to land this plane this has been an
+
+42:48.620 --> 42:54.540
+incredibly dense journey let's briefly recap the monumental ground we just covered we started by learning that
+
+42:54.540 --> 43:00.620
+abstraction is not hiding it is the rigorous physical and logical execution of detail you don't get the
+
+43:00.620 --> 43:05.980
+normal form until you do the work we learned that existence both in software and in life
+
+43:05.980 --> 43:11.660
+is defined by interfaces and affordances what we permit and how we interact not the heavy historical
+
+43:11.660 --> 43:16.780
+baggage we carry we saw how this need for stabilization is literally built into asynchronous
+
+43:16.780 --> 43:21.980
+computer hardware and the foundational mathematics of logical proof we contrasted this computational
+
+43:21.980 --> 43:27.500
+necessity of thinning the world with a phenomenological desire to thicken the world to experience its raw
+
+43:27.500 --> 43:32.540
+irreducible depth we then examined the immense ethical weight of this power recognizing that
+
+43:32.540 --> 43:38.540
+extraction is simply abstraction that has violently forgotten its own omissions we explored the predictive
+
+43:38.540 --> 43:44.620
+self understanding human identity as a generative model a narrative compression a grip file designed
+
+43:44.620 --> 43:50.700
+to minimize surprise and maintain continuity and finally we grounded all of this in the geometry of belief
+
+43:50.700 --> 43:56.620
+seeing that learning and perceiving are the reshaping of our internal high dimensional dimensions it is a totally
+
+43:56.620 --> 44:02.220
+unified world view and Flyxion's monograph is going to take a long time to fully digest but i want to
+
+44:02.220 --> 44:08.300
+leave you the listener with a final thought to mull over on your own as you go about your day we talked
+
+44:08.300 --> 44:13.580
+extensively about how an ethical abstraction must keep a pathway open to the messy reality it left behind
+
+44:14.220 --> 44:20.140
+it must remember what it has forgotten so i want you to think about the interface you present to the world
+
+44:20.140 --> 44:24.540
+think about the predictive self you've constructed that narrative zip file you run every day to
+
+44:24.540 --> 44:30.780
+keep your life stable predictable and safe from surprise what wild unpredictable beautiful parts
+
+44:30.780 --> 44:36.460
+of your own raw phenomenological experience are you actively extracting and ignoring just to maintain
+
+44:36.460 --> 44:41.260
+your current identity what messy truths about yourself are you refusing to process because they
+
+44:41.260 --> 44:46.060
+don't fit the neat normal form you've chosen and what would happen to your geometry of belief if you
+
+44:46.060 --> 44:54.540
+you finally let that surprise back in thanks for going on this deep dive with us today
+

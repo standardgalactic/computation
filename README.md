@@ -1,5 +1,7 @@
 # Xylomorphic Infrastructure: Thermodynamic and Cognitive Foundations of Stable AI Systems
 
+[Abstraction as Reduciton](https://github.com/standardgalactic/computation/blob/main/abstraction/README.md)
+
 [The Moon Should Not Be a Computer](https://standardgalactic.github.io/computation/moon-not-computer.pdf)
 
 [Xylomorphic Computation](https://standardgalactic.github.io/computation/xylomorphic_computation.pdf)

@@ -1,0 +1,925 @@
+% !TEX program = lualatex
+\documentclass[11pt, a4paper]{article}
+
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{mdframed}
+
+\geometry{
+  top=1.25in,
+  bottom=1.25in,
+  left=1.35in,
+  right=1.35in
+}
+
+\onehalfspacing
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+\newtheoremstyle{named}
+  {12pt}{12pt}{\itshape}{}{\bfseries}{.}{.5em}{}
+\theoremstyle{named}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+
+\newmdenv[
+  linewidth=0.8pt,
+  innertopmargin=10pt,
+  innerbottommargin=10pt,
+  innerleftmargin=14pt,
+  innerrightmargin=14pt,
+  skipabove=14pt,
+  skipbelow=14pt
+]{keybox}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+
+\title{%
+  \textbf{Too Coherent to Be Real}\\[0.4em]
+  \large Szukalski, Creative Obstinacy, Documentary Unreality,\\
+  and the Problem of the Frictionless Subject
+}
+\author{Flyxion}
+\date{}
+
+% ---------------------------------------------------------------
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\begin{abstract}
+This essay begins with an unusual perceptual experience: watching a
+documentary about the Polish sculptor Stanis\l{}aw Szukalski and being
+left uncertain whether he actually existed. The film is so well-made,
+its subject so perfectly illustrative of everything a documentary about
+outsider genius, nationalist tragedy, and late redemption would want
+him to be, that the viewer's reality-testing mechanism fires not on
+any implausible detail but on the overall gestalt. Szukalski is too
+coherent. His contradictions resolve too cleanly. The care with which
+he has been preserved produces, paradoxically, a figure who feels
+constructed rather than encountered. The essay uses this experience
+as an entry point into three interconnected arguments. First, that
+Szukalski's creative obstinacy — his systematic refusal of outside
+influence — was not mere eccentricity but a survival strategy, a form
+of procedural memory maintenance under conditions of institutional
+destruction. Second, drawing on Catherine Liu's analysis of
+infantilization, affect, and the professional managerial class, that
+total mediation produces unreality: a subject with no friction, no
+resistance to the narrative containing him, becomes indistinguishable
+from a fabrication regardless of whether he was real. Third, that these
+two observations are connected by a deeper structural claim: the
+conditions that make creative work durable — obstinacy, refusal of
+absorption, maintenance of idiosyncratic form — are also the conditions
+that make a person difficult to document without flattening. The essay
+concludes by reading Szukalski's Zermatism — his theory of a single
+origin language and a debased lineage of humanity — as an armillary
+proposal gone pathological: a coordinate transformation that kept
+rotating past the point where it could encounter resistance from
+reality, and thereby became unfalsifiable in the same way the egg-avatar
+politics Liu diagnoses becomes unfalsifiable: sealed against the
+friction that would have made it real.
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ---------------------------------------------------------------
+\section{The Unreality Effect}
+
+There is a specific perceptual experience that well-made documentaries
+about eccentric geniuses can produce in the attentive viewer: the
+growing suspicion that the subject did not exist. This is not the
+ordinary skepticism one brings to historical claims. It is something
+stranger. The figure on screen is too perfectly illustrative of
+everything the film needs them to be. Their contradictions are too
+narratively productive. Their tragedy is too clean. The people who
+loved them remember them with exactly the combination of wonder,
+sorrow, and complicated loyalty that the film requires. And gradually
+the viewer's reality-testing mechanism, which usually fires on
+implausible details, begins to fire instead on the overall coherence
+of the construction. The subject is too much like what a subject of
+this kind would be like.
+
+Stanis\l{}aw Szukalski produces this effect. He is a Polish sculptor
+born in 1893 who developed a distinctive and obsessive visual language,
+was celebrated in interwar Poland, lost his entire Warsaw studio and
+nearly his entire life's work to the Nazi bombing of 1939, emigrated
+to Los Angeles, lived in obscurity for decades, and was rediscovered
+in his old age by a circle of admirers including George DiCaprio, who
+preserved his remaining work and recorded his conversation. He also
+held nationalist and antisemitic views in the years surrounding the
+Second World War, views he later repudiated. He created a theory of
+human cultural origins he called Zermatism, which posited that all
+human languages descended from a single primordial tongue he called
+Protong, and that humanity's debasement arose from prehistoric
+interbreeding with sea creatures.
+
+Presented as a list of facts, this is simply unusual. Presented as a
+documentary, with archival photographs, interviews with devoted
+survivors, and footage of the actual sculptures — gnarly, mythological,
+technically extraordinary — the unreality effect intensifies rather
+than diminishes. The more evidence accumulates, the more the figure
+feels assembled. He is too complete. The tragedy of the lost Warsaw
+work, the obscurity, the late rescue, the moral complexity of the
+nationalism — each element fulfills a narrative function so precisely
+that the whole begins to feel authored.
+
+This essay begins with that perceptual experience because it is
+philosophically interesting in itself, and because it leads directly
+into questions that are larger than any one documentary: questions
+about creative obstinacy as a survival strategy, about the relationship
+between documentation and reality, about what kinds of subjects resist
+the flattening that total mediation produces, and about when the
+refusal of outside influence becomes not a condition of creative
+survival but a sealed system that can no longer encounter the world
+on its own terms.
+
+% ---------------------------------------------------------------
+\section{Szukalski's Obstinacy as Survival Strategy}
+
+The standard reading of an outsider artist's refusal of influence is
+psychological: eccentricity, grandiosity, incapacity for the ordinary
+social negotiations that participation in an artistic community
+requires. This reading is not entirely wrong in Szukalski's case.
+He was by all accounts difficult, domineering, convinced of his own
+exceptional status in ways that made sustained collaboration nearly
+impossible.
+
+But the psychological reading misses the structural function of the
+refusal. Szukalski's obstinacy — his insistence on developing a
+visual and theoretical vocabulary entirely his own, his resistance to
+assimilation into any existing artistic movement, his cultivation of
+a mythology of himself as the lone bearer of a suppressed primordial
+tradition — was not only a personality trait. It was a form of
+institutional independence. And institutional independence, as the
+history of the twentieth century repeatedly demonstrated, was a
+condition of survival.
+
+An artist whose work is legible within an existing movement,
+marketable through existing institutional channels, comprehensible to
+existing critical frameworks, is also an artist whose work is
+vulnerable to the institutional forces that shape and destroy those
+frameworks. The Warsaw bombing of 1939 destroyed Szukalski's studio,
+his archive, and the physical record of decades of work. What it could
+not destroy was the procedural knowledge carried in his hands and his
+mind: the specific techniques, the mythological vocabulary, the
+obsessive formal investigations that constituted his practice. That
+knowledge survived because it was his alone. There was no school of
+Szukalski, no workshop tradition, no institutional structure through
+which the work was mediated and which could have been infiltrated or
+corrupted or simply closed.
+
+\begin{keybox}
+The artist who refuses absorption preserves something that institutions
+cannot destroy, because institutions cannot absorb what they cannot
+recognize. Szukalski's idiosyncrasy was not an obstacle to his
+survival. It was its mechanism.
+\end{keybox}
+
+This is the inverse of the standard account of institutional memory.
+In most analyses, procedural knowledge is preserved through
+transmission — through workshops, apprenticeships, training
+programs, communities of practice. When those transmission mechanisms
+are destroyed, the knowledge is lost. Szukalski's case suggests a
+complementary but different dynamic: knowledge can also be preserved
+through radical concentration in a single carrier who is too
+idiosyncratic to be absorbed by any institution and therefore cannot
+be destroyed when institutions are destroyed.
+
+The cost of this strategy is obvious. Knowledge preserved through
+radical concentration in a single carrier is also knowledge that
+cannot be transmitted through normal channels, that depends entirely
+on the carrier's survival and willingness to continue, and that is
+vulnerable to exactly the death and dispersal that eventually claimed
+Szukalski's unreproduced work. The DiCaprio circle's preservation
+effort is, in the framework developed in recent work on institutional
+memory, an attempt at approximate repair under conditions of
+operational fiber death: the procedural knowledge that was Szukalski's
+alone has decayed to measure zero, and what remains is declarative
+knowledge — photographs, recordings, the surviving sculptures — from
+which the full practice cannot be reconstructed, only imagined.
+
+% ---------------------------------------------------------------
+\section{The Egg Avatar and Its Inverse}
+
+Catherine Liu, in conversation about her work on the professional
+managerial class and the culture of liberal affect, describes a figure
+she calls the egg avatar: the undifferentiated online subject who has
+cultivated maximum receptivity to feeling at the cost of the ego
+boundaries that would allow actual confrontation with the world. The
+egg avatar is soft, porous, constantly vibing, constitutionally
+incapable of the friction that distinguishes real encounter from
+mutual affect-resonance. When egg avatars collide, they do not
+disagree; they fear cracking. The political consequence is an inability
+to build anything that requires sustained conflict, institutional
+structure, or the tolerance of contradiction.
+
+Liu is drawing on a psychoanalytic tradition that distinguishes between
+the ego — the mediating structure between id and superego, capable of
+engaging with external reality — and the pre-differentiated infantile
+surface that precedes ego formation. Her argument is that a significant
+strand of contemporary progressive culture has sacralized the
+pre-differentiated state, treating the porousness and receptivity of
+the undifferentiated infant as a political and aesthetic ideal rather
+than a developmental starting point to be moved through.
+
+Szukalski is the opposite of an egg. He is what happens when
+differentiation proceeds without external check — when the ego boundary
+is maintained and reinforced and elaborated until it becomes a
+totalizing system that can no longer register feedback from outside
+itself. If the egg avatar's pathology is the inability to sustain
+boundaries, Szukalski's pathology is the inability to relax them.
+Where the egg avatar dissolves into collective affect, Szukalski
+constructed an entire cosmology as an extension of his own
+self-understanding. Zermatism is not a theory that could be falsified
+by evidence because it was not primarily a theory about the world; it
+was a theory about Szukalski's position in relation to the world, and
+evidence that failed to confirm it was evidence of the debased
+condition the theory was designed to diagnose.
+
+\begin{keybox}
+The egg avatar and the totalizing obsessive are not opposites in the
+sense of correcting each other. They are mirror pathologies of the
+same failure of mediation: one has no boundary, the other has a
+boundary that has become a wall.
+\end{keybox}
+
+Liu's framework implies that what is needed is not more differentiation
+or less differentiation but the right kind: the ego as mediating term,
+capable of sustaining conflict without dissolution, capable of
+encountering the world without becoming the world. Szukalski had
+enormous ego strength in the psychoanalytic sense — he sustained his
+practice through decades of obscurity, institutional destruction, and
+exile — but his ego had long since ceased to mediate between his inner
+world and external reality. It had become, instead, a system for
+interpreting external reality as confirmation of an already-complete
+internal theory.
+
+This is where his nationalism and antisemitism cease to be incidental
+biographical facts and become structurally interesting. A mind that
+has developed a totalizing cosmological system — Zermatism, Protong,
+the theory of prehistoric debasement — is a mind that has solved the
+problem of outside influence by eliminating the category of outside.
+Everything becomes interpretable within the system. The antisemitism
+is not a separate module added to an otherwise coherent worldview; it
+is what a Zermatist interpretation of early twentieth century European
+politics produces when the interpretive frame has become sealed.
+Szukalski did eventually repudiate these views, which suggests the
+frame was not entirely impermeable. But the repudiation came late
+and appears to have been experienced as a correction from outside
+rather than an internal revision — the kind of encounter with
+recalcitrant reality that a more porous ego structure would have
+enabled earlier.
+
+% ---------------------------------------------------------------
+\section{What the Documentary Cannot Show}
+
+The documentary about Szukalski is made by people who love him.
+Glenn Bray, who preserved the work; George DiCaprio, who befriended
+him in his Los Angeles years; others who experienced his personality
+directly and who carry genuine grief about what was lost in Warsaw.
+Their testimony is authentic. Their care for the man and his work is
+unmistakable.
+
+And yet this care is precisely what produces the unreality effect.
+Total mediation through love creates a subject without friction.
+The Szukalski we see in the documentary has been selected, arranged,
+and preserved by people whose relationship to him was one of devotion.
+His difficult qualities — the domineering personality, the grandiosity,
+the nationalism — are present but contextualized, explained,
+integrated into a narrative of complexity-that-is-ultimately-redeemed.
+The result is not dishonest. It is something more interesting: it is
+a documentary that has solved all the interpretive problems its subject
+poses, and in solving them has made the subject less real.
+
+Liu's analysis of affect is useful here. The film produces affect in
+the viewer: wonder at the sculptures, discomfort at the nationalism,
+sympathy for the losses, satisfaction at the late recognition. These
+are genuine responses to genuine material. But affect, in Liu's
+framework, is not the same as intersubjectivity. Affect flows; it
+connects surfaces. Intersubjectivity requires differentiation, the
+acknowledgment that the other is genuinely other — not reducible to
+what they mean to me, not fully legible within my interpretive
+framework, capable of being wrong in ways I did not anticipate.
+
+The documentary gives us a Szukalski who is fully legible. His
+contradictions are there but they have been made narrative. He is
+not, in the viewing experience, genuinely other. He is an
+extraordinarily well-realized figure in someone else's story about
+him. And this is the source of the unreality effect: a person
+encountered through total mediation by devoted interpreters is a
+person whose alterity has been managed. He exists inside the love
+of the people who preserved him, and inside that love he is as
+complete and as real as a character in a very good novel.
+
+The doubt is not about whether Szukalski existed. It is about
+whether the documentary's Szukalski and the historical Szukalski
+are the same entity. And that doubt is structurally correct:
+they are not. The historical Szukalski produced friction — with
+institutions, with collaborators, with political movements, with
+the limits of his own cosmological system. The documentary's Szukalski
+produces affect. These are different modes of being in the world,
+and the documentary, by excellence of its craft, has substituted one
+for the other.
+
+% ---------------------------------------------------------------
+\section{The Observer Problem and the Chain of Love}
+
+The UPC framework developed by Eloy Escagedo Gutierrez argues that
+paradoxes arise when observers are removed from explanatory
+frameworks. There is a related but inverse problem: what happens when
+observers are so present, so constitutive of the object being
+described, that the object cannot be encountered independently of
+them?
+
+The Szukalski documentary is organized around a chain of observers
+who are also participants: the people who knew him, loved him, grieved
+for him, and devoted significant portions of their lives to preserving
+what he made. This chain of love is also a chain of mediation. Each
+link in the chain — the photographs Bray collected, the conversations
+DiCaprio recorded, the documentary Irek Dobrowolski assembled from
+these materials — is an act of preservation that is also an act of
+transformation. What is preserved is not Szukalski but what Szukalski
+meant to the people who preserved him.
+
+This is not a criticism of the film. It is a description of what
+documentation always does, made visible by the particular intensity
+of devotion in this case. All archives are partial. All preservation
+is selection. All documentation reflects the purposes and frameworks
+of the documenters. But usually these purposes and frameworks are
+diverse enough that the subject partially escapes them — some witnesses
+loved the subject, some were indifferent, some were hostile, and the
+friction between their accounts produces something like an independent
+object that the various accounts are inadequately describing.
+
+When all the witnesses loved the subject, that friction disappears.
+The subject becomes the consensus object of devotion, and the
+consensus object of devotion is, by definition, what the devotees
+needed it to be. Szukalski's reality — his specific recalcitrance,
+the ways in which he was not what anyone needed him to be — is
+present in the historical record but has been largely smoothed into
+the documentary's arc of tragic greatness and belated recognition.
+
+\begin{keybox}
+The observer cannot be removed from the chain of meaning. But when
+the chain of meaning is also a chain of love, the observer's
+presence becomes so total that the observed disappears into the
+observation.
+\end{keybox}
+
+What the documentary cannot show is the Szukalski who was difficult
+in ways that were not productive, wrong in ways that were not
+redeemable, ordinary in ways that were not interesting. It cannot
+show the texture of his actual daily obstinacy — the meetings that
+went nowhere, the collaborations that failed for mundane rather than
+tragic reasons, the conversations that were simply boring or
+repetitive or self-absorbed. These are the friction-producing elements
+of a real person, and they are exactly what love, in the act of
+preservation, edits out.
+
+% ---------------------------------------------------------------
+\section{Zermatism as an Armillary Proposal Gone Sealed}
+
+Szukalski's theoretical system — Zermatism, with its claims about
+Protong as the single origin language, its theory of prehistoric
+interbreeding, its morphological analyses of cultural symbols across
+unrelated civilizations — can be read as an armillary proposal: a
+coordinate transformation applied to the questions of human cultural
+origin, linguistic diversity, and civilizational development.
+
+Read charitably and structurally, Zermatism asks a legitimate
+question. What if the diversity of human languages and cultural forms
+is not a branching process of divergence from a common point but a
+pattern of corruption and fragmentation from a unified original? What
+if the resemblances between morphologically distant linguistic and
+cultural systems are not coincidental but trace to a common source
+that standard comparative linguistics has failed to recover? What if
+the history of civilization is better understood as a story of loss
+than of development?
+
+These are not crazy questions. Versions of them appear in serious
+comparative mythology, in the study of linguistic universals, in
+debates about the deep history of human symbolic culture. Zermatism
+is what happens when these questions are pursued by a mind that has
+lost the mechanism for encountering disconfirming evidence — when the
+armillary proposal keeps rotating past the point where it can be
+checked against the territory it is supposed to be mapping.
+
+The armillary sphere is a navigation instrument. Its value depends on
+its relationship to the celestial mechanics it represents. An armillary
+sphere that has been decoupled from astronomical observation — that
+has become self-referential, its rings encoding relationships that
+are internally consistent but no longer checked against the sky —
+ceases to be a navigation instrument and becomes a beautiful closed
+object. It still looks like a sphere. It still has rings. But it has
+lost the property that made it useful: its capacity to be wrong.
+
+Zermatism had lost that capacity. It could not be wrong because
+every piece of evidence that might have falsified it was
+reinterpreted as evidence of the debasement and confusion it was
+designed to diagnose. Morphological similarities between distant
+languages confirmed Protong. Morphological differences were evidence
+of corruption. The theory was sealed.
+
+This is the pathological form of the armillary proposal, and it is
+structurally identical to what Liu diagnoses in a different register
+when she describes the egg avatar's relationship to political
+discourse. The egg avatar cannot be wrong either — not because its
+theory is too powerful but because its porousness prevents the
+formation of the boundaries that would allow genuine disagreement.
+One has no boundary; the other has a boundary that has become
+impermeable. Both are sealed against the encounter with recalcitrant
+reality that is the condition of genuine knowledge.
+
+The connection to the antisemitism is direct and uncomfortable.
+A cosmological system that posits a debased lineage contaminating
+pure human stock, developed in interwar Europe by a Polish nationalist,
+does not require external ideological influence to arrive at
+antisemitic conclusions. It arrives there through the internal logic
+of the system once the system has been decoupled from the capacity
+to encounter disconfirming evidence. The antisemitism is not a foreign
+body in Zermatism. It is what Zermatism looks like when sealed.
+
+% ---------------------------------------------------------------
+\section{The PMC and the Institutionalization of the Sealed System}
+
+Liu's analysis of the professional managerial class is relevant to
+Szukalski in an unexpected way. Her central argument is that the PMC
+has substituted the performance of virtue for the exercise of reason —
+that it has developed a doctrinal system (identity politics,
+decolonization frameworks, language rituals) that functions as a
+closed interpretive system: internally consistent, resistant to
+external critique, organized around excommunication of doctrinal
+error rather than engagement with contradicting evidence.
+
+The PMC's sealed system is the institutional form of what Szukalski's
+sealed system was at the individual level. Both are products of
+differentiation that has proceeded past the point of productive
+encounter with the world. The PMC variant is more dangerous in some
+ways because it has institutional infrastructure — academic positions,
+editorial boards, grant committees, human resources departments —
+through which the sealed system can be enforced on people who did not
+choose to inhabit it.
+
+But the structural similarity runs deeper than this. Liu argues that
+the PMC's virtue culture is crypto-religious: it has the form of
+doctrinal systems, with heresy, excommunication, and the performance
+of correct belief as markers of membership, without the substantive
+theological content that would anchor the doctrine to anything
+outside itself. Zermatism has the same structure at the individual
+level: it is a total explanatory system that accounts for all evidence
+and is therefore unfalsifiable, organized around a mythology of
+primordial purity and subsequent corruption that gives its adherent
+a position of interpretive superiority over those who do not share
+the framework.
+
+Both systems produce a similar pathology in their adherents: the
+inability to learn from encounter with the world, because the world
+has been pre-interpreted by the system. Both systems also produce,
+paradoxically, a kind of passionate commitment that appears to
+outsiders as evidence of genuine engagement. The PMC activist who
+has spent years developing fluency in the doctrinal vocabulary of
+their movement looks, from inside the movement, like someone who
+cares deeply. From outside, they look like someone who has
+substituted the performance of caring for the experience of caring
+— exactly the distinction Liu draws between genuine maternal
+attentiveness and its liberal dilution into performative concern.
+
+\begin{keybox}
+Sealed systems produce intense internal commitment and impermeability
+to external reality simultaneously. The intensity is real. It is also
+exactly what prevents the system from doing the work it claims to do.
+\end{keybox}
+
+What both Szukalski and the PMC demonstrate, from different angles,
+is that differentiation without the capacity for genuine encounter
+with recalcitrant reality produces closure rather than integrity.
+Ego strength that cannot be surprised is not strength; it is rigidity.
+A cosmological system that cannot be falsified is not a theory; it
+is a monument to its own construction.
+
+% ---------------------------------------------------------------
+\section{Obstinacy, Maturity, and the Problem of the Canon}
+
+Liu argues, following Kant, that democratic citizenship requires
+maturity — the willingness to use one's own reason, to emerge from
+self-imposed tutelage, to engage with the world as it is rather than
+as one's affect-resonance with a group suggests it should be. She
+notes that contemporary academic culture has largely inverted this
+value, treating maturity as normative, discipline as oppressive, and
+the cultivation of permanent infantile receptivity as a form of
+liberation.
+
+Szukalski's case complicates this picture in a productive way. He
+achieved something like the opposite of infantile receptivity: a
+radically individuated creative practice that developed entirely on
+its own terms, refused absorption into existing movements, and
+maintained its procedural integrity through decades of institutional
+destruction and personal obscurity. By the standards Liu is applying,
+he had strong ego, high differentiation, and a sophisticated capacity
+for sustained intellectual and creative labor. He was, in the
+psychoanalytic sense, mature.
+
+And yet the maturity had curdled. The differentiation had become
+enclosure. The refusal of outside influence, which was the condition
+of his survival, had also become the condition of his antisemitism
+and his unfalsifiable cosmology. The strong ego, unmediated by genuine
+encounter with resistant otherness, had produced a totalizing system
+rather than a well-developed self.
+
+This suggests that Liu's account, while correct about the pathology
+of the egg avatar, needs a complementary account of the pathology
+of excessive differentiation. Maturity is not simply the achievement
+of ego strength and differentiation. It requires, in addition, the
+maintenance of genuine openness to encounter — the willingness to
+be surprised by the world, to be wrong, to revise one's frameworks
+in response to evidence that does not fit them.
+
+The canon that Liu defends — the tradition of Enlightenment reason,
+scientific method, Marxist political economy, psychoanalytic
+self-understanding — is valuable not merely because it represents
+accumulated knowledge but because it represents accumulated failure.
+The canon has been wrong. It has been revised. It contains arguments
+that were superseded, predictions that did not pan out, frameworks
+that proved inadequate to the phenomena they were designed to explain.
+This revisability is precisely its value: it is a record of genuine
+encounter with recalcitrant reality. The Enlightenment tradition did
+not produce a sealed system. It produced a practice of self-correction.
+
+Szukalski never developed a practice of self-correction. His late
+repudiation of his nationalist views suggests he was capable of it,
+but by then the cosmological system that had licensed those views
+had been in place for decades, and the repudiation appears to have
+been a single correction rather than the beginning of a revisionary
+practice. Zermatism survived his moral revision intact.
+
+% ---------------------------------------------------------------
+\section{Operational Fiber Death and the Lost Warsaw Work}
+
+The destruction of Szukalski's Warsaw studio in 1939 is an instance
+of what the institutional attractors framework calls operational fiber
+death: the condition in which declarative knowledge of a prior
+configuration survives while the procedural capacity to reconstruct
+it decays to measure zero.
+
+The photographs of the Warsaw work exist. Descriptions of it exist.
+The surviving sculptures provide evidence of the formal vocabulary
+and the technical methods. But the Warsaw works themselves are gone,
+and the specific procedural knowledge that produced them — the
+particular solutions to particular formal problems, the decisions made
+in the making that are not visible in the finished object — decayed
+with Szukalski's death. What the DiCaprio circle preserved was the
+declarative memory. The procedural memory was not transmissible
+because Szukalski never transmitted it, and when he died it died
+with him.
+
+This is the irony at the center of his survival strategy. The
+obstinacy that preserved him through institutional destruction was
+also the obstinacy that prevented the transmission of his practice
+to anyone who could have carried it forward. His work survived the
+bombing because it was entirely his; it could not survive his death
+for the same reason.
+
+The documentary is itself an exercise in approximate repair: an
+attempt to recover function — the experience of Szukalski's work,
+the sense of his creative intelligence, the testimony of people who
+encountered it — without recovering form. The surviving sculptures
+are not the lost Warsaw sculptures. The recordings of his
+conversation are not his creative practice. The documentary is a
+functional equivalent of having known him, not a restoration of what
+he actually was.
+
+Approximate repair is what is available when operational fiber death
+has occurred. The framework developed elsewhere argues that this is
+a correction of the target for reformers: the appropriate goal is
+not restoration but functional reconstruction, the design of new
+forms capable of recovering lost functions in the current environment.
+Applied to Szukalski, this means that the appropriate relationship
+to his work is not curatorial — the attempt to preserve and transmit
+what he made as accurately as possible — but generative: the attempt
+to understand what questions his work was probing and to continue
+probing those questions through new work.
+
+Whether the documentary achieves this is uncertain. It achieves
+something more modest: it makes visible that something was lost,
+and makes that loss felt. That is not nothing. Making a loss visible
+is the first step toward understanding what kind of repair might be
+possible.
+
+% ---------------------------------------------------------------
+\section{Reachability and the Sealed Cosmology}
+
+The reachability framework developed in the institutional attractors
+analysis asks: what futures remain accessible from the current
+configuration? The parallel question for a creative and intellectual
+practice is: what revisions remain accessible from within the current
+framework?
+
+For Szukalski, the answer by the middle of his career was: very few.
+Zermatism had become a sealed interpretive system that could
+accommodate any new evidence by reinterpreting it as confirmation of
+the theory. A practice organized around a sealed system cannot be
+revised from within; it can only be abandoned or maintained. Szukalski
+maintained it.
+
+The cost of the sealed system is not merely that it produces wrong
+conclusions. It is that it progressively eliminates the futures that
+would have been accessible from a more porous framework. Every year
+that Zermatism was maintained without revision was a year in which
+the possibility of a different Szukalski — one who had engaged with
+comparative linguistics, with archaeological evidence, with the
+intellectual traditions that might have challenged and enriched his
+morphological speculations — became less reachable. The admissible
+set of creative futures contracted as the system sealed.
+
+This is the precise sense in which Szukalski's obstinacy, which was
+a condition of his survival, was also a condition of his limitation.
+The institutional independence that preserved him from external
+destruction also prevented the internal revision that would have kept
+his intellectual practice alive as a practice rather than a monument.
+He survived. His practice did not survive him. And the practice did
+not survive him partly because it had, long before his death, ceased
+to be a practice in the relevant sense: a mode of inquiry capable of
+producing surprise.
+
+% ---------------------------------------------------------------
+\section{The Tyranny of Affect and the Tyranny of System}
+
+Liu describes the tyranny of affect as the substitution of feeling
+for objectivity in political and cultural discourse: the claim that
+shared affect constitutes shared reality, that the intensity of
+collective feeling licenses conclusions that evidence and argument
+could not support, that skepticism and dissent are forms of violence
+against the affective community rather than contributions to a shared
+project of understanding.
+
+Szukalski enacted a different but structurally related tyranny: the
+tyranny of system. Where the tyranny of affect refuses objectivity
+by dissolving the boundary between the feeling subject and the world,
+the tyranny of system refuses objectivity by totalizing it — by
+constructing a system so comprehensive that every piece of the world
+is already interpreted before it is encountered. Both are forms of
+impermeability to reality. Both produce, in their adherents, a
+specific combination of passionate commitment and invulnerability to
+evidence.
+
+The political consequence of the tyranny of affect, in Liu's analysis,
+is the inability to build organizations capable of sustained conflict
+with actual power. Eggs cannot win. They crack against each other
+before they reach the forces that are actually organizing the world.
+The political consequence of the tyranny of system is different but
+equally disabling: it produces certainty without knowledge, action
+without feedback, and eventually the kind of moral catastrophe that
+a fully sealed interpretive system licenses when it encounters actual
+political conditions, as Zermatism encountered the actual political
+conditions of interwar Poland.
+
+What Liu's account implies, and what Szukalski's career illustrates
+from the other direction, is that the problem of political and
+creative agency is a problem of the right kind of boundary. Too soft:
+dissolution into collective affect, inability to sustain conflict,
+the egg-avatar politics that cannot build anything. Too hard:
+enclosure into a totalizing system, inability to learn from
+recalcitrant evidence, the sealed-cosmology politics that can build
+things but cannot correct them.
+
+The mediating term — the ego in the psychoanalytic vocabulary, reason
+in the Enlightenment vocabulary, the practice of self-correction in
+the scientific vocabulary — is what allows a boundary to remain a
+boundary without becoming a wall. Szukalski had the boundary without
+the self-correction. The PMC has institutional structures without the
+ego functions those structures require to operate as something other
+than enforcement mechanisms. The egg avatar has neither boundary nor
+structure.
+
+\begin{keybox}
+What is needed is not more differentiation or less differentiation
+but the capacity to hold a boundary that can also be revised — an
+ego that is strong enough to sustain encounter with the world and
+porous enough to be changed by it.
+\end{keybox}
+
+% ---------------------------------------------------------------
+\section{The Documentary as Functional Equivalent}
+
+What, finally, should we make of the documentary that produced the
+unreality effect? The film is, by any ordinary measure, excellent.
+The sculptures are extraordinary. The testimony of the people who
+knew Szukalski is moving. The account of the Warsaw loss is genuinely
+terrible. The navigation of his nationalism is careful and honest
+without being either exculpatory or simply condemnatory.
+
+And yet the unreality effect is a legitimate response to the film,
+and understanding why it arises is more useful than dismissing it
+as uncharitable to the filmmakers. The unreality effect is a signal
+that something has been managed, that the friction-producing elements
+of a genuinely recalcitrant subject have been processed into
+narrative and affect. Szukalski as encountered in the documentary is
+a functional equivalent of Szukalski — it recovers the function (the
+experience of his intelligence, the sense of his loss, the encounter
+with his work) without recovering the form (the actual texture of
+his difficult, wrong, obstinate, sealed, sometimes terrible and
+sometimes extraordinary mind).
+
+This is what approximate repair looks like in documentary form. It
+is not dishonest. It is the best available approximation given that
+operational fiber death has occurred — given that the procedural
+knowledge of what it was actually like to be in a room with him, to
+encounter his thinking before it had been curated by love, to
+experience the full weight of his sealed system's implications, is
+not recoverable. The documentary gives us what it has, and what it
+has is genuine and valuable.
+
+The unreality effect is what real people feel like when they have been
+loved into narrative coherence. It is not a failure of the documentary.
+It is evidence that Szukalski was real — that he was recalcitrant
+enough to produce, even through the total mediation of devoted
+preservation, the sense that something has escaped the frame.
+
+Something has. That is what reality does.
+
+% ---------------------------------------------------------------
+\section*{Conclusion}
+
+Stanis\l{}aw Szukalski was too coherent to be real and real enough to
+exceed his documentation. His creative obstinacy was a survival
+strategy that worked and a closure mechanism that sealed him. His
+cosmological system was an armillary proposal that kept rotating past
+the point of encounter with the territory it claimed to map. His
+late rediscovery was an act of love that produced, through the
+excellence of its preservation, a functional equivalent of a man
+who could not be fully recovered.
+
+Liu's framework gives us the conceptual vocabulary for understanding
+why: the egg avatar and the sealed system are mirror pathologies of
+the same failure of mediation, and what is needed in both cases is
+the ego function — the boundary that can be revised, the
+differentiation that remains permeable to evidence, the maturity
+that knows itself without sealing itself against the world.
+
+The documentary's unreality effect is the viewer's correct intuition
+that they are encountering a functional equivalent rather than the
+thing itself. The thing itself is gone. What remains is the
+documentation of the love that preserved what could be preserved,
+and the sculptures, which still produce the friction that love alone
+cannot manufacture.
+
+The sculptures are real. They push back. They do not resolve into
+narrative. They are too strange to be fully explained by any account
+of the man who made them, including his own.
+
+That is the only kind of reality that survives total mediation:
+the kind that continues to resist being fully known.
+
+% ---------------------------------------------------------------
+\begin{thebibliography}{99}
+
+% On Szukalski
+\bibitem{szukalski1923}
+Szukalski, S. (1923).
+\textit{Works of Szukalski}.
+University of Chicago Press.
+
+\bibitem{bray2000}
+Bray, G. (Ed.). (2000).
+\textit{Behold!!! The Protong}.
+Last Gasp.
+
+% Documentary and mediation
+\bibitem{nichols2001}
+Nichols, B. (2001).
+\textit{Introduction to Documentary}.
+Indiana University Press.
+
+\bibitem{renov1993}
+Renov, M. (Ed.). (1993).
+\textit{Theorizing Documentary}.
+Routledge.
+
+\bibitem{corner1996}
+Corner, J. (1996).
+\textit{The Art of Record: A Critical Introduction to Documentary}.
+Manchester University Press.
+
+% Psychoanalysis and ego theory
+\bibitem{freud1923}
+Freud, S. (1923).
+\textit{Das Ich und das Es}.
+Internationaler Psychoanalytischer Verlag.
+[English: \textit{The Ego and the Id}. Norton, 1962.]
+
+\bibitem{hartmann1958}
+Hartmann, H. (1958).
+\textit{Ego Psychology and the Problem of Adaptation}.
+International Universities Press.
+
+% Liu and PMC analysis
+\bibitem{liu2021}
+Liu, C. (2021).
+\textit{Virtue Hoarders: The Case Against the Professional Managerial Class}.
+University of Minnesota Press.
+
+\bibitem{ehrenreich1977}
+Ehrenreich, B., \& Ehrenreich, J. (1977).
+The Professional-Managerial Class.
+\textit{Radical America}, 11(2), 7--31.
+
+% Enlightenment, maturity, reason
+\bibitem{kant1784}
+Kant, I. (1784).
+Beantwortung der Frage: Was ist Aufkl\"{a}rung?
+\textit{Berlinische Monatsschrift}.
+[English: What is Enlightenment?]
+
+\bibitem{habermas1981}
+Habermas, J. (1981).
+\textit{Theorie des kommunikativen Handelns}.
+Suhrkamp.
+[English: \textit{The Theory of Communicative Action}. Beacon Press, 1984.]
+
+% Affect theory and its critics
+\bibitem{massumi2002}
+Massumi, B. (2002).
+\textit{Parables for the Virtual: Movement, Affect, Sensation}.
+Duke University Press.
+
+\bibitem{leys2011}
+Leys, R. (2011).
+The Turn to Affect: A Critique.
+\textit{Critical Inquiry}, 37(3), 434--472.
+
+% Organizational structure and the left
+\bibitem{freeman1972}
+Freeman, J. (1972).
+The Tyranny of Structurelessness.
+\textit{Berkeley Journal of Sociology}, 17, 151--164.
+
+% Outsider art and institutional independence
+\bibitem{cardinal1972}
+Cardinal, R. (1972).
+\textit{Outsider Art}.
+Studio Vista.
+
+\bibitem{maizels1996}
+Maizels, J. (Ed.). (1996).
+\textit{Raw Creation: Outsider Art and Beyond}.
+Phaidon.
+
+% Memory, loss, and institutional decay
+\bibitem{connerton1989}
+Connerton, P. (1989).
+\textit{How Societies Remember}.
+Cambridge University Press.
+
+\bibitem{nora1989}
+Nora, P. (1989).
+Between Memory and History: Les Lieux de M\'{e}moire.
+\textit{Representations}, 26, 7--24.
+
+% Falsifiability and closed systems
+\bibitem{popper1959}
+Popper, K. R. (1959).
+\textit{The Logic of Scientific Discovery}.
+Hutchinson.
+
+\bibitem{kuhn1962}
+Kuhn, T. S. (1962).
+\textit{The Structure of Scientific Revolutions}.
+University of Chicago Press.
+
+% Nationalism and creative thought
+\bibitem{anderson1983}
+Anderson, B. (1983).
+\textit{Imagined Communities: Reflections on the Origin and Spread of Nationalism}.
+Verso.
+
+% Comparative mythology and linguistics
+\bibitem{dumezil1958}
+Dum\'{e}zil, G. (1958).
+\textit{L'Id\'{e}ologie tripartite des Indo-Europ\'{e}ens}.
+Latomus.
+
+\bibitem{campbell1949}
+Campbell, J. (1949).
+\textit{The Hero with a Thousand Faces}.
+Pantheon.
+
+\end{thebibliography}
+
+% ---------------------------------------------------------------
+\end{document}
