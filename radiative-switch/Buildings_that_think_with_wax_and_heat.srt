@@ -1,0 +1,2272 @@
+1
+00:00:00,000 --> 00:00:05,220
+Welcome back to the deep dive. You know usually when we think about a computer
+
+2
+00:00:05,220 --> 00:00:13,000
+there is this totally ingrained expectation of a machine like a discrete isolated box.
+
+3
+00:00:13,140 --> 00:00:18,760
+Right a physical thing sitting on your desk. Yeah exactly it has a microchip maybe a glowing screen
+
+4
+00:00:18,760 --> 00:00:24,980
+a motherboard it sits there or maybe it hums away in some massive air-conditioned server rack
+
+5
+00:00:24,980 --> 00:00:30,420
+in a warehouse somewhere right yeah and conversely when you look at a building you know the walls
+
+6
+00:00:30,420 --> 00:00:36,800
+around you right now the roof the duck work we just see a container like we see a dumb box designed
+
+7
+00:00:36,800 --> 00:00:41,660
+for one specific utilitarian purpose which is basically just to keep the rain out and the
+
+8
+00:00:41,660 --> 00:00:46,020
+warmth in. Yeah we keep those two categories so strictly quarantined in our minds I mean the
+
+9
+00:00:46,020 --> 00:00:50,220
+brain is the computer right yeah and the box is just the container totally the brain does all the
+
+10
+00:00:50,220 --> 00:00:54,840
+thinking and the container just you know provides the environment for the brain to not freeze to
+
+11
+00:00:54,840 --> 00:01:01,200
+death. But if you step into the world of advanced thermodynamics and well embodied computation
+
+12
+00:01:01,200 --> 00:01:06,780
+that quarantine just shatters completely. We are looking at a theoretical landscape today
+
+13
+00:01:06,780 --> 00:01:13,020
+where the dumb box and the glowing brain are literally colliding. Yeah it's wild. So today we're
+
+14
+00:01:13,020 --> 00:01:20,060
+exploring the central mind-bending premise. What if the heater in your home wasn't just keeping you warm
+
+15
+00:01:20,060 --> 00:01:25,740
+but was actually literally thinking? Yeah. And I don't mean just to be clear I don't mean someone
+
+16
+00:01:25,740 --> 00:01:30,440
+slapped a smart microchip on the side of it and like hooked it up to your wi-fi. I mean what if the
+
+17
+00:01:30,440 --> 00:01:36,740
+physical act of heating and cooling a room is the computation itself? Our goal today isn't to just look at
+
+18
+00:01:36,740 --> 00:01:43,460
+you know a clever piece of green technology or to review some new energy-saving smart home gadget.
+
+19
+00:01:43,840 --> 00:01:48,580
+The mission of this deep dive is to fundamentally dismantle your understanding of what a computer
+
+20
+00:01:48,580 --> 00:01:54,580
+actually is. We are so used to separating the hardware, the software, and well the waste heat
+
+21
+00:01:54,580 --> 00:02:00,540
+those systems produce. We treat them as three totally distinct realities. But today we're exploring a
+
+22
+00:02:00,540 --> 00:02:05,860
+framework where those three things are completely inseparable. So the source for this whole discussion
+
+23
+00:02:05,860 --> 00:02:12,160
+is this fascinating July 2026 paper by an independent researcher named Flyxion. It's titled
+
+24
+00:02:12,160 --> 00:02:19,220
+Radiative Switch Computation, Computation as Containment. It's a dense paper but so rewarding.
+
+25
+00:02:19,440 --> 00:02:24,660
+It really is. And if you look at the thermostat on your wall right now or you know the radiator under
+
+26
+00:02:24,660 --> 00:02:30,600
+your window you probably view it as a simple mechanical servant. But by the end of this discussion you
+
+27
+00:02:30,600 --> 00:02:36,120
+might look at those physical structures as a literal computational medium. Okay let's unpack this.
+
+28
+00:02:36,120 --> 00:02:42,280
+So to really set the stage for why Flyxion's paper is so radical we kind of have to start with the
+
+29
+00:02:42,280 --> 00:02:46,840
+obvious context. You know the narrative dominating the tech industry and environmental science right
+
+30
+00:02:46,840 --> 00:02:52,120
+now which is data centers. Right. They are incredibly controversial right now. Huge ecological bottleneck.
+
+31
+00:02:52,120 --> 00:02:57,560
+Because they guzzle electricity, they drink up like millions of gallons of water just to keep the
+
+32
+00:02:57,560 --> 00:03:01,960
+servers from melting, and they dump these massive amounts of waste heat into the environment.
+
+33
+00:03:01,960 --> 00:03:07,320
+Exactly. And the tech industry has proposed this standard solution to this environmental
+
+34
+00:03:07,320 --> 00:03:12,680
+nightmare. It's what Flyxion refers to in the paper as the quote domesticated version of thermal
+
+35
+00:03:12,680 --> 00:03:18,780
+computation. I found that phrasing really interesting. Calling it domesticated implies that like we've
+
+36
+00:03:18,780 --> 00:03:26,300
+tamed the problem to fit into our existing worldview but we've completely missed the wilder sort of raw
+
+37
+00:03:26,300 --> 00:03:31,840
+potential underneath it all. Yeah that's spot on. So what exactly is this domesticated fix
+
+38
+00:03:31,840 --> 00:03:36,640
+they're talking about? Well the domesticated fix is district heating. So you have a massive server farm
+
+39
+00:03:36,640 --> 00:03:43,520
+running artificial intelligence models or processing global financial transactions, routing, internet
+
+40
+00:03:43,520 --> 00:03:48,320
+traffic, whatever. And it generates a tremendous amount of heat. Right. The traditional approach was
+
+41
+00:03:48,320 --> 00:03:53,040
+just to vent that straight into the sky. But the domesticated solution says hey instead of venting it
+
+42
+00:03:53,040 --> 00:03:58,800
+let's pipe that server exhaust into the water supply of a nearby neighborhood. You use the data center to
+
+43
+00:03:58,800 --> 00:04:04,880
+heat local homes. Oh. So in this setup computation and heating are thermodynamically integrated.
+
+44
+00:04:04,880 --> 00:04:09,840
+The dissipation of the servers is captured as a public resource. I'm struggling to see the flaw
+
+45
+00:04:09,840 --> 00:04:15,200
+there honestly because I mean isn't capturing waste heat a good thing? It sounds like this perfect
+
+46
+00:04:15,200 --> 00:04:20,880
+thermodynamic double use. Right. Sounds great on paper. Yeah. We're getting our complex math done and
+
+47
+00:04:20,880 --> 00:04:26,960
+we're keeping a neighborhood warm in December. It's a win-win. Like if I think about my car on a cold winter
+
+48
+00:04:26,960 --> 00:04:33,440
+morning, I use the engine heat to warm the cabin, right? I turn on the blower, it pulls air over the hot
+
+49
+00:04:33,440 --> 00:04:38,480
+engine block and I get warm. Super efficient. But wait, I guess the engine doesn't actually care if I'm cold.
+
+50
+00:04:38,480 --> 00:04:44,480
+That is the crucial distinction right there. Your car engine is completely indifferent to your thermal
+
+51
+00:04:44,480 --> 00:04:50,800
+comfort. It is combusting fuel for one singular purpose which is to turn a drive shaft. Right. The heat is just
+
+52
+00:04:50,800 --> 00:04:56,400
+exhaust. It's a byproduct. And a domesticated data center operates on that exact same principle of
+
+53
+00:04:56,400 --> 00:05:01,760
+indifference. The servers do not care if the neighborhood is at 60 degrees or 80 degrees.
+
+54
+00:05:01,760 --> 00:05:06,800
+They are computing arbitrary workloads assigned by some scheduler. Okay. I see. And this is where
+
+55
+00:05:06,800 --> 00:05:13,200
+Flyxion draws a strict, unyielding thermodynamic line between this domesticated setup and a conventional
+
+56
+00:05:13,200 --> 00:05:19,280
+heater. Because a heater's only job is to make heat. It's not like trying to solve a math problem on the side.
+
+57
+00:05:19,280 --> 00:05:24,960
+Exactly. Let's break this down into strict thermodynamic terms. Yeah. Heat is the most
+
+58
+00:05:24,960 --> 00:05:30,080
+degraded form of energy. It's the bottom of the barrel. Right. It is the terminal state. It's the
+
+59
+00:05:30,080 --> 00:05:36,000
+ultimate sink into which all usable energy ingredients eventually decay. So when you plug
+
+60
+00:05:36,000 --> 00:05:41,680
+in a conventional resistant space heater in your bedroom, it consumes highly ordered electrical energy
+
+61
+00:05:41,680 --> 00:05:46,240
+and degrades it into that terminal state. But it basically takes a shortcut straight to maximum
+
+62
+00:05:46,240 --> 00:05:51,920
+entropy. Yes. It manufactures heat and absolutely nothing else is extracted along the way. It's just
+
+63
+00:05:51,920 --> 00:05:57,440
+destroying order as fast as possible to make the room warm. Right. Now look at a conventional computer,
+
+64
+00:05:57,440 --> 00:06:03,200
+you know, the laptop on your desk or the server in that data center. It also arrives at that exact same
+
+65
+00:06:03,200 --> 00:06:09,920
+degraded terminal state of heat. Thermodynamics practically guarantees that. Sure. But it only arrives
+
+66
+00:06:09,920 --> 00:06:15,760
+there after performing a great deal of structured informational work. It extracts computational
+
+67
+00:06:15,760 --> 00:06:20,880
+value from the energy gradient on its way down to the thermal sink. Okay. I want to pause here really
+
+68
+00:06:20,880 --> 00:06:26,000
+quickly because Flyxion brings up Landauer's principle in the paper. And I think we need to explain this to
+
+69
+00:06:26,000 --> 00:06:32,400
+truly grasp what a computer is doing before it creates that heat. Oh, absolutely. So Rolf Landauer is an IBM
+
+70
+00:06:32,400 --> 00:06:38,800
+physicist back in the 1960s. And he proved something profound about the relationship between information
+
+71
+00:06:38,800 --> 00:06:43,920
+and physics. Right. For a long time, people thought you could theoretically compute with zero energy.
+
+72
+00:06:44,480 --> 00:06:48,960
+But Landauer proved that while you can process information reversibly without energy,
+
+73
+00:06:49,680 --> 00:06:54,880
+the moment you erase a bit of information... Like clearing a memory register to make room for a new
+
+74
+00:06:54,880 --> 00:06:59,760
+calculation. Exactly. The moment you do that, you must pay an unavoidable energy tax.
+
+75
+00:06:59,760 --> 00:07:05,440
+And that tax is paid in the form of heat dissipated into the environment. Because information is
+
+76
+00:07:05,440 --> 00:07:11,760
+physical. It's not just like an abstract concept floating in the ether. Right. Exactly. If a bit is
+
+77
+00:07:11,760 --> 00:07:18,720
+a one or a zero, it physically exists as an electron trapped in a microscopic silicon gate. So to erase
+
+78
+00:07:18,720 --> 00:07:24,960
+it, you have to forcefully push that electron out. And pushing takes work and work makes heat. Perfectly
+
+79
+00:07:24,960 --> 00:07:30,720
+stated. Conventional computing is essentially skimming mathematical order off the top of an energy
+
+80
+00:07:30,720 --> 00:07:36,160
+gradient and then discarding the heat as the inevitable tax required by Landauer's principle.
+
+81
+00:07:36,160 --> 00:07:39,680
+Got it. So the domesticated district heating solution simply says,
+
+82
+00:07:39,680 --> 00:07:42,640
+hey, let's catch that tax money and put it in a pipe to warm a house.
+
+83
+00:07:42,640 --> 00:07:48,400
+But they're still two entirely separate things. The math is the math and the heat is the tax.
+
+84
+00:07:48,400 --> 00:07:56,400
+So if that is the tame domesticated version, what is the radical reality this paper is proposing? If
+
+85
+00:07:56,400 --> 00:08:00,960
+we aren't just capturing the exhaust tax from a microchip, what are we actually doing?
+
+86
+00:08:01,520 --> 00:08:07,040
+So Flyxion's thesis is that in a radiative switch computer, there is absolutely no separation between
+
+87
+00:08:07,040 --> 00:08:13,920
+computing and heating. None. Wait, none. None. They are the exact same physical trajectory. They are
+
+88
+00:08:13,920 --> 00:08:19,280
+one singular material event evolving according to its own physical dynamics. So the heating is the
+
+89
+00:08:19,280 --> 00:08:24,080
+computing. Yes. We just give that physical event different names depending on the context of the
+
+90
+00:08:24,080 --> 00:08:29,440
+human observer. Oh, I see. If you are standing in the room shivering, you look at the system and you
+
+91
+00:08:29,440 --> 00:08:35,120
+call the event heating. But if you are an engineer looking at the final state of the room's thermal
+
+92
+00:08:35,120 --> 00:08:41,040
+equilibrium, you look at the exact same physical event and call it a solved optimization problem.
+
+93
+00:08:41,040 --> 00:08:47,760
+That is wild. Right. Underneath our human labels are sort of arbitrary categories. There is only one
+
+94
+00:08:47,760 --> 00:08:54,640
+physical process occurring. Okay, but if a computer isn't a silicon ship running software code that just
+
+95
+00:08:54,640 --> 00:09:01,360
+happens to get hot, what is it? Because our whole vocabulary is built around the separation of hardware
+
+96
+00:09:01,360 --> 00:09:06,800
+and such of where. Which is exactly why Flyxion introduces a brand new term to define this category of
+
+97
+00:09:06,800 --> 00:09:12,560
+device. And that term is xylomorphic computation. Xylomorphic. Let's dig into that word because it comes from
+
+98
+00:09:12,560 --> 00:09:18,160
+Greek, right? Xylon meaning wood and morphia meaning form. So wood form computation. Yeah, it gives it this organic,
+
+99
+00:09:18,160 --> 00:09:24,240
+almost ancient feel, which contrasts really sharply with how we normally discuss computing. The term is chosen
+
+100
+00:09:24,240 --> 00:09:30,160
+very deliberately to attack the legacy of Alan Turing and John Bonnone. The founders of modern computing.
+
+101
+00:09:30,160 --> 00:09:35,360
+Right. Because the fundamental architecture of every device you own is based on substrate
+
+102
+00:09:35,360 --> 00:09:41,600
+independence. A universal Turing machine is designed specifically so that the hardware,
+
+103
+00:09:41,600 --> 00:09:47,760
+the substrate is completely neutral. The hardware is just an empty agnostic stage for the software to
+
+104
+00:09:47,760 --> 00:09:52,640
+perform on. I think I can illustrate this by contrasting the laptop sitting in front of me with
+
+105
+00:09:52,640 --> 00:09:57,600
+like a tree out in a forest. Oh, that's a great comparison. Yeah. So if I open my laptop,
+
+106
+00:09:57,600 --> 00:10:02,240
+its processor doesn't care what it's doing. In one minute, it could be running a complex financial
+
+107
+00:10:02,240 --> 00:10:07,760
+spud sheet. Then the next minute it's rendering a 3D video game. And the next it's running a weather
+
+108
+00:10:07,760 --> 00:10:13,120
+simulation. Yeah. The hardware remains totally identical. And the heat it spits out of its little
+
+109
+00:10:13,120 --> 00:10:19,040
+fans is just totally incidental to all three of those tasks. The substrate is just a neutral carrier.
+
+110
+00:10:19,040 --> 00:10:24,640
+But a tree is not neutral. A tree's structural support, you know, holding up the branches against
+
+111
+00:10:24,640 --> 00:10:29,920
+gravity, its vascular transport of water from the roofs to the leaves, its thermal regulation in the
+
+112
+00:10:29,920 --> 00:10:35,280
+summer sun, and the actual physical record of its growth over decades. Yeah. All of those functions
+
+113
+00:10:35,280 --> 00:10:41,200
+are embodied in the exact same material, the wood. You cannot separate the tree's function from the
+
+114
+00:10:41,200 --> 00:10:48,000
+tree's hardware. Its entire history, its survival algorithm, and its purpose are just frozen right
+
+115
+00:10:48,000 --> 00:10:52,320
+there into its material form. You can't take the tree software out and like run it on a rock.
+
+116
+00:10:52,320 --> 00:10:58,080
+Exactly. And what's fascinating here is that this distinction is what Flyxion calls substrate
+
+117
+00:10:58,080 --> 00:11:04,640
+function separability. It has nothing to do with analog versus digital or biological versus synthetic.
+
+118
+00:11:04,640 --> 00:11:10,480
+Right. I mean, you could build a xylomorphic computer out of titanium and glass. The test is really
+
+119
+00:11:10,480 --> 00:11:16,000
+simple. Can you pry the computation and the physical function apart? So if you can pry them apart,
+
+120
+00:11:16,000 --> 00:11:20,160
+it is not xylomorphic. Right. If you can take the chip out of a device, hand it a totally different
+
+121
+00:11:20,160 --> 00:11:23,600
+piece of software and have it do something completely different while producing the exact
+
+122
+00:11:23,600 --> 00:11:28,560
+same amount of heat, then you just have a conventional computer. Okay. So if I look at my wall
+
+123
+00:11:28,560 --> 00:11:34,560
+and I have a smart thermostat, right, like a Nest or an Ecobee, it has a screen, it has sensors, it controls
+
+124
+00:11:34,560 --> 00:11:41,680
+my HVAC. But according to this definition, that is not xylomorphic. Not at all. That is an example of
+
+125
+00:11:41,680 --> 00:11:47,840
+integration, not embodiment. Because you could rip the microprocessor out of the plastic casing of
+
+126
+00:11:47,840 --> 00:11:53,760
+that smart thermostat, reflash its memory, and use it to run a digital alarm clock or, you know,
+
+127
+00:11:53,760 --> 00:11:56,720
+the fuel injection on a motorcycle. Oh, wow. Yeah.
+
+128
+00:11:56,720 --> 00:12:01,600
+The chip is just moonlighting as a thermostat. The computing is entirely separate from the physical
+
+129
+00:12:01,600 --> 00:12:06,960
+act of regulating the room. A true xylomorphic device is one where the physical process performing
+
+130
+00:12:06,960 --> 00:12:12,720
+the computation is literally identical to the process realizing the system's practical function.
+
+131
+00:12:12,720 --> 00:12:17,280
+I mean, I follow the philosophy. The logic definitely makes sense. But I need to see this
+
+132
+00:12:17,280 --> 00:12:22,480
+in reality. Because right now, a smart thermostat is the best technology we have for regulating a
+
+133
+00:12:22,480 --> 00:12:23,440
+building. Sure.
+
+134
+00:12:23,440 --> 00:12:27,440
+How do we actually build a device that thinks purely through its material form? Like,
+
+135
+00:12:27,440 --> 00:12:31,840
+what does this hardware actually look like? To answer that, the paper actually moves from high
+
+136
+00:12:31,840 --> 00:12:37,600
+level theory to a concrete, real-world existence proof. Okay. Frickin highlights a specific physical
+
+137
+00:12:37,600 --> 00:12:43,680
+device created by a team of researchers, Hechao, Leao, and Hawks. It is a passively adaptive radiative
+
+138
+00:12:43,680 --> 00:12:48,640
+switch for building thermoregulation. A passively adaptive radiative switch.
+
+139
+00:12:50,400 --> 00:12:54,240
+Okay, let's break down exactly what this thing looks like and how it mechanically operates,
+
+140
+00:12:54,240 --> 00:13:00,480
+because it is honestly brilliant in its simplicity. It really is. So picture a flat tile mounted on the
+
+141
+00:13:00,480 --> 00:13:07,040
+outside of a building, or maybe on a roof. The surface of this tile is covered in a set of louvers.
+
+142
+00:13:07,040 --> 00:13:12,160
+They look like miniature window blinds or, you know, the slats on a car vent. Okay, I'm picturing it.
+
+143
+00:13:12,160 --> 00:13:18,080
+Crucially, there are absolutely no electronics in this device. There are no wires, no power cables,
+
+144
+00:13:18,080 --> 00:13:24,160
+no microchips, no Wi-Fi antennas. So it's just completely dead material. Well, it appears dead,
+
+145
+00:13:24,160 --> 00:13:29,920
+but the magic is housed inside the core of the device, which is filled with a phase change material,
+
+146
+00:13:29,920 --> 00:13:34,320
+or a PCM. Phase change meaning a material that shifts its physical state, right? Like from
+
+147
+00:13:34,320 --> 00:13:39,200
+solid to liquid, or liquid to gas, like ice melting into water. Yes. And the researchers
+
+148
+00:13:39,200 --> 00:13:44,320
+didn't just use any random material. They chose a very specific type of wax called hexadecane.
+
+149
+00:13:44,320 --> 00:13:48,080
+Why hexadecane? I mean, if you're building a passive device, why not just use normal paraffin
+
+150
+00:13:48,080 --> 00:13:54,400
+candle wax? Because hexadecane has a very specific, reliable belting point. It's right around 18 degrees
+
+151
+00:13:54,400 --> 00:14:00,640
+Celsius, which is roughly 64 degrees Fahrenheit. Oh, okay. That is right on the edge of a comfortable
+
+152
+00:14:00,640 --> 00:14:05,120
+indoor room temperature. And this is where the physical mechanics get really fascinating.
+
+153
+00:14:05,840 --> 00:14:11,440
+We have to look at the transition between sensible heat and latent heat. Okay, lay that out for me.
+
+154
+00:14:11,440 --> 00:14:15,680
+What is the difference between the two? So when you heat a block of solid wax,
+
+155
+00:14:15,680 --> 00:14:20,800
+its temperature rises. That is sensible heat. You can sense it, you can literally measure it with
+
+156
+00:14:20,800 --> 00:14:25,280
+the thermometer. Right. But when the hexadecane reaches exactly 18 degrees Celsius,
+
+157
+00:14:25,280 --> 00:14:31,040
+the temperature stops rising. Instead, the thermal energy from the sun begins breaking the molecular
+
+158
+00:14:31,040 --> 00:14:36,320
+bonds of the solid wax, turning it into a liquid. The energy is absorbed as latent heat. Okay. And
+
+159
+00:14:36,320 --> 00:14:43,200
+when hexadecane melts from a solid into a liquid, it physically expands in volume by about 10%. It swells up.
+
+160
+00:14:43,200 --> 00:14:48,880
+Exactly. And that physical expansion acts as a hydraulic force. It literally drives a small mechanical
+
+161
+00:14:48,880 --> 00:14:55,360
+piston inside the tile. And that piston pushes the louvers on the surface open. Wow. So let's trace
+
+162
+00:14:55,360 --> 00:15:01,520
+the full material event here. Let's say it's a chilly morning. The ambient temperature is below 18 degrees
+
+163
+00:15:01,520 --> 00:15:07,600
+Celsius. The hexadecane wax is solid. And because it's solid, it is contracted. Right. Because it's
+
+164
+00:15:07,600 --> 00:15:14,160
+contracted, the piston is retracted. And the louvers on the tile lie totally flat. And when they lie flat,
+
+165
+00:15:14,160 --> 00:15:18,960
+they expose their top side. Now, the top side of these louvers is painted a highly solar absorbing
+
+166
+00:15:18,960 --> 00:15:25,520
+black. So the morning sun hits the black surface. The tile absorbs the heat and it warms the building.
+
+167
+00:15:25,520 --> 00:15:30,720
+So it is passively collecting thermal energy. But as the sun beats down, or maybe the room inside gets
+
+168
+00:15:30,720 --> 00:15:36,640
+warmer, the temperature of that wax begins to rise. Yes. And when it hits that magic threshold of 18
+
+169
+00:15:36,640 --> 00:15:43,360
+degrees, the phase transition occurs. The wax melts, the volume expands, the piston is driven forward,
+
+170
+00:15:43,360 --> 00:15:49,280
+and it physically flips the blinds open. And here is the absolute genius part. The underside of those
+
+171
+00:15:49,280 --> 00:15:54,080
+louvers is painted white, and it's coated in a material that is highly infrared emissive. Oh,
+
+172
+00:15:54,080 --> 00:15:59,040
+wow. So the moment they open, they hide the black heat absorbing side and they expose this white
+
+173
+00:15:59,040 --> 00:16:06,240
+sky facing surface. Yes. And suddenly, the tile stops absorbing heat and starts actively radiating
+
+174
+00:16:06,240 --> 00:16:11,920
+heat away from the building up into the cold sink of the open sky, cooling the building down.
+
+175
+00:16:11,920 --> 00:16:16,960
+That's incredible. When the researchers tested this outdoors, they found it reduced the energy cost
+
+176
+00:16:16,960 --> 00:16:23,200
+of cooling by a factor of 3.1 and heating by a factor of 2.6. And it kept the temperature tightly
+
+177
+00:16:23,200 --> 00:16:29,440
+controlled within a three degree band, all with zero electricity. That is just incredibly clever
+
+178
+00:16:29,440 --> 00:16:34,960
+materials engineering. It's a beautiful piece of passive design. But I mean, I'm still stuck on why
+
+179
+00:16:34,960 --> 00:16:40,720
+this is the anchor for a paper about redefining computation. To me, it just sounds like a really,
+
+180
+00:16:40,720 --> 00:16:44,320
+really fancy mechanical window blind. Like, why is this a computer?
+
+181
+00:16:44,320 --> 00:16:47,520
+Right. To understand why it's a computer, you have to look at what this device
+
+182
+00:16:47,520 --> 00:16:52,400
+completely removes from the equation. It collapses the traditional epistemological loop
+
+183
+00:16:52,400 --> 00:16:55,040
+of how machines interact with the world. The loop.
+
+184
+00:16:55,040 --> 00:16:59,200
+Yeah. Think about that smart thermostat on your wall again. It operates on a distinct,
+
+185
+00:16:59,200 --> 00:17:04,400
+multi-step loop that goes all the way back to Descartes and the separation of the mind from the body.
+
+186
+00:17:04,400 --> 00:17:08,160
+Okay. I see where you're going with this. Let's map out that traditional loop for everyone.
+
+187
+00:17:08,160 --> 00:17:08,800
+Let's do it.
+
+188
+00:17:08,800 --> 00:17:16,240
+So, the world exists. The temperature changes. The sensor in the thermostat, like a thermostore,
+
+189
+00:17:16,240 --> 00:17:21,520
+reads the physical world. It translates that physical reality into a digital representation,
+
+190
+00:17:21,520 --> 00:17:25,120
+like a voltage that becomes a number, say 72 degrees.
+
+191
+00:17:25,120 --> 00:17:25,440
+Right.
+
+192
+00:17:25,440 --> 00:17:31,520
+It sends that representation to a controller, which is the microchip. The controller checks its programming,
+
+193
+00:17:31,520 --> 00:17:37,520
+makes a logical decision, and sends a signal to an actuator, like a relay that clicks. And that relay
+
+194
+00:17:37,520 --> 00:17:40,080
+turns on the heater, which then changes the world.
+
+195
+00:17:40,080 --> 00:17:40,560
+Exactly.
+
+196
+00:17:40,560 --> 00:17:47,760
+So, the loop is world, to sensor, to representation, to controller, to actuator, and back to world.
+
+197
+00:17:48,320 --> 00:17:53,840
+It's a six-step loop. Six totally distinct components, handing abstract information down
+
+198
+00:17:53,840 --> 00:17:59,600
+a chain of command. The controller is totally insulated from the world. It only sees representations.
+
+199
+00:17:59,600 --> 00:18:00,080
+Right.
+
+200
+00:18:00,080 --> 00:18:05,600
+But the phase change material switch collapses that entire six-step loop into just three steps.
+
+201
+00:18:05,600 --> 00:18:06,000
+Mm-hmm.
+
+202
+00:18:06,000 --> 00:18:07,520
+World to material state to world.
+
+203
+00:18:07,520 --> 00:18:13,360
+Here's where it gets really interesting, because there is no sensor. There is no controller reading
+
+204
+00:18:13,360 --> 00:18:20,640
+a set point. The wax's phase state, whether it is solid or liquid, literally is the thermometer. And the
+
+205
+00:18:20,640 --> 00:18:23,760
+physical expansion of that wax is the actuation.
+
+206
+00:18:23,760 --> 00:18:30,880
+Yes. Sensing, memory, logic, and actuation are no longer separate components connected by copper wires.
+
+207
+00:18:31,440 --> 00:18:37,200
+There are just four different words that human beings are using to describe one single physical event,
+
+208
+00:18:37,200 --> 00:18:39,200
+which is the melting of hexadecane.
+
+209
+00:18:39,200 --> 00:18:42,080
+The control layer has completely vanished into the material.
+
+210
+00:18:42,080 --> 00:18:46,480
+It is a genuine existence proof. It demonstrates that you can have intelligent,
+
+211
+00:18:46,480 --> 00:18:51,200
+adaptive thermoregulation without a microcontroller hiding anywhere in the system.
+
+212
+00:18:51,200 --> 00:18:53,040
+The material is the logic.
+
+213
+00:18:53,040 --> 00:18:56,480
+I see how this is fundamentally different from a smart thermostat.
+
+214
+00:18:56,480 --> 00:19:00,960
+The mind and body are basically fused. But I do have to push back here,
+
+215
+00:19:00,960 --> 00:19:03,200
+because I think the definition is getting a little too loose.
+
+216
+00:19:03,200 --> 00:19:04,000
+Okay, how so?
+
+217
+00:19:04,000 --> 00:19:08,960
+Well, a single switch that just opens and closes at 18 degrees, that is a binary reaction.
+
+218
+00:19:08,960 --> 00:19:13,760
+It's a mechanical reflex, right? Like, you wouldn't call a bear trap a computer just because it snaps
+
+219
+00:19:13,760 --> 00:19:16,240
+shut when a foot steps on the pressure plate, would you?
+
+220
+00:19:16,240 --> 00:19:17,760
+No, that's a very fair challenge.
+
+221
+00:19:17,760 --> 00:19:23,040
+To get from a mechanical reflex to actual computation, we have to talk about intentionality,
+
+222
+00:19:23,040 --> 00:19:27,680
+and we have to talk about scale. Because right now, the wax is just doing what physics demands it
+
+223
+00:19:27,680 --> 00:19:29,360
+do. It's just melting.
+
+224
+00:19:29,360 --> 00:19:33,920
+Flyxion addresses this philosophical hurdle head-on in the paper. Because you're totally
+
+225
+00:19:33,920 --> 00:19:39,360
+right. If we aren't careful, the definition of xylomorphic computation becomes so broad
+
+226
+00:19:39,360 --> 00:19:44,560
+that it just becomes meaningless. Not everything that settles into a stable physical state is a
+
+227
+00:19:44,560 --> 00:19:44,960
+computer.
+
+228
+00:19:45,600 --> 00:19:50,640
+Right. The paper uses the example of a river, right? Like a river carving a channel through a
+
+229
+00:19:50,640 --> 00:19:56,320
+mountain, or maybe a crystal settling into a lattice structure as it cools. Those are physical
+
+230
+00:19:56,320 --> 00:20:01,680
+systems relaxing under constraints. The water is just finding the path of least resistance down
+
+231
+00:20:01,680 --> 00:20:02,320
+the mountain.
+
+232
+00:20:02,320 --> 00:20:05,760
+Yes. And that is the strict distinction Flyxion draws between
+
+233
+00:20:05,760 --> 00:20:08,720
+emergent computation and engineered computation.
+
+234
+00:20:08,720 --> 00:20:09,760
+Okay, unpack that.
+
+235
+00:20:09,760 --> 00:20:15,520
+A river's path is an emergent computational process. The water follows the available gravitational
+
+236
+00:20:15,520 --> 00:20:20,880
+gradients, it erodes the softer dirt, it navigates around the hard granite, and it finds the ocean.
+
+237
+00:20:20,880 --> 00:20:26,480
+Now, after the fact, a mathematician could look at that river and say, ah, this river has
+
+238
+00:20:26,480 --> 00:20:32,080
+brilliantly solved a highly complex, multivariable, least resistance optimization problem.
+
+239
+00:20:32,080 --> 00:20:36,640
+But the river didn't know it was solving a problem. It wasn't doing math. It wasn't trying to achieve
+
+240
+00:20:36,640 --> 00:20:37,120
+anything.
+
+241
+00:20:37,120 --> 00:20:43,600
+Exactly. The constraint landscape, the mountains, the valleys, the soil density, arose as a byproduct
+
+242
+00:20:43,600 --> 00:20:49,760
+of blind geology. The river was not shaped in order to solve a problem. It simply happened. And human
+
+243
+00:20:49,760 --> 00:20:54,640
+beings interpreted it as a mathematical solution after the fact. It was not built to solve anything.
+
+244
+00:20:54,640 --> 00:20:59,760
+So emergent computation is just physics doing its thing and us basically slapping a gold star on it
+
+245
+00:20:59,760 --> 00:21:00,560
+for being efficient.
+
+246
+00:21:00,560 --> 00:21:05,280
+Precisely. But the radiative switch field belongs to a totally different category,
+
+247
+00:21:05,280 --> 00:21:10,400
+engineered computation. The designer of the switch tile intentionally sets up the thresholds,
+
+248
+00:21:10,400 --> 00:21:16,240
+the geometry, and the material composition in advance. They surveyed the periodic table,
+
+249
+00:21:16,240 --> 00:21:20,320
+and they chose hexadecine specifically for its 18 degree melting point.
+
+250
+00:21:20,320 --> 00:21:25,600
+But wait, if the designer is the one choosing the wax and setting the temperature and painting the
+
+251
+00:21:25,600 --> 00:21:32,080
+louvers, isn't the designer the one actually doing the computation? Like the wax is just the dumb tool
+
+252
+00:21:32,080 --> 00:21:37,760
+executing the designer's math. The wax isn't thinking. The engineer thought of it five years ago.
+
+253
+00:21:37,760 --> 00:21:43,120
+That is the instinctive objection, absolutely. But it falls apart when you move beyond a single tile.
+
+254
+00:21:43,120 --> 00:21:48,480
+How so? Because the designer only engineers the initial constraints. But the actual execution of
+
+255
+00:21:48,480 --> 00:21:53,920
+those constraints, when subjected to the chaotic, unpredictable environment of real-world weather,
+
+256
+00:21:53,920 --> 00:21:58,560
+creates a novel calculation that the designer could never predict. The designer is intentionally
+
+257
+00:21:58,560 --> 00:22:03,280
+structuring the admissible configurations of the material so that when it eventually settles into a
+
+258
+00:22:03,280 --> 00:22:08,560
+stable outcome, that outcome corresponds to a useful resolution of a constraint system.
+
+259
+00:22:08,560 --> 00:22:13,520
+So to synthesize this, the paper calls this constraint inscription, right? When a software
+
+260
+00:22:13,520 --> 00:22:19,200
+engineer writes code for your laptop, they are inscribing constraints using abstract symbols.
+
+261
+00:22:19,200 --> 00:22:22,560
+You know, Python C++ dies, ones and zeros. Yeah.
+
+262
+00:22:22,560 --> 00:22:28,560
+But in xylomorphic computing, the program isn't written in code. It is literally written in wax.
+
+263
+00:22:28,560 --> 00:22:33,360
+Exactly. It is written in the physical spacing of the louvers and the specific chemical coatings on
+
+264
+00:22:33,360 --> 00:22:38,080
+the black and white surfaces. The physical properties of the materials are the lines of code.
+
+265
+00:22:38,080 --> 00:22:43,440
+You are literally programming with physics. That is amazing. Okay. But a single tile is still
+
+266
+00:22:43,440 --> 00:22:49,840
+just one line of code. It just opens or closes. It's a reflex. How do we network these wax switches
+
+267
+00:22:49,840 --> 00:22:56,320
+together to create a true mind in the walls? Like, how do we scale this up from a single bear trap
+
+268
+00:22:56,320 --> 00:23:01,040
+to a computer capable of solving unpredictable problems? This is where we move from single
+
+269
+00:23:01,040 --> 00:23:06,240
+switch to a radiative switch computer. Flyxion outlines three specific physical extensions that
+
+270
+00:23:06,240 --> 00:23:11,520
+take a population of these dumb tiles and transform them into a computational field capable of complex
+
+271
+00:23:11,520 --> 00:23:16,000
+problem solving. Okay. So the first extension the paper talks about is heterogeneous thresholds.
+
+272
+00:23:16,000 --> 00:23:21,200
+Right. Up until now, we've only talked about hexadecane wax melting at 18 degrees.
+
+273
+00:23:21,200 --> 00:23:27,200
+If you cover a whole roof in identical hexadecane tiles, they will all basically flip open at the
+
+274
+00:23:27,200 --> 00:23:33,440
+exact same time when the morning sun hits them. The entire roof just acts as one giant binary switch,
+
+275
+00:23:34,080 --> 00:23:39,600
+on or off. Which is mathematically boring. Very boring. But nothing in the physics limits us to
+
+276
+00:23:39,600 --> 00:23:45,840
+one type of wax. Imagine an array of tiles on a ceiling where the designer deliberately scatters
+
+277
+00:23:45,840 --> 00:23:50,240
+different paraffins and waxes with different melting points across the surface. Oh, I see.
+
+278
+00:23:50,240 --> 00:23:55,920
+Yeah. One tile is filled with a wax that melts at 17 degrees, the one next to it melts at 18.5,
+
+279
+00:23:55,920 --> 00:24:01,040
+another at 19, another at 16. So instead of a single bit flipping from zero to one,
+
+280
+00:24:01,040 --> 00:24:05,520
+the field responds to the environment with a complex spatial pattern. Exactly. Depending on,
+
+281
+00:24:05,520 --> 00:24:09,920
+like, the shadows moving across the room, the ambient heat from people sitting on the couch,
+
+282
+00:24:09,920 --> 00:24:14,880
+and the specific wax in each tile, some louvers will be open, some will be closed, some might be
+
+283
+00:24:14,880 --> 00:24:20,160
+halfway open if the wax is in the middle of a phase change. Exactly. And to understand how powerful this
+
+284
+00:24:20,160 --> 00:24:25,520
+is, think about how an artificial neural network operates in machine learning. Okay. You have layers
+
+285
+00:24:25,520 --> 00:24:32,400
+of nodes, or artificial neurons, and each node has a specific mathematical weight or bias that determines
+
+286
+00:24:32,400 --> 00:24:37,680
+the exact threshold at which it fires a signal to the next layer. Right. And training a neural network
+
+287
+00:24:37,680 --> 00:24:43,040
+is basically just adjusting those mathematical weights until the network gives you the right
+
+288
+00:24:43,040 --> 00:24:49,200
+answer. In our radiative ceiling, those weights aren't numbers stored in a hard drive. The weights
+
+289
+00:24:49,200 --> 00:24:55,920
+are the literal, unchangeable, physical constants of the different waxes. The melting point is the
+
+290
+00:24:55,920 --> 00:25:01,600
+activation threshold. The latent heat capacity is the bias. That is wild. You are building a physical
+
+291
+00:25:01,600 --> 00:25:07,120
+neural network where the nodes are literally puddles of wax. Yes. Okay. So that gives us complexity.
+
+292
+00:25:07,120 --> 00:25:13,200
+But what about memory? A computer needs RAM. And that brings us to the second extension, which takes
+
+293
+00:25:13,200 --> 00:25:19,680
+something HVAC engineers usually absolutely hate and turns it into a superpower. Hysteresis as memory.
+
+294
+00:25:19,680 --> 00:25:24,080
+Hysteresis is a critical concept here. Let's define it clearly because it's not a word most people use
+
+295
+00:25:24,080 --> 00:25:31,200
+every day. Hysteresis is the lag or the gap between a material's heating response curve and its cooling
+
+296
+00:25:31,200 --> 00:25:37,920
+response curve. Okay. The easiest way to visualize this is a standard cheap mechanical thermostat in
+
+297
+00:25:37,920 --> 00:25:44,560
+an old apartment. Set the dial to 70 degrees, the room gets cold and heater turns on. But it doesn't
+
+298
+00:25:44,560 --> 00:25:49,600
+shut off the millisecond the room hits 70. The biometallic strip inside has to heat up, it bends,
+
+299
+00:25:49,600 --> 00:25:54,560
+the room heats up, and might not actually click off until the room hits 72. Right, it overshoots.
+
+300
+00:25:54,560 --> 00:25:59,360
+And then as the room cools down, it doesn't click back on. The moment it drops below 72,
+
+301
+00:25:59,360 --> 00:26:05,840
+it waits. It drops down to 70, then 69, and finally at 68 degrees. It clicks back on. Exactly. The
+
+302
+00:26:05,840 --> 00:26:10,560
+metal bends back far enough to click the heater back on. So there is a lag. It overshoots in both
+
+303
+00:26:10,560 --> 00:26:14,880
+directions. And in normal engineering, you want to eliminate that hysteresis, right? Because
+
+304
+00:26:14,880 --> 00:26:19,680
+overshooting wastes energy and makes you sweat, and undershooting makes you shiver. You want the
+
+305
+00:26:19,680 --> 00:26:25,360
+thermostat to be perfectly tight and responsive. Exactly. The engineers who built the original wax
+
+306
+00:26:25,360 --> 00:26:30,560
+louver switch worked very hard to minimize hysteridosis, getting that gap down to under
+
+307
+00:26:30,560 --> 00:26:36,560
+three degrees. But Flyxion points out a massive reversal in logic here. What is a defect in the
+
+308
+00:26:36,560 --> 00:26:42,400
+thermostat is actually a fundamental feature for a computer. Wait, why? How does a lag help you compute?
+
+309
+00:26:42,400 --> 00:26:48,160
+Because hysteresis allows a physical system to have memory. Oh. Think about a perfectly tight,
+
+310
+00:26:48,160 --> 00:26:55,040
+zero hysteresis thermostat sitting at 70 degrees. It has absolutely no idea if the room was just 69
+
+311
+00:26:55,040 --> 00:27:00,800
+degrees a minute ago, or 71 degrees a minute ago. It's completely memoryless. It only knows
+
+312
+00:27:00,800 --> 00:27:06,480
+the instantaneous present. It is blind to the past. But a system with hysteresis depends on its own
+
+313
+00:27:06,480 --> 00:27:13,200
+recent history. Ah, let me trace the logic here. If a wax melts at 18 degrees, but because of hysteresis,
+
+314
+00:27:13,200 --> 00:27:18,560
+it doesn't freeze again until 16 degrees, that changes everything. Because if the tile is currently
+
+315
+00:27:18,560 --> 00:27:23,840
+at 17 degrees and the louver is open, it means the room was recently hot enough to melt it and is now
+
+316
+00:27:23,840 --> 00:27:28,800
+cooling down. But if the tile is at 17 degrees and the louver is closed, it means the room was just
+
+317
+00:27:28,800 --> 00:27:35,280
+cold and is currently heating up. The exact same temperature, 17 degrees, means two entirely different
+
+318
+00:27:35,280 --> 00:27:41,200
+things depending on what happened five minutes ago. Precisely. The hysteresis gap acts as a physical,
+
+319
+00:27:41,200 --> 00:27:47,600
+stateful memory register. In electronics, we call this a Schmidt trigger. It's a circuit that
+
+320
+00:27:47,600 --> 00:27:53,360
+deliberately uses hysteresis to remember its current state and ignore small fluctuations in noise.
+
+321
+00:27:53,360 --> 00:27:58,480
+That's brilliant. Flickchains are arguing that we shouldn't engineer the hysteresis out of the wax.
+
+322
+00:27:58,480 --> 00:28:04,480
+We should tune it, widen it, and utilize it so the physical material can carry information forward in
+
+323
+00:28:04,480 --> 00:28:10,000
+time. You are literally turning thermodynamic lag into RAM. Yep. Okay, so we have heterogeneous
+
+324
+00:28:10,000 --> 00:28:15,440
+thresholds acting as neural lates, and we have hysteresis acting as memory. What is the third
+
+325
+00:28:15,440 --> 00:28:19,920
+extension? How do these memory-holding wax nodes actually talk to each other to solve a problem?
+
+326
+00:28:19,920 --> 00:28:25,920
+The third extension is coupling as a continuum. If you have a field of these tiles covering a room,
+
+327
+00:28:25,920 --> 00:28:29,680
+they need to communicate to compute a global thermal solution for the space.
+
+328
+00:28:30,400 --> 00:28:34,080
+And there are two extreme ends of how they can exchange heat. What is the first extreme?
+
+329
+00:28:34,080 --> 00:28:39,440
+The first is the conductive limit. This is local coupling. Imagine the tiles share a physical
+
+330
+00:28:39,440 --> 00:28:45,280
+metal substrate, like being mounted on the same steel beam inside a wall. Heat diffuses slowly
+
+331
+00:28:45,280 --> 00:28:50,480
+through that shared physical connection. A hot tile slowly warms its immediate neighbor,
+
+332
+00:28:50,480 --> 00:28:55,600
+which warms its neighbor, and so on. My analogy for the conductive limit would be the game of
+
+333
+00:28:55,600 --> 00:29:01,600
+telephone, or people whispering down a line. It is strictly local propagation. The information,
+
+334
+00:29:01,600 --> 00:29:06,640
+which is the heat, has to travel through every single tile in between to get from the left side of the
+
+335
+00:29:06,640 --> 00:29:12,400
+room to the right side. It perfectly preserves the physical geometry of the space. Exactly. It's slow,
+
+336
+00:29:12,400 --> 00:29:18,080
+and it's constrained by physical adjacency. Now contrast that with the other extreme, the radiative
+
+337
+00:29:18,080 --> 00:29:25,200
+limit. This is long-range coupling. This depends entirely on infrared heat exchanging across open space. It's
+
+338
+00:29:25,200 --> 00:29:30,160
+based on view factors and sight lines. Sight lines. Okay, so if I have a hot tile on the ceiling,
+
+339
+00:29:30,160 --> 00:29:35,760
+and it has a direct unobstructed line of sight to a cold tile on the floor 10 feet away, they are directly
+
+340
+00:29:35,760 --> 00:29:41,440
+coupled. The ceiling tile will shoot infrared radiation straight through the air at the speed of light and hit the
+
+341
+00:29:41,440 --> 00:29:47,600
+floor tile instantly, completely bypassing all the wall tiles in between them. So if conductive coupling is
+
+342
+00:29:47,600 --> 00:29:53,520
+whispering down a line, radiative coupling is like a person standing on a table and shouting across a
+
+343
+00:29:53,520 --> 00:29:59,760
+crowded room directly to someone they can see. It's instantaneous long-range coordination. That's a
+
+344
+00:29:59,760 --> 00:30:05,600
+perfect way to visualize it. And what Flyxion reveals is that in any real architectural space,
+
+345
+00:30:05,600 --> 00:30:11,840
+a living room, an office, a cathedral, the network of tiles will be a complex mixture of both extremes.
+
+346
+00:30:11,840 --> 00:30:17,760
+Some tiles share a wall, conducting heat locally, while others look at each other across the room,
+
+347
+00:30:17,760 --> 00:30:22,480
+radiating heat globally. Which means the room naturally forms what network theorists call a
+
+348
+00:30:22,480 --> 00:30:27,840
+small world network. Yes. It's highly localized, like clusters of friends, but with these massive
+
+349
+00:30:27,840 --> 00:30:33,680
+high-speed shortcuts cutting across the empty space connecting distant groups. Exactly. And here is the
+
+350
+00:30:33,680 --> 00:30:38,320
+core thesis of this section. This physical geometry, the walls, the sight lines, the placement of the
+
+351
+00:30:38,320 --> 00:30:44,480
+windows, the furniture blocking the infrared paths. It's the coupling matrix. Wow. In a digital computer,
+
+352
+00:30:44,480 --> 00:30:50,160
+a coupling matrix is an abstract data structure held in RAM that tells the software how different
+
+353
+00:30:50,160 --> 00:30:56,640
+variables interact. But in a radiative switch computer, the physical layout of your living room
+
+354
+00:30:56,640 --> 00:31:02,880
+is the data structure. The room solves problems based on how it physically sees itself. The room is
+
+355
+00:31:02,880 --> 00:31:09,120
+computing itself. The wax is firing like neurons. The hysteresis is remembering the past. The tiles are
+
+356
+00:31:09,120 --> 00:31:14,240
+whispering through the drywall and shouting across the open air. It's just an incredible image. It
+
+357
+00:31:14,240 --> 00:31:18,160
+really changes how you look at a room. But it brings up a really deep philosophical question,
+
+358
+00:31:18,160 --> 00:31:22,960
+and I know Flyxion tackles this in section six of the paper. Right. If the room is doing all this
+
+359
+00:31:22,960 --> 00:31:29,200
+complex thermal math, does it actually matter if anyone is watching it? This is the crux of the existential
+
+360
+00:31:29,200 --> 00:31:34,320
+debate around physical computation. Is this computation actually happening objectively,
+
+361
+00:31:34,320 --> 00:31:39,680
+independently of us? Or is computation just a convenient story we tell ourselves about physics?
+
+362
+00:31:39,680 --> 00:31:45,680
+Right. Because when my laptop calculates pi, it's doing it because I typed a command and the answer
+
+363
+00:31:45,680 --> 00:31:51,520
+pops up on an LCD screen for me to read. If this room is computing its thermal equilibrium, who is it
+
+364
+00:31:51,520 --> 00:31:58,400
+computing it for? Flyxion splits this dilemma into two concepts. Intrinsic dynamics and extrinsic meaning.
+
+365
+00:31:58,960 --> 00:32:03,920
+The physical settling of the system, the wax melting, the louvers expanding, the infrared
+
+366
+00:32:03,920 --> 00:32:09,520
+exchanging across the room, that is the dynamics. And those dynamics are intrinsic. They happen
+
+367
+00:32:09,520 --> 00:32:14,640
+whether we look or not. Exactly. A radiative switch array settles according to its material constraints,
+
+368
+00:32:14,640 --> 00:32:19,040
+regardless of whether a human is standing in the room paying attention. So the physics is objective,
+
+369
+00:32:19,040 --> 00:32:24,560
+the constraint satisfaction is happening in the dark. Yes. But the meaning of that settled state,
+
+370
+00:32:24,560 --> 00:32:30,240
+the answer to the computation, that is extrinsic. It only matters relative to a human observer or
+
+371
+00:32:30,240 --> 00:32:35,280
+a downstream user. Okay. I think I see. The field computes whether we observe it or not. But what
+
+372
+00:32:35,280 --> 00:32:41,040
+that computation is worth, or what is taken to mean, like a human saying, ah, the room is perfectly 72
+
+373
+00:32:41,040 --> 00:32:46,720
+degrees now, success. That is a human value judgment imposed on the physics. So dynamics are observer
+
+374
+00:32:46,720 --> 00:32:52,320
+independent. Answers are observer relative. I like that framework. But how do we get the answer out of
+
+375
+00:32:52,320 --> 00:32:58,160
+the system without ruining the xylomorphic purity of it? What do you mean? Well, if we stick a digital
+
+376
+00:32:58,160 --> 00:33:03,360
+thermometer on the wall to read the room, haven't we just created a digital representation again?
+
+377
+00:33:03,360 --> 00:33:08,960
+We're back to Descartes. Ah, and if we connect this to the bigger picture, this is where we need to
+
+378
+00:33:08,960 --> 00:33:15,200
+understand the fundamental difference between a projection and representation. This is all about
+
+379
+00:33:15,200 --> 00:33:20,800
+causal decoupling. Break that down for me. What is the difference? Think about the single wax louver from
+
+380
+00:33:20,800 --> 00:33:27,440
+earlier. The physical angle of the lever, how open or closed it is, is a projection of the wax's state.
+
+381
+00:33:27,440 --> 00:33:32,640
+It is the wax's state made visible to the naked eye. Because the hydroch piston physically connects
+
+382
+00:33:32,640 --> 00:33:38,160
+them, you literally cannot open the louver without melting the wax. Yes. The louver cannot exist in an
+
+383
+00:33:38,160 --> 00:33:43,920
+open state unless the wax is melted. There is no moment where the louver can be wrong about the wax.
+
+384
+00:33:43,920 --> 00:33:49,840
+It is purely performative. It is causally bound. Okay. So what is a representation then?
+
+385
+00:33:49,840 --> 00:33:55,760
+A representation is what happens when you sever that causal link. If you take a digital sensor,
+
+386
+00:33:55,760 --> 00:34:01,840
+measure the wax temperature, and log that number say 18.2 degrees into a database on a hard drive,
+
+387
+00:34:03,360 --> 00:34:08,320
+that database entry is a representation. And here is the fatal flaw of representations,
+
+388
+00:34:08,320 --> 00:34:13,280
+the staleness test. The staleness test is the ultimate metric for whether you are dealing with
+
+389
+00:34:13,280 --> 00:34:19,040
+a representation or a projection. Let me see if I can explain the staleness test. Go for it. So once that
+
+390
+00:34:19,040 --> 00:34:24,960
+number 18.2 degrees is written into the database, it is completely divorced from the physical wax.
+
+391
+00:34:24,960 --> 00:34:31,120
+The database says 18.2 degrees, but five minutes later, a cloud could pass over the sun. The room
+
+392
+00:34:31,120 --> 00:34:35,520
+cools down, the wax solidifies, and the real temperature of the wax drops to 16 degrees.
+
+393
+00:34:35,520 --> 00:34:41,200
+Right. The database, however, still says 18.2. The database has become stale. It is now functionally
+
+394
+00:34:41,200 --> 00:34:45,680
+lying about the current state of the wax. A projection like the physical louver can never be stale,
+
+395
+00:34:45,680 --> 00:34:50,400
+because the moment the wax cools, the louver closes. But a representation can be stale.
+
+396
+00:34:50,400 --> 00:34:57,360
+That is exactly it. Representation creates separability. Projection creates observability
+
+397
+00:34:57,360 --> 00:35:02,000
+without separability. You can see what the wax is doing by looking at the louver,
+
+398
+00:35:02,000 --> 00:35:07,600
+but you haven't separated the data from the reality. Flyxion uses a really powerful analogy here
+
+399
+00:35:07,600 --> 00:35:13,120
+to hammer this home. A stone arch. Walk us through the stone arch. Imagine
+
+400
+00:35:13,120 --> 00:35:18,320
+an ancient stone arch, something built by the Romans. They stack the stones, they remove the
+
+401
+00:35:18,320 --> 00:35:24,320
+wooden scaffolding, and the arch settles under the crushing load of gravity. The stones grind together,
+
+402
+00:35:24,320 --> 00:35:29,200
+they find their perfect interlocking geometry, and the arch stands stably for 2,000 years.
+
+403
+00:35:29,200 --> 00:35:36,080
+Wow. Okay. Now imagine a modern structural engineer builds a complex digital finite element model
+
+404
+00:35:36,080 --> 00:35:41,360
+of that exact arch on their laptop to simulate the stress distribution. So the digital model
+
+405
+00:35:41,360 --> 00:35:46,400
+is a representation. Yes. And because it's a representation, the digital model can be wrong.
+
+406
+00:35:46,960 --> 00:35:50,800
+The engineer could have inputted the wrong friction coefficient for the sandstone,
+
+407
+00:35:50,800 --> 00:35:55,840
+or maybe the wrong density. The model might predict that the arch will collapse under its own weight.
+
+408
+00:35:55,840 --> 00:36:01,200
+Right. But the physical arch. The physical arch cannot be wrong about itself. It simply is what
+
+409
+00:36:01,200 --> 00:36:07,600
+it is. It embodies its own exact, perfectly accurate state, regardless of what the math says it should
+
+410
+00:36:07,600 --> 00:36:13,200
+be doing. The arch cannot be wrong about itself. I love that. The model can be wrong, the representation
+
+411
+00:36:13,200 --> 00:36:19,520
+can be stale, but the physical reality is always tautologically true. But if the physical room,
+
+412
+00:36:19,520 --> 00:36:25,200
+the xylomorphic computer, can't be wrong, what does correctness even mean? That is the
+
+413
+00:36:25,200 --> 00:36:30,000
+pivotal question of Section 7. Because in normal computing, there is an answer key.
+
+414
+00:36:30,560 --> 00:36:34,560
+If I write a Python script to sort a list of numbers from lowest to highest,
+
+415
+00:36:34,560 --> 00:36:39,360
+and it spits them out in random order, the algorithm is objectively wrong. There is a
+
+416
+00:36:39,360 --> 00:36:44,880
+mathematically correct answer and a wrong answer. But if a performative physical system has no answer
+
+417
+00:36:44,880 --> 00:36:50,240
+key, how do we evaluate if it's doing a good job? To answer this, Flixner reaches back to the 1950s,
+
+418
+00:36:50,240 --> 00:36:55,040
+to a branch of science called Cybernetics, specifically the work of W. Ross Ashby.
+
+419
+00:36:55,040 --> 00:36:59,200
+Cybernetics. This is the study of feedback loops and control systems.
+
+420
+00:36:59,200 --> 00:37:06,480
+Yes. Ashby was a psychiatrist and a pioneer in complex systems. He built a machine in 1948 called
+
+421
+00:37:06,480 --> 00:37:13,040
+the homeostat. It was this bizarre contraption of magnets, water currents, and electrical coils
+
+422
+00:37:13,040 --> 00:37:19,040
+that would constantly reorganize itself in response to disturbances. Okay. Ashby proposed a concept
+
+423
+00:37:19,040 --> 00:37:25,040
+called ultra-stability. For a biological organism, or a performative machine like the homeostat,
+
+424
+00:37:25,680 --> 00:37:30,800
+correctness is not about hitting a specific predetermined target number. It is about
+
+425
+00:37:30,800 --> 00:37:35,760
+maintaining its essential variables within the strict limits that keep the system alive. So survival
+
+426
+00:37:35,760 --> 00:37:40,880
+has correctness. Exactly. A biological organism's body temperature doesn't have a metaphysically
+
+427
+00:37:40,880 --> 00:37:45,440
+correct number it's trying to achieve just for the sake of math. It has a viability region,
+
+428
+00:37:45,440 --> 00:37:50,000
+thermal zone, where the proteins in the body don't denature and the blood doesn't boil. Right.
+
+429
+00:37:50,000 --> 00:37:55,280
+A system is correct, not because it hits a target, but because it dynamically reorganizes itself to
+
+430
+00:37:55,280 --> 00:38:00,160
+stay within its admissible, viable region, despite chaos from the outside environment.
+
+431
+00:38:00,160 --> 00:38:04,320
+So for our radiative switch house, the correct answer to the computation is just
+
+432
+00:38:04,320 --> 00:38:08,320
+remaining a habitable building. Right. And the paper distinguishes between
+
+433
+00:38:08,320 --> 00:38:13,840
+two types of admissible regions for architecture. There is the physical admissible region,
+
+434
+00:38:13,840 --> 00:38:18,720
+which are the hard, unforgiving constraints of reality. Like keeping the internal temperature
+
+435
+00:38:18,720 --> 00:38:24,480
+above 32 degrees Fahrenheit so the water pipes don't freeze and burst, and keeping it below the
+
+436
+00:38:24,480 --> 00:38:30,800
+point where the drywall starts spontaneously combusting. Yes. Those are the survival variables.
+
+437
+00:38:30,800 --> 00:38:35,600
+And then there is the human comfort region, which is much narrower, highly subjective,
+
+438
+00:38:35,600 --> 00:38:41,040
+and constantly negotiated. You might want the room at 72 degrees while you wear a t-shirt,
+
+439
+00:38:41,040 --> 00:38:44,800
+while your partner wants it at 68 degrees while wearing a thick sweater.
+
+440
+00:38:44,800 --> 00:38:48,640
+So wait, I have to push back here because this feels like a massive loophole.
+
+441
+00:38:48,640 --> 00:38:52,800
+Okay, let's hear it. If there is no answer key, and the only metric for success is,
+
+442
+00:38:52,800 --> 00:38:57,760
+you know, the pipes didn't freeze, how do we know this radiative switch field is actually computing
+
+443
+00:38:57,760 --> 00:39:02,480
+anything complex? Couldn't it just be a really dumb, heavy cast iron heater that blasts hot air
+
+444
+00:39:02,480 --> 00:39:07,600
+randomly? And as long as it doesn't freeze the pipes by sheer brute force, we call it a successful
+
+445
+00:39:07,600 --> 00:39:12,800
+computation. How is that computation? It just sounds like a rock. That is a critical pushback.
+
+446
+00:39:12,800 --> 00:39:19,600
+You're essentially asking how we distinguish between genuine computation and a dumb, inert object.
+
+447
+00:39:20,160 --> 00:39:24,480
+Flickshind addresses this using information theory in the mathematical appendix of the paper,
+
+448
+00:39:25,200 --> 00:39:29,840
+specifically dealing with constraint richness and Shannon entropy. Let's translate the math into
+
+449
+00:39:29,840 --> 00:39:35,040
+something we can visualize for all our sakes. Sure. A system can be closed. It can successfully
+
+450
+00:39:35,040 --> 00:39:40,240
+keep the pipes from freezing, but it can still be what Flickshind calls degenerate. Degenerate,
+
+451
+00:39:40,240 --> 00:39:47,200
+meaning mathematically boring or lacking complexity. Yes. Imagine a thick concrete bunker that safely
+
+452
+00:39:47,200 --> 00:39:53,440
+settles into the exact same single thermal state, say 55 degrees every single day, regardless of whether
+
+453
+00:39:53,440 --> 00:39:58,240
+it's sunny outside, snowing outside, or whether there are 10 people inside or zero people inside. Okay.
+
+454
+00:39:58,240 --> 00:40:02,960
+It has one single outcome. It's a brute force solution. Yeah. From an information theory
+
+455
+00:40:02,960 --> 00:40:08,160
+perspective, using Claude Shannon's definition of entropy, that system carries zero computational
+
+456
+00:40:08,160 --> 00:40:13,040
+information. Because Shannon entropy is about surprise, right? Right. If I already know the answer is
+
+457
+00:40:13,040 --> 00:40:18,640
+always going to be 55 degrees, there is zero surprise. No calculation was really performed to arrive
+
+458
+00:40:18,640 --> 00:40:23,840
+there. It's like a game of 20 questions where the answer is always apple. You aren't learning anything by
+
+459
+00:40:23,840 --> 00:40:29,760
+playing the game. That is a brilliant analogy. A degenerate system is the 20 questions game, where
+
+460
+00:40:29,760 --> 00:40:36,720
+the answer is always apple. For the room to be a true xylomorphic computer, it must have constraint
+
+461
+00:40:36,720 --> 00:40:43,680
+richness. It needs to have multiple, highly distinguishable, viable attractors. Right. It needs to be able to
+
+462
+00:40:43,680 --> 00:40:49,920
+settle into a vast variety of different complex spatial patterns based on incredibly subtle shifts in the
+
+463
+00:40:49,920 --> 00:40:57,040
+environment. Ah. Because if there are millions of possible viable outcomes, the specific complex
+
+464
+00:40:57,040 --> 00:41:01,440
+pattern the room settles into today actually tells us something about the unique constraints it faced
+
+465
+00:41:01,440 --> 00:41:06,880
+today. Yes. Like, the tiles in the corner are open, the ceiling is closed, the wall is halfway melted,
+
+466
+00:41:06,880 --> 00:41:10,800
+which means it must be 2pm, sunny, with three people sitting on the left side of the room.
+
+467
+00:41:11,600 --> 00:41:17,680
+The physical state contains massive amounts of information. Yes. The system is computationally
+
+468
+00:41:17,680 --> 00:41:22,480
+interesting when its attractor structure is deliberately differentiated. Settling into one
+
+469
+00:41:22,480 --> 00:41:28,480
+specific configuration rather than another carries real information about the environment. The room is
+
+470
+00:41:28,480 --> 00:41:33,760
+dynamically solving a high dimensional puzzle. That is what separates a computing field from a
+
+471
+00:41:33,760 --> 00:41:39,840
+degenerate concrete bunker. Okay, so we have a complex, constraint-rich system that is computing its
+
+472
+00:41:39,840 --> 00:41:47,600
+own viability and survival in real time. But this brings up another massive question. Time. Ah, time.
+
+473
+00:41:47,600 --> 00:41:53,840
+How does this house experience time? If my laptop finishes a complex rendering calculation, it saves the
+
+474
+00:41:53,840 --> 00:41:58,880
+file to the hard drive and I can look at it tomorrow or next year. Does a radiative house's answer just
+
+475
+00:41:58,880 --> 00:42:04,560
+evaporate into thin air the second the sun goes down and the wax cools? This leads us into section 8,
+
+476
+00:42:04,560 --> 00:42:09,840
+where Flyxion outlines the three temporal modes of performative computation. It's all about how
+
+477
+00:42:09,840 --> 00:42:15,200
+much history the material erases and how much it preserves. The paper classifies this based on
+
+478
+00:42:15,200 --> 00:42:21,120
+legibility. Legibility, meaning how easy it is for an observer to read the past inside the present
+
+479
+00:42:21,120 --> 00:42:26,960
+material. Exactly. Yeah. Let's go through the three modes. The first mode is continuous. Continuous
+
+480
+00:42:26,960 --> 00:42:32,880
+computation only exists while it is actively running. A mechanical governor spinning on a steam engine is
+
+481
+00:42:32,880 --> 00:42:38,080
+computing the throttle in real time. The faster the engine spins, the higher the metal balls lift,
+
+482
+00:42:38,080 --> 00:42:41,840
+which chokes the steam valve. Right. But the moment you tune the engine off,
+
+483
+00:42:41,840 --> 00:42:47,120
+the governor drops. Yeah. It stops spinning. The computation vanishes instantly, leaving
+
+484
+00:42:47,120 --> 00:42:52,880
+zero physical record of what the RPM was five minutes ago. So a standard thermostat is continuous,
+
+485
+00:42:52,880 --> 00:42:57,280
+and our radiative switch field tracking the weather over the course of a day, opening and closing the
+
+486
+00:42:57,280 --> 00:43:02,800
+louvers, that is continuous. Stop the sun, stop the heat, and the computation is gone.
+
+487
+00:43:03,200 --> 00:43:07,840
+It's purely in the present tense. It's like a goldfish. It has no long-term memory.
+
+488
+00:43:07,840 --> 00:43:12,480
+Exactly. Now, the second mode is terminal. We can go back to the stone arch for this one.
+
+489
+00:43:12,480 --> 00:43:16,720
+The arch settles once under the initial load of gravity when the wooden scaffolding is removed.
+
+490
+00:43:16,720 --> 00:43:20,400
+The stones grind, they lock, and then it freezes statically.
+
+491
+00:43:20,960 --> 00:43:24,080
+The computation of finding that perfect geometric balance is over.
+
+492
+00:43:24,080 --> 00:43:26,720
+It finds the answer, and then it never computes again.
+
+493
+00:43:26,720 --> 00:43:32,960
+Yes. It leaves behind a highly opaque structure that erases almost all of its loading history.
+
+494
+00:43:33,760 --> 00:43:37,920
+You can look at the finished arch and know it found a viable solution, but you can't look at the
+
+495
+00:43:37,920 --> 00:43:42,720
+stone and tell how it got there. You can't see the vibrations, the slight shifts, the settling of the
+
+496
+00:43:42,720 --> 00:43:47,040
+dirt. The history is erased by the permanence of the final terminal state.
+
+497
+00:43:47,040 --> 00:43:53,360
+Okay, so continuous computation vanishes instantly, and terminal computation freezes permanently,
+
+498
+00:43:53,360 --> 00:43:58,000
+but erases the journey. But there is a third mode, and I think this is where the paper gets
+
+499
+00:43:58,000 --> 00:43:59,440
+incredibly poetic.
+
+500
+00:43:59,440 --> 00:44:04,240
+The third mode is accumulative, and the perfect example of this is the tree we discussed earlier.
+
+501
+00:44:04,240 --> 00:44:09,600
+A tree grows continuously over its lifetime, yes. It is constantly adjusting to the sun and water.
+
+502
+00:44:10,240 --> 00:44:15,120
+But every single year, it lays down a terminal ring of wood. It is history-preserving.
+
+503
+00:44:15,120 --> 00:44:15,760
+Oh, wow.
+
+504
+00:44:15,760 --> 00:44:22,080
+The trajectory of the tree's computation, how much water it found in 1995, how cold the winter was in 2003,
+
+505
+00:44:22,080 --> 00:44:28,640
+whether there was a forest fire in 2010, is highly legible. The history is stratified and readable in the
+
+506
+00:44:28,640 --> 00:44:32,960
+physical residue of the wood. It doesn't overcreate the past to live in the present. It literally
+
+507
+00:44:32,960 --> 00:44:37,920
+builds the present on top of the past. Exactly. And friction introduces a beautiful
+
+508
+00:44:37,920 --> 00:44:44,480
+middle ground analogy here between continuous and accumulative scar tissue. How does a biological
+
+509
+00:44:44,480 --> 00:44:49,920
+scar fit into architectural computation? When a physical body is injured, it initiates a complex
+
+510
+00:44:49,920 --> 00:44:55,760
+biological computation to repair the breach. White blood cells rush in, fibrin forms, skin cells
+
+511
+00:44:55,760 --> 00:45:02,800
+replicate. The wound heals, and the active process stops, leaving a scar. Right. The scar is accumulative
+
+512
+00:45:02,800 --> 00:45:07,360
+in that it permanently records that a specific traumatic event occurred at a specific location
+
+513
+00:45:07,360 --> 00:45:11,920
+on the body. But it is partially history-erasing, because you can't look at a scar 10 years later
+
+514
+00:45:11,920 --> 00:45:16,720
+and read the exact minute-by-minute timeline of the healing process. It compresses the history.
+
+515
+00:45:16,720 --> 00:45:22,640
+It remembers the event, but it forgets the minutia. It abstracts the trauma into a generalized memory
+
+516
+00:45:22,640 --> 00:45:27,760
+that is profoundly human. But let's apply this back to you listening to this. If someone is building
+
+517
+00:45:27,760 --> 00:45:33,200
+a xylomorphic house, how does this temporal legibility change the architecture? It means
+
+518
+00:45:33,200 --> 00:45:38,400
+the temporal nature of your house becomes a fundamental design choice. You could build your
+
+519
+00:45:38,400 --> 00:45:45,200
+radiative house to run continuously, constantly shifting its wax louvers to track the daily weather,
+
+520
+00:45:45,200 --> 00:45:49,920
+living purely in the continuous present, resetting every night. A house with amnesia.
+
+521
+00:45:50,640 --> 00:45:56,720
+Or you could build a thermal envelope with slowly accumulating complex phase-change materials
+
+522
+00:45:56,720 --> 00:46:01,600
+that permanently alter their internal crystalline structure over years of thermal cycling.
+
+523
+00:46:02,400 --> 00:46:07,440
+Over decades, the actual shape, the thermal density, and the properties of your living room
+
+524
+00:46:07,440 --> 00:46:12,320
+would permanently warp and adapt to how you specifically lived in it. That is just wild.
+
+525
+00:46:12,320 --> 00:46:16,720
+If you always sit in the left corner reading a book, your body heat would slowly, over years,
+
+526
+00:46:16,720 --> 00:46:21,440
+alter the crystalline structure of the wall next to you, permanently changing its thermal retention
+
+527
+00:46:21,440 --> 00:46:26,320
+to accommodate your habit. It would freeze its continuous thoughts into the architecture itself.
+
+528
+00:46:26,320 --> 00:46:32,560
+Your house would grow rings, like a tree. It would develop architectural scar tissue based on how
+
+529
+00:46:32,560 --> 00:46:37,360
+your family lived in it. That is staggering to think about. Trying to wrap your head around an
+
+530
+00:46:37,360 --> 00:46:43,360
+architecture that physically remembers you. Which brings us to the ultimate paradigm-shifting
+
+531
+00:46:43,360 --> 00:46:49,840
+conclusion of this paper in Section 9. The title of the whole paper is Computation as Containment.
+
+532
+00:46:49,840 --> 00:46:55,120
+We have finally arrived at the core thesis. We usually think of infrastructure as having
+
+533
+00:46:55,120 --> 00:47:01,040
+an internal machine, an external world, and an exhaust boundary between them. We say a house
+
+534
+00:47:01,040 --> 00:47:06,320
+hosts a smart thermostat. The house is the dumb container. The thermostat is the smart guest.
+
+535
+00:47:06,320 --> 00:47:11,040
+The container and the intelligence are separate. But with xylomorphic computation,
+
+536
+00:47:11,040 --> 00:47:15,600
+Flyxion is arguing that the boundary of the computer and the boundary of the artifact become
+
+537
+00:47:15,600 --> 00:47:21,120
+the exact same thing. The paper uses a cell membrane analogy here that clarifies this perfectly.
+
+538
+00:47:21,120 --> 00:47:26,720
+It touches on the biological concept of autopoiesis self-creation. When we think of a container,
+
+539
+00:47:26,720 --> 00:47:32,880
+we usually think of a sealed plastic Tupperware box. It is impermeable. It isolates the inside from the
+
+540
+00:47:32,880 --> 00:47:38,880
+outside. But a biological cell membrane is constantly exchanging heat and matter with its environment.
+
+541
+00:47:38,880 --> 00:47:45,920
+It is highly permeable. Ions flow in, waste flows out. Yet, despite this constant chaotic leakage,
+
+542
+00:47:45,920 --> 00:47:51,760
+the cell maintains a strictly recognizable internal organization. Energy crossing the boundary of the
+
+543
+00:47:51,760 --> 00:47:57,680
+cell doesn't compromise the biological computer. It is the very thing that sustains it. Containment isn't
+
+544
+00:47:57,680 --> 00:48:03,360
+about being perfectly sealed off from the universe. It is about maintaining structural organization
+
+545
+00:48:03,360 --> 00:48:08,080
+despite the chaotic flow of the world moving through you. So if we pull all of this together,
+
+546
+00:48:08,080 --> 00:48:13,440
+the thermodynamics, the phase change materials, the hysteresis memory, the cybernetic survival,
+
+547
+00:48:13,440 --> 00:48:18,720
+we arrive at Flyxion's final radical claim. A house equipped with a coupled constraint-rich
+
+548
+00:48:18,720 --> 00:48:23,520
+radiative switch field does not host a computer. The intelligence is not a guest hiding inside the
+
+549
+00:48:23,520 --> 00:48:30,000
+walls on a silicon chip while remaining a perfectly livable, comfortable enclosure. The house is the
+
+550
+00:48:30,000 --> 00:48:35,040
+computer. Computing and containment are the exact same physical process viewed under two different
+
+551
+00:48:35,040 --> 00:48:41,360
+human descriptions. The house does not host a computer. It is one. If you can wrap your head around that,
+
+552
+00:48:41,360 --> 00:48:47,120
+it fundamentally changes how you view the built environment. We started this discussion looking
+
+553
+00:48:47,120 --> 00:48:52,640
+at the brute force exhaust of data centers and we ended up collapsing the boundary between hardware,
+
+554
+00:48:52,640 --> 00:48:58,400
+software, and the buildings we live in. It forces a total reevaluation of the intelligence of passive
+
+555
+00:48:58,400 --> 00:49:04,480
+materials and it raises an incredible thought experiment to leave everyone with. Flyxion applied
+
+556
+00:49:04,480 --> 00:49:10,720
+these principles to a single room or a single building exchanging heat with this local environment. Right,
+
+557
+00:49:10,720 --> 00:49:14,640
+we talked about the living room being a small world network. But think about the long-range
+
+558
+00:49:14,640 --> 00:49:20,320
+radiative network we discussed where heat exchanges instantly across open lines of sight. Imagine if
+
+559
+00:49:20,320 --> 00:49:26,320
+we extrapolate this to urban design. If we construct an entire city out of these xylomorphic phase
+
+560
+00:49:26,320 --> 00:49:32,240
+change materials, every skyscraper, every glass facade, every street level awning is thermally coupled,
+
+561
+00:49:32,240 --> 00:49:37,680
+exchanging infrared data with everything in its line of sight across the grid. Millions of nodes shouting
+
+562
+00:49:37,680 --> 00:49:43,600
+across the open air. Does the city cease to be a collection of individual houses? Does it instead
+
+563
+00:49:43,600 --> 00:49:49,520
+become one massive, unified, self-computing entity? The city's thermal envelope wouldn't just be a
+
+564
+00:49:49,520 --> 00:49:55,040
+collection of isolated microclimates. The skyline itself, exchanging heat and light in a massively
+
+565
+00:49:55,040 --> 00:50:01,040
+parallel, constraint-rich optimization problem. The skyline itself would be a singular, gigantic,
+
+566
+00:50:01,040 --> 00:50:05,680
+thinking brain. The skyline is a brain. I want you to step outside today, look at the walls around you,
+
+567
+00:50:05,680 --> 00:50:09,440
+look at the skyscrapers down the street, and ask yourself, what are they thinking about? Thanks for
+
+568
+00:50:09,440 --> 00:50:11,280
+joining us on this deep dive. We'll see you next time.
+

@@ -1,0 +1,478 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[margin=1in]{geometry}
+\usepackage{titling}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\title{\textbf{Radiative Switch Computation}\\[4pt]
+\large Computation as Containment}
+\author{Flyxion \\ \small Independent Researcher}
+\date{July 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent A radiative switch computer is a heating and cooling system whose thermal dynamics are also its computation: coupled elements that absorb, emit, and exchange heat according to their own material construction, without an intervening digital controller. This essay argues that the interesting claim about such a device is not that its waste heat can be put to use --- that framing keeps computation and heating conceptually separate and merely arranges for one to subsidize the other --- but that in the strongest version of the device, computation and heating are not separable processes at all. Building from an existing, experimentally demonstrated passive radiative switch that uses a phase-change material to couple sensing, memory, and actuation into a single material event, the essay develops a taxonomy of embodied, or \emph{xylomorphic}, computation: performative versus representational correctness, continuous versus terminal versus accumulative temporal structure, and a sharpened distinction between mere projection and genuine representation, defined by whether a readout can become stale with respect to the process that produced it. The essay concludes that a coupled field of such elements does not merely compute \emph{inside} the artifact that contains it; the artifact's boundary and the computation's boundary become the same boundary. The house does not host a computer. While remaining a livable enclosure, it is one.
+\end{abstract}
+
+\section{The Domesticated Version}
+
+It is easy to tell an appealing story about radiative switch computers as clever heating technology. Ordinary computation discards most of the energy it consumes as heat; ordinary heating systems consume energy to produce heat and nothing else. A device that performs both at once --- that computes something useful while heating a room --- looks like an obvious efficiency gain, thermodynamic double use, waste turned into work. This is not wrong, but it is not the interesting claim, and building the essay on it would let a reader walk away with a smaller idea than the one on offer.
+
+Some context is worth setting out plainly first. Data centers have become a genuine object of public controversy, criticized for the electricity and water they consume and for the heat they exhaust into the surrounding land and air with no accounting for either cost. Ordinary heaters, heat pumps, and air conditioners sit at the opposite end of the same complaint. A resistance heater consumes real energy and produces, as its entire output, heat. A heat pump or air conditioner consumes real energy to move heat from one place to another. None of these three devices performs a calculation. Heat is not a byproduct arrived at after some computation has extracted value from the energy along the way; for a conventional heater, heat is the whole of the output, reached directly. This is worth stating in strict thermodynamic terms, because it is where the interesting version of a radiative switch computer diverges from both complaints at once. Heat is the most common sink into which usable energy gradients decay: the form most other forms of energy end up as, the destination most machines reach whether or not they were built to reach it on purpose. A conventional heater manufactures that terminal state directly, with nothing extracted on the way. A conventional computer arrives at the same terminal state only after performing a great deal of structured, informational work first. The question a radiative switch computer poses is not how to recover value from heat after the fact --- the district-heating-loop answer --- but whether the path toward that terminal, most degraded state can itself be shaped so that arriving at it constitutes having computed something.
+
+The efficiency story keeps computation and heating as two processes that happen to share a physical event. It treats dissipation as a resource to be captured rather than as the thing itself. That framing is compatible with computation and heating remaining, underneath the shared hardware, two separable functions --- the kind of relationship a data center has to a district heating loop bolted onto its exhaust. The claim this essay wants to make is stronger and stranger: that in the right kind of device, there is no computation \emph{and} heating. There is one physical process, evolving according to its own material dynamics, and heating and computing are two names a human observer gives to the same trajectory depending on what they are looking for.
+
+\section{Xylomorphic Computation, Defined}
+
+The term \emph{xylomorphic}, borrowed from the Greek \textit{xylon} (wood) and \textit{morph\={e}} (form), names a system in which substrate, computation, and function are not separable design choices but a single material fact. A laptop is not xylomorphic: the same processor runs a spreadsheet, a game, or a weather simulation, and the heat it produces is incidental to all three. The substrate does not care what is being computed. A tree is closer to the intended sense: its structural support, water transport, thermal regulation, and growth history are all embodied in the same wood, organized at different scales. The wood is not a neutral carrier for an abstract program running somewhere else. The history is frozen into the material.
+
+A computational system is xylomorphic, then, when the physical process performing the computation is identical to the process realizing the system's practical function. This is not a claim about analog computation as opposed to digital, nor about biological materials as opposed to synthetic ones. It is a claim about \emph{substrate-function separability}. What xylomorphic computation is opposed to is not symbol manipulation, but the possibility of prying computation and function apart --- the possibility that the same chip could, without modification, be doing something else entirely while producing the same heat.
+
+It is worth being precise about how this differs from an adjacent and more familiar proposal: the residential compute node that directs its waste heat into a building's thermal envelope. In that arrangement the processor computes whatever workload a scheduler assigns it, indifferent to the room's thermal state, and the heat produced is routed to good use after the fact. Call this integration without inseparability: the routing is thermodynamically integrated --- heat that would otherwise be discarded is captured and delivered where it has value --- but the computation itself is not xylomorphic in the sense this essay cares about; it would proceed identically in a warm room or a cold one. This essay is not about that arrangement. It is about a narrower and more demanding class of device in which the computation could not proceed differently from the heating, because they are the same event.
+
+\subsection{Engineered and emergent computation}
+
+Not every system that relaxes under constraints should automatically be called a computer. Rivers carve channels, crystals settle into lattices, and weather systems organize themselves into coherent structures. Each may be interpreted as performing a kind of constraint satisfaction, but interpretation alone is not sufficient to earn the name. A useful distinction is therefore between \emph{emergent} and \emph{engineered} computation.
+
+An emergent computational process is one whose constraint landscape arises as a byproduct of the system's own formation. A river was not shaped in order to solve a problem; it simply follows the gradients available to it, and the fact that its channel can be read as a solution to a least-resistance problem is an interpretation supplied after the fact, not a purpose built into the river. An engineered computational process is one whose admissible configurations have been deliberately structured so that different stable outcomes correspond to different useful resolutions of a constraint system. The radiative switch field belongs to the second category. Its thresholds, couplings, hysteresis, geometry, and material composition are arranged in advance, by a designer, so that the field's settling is informative rather than incidental. The field is not merely relaxing; it is relaxing within a landscape intentionally constructed to possess distinguishable, useful attractors.
+
+This distinction keeps xylomorphic computation from becoming a synonym for physical dynamics in general. A river computes, in the loose sense that its channel is an interpretable solution to a problem it was never given. A radiative switch field, properly built, is a computer, because someone gave it the problem on purpose --- not by writing it down, but by \emph{inscribing} it into the field's own material arrangement. Thresholds, geometry, hysteresis, and coupling are not parameters read by a program; they are the program, written into wax, spacing, and surface coating rather than into symbols. This essay will return to that fact repeatedly without always naming it; call it constraint inscription where the reminder is useful.
+
+\section{From Integration to Embodiment: A Switch With No Controller}
+
+The obvious objection to any claim this strong is that somewhere, always, there is a microcontroller doing the actual deciding --- that ``the heater thinks'' is a figure of speech papering over a sensor, an analog-to-digital converter, and a few lines of firmware reading a setpoint. If that objection holds, xylomorphic computation collapses back into ordinary control theory wearing a costume.
+
+The objection has a concrete answer, and it happens to already exist as a characterized, tested device. Xiao, Liao, and Hawkes have demonstrated a passively adaptive radiative switch for building thermoregulation that uses no electronics whatsoever \cite{xiao2023}. The device is a set of louvers, black and solar-absorbing on one face, white and infrared-emissive on the other, driven open and closed by a phase-change material --- hexadecane, chosen because its melting point sits near 18\,\textdegree C, close to a comfortable indoor setpoint. Below the melting point the wax is solid and contracted, and the louvers lie flat, exposing the black surface and absorbing solar radiation. As the wax's own temperature crosses its melting point, it expands, driving a piston that opens the louvers and exposes the white, sky-facing surface, which radiates heat away. Outdoor testing showed the adaptive tile reduced the energetic cost of cooling by a factor of 3.1 and heating by a factor of 2.6 relative to fixed, non-switching tiles, while cycling states within a temperature band under 3\,\textdegree C --- far tighter than prior passive designs, which typically require more than 15\,\textdegree C of drift to switch \cite{xiao2023}.
+
+What makes this device the right anchor for the essay is not its efficiency but its architecture. There is no sensor reporting a measured temperature to a controller that computes a decision and commands an actuator. The wax's phase state \emph{is} the thermometer, and the wax's expansion \emph{is} the actuation. Conventional control collapses a loop:
+\[
+\text{world} \to \text{sensor} \to \text{representation} \to \text{controller} \to \text{actuator} \to \text{world}.
+\]
+The PCM switch collapses it further, to:
+\[
+\text{world} \to \text{material state} \to \text{world}.
+\]
+Sensing, memory, and actuation are not three functions connected by a signal path; they are one material event described three ways. This is a genuine existence proof, not an analogy: the control layer that a skeptical reader assumes must be hiding somewhere has, in this device, provably disappeared.
+
+\section{Minimal Cases}
+
+Before extending the single PCM switch into a coupled field, it is worth placing it among a small family of systems that share its defining property: the achieved physical state, rather than a symbolic output, constitutes the answer.
+
+The clearest non-thermal case is the centrifugal governor. A governor does not measure engine speed, represent that measurement numerically, and compute a correction; the flyweights' own centrifugal motion, driven by the shaft they regulate, directly throttles the fuel supply. Maxwell's original mathematical treatment of the governor already treated its stability as a property of the coupled mechanical system itself, not of any representation the system carried \cite{maxwell1868}; cybernetics, following Wiener, later read the same device as an early instance of feedback control --- information regulating behavior \cite{wiener1948}. The xylomorphic reading asks a related but different question: not how information regulates behavior, but when behavior itself constitutes the information process. The governor's state, its computation, its control action, and its physical function are one motion.
+
+The thermostat is the minimal thermal case, of which the PCM louver is a passive, controller-free elaboration. And the river channel is the most poetic case, and the one deliberately included as the emergent counterpart to the other two: a river computes a path of least resistance by eroding one, but it was not built to solve anything, and the computed path cannot be removed from the landscape without becoming a second-order object --- a map --- which is no longer the computation but a representation \emph{of} it. That distinction, between the settled channel and the map someone draws of it afterward, anticipates a problem the essay returns to directly in Section 6.
+
+These three cases already differ in a way worth flagging before it becomes a full topic in its own right. The governor and the thermostat compute only for as long as they run; stop the engine or unplug the thermostat and the computation simply ceases, leaving nothing behind. The river's channel is different: once cut, it persists whether or not the river is still actively eroding it, a settled trace rather than an ongoing process. Section 8 returns to this distinction --- between computation that exists only while it continues and computation whose result is a structure left standing after the process that made it has stopped --- and gives it a fuller treatment once the coupled radiative field is on the table.
+
+\section{The Radiative Switch Computer}
+
+A single PCM switch demonstrates that the control layer can be embodied rather than digital. It does not yet demonstrate computation in any interesting sense; one switch is a threshold, not a field. Three extensions turn a population of such switches into something worth calling a radiative switch computer.
+
+\subsection{Heterogeneous thresholds}
+
+The demonstrated device uses a single wax with a single melting point, chosen for comfort. Nothing in the physics prevents a field of switches with deliberately varied melting points,
+\[
+T_{c,1}, \; T_{c,2}, \; \dots, \; T_{c,n},
+\]
+distributed across a surface. Exposed to the same ambient conditions, such a field responds not with a single bit but with a spatial pattern --- some elements open, some closed, depending on local conditions and each element's individual threshold. This requires no new materials science, only the deliberate use of different paraffins at different points on a tile array. Structurally, the result resembles a population of threshold units whose activation functions are melting transitions rather than sigmoids: a heterogeneous, materially instantiated analogue of a layer in an artificial network, except that each unit's threshold is a physical constant of the wax it contains rather than a trained parameter.
+
+\subsection{Hysteresis as memory}
+
+Xiao, Liao, and Hawkes treat hysteresis --- the gap between the switch's heating-direction and cooling-direction response curves --- as an imperfection to be minimized, and much of their engineering achievement consists in driving that gap under 3\,\textdegree C \cite{xiao2023}. This is the correct objective for a thermostat: a hysteretic thermostat overshoots its setpoint, and overshoot wastes energy. But hysteresis is precisely what distinguishes a stateful element from a stateless one. A memoryless switch is well approximated by a threshold function of the instantaneous field:
+\[
+s(t) = H\big(T(t) - T_c\big).
+\]
+A hysteretic switch depends on its own recent history:
+\[
+s(t) = F\big(T(t), s(t - \Delta t)\big).
+\]
+The first is a detector. The second is a dynamical system with memory --- closer in spirit to a deliberately bistable circuit element, such as a Schmitt trigger, than to a thermostat's tolerance band. A computational reading of the radiative switch treats hysteresis not as noise to be engineered out but as a tunable resource: the mechanism by which an otherwise purely reactive element can carry information forward in time.
+
+This reversal should be stated honestly rather than claimed for free. The same physical parameter --- the melt/freeze asymmetry of the phase-change material --- that the demonstrated device suppresses for good thermoregulatory reasons is exactly what a computational version would need to preserve or amplify. A switch tuned for comfort and a switch tuned for memory are not the same design, even though they share a mechanism. This is one instance of a pattern that recurs throughout the argument: a property treated as a defect in one regime becomes structure in another. Waste heat becomes computational medium; hysteresis becomes memory; entropy production, ordinarily counted as loss, becomes the resource the whole device is built to shape.
+
+\subsection{Coupling as a continuum}
+
+However the elements of a field interact --- through conduction along a shared substrate, or through radiative exchange across open space --- the underlying dynamics take the form of a gradient flow toward a stable configuration of some constraint landscape,
+\[
+\dot{x} = -\nabla E(x),
+\]
+where $x$ is the joint state of all elements and $E$ is an energy-like functional determined by their coupling. What differs between architectures is not whether such a landscape exists, but the structure of the coupling matrix $W_{ij}$ that defines it.
+
+In the conductive limit, coupling is local: $W_{ij} \approx 0$ for elements that do not share a direct thermal path, and the system's dynamics approximate a discretized diffusion equation,
+\[
+\frac{\partial T}{\partial t} = \nabla \cdot (k \nabla T) + Q(T, s).
+\]
+This is the regime in which the settling of a physical structure under load --- the arch, discussed in Section 8 --- is the natural analogy: local propagation of constraint toward a geometry that satisfies it.
+
+In the radiative limit, coupling depends on view factor, distance, and occlusion between elements rather than on physical adjacency,
+\[
+\dot{T}_i = \sum_j W_{ij}\, \sigma\!\left(T_j^4 - T_i^4\right) + Q_i, \qquad W_{ij} = f(\text{view factor}_{ij}, \text{distance}_{ij}, \text{occlusion}_{ij}),
+\]
+and this coupling can connect elements that are physically distant but geometrically visible to one another. Because most pairs of elements share little or no direct sightline while a few enjoy an unobstructed view across a room, the resulting graph is not a lattice and not fully connected, but small-world: mostly local, with occasional long-range shortcuts determined by geometry. This regime is structurally closer to a Hopfield network's attractor dynamics than to a diffusion equation's local relaxation \cite{hopfield1982}.
+
+It would be a mistake to treat the conductive and radiative regimes as different computational species. An arch settling under load, a diffusion field relaxing to equilibrium, a Hopfield network descending an energy landscape, and a radiative switch array exchanging infrared flux are not different kinds of process; they are different regions of the same coupling-space, governed by the same gradient principle, distinguished only by how sparse or dense, how local or long-range, their interaction matrix happens to be. A real installation will likely mix both channels, with some elements coupled by shared structure and others by open sightline:
+\[
+\dot{x} = F_{\text{local}}(x) + F_{\text{radiative}}(x).
+\]
+The choice of coupling structure is not a detail; it changes what the field can do. Sparse, local coupling of the conductive kind tends to preserve geometry: a constraint imposed at one edge of the array propagates only as fast as it can diffuse, and the settled configuration reflects the array's actual spatial layout, the way an arch's final shape reflects the geometry it was built to. Dense, long-range coupling of the radiative kind permits regions with no physical proximity to coordinate directly, provided they share a sightline; two elements on opposite sides of a room can influence one another's settling as strongly as two elements side by side, and the settled configuration reflects a pattern of mutual visibility rather than a pattern of adjacency. A small-world mixture of the two, which is what real geometry mostly produces, combines fast, whole-array coordination through the sparse long-range radiative shortcuts with the fine local structure preserved by conduction --- a regime in which a change introduced at one point can influence the whole field quickly while the field's fine spatial detail is still resolved locally. Which regime a given installation falls into is an engineering decision, made by choosing materials, spacing, and sightlines, not a fact about radiative switch computation in general.
+
+The thesis this essay is making does not depend on resolving which channel dominates. It depends only on the coupling matrix being physically instantiated rather than computed and communicated by an external controller --- on the landscape being a fact about the room's geometry and materials, not a data structure held somewhere else.
+
+\subsection{Intrinsic dynamics and extrinsic meaning}
+
+A question worth answering directly, since the rest of the essay depends on the answer: is a coupled field's computation there independently of anyone observing it, or is calling it a computation a description a human observer chooses to impose on physics that would happen anyway?
+
+The dynamics do not depend on observation. A radiative switch array settles according to its material constraints whether or not a sensor records the process or a person interprets the result; the coupling matrix, the thresholds, and the resulting trajectory toward a stable configuration are facts about the field's construction, not facts about anyone's attention to it. In this sense the computation is intrinsic: the field implements a constraint satisfaction process specified by its own physical structure, full stop.
+
+What is not intrinsic is meaning. A particular settled configuration becomes an \emph{answer} only relative to some downstream user --- an observer, a controller, an occupant, another system --- capable of treating one admissible configuration as different from, and more useful than, another. This is not a retreat into interpretationism, because it does not touch the dynamics themselves; the field would settle the same way regardless of whether that downstream user exists. It only concedes that ``answer,'' unlike ``settling,'' is a relational term: it names a state's role in something beyond the state, not a property the state has on its own.
+
+\begin{quote}
+\itshape
+Dynamics are observer-independent. Answers are observer-relative.
+\end{quote}
+
+\noindent The field computes whether or not it is observed. What the computation is worth, or is taken to mean, depends on the context in which its resulting state is subsequently used. Computation, on this account, is intrinsic; semantics is extrinsic --- and the essay's realism is confined to the former.
+
+\section{Readout, Projection, and the Line That Actually Matters}
+
+Even the single PCM switch --- the cleanest available case of embodied computation --- has an internal state richer than what it displays. The wax's condition at any moment is a point in some space of temperature, melt fraction, and volume; the louver reports something much coarser, close to a single degree of openness. Every actuator is a projection of a higher-dimensional state onto a lower-dimensional observable, and it is tempting to conclude from this that representation is present everywhere, even in the most embodied device this essay can point to.
+
+That conclusion proves too much. Pressure is a projection of molecular momenta. Temperature is a projection of a kinetic energy distribution. An attractor basin is a projection of a high-dimensional trajectory onto a small set of stable points. If any coarse-graining counts as representation, the term stops discriminating anything, and the distinction this essay has been building between performative and representational computation collapses from the inside.
+
+The distinction that survives is causal decoupling, not coarse-graining. A projection $y = \pi(x)$ remains within the performative regime as long as $y$ has no existence apart from the process currently producing it --- as long as it cannot persist, be copied, or continue acting once separated from $x$. The louver's angle is continuously driven by the wax; there is no moment at which it is anything other than the wax's present state made visible, so there is no moment at which it can be \emph{wrong} about that state. A sensor reading logged to a database is different in kind, not merely in degree: once written, the logged value persists after the wax has moved on, can be copied, can be transmitted to and acted on by systems that never touch the wax at all, and --- crucially --- can simply be false about the wax's current condition. That capacity to become false, to diverge from the process it once tracked, is the mark of representation.
+
+\begin{quote}
+\itshape
+Projection creates observability. Representation creates separability.
+\end{quote}
+
+This sharpens the taxonomy of readout the coupled field will need. A purely performative system --- governor, thermostat, single PCM switch, a radiative field left alone --- has no detached answer; the achieved state simply is the answer, and it cannot become stale relative to itself. An instrumented system adds sensors that export a trace of the field's evolution, and this does not by itself betray the thesis, provided the trace is treated as staleness-tolerant measurement of an ongoing embodied process rather than as a symbol substituting for it --- the way a tree's rings are legible history rather than a log appended to the tree from outside. A third mode arises when the field is used as a surrogate solver for some other problem entirely: a room's radiative relaxation used to model a different building's thermal behavior, say. Here a genuine representational layer has been introduced, riding atop real physical relaxation --- not a degraded version of embodied computation, but a distinct and horizontally related mode, in which the representation is parasitic on, rather than substitutive for, the underlying process.
+
+The arch, discussed next, makes the same point at the far end of the spectrum. A finite-element model of a settled arch is unambiguously a representation: the model can be wrong about the arch's actual stress distribution, and the arch cannot be wrong about itself.
+
+\begin{quote}
+\itshape
+The arch cannot be wrong about itself. The model can.
+\end{quote}
+
+\noindent That asymmetry --- not the mere fact of coarse-graining --- is what this essay means by the difference between containment and representation.
+
+\subsection{Containment and permeability}
+
+A field of coupled elements exchanges heat continuously with its surroundings: with weather, with sunlight, with occupants, with neighboring structures. It might seem that this leakage undermines any claim about the field's boundary coinciding with a computation's boundary --- that a thermal envelope, being semi-permeable, cannot also be the edge of anything as tidy as a computer.
+
+This mistakes containment for isolation. A cell membrane exchanges matter with its surroundings continuously and is not thereby dissolved as a boundary; a building exchanges heat, moisture, and air and remains a building; an ecosystem persists only by virtue of constant throughput. None of these is defined by impermeability. Each is defined by maintaining a recognizable internal organization despite continual exchange across whatever boundary it has. The relevant boundary, for a radiative switch field as for a cell, is not a sealed surface but the region within which a particular coupling structure --- the pattern of interaction responsible for the field's own settling --- remains dominant over whatever exchange crosses it. Energy crossing the boundary does not by itself compromise the computation, any more than a cell absorbing nutrients compromises its identity; what would compromise it is the coupling structure itself being overwhelmed or replaced by influence from outside. Containment, in the sense this essay needs, is a claim about organization, not about sealing.
+
+\section{Correctness Without an Answer Key}
+
+Representational computation hides a normative choice behind the phrase ``correct answer.'' A sorting algorithm is correct only relative to a specified ordering; a compression algorithm is correct only relative to a specified distortion tolerance. The apparent objectivity of the answer key conceals the fact that someone had to specify one. Performative computation cannot hide this, because there is no answer key apart from the tolerances built into what counts as the system remaining viable.
+
+This is close to a distinction Ashby drew for regulatory systems generally: an organism or a machine maintains itself not by tracking an externally specified target but by keeping certain essential variables within limits compatible with continued operation, limits set by what the system is rather than handed to it from outside \cite{ashby1952,ashby1956}. Ashby's related notion of ultrastability --- a system that reorganizes its own internal coupling when an essential variable threatens to leave its viable range, rather than being steered back by an outside controller --- is arguably the closer precursor to what this essay means by a self-maintaining, controller-free field. A governor has no metaphysically correct RPM; it has a viability region within which the essential variable --- shaft speed --- stays compatible with the engine continuing to run at all. A radiative switch field, left to settle, is correct not insofar as it converges on some externally specified target, but insofar as it remains within whatever region was specified as admissible when the field was built.
+
+It is worth separating two admissible regions that are easy to conflate. A house has a physical admissible region, set by hard constraints such as keeping pipes above freezing and materials below their failure temperature, and it has a human comfort region, negotiated among occupants, clothing, activity level, and cultural expectation, and considerably more variable than the physical one. A bridge has a stress region within which its material does not fail, which is the physical case in its purest form. The claim this essay is making about correctness is most secure when anchored to the physical region; the human comfort region is real and relevant to what a radiative switch field is built to do, but it is a negotiated target layered on top of the physical viability the field must satisfy regardless, not a substitute for it.
+
+The underlying commitment is worth stating plainly, since it recurs throughout this essay in different vocabulary: correctness, for a performative system, is relative to an admissible region rather than to a target state, and closure --- the routing of a system's own outputs back into what sustains it --- is what makes that region reachable and holdable at all. This is also the sense in which a radiative switch field is a self-maintaining structure of the kind Prigogine described in far-from-equilibrium systems generally: a configuration held in place not despite continuous energy dissipation but by means of it \cite{prigogine1977}.
+
+This reframing exposes a failure mode distinct from incorrectness. A performative system can sit stably within its admissible region while computing nothing worth the name. A governor can regulate an engine around a setpoint that keeps it idling uselessly; a radiative field can settle into a stable configuration that happens to be thermally comfortable and computationally trivial, cycling the same two states without ever resolving anything that could be called a constraint satisfaction problem. Call this closed but degenerate. Correctness, in the performative sense developed here, and non-triviality are two different properties, and a system can have the first without the second.
+
+\subsection{Constraint richness}
+
+Closure alone does not make a system computationally interesting, and the previous paragraph's distinction needs a criterion, not just a name. Not all admissible regions carry the same amount of structure. A system whose dynamics converge toward a single trivial equilibrium regardless of how it starts or what perturbs it may remain perfectly viable while expressing almost no computational content: it has one attractor, and nothing about which attractor it reached is informative, because there was never a choice. A more interesting class of systems possesses many admissible configurations, separated by genuine constraints, such that different initial conditions, different couplings, or different perturbations lead to distinguishably different --- and equally admissible --- outcomes.
+
+The computational significance of a performative system therefore depends not merely on closure but on the richness of the constraint landscape through which closure is achieved, and, following the distinction drawn in Section 2, on that richness having been put there on purpose. A radiative switch field becomes computationally interesting, rather than merely a well-behaved thermostat, when its attractor structure is deliberately differentiated enough that settling into one admissible configuration rather than another carries information about the specific constraints --- occupancy, solar exposure, heterogeneous thresholds --- imposed on it. What separates a genuinely computational radiative field from an elaborate thermostat is not that the field is closed; both are. It is that the field's settled configuration reflects an engineered constraint structure rich enough that its particular resting point could have been otherwise, and was not.
+
+\section{Temporal Modes}
+
+Not every performative system computes the same way in time. Some are continuous: the governor, the thermostat, the radiative house, all of which compute only for as long as they run, and whose answer exists only while the process continues. Others are terminal: an arch settles once, under load, into a geometry that is then held, statically, indefinitely. The computation is over; what remains is not a record of the computation but its frozen trajectory. An engineer can later infer an approximate force distribution from the arch's finished geometry, but the arch itself stores no such inference --- it simply is the settled solution, and in general many different loading histories could have converged on the same final shape. Call this history-erasing terminal computation.
+
+A third mode sits between these without being their average. A tree's growth is continuous, but each year's increment becomes a terminalized record, laid down and then no longer revisited --- a scar tissue for growth rather than a wound. This is not a midpoint between continuous and terminal; it is terminal computation, iterated, with memory carried forward in the residue itself, since each ring's boundary conditions are set by the ring beneath it. Unlike the arch, a tree's rings are largely legible: the trajectory is stratified and readable, not erased, because each terminal event is deposited without overwriting the ones before it. Call this history-preserving accumulative computation. Repair sits in a related but more ambiguous place: a wound heals and the healing process ceases, leaving a scar that records \emph{that} damage occurred without preserving the precise trajectory of the damage itself --- partially history-preserving, partially history-erasing, and in that sense a natural bridge between the arch and the tree.
+
+A coupled radiative switch field can occupy either mode depending on how it is built and used. Run continuously, tracking a changing thermal environment, it computes the way a thermostat does, only richer. Allowed to relax once toward a stable configuration under a fixed set of constraints --- a fixed pattern of solar exposure, occupancy, and thresholds --- and then held there, its settled configuration becomes a terminal computation in the arch's sense: not a record of the relaxation, but the relaxation's frozen outcome, embodying whatever the field concluded about its own admissible geometry.
+
+\subsection{Latent structure and readable residue}
+
+The three temporal modes above differ along a further axis worth making explicit: how much of a structure's formation remains legible in the structure itself. Tree rings preserve substantial information about the conditions under which each one formed, stratified and largely readable, layer by layer. A scar records that damage occurred and roughly where, while obscuring most of the specific trajectory --- the sequence of insults, the precise timeline of healing --- that produced it. A settled arch preserves almost none of its loading history in its final geometry, since many different sequences of stress could in principle have converged on the same finished shape.
+
+The distinction underneath these three cases is not memory versus its absence; all three leave something behind. It is a difference in how much of the process survives in the residue, ranging from the tree's highly legible accumulation, through the scar's partial and compressed record, to the arch's largely opaque terminal state. A coupled radiative switch field, run as a terminal computation, will fall somewhere on this same axis depending on its design: a field built so that its intermediate settling states are also frozen in sequence --- successive layers of a slowly built material, say --- would sit closer to the tree; a field that relaxes once, quickly, to a single final configuration would sit closer to the arch. Legibility, like coupling topology and constraint richness, is a design choice, not an inevitable consequence of the physics.
+
+The examples this section and the two before it have accumulated are scattered enough to be worth collecting in one place:
+
+\begin{center}
+\begin{tabular}{lccc}
+\hline
+& \textbf{Continuous} & \textbf{Accumulative} & \textbf{Terminal} \\
+\hline
+Non-thermal & Governor & --- & --- \\
+Thermal, minimal & Thermostat & Tree rings & Arch \\
+Thermal, injured & --- & Scar tissue & --- \\
+Radiative switch field & running, tracking & layered, sequential & single relaxation \\
+\hline
+\end{tabular}
+\end{center}
+
+\noindent The columns are the taxonomy of Section 8; the rows are the taxonomy of Sections 4 and 8 together, non-thermal and thermal, engineered and grown. A single radiative switch field can occupy any cell in its own row depending on how it is built and run --- which is the point the essay has been making about coupling and legibility all along: these are design choices, not fixed properties of the device.
+
+\section{Containment, Not Hosting}
+
+The payoff of all this is not that heaters can be made to compute. It is a claim about where the boundary of a computer is allowed to sit. A conventional infrastructure object has an internal machine, an external world, and an exhaust boundary across which the two exchange energy that is not otherwise accounted for. Xylomorphic computation, in its strongest form, collapses these distinctions: the artifact's waste is part of its state, its boundary is part of its computation, and its correctness is evaluated by whether the contained system remains within the region that makes it viable at all.
+
+A house equipped with a coupled radiative switch field is not hosting a computer the way a data center hosts racks of servers that happen to also produce useful heat. The house, while maintaining itself as a livable thermal enclosure, is the computer --- not because a clever engineer routed a computation's exhaust into the walls, but because the physical process that keeps the house within its comfort region and the physical process that constitutes whatever constraint satisfaction the field is performing are, in the strongest instances discussed here, the same process viewed under two descriptions. This is the sense in which the essay's central claim should be read: not computation \emph{inside} containment, but computation \emph{as} containment.
+
+\section{Closing}
+
+Some computations do not produce answers that can be extracted, copied, and handed to someone else. They produce structures --- settled arches, grown rings, scarred tissue, radiative fields relaxed into a configuration that happens also to be a comfortable room. This is not a lesser kind of computation, hedged and qualified against the representational kind; it is a different relationship between a process and what that process is for, one in which the two were never separate to begin with.
+
+The essay has tried to hold two things open rather than resolve them prematurely, because resolving them would falsely tidy a genuine and productive tension. First, whether the switching logic of a coupled field must remain wholly embodied --- as it does in the demonstrated PCM device --- for the resulting computation to count as xylomorphic in the strict sense, or whether some digital mediation at the control layer is compatible with the thesis provided the mediation only measures rather than substitutes for the underlying process. Second, whether a field's coupling should be built to favor the local, arch-like relaxation of a diffusion process or the long-range, attractor-like dynamics of a radiative one, or some deliberate mixture of both. Both questions are design problems, not settled conclusions, and the essay is stronger for saying so.
+
+What does seem settled is the connection to a wider and older concern: that repair, healing, and containment are not corrections applied to a system from outside, but productive processes belonging to the system itself, and that a boundary worth calling a container is one whose contents and whose maintenance of itself are not, in the end, two different things.
+
+\section*{Appendices}
+
+\appendix
+
+\section{A Minimal Formal Model of a Radiative Switch Field}
+
+The main text uses the coupling dynamics informally, as a family of examples rather than a single derived system. This appendix makes one tractable member of that family precise, states what can actually be proved about it, and is explicit about where the informal picture in Section 5.3 outruns what is rigorously true of the physical radiative term.
+
+\subsection{State and energy}
+
+Let the field have $n$ elements with state $x = (T_1,\ldots,T_n,\varphi_1,\ldots,\varphi_n)$, where $T_i$ is the temperature of element $i$ and $\varphi_i \in [0,1]$ is its melt fraction, continuous between the solid ($\varphi_i = 0$) and liquid ($\varphi_i = 1$) phase. Define a conductive coupling energy
+\[
+E_{\mathrm{cond}}(T) = \frac{1}{2}\sum_{i,j} W_{ij}\,(T_i - T_j)^2, \qquad W_{ij} = W_{ji} \ge 0,
+\]
+and, for each element, a Landau-type double-well potential coupling its temperature to its phase state,
+\[
+V_i(T_i,\varphi_i) = a\,\varphi_i^2(1-\varphi_i)^2 \;-\; b\,(T_i - T_{c,i})\,\varphi_i, \qquad a,b>0,
+\]
+which has two local minima near $\varphi_i \approx 0$ and $\varphi_i \approx 1$ for $T_i$ near $T_{c,i}$, tilted toward the liquid minimum as $T_i$ rises above the threshold $T_{c,i}$ and toward the solid minimum as it falls below. The total energy is
+\[
+E(x) = E_{\mathrm{cond}}(T) + \sum_i V_i(T_i,\varphi_i).
+\]
+
+\subsection{Gradient dynamics and monotone descent}
+
+Let the field evolve by overdamped gradient descent,
+\[
+C_i\,\dot T_i = -\frac{\partial E}{\partial T_i}, \qquad \gamma_i\,\dot\varphi_i = -\frac{\partial E}{\partial \varphi_i}, \qquad C_i,\gamma_i > 0.
+\]
+
+\begin{proposition}[Monotonic descent]
+Along any trajectory of the above dynamics,
+\[
+\frac{dE}{dt} = -\sum_i C_i \dot T_i^2 \;-\; \sum_i \gamma_i \dot\varphi_i^2 \;\le\; 0,
+\]
+with equality only at a stationary point.
+\end{proposition}
+
+\begin{proof}
+By the chain rule, $\dfrac{dE}{dt} = \sum_i \dfrac{\partial E}{\partial T_i}\dot T_i + \sum_i \dfrac{\partial E}{\partial \varphi_i}\dot\varphi_i$. Substituting $\partial E/\partial T_i = -C_i\dot T_i$ and $\partial E/\partial \varphi_i = -\gamma_i \dot\varphi_i$ from the dynamics gives $\dot E = -\sum_i C_i\dot T_i^2 - \sum_i \gamma_i \dot\varphi_i^2 \le 0$.
+\end{proof}
+
+This is the formal content behind the claim in Section 5.3 that the field settles toward a stable configuration of a constraint landscape. It also recovers, rather than merely asserts, the hysteresis discussed in Section 5.2: because $V_i$ is non-convex in $\varphi_i$, which of its two minima the system occupies at a given $T_i$ depends on which basin $\varphi_i$ was already in, not on $T_i$ alone. The hysteretic switch $s(t) = F(T(t),s(t-\Delta t))$ of the main text is this dynamics restricted to the two stable branches of a double well.
+
+\subsection{Where the linearization is needed}
+
+\begin{remark}
+The physical radiative coupling used elsewhere in this essay, $\dot T_i = \sum_j W_{ij}\,\sigma(T_j^4 - T_i^4) + Q_i$, is \emph{not} in general the gradient of any smooth pairwise potential. If $\partial E/\partial T_i = -W_{ij}\sigma(T_j^4-T_i^4)$ and $\partial E/\partial T_j = -W_{ij}\sigma(T_i^4-T_j^4)$ for a pair $i,j$, then equality of mixed partials, $\partial^2 E/\partial T_j\partial T_i = \partial^2 E/\partial T_i \partial T_j$, requires $-4W_{ij}\sigma T_j^3 = -4W_{ij}\sigma T_i^3$, i.e.\ $T_i = T_j$. No such $E$ exists off that set. The quadratic $E_{\mathrm{cond}}$ used above is therefore not an exact energy for the physical quartic exchange; it is its linearization about a common reference temperature $\bar T$, obtained from $T_j^4 - T_i^4 \approx 4\bar T^3(T_j - T_i)$, valid when all elements of the field remain reasonably close to $\bar T$. Section 5.3's unified gradient-flow picture is exactly true for the conductive channel and only approximately true, in this near-equilibrium sense, for the radiative one.
+\end{remark}
+
+\section{Constraint Inscription and Material Programs}
+
+Section 2.1 uses the phrase \emph{constraint inscription} without formalizing it. This appendix gives it a definition precise enough to distinguish a xylomorphic system from a digital one running on xylomorphic-sounding hardware.
+
+\begin{definition}[Symbolic program]
+A symbolic program is a pair $P = (\Theta, C)$, where $\Theta$ is a set of parameter values and $C$ is a specification of the operations to be performed on them, stored in some medium from which it can be read, copied, and executed independently of any single physical process.
+\end{definition}
+
+\begin{definition}[Material program]
+A material program is a tuple $M = (T_c, H, W, G)$: a distribution of thresholds, a hysteresis profile, a coupling matrix, and a geometry, jointly realized in the physical construction of a field.
+\end{definition}
+
+\begin{definition}[Inscription]
+An inscription is a map $I: P \to M$ associating a symbolic specification to a material arrangement that realizes it. Inscription need not be injective (different $P$ may realize the same $M$) or canonical (a given $M$ may admit no natural inverse).
+\end{definition}
+
+The distinction this essay needs is not whether an inscription map exists --- an engineer designing a radiative switch field plainly has some symbolic specification, $P$, in mind before building it, and $I$ describes the act of designing. The distinction is whether $P$ continues to exist, stored and executable, \emph{inside the operating system}, after $M$ has been built.
+
+\begin{definition}[Xylomorphic realization]
+A material program $M$ is a xylomorphic realization of a computation if no symbolic program $P$ persists inside the operating system as a separately readable, copyable object that $M$ merely executes. Formally, there is no map $r: M \to P$ realized as a physical component of the system itself such that $r \circ I = \mathrm{id}_P$; any such $r$ exists, if at all, only external to the system, as an engineer's specification sheet.
+\end{definition}
+
+A digital computer fails this condition by design: its program is stored symbolically, in a form the hardware itself can read back, and almost any $M$ realizing the same voltage-level semantics computes the same $P$, because the hardware is built to make $M$ fungible with respect to $P$. A radiative switch field satisfies the condition when changing the wax changes the computation, because there is no symbolic $P$ held anywhere for the wax to merely implement --- the material arrangement is not an executable copy of a specification but the only specification there is.
+
+\section{Performative and Representational Readouts}
+
+Section 6 argues that the distinction between projection and representation turns on whether a readout can become stale. This appendix states that argument as a definition and a proposition. The result is close to immediate given the definitions; its purpose is precision, not difficulty --- it exists so that ``the arch cannot be wrong about itself'' is a checkable claim rather than only an evocative one.
+
+Let $x:[0,T]\to X$ be the trajectory of a system's full physical state, and let $\pi: X \to Y$ be a readout map into some observable space $Y$ equipped with a metric $d$.
+
+\begin{definition}[Live readout]
+The live readout at time $t$ is $y(t) := \pi(x(t))$.
+\end{definition}
+
+\begin{definition}[Performative channel]
+A readout channel is performative if the value available downstream at every time $t$ is $y(t)$ itself, recomputed from the current state, with no earlier value retained past the instant it was produced.
+\end{definition}
+
+\begin{definition}[Representation]
+A representation fixed at reference time $t_0$ is a stored value $r(t_0) := \pi(x(t_0))$, retained, copyable, and transmissible independently of the continued evolution of $x$ after $t_0$.
+\end{definition}
+
+\begin{definition}[Staleness]
+For $t \ge t_0$, the staleness of a stored value $r(t_0)$ relative to the live state is
+\[
+S(t) := d\big(r(t_0),\, \pi(x(t))\big).
+\]
+\end{definition}
+
+\begin{theorem}[Performative channels cannot become stale]
+For a performative channel, $S(t) \equiv 0$ for all $t$. For a stored representation, $S(t) \ne 0$ whenever $x(t) \notin \pi^{-1}\big(r(t_0)\big)$, which is generic for $t > t_0$ unless $\pi \circ x$ is constant on $[t_0,t]$.
+\end{theorem}
+
+\begin{proof}
+For a performative channel there is no fixed $r(t_0)$ distinct from the live value; by definition the quantity compared to itself at time $t$ is $\pi(x(t))$, so $S(t) = d(\pi(x(t)),\pi(x(t))) = 0$. For a stored representation, $r(t_0)$ is fixed while $\pi(x(t))$ varies with $t$; $S(t) = 0$ if and only if $x(t)$ lies in the level set $\pi^{-1}(r(t_0))$, which the trajectory need not revisit or remain in once it has moved on.
+\end{proof}
+
+The louver of Section 3 is a performative channel in this sense: there is no $r(t_0)$ held anywhere, only $y(t)$, so the question ``is the louver's reading still accurate'' has no content, because there was never a stored value that could drift from the state producing it. A logged sensor reading is a representation, and $S(t)$ for it is generically nonzero and growing as soon as the wax's state moves on from what was recorded.
+
+\section{A Legibility Measure for Temporal Modes}
+
+Section 8 orders terminal residues --- arch, scar, tree --- by how much of their formation remains legible in what is left behind. This appendix gives that ordering a formal shape. It is offered as a framework for making the ordering precise, not as a set of computed values: assigning an actual number to a real arch or a real tree would require specifying a probability distribution over the trajectories each could have undergone, which this essay does not attempt.
+
+Let $\tau:[0,T]\to X$ be a trajectory, drawn from some ensemble of trajectories the system might have followed (different loading histories for an arch, different growing seasons for a tree, different injury-and-repair sequences for a scar), and let $O$ be the residue left behind after the process, regarded as a random variable jointly distributed with $\tau$ under that ensemble.
+
+\begin{definition}[Legibility]
+The legibility of a residue is the mutual information $L(O) := I(\tau; O)$ between the trajectory and what it leaves behind.
+\end{definition}
+
+The three temporal modes of Section 8 correspond to three choices of $O$:
+\begin{itemize}
+\item \textbf{Terminal.} $O = \tau(T)$, the final state alone.
+\item \textbf{Accumulative.} $O = \big(\tau(T_1),\ldots,\tau(T_n)\big)$, a sequence of frozen intermediate states.
+\item \textbf{Continuous.} There is no persisting $O$ distinct from $\tau(t)$ itself; the continuous case is excluded from this ranking, since legibility presupposes a residue that outlasts the process.
+\end{itemize}
+
+An arch sits near $L \approx 0$ when the map from loading history to final geometry is highly non-injective --- many distinct histories converge on the same settled shape, so conditioning on $O = \tau(T)$ resolves little of the uncertainty over which $\tau$ occurred. A tree's rings sit at comparatively large $L$ because the sequence $\big(\tau(T_1),\ldots,\tau(T_n)\big)$ discards comparatively little between consecutive snapshots; recovering an approximate growth history from the rings is close to inverting the residue back into the trajectory. A scar sits between the two: it fixes that an injury occurred, at roughly what location, without preserving the specific sequence of insult and repair that produced it, so its history-to-residue map is non-injective but less so than the arch's. The claim this essay needs is the ordering
+\[
+L(\text{tree}) \;>\; L(\text{scar}) \;>\; L(\text{arch}) \;\approx\; 0,
+\]
+which follows from how non-injective each history-to-residue map is, not from any measurement offered here.
+
+\section{Relation to Thermodynamic Computation}
+
+This essay is not a contribution to the thermodynamics of computation, and it is worth saying explicitly where it sits relative to that literature rather than leaving the relationship to be inferred.
+
+\subsection{Landauer: the cost of erasure}
+
+Landauer's principle gives a lower bound on the energetic cost of a logically irreversible operation, $Q \ge k_B T \ln 2$ per bit erased \cite{landauer1961}. This concerns the energetic consequences of information-bearing state changes. The present essay asks a different question --- not what a computation costs, but where a computation is located. A radiative switch field may or may not approach Landauer-bounded operation at the level of its individual phase transitions; nothing in this essay's central claim depends on the answer, since that claim concerns the identity of computation and function, not the efficiency of either.
+
+\subsection{Wolpert: computation as physical dynamics}
+
+Wolpert's account of physical computation treats any physical dynamics $x_{t+1} = F(x_t)$ mapping an initial to a final state as a computer in the relevant sense, deliberately substrate-general \cite{wolpert2008}. A radiative switch field is a computer in exactly this sense. But this essay's claim is narrower and stronger than substrate-generality: it requires not merely that computation be physically implemented, but that computation, function, and substrate dynamics coincide. Most systems that are computers in Wolpert's sense are not xylomorphic in this essay's sense; a laptop computes physically without its computation being inseparable from any function beyond computing.
+
+\subsection{Kolchinsky and Wolpert: semantic information}
+
+Work on semantic information distinguishes information that merely exists in a system from information that contributes to the system's continued existence, roughly $I_{\text{semantic}} \subseteq I_{\text{syntactic}}$, with semantic information defined as that whose removal would reduce the system's expected viability \cite{kolchinsky2018}. This is the closest point of contact with the present essay: Section 7's admissible-region account of correctness ties informational significance to continued viability rather than to correspondence with an external target, in a similar spirit. The emphasis differs. Semantic information theory asks which information matters for a system's survival. This essay asks a narrower question within that space: when is the survival itself --- the maintenance of a system within its admissible region --- the computation, rather than merely the context in which some separate computation happens to occur.
+
+\subsection{Position of the present work}
+
+Landauer explains why computation cannot escape thermodynamic cost. Wolpert explains why computation is, at bottom, physical dynamics regardless of substrate. Kolchinsky and Wolpert explain which information within a physical process is meaningful for that process's own persistence. None of the three asks the question this essay is organized around: not what computation costs, not whether computation is physical, not which information matters, but whether there exists a class of systems --- radiative switch fields among them --- in which the dynamics that maintain a system's own viability are not merely computing something as a side effect, but simply are the computation, with no remainder on either side.
+
+\section{Constraint Richness}
+
+Section 7.2 distinguishes closure from computational interest verbally: a system is closed but degenerate when its resting point carries no information about what perturbed it, and computationally interesting when it does. This appendix gives that distinction a shape, built directly on the energy functional of Appendix A rather than on any new machinery.
+
+Let $\mathcal A = \{a : \nabla E(a) = 0,\ a \text{ a local minimum of } E\}$ be the set of admissible attractors of the field --- the stable configurations the gradient dynamics of Appendix A can settle into. Let $\mu$ be a distribution over initial conditions or exogenous perturbations (which elements receive a nudge, what pattern of solar exposure the field starts from), and let $a: X \to \mathcal A$ send an initial condition to the attractor its trajectory converges to, assumed well-defined for $\mu$-almost every $x_0$. Let $A$ denote the resulting $\mathcal A$-valued random variable induced by $x_0 \sim \mu$.
+
+\begin{definition}[Constraint richness]
+$R := H(A) = -\sum_{a \in \mathcal A} P(A=a) \log P(A=a)$.
+\end{definition}
+
+\begin{proposition}
+$R = 0$ if and only if a single attractor $a^\ast \in \mathcal A$ absorbs $\mu$-almost every initial condition. $R > 0$ if and only if at least two attractors are reached with positive probability, so that which attractor the field settles into genuinely depends on the perturbation. Moreover $0 \le R \le \log|\mathcal A|$, with equality at the upper bound exactly when attractors are reached uniformly.
+\end{proposition}
+
+\begin{proof}
+The first two claims are immediate from the definition of Shannon entropy: $H(A) = 0$ exactly when $A$ is deterministic under $\mu$, i.e.\ concentrated on a single attractor, and $H(A) > 0$ exactly when its support has at least two points of positive probability. The bound and its equality condition are the standard entropy bound for a random variable on a finite set of size $|\mathcal A|$.
+\end{proof}
+
+\begin{proposition}[Homogeneous fields are degenerate]
+If all thresholds coincide, $T_{c,i} = T_c$ for every $i$, and the potentials $V_i$ are convex in $\varphi_i$ (no double well), then $|\mathcal A| = 1$ and hence $R = 0$ for every perturbation distribution $\mu$.
+\end{proposition}
+
+\begin{proof}
+Under these conditions the dynamics of Appendix A reduce, in the temperature variables, to $C_i \dot T_i = -\sum_j W_{ij}(T_i - T_j) = -(LT)_i$, where $L$ is the graph Laplacian of the coupling matrix $W$. For a connected coupling graph, $L$ is positive semidefinite with one-dimensional kernel spanned by the consensus vector $(1,\ldots,1)$, so every trajectory converges to a single consensus temperature regardless of initial condition; with convex $V_i$ there is no additional bistability to multiply this outcome. Hence $\mathcal A$ has exactly one element, and $R = 0$ follows from the previous proposition regardless of $\mu$.
+\end{proof}
+
+This is the formal counterpart of Section 5.1: heterogeneous thresholds are not a decorative elaboration of the single demonstrated switch but the minimal condition under which $|\mathcal A| > 1$ becomes possible at all, and hence the minimal condition under which $R > 0$ is even on the table. Richness in the sense of this appendix is necessary but not sufficient for computational interest in the sense of Section 7.2: a field can satisfy $R>0$ by accident of geometry, the way a river's channel could in principle have gone several ways depending on rainfall, without being computationally interesting in the sense this essay cares about, because $\mathcal A$ was never inscribed on purpose in Appendix B's sense. Computational interest, fully stated, requires both: $R>0$ from this appendix, and a material program $M$ realizing $\mathcal A$ that is xylomorphic in the sense of Appendix B --- richness that was put there deliberately, not richness that merely happened.
+
+\newpage
+\begin{thebibliography}{9}
+
+\bibitem{xiao2023}
+Xiao, C.; Liao, B.; Hawkes, E.\ W.
+\textit{Passively Adaptive Radiative Switch for Thermoregulation in Buildings}.
+arXiv:2308.01530v2, 2023.
+
+\bibitem{wiener1948}
+Wiener, N.
+\textit{Cybernetics: or Control and Communication in the Animal and the Machine}.
+MIT Press, 1948.
+
+\bibitem{hopfield1982}
+Hopfield, J.\ J.
+Neural networks and physical systems with emergent collective computational abilities.
+\textit{Proceedings of the National Academy of Sciences} 79 (8), 1982, 2554--2558.
+
+\bibitem{maxwell1868}
+Maxwell, J.\ C.
+On Governors.
+\textit{Proceedings of the Royal Society of London} 16, 1868, 270--283.
+
+\bibitem{ashby1952}
+Ashby, W.\ R.
+\textit{Design for a Brain}.
+Chapman \& Hall, 1952.
+
+\bibitem{ashby1956}
+Ashby, W.\ R.
+\textit{An Introduction to Cybernetics}.
+Chapman \& Hall, 1956.
+
+\bibitem{prigogine1977}
+Prigogine, I.
+\textit{Time, Structure, and Fluctuations}.
+Nobel Lecture, 1977.
+
+\bibitem{landauer1961}
+Landauer, R.
+Irreversibility and heat generation in the computing process.
+\textit{IBM Journal of Research and Development} 5 (3), 1961, 183--191.
+
+\bibitem{wolpert2008}
+Wolpert, D.\ H.
+Physical limits of inference.
+\textit{Physica D: Nonlinear Phenomena} 237 (9), 2008, 1257--1281.
+
+\bibitem{kolchinsky2018}
+Kolchinsky, A.; Wolpert, D.\ H.
+Semantic information, autonomous agency and non-equilibrium statistical physics.
+\textit{Interface Focus} 8 (6), 2018, 20180041.
+
+\end{thebibliography}
+
+\end{document}
+

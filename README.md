@@ -1,4 +1,6 @@
-# Xylomorphic Infrastructure: Thermodynamic and Cognitive Foundations of Stable AI Systems
+# Xylomorphic Infrastructure
+
+[Computation as Containment](https://github.com/standardgalactic/computation/blob/main/radiative-switch/README.md) — *Radiative Switch Computation*
 
 [Abstraction as Reduciton](https://github.com/standardgalactic/computation/blob/main/abstraction/README.md)
 

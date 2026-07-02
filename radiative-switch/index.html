@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buildings That Think With Wax and Heat</title>
+
+<style>
+body{
+  margin:0;
+  background:#000;
+  color:#7cff7c;
+  font-family:monospace;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+  max-width:900px;
+  margin:auto;
+}
+
+h2{
+  margin-bottom:10px;
+  font-size:0.95em;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+
+.description{
+  font-size:0.85em;
+  line-height:1.5em;
+  color:#aaffaa;
+  max-width:800px;
+  margin-bottom:20px;
+  border:1px solid #00ff0030;
+  padding:14px;
+  background:#001000;
+}
+
+.scope-wrap{
+  position:relative;
+  width:380px;
+  height:380px;
+  margin-bottom:10px;
+  cursor:pointer;
+}
+
+.scope-wrap::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%, #002800 55%, #001100 70%, #000 100%);
+  box-shadow:
+    0 0 0 5px #001a00,
+    0 0 40px #00ff0030,
+    inset 0 0 60px #00ff0020;
+}
+
+.scope-wrap::after{
+  content:"";
+  position:absolute;
+  inset:25px;
+  border-radius:50%;
+  background:linear-gradient(130deg, rgba(255,255,255,0.05), transparent 40%);
+  pointer-events:none;
+}
+
+canvas{
+  position:absolute;
+  inset:25px;
+  width:330px;
+  height:330px;
+  border-radius:50%;
+  background:#000;
+  box-shadow:inset 0 0 25px #00ff0020;
+}
+
+.scanlines{
+  position:absolute;
+  inset:25px;
+  border-radius:50%;
+  background:repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,0,0.04) 0px,
+    rgba(0,255,0,0.04) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events:none;
+}
+
+.hint{
+  font-size:0.72em;
+  opacity:.35;
+  letter-spacing:.12em;
+  margin-bottom:16px;
+}
+
+.captions{
+  max-width:720px;
+  min-height:2.4em;
+  border:1px solid #00ff0030;
+  background:#001000;
+  padding:12px;
+  margin-top:4px;
+  font-size:0.88em;
+  line-height:1.5;
+  color:#aaffaa;
+}
+
+.links{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+a{ color:#7cff7c; text-decoration:none; border-bottom:1px solid #00ff00; }
+a:hover{ color:#aaffaa; }
+</style>
+</head>
+
+<body>
+
+<h2>Buildings That Think With Wax and Heat</h2>
+
+<div class="description">
+  What if the physical act of heating and cooling a room <em>is</em> the computation itself?
+  Radiative switch computation proposes that containment and intelligence are the exact same
+  physical process viewed under two different descriptions.
+</div>
+
+<div class="scope-wrap" id="scope-wrap">
+  <canvas id="scope"></canvas>
+  <div class="scanlines"></div>
+</div>
+
+<div class="hint">[ click to play / pause ]</div>
+
+<div id="captions" class="captions"></div>
+
+<audio id="audio">
+  <track id="vtt-track" kind="captions"
+         src="Buildings_that_think_with_wax_and_heat.vtt"
+         default>
+</audio>
+
+<div class="links">
+  <a href="radiative_switch_computation.pdf" target="_blank">Radiative Switch Computation (PDF)</a>
+</div>
+
+<script>
+
+const audio     = document.getElementById("audio");
+const captions  = document.getElementById("captions");
+const scopeWrap = document.getElementById("scope-wrap");
+
+let audioCtx, analyser, buf;
+
+function initAudio(){
+  if(audioCtx) return;
+  audioCtx = new (window.AudioContext||window.webkitAudioContext)();
+  analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 2048;
+  const src  = audioCtx.createMediaElementSource(audio);
+  const gain = audioCtx.createGain();
+  src.connect(analyser);
+  analyser.connect(gain);
+  gain.connect(audioCtx.destination);
+  buf = new Uint8Array(analyser.fftSize);
+}
+
+scopeWrap.addEventListener("click",()=>{
+  initAudio();
+  audioCtx.resume().then(()=>{
+    if(audio.paused){
+      audio.src = "Buildings_that_think_with_wax_and_heat.mp3";
+      audio.load();
+      audio.addEventListener("loadedmetadata", attachTrack, {once:true});
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  });
+});
+
+function attachTrack(){
+  const t = audio.textTracks[0];
+  if(!t) return;
+  t.mode = "hidden";
+  t.oncuechange = ()=>{
+    const cue = t.activeCues[0];
+    captions.textContent = cue ? cue.text : "";
+  };
+}
+
+/* canvas */
+const canvas = document.getElementById("scope");
+const ctx    = canvas.getContext("2d");
+const dpr    = window.devicePixelRatio||1;
+canvas.width  = 330*dpr;
+canvas.height = 330*dpr;
+ctx.setTransform(dpr,0,0,dpr,0,0);
+const W=330, H=330, cx=165, cy=165;
+
+/* state */
+let phase=0, colorPhase=0, eSmooth=0, thermalMem=0;
+const louverStates = new Float32Array(24);
+const hystRings    = [];
+let   lastHystTime = 0;
+
+function variance(b){
+  let m=0;
+  for(let i=0;i<b.length;i++) m+=b[i];
+  m/=b.length;
+  let v=0;
+  for(let i=0;i<b.length;i++){ const d=b[i]-m; v+=d*d; }
+  return v/b.length;
+}
+
+function draw(){
+  requestAnimationFrame(draw);
+
+  if(!analyser){
+    ctx.fillStyle="rgba(0,0,0,0.22)";
+    ctx.fillRect(0,0,W,H);
+    ctx.beginPath();
+    ctx.arc(cx,cy,5+Math.sin(Date.now()*.0007)*2,0,Math.PI*2);
+    ctx.strokeStyle="rgba(0,255,65,.14)";
+    ctx.lineWidth=1; ctx.stroke();
+    return;
+  }
+
+  analyser.getByteTimeDomainData(buf);
+
+  const e  = variance(buf);
+  eSmooth += (e - eSmooth)*0.04;
+  const en = Math.min(eSmooth/5000, 1);
+  thermalMem += (en - thermalMem)*0.006;
+
+  /* phosphor fade */
+  ctx.fillStyle="rgba(0,0,0,0.11)";
+  ctx.fillRect(0,0,W,H);
+
+  const N   = buf.length;
+  const now = Date.now();
+
+  /* ── hysteresis memory rings ── */
+  if(en>.35 && now-lastHystTime>800 && hystRings.length<18){
+    hystRings.push({
+      snap: new Uint8Array(buf),
+      r: 38+Math.random()*80,
+      born: now,
+      life: 12000+Math.random()*8000,
+      lag: Math.floor(N*(.18+Math.random()*.18))&~1
+    });
+    lastHystTime=now;
+  }
+  for(let i=hystRings.length-1;i>=0;i--){
+    const ring=hystRings[i];
+    const age=(now-ring.born)/ring.life;
+    if(age>=1){ hystRings.splice(i,1); continue; }
+    const alpha=.025*(1-age*.8);
+    ctx.beginPath();
+    for(let s=0;s<=72;s++){
+      const a=s/72*Math.PI*2;
+      const idx=Math.floor(s/72*N)&~1;
+      const sv=(ring.snap[idx]-128)/128;
+      const sv2=(ring.snap[(idx+ring.lag)%N]-128)/128;
+      const rr=ring.r+sv*7+sv2*3;
+      if(s===0) ctx.moveTo(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr);
+      else      ctx.lineTo(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr);
+    }
+    ctx.closePath();
+    ctx.strokeStyle=`rgba(0,255,65,${alpha})`;
+    ctx.lineWidth=.6; ctx.stroke();
+  }
+
+  /* ── thermal diffusion rings ── */
+  for(let k=0;k<7;k++){
+    const t2   = k/6;
+    const r    = 20+k*17;
+    const warp = 3+k*2.8+thermalMem*14+en*(k*.6);
+    const lagI = Math.floor(N*(.18+k*.022+thermalMem*.05))&~1;
+    const al   = .028+t2*.048+thermalMem*.035;
+    ctx.beginPath();
+    for(let s=0;s<=96;s++){
+      const a=s/96*Math.PI*2;
+      const idx=Math.floor(s/96*N)&~1;
+      const sv=(buf[idx]-128)/128;
+      const sv2=(buf[(idx+lagI)%N]-128)/128;
+      const rr=r+sv*warp+sv2*warp*.35;
+      if(s===0) ctx.moveTo(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr);
+      else      ctx.lineTo(cx+Math.cos(a)*rr,cy+Math.sin(a)*rr);
+    }
+    ctx.closePath();
+    ctx.strokeStyle=`rgba(0,255,65,${al})`;
+    ctx.lineWidth=k<3?1.2:.8;
+    ctx.shadowBlur=k===6?4:0; ctx.shadowColor="#00ff41";
+    ctx.stroke(); ctx.shadowBlur=0;
+  }
+
+  /* ── wax louver field ── */
+  for(let i=0;i<24;i++){
+    const a=i/24*Math.PI*2;
+    const idx=Math.floor(i/24*N)&~1;
+    const sv=(buf[idx]-128)/128;
+    const target=sv>.06?1:sv<-.06?0:louverStates[i];
+    louverStates[i]+=(target-louverStates[i])*.05;
+    const open=louverStates[i];
+    const rI=108, rO=116+open*10+en*7;
+    ctx.beginPath();
+    ctx.moveTo(cx+Math.cos(a)*rI,cy+Math.sin(a)*rI);
+    ctx.lineTo(cx+Math.cos(a)*rO,cy+Math.sin(a)*rO);
+    ctx.strokeStyle=`rgba(0,255,65,${.06+open*.20+en*.04})`;
+    ctx.lineWidth=2;
+    ctx.shadowBlur=open>.6?5:0; ctx.shadowColor="#00ff41";
+    ctx.stroke(); ctx.shadowBlur=0;
+  }
+
+  /* ── containment lissajous ── */
+  const lagBase=Math.floor(N*(.25+thermalMem*.18+en*.06))&~1;
+  ctx.beginPath();
+  for(let i=0;i<N;i++){
+    const t2=i/N*Math.PI*2;
+    const a=(buf[i]-128)/128;
+    const b=(buf[(i+lagBase)%N]-128)/128;
+    const sh=en*6;
+    const x=Math.sin((3+en*1.5)*t2+phase+Math.sin(t2*5)*sh)*a*92*(1+en*.35);
+    const y=Math.sin((4+en*2  )*t2+Math.cos(t2*4)*sh)      *b*92*(1+en*.35);
+    if(i===0) ctx.moveTo(cx+x,cy+y);
+    else      ctx.lineTo(cx+x,cy+y);
+  }
+  ctx.strokeStyle=`rgb(${Math.sin(colorPhase)*40|0},255,${110+Math.cos(colorPhase)*50|0})`;
+  ctx.lineWidth=1.4+en*.6;
+  ctx.shadowColor="#00ff88";
+  ctx.shadowBlur=12+en*20;
+  ctx.stroke(); ctx.shadowBlur=0;
+
+  /* ── cell-membrane echo ── */
+  const lagEcho=Math.floor(N*(.31+thermalMem*.10))&~1;
+  ctx.beginPath();
+  for(let i=0;i<N;i+=2){
+    const a=(buf[i]-128)/128;
+    const b=(buf[(i+lagEcho)%N]-128)/128;
+    if(i===0) ctx.moveTo(cx+a*102,cy+b*96);
+    else      ctx.lineTo(cx+a*102,cy+b*96);
+  }
+  ctx.strokeStyle=`rgba(0,255,65,${.07+thermalMem*.05})`;
+  ctx.lineWidth=.7; ctx.stroke();
+
+  phase      += 0.009+en*.018;
+  colorPhase += 0.008;
+}
+
+draw();
+
+</script>
+</body>
+</html>
