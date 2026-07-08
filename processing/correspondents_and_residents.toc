@@ -1,0 +1,17 @@
+\contentsline {chapter}{Preface}{i}{}%
+\contentsline {chapter}{\numberline {1}The Backyard Problem}{1}{}%
+\contentsline {chapter}{\numberline {2}Channels, Clocks, and Coupling}{2}{}%
+\contentsline {chapter}{\numberline {3}Suspension Observability and Interruption-Symmetry}{3}{}%
+\contentsline {chapter}{\numberline {4}Symbol-Sampling and Scene-Sampling}{5}{}%
+\contentsline {chapter}{\numberline {5}The Two-Way Silence of the Written Channel}{7}{}%
+\contentsline {chapter}{\numberline {6}Repair, Revision, and the Buffered Draft}{8}{}%
+\contentsline {chapter}{\numberline {7}Continuous Perception and the Knowledge It Forces}{9}{}%
+\contentsline {chapter}{\numberline {8}The Witness-Obligation Theorem}{10}{}%
+\contentsline {chapter}{\numberline {9}Selective Deafness as Liability Management}{12}{}%
+\contentsline {chapter}{\numberline {10}Correspondents and Residents}{13}{}%
+\contentsline {chapter}{\numberline {11}The Robo-Nanny}{14}{}%
+\contentsline {chapter}{\numberline {12}The Profile Society and the No-Repair Channel}{16}{}%
+\contentsline {chapter}{\numberline {13}Source-First Archives and the Economics of Rendering}{17}{}%
+\contentsline {chapter}{\numberline {14}Subvocal and Myoelectric Channels}{18}{}%
+\contentsline {chapter}{\numberline {15}Conclusion: The Format of Record}{19}{}%
+\contentsline {chapter}{Bibliography}{20}{}%

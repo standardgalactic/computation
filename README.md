@@ -1,4 +1,15 @@
-# Xylomorphic Infrastructure
+[Against the Kitchen Sink](https://standardgalactic.github.io/computation/against_the_kitchen_sink.pdf)
+
+[Collapse Retention](https://standardgalactic.github.io/computation/collapse_retention.pdf)
+
+[Continuation Geometry](https://standardgalactic.github.io/computation/continuation_geometry.pdf)
+
+
+[Correspondents and Residents](https://standardgalactic.github.io/computation/correspondents_and_residents.pdf) — *Incomplete*
+
+
+[Histories Become Operators](https://standardgalactic.github.io/computation/histories-become-operators.pdf)
+
 
 [Computation as Containment](https://github.com/standardgalactic/computation/blob/main/radiative-switch/README.md) — *Radiative Switch Computation*
 
