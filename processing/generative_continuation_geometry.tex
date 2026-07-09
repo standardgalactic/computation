@@ -1,0 +1,2537 @@
+\documentclass[11pt]{report}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black}
+
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+\newtheorem{openproblem}{Open Problem}[chapter]
+
+\title{\textbf{Generative Continuation Geometry}}
+\author{Flyxion}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Continuation Attractors}
+
+A fern frond is not drawn leaf by leaf. Look closely at one pinna and
+it is, near enough, a smaller fern; look closer still at one pinnule
+of that pinna and it is, near enough, a smaller fern again. Nobody
+specified the shape of the whole plant directly. A small number of
+growth rules, applied to their own output over and over, produced
+something with more detail than any of the rules themselves contain.
+The shape is not stored anywhere. It is generated.
+
+\emph{Continuation Geometry} spent its length measuring futures:
+how much room a state has, how far apart two states' futures sit, when
+a distinction between futures collapses to nothing. All of that took
+the space of futures as given, something to be measured once it
+already existed. This book asks a different question. Can a space of
+futures itself be grown, the way the fern is grown, from a small
+number of simple moves applied to their own output? If continuation
+spaces can be generated rather than merely measured, the natural unit
+of study stops being the space and becomes the small set of
+operations that built it.
+
+This opening chapter answers that question in the one case where the
+answer is already, in a precise sense, classical. It is not a new
+theorem. It is an old and beautiful one, due to Hutchinson, applied
+here to the specific metric geometry the first book already built. The
+payoff is that self-similar continuation structures, the kind
+suggested by a duck, a crown, and a leaf all arising from the same
+underlying rule, turn out to rest on exactly the Hausdorff-distance
+machinery already in hand, with nothing new invented and nothing
+smuggled in from outside.
+
+\section*{Preliminaries: expansion is not generation}
+
+Two facts from \emph{Continuation Geometry} are worth restating here,
+briefly and as what they actually are: lemmas, not theorems, and
+useful precisely because they show what generation is \emph{not}.
+
+\begin{lemma}[Reachable expansion]
+For $S_t \subseteq X$ and $\mathrm{Adj}(S_t) := \bigcup_{x \in S_t} \Phi(x)$
+under a one-step reachability map $\Phi$, the sequence
+$S_{t+1} := S_t \cup \mathrm{Adj}(S_t)$ satisfies $S_t \subseteq S_{t+1}$
+for every $t$.
+\end{lemma}
+\begin{proof}
+Immediate: $S_t \subseteq S_t \cup \mathrm{Adj}(S_t) = S_{t+1}$ by
+definition of union.
+\end{proof}
+
+\begin{remark}
+This, together with the reachable-set recursion proved by induction
+in \emph{Continuation Geometry} (Kauffman's adjacent possible as an
+instance of finite-horizon reachability), is the full content of what
+that book called generation, and it is worth being honest that it
+earns the name only loosely. The sequence $S_0, S_1, S_2, \dots$ grows
+monotonically and without bound unless the underlying space is
+finite; nothing about it converges, and nothing about it is
+self-similar. It is accumulation, not generation in the sense the
+fern illustrates. What follows is different in kind: rather than a
+sequence of ever-larger unions, it is a fixed operator applied
+repeatedly to itself, and the interesting behavior is not growth but
+convergence to a shape that reproduces its own generating rule.
+\end{remark}
+
+\section*{The space of shapes}
+
+Fix $X = \mathbb{R}^n$ (or any complete metric space) and let
+$\mathcal{K}(X)$ denote the set of nonempty compact subsets of $X$,
+equipped with the Hausdorff distance $d_H$ of Chapter 6 of
+\emph{Continuation Geometry}.
+
+\begin{theorem}[Completeness of the space of shapes]
+\label{thm:complete}
+If $(X,d)$ is complete, then $(\mathcal{K}(X), d_H)$ is complete.
+\end{theorem}
+\begin{proof}[Proof sketch]
+Given a Cauchy sequence $\{A_n\}$ in $(\mathcal{K}(X), d_H)$, define
+$A := \bigcap_{N \geq 1} \overline{\bigcup_{n \geq N} A_n}$. One shows,
+using completeness of $X$ and the Cauchy property of $\{A_n\}$ in
+$d_H$, that $A$ is nonempty and compact, and that $d_H(A_n, A) \to 0$.
+This is a standard but genuinely technical result in its full form,
+requiring care with total boundedness and a diagonal argument to
+extract convergent selections from each $A_n$; the complete argument
+is given in \cite{falconer2003} and \cite{barnsley1988} and is not
+reproduced in full here.
+\end{proof}
+
+\begin{remark}
+This theorem is doing real work that is easy to take for granted.
+Without it, nothing built on top of $(\mathcal{K}(X), d_H)$ would be
+guaranteed to have a limit at all; a sequence of shapes could get
+closer and closer together, in the sense of Hausdorff distance,
+without converging to any actual shape. That this cannot happen, that
+the space of compact reachable sets is itself complete whenever the
+underlying state space is, is the entire reason the construction
+below is guaranteed to produce something rather than merely getting
+closer to nothing in particular.
+\end{remark}
+
+\section*{Contractions and the Hutchinson operator}
+
+\begin{definition}[Contraction]
+$T : X \to X$ is a contraction with constant $c \in [0,1)$ if
+$d(Tx, Ty) \leq c\, d(x,y)$ for all $x, y \in X$.
+\end{definition}
+
+\begin{lemma}[Contractions act contractively on shapes]
+\label{lem:setcontract}
+If $T$ is a contraction on $X$ with constant $c$, then for
+$A, B \in \mathcal{K}(X)$, $d_H(T(A), T(B)) \leq c\, d_H(A,B)$, where
+$T(A) := \{Ta : a \in A\}$.
+\end{lemma}
+\begin{proof}
+Fix $a \in A$. Since $B$ is compact, there is $b \in B$ with
+$d(a,b) = \operatorname{dist}(a,B) \leq d_H(A,B)$. Then
+$d(Ta,Tb) \leq c\, d(a,b) \leq c\, d_H(A,B)$, and since
+$Tb \in T(B)$, $\operatorname{dist}(Ta, T(B)) \leq c\, d_H(A,B)$.
+Taking the supremum over $a \in A$ gives
+$\sup_{a' \in T(A)} \operatorname{dist}(a', T(B)) \leq c\, d_H(A,B)$.
+The symmetric argument, exchanging the roles of $A$ and $B$, gives the
+same bound the other way, so $d_H(T(A),T(B)) \leq c\, d_H(A,B)$.
+\end{proof}
+
+\begin{lemma}[Unions are 1-Lipschitz]
+\label{lem:unionlip}
+For finite collections $\{A_i\}_{i=1}^n$, $\{B_i\}_{i=1}^n$ of nonempty
+compact sets, $d_H\left(\bigcup_i A_i, \bigcup_i B_i\right) \leq
+\max_i d_H(A_i, B_i)$.
+\end{lemma}
+\begin{proof}
+Let $m := \max_i d_H(A_i,B_i)$. For $x \in \bigcup_i A_i$, $x \in A_j$
+for some $j$, so $\operatorname{dist}(x, B_j) \leq d_H(A_j,B_j) \leq m$,
+and since $B_j \subseteq \bigcup_i B_i$,
+$\operatorname{dist}(x, \bigcup_i B_i) \leq \operatorname{dist}(x,B_j) \leq m$.
+Taking the supremum over $x \in \bigcup_i A_i$ gives
+$\sup_{x} \operatorname{dist}(x, \bigcup_i B_i) \leq m$. The symmetric
+argument, exchanging the roles of the two collections, gives the same
+bound the other way, so
+$d_H\left(\bigcup_i A_i, \bigcup_i B_i\right) \leq m$.
+\end{proof}
+
+\begin{definition}[Hutchinson operator]
+Given contractions $T_1, \dots, T_n$ on $X$ with constants
+$c_1, \dots, c_n$, define $\mathcal{H} : \mathcal{K}(X) \to \mathcal{K}(X)$
+by $\mathcal{H}(A) := \bigcup_{i=1}^n T_i(A)$.
+\end{definition}
+
+\begin{proposition}[$\mathcal{H}$ is a contraction on shapes]
+\label{prop:hcontract}
+$d_H(\mathcal{H}(A), \mathcal{H}(B)) \leq c\, d_H(A,B)$ for
+$c := \max_i c_i < 1$.
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:unionlip},
+$d_H(\mathcal{H}(A), \mathcal{H}(B)) = d_H\left(\bigcup_i T_i(A), \bigcup_i T_i(B)\right)
+\leq \max_i d_H(T_i(A), T_i(B))$. By Lemma~\ref{lem:setcontract},
+$d_H(T_i(A), T_i(B)) \leq c_i\, d_H(A,B)$ for each $i$. Hence
+$d_H(\mathcal{H}(A), \mathcal{H}(B)) \leq \max_i c_i\, d_H(A,B) = c\, d_H(A,B)$.
+\end{proof}
+
+\section*{The Continuation Attractor Theorem}
+
+\begin{theorem}[Continuation Attractor Theorem, after Hutchinson]
+\label{thm:attractor}
+Let $T_1, \dots, T_n$ be contractions on a complete metric space $X$
+with constants $c_1, \dots, c_n$, and let $c := \max_i c_i < 1$. Then
+there exists a unique $A^\ast \in \mathcal{K}(X)$ with
+$\mathcal{H}(A^\ast) = A^\ast$, and for any $A_0 \in \mathcal{K}(X)$,
+\[
+d_H\big(\mathcal{H}^k(A_0), A^\ast\big) \leq \frac{c^k}{1-c}\, d_H(A_0, \mathcal{H}(A_0)) \xrightarrow{k \to \infty} 0.
+\]
+\end{theorem}
+\begin{proof}
+By Theorem~\ref{thm:complete}, $(\mathcal{K}(X), d_H)$ is complete. By
+Proposition~\ref{prop:hcontract}, $\mathcal{H}$ is a contraction on
+this complete metric space. The Banach Fixed Point Theorem
+\cite{banach1922} then
+supplies a unique fixed point $A^\ast$ and the stated geometric
+convergence rate, applied directly to $\mathcal{H}$ on
+$(\mathcal{K}(X), d_H)$.
+\end{proof}
+
+\begin{remark}
+No part of this proof required inventing anything: completeness of
+$\mathcal{K}(X)$ is Theorem~\ref{thm:complete}, the contraction
+property of $\mathcal{H}$ is Proposition~\ref{prop:hcontract} built
+from two short lemmas, and the conclusion is the Banach Fixed Point
+Theorem, unmodified. This is the sense in which this chapter is
+mathematically conservative even though its subject, self-similar
+generated shape, sounds exotic: every piece was already sitting in
+the metric structure Chapter 6 of \emph{Continuation Geometry}
+built for an entirely different purpose.
+\end{remark}
+
+\section*{A worked attractor}
+
+\begin{example}[Two refusals]
+Let $X = [0,1]$, and let $T_1(x) := x/3$, $T_2(x) := x/3 + 2/3$, both
+contractions with constant $c = 1/3$. The attractor $A^\ast$ satisfying
+$A^\ast = T_1(A^\ast) \cup T_2(A^\ast)$ is the standard middle-thirds
+Cantor set.
+\end{example}
+
+\begin{remark}
+Read in the vocabulary of continuation, $T_1$ and $T_2$ are the two
+survivors of a repeated refusal: at every stage, whatever occupies the
+middle third of the current set of admissible outcomes is discarded,
+and the remaining two-thirds are each rescaled to stand in for the
+whole. What survives in the limit is neither of the two pieces nor
+their simple union at any finite stage, but the unique shape that
+reproduces itself exactly under the same rule that built it,
+uncountable, nowhere dense, and entirely determined by two contraction
+maps. Whether operators named Collapse or Refuse elsewhere in this
+corpus are literally instances of $T_i$ in this technical sense, maps
+satisfying the contraction inequality on some genuine underlying
+metric, is a claim about those specific constructions and is not
+asserted here; what is established is only that \emph{if} a family of
+continuation-narrowing operators can be shown to be contractions on
+$(\mathcal{K}(X), d_H)$, this theorem applies to them without
+modification.
+\end{remark}
+
+\section*{What this chapter does not yet claim}
+
+This chapter establishes that self-similar continuation structures are
+mathematically available, not that any particular structure this
+corpus has described informally is an instance of one. Two gaps in
+particular are worth naming rather than leaving implicit. First,
+nothing here says which operators arising from an actual continuation
+problem, as opposed to a hand-picked pair of affine maps on $[0,1]$,
+are genuinely contractions on a genuine metric; that has to be checked
+case by case, the way it would for any application of a fixed-point
+theorem. Second, and more speculatively, the question of whether a
+small, fixed family of primitive operators could generate \emph{every}
+admissible continuation geometry to arbitrary Hausdorff-distance
+accuracy, a continuation-geometric analogue of universal approximation,
+is not addressed by this theorem and is not claimed here. It is a
+genuine open question, and answering it is a natural place for this
+book to go next, once the machinery in the chapters between here and
+there, quotient maps and operator composition among them, has been
+built on equally solid ground.
+
+\chapter{Continuation Quotients}
+
+Two rivers can rise on opposite sides of a mountain range, cross
+entirely different terrain, pass through valleys that share nothing
+in common, and still arrive at the same confluence and become, from
+that point on, one river. Everything about their separate histories,
+which rocks each one wore smooth, which tributaries fed it, how long
+each took to descend, becomes irrelevant downstream of the merge. A
+boat launched below the confluence cannot tell which branch its water
+came from. Not because the information was hidden. Because it no
+longer makes a difference to anything the boat will experience from
+here on.
+
+The previous chapter showed that a continuation space can be grown
+from a small number of generating operators. The natural next
+question is what happens when two different generating histories,
+different sequences of operators, different starting points, produce
+the same continuation space at the end. When does that happen, and
+what, if anything, does it mean? The temptation is to reach
+immediately for language like information loss or memory collapse,
+language already used loosely elsewhere in this corpus. This chapter
+resists that temptation on purpose. It defines the relevant object
+first, proves what can be proved about it without reference to any
+interpretation, and only afterward asks what, if anything, has been
+lost.
+
+\section*{The continuation quotient}
+
+\begin{definition}[Continuation quotient]
+Let $H$ be a set of histories and let $\Gamma : H \to \mathcal{K}(X)$
+assign to each history its continuation space (or, following Chapter 6
+of \emph{Continuation Geometry}, its finite-horizon reachable set
+$R_T$ for a fixed horizon $T$). Define $h_1 \sim_\Gamma h_2$ iff
+$\Gamma(h_1) = \Gamma(h_2)$. This is an equivalence relation
+(reflexivity, symmetry, and transitivity all following immediately
+from equality of sets), and the continuation quotient is
+$H/{\sim_\Gamma}$, with quotient map $q : H \to H/{\sim_\Gamma}$
+sending $h$ to its equivalence class $[h]$.
+\end{definition}
+
+Nothing has been said yet about distinctions, memory, or loss. This is
+deliberate: the object exists, and has structure, independently of any
+of those interpretations.
+
+\begin{proposition}[Well-defined continuation projection]
+\label{prop:universal}
+There exists a unique map $\bar\Gamma : H/{\sim_\Gamma} \to \mathcal{K}(X)$
+such that $\Gamma = \bar\Gamma \circ q$.
+\end{proposition}
+\begin{proof}
+Define $\bar\Gamma([h]) := \Gamma(h)$. This is well-defined: if
+$[h_1] = [h_2]$, then $h_1 \sim_\Gamma h_2$, so
+$\Gamma(h_1) = \Gamma(h_2)$ by definition of $\sim_\Gamma$, so the
+value assigned to $[h_1] = [h_2]$ does not depend on which
+representative was chosen. By construction,
+$\bar\Gamma(q(h)) = \bar\Gamma([h]) = \Gamma(h)$ for every $h \in H$,
+so $\Gamma = \bar\Gamma \circ q$. For uniqueness, suppose
+$\bar\Gamma'$ also satisfies $\Gamma = \bar\Gamma' \circ q$. Since $q$
+is surjective, every element of $H/{\sim_\Gamma}$ is $q(h)$ for some
+$h$, and $\bar\Gamma'(q(h)) = \Gamma(h) = \bar\Gamma(q(h))$ for every
+such $h$, so $\bar\Gamma' = \bar\Gamma$.
+\end{proof}
+
+\begin{remark}
+This is routine, and it is worth saying plainly that it is routine:
+it is the universal property of a quotient set, applied to nothing
+more exotic than the map $\Gamma$ itself. What makes it worth stating
+is not its difficulty but what it licenses: from here on,
+$\bar\Gamma$ is a genuine function on the quotient, not merely a
+suggestive notation, and anything proved about $\bar\Gamma$ is a fact
+about the quotient set itself, not about any particular history used
+to reach a point in it.
+\end{remark}
+
+\section*{A structural lemma}
+
+The worked example below relies on the following fact about
+time-homogeneous, deterministic-image dynamics, worth isolating here.
+
+\begin{lemma}[One-step agreement propagates]
+\label{lem:propagate}
+Suppose $R_1(x) = R_1(y)$ for states $x, y$ under a time-homogeneous
+reachability map. Then $R_T(x) = R_T(y)$ for every $T \geq 1$.
+\end{lemma}
+\begin{proof}
+By induction on $T$. The case $T=1$ is the hypothesis. Suppose
+$R_T(x) = R_T(y)$. Since the dynamics are time-homogeneous,
+$R_{T+1}(x) = \bigcup_{z \in R_T(x)} R_1(z)$ and likewise for $y$; since
+$R_T(x) = R_T(y)$, these unions range over the same set of states $z$,
+so $R_{T+1}(x) = R_{T+1}(y)$.
+\end{proof}
+
+\begin{remark}
+This is the precise sense in which a collision, once it happens, is
+permanent under time-homogeneous dynamics: two states whose immediate
+futures coincide exactly will have every subsequent future coincide
+as well, since there is nothing left in either state's future to
+distinguish it from the other's.
+\end{remark}
+
+\section*{Quotient invariants}
+
+\begin{proposition}[Quotient invariance]
+\label{prop:invariance}
+Let $F : \mathcal{K}(X) \to Y$ be any function. Then
+$F \circ \Gamma : H \to Y$ factors through $q$: there is a unique
+$\bar{F} : H/{\sim_\Gamma} \to Y$ with $F \circ \Gamma = \bar{F} \circ q$.
+\end{proposition}
+\begin{proof}
+$F \circ \Gamma : H \to Y$ satisfies $(F \circ \Gamma)(h_1) = (F \circ \Gamma)(h_2)$
+whenever $h_1 \sim_\Gamma h_2$, since $\Gamma(h_1) = \Gamma(h_2)$ by
+definition of $\sim_\Gamma$ and $F$ is a function, hence single-valued.
+Apply Proposition~\ref{prop:universal} with $F \circ \Gamma$ in place
+of $\Gamma$ to obtain the factorization.
+\end{proof}
+
+\begin{corollary}
+Continuation volume $\operatorname{Vol}_T$, the distinction margin
+$A_{\mathcal D}^T$ relative to any fixed reference distinction, and
+boundary proximity $\delta$, all defined in \emph{Continuation
+Geometry} as functions of a reachable set or of a state's position
+relative to one, descend to well-defined functions on
+$H/{\sim_\Gamma}$.
+\end{corollary}
+\begin{proof}
+Each is of the form $F(\Gamma(h))$ or $F(R_T(x(h)))$ for a function
+$F$ depending only on the reachable set itself (Lebesgue measure of
+the set, Hausdorff distance to another fixed set, ambient distance
+from a fixed reference set), so Proposition~\ref{prop:invariance}
+applies directly to each.
+\end{proof}
+
+\begin{remark}
+This is a broader statement than it might first appear. It says that
+any quantity this book or its predecessor has defined, or will define,
+purely in terms of a reachable set, without reference to which
+history produced that set, is automatically constant on
+$\sim_\Gamma$-equivalence classes, with no further argument required
+each time a new such quantity is introduced. The work of checking
+invariance, done once here, does not need to be redone for every
+future functional built the same way.
+\end{remark}
+
+\section*{Finite checkability}
+
+Lemma~\ref{lem:propagate} shows that equal one-step images propagate
+forward forever. It says nothing about the converse: two states whose
+one-step images differ can still coincide at some later horizon.
+Nothing in this chapter has claimed otherwise, and the general
+question, whether continuation equivalence at every horizon can still
+be checked in finitely many steps despite this, deserves a correct
+answer rather than an implied one.
+
+\begin{proposition}[Eventual periodicity bounds the check]
+\label{prop:periodicity}
+If $X$ is finite, then for any $x, y \in X$ the paired sequence
+$\big(R_1(x),R_1(y)\big), \big(R_2(x),R_2(y)\big), \dots$ is eventually
+periodic, with both the pre-period and the period bounded by
+$4^{|X|}$. Consequently, whether $R_T(x) = R_T(y)$ holds for all
+sufficiently large $T$ can be determined by comparing $R_T(x)$ and
+$R_T(y)$ for $T$ ranging only up to $2 \cdot 4^{|X|}$.
+\end{proposition}
+\begin{proof}
+Each pair $\big(R_T(x), R_T(y)\big)$ is an element of $2^X \times 2^X$,
+which has $4^{|X|}$ elements, so the paired sequence takes at most
+$4^{|X|}$ distinct values; among its first $4^{|X|}+1$ terms, two must
+coincide by pigeonhole, $\big(R_p(x),R_p(y)\big) =
+\big(R_q(x),R_q(y)\big)$ for some $1 \leq p < q \leq 4^{|X|}+1$.
+Time-homogeneity means $R_{T+1} = \Psi(R_T)$ for the fixed map
+$\Psi(S) := \bigcup_{z \in S} \Phi(z)$, applied identically to the $x$
+and $y$ components, so equality of the pair at $p$ and $q$ propagates:
+$\big(R_{p+j}(x), R_{p+j}(y)\big) = \big(\Psi^j(R_p(x)), \Psi^j(R_p(y))\big)
+= \big(\Psi^j(R_q(x)), \Psi^j(R_q(y))\big) = \big(R_{q+j}(x), R_{q+j}(y)\big)$
+for every $j \geq 0$: the \emph{paired} sequence is periodic with
+period dividing $q - p \leq 4^{|X|}$ from index $p \leq 4^{|X|}$
+onward. Comparing the pair over one further full period, at most
+$4^{|X|}$ more steps beyond the pre-period bound, settles whether $x$
+and $y$ agree from that point on.
+\end{proof}
+
+\begin{remark}
+Bounding each sequence's own period separately and then comparing
+them over a single shared window is not sufficient on its own: two
+sequences with different individual periods $p_x, p_y$ need not
+realign within $\max(p_x,p_y)$ steps, only within
+$\operatorname{lcm}(p_x,p_y)$ steps, which can exceed either period
+substantially. Working with the pair from the start avoids this,
+since the pair's own period already accounts for however the two
+component periods interact.
+\end{remark}
+
+\begin{remark}
+This is the correct version of the claim that continuation
+equivalence is finitely checkable. It is a coarser bound than a sharp
+analysis of any particular system would give, since $2^{|X|}$ is a
+worst case over all possible dynamics on a state space of that size,
+but it is unconditional: no structural assumption on $\Phi$ beyond
+finiteness of $X$ and time-homogeneity is needed. The traffic light
+below reaches its own eventual behavior in four steps, far inside this
+bound, and it is worth seeing exactly how.
+\end{remark}
+
+\section*{The traffic light, revisited}
+
+Recall the traffic light of \emph{Continuation Geometry}, Chapter 10:
+states $(k, r) \in \{0,1,2,3\} \times \{0,1\}$, phase $k$ and pending
+request $r$. To compute $\Gamma$ properly requires treating the
+system's branching explicitly rather than leaving it implicit. Let
+$e \in \{0,1\}$ record whether a new pedestrian request arrives during
+a given step (exogenous, not controlled by the phase). The transition
+is
+\[
+\Phi((k,r), e) = \left( (k+1) \bmod 4,\ r' \right), \qquad
+r' = \begin{cases}
+0 & k+1 \equiv 0 \pmod 4 \text{ (clear on arrival at red)} \\
+1 & k+1 \not\equiv 0 \pmod 4 \text{ and } (r = 1 \text{ or } e = 1) \\
+0 & k+1 \not\equiv 0 \pmod 4 \text{ and } r = 0 \text{ and } e = 0.
+\end{cases}
+\]
+Let $H$ be the set of finite paths of the system, and
+$\Gamma(h) := R_1(x(h))$, the one-step reachable set from the
+endpoint of $h$, ranging over $e \in \{0,1\}$.
+
+\begin{proposition}[Exact computation of the traffic-light quotient at $T=1$]
+\label{prop:tlquotient}
+Under $\sim_\Gamma$, the eight states fall into exactly seven classes:
+the single nontrivial class $\{(3,0),(3,1)\}$, and six singleton
+classes, one for each remaining state.
+\end{proposition}
+\begin{proof}
+Compute $R_1$ for all eight states directly from $\Phi$. For
+$k \neq 3$, arrival is at a nonzero phase and the ordinary branching
+rule applies, $r' = 1$ iff $r=1$ or $e=1$:
+\begin{align*}
+R_1(0,0) &= \{(1,0),(1,1)\}, & R_1(0,1) &= \{(1,1)\}, \\
+R_1(1,0) &= \{(2,0),(2,1)\}, & R_1(1,1) &= \{(2,1)\}, \\
+R_1(2,0) &= \{(3,0),(3,1)\}, & R_1(2,1) &= \{(3,1)\}.
+\end{align*}
+For $k=3$, arrival is at phase $0$, so clearing fires unconditionally
+regardless of $r$ or $e$:
+\[
+R_1(3,0) = \{(0,0)\}, \qquad R_1(3,1) = \{(0,0)\}.
+\]
+Comparing all eight sets directly: the three size-two sets,
+$\{(1,0),(1,1)\}$, $\{(2,0),(2,1)\}$, $\{(3,0),(3,1)\}$, are pairwise
+distinct; the four remaining size-one sets, $\{(1,1)\}$, $\{(2,1)\}$,
+$\{(0,0)\}$ (appearing twice, from $(3,0)$ and $(3,1)$), and
+$\{(0,0)\}$ again, give exactly one coincidence, $R_1(3,0) = R_1(3,1)
+= \{(0,0)\}$, and no other.
+\end{proof}
+
+Now define the mechanical quotient $\sim_M$ independently of
+$\Gamma$, as the identification the design actually performs: the
+clearing rule fires on the transition \emph{into} phase $0$, so it is
+the two states about to make that transition, $(3,0)$ and $(3,1)$,
+that the design treats as interchangeable, both being followed
+unconditionally by $(0,0)$.
+
+\begin{proposition}[The design is exact at $T=1$]
+$\sim_M\ =\ \sim_\Gamma$.
+\end{proposition}
+\begin{proof}
+Both relations have exactly one nontrivial class, $\{(3,0),(3,1)\}$,
+and agree as singletons on every other state: $\sim_M$ by definition
+of the clearing rule, $\sim_\Gamma$ by Proposition~\ref{prop:tlquotient}.
+Two equivalence relations on the same finite set with identical
+partitions are equal.
+\end{proof}
+
+\begin{remark}
+It is worth being precise about which of two similar-sounding designs
+this result actually vindicates. Clearing on arrival at phase $0$
+(the rule above) is exact. A superficially similar alternative,
+clearing whenever the system is currently \emph{at} phase $0$ rather
+than arriving there, would instead identify $(0,0)$ and $(0,1)$. But
+$R_1(0,0) = \{(1,0),(1,1)\} \neq \{(1,1)\} = R_1(0,1)$: a state at the
+red light with no pending request can still branch toward either
+outcome next, while one with a pending request cannot, precisely
+because that request is about to be served. The alternative design
+would merge two states with genuinely different one-step futures,
+exactly the coarser, information-destroying case this chapter opened
+by distinguishing from the exact one. The two designs differ only in
+whether clearing is keyed to the transition or to the state, and only
+one of them is correct.
+\end{remark}
+
+\section*{What one horizon hides}
+
+Restricting Proposition~\ref{prop:tlquotient} to $T=1$ was not a
+simplification; it is what $\Gamma$ was defined to measure. But
+Proposition~\ref{prop:periodicity} guarantees the longer-horizon
+question has a definite, finitely checkable answer, and for this
+system that answer is worth computing directly rather than left as an
+abstract guarantee.
+
+\begin{proposition}[The request bit is eventually redundant everywhere]
+\label{prop:eventual}
+For each phase $k$, the pair $(k,0)$ and $(k,1)$ satisfies
+$R_T(k,0) = R_T(k,1)$ for all $T \geq 4 - k$, and not before.
+\end{proposition}
+\begin{proof}[Proof by direct computation]
+Compute $R_T(k,0)$ and $R_T(k,1)$ for $T = 0, \dots, 4-k$ at each
+phase directly from $\Psi$, rather than inferring later horizons from
+earlier ones: a size mismatch at one horizon does not, on its own,
+preclude equality reappearing or vanishing at a different horizon, so
+each phase's first point of equality is verified independently here
+rather than propagated.
+
+For $k=3$: $R_0(3,0) = \{(3,0)\} \neq \{(3,1)\} = R_0(3,1)$;
+$R_1(3,0) = R_1(3,1) = \{(0,0)\}$ (Proposition~\ref{prop:tlquotient}).
+First equality at $T=1=4-3$.
+
+For $k=2$: $R_0(2,0) = \{(2,0)\} \neq \{(2,1)\} = R_0(2,1)$;
+$R_1(2,0) = \{(3,0),(3,1)\} \neq \{(3,1)\} = R_1(2,1)$ (both sets
+computed directly from $\Phi$, not equal since one has two elements
+and the other one); $R_2(2,0) = \Psi(\{(3,0),(3,1)\}) = \{(0,0)\} =
+\Psi(\{(3,1)\}) = R_2(2,1)$. First equality at $T=2=4-2$.
+
+For $k=1$: $R_0, R_1$ inequality follows the same way (cardinality
+$2$ versus $1$ at $T=1$, distinct singletons at $T=0$); $R_2(1,0) =
+\{(3,0),(3,1)\} \neq \{(3,1)\} = R_2(1,1)$, still unequal;
+$R_3(1,0) = \Psi(\{(3,0),(3,1)\}) = \{(0,0)\} = \Psi(\{(3,1)\}) =
+R_3(1,1)$. First equality at $T=3=4-1$.
+
+For $k=0$: $R_0(0,0) = \{(0,0)\} \neq \{(0,1)\} = R_0(0,1)$, distinct
+singletons; $R_1, R_2, R_3$ each pit a two-element set against a
+one-element set, as computed directly from $\Phi$ at each step, so
+none of the three can coincide; $R_4(0,0) = \{(0,0)\} = R_4(0,1)$.
+First equality at $T=4=4-0$.
+
+In every case the inequality at each horizon strictly before $4-k$
+was checked directly from the explicit sets, not inferred from the
+inequality at a different horizon.
+\end{proof}
+
+\begin{remark}
+This is the sharper and more interesting fact the single-horizon
+result was hiding. The request bit is not redundant in general; it is
+redundant \emph{by a deadline}, and that deadline is exactly the
+number of steps remaining until the light is guaranteed to cycle
+through its clearing transition, four steps for a state that has just
+left it, one step for a state about to enter it. Every state's
+request bit stops mattering to its continuation space at precisely
+the moment continuation stops being able to tell whether that request
+will still be pending when clearing finally arrives, and not one step
+before. The design clears the bit at the earliest possible moment,
+$T=1$ after arrival, which is also the latest moment at which failing
+to clear it would still have been observably wrong; every other
+phase's bit becomes redundant on its own, without any design
+intervention, simply because the light's own periodicity eventually
+answers the question the bit was tracking.
+\end{remark}
+
+\section*{What quotients do not yet explain}
+
+This chapter has shown when two histories are interchangeable from
+the standpoint of every quantity built purely from continuation
+spaces, and it has shown, in one worked case, that a designed
+identification can be checked against that standard exactly rather
+than merely defended by intuition. It has not yet said anything about
+what is lost when a quotient is coarser than $\sim_\Gamma$, only that
+the traffic light's particular quotient happens not to be. The next
+chapter takes up the coarser case directly: not whether information is
+destroyed, which this chapter's machinery can already detect, but how
+much, and by what measure.
+
+\chapter{Distinction Loss Under Quotients}
+
+A library catalog entry is a quotient of a book: title, author, and a
+handful of subject headings standing in for everything between the
+covers. A good catalog loses nothing a patron actually needs in order
+to decide whether to pull the book from the shelf. A bad one can lose
+quite a lot; a catalog that records only ``fiction'' or
+``nonfiction'' will happily file a memoir next to a novel and a field
+guide next to a textbook, and a patron relying on that heading alone
+has no way to tell them apart until the book is already in hand. The
+catalog entry is not wrong, exactly; it simply was not built to
+preserve the distinctions this particular patron cares about.
+
+The previous chapter showed how to check whether a given
+identification of histories is exact: whether it merges only
+histories whose continuation spaces already coincide, or whether it
+merges some that do not. That check was binary, exact or not. This
+chapter asks the sharper question a librarian actually has to answer.
+When an identification is not exact, how much is lost, and where
+exactly does the loss occur? The traffic light's badly designed
+alternative from the previous chapter turns out to have a precise
+answer, not just a qualitative one.
+
+\section*{Fibers and their content}
+
+\begin{definition}[Fiber, $\Gamma$-content, loss]
+For a quotient $q : H \to O$ and $o \in O$, the fiber over $o$ is
+$q^{-1}(o) \subseteq H$. Its $\Gamma$-content is
+$C_\Gamma(o) := \{\Gamma(h) : h \in q^{-1}(o)\}$, the set of distinct
+continuation spaces appearing in the fiber. The loss at $o$ is
+\[
+\mathcal{L}(o) := \log |C_\Gamma(o)|,
+\]
+so $\mathcal{L}(o) = 0$ exactly when every history mapping to $o$
+under $q$ shares a single continuation space.
+\end{definition}
+
+\begin{proposition}[Zero loss characterizes $\Gamma$-respecting quotients]
+\label{prop:zeroloss}
+$\mathcal{L}(o) = 0$ for every $o \in O$ if and only if $q$ refines
+$\sim_\Gamma$: $h_1 \sim_q h_2 \implies h_1 \sim_\Gamma h_2$.
+\end{proposition}
+\begin{proof}
+If $q$ refines $\sim_\Gamma$, then $h_1 \sim_q h_2$ implies
+$\Gamma(h_1) = \Gamma(h_2)$, so every fiber of $q$ lies inside a
+single $\sim_\Gamma$-class and has $|C_\Gamma(o)| = 1$, giving
+$\mathcal{L}(o) = 0$. Conversely, if $\mathcal{L}(o) = 0$ for every
+$o$, then every fiber has $|C_\Gamma(o)| = 1$, so any two histories in
+the same fiber share the same $\Gamma$-value: $h_1 \sim_q h_2 \implies
+\Gamma(h_1) = \Gamma(h_2) \implies h_1 \sim_\Gamma h_2$, so $q$
+refines $\sim_\Gamma$.
+\end{proof}
+
+\section*{The coarsest lossless quotient}
+
+\begin{theorem}[$\sim_\Gamma$ is the coarsest zero-loss quotient]
+\label{thm:coarsest}
+Every zero-loss quotient $q : H \to O$ refines $\sim_\Gamma$, and
+$\sim_\Gamma$ itself has zero loss everywhere. Consequently
+$\sim_\Gamma$ is, up to relabeling of $O$, the unique coarsest
+quotient of $H$ with zero loss.
+\end{theorem}
+\begin{proof}
+The first claim is Proposition~\ref{prop:zeroloss}. That
+$\sim_\Gamma$ itself has zero loss is immediate: by definition,
+$h_1 \sim_\Gamma h_2$ already means $\Gamma(h_1) = \Gamma(h_2)$, so
+every $\sim_\Gamma$-class has exactly one $\Gamma$-value. Since every
+zero-loss $q$ refines $\sim_\Gamma$, no zero-loss quotient can be
+strictly coarser than $\sim_\Gamma$, and $\sim_\Gamma$ achieves zero
+loss, so it is the coarsest one.
+\end{proof}
+
+\begin{remark}
+This is the quotient-theoretic form of a fact Chapter 5 of
+\emph{Continuation Geometry} established for sufficient statistics
+without this vocabulary. A sufficient statistic $\varphi$ there was
+required to satisfy $\varphi(H_t) = \varphi(H_t') \implies
+\Gamma(x_t \mid H_t) = \Gamma(x_t \mid H_t')$, which is exactly the
+condition that the quotient induced by $\varphi$ refines
+$\sim_\Gamma$. Theorem~\ref{thm:coarsest} says $\sim_\Gamma$ itself is
+the coarsest possible sufficient statistic: the most compressed
+summary of a history that still loses nothing continuation-relevant.
+Any coarser summary is not merely less detailed; by
+Proposition~\ref{prop:zeroloss}, it has strictly positive loss
+somewhere.
+\end{remark}
+
+\begin{proposition}[Coarsening never decreases loss]
+\label{prop:monotone-ch3}
+If $q'$ refines $q$ (every $q'$-fiber is contained in some $q$-fiber),
+then for every $q$-fiber $q^{-1}(o)$, expressed as a union of
+$q'$-fibers $q'^{-1}(o'_1), \dots, q'^{-1}(o'_k)$,
+\[
+\mathcal{L}_q(o) \geq \max_i \mathcal{L}_{q'}(o'_i).
+\]
+\end{proposition}
+\begin{proof}
+$C_\Gamma(o) = \bigcup_i C_{\Gamma}(o'_i)$, since the $\Gamma$-values
+appearing in $q^{-1}(o)$ are exactly those appearing in its
+constituent $q'$-fibers. A union of sets is at least as large as any
+one of them, so $|C_\Gamma(o)| \geq |C_\Gamma(o'_i)|$ for each $i$,
+and $\log$ is monotone increasing.
+\end{proof}
+
+\begin{remark}
+Merging two fibers can only add to the set of continuation spaces an
+observer sees when looking at the merged fiber; it can never remove
+one. This is the precise sense in which coarsening a quotient is a
+one-way trip toward loss: refining a lossy quotient can repair the
+loss, by splitting a mixed fiber back into pieces that each see only
+one $\Gamma$-value, but no further coarsening of an already-lossy
+quotient can undo the damage, only add to it or leave it unchanged.
+\end{remark}
+
+\section*{Distinction margin as a local loss detector}
+
+\begin{proposition}[Vanishing margin detects a redundant distinction]
+For a distinction $\mathcal{D}$ and $x \in K$, $A_{\mathcal D}^T(x) = 0$
+(Chapter 7 of \emph{Continuation Geometry}) if and only if some $y$
+outside $x$'s $\mathcal{D}$-cell satisfies $R_T(x) = R_T(y)$: that is,
+$\mathcal{D}$ places $x$ and $y$ in different cells even though their
+continuation spaces coincide at horizon $T$. Vanishing margin is a
+diagnostic for $\mathcal{D}$ being \emph{finer} than $\sim_\Gamma$ at
+$x$, drawing a distinction continuation geometry does not support, not
+for $\mathcal{D}$ being coarser.
+\end{proposition}
+\begin{proof}
+Recall $A_{\mathcal D}^T(x) := \inf_{y \notin D(x)} d_H(R_T(x), R_T(y))$.
+This infimum is $0$ exactly when some $y$ outside $x$'s
+$\mathcal{D}$-cell has $R_T(x) = R_T(y)$ (attained, under the
+compactness hypothesis already used in Chapter 7), which is exactly
+the statement that $x$ and that $y$ share a $\Gamma$-value at horizon
+$T$ despite $\mathcal D$ having placed them in different cells: they
+are $\sim_\Gamma$-equivalent even though $\mathcal D$ distinguishes
+them. This is over-refinement, not collapse.
+\end{proof}
+
+\begin{definition}[Within-cell spread]
+For a $\mathcal{D}$-cell $D$, $\operatorname{diam}_\Gamma(D) :=
+\sup_{x,y \in D} d_H(R_T(x), R_T(y))$.
+\end{definition}
+
+\begin{proposition}[Zero spread is the actual collapse-safety detector]
+\label{prop:diamzero}
+$\operatorname{diam}_\Gamma(D) = 0$ if and only if $D$ is contained in
+a single $\sim_\Gamma$-class at horizon $T$, i.e.\ $\mathcal{D}$
+introduces no loss in the sense of the fiber-loss definition earlier
+in this chapter, applied to $D$ as a fiber.
+\end{proposition}
+\begin{proof}
+$\operatorname{diam}_\Gamma(D) = 0$ means $d_H(R_T(x),R_T(y)) = 0$ for
+every $x,y \in D$, i.e.\ $R_T(x) = R_T(y)$ for every pair in $D$, i.e.\
+$D$ lies inside one $\sim_\Gamma$-class; this is exactly
+$|C_\Gamma(D)| = 1$ from the definition of fiber loss, i.e.\
+$\mathcal{L}(D) = 0$.
+\end{proof}
+
+
+\begin{remark}
+This gives the distinction margin of the first book a second reading,
+and a corrective one. It was introduced there as a measure of how
+close a state sits to losing a distinction, language that invites
+exactly the confusion the propositions above are meant to head off.
+$A_{\mathcal D}^T(x) = 0$ is not a report of quotient loss; it is a
+report that $\mathcal{D}$ is drawing a line continuation geometry
+does not, distinguishing two states with identical futures. Quotient
+loss, in the sense the rest of this chapter measures it, is instead
+the province of $\operatorname{diam}_\Gamma$: a cell $D$ with
+$\operatorname{diam}_\Gamma(D) > 0$ is the one actually merging states
+with different futures, the failure mode Chapter 3 of this book was
+built to quantify. The two diagnostics point in opposite directions,
+over-refinement and under-refinement, and a single distinction
+$\mathcal{D}$ can exhibit either, both, or neither, independently at
+different points of $K$.
+\end{remark}
+
+\section*{The traffic light, quantified}
+
+Return to the two designs compared in the previous chapter: the
+correct one, clearing on arrival at phase $0$, and the alternative,
+clearing whenever currently at phase $0$.
+
+\begin{example}[Zero loss, and one bit]
+The correct design's quotient is $\sim_\Gamma$ itself (Proposition~4
+of the previous chapter), so by Theorem~\ref{thm:coarsest} its loss is
+$\mathcal{L}(o) = 0$ at every fiber $o$. The alternative design merges
+$(0,0)$ and $(0,1)$ into a single fiber $o_{\mathrm{bad}}$. Their
+$\Gamma$-values at $T=1$ are $R_1(0,0) = \{(1,0),(1,1)\}$ and
+$R_1(0,1) = \{(1,1)\}$, which are distinct, so
+$C_\Gamma(o_{\mathrm{bad}}) = \{\{(1,0),(1,1)\},\ \{(1,1)\}\}$, a set
+of size $2$, giving
+\[
+\mathcal{L}(o_{\mathrm{bad}}) = \log 2,
+\]
+exactly one bit, and $\mathcal{L}(o) = 0$ at every other fiber, since
+the alternative design agrees with the correct one everywhere except
+at this single merge.
+\end{example}
+
+\begin{remark}
+This is what the previous chapter's qualitative verdict, that the
+alternative design was coarser and information-destroying, actually
+amounts to once measured: not a diffuse degradation spread across the
+whole system, but a single, exactly located bit of loss, sitting at
+precisely the fiber where the alternative design merged two states
+that a patron of this particular library, a controller trying to
+plan four steps ahead, would still have wanted to tell apart. Every
+other fiber of the alternative design is, by coincidence or by the
+limited scope of its one design error, exactly as good as the correct
+one.
+\end{remark}
+
+\section*{What loss does not yet explain}
+
+This chapter can say, precisely, how much is lost by a given
+quotient and exactly where. It has nothing to say about why a
+particular coarser quotient might be chosen anyway, in full knowledge
+of the loss it incurs. A designer might prefer a one-bit-lossy
+traffic light if the saved bit of memory matters more than the
+distinction it would have preserved; a librarian might prefer the
+cheap two-category catalog if most patrons never need the finer one.
+Measuring loss and deciding whether a loss is worth paying for are
+different questions, and this chapter has only ever answered the
+first of them.
+
+\chapter{Continuation Operators}
+
+The first three chapters of this book have all, in their own way, been
+about nouns: a shape a system of contractions converges to, a
+partition of histories that share a future, a number measuring what a
+partition throws away. None of them named the verb. A contraction
+does something to a shape. A design decision, clearing a bit on
+arrival at a red light rather than while sitting at one, does
+something to a history. This chapter is about the doing: what counts
+as a legitimate move in this framework, and what survives when two
+different moves are composed into one.
+
+The two kinds of move already used in this book look, on the surface,
+like opposites. Chapter 1's contractions built detail up, each
+application adding a smaller, self-similar copy of the whole. Chapters
+2 and 3's quotients tore detail down, collapsing histories that had
+become, for every purpose this book has formalized, the same. It
+would be a missed opportunity to leave them looking like two
+unrelated tools. They are both instances of one idea, and this
+chapter's job is to say what that idea is.
+
+\section*{Operators and their composition}
+
+\begin{definition}[Continuation operator]
+A continuation operator on $X$ is a Lipschitz map
+$T : \mathcal{K}(X) \to \mathcal{K}(X)$: there is a constant
+$L \geq 0$ with $d_H(T(A), T(B)) \leq L\, d_H(A,B)$ for all
+$A, B \in \mathcal{K}(X)$. Write $L(T)$ for the smallest such constant.
+\end{definition}
+
+\begin{proposition}[Closure under composition]
+\label{prop:closure}
+If $T_1, T_2$ are continuation operators, so is $T_2 \circ T_1$, with
+$L(T_2 \circ T_1) \leq L(T_2)\, L(T_1)$.
+\end{proposition}
+\begin{proof}
+$d_H(T_2(T_1(A)), T_2(T_1(B))) \leq L(T_2)\, d_H(T_1(A), T_1(B)) \leq
+L(T_2)\, L(T_1)\, d_H(A,B)$.
+\end{proof}
+
+\begin{remark}
+This proof is one line because it has to be; the definition was
+chosen precisely so that composition would cost nothing further to
+verify. What makes the definition worth having is not this
+proposition but what it is a common home for. The contractions of
+Chapter 1 are continuation operators with $L(T) < 1$. The map
+$\Psi(A) := \bigcup_{z \in A} \Phi(z)$ used throughout Chapters 2 and
+3 to advance a reachable set by one step is a continuation operator
+too, generally with $L(\Psi) \geq 1$: it need not contract, but it is
+still Lipschitz whenever the underlying one-step map $\Phi$ is well
+behaved. Both belong to the same category. What distinguishes a
+generative operator from a reductive one is not the definition above;
+it is what happens under repeated composition, contraction toward a
+single attractor in one case, and, as the next section makes precise,
+collapse of distinctions in the other.
+\end{remark}
+
+\section*{Operators on histories, and what they respect}
+
+The operators above act on shapes directly. A different and equally
+natural kind of operator acts on histories: appending one more real
+transition, editing a codebase, applying a repair. The interesting
+question for an operator of this kind is not its Lipschitz constant
+but whether it interacts predictably with $\sim_\Gamma$.
+
+\begin{definition}[$\Gamma$-compatible operator]
+$T : H \to H$ is $\Gamma$-compatible if there is a map
+$\hat{T} : \mathcal{K}(X) \to \mathcal{K}(X)$ with
+$\Gamma(T(h)) = \hat{T}(\Gamma(h))$ for every $h \in H$: the
+continuation space of the transformed history depends on the original
+history only through its continuation space, not otherwise.
+\end{definition}
+
+\begin{proposition}[$\Gamma$-compatible operators descend to the quotient]
+\label{prop:descend}
+If $T$ is $\Gamma$-compatible, then $h_1 \sim_\Gamma h_2 \implies
+T(h_1) \sim_\Gamma T(h_2)$: $T$ induces a well-defined map
+$\bar{T} : H/{\sim_\Gamma} \to H/{\sim_\Gamma}$.
+\end{proposition}
+\begin{proof}
+This is Proposition~4 of the previous chapter (quotient invariance),
+applied to $F := \hat{T} \circ \Gamma$ in place of $\Gamma$ itself:
+$h_1 \sim_\Gamma h_2$ gives $\Gamma(h_1) = \Gamma(h_2)$, hence
+$\Gamma(T(h_1)) = \hat{T}(\Gamma(h_1)) = \hat{T}(\Gamma(h_2)) =
+\Gamma(T(h_2))$, so $T(h_1) \sim_\Gamma T(h_2)$.
+\end{proof}
+
+\begin{remark}
+This is the sense in which $\Gamma$-compatibility is the right
+condition to ask for: it says an operator cannot secretly depend on
+information that continuation equivalence has already declared
+irrelevant. An operator failing this condition would be able to treat
+two continuation-equivalent histories differently for reasons that
+have nothing to do with what either history can still become, which
+is exactly the kind of dependence Chapter 5 of \emph{Continuation
+Geometry} worried about under the name of history-dependence in the
+first place.
+\end{remark}
+
+\begin{example}[The traffic light's step operators]
+For $e \in \{0,1\}$, let $T_e : H \to H$ append the transition
+$\Phi(\cdot, e)$ to a history. Whether $T_e$ is $\Gamma$-compatible
+(at horizon $T=1$) needs checking only on the one nontrivial
+$\sim_\Gamma$-class found in Chapter 2, $\{(3,0),(3,1)\}$, since every
+other class is a singleton and compatibility there is automatic.
+Direct computation gives $T_0(3,0) = T_0(3,1) = (0,0)$ and
+$T_1(3,0) = T_1(3,1) = (0,0)$: both step operators send the two
+equivalent histories to the identical resulting state, not merely to
+states with equal $R_1$, so compatibility holds here in the strongest
+possible form.
+\end{example}
+
+\begin{remark}
+This is a narrow check, confined to the single class where there was
+anything to check, and it should not be read as a general fact about
+$T_0$ or $T_1$ on this system, only as a confirmation that neither
+step operator introduces a new dependence on which of $(3,0)$ or
+$(3,1)$ a history happened to pass through, at exactly the point
+where such a dependence would have mattered.
+\end{remark}
+
+\section*{The family $\Gamma_T$ and the operator $\Psi$}
+
+A different relationship, easy to conflate with $\Gamma$-compatibility
+but distinct from it, has been used without a name since Chapter 2. It
+concerns not an operator on histories but the relationship between the
+finite-horizon continuation spaces at consecutive horizons for one and
+the same history.
+
+\begin{remark}[$\Psi$ relates horizons, not histories]
+By construction, $R_{T+1}(x) = \bigcup_{z \in R_T(x)} \Phi(z) =
+\Psi(R_T(x))$, i.e.\ $\Gamma_{T+1} = \Psi \circ \Gamma_T$ as an
+identity between functions $H \to \mathcal{K}(X)$, where
+$\Gamma_T(h) := R_T(x(h))$. This is not an instance of
+Proposition~\ref{prop:descend}; no operator on $H$ is involved, only
+the fixed continuation operator $\Psi$ acting on the shape side, once
+for each increment of the horizon. It is this identity, not any
+property of an operator on histories, that did the real work in
+Lemma~2 of the previous chapter (one-step agreement propagates) and in
+the eventual-periodicity argument of Chapter 3: both are, in
+retrospect, statements about the orbit of a single reachable set
+under repeated application of the one continuation operator $\Psi$,
+dressed in the language of horizons rather than the language of
+operators used here.
+\end{remark}
+
+\section*{Two families, one category}
+
+\begin{corollary}
+Both the contractions of Chapter 1 and the operator $\Psi$ of Chapters
+2 and 3 are continuation operators in the sense of this chapter's
+first definition; they differ only in whether their Lipschitz
+constant is below $1$.
+\end{corollary}
+
+\begin{remark}
+It is tempting to read this as saying generation and collapse are two
+regions of one parameter, contraction below $1$, something else
+above it, and that reading is too strong. $L(T) < 1$ does imply
+convergence to a unique attractor, by Chapter 1's own theorem; that
+direction is solid. $L(T) \geq 1$ implies nothing in particular. The
+identity map has $L=1$ and collapses nothing. An isometry has $L=1$
+and collapses nothing. A map that stretches every distance by a
+factor of two has $L=2$ and, again, collapses nothing, since
+stretching does not identify points that were previously distinct.
+What actually collapses distinctions is a property orthogonal to the
+Lipschitz constant: whether the operator is injective, whether
+distinct inputs can share an output. $\Psi$ collapses states in the
+traffic light not because $L(\Psi) \geq 1$, but because the specific
+map $\Phi$ underlying it is non-injective at the clearing transition,
+sending both $(3,0)$ and $(3,1)$ to $(0,0)$; a different one-step map
+with $L(\Psi) \geq 1$ but no collisions anywhere would generate no
+quotient at all. The Lipschitz constant and injectivity are
+independent properties an operator can carry in any combination, and
+conflating them is exactly the kind of overstatement this book has
+tried, elsewhere, to catch in itself before it went to print.
+\end{remark}
+
+\begin{remark}[A more honest organizing geometry]
+What Chapters 1 through 3 actually populate is not a line but a small
+space of independent properties: metric sensitivity ($L(T)$, whether
+and how strongly the operator contracts or expands distances);
+injectivity (whether the operator identifies distinct states,
+independent of $L(T)$); and compatibility with $\Gamma$ (Chapter 4's
+own $\Gamma$-compatibility condition, a further independent property
+an operator either has or lacks). A contraction with $L<1$ and full
+injectivity, the pure case of Chapter 1, generates a self-similar
+attractor without collapsing anything along the way. A non-injective
+$\Psi$ with $L(\Psi) \geq 1$, the traffic light's case, collapses
+distinctions and does not converge to a point, cycling instead. Other
+combinations, injective maps with $L \geq 1$, non-injective
+contractions, are equally coherent and simply were not this book's
+running examples. The genuine unification this chapter earned is that
+all of these live in one vocabulary, continuation operators, checkable
+by the same closure proposition regardless of where in this space
+they sit. The overclaim to retract is that a single number tells you
+where in that space an operator is.
+\end{remark}
+
+\section*{What operators do not yet explain}
+
+This chapter has said what a legitimate move is and shown that both
+of this book's central constructions are instances of it, but it has
+not asked which finite collections of operators are rich enough to
+produce every continuation geometry worth having, only that individual
+operators compose predictably once they exist. That question, closer
+to the universal-generation intuition this project began with, needs
+the vocabulary built here as a prerequisite, and is not attempted in
+this chapter.
+
+\chapter{Toward Universal Generation}
+
+A handful of letters generates every word in a dictionary that has
+not been written yet. A handful of chess rules generates every game
+that will ever be played under them, including games no one has
+conceived of. A small, fixed vocabulary reaching an unbounded space
+of outcomes is one of the oldest tricks available to any generative
+system, and it is worth asking, now that this book has a settled
+vocabulary for what a continuation operator is, whether continuation
+geometries have the same property. Can a small, fixed family of
+operators, chosen once and never enlarged, get arbitrarily close to
+any admissible continuation geometry at all?
+
+This chapter does not answer that question. It draws its boundary
+precisely enough to say exactly what would need to be true for the
+answer to be yes, proves the one direction that is actually within
+reach, and is honest about the direction that is not. The gap between
+those two is real mathematics, not a gap in effort, and closing it is
+left where it belongs: open.
+
+\section*{The conjecture, stated precisely}
+
+\begin{conjecture}[Universal continuation generation]
+\label{conj:universal}
+There exists a finite family of point contractions $T_1, \dots, T_n :
+X \to X$ and a single seed set $P \in \mathcal{K}(X)$, both fixed once
+and independent of any particular target, such that for every
+nonempty compact $A \subseteq X$ and every $\varepsilon > 0$, some
+finite word $i_1, \dots, i_k$ satisfies
+\[
+d_H\big(A,\ (T_{i_k} \circ \cdots \circ T_{i_1})(P)\big) < \varepsilon,
+\]
+where $(T_{i_k} \circ \cdots \circ T_{i_1})(P) := \{(T_{i_k} \circ
+\cdots \circ T_{i_1})(p) : p \in P\}$ is the composed point-map,
+itself a single contraction, applied setwise to the fixed seed.
+\end{conjecture}
+
+\begin{remark}[Why the seed must be fixed]
+Allowing the starting set to vary with $A$ would make the conjecture
+trivial: given any target $A$ and any $\varepsilon$, take the starting
+set to be an $\varepsilon$-net of $A$ itself, apply the identity word,
+and the approximation is immediate regardless of what the $T_i$ are.
+The entire content of the conjecture is that one seed and one
+generator family, chosen before any target is known, must work for
+every target afterward; fixing $P$ once, alongside the $T_i$, is not
+an optional refinement of the statement, it is the statement.
+\end{remark}
+
+\begin{remark}
+This is stated as a conjecture and not as a theorem because it is
+one; nothing in this book has proved it, and nothing in this chapter
+will. What can be made precise is why it is hard, and that requires
+first showing what is \emph{not} hard.
+\end{remark}
+
+\section*{The Collage Theorem}
+
+\begin{theorem}[Collage Theorem]
+\label{thm:collage}
+Let $T_1, \dots, T_n$ be contractions with $\mathcal{H}(A) =
+\bigcup_i T_i(A)$ and maximum contraction constant $c < 1$, and let
+$A^\ast$ be the attractor of $\mathcal{H}$. Then for any nonempty
+compact $A$,
+\[
+d_H(A, A^\ast) \leq \frac{d_H(A, \mathcal{H}(A))}{1-c}.
+\]
+\end{theorem}
+\begin{proof}
+By the triangle inequality and $A^\ast = \mathcal{H}(A^\ast)$,
+\[
+d_H(A, A^\ast) \leq d_H(A, \mathcal{H}(A)) + d_H(\mathcal{H}(A), \mathcal{H}(A^\ast)).
+\]
+By Proposition~3 of Chapter 1 ($\mathcal{H}$ is a contraction on
+shapes), $d_H(\mathcal{H}(A), \mathcal{H}(A^\ast)) \leq c\, d_H(A,
+A^\ast)$. Substituting,
+\[
+d_H(A, A^\ast) \leq d_H(A, \mathcal{H}(A)) + c\, d_H(A, A^\ast),
+\]
+and rearranging, since $c < 1$, gives
+$(1-c)\, d_H(A,A^\ast) \leq d_H(A, \mathcal{H}(A))$, which is the
+claim.
+\end{proof}
+
+\begin{remark}
+Nothing here was invented for this chapter; the theorem is a direct
+three-line consequence of facts Chapter 1 already established, and it
+is worth noting how much it buys for how little it costs. It converts
+a question about the attractor, an object defined only as a limit, so
+generally hard to reason about directly, into a question about a
+single application of $\mathcal{H}$ to a set already in hand. Finding
+an operator family whose attractor is close to a target $A$ reduces to
+finding one whose \emph{one-step collage} $\mathcal{H}(A)$ is already
+close to $A$, an ordinary geometric fitting problem rather than a
+limiting one.
+\end{remark}
+
+\section*{Existence of an approximating family}
+
+\begin{theorem}[Every compact target is approximable]
+\label{thm:existence}
+For every nonempty compact $A \subseteq X = \mathbb{R}^n$ and every
+$\varepsilon > 0$, there exists a finite family of contractions
+(depending on $A$ and $\varepsilon$) whose attractor $A^\ast$
+satisfies $d_H(A, A^\ast) < \varepsilon$.
+\end{theorem}
+\begin{proof}
+Let $\{x_1, \dots, x_m\} \subseteq A$ be a finite $\delta$-net of $A$
+with $\delta < \varepsilon$, which exists since $A$ is compact, hence
+totally bounded, and can be chosen with net points drawn from $A$
+itself. For each $i$, let $T_i : X \to X$ be the constant map
+$T_i(x) := x_i$. Each $T_i$ is trivially a contraction, with constant
+$c = 0$, since $d(T_i(x), T_i(y)) = 0 \leq 0 \cdot d(x,y)$ for all
+$x,y$. Then $T_i(A) = \{x_i\}$ exactly, for any nonempty $A$, so
+$\mathcal{H}(A) = \bigcup_i T_i(A) = \{x_1, \dots, x_m\}$, the net
+itself. Since the net points lie in $A$ and every point of $A$ is
+within $\delta$ of the net, $d_H(A, \mathcal{H}(A)) = d_H(A,
+\{x_1,\dots,x_m\}) \leq \delta$. By Theorem~\ref{thm:collage} with
+$c=0$, $d_H(A, A^\ast) \leq d_H(A,\mathcal{H}(A))/(1-0) \leq \delta <
+\varepsilon$.
+\end{proof}
+
+\begin{remark}
+This proof is fully elementary once constant maps are admitted as
+contractions, which they trivially are under the definition used
+throughout this book, and it is worth saying so plainly rather than
+gesturing at a more elaborate construction that turns out not to be
+needed. A version restricted to contractions with ratio bounded away
+from $0$ demands more care, positioning each $T_i$ so its image lands
+near $x_i$ without collapsing to a point, and is the version
+classically used in fractal image compression \cite{barnsley1988};
+that version is not reproduced here, since the elementary one already
+proves everything this theorem claims.
+\end{remark}
+
+\begin{remark}
+This is real progress, and it is worth being precise about exactly
+how much. It says the space of Hutchinson attractors is dense, in
+Hausdorff distance, in the space of nonempty compact subsets of $X$:
+nothing worth generating is permanently out of reach. What it does
+not say, and what Conjecture~\ref{conj:universal} actually asks for,
+is that a \emph{single} family, fixed before any target is known,
+suffices for every target. The construction above produces a
+different family for each new target and each new tolerance; as
+$\varepsilon \to 0$ or as $A$ grows more intricate, the number of
+generators $m$ used in the proof generally grows without bound. The
+existence theorem answers ``can this be reached at all,'' which
+Theorem~\ref{thm:existence} settles completely. The conjecture asks
+``can it be reached with tools chosen in advance,'' which is a
+categorically stronger demand, and this chapter has not moved that
+needle.
+\end{remark}
+
+\section*{What kind of gap this is}
+
+The distinction is not a technicality, and it has a name in
+neighboring fields worth being explicit about rather than gestured at.
+The Stone--Weierstrass theorem \cite{stone1948} guarantees that polynomials are dense
+in the continuous functions on a compact interval: a fixed class of
+building blocks, closed under the operations that generate it, dense
+in everything worth approximating. A universal approximation theorem
+for neural networks \cite{cybenko1989} says something structurally similar: networks
+built from a fixed activation function, with enough width, are dense
+in the continuous functions. Both are theorems about a fixed generator
+class being rich enough for every target, which is exactly the shape
+of Conjecture~\ref{conj:universal} and exactly what
+Theorem~\ref{thm:existence} does not provide, since its generator
+family is chosen after the target is known.
+
+\begin{remark}
+Whether an analogue of Stone--Weierstrass or universal approximation
+holds for continuation geometries specifically is not something this
+chapter's methods can settle, and it should not be assumed to transfer
+just because the surface shape of the claim resembles those theorems.
+Both classical results rely on structure, algebraic closure under
+multiplication for Stone--Weierstrass, compositional depth for neural
+networks, that has no established analogue here. Building that
+structure, or showing it cannot exist, is what would actually resolve
+Conjecture~\ref{conj:universal}, and it remains the open question this
+book set out to sharpen rather than close.
+\end{remark}
+
+\chapter{State Insufficiency, Made Explicit}
+
+A doctor at the bedside observes breathing, heart rate, pupil
+response, the ordinary vital signs a chart records every hour. Two
+patients can match on every one of them, one sleeping, one comatose,
+and the chart alone will not say which. This is not a failure of the
+instruments. It is a fact about what the instruments were built to
+see. The chart records an observation, a coarse summary of a much
+richer state, and coarse summaries are allowed to erase exactly the
+distinctions that happen not to show up in whatever they were designed
+to measure. Whether a given summary erases a distinction that
+matters, mere resemblance in the readings or a genuine difference in
+what each patient can still become, is not a question the chart can
+answer about itself.
+
+This idea has been the motivating image behind this project since
+before either book in it had a name, and it has never been made into
+a theorem. It does not need a new toy system to become one. The
+traffic light, already built and already verified twice over in
+Chapters 2 and 3, contains a clean instance of exactly this
+phenomenon, once it is looked at through a coarser observation than
+the one this book has been using.
+
+\section*{Observations and sufficiency}
+
+\begin{definition}[Observation map, state sufficiency]
+An observation map is any $\Pi : X \to O$. $\Pi$ is state-sufficient
+(for continuation, at horizon $T$) if $\Pi(x) = \Pi(y) \implies
+R_T(x) = R_T(y)$ for all $x,y \in X$; otherwise $\Pi$ is
+state-insufficient.
+\end{definition}
+
+\begin{remark}
+This is deliberately the same shape of question Chapter 3 already
+answered in general. $\Pi$ is a quotient of $X$ in exactly the sense
+used throughout this book, and state sufficiency is exactly zero loss
+in the sense of that chapter, transported from quotients of histories
+to observation maps on states. The next proposition makes the
+translation exact rather than merely suggestive.
+\end{remark}
+
+\begin{proposition}[Sufficiency is refinement of $\sim_\Gamma$]
+$\Pi$ is state-sufficient at horizon $T$ if and only if $\Pi$ refines
+$\sim_\Gamma$ at that horizon: $\Pi(x) = \Pi(y) \implies x \sim_\Gamma
+y$.
+\end{proposition}
+\begin{proof}
+Immediate from the definitions: $x \sim_\Gamma y$ at horizon $T$ means
+$R_T(x) = R_T(y)$, which is exactly the consequent of state
+sufficiency's defining implication.
+\end{proof}
+
+\section*{An explicit failure of sufficiency}
+
+\begin{definition}
+Let $\Pi : \{0,1,2,3\} \times \{0,1\} \to \{0,1,2,3\}$,
+$\Pi(k,r) := k$, the observation that records the traffic light's
+phase but not its pending-request bit.
+\end{definition}
+
+\begin{theorem}[State insufficiency, explicit instance]
+\label{thm:insufficient}
+$\Pi$ is state-insufficient at $T=1$: $\Pi(0,0) = \Pi(0,1) = 0$, but
+$R_1(0,0) = \{(1,0),(1,1)\} \neq \{(1,1)\} = R_1(0,1)$.
+\end{theorem}
+\begin{proof}
+Both values of $\Pi$ are immediate from the definition of $\Pi$. The
+inequality of the reachable sets is the computation already carried
+out in Chapter 2 (Proposition 3, the $T=1$ traffic-light computation):
+$R_1(0,0)$ and $R_1(0,1)$ were shown there to differ, as one of the
+seven singleton classes and part of the argument establishing that no
+merge occurs at phase $0$.
+\end{proof}
+
+\begin{remark}
+This is the sleep/coma image with every part of it named. $\Pi$ plays
+the role of the chart: it records the phase, the part of the state a
+casual glance would call ``where things currently stand,'' and
+discards the request bit, the part recording something about how the
+state got there and what it is still owed. Two states indistinguishable
+under $\Pi$, $(0,0)$ and $(0,1)$, are not indistinguishable under
+$\Gamma$: one of them can still become $(1,0)$, a future the other
+cannot reach at all. The chart is not lying. It was simply never built
+to record the fact that would have mattered here.
+\end{remark}
+
+\section*{How much sufficiency fails, and where}
+
+Chapter 3 built exactly the machinery needed to go beyond a single
+witnessing pair and measure the full extent of $\Pi$'s insufficiency.
+
+\begin{proposition}[The loss of $\Pi$, computed exactly]
+For each phase $k \in \{0,1,2,3\}$, the loss at fiber $\Pi^{-1}(k) =
+\{(k,0),(k,1)\}$ is
+\[
+\mathcal{L}(\Pi^{-1}(k)) = \begin{cases} \log 2 & k \in \{0,1,2\} \\ 0 & k = 3. \end{cases}
+\]
+\end{proposition}
+\begin{proof}
+By definition, $\mathcal{L}(\Pi^{-1}(k)) = \log|\{R_1(k,0), R_1(k,1)\}|$.
+From the values already established (Chapter 2, Proposition 3, and
+Theorem~\ref{thm:insufficient} above): $R_1(0,0) \neq R_1(0,1)$,
+$R_1(1,0) = \{(2,0),(2,1)\} \neq \{(2,1)\} = R_1(1,1)$, and
+$R_1(2,0) = \{(3,0),(3,1)\} \neq \{(3,1)\} = R_1(2,1)$, giving
+$|\{\cdot,\cdot\}| = 2$ and loss $\log 2$ in each case. At $k=3$,
+$R_1(3,0) = R_1(3,1) = \{(0,0)\}$, giving $|\{\cdot\}| = 1$ and loss
+$0$.
+\end{proof}
+
+\begin{remark}
+The pattern is worth reading rather than only computing. The
+observation $\Pi$ loses exactly one bit at every phase except the one
+immediately before clearing, where it loses nothing, for exactly the
+reason Chapter 3's eventual-redundancy result already identified: at
+phase $3$, the request bit is one step from becoming irrelevant
+regardless of what $\Pi$ does, so discarding it early costs nothing
+there and costs a full bit everywhere else. State insufficiency, once
+quantified rather than merely demonstrated, is not a uniform fog
+sitting over the whole system; it has a precise shape, concentrated
+exactly where the discarded information still had work left to do.
+\end{remark}
+
+\section*{What this does and does not establish about sleep and coma}
+
+Nothing above is a claim about physiology. It is a claim about one
+eight-state machine and one particular coarsening of it, chosen
+because the numbers needed to state it precisely were already on hand
+and already checked. Whether any actual clinical observation, a chart,
+a scan, a bedside exam, is state-insufficient for the specific
+continuation spaces that distinguish sleep from coma is an empirical
+question about biology, not something a toy traffic light can settle
+by analogy. What this chapter has shown is narrower and more useful
+than a claim about medicine: that state insufficiency is a real,
+precisely statable, and exactly measurable property of an observation
+map relative to a dynamics, that it can fail in some places and not
+others within the very same system, and that the machinery already
+built in this book, with no further construction, is already enough
+to find out which.
+
+\chapter{Invariant Decomposition, Staleness, and Intervention}
+
+A scouting report can be wrong in two entirely different ways. It can
+be out of date: accurate when filed, and steadily less trustworthy
+with every day that passes since, repairable by sending another scout.
+Or it can be asking the wrong question entirely: a report on one
+trading region says nothing, however fresh, about a second region no
+ship has ever crossed into, because the two have never exchanged a
+single price, a single rumor, a single unit of anything. No amount of
+resurveying the first region brings the second any closer to being
+known. These look like the same complaint, an observer failing to
+keep up with reality, and they are not. One is a fact about elapsed
+time. The other is a fact about the shape of the space itself. This
+chapter gives each its own formal treatment, because giving them the
+same one would hide the fact that they need different remedies.
+
+\section*{Invariant decomposition}
+
+\begin{definition}[Invariant block]
+$A \subseteq X$ is an invariant block under $F$ if $R_1(x) \subseteq
+A$ for every $x \in A$.
+\end{definition}
+
+\begin{proposition}[Invariance propagates]
+\label{prop:invpropagate}
+If $A$ is an invariant block, then $R_T(x) \subseteq A$ for every $x
+\in A$ and every $T \geq 0$.
+\end{proposition}
+\begin{proof}
+By induction on $T$. $T=0$ is immediate ($x \in A$). If $R_T(x)
+\subseteq A$, then $R_{T+1}(x) = \bigcup_{z \in R_T(x)} R_1(z)
+\subseteq \bigcup_{z \in A} R_1(z) \subseteq A$, the last inclusion
+by the definition of an invariant block applied to each $z \in A$.
+\end{proof}
+
+\begin{definition}[Invariant decomposition]
+$X$ admits an invariant decomposition into $\{X_i\}$ if the $X_i$
+partition $X$ and each $X_i$ is an invariant block.
+\end{definition}
+
+\begin{corollary}[Continuation confinement]
+\label{cor:confine}
+If $x \in X_i$, then $\Gamma_K(x) \subseteq \{\gamma : \gamma(t) \in
+X_i \ \forall t\}$: every admissible continuation of $x$ remains in
+$X_i$ forever.
+\end{corollary}
+\begin{proof}
+Immediate from Proposition~\ref{prop:invpropagate}: $R_T(x) \subseteq
+X_i$ for every $T$, and a trajectory whose position at every finite
+horizon lies in $X_i$ lies in $X_i$ at every time.
+\end{proof}
+
+\begin{remark}
+This is the precise sense in which observation in one block cannot
+substitute for observation in another. For $x \in X_1$, $\Gamma_K(x)$
+is determined entirely by the dynamics restricted to $X_1$; nothing
+about $X_2$, however thoroughly sampled, enters into $R_T(x)$ for any
+$T$, because Corollary~\ref{cor:confine} rules out any trajectory from
+$x$ ever visiting $X_2$ in the first place. This is not a claim that
+$X_2$ is hard to observe. It is a claim that $X_2$ is, formally,
+irrelevant to $x$'s continuation space once the decomposition holds,
+in the same sense that a variable a function does not depend on is
+irrelevant to computing it, however precisely that variable is
+measured. The classical distinction between a viability kernel
+(admitting \emph{some} trajectory that stays put) and an invariance
+kernel (requiring \emph{every} trajectory to stay put), already
+present in the literature this book has cited since Chapter 1
+\cite{aubinframkowska1990}, is exactly the distinction an invariant
+block relies on, and exactly why this section is named for invariance
+rather than for ergodicity: nothing here involves a measure or an
+indecomposability condition on invariant measures, the actual content
+of the word ergodic in its established sense. What is built here is
+the purely topological half of that classical picture.
+\end{remark}
+
+\section*{Staleness}
+
+Invariant decomposition is a permanent, structural fact about a system.
+Staleness is not: it is what happens to an observer's knowledge of a
+single, well-connected system as time passes without a fresh look.
+
+\begin{definition}[Staleness bound]
+Suppose $\dot x = f(x, u(t))$ for a fixed perturbation space $Q$
+(independent of $x$) and $u(t) \in Q$ measurable, with $f$ Lipschitz
+in $x$ with constant $L$ uniformly in $u \in Q$:
+$\|f(x,u) - f(y,u)\| \leq L\|x-y\|$ for all $u \in Q$. Given an
+observation fiber $\Pi^{-1}(o)$ of diameter $d_0 := \sup_{x,y \in
+\Pi^{-1}(o)} d(x,y)$, the staleness bound at elapsed time $\Delta t$
+is $d_0\, e^{L \Delta t}$.
+\end{definition}
+
+\begin{proposition}[Staleness grows at most exponentially]
+\label{prop:staleness}
+For $x, y \in \Pi^{-1}(o)$ and trajectories $\gamma_x, \gamma_y$
+solving $\dot\gamma_x = f(\gamma_x, u(t))$, $\dot\gamma_y = f(\gamma_y,
+u(t))$ from $x, y$ under the same measurable input $u(t) \in Q$,
+$d(\gamma_x(\Delta t), \gamma_y(\Delta t)) \leq d_0\, e^{L \Delta t}$.
+\end{proposition}
+\begin{proof}
+Let $w(t) := d(\gamma_x(t), \gamma_y(t))$. Since $f$ is $L$-Lipschitz
+in its first argument uniformly in $u \in Q$ and both trajectories
+are driven by the same $u(t)$,
+$\dot{w}(t) \leq \|f(\gamma_x(t),u(t)) - f(\gamma_y(t),u(t))\| \leq
+L\, w(t)$, so $w(t) \leq w(0) + L \int_0^t w(s)\, ds$. By the
+continuous Gr\"onwall inequality (Appendix C of \emph{Continuation
+Geometry}), $w(t) \leq w(0)\, e^{Lt} = d_0\, e^{Lt}$, giving the claim
+at $t = \Delta t$.
+\end{proof}
+
+\begin{remark}
+This is stated for single-valued dynamics with a shared perturbation
+space, deliberately narrower than the set-valued $F$ used elsewhere in
+this book. A genuine differential inclusion, where the two
+trajectories are not assumed to realize a common measurable selection,
+needs more than a Hausdorff--Lipschitz bound on $F$ to license the
+same comparison estimate; it needs an explicit coupling, typically
+supplied by a selection theorem of the kind Appendix B of
+\emph{Continuation Geometry} already cites, or by a viability-theoretic
+argument constructing matched trajectories directly. That extension is
+not carried out here.
+\end{remark}
+
+\begin{remark}
+Nothing in this proof is new; it is the same Gr\"onwall estimate
+already used to bound trajectory growth under linear growth
+hypotheses, applied here to the \emph{difference} between two
+trajectories instead of the norm of one. What makes it worth restating
+in this form is the reading it supports: staleness is not a fixed
+penalty for not having observed recently, it is a bound that can
+always be reset. Taking a fresh observation at time $\Delta t$
+collapses the relevant fiber back down to whatever its new diameter
+is, and the exponential clock restarts from there. This is the formal
+content behind ``staleness is repaired by resampling'': the bound in
+Proposition~\ref{prop:staleness} is a function of elapsed time since
+the \emph{last} observation, not of any permanent property of the
+system.
+\end{remark}
+
+\begin{remark}[Why the two do not reduce to one another]
+A system separated into invariant blocks can be resampled as often as an
+observer likes without ever closing the gap between blocks, since no
+finite or infinite sequence of observations confined to $X_1$ changes
+$\Gamma_K(x)$ for $x \in X_1$, by Corollary~\ref{cor:confine}. A stale
+observation of a well-connected system closes its own gap with a
+single fresh sample. Treating both under one heading, representation
+degrading relative to territory, obscures that one is fixed by waiting
+and looking again and the other cannot be fixed by looking again at
+all, only by being, or gaining access to, the other block.
+\end{remark}
+
+\section*{Projection and intervention}
+
+Chapter 6 formalized when an observation $\Pi$ fails to determine a
+state's continuation space. It said nothing about what, if anything,
+is done to a state once observed. The two are logically separate
+questions.
+
+\begin{definition}[Intervention operator]
+An operator $T$ (Chapter 4) is an intervention on a set $S \subseteq
+X$ if there is a fixed target $A_0 \in \mathcal{K}(X)$ with $\Gamma(T(x))
+= A_0$ for every $x \in S$, regardless of $\Gamma(x)$.
+\end{definition}
+
+\begin{proposition}[Sufficiency and intervention are independent]
+There exist systems in which $\Pi$ is state-sufficient on $S$ yet an
+intervention operator is applied on $S$ anyway, and systems in which
+$\Pi$ is state-insufficient on $S$ with no intervention applied at
+all.
+\end{proposition}
+\begin{proof}
+For the first: take $\Pi$ to be the identity (trivially sufficient,
+since $\Pi(x)=\Pi(y) \implies x=y \implies \Gamma(x)=\Gamma(y)$), and
+let $T$ map every $x \in S$ to a fixed state $x_0$ regardless of $x$;
+$T$ is an intervention by construction, and $\Pi$'s sufficiency is
+unaffected by whether $T$ is applied, since sufficiency is a property
+of $\Pi$ alone. For the second: the traffic light's phase-only $\Pi$
+of Chapter 6 is state-insufficient on $\{(0,0),(0,1)\}$, and the
+system's actual dynamics $\Phi$ is not an intervention in the sense
+above, since $\Gamma(\Phi(0,0)) \neq \Gamma(\Phi(0,1))$ in general
+(the two states are not forced to a common target).
+\end{proof}
+
+\begin{remark}
+This is a narrow, formal point, and it is worth being honest about how
+narrow: it shows the two properties are not logically entailed by one
+another, not that they are uncorrelated in how real institutions
+actually behave. An institution whose observation is coarse may find
+uniform treatment easier to justify or administer than
+individually-tailored treatment would be, which is a pressure toward
+intervention that has nothing to do with logical necessity and
+everything to do with what coarse observation makes practical. The
+independence proposition above rules out the claim that better
+observation \emph{requires} less intervention or that worse
+observation \emph{requires} more; it says nothing about which
+correlations actually hold in systems built by people operating under
+those practical pressures, which is a separate, empirical question
+this chapter's methods do not reach.
+\end{remark}
+
+\section*{What these three have in common}
+
+Ergodic separation, staleness, and intervention are three distinct
+ways a system's continuation geometry can be misjudged, by structure,
+by elapsed time, and by force, and this chapter has kept them formally
+apart on purpose. Collapsing them into one diagnosis, an observer
+failing to track reality, would have been easier to write and less
+useful to read: each has its own signature, its own proof, and its
+own remedy, and only one of the three is fixed by looking again.
+
+\chapter{Investment-Movable Admissibility}
+
+Not every boundary asks the same thing of you. A species cannot
+breathe an atmosphere its lungs did not evolve for, and no amount of
+committed effort changes that fact; the boundary is simply where it
+is, permanently, for reasons that have nothing to do with anyone's
+budget. A planet's atmosphere, on the other hand, can be thickened,
+warmed, seeded, and made breathable by exactly the kind of committed
+effort the first boundary is indifferent to. Both are limits on what
+is admissible. Only one of them recedes when you push on it.
+
+Every constraint set $K$ used so far in this book and its predecessor
+has been fixed once and for all, a single unmoving boundary between
+what a system may become and what it may not. This chapter asks what
+changes when that boundary is allowed to move, not arbitrarily, but in
+response to something accumulated over time, and does so using
+exactly the operator vocabulary Chapter 4 already built, applied to a
+kind of object that chapter did not yet ask it to touch.
+
+\section*{Constraint sets are shapes too}
+
+Chapter 4 defined a continuation operator as a Lipschitz map $T :
+\mathcal{K}(X) \to \mathcal{K}(X)$ and used it exclusively to
+transform reachable sets. Nothing in that definition mentions
+reachability. A constraint set $K$, provided it is compact, is simply
+another element of $\mathcal{K}(X)$, and there is nothing preventing
+an operator from acting on it directly.
+
+\begin{definition}[Investment family]
+An investment family is a collection of continuation operators
+$\{E_\delta\}_{\delta \geq 0}$ on $\mathcal{K}(X)$ satisfying:
+\begin{enumerate}[label=(\roman*)]
+\item $E_0 = \mathrm{id}$;
+\item $E_{\delta_1 + \delta_2} = E_{\delta_2} \circ E_{\delta_1}$ for
+all $\delta_1, \delta_2 \geq 0$ (a one-parameter semigroup);
+\item $K \subseteq E_\delta(K)$ for every $K \in \mathcal{K}(X)$ and
+$\delta \geq 0$ (expansive).
+\end{enumerate}
+Given a base constraint set $K_0$, the investment schedule is $K_i :=
+E_i(K_0)$ for accumulated investment $i \geq 0$.
+\end{definition}
+
+\begin{proposition}[The schedule is monotone]
+\label{prop:monotone}
+$K_i \subseteq K_j$ whenever $i \leq j$.
+\end{proposition}
+\begin{proof}
+Write $j = i + \delta$ for $\delta = j - i \geq 0$. By the semigroup
+property, $K_j = E_j(K_0) = E_\delta(E_i(K_0)) = E_\delta(K_i)$, and by
+expansiveness, $K_i \subseteq E_\delta(K_i) = K_j$.
+\end{proof}
+
+\begin{remark}
+This is the formal content of ``investment never shrinks admissibility'':
+once the family satisfies the three axioms above, monotonicity is not
+an additional assumption, it is forced. What the axioms do not force,
+and what distinguishes one investment family from another, is how
+much room a given increment of investment actually buys, which is
+exactly the content of the operators $E_\delta$ themselves rather than
+of the schedule they generate.
+\end{remark}
+
+\section*{Hard and movable boundaries}
+
+\begin{definition}[Hard-excluded set]
+$K_\infty := \overline{\bigcup_{i \geq 0} K_i}$, the closure of the
+investment orbit. A state $x \in X$ is hard-excluded if $x \notin
+K_\infty$; otherwise $x$ is investment-reachable.
+\end{definition}
+
+\begin{remark}
+The closure is necessary, not decorative: a monotone union of compact
+sets need not itself be compact, or even closed, since the union can
+approach a boundary point without ever reaching it. $K_\infty$ as
+defined here is the smallest closed set containing every stage of the
+schedule, which coincides with the plain union exactly when that
+union happens to be closed already, and not otherwise.
+\end{remark}
+
+\begin{remark}
+This makes the opening distinction exact. A species trait sits outside
+$K_\infty$ for every conceivable investment family a design could
+choose, not merely the one at hand; a planet's habitability threshold
+sits inside $K_i$ for $i$ large enough, under an investment family
+that models what terraforming can actually do. Whether a given
+boundary is hard or movable is not a property of the boundary alone;
+it is a property of the boundary together with whichever investment
+family is available to act on it, and the same physical limit can be
+hard under one family and movable under a richer one.
+\end{remark}
+
+\begin{proposition}[Viability is upward-closed in investment]
+\label{prop:viab-upward}
+If $x \in \operatorname{Viab}_F(K_i)$ for some $i$, then $x \in
+\operatorname{Viab}_F(K_j)$ for every $j \geq i$.
+\end{proposition}
+\begin{proof}
+$x \in \operatorname{Viab}_F(K_i)$ gives a trajectory $\gamma \in
+\Gamma_{K_i}(x)$ remaining in $K_i$ for all time. By
+Proposition~\ref{prop:monotone}, $K_i \subseteq K_j$, so $\gamma$
+remains in $K_j$ for all time as well, giving $\gamma \in
+\Gamma_{K_j}(x)$ and hence $x \in \operatorname{Viab}_F(K_j)$.
+\end{proof}
+
+\begin{remark}
+Once a state becomes viable at some investment level, no further
+investment can undo that; the set of investment levels at which a
+given state is viable, if nonempty, is upward-closed. This is a weak
+fact stated for a reason: it is exactly strong enough to justify
+treating investment as a one-way ratchet on viability and no stronger,
+since Proposition~\ref{prop:viab-upward} says nothing about whether a
+state \emph{becomes} viable at any finite level in the first place,
+only that viability, once reached, is never lost to further
+investment.
+\end{remark}
+
+\section*{A worked schedule}
+
+\begin{example}[Habitability threshold]
+Let $X = [0,1]$ represent a planet's habitability score, and let
+$\tau(i) := \max(\tau_{\min},\, \tau_0 - c i)$ for constants $\tau_0
+\in (0,1)$, $c > 0$, and a floor $\tau_{\min} \in [0, \tau_0)$
+representing an absolute physical limit, pressure or temperature
+bounds no terraforming budget can cross. Define
+$K_i := [\tau(i), 1]$.
+\end{example}
+
+\begin{proposition}
+This schedule arises from a valid investment family, and
+$K_\infty = [\tau_{\min}, 1]$, already closed.
+\end{proposition}
+\begin{proof}
+Define $E_\delta$ on all of $\mathcal{K}(X)$ by the dilation
+$E_\delta(K) := \{x \in [0,1] : \operatorname{dist}(x,K) \leq c\delta\}
+\cap [\tau_{\min}, 1]$, capping at the hard floor. On $[0,1] \subset
+\mathbb{R}$ with the standard metric, dilation composes exactly,
+$E_{\delta_2}(E_{\delta_1}(K)) = E_{\delta_1+\delta_2}(K)$, since a
+point within $c\delta_2$ of a point within $c\delta_1$ of $K$ is
+within $c(\delta_1+\delta_2)$ of $K$ by the triangle inequality, and
+conversely, giving the semigroup property; $K \subseteq E_\delta(K)$
+is immediate, giving expansiveness; and $E_\delta$ is Lipschitz in
+Hausdorff distance with constant $1$, a standard property of metric
+dilations. Restricted to the orbit generated from $K_0 = [\tau_0,1]$,
+$E_\delta([\tau(i),1]) = [\max(\tau_{\min}, \tau(i) - c\delta), 1] =
+[\tau(i+\delta), 1]$, matching the schedule's definition exactly. As
+$i \to \infty$, $\tau(i)$ reaches $\tau_{\min}$ \emph{exactly} once $i
+\geq i_0 := (\tau_0 - \tau_{\min})/c$, not merely in the limit, so
+$K_i = [\tau_{\min},1]$ for all $i \geq i_0$, and
+$\bigcup_i [\tau(i),1] = [\tau_{\min},1]$ is already closed: for this
+particular schedule, the closure in the definition of $K_\infty$ adds
+nothing, though it would be needed for a schedule approaching its
+floor only asymptotically.
+\end{proof}
+
+\begin{remark}
+Everything below $\tau_{\min}$ is hard-excluded regardless of budget;
+everything in $[\tau_{\min}, \tau_0)$ is investment-reachable but not
+part of the original admissible set, exactly the region terraforming
+is supposed to buy; and $\tau_{\min}$ itself is where the two kinds of
+boundary this chapter opened with meet, the point past which no
+further increment of $E_\delta$ does anything at all, since $\tau$ is
+already at its floor.
+\end{remark}
+
+\section*{An open question}
+
+\begin{openproblem}
+Chapter 1 showed that a family of \emph{contracting} operators drives
+any starting shape to a unique attractor from outside, in the sense
+that repeated application converges in Hausdorff distance regardless
+of where it starts. An investment family is expansive rather than
+contracting, but it is monotone and, in examples like the one above,
+bounded above by a fixed $K^{\mathrm{hard}}$. Whether a bounded,
+monotone, expansive operator family converges to a well-defined limit
+shape in an analogous sense, a kind of attractor approached from
+below rather than surrounded from outside, is not addressed here.
+The habitability example converges to $[\tau_{\min},1]$ by direct
+computation, but nothing in this chapter establishes that this always
+happens, only that it happened once.
+\end{openproblem}
+
+\section*{Closing}
+
+Nothing about the operators in this chapter required a new
+definition; Chapter 4's continuation operators, applied to constraint
+sets instead of reachable sets, were already enough. What was new was
+the question, not the machinery, and that is the right way around for
+a book that has tried, throughout, to reuse what it already has before
+reaching for something else.
+
+\chapter{Semantic Manifolds}
+
+Call a light red and you have already thrown away almost everything
+true about it: which fraction of a second into the cycle it is, how
+many pedestrians are waiting, whether a request was just registered
+or has been pending for a while. None of that survives the word. And
+yet the word is not a failure of description, it is the entire point
+of having one. A category is supposed to discard detail. The question
+this chapter actually has to answer is not whether ``red'' throws
+things away, every category does, but whether there is a principled
+mathematical object underneath the word at all, or whether ``meaning''
+was always going to be a modeling choice dressed up as a discovery.
+
+An earlier sketch of this project wanted to say that a semantic
+category is an equivalence class of histories under
+$\Gamma(h_1) \cong \Gamma(h_2)$, and stopped there, with $\cong$ never
+specified. That is not a theorem with a gap in it. It is a sentence
+that has not yet decided what it is about. This chapter decides,
+and part of deciding honestly is admitting that the most obvious
+candidate is wrong before proposing a better one.
+
+\section*{The obvious candidate is too strict}
+
+The most literal reading of $\Gamma(h_1) \cong \Gamma(h_2)$ available
+in this book is equality, $\Gamma(h_1) = \Gamma(h_2)$, which is
+exactly $\sim_\Gamma$ from Chapter 2. Nothing new would be needed to
+state a theorem this way. Something would be lost by doing so.
+
+\begin{proposition}
+Ordinary semantic categories are, in general, coarser than
+$\sim_\Gamma$: there exist $h_1, h_2$ commonly called by the same
+name with $\Gamma(h_1) \neq \Gamma(h_2)$.
+\end{proposition}
+\begin{proof}
+Chapter 6, Theorem~1: $(0,0)$ and $(0,1)$, both ordinarily described
+as ``waiting at the red light,'' satisfy $R_1(0,0) = \{(1,0),(1,1)\}
+\neq \{(1,1)\} = R_1(0,1)$.
+\end{proof}
+
+\begin{remark}
+This was already proved for a different purpose, and it settles the
+question immediately: if $\cong$ is read as literal equality, ``red
+light'' is not a semantic category in this book's sense at all, since
+two states any ordinary speaker would call by that name already fail
+to be $\sim_\Gamma$-equivalent. Meaning, whatever it turns out to be,
+cannot be this strict without contradicting how the word is actually
+used.
+\end{remark}
+
+\section*{A structural alternative}
+
+A weaker and more promising idea is that two situations share a
+meaning not because their futures are identical, but because their
+futures have the same \emph{shape}, related by some symmetry of the
+system rather than by outright coincidence.
+
+\begin{definition}[Structural equivalence]
+Fix the metric $d((k,r),(k',r')) := d_{\mathrm{cyc}}(k,k') + |r-r'|$
+on $X = \{0,1,2,3\} \times \{0,1\}$, where $d_{\mathrm{cyc}}(k,k') :=
+\min(|k-k'|, 4-|k-k'|)$ is the cyclic distance on phase. Let $G$ be a
+group of isometries of $(X,d)$ acting \emph{equivariantly}: $g(R_T(x))
+= R_T(g(x))$ for every $g \in G$ and every $x$. States $x,y$ are
+$G$-equivalent, $x \sim_G y$, if $y = gx$ for some $g \in G$.
+\end{definition}
+
+\begin{remark}
+This is a genuine equivalence relation for the reason a single fixed
+map is not: reflexivity, symmetry, and transitivity follow
+automatically from $G$ being a group (the identity, inverses, and
+closure under composition, respectively), whereas $x \sim_\varphi y
+\iff y = \varphi(x)$ for one fixed $\varphi$ need not be symmetric or
+transitive unless $\varphi$ itself happens to generate such a group.
+The equivariance condition is doing real work too: it is what makes
+$\sim_G$ interact sensibly with $\Gamma$ at all, since without it $G$
+could relate states with unrelated futures for no reason connected to
+the dynamics.
+\end{remark}
+
+\begin{example}[An isometry that is not a symmetry]
+Let $\varphi_1 : (k,r) \mapsto ((k+1) \bmod 4,\, r)$, the phase shift.
+$\varphi_1$ is an isometry of $(X,d)$, since cyclic distance is
+translation-invariant. Direct computation gives
+$\varphi_1(R_1(k,r)) = R_1(\varphi_1(k,r))$ for $k=0$ and $k=1$, and
+$\varphi_1(R_1(k,r)) \neq R_1(\varphi_1(k,r))$ for $k=2$ and $k=3$: at
+$k=0$, $\varphi_1(R_1(0,0)) = \{(2,0),(2,1)\} = R_1(1,0)$, matching,
+while at $k=2$, $\varphi_1(R_1(2,0)) = \{(0,0),(0,1)\} \neq
+\{(0,0)\} = R_1(3,0)$, failing.
+\end{example}
+
+\begin{remark}
+This computation shows $\varphi_1$ fails equivariance, and the
+honest conclusion is narrower than a first pass at this example
+suggested. Since equivariance must hold everywhere for $\langle
+\varphi_1 \rangle$ to generate a valid $G$, and it demonstrably does
+not (it fails at $k=2,3$), $\varphi_1$ cannot be used to build a
+nontrivial structural equivalence on this system at all under
+Definition 3: the only group of isometries equivariant with this
+particular $\Phi$ across the whole space is the trivial one. What the
+computation does show, and what is worth keeping, is that $\varphi_1$
+is a genuine isometry of the state space that happens to agree with
+the dynamics on part of its domain and disagree on the rest, phases
+$0,1$ against phases $2,3$, precisely the phases adjacent to
+clearing. That is a real fact about where the system's transition
+rule does and does not resemble a uniform relabeling, but it is a
+fact about a \emph{local}, not global, correspondence, best formalized
+by a groupoid of partial symmetries rather than a group if pursued
+further, an extension not carried out here. A word like ``waiting''
+that treats all four phases alike is, on this reading, not grounded
+in even a partial group symmetry of the dynamics; it is grounded in
+nothing more than the coarse observation $\Pi$ discussed already, and
+the appeal of the phase-shift computation is diagnostic rather than
+foundational: it locates precisely where a uniform label stops being
+defensible, without supplying the label a genuine structural warrant
+anywhere.
+\end{remark}
+
+\section*{What a semantic category actually is}
+
+Neither $\sim_\Gamma$ nor $G$-equivalence is what ordinary
+language means by a category, and this chapter's honest conclusion is
+that nothing in this book's vocabulary should be expected to be. A
+semantic category, ``red light,'' ``waiting,'' ``sleeping,'' is
+generally an observation map $\Pi$ in the sense of Chapter 6, chosen
+for reasons external to continuation fidelity entirely: convenience,
+communicability, whatever distinctions happened to be salient to
+whoever built the vocabulary. Chapters 2, 3, and 6 did not need this
+chapter's help to already supply the complete toolkit for auditing
+such a choice once made: whether $\Pi$ is state-sufficient
+(Chapter 6), and if not, exactly how much it loses and at which fibers
+(Chapter 3). What this chapter adds is a second, independent question
+worth asking of the same $\Pi$: does it happen to align with a genuine
+equivariant symmetry of the system, in the sense of $G$-equivalence,
+or does it merely resemble one locally, as ``waiting'' does on the
+traffic light, agreeing with a candidate isometry on two of four
+phases while failing the equivariance a genuine group would need
+everywhere. A category can be lossy and still correspond to a real,
+if partial, structural pattern; it can also be lossy and correspond
+to no pattern in the dynamics at all. This book's machinery can tell
+these apart even when neither rises to the strength of a genuine
+group symmetry. It cannot tell you which category to use, because
+that was never a mathematical question in the first place.
+
+\begin{remark}[On the original theorem]
+The equivalence class construction this chapter was meant to
+formalize, meaning as continuation-equivalence rather than
+state-equivalence, survives, but not as a single theorem with one
+canonical $\cong$. It survives as a choice between at least two
+precise, inequivalent relations, $\sim_\Gamma$ (too strict for
+ordinary use) and $G$-equivalence under an equivariant symmetry group
+(precise, but demanding enough that this book's own worked example
+satisfies it only trivially), together with the recognition that most
+categories anyone actually uses are neither, and are auditable against
+both without being reducible to either.
+\end{remark}
+
+\chapter{Triple Stores and Reachability Closure}
+
+A relational table starts from entities and attaches properties to
+them. A graph database of the kind an RDF triple store implements
+starts from relations and lets entities emerge as whatever sits at
+the ends of them. A single fact, Paris is the capital of France,
+becomes an edge, not a row, and a database built entirely out of
+edges like this one turns out to behave less like a filing cabinet
+and more like something this book has spent its length studying: a
+small set of local rules whose repeated application reaches much
+further than what was explicitly written down. The temptation is to
+call this generation in exactly the sense of Chapter 1's fern. That
+temptation should be resisted, and resisting it properly is most of
+what this chapter does.
+
+\section*{Reachability, not generation}
+
+\begin{definition}
+For entities $X$ and triples $E \subseteq X \times P \times X$ (with
+$P$ a set of predicates), the one-step reachability operator is
+$\Phi(x) := \{y : (x,p,y) \in E \text{ for some } p \in P\}$, and
+$R_T(x) := \bigcup_{n=0}^{T} \Phi^n(x)$ is the set of entities
+reachable within $T$ edges.
+\end{definition}
+
+\begin{remark}
+This is not new. It is the Kauffman correspondence of Chapter 2 of
+\emph{Continuation Geometry} \cite{kauffman2000}, already proved there
+by induction to satisfy $S_{t+1} = S_t \cup \mathrm{Adj}(S_t)$, applied
+here with $\mathrm{Adj}(S_t) := \bigcup_{x \in S_t} \Phi(x)$. That
+chapter was careful to distinguish this construction from generation
+in the sense of a Hutchinson attractor, and the distinction matters
+enough here to restate: $\Phi$ is not, in general, a contraction of
+anything. There is no metric under which traversing an edge shrinks
+distances, no completeness argument, no Banach fixed point, and
+correspondingly no unique limit shape that repeated traversal
+converges to. $R_T(x)$ simply grows, a monotone union exactly as
+Proposition 1 of \emph{Continuation Geometry}'s Chapter 2 already
+proved for this recursion in general. A triple store is an instance
+of accumulation, not of the contracting machinery Chapter 1 of this
+book built. Calling it generative in that stronger sense would be the
+same conflation this book's own first chapter took care to rule out.
+\end{remark}
+
+\begin{remark}
+What survives of the analogy is real, and worth keeping separate from
+what does not. A small, explicit generator set producing a much
+larger implicit structure is common to both an IFS attractor and a
+triple store's transitive closure; only the mechanism differs, metric
+contraction to a fixed point in one case, combinatorial branching
+outward from a seed in the other. The next section makes the
+branching case precise on its own terms rather than borrowing Chapter
+1's vocabulary for it.
+\end{remark}
+
+\begin{center}
+\begin{tabular}{ll}
+\hline
+\textbf{This book} & \textbf{RDF / graph databases} \\
+\hline
+one-step reachability $\Phi$ & edge traversal \\
+$R_T(x)$ & $T$-hop neighborhood \\
+continuation volume $\operatorname{Vol}_T$ & neighborhood size \\
+$\sim_\Gamma$ & indistinguishable neighborhoods \\
+continuation quotient & graph compression \\
+sufficient statistic (Chapter 5 of \emph{Continuation Geometry}) & context coordinate \\
+continuation distance $d_\Gamma$ & embedding similarity \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{remark}
+This table is a reading aid, not a further claim; every row is
+established, corrected, or left explicitly open in the sections that
+follow, and none of them should be taken as settled by appearing in a
+table.
+\end{remark}
+
+\section*{How much is implied by how little}
+
+\begin{proposition}[Reachable volume under bounded branching]
+\label{prop:volbound}
+If $|\Phi(x)| \leq b$ for every $x$, then
+$|R_T(x)| \leq \sum_{k=0}^{T} b^k$.
+\end{proposition}
+\begin{proof}
+By induction on $T$. $|R_0(x)| = 1 \leq b^0$. Assume
+$|R_T(x)| \leq \sum_{k=0}^T b^k$. Every element of $R_{T+1}(x)$ is
+either already in $R_T(x)$ or reached by one further edge from some
+element of $\Phi^T(x)$, so
+$|R_{T+1}(x)| \leq |R_T(x)| + |\Phi^T(x)| \cdot b \leq |R_T(x)| +
+b^{T+1}$ (bounding $|\Phi^T(x)|$ by $b^T$, itself an immediate
+consequence of the same bound applied one level down), giving
+$|R_{T+1}(x)| \leq \sum_{k=0}^{T+1} b^k$.
+\end{proof}
+
+\begin{corollary}
+For $n$ entities each with out-degree at most $b$, edge storage is
+$O(nb)$, while a single entity's $T$-step reachable volume can be as
+large as $\Theta(b^T)$, exceeding total edge storage once
+$T > \log_b(n)$ roughly.
+\end{corollary}
+
+\begin{remark}
+This is the honest version of the compression claim: not that the
+store is somehow secretly larger than it appears, but that the
+quantity worth measuring, $T$-step reachable volume in the sense of
+Chapter 6's $\operatorname{Vol}_T$, specialized here to counting
+measure on a discrete graph, grows combinatorially in $T$ while
+storage grows linearly in $n$. A social graph storing a hundred
+million edges can have individual $T$-step neighborhoods, for modest
+$T$, larger than the edge set itself. Nothing about this requires the
+store to compute or cache those neighborhoods in advance; $\Phi$
+alone, applied repeatedly at query time, is enough.
+\end{remark}
+
+\section*{Context coordinates as retained history}
+
+A triple store proper cannot represent two facts about the same
+subject and predicate at once. A quad store, storing $(s,p,o,g)$ for
+a context or graph label $g$, can. Whether dropping $g$ is a
+representational loss or an operational one, in the sense of Chapter
+10, depends on which kind of store is being asked.
+
+\begin{example}[Representational: a query drops context]
+A quad store holds both $(\text{Alice}, \text{worksAt}, \text{Acme},
+2024)$ and $(\text{Alice}, \text{worksAt}, \text{BetaCorp}, 2026)$. A
+query that ignores $g$ sees both employers as simultaneously true,
+losing the temporal distinction, but the underlying store still holds
+both facts and a differently written query recovers them. This is
+Chapter 3's fiber loss, not Chapter 11's operational loss: nothing was
+destroyed, only misread by one particular query.
+\end{example}
+
+\begin{example}[Operational: the schema has no $g$ slot]
+A plain triple store with a functional predicate, at most one object
+per subject-predicate pair, cannot hold both facts at all; inserting
+the second triple overwrites or conflicts with the first. Here the
+distinction is gone in the sense Chapter 11 gives that word: no query
+against this store, however cleverly written, recovers the discarded
+employer, because the schema itself never retained the information
+needed to answer it.
+\end{example}
+
+\begin{corollary}[Context coordinates are sufficient-statistic augmentation]
+\label{cor:context-augmentation}
+Let $X$ be the space of $(s,p,o)$ triples and let $g$ range over
+contexts. If $\Gamma(s,p,o,g) \neq \Gamma(s,p,o,g')$ for some $s,p,o$
+and $g \neq g'$, then the plain-triple observation $\Pi(s,p,o,g) :=
+(s,p,o)$ is state-insufficient in the sense of Chapter 6, and the
+quad-store state $(s,p,o,g)$ is exactly the augmentation
+$x \mapsto (x, \varphi(H_t))$ of Chapter 5 of \emph{Continuation
+Geometry}, with $g$ playing the role of the retained coordinate
+$\varphi(H_t)$.
+\end{corollary}
+\begin{proof}
+This is Chapter 5 of \emph{Continuation Geometry} instantiated
+directly: that construction augments a state $x$ with a summary
+$\varphi(H_t)$ of history exactly when $\Gamma$ depends on more than
+$x$ alone, and requires nothing beyond checking that dependence, which
+is the stated hypothesis $\Gamma(s,p,o,g) \neq \Gamma(s,p,o,g')$
+here. No new argument is needed; the triple store's context label is
+an instance of an already-proved construction, not a new one.
+\end{proof}
+
+\begin{remark}
+The graph label $g$, read this way, is a sufficient statistic in the
+sense of Chapter 5 of \emph{Continuation Geometry}: it is exactly the
+augmented coordinate that construction called for, $x$ silently
+becoming $(x, g)$, when a single observable state is not enough to
+determine what comes next. A triple store without context coordinates
+is a system that has already discarded that augmentation; whether the
+discarding is fixable is not a fact about the data remaining somewhere
+unread, it is a fact about whether the schema was built to keep it.
+\end{remark}
+
+\section*{Meaning, corrected}
+
+\begin{remark}
+It is tempting, watching graph embeddings work well in practice, to
+write $\mathrm{Meaning}(x) \approx \Gamma(x)$ and stop there. Chapter
+9 already showed why the naive version of that claim, meaning as
+literal reachable-set equality, is too strict: two entities with
+almost, but not exactly, identical neighborhoods would count as
+having nothing in common, which is not how embeddings or ordinary
+semantic judgment actually behave. What graph embeddings compute is
+closer to a distance than an equality, neighborhoods aggregated and
+compared by similarity rather than checked for exact coincidence,
+which is Chapter 6's $d_\Gamma$, not $\sim_\Gamma$. Two entities being
+semantically close because their $T$-step neighborhoods are near in
+Hausdorff distance is a defensible, gradeable claim in a way that
+Chapter 9 already proved bare equality is not. The correction Chapter
+9 made for a four-state traffic light applies without modification to
+a hundred-million-edge graph.
+\end{remark}
+
+\begin{remark}[The shape of the connection to graph neural networks, and its limit]
+The structural form $\mathrm{Embedding}(x) := F(R_T(x))$, for some
+aggregation $F$, names the right correspondence: an embedding is a
+compressed coordinate on a continuation space, exactly matching this
+book's $d_\Gamma$ once $F$ is chosen so that similar aggregated
+outputs correspond to nearby reachable sets. What this remark does
+not claim is that graph neural networks compute this $F$ mechanically
+as stated. Real architectures aggregate learned feature vectors
+attached to nodes through differentiable, trained functions, layer by
+layer, not a fixed $F$ applied once to the raw reachable set $R_T(x)$;
+the correspondence here is a claim about shape, an aggregation of
+neighborhood structure into a compressed coordinate, not a claim that
+this book's formalism reproduces the mechanics of message passing or
+attention. Treating $F(R_T(x))$ as a structural analogy for what an
+embedding is doing, rather than a specification of how one is
+computed, is the honest version of this connection.
+\end{remark}
+
+\section*{What compresses, made exact}
+
+\begin{corollary}[Graph quotient]
+\label{cor:graphquotient}
+Fix horizon $T$. The relation $x \sim_T y \iff R_T(x) = R_T(y)$ is an
+equivalence relation on graph nodes, and the quotient graph it induces
+is the coarsest graph preserving every $T$-bounded reachability query
+against the original.
+\end{corollary}
+\begin{proof}
+$\sim_T$ is $\sim_\Gamma$ specialized to $\Gamma := R_T$, so it is an
+equivalence relation by the definition of Chapter 2. That the induced
+quotient is coarsest among those preserving $T$-bounded queries is
+Theorem 1 of Chapter 3 (the coarsest zero-loss quotient), instantiated
+with $H$ the node set and $\Gamma := R_T$: any coarser identification
+merges some pair with $R_T(x) \neq R_T(y)$, which some $T$-bounded
+query distinguishes, by definition of $R_T$ as the record of every
+node reachable within $T$ edges.
+\end{proof}
+
+\begin{remark}
+Graph compression by neighborhood equivalence is not analogous to a
+continuation quotient. It is one, with no translation required beyond
+choosing $\Gamma := R_T$.
+\end{remark}
+
+\begin{remark}[An unplanned validation of Chapter 6]
+Graph practitioners already draw, informally and by necessity, the
+same distinction Chapter 6 built formally: a node's identifier and a
+node's neighborhood are different things, and two nodes can share one
+while differing in the other. A recommendation system that
+deduplicates users by neighborhood similarity, ignoring stated
+identity, and a knowledge graph that keeps two identically-labeled
+entities apart because their surrounding facts differ, are both
+already committed to the claim Chapter 6 had to argue for from first
+principles: that an observable label need not be sufficient to
+determine what a node's structure actually is. This does not make
+Chapter 6's argument redundant. It makes it independently confirmed,
+by a field that arrived at the same distinction for entirely practical
+reasons and never needed to call it state insufficiency to rely on it.
+\end{remark}
+
+\section*{Closing}
+
+A triple store is a real system built, apparently independently of
+this book's concerns, around the same primitive this book has spent
+its length formalizing: not the state of an entity, but what remains
+reachable from it. Where the analogy to Chapter 1's attractors was
+tempting and wrong, this chapter said so and pointed to the
+correspondence that is actually apt, Chapter 2's accumulation. Where
+the analogy to Chapter 9's meaning was tempting and too strong, this
+chapter softened it to the distance Chapter 6 already built. What
+needed no correction at all, the compression argument and the
+context-coordinate reading, is offered as this chapter's genuine
+contribution: not a new theorem, but two places where an existing one
+turned out to already be about something built for entirely different
+reasons a decade before this book was written.
+
+\chapter{Representational Loss versus Operational Loss}
+
+Tell someone that a system ``cleared its memory'' and they will
+picture one of two entirely different events, and ordinary language
+gives them no way to know which. In the first, a record-keeper simply
+starts describing two situations the same way going forward, a
+paperwork decision that changes nothing about the world the paperwork
+describes. In the second, something is physically erased, and the
+capability that depended on it is gone regardless of what anyone
+writes down afterward. A summary of this book's own traffic-light
+example blurred exactly this line, narrating a change of label as
+though it were a change of wiring, and the blur is worth resolving
+properly, since the two events have the same size in bits and
+opposite consequences in the world.
+
+\section*{Two kinds of forced merge}
+
+\begin{definition}[Representational loss]
+For a quotient $q : H \to O$, the representational loss at a fiber $o$
+is $\mathcal{L}(o) := \log |C_\Gamma(o)|$, exactly as in Chapter 3:
+the log-count of distinct continuation spaces a description choice
+groups under one label, with the underlying dynamics $\Phi$ left
+untouched.
+\end{definition}
+
+\begin{definition}[Operational loss]
+For an intervention $T$ (Chapter 7) applied on a set $S$, the
+operational loss on $S$ is $\mathcal{L}_{\mathrm{op}}(T,S) := \log
+|\{\Gamma(x) : x \in S\}|$, computed on the \emph{pre-intervention}
+values of $\Gamma$: the log-count of distinct futures $S$'s members
+actually had before $T$ forced them to a common target.
+\end{definition}
+
+\begin{remark}
+The two definitions look identical, and the resemblance is the point,
+not an accident to apologize for. What differs is not the formula but
+what it is being asked about. Representational loss is a property of
+a description laid over an unchanged system: the pedestrian's request
+is still there, still shaping the real controller's real next state,
+and only the label an observer uses to talk about it has become too
+coarse to reveal that. Operational loss is a property of the system
+after something has actually acted on it: the request itself is gone,
+and no amount of relabeling recovers it, because there is nothing
+left to relabel accurately.
+\end{remark}
+
+\section*{What Chapters 2 and 3 actually did}
+
+\begin{proposition}
+\label{prop:purelyrep}
+Every computation in Chapters 2 and 3 involving the traffic light's
+alternative clearing rule used a single fixed $\Phi$ throughout;
+$\mathcal{L}_{\mathrm{op}} = 0$ everywhere in that material, since no
+intervention was ever applied.
+\end{proposition}
+\begin{proof}
+The alternative rule considered in Chapter 2 (clearing whenever
+currently at phase $0$, rather than on arrival) was introduced and
+evaluated entirely as a candidate quotient $q$, compared against the
+one fixed transition function $\Phi$ given in that chapter's
+definition. Chapter 3's loss computation, likewise, computed
+$C_\Gamma(o_{\mathrm{bad}})$ using $R_1$ values generated by that same
+single $\Phi$. At no point was a second transition function
+constructed, nor was any operator applied to a state to force its
+subsequent behavior; every quantity computed was a property of a
+label held up against one unchanging system.
+\end{proof}
+
+\begin{remark}
+This is worth stating as a proposition rather than a footnote,
+because the natural way to narrate the same material out loud tends
+to drift toward the operational reading without anyone intending it
+to. Saying a design ``forcibly changes state $A$ into state $B$'' is
+a perfectly natural way to describe a coarse label, but it is also,
+read literally, a description of an intervention, and the two readings
+support different conclusions. Under the representational reading,
+nothing about the intersection's actual behavior was ever at stake;
+the pedestrian's request was tracked correctly by $\Phi$ the entire
+time, and the only failure was in how a hypothetical observer using
+the bad label would have talked about it. Proposition~\ref{prop:purelyrep}
+is the precise statement that this is, in fact, all that was shown.
+\end{remark}
+
+\section*{The operational twin}
+
+\begin{example}[The same bit, actually erased]
+Let $T'$ be the operator sending $(0,1) \mapsto (0,0)$ (and fixing
+every other state), a genuine intervention in the sense of Chapter 7:
+it forces the physical request bit to $0$ at the moment of
+intervention, not merely relabels the situation.
+\end{example}
+
+\begin{proposition}
+$\mathcal{L}_{\mathrm{op}}(T', \{(0,0),(0,1)\}) = \log 2$, exactly the
+value Chapter 3 computed for the representational case.
+\end{proposition}
+\begin{proof}
+The pre-intervention values are $\Gamma(0,0) = R_1(0,0) =
+\{(1,0),(1,1)\}$ and $\Gamma(0,1) = R_1(0,1) = \{(1,1)\}$, already
+established as distinct in Chapter 6. So $|\{\Gamma(0,0),\Gamma(0,1)\}|
+= 2$, giving $\mathcal{L}_{\mathrm{op}} = \log 2$.
+\end{proof}
+
+\begin{remark}
+The number is identical to Chapter 3's one bit, and this identity of
+magnitude is exactly what makes the two cases easy to conflate and
+important to keep separate. Under $T'$, a pedestrian who ran up and
+pressed the button while the light sat at phase $0$ genuinely loses
+the system's acknowledgment of that press: the controller's actual
+future behavior is now the same whether or not the button was pressed,
+because the operator overwrote the state that would have carried the
+difference forward. This is not a labeling failure a better catalog
+could fix. The information a better label would have preserved is no
+longer there to preserve.
+\end{remark}
+
+\section*{Why the difference is not academic}
+
+\begin{remark}
+A purely representational loss is repaired for the cost of a better
+label, since Proposition~\ref{prop:purelyrep}'s kind of failure never
+touched the underlying system; recomputing $\sim_\Gamma$ correctly and
+using it instead costs nothing beyond noticing the old label was
+wrong. An operational loss, once incurred, is repaired only by
+whatever it takes to restore the erased distinction physically, if
+that is even possible, since Chapter 7's machinery already
+established that an intervention forcing $\Gamma(T(x))$ to a fixed
+target is not, in general, invertible by any further relabeling.
+Mistaking the second kind of failure for the first is not a rounding
+error. It is the difference between believing a problem is free to
+fix and not noticing that it no longer can be.
+\end{remark}
+
+\chapter{Closing}
+
+The word in this book's title was chosen before most of the book was
+written, which is the ordinary way titles get chosen and also, on
+reflection, a reasonable place to end by checking. A fern grown from
+four contractions is generative in the most literal sense available:
+nothing was accumulated, everything was produced by rules acting on
+their own output. Not everything that came after Chapter 1 earned the
+word as cleanly, and an honest closing chapter has to say so rather
+than let the title do the arguing for chapters that moved on to
+something else.
+
+\section*{What was established}
+
+Stated plainly: this book proved the Continuation Attractor Theorem
+in full, a genuine Hutchinson-and-Banach result applied to the
+Hausdorff-metric space of reachable sets already built in the first
+book, with a worked, verified Cantor-set instance. It defined the
+continuation quotient without circularity, having first caught and
+discarded an earlier attempt that assumed its own conclusion, and
+proved its universal property and its invariance property from that
+definition alone. It proved that the coarsest quotient losing no
+continuation-relevant information is $\sim_\Gamma$ itself, tying
+directly back to the sufficient-statistic material of the first
+book's Chapter 5 rather than introducing a competing notion. It
+computed, exactly and by verified arithmetic rather than by hand-wave,
+where a real toy system's design was provably correct and where a
+superficially similar alternative would have provably destroyed
+information, and it caught a genuine numerical error in its own first
+attempt at that computation before publishing the corrected version.
+It placed generation and collapse in one vocabulary,
+a continuation operator, and proved that vocabulary closed under
+composition regardless of where an operator sits on the genuinely
+separate axes of contraction and injectivity, catching and correcting
+an overclaim of its own that had compressed those axes into one
+number. It proved a real Collage Theorem, three lines
+long and built entirely from material the first chapter had already
+established, and used it to prove that every compact target is
+approximable, while keeping that result honestly separated from the
+much harder conjecture it is often mistaken for. It resolved an
+explicitly flagged gap, state insufficiency, without inventing a new
+toy system to do it, by observing an already-built one differently.
+It gave staleness and invariant-block separation different proofs and
+different remedies rather than one gesture toward both, reusing a
+Gr\"onwall estimate from the first book's own appendix rather than
+deriving a new one. It showed that investment-movable admissibility
+needed no new operator definition at all, only a decision to point
+Chapter 4's machinery at constraint sets instead of shapes. It
+resolved its own explicitly flagged undefined symbol, settling on two
+precise and mutually irreducible notions of continuation-equivalence
+rather than one overloaded one, and said plainly when the answer
+reduced to material already on hand. It found, in an industrial graph
+database built for entirely unrelated reasons, a genuine instance of
+this book's own primitive, and was honest that the instance fit one
+chapter's vocabulary well and another's not at all, correcting a
+tempting but wrong analogy to generation before it could take root.
+And, close to the end, it caught
+a conflation in a plausible-sounding retelling of its own second
+chapter and gave the conflation a name and a formal treatment rather
+than a footnote.
+
+\section*{What was not}
+
+The Universal Continuation Generation conjecture, named precisely in
+Chapter 5, was not proved, and this book's own methods do not reach
+it; the gap between existence of an approximating family and
+existence of a single universal one was made exact, not closed.
+Whether a genuinely dimensional, rather than merely cardinality-based,
+obstruction to finite sufficient statistics exists remains exactly
+where the first book left it, untouched here. The question of whether
+a bounded, monotone, expansive operator family converges to a
+well-defined limit from below, Chapter 8's open problem, was
+demonstrated once and proved never. Whether any operator actually
+named Collapse, Refuse, or Project elsewhere in this corpus is
+literally, technically a contraction or a quotient in the senses
+built here was repeatedly flagged as an empirical question about
+those specific constructions and was never once investigated. The
+nested-constraint account of agency raised during this book's
+planning was set aside for lack of any formal target this vocabulary
+could give it, and it should stay set aside until one is found rather
+than be forced into whichever chapter seemed most convenient. And no
+chapter here built a general repair theory for operational loss
+analogous to the first book's account of repair as capture; Chapter
+10 named the distinction between a loss that can be undone by
+relabeling and a loss that cannot, but said nothing about how, or
+whether, the second kind is ever actually recovered.
+
+\section*{Was generative the right word}
+
+Read the table of contents cold and the honest pattern is this: two
+chapters, the first and part of the eighth, are generative in the
+sense the title promises, operators building structure up from
+nothing but their own repeated application. A comparable number,
+the second, third, sixth, seventh, ninth, tenth, and eleventh, are
+about the opposite motion: quotients collapsing distinctions, losses
+computed and located, insufficiencies made explicit, failure modes
+kept formally apart, conflations caught and corrected, an industrial
+example's own generative-sounding analogy corrected on arrival. The
+fourth chapter
+is the hinge, though its own closing claim had to be corrected before
+it could bear the weight this paragraph puts on it: generation and
+collapse are not two regions of one Lipschitz parameter, a single
+number never separated them, only injectivity did that, independently
+of contraction. What the fourth chapter actually earned is narrower
+and still real: both motions share one vocabulary, continuation
+operators, and are checkable by the same closure property regardless
+of which region of that richer, multi-axis space they occupy. The
+book was never really about generation any more than it was about
+collapse. It was about the vocabulary both turned out to need.
+
+\section*{A fourth thread the count above simplifies}
+
+The two-bucket count above, generative against everything else, is
+honest as far as it goes, but it is not the finest division available,
+and pretending otherwise would repeat exactly the kind of premature
+compression this book has spent its length arguing against. Chapters
+7 and 8 do not answer the question the rest of the book keeps
+returning to: whether two histories, states, or descriptions can be
+treated as the same without losing anything continuation-relevant.
+Invariant decomposition is not a quotient in that sense at all; it
+says nothing about identifying $x$ with $y$, only that some region of
+the state space is causally sealed off from the rest, a fact about a
+set, not a relation on a pair. Staleness and intervention are not
+equivalence questions either; they concern what happens to a fixed
+piece of knowledge, or a fixed state, as time elapses or as force is
+applied, a question about change over time rather than about which
+things coincide. Chapter 8's investment operators inherit the same
+character: a boundary moving as effort accumulates is a claim about a
+schedule, not about which states are interchangeable.
+
+What Chapters 7 and 8 share, and what generation, quotienting, and
+sufficiency alike do not quite have room for, is a concern with time
+and force themselves: how a fact about a system degrades, is
+confined, or is overridden as the clock runs or as effort is spent,
+independent of whether two things were ever the same to begin with.
+This book is better described by four threads than by two:
+generation, quotienting, sufficiency, and the dynamics of
+admissibility and knowledge under time and intervention. Naming the
+fourth one now, rather than folding it into whichever of the first
+three it resembled most, is the same discipline this book applied to
+its own Lipschitz overclaim in Chapter 4 and its own undefined
+equivalence in Chapter 9: a count that comes out even is not evidence
+the count was right.
+
+\begin{remark}
+If this book has a real center of gravity, it is not the fern and it
+is not the confluence of rivers. It is the discovery, made honestly
+and only in retrospect, that a project which set out to explain how
+futures get built spent most of its actual length explaining how they
+get lost, mislabeled, confined, staled, and mistaken for one another,
+and that neither half makes sense as a theory on its own. A theory of
+generation with nothing to say about loss would not have been able to
+tell a correct design from an incorrect one in Chapter 2. A theory of
+loss with nothing to say about generation would have had no attractor
+to measure the loss against in the first place. The title stays,
+because the object it names, a continuation operator, really does
+generate both halves from one definition. But anyone reading this book
+for a theory of how futures are built should know, going in, that they
+are about to spend at least as much time learning how futures are
+taken away.
+\end{remark}
+
+\chapter*{References}
+\addcontentsline{toc}{chapter}{References}
+
+\begin{thebibliography}{99}
+\bibitem{banach1922}S.\ Banach, ``Sur les op\'erations dans les
+ensembles abstraits et leur application aux \'equations
+int\'egrales,'' Fundamenta Mathematicae, 3 (1922).
+\bibitem{falconer2003}K.\ Falconer, \emph{Fractal Geometry:
+Mathematical Foundations and Applications}, 2nd ed., Wiley, 2003.
+\bibitem{barnsley1988}M.\ Barnsley, \emph{Fractals Everywhere},
+Academic Press, 1988.
+\bibitem{hutchinson1981}J.\ E.\ Hutchinson, ``Fractals and
+self-similarity,'' Indiana University Mathematics Journal, 30 (1981).
+\bibitem{stone1948}M.\ H.\ Stone, ``The generalized Weierstrass
+approximation theorem,'' Mathematics Magazine, 21 (1948).
+\bibitem{cybenko1989}G.\ Cybenko, ``Approximation by superpositions
+of a sigmoidal function,'' Mathematics of Control, Signals, and
+Systems, 2 (1989).
+\bibitem{aubinframkowska1990}J.-P.\ Aubin, H.\ Frankowska,
+\emph{Set-Valued Analysis}, Birkh\"auser, 1990.
+\bibitem{kauffman2000}S.\ Kauffman, \emph{Investigations}, Oxford
+University Press, 2000.
+\end{thebibliography}
+
+\end{document}

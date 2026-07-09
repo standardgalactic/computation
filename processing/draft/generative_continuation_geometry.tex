@@ -1,0 +1,1213 @@
+\documentclass[11pt]{report}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Pagella}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black}
+
+\newtheorem{proposition}{Proposition}[chapter]
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{remark}{Remark}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{conjecture}{Conjecture}[chapter]
+
+\title{\textbf{Generative Continuation Geometry}\\[0.3em]
+\large Working Draft}
+\author{Flyxion}
+\date{July 2026}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\chapter{Continuation Attractors}
+
+A fern frond is not drawn leaf by leaf. Look closely at one pinna and
+it is, near enough, a smaller fern; look closer still at one pinnule
+of that pinna and it is, near enough, a smaller fern again. Nobody
+specified the shape of the whole plant directly. A small number of
+growth rules, applied to their own output over and over, produced
+something with more detail than any of the rules themselves contain.
+The shape is not stored anywhere. It is generated.
+
+\emph{Continuation Geometry} spent its length measuring futures:
+how much room a state has, how far apart two states' futures sit, when
+a distinction between futures collapses to nothing. All of that took
+the space of futures as given, something to be measured once it
+already existed. This book asks a different question. Can a space of
+futures itself be grown, the way the fern is grown, from a small
+number of simple moves applied to their own output? If continuation
+spaces can be generated rather than merely measured, the natural unit
+of study stops being the space and becomes the small set of
+operations that built it.
+
+This opening chapter answers that question in the one case where the
+answer is already, in a precise sense, classical. It is not a new
+theorem. It is an old and beautiful one, due to Hutchinson, applied
+here to the specific metric geometry the first book already built. The
+payoff is that self-similar continuation structures, the kind
+suggested by a duck, a crown, and a leaf all arising from the same
+underlying rule, turn out to rest on exactly the Hausdorff-distance
+machinery already in hand, with nothing new invented and nothing
+smuggled in from outside.
+
+\section*{Preliminaries: expansion is not generation}
+
+Two facts from \emph{Continuation Geometry} are worth restating here,
+briefly and as what they actually are: lemmas, not theorems, and
+useful precisely because they show what generation is \emph{not}.
+
+\begin{lemma}[Reachable expansion]
+For $S_t \subseteq X$ and $\mathrm{Adj}(S_t) := \bigcup_{x \in S_t} \Phi(x)$
+under a one-step reachability map $\Phi$, the sequence
+$S_{t+1} := S_t \cup \mathrm{Adj}(S_t)$ satisfies $S_t \subseteq S_{t+1}$
+for every $t$.
+\end{lemma}
+\begin{proof}
+Immediate: $S_t \subseteq S_t \cup \mathrm{Adj}(S_t) = S_{t+1}$ by
+definition of union.
+\end{proof}
+
+\begin{remark}
+This, together with the reachable-set recursion proved by induction
+in \emph{Continuation Geometry} (Kauffman's adjacent possible as an
+instance of finite-horizon reachability), is the full content of what
+that book called generation, and it is worth being honest that it
+earns the name only loosely. The sequence $S_0, S_1, S_2, \dots$ grows
+monotonically and without bound unless the underlying space is
+finite; nothing about it converges, and nothing about it is
+self-similar. It is accumulation, not generation in the sense the
+fern illustrates. What follows is different in kind: rather than a
+sequence of ever-larger unions, it is a fixed operator applied
+repeatedly to itself, and the interesting behavior is not growth but
+convergence to a shape that reproduces its own generating rule.
+\end{remark}
+
+\section*{The space of shapes}
+
+Fix $X = \mathbb{R}^n$ (or any complete metric space) and let
+$\mathcal{K}(X)$ denote the set of nonempty compact subsets of $X$,
+equipped with the Hausdorff distance $d_H$ of Chapter 6 of
+\emph{Continuation Geometry}.
+
+\begin{theorem}[Completeness of the space of shapes]
+\label{thm:complete}
+If $(X,d)$ is complete, then $(\mathcal{K}(X), d_H)$ is complete.
+\end{theorem}
+\begin{proof}[Proof sketch]
+Given a Cauchy sequence $\{A_n\}$ in $(\mathcal{K}(X), d_H)$, define
+$A := \bigcap_{N \geq 1} \overline{\bigcup_{n \geq N} A_n}$. One shows,
+using completeness of $X$ and the Cauchy property of $\{A_n\}$ in
+$d_H$, that $A$ is nonempty and compact, and that $d_H(A_n, A) \to 0$.
+This is a standard but genuinely technical result in its full form,
+requiring care with total boundedness and a diagonal argument to
+extract convergent selections from each $A_n$; the complete argument
+is given in \cite{falconer2003} and \cite{barnsley1988} and is not
+reproduced in full here.
+\end{proof}
+
+\begin{remark}
+This theorem is doing real work that is easy to take for granted.
+Without it, nothing built on top of $(\mathcal{K}(X), d_H)$ would be
+guaranteed to have a limit at all; a sequence of shapes could get
+closer and closer together, in the sense of Hausdorff distance,
+without converging to any actual shape. That this cannot happen, that
+the space of compact reachable sets is itself complete whenever the
+underlying state space is, is the entire reason the construction
+below is guaranteed to produce something rather than merely getting
+closer to nothing in particular.
+\end{remark}
+
+\section*{Contractions and the Hutchinson operator}
+
+\begin{definition}[Contraction]
+$T : X \to X$ is a contraction with constant $c \in [0,1)$ if
+$d(Tx, Ty) \leq c\, d(x,y)$ for all $x, y \in X$.
+\end{definition}
+
+\begin{lemma}[Contractions act contractively on shapes]
+\label{lem:setcontract}
+If $T$ is a contraction on $X$ with constant $c$, then for
+$A, B \in \mathcal{K}(X)$, $d_H(T(A), T(B)) \leq c\, d_H(A,B)$, where
+$T(A) := \{Ta : a \in A\}$.
+\end{lemma}
+\begin{proof}
+Fix $a \in A$. Since $B$ is compact, there is $b \in B$ with
+$d(a,b) = \operatorname{dist}(a,B) \leq d_H(A,B)$. Then
+$d(Ta,Tb) \leq c\, d(a,b) \leq c\, d_H(A,B)$, and since
+$Tb \in T(B)$, $\operatorname{dist}(Ta, T(B)) \leq c\, d_H(A,B)$.
+Taking the supremum over $a \in A$ gives
+$\sup_{a' \in T(A)} \operatorname{dist}(a', T(B)) \leq c\, d_H(A,B)$.
+The symmetric argument, exchanging the roles of $A$ and $B$, gives the
+same bound the other way, so $d_H(T(A),T(B)) \leq c\, d_H(A,B)$.
+\end{proof}
+
+\begin{lemma}[Unions are 1-Lipschitz]
+\label{lem:unionlip}
+For finite collections $\{A_i\}_{i=1}^n$, $\{B_i\}_{i=1}^n$ of nonempty
+compact sets, $d_H\left(\bigcup_i A_i, \bigcup_i B_i\right) \leq
+\max_i d_H(A_i, B_i)$.
+\end{lemma}
+\begin{proof}
+Let $m := \max_i d_H(A_i,B_i)$. For $x \in \bigcup_i A_i$, $x \in A_j$
+for some $j$, so $\operatorname{dist}(x, B_j) \leq d_H(A_j,B_j) \leq m$,
+and since $B_j \subseteq \bigcup_i B_i$,
+$\operatorname{dist}(x, \bigcup_i B_i) \leq \operatorname{dist}(x,B_j) \leq m$.
+Taking the supremum over $x \in \bigcup_i A_i$ gives
+$\sup_{x} \operatorname{dist}(x, \bigcup_i B_i) \leq m$. The symmetric
+argument, exchanging the roles of the two collections, gives the same
+bound the other way, so
+$d_H\left(\bigcup_i A_i, \bigcup_i B_i\right) \leq m$.
+\end{proof}
+
+\begin{definition}[Hutchinson operator]
+Given contractions $T_1, \dots, T_n$ on $X$ with constants
+$c_1, \dots, c_n$, define $\mathcal{H} : \mathcal{K}(X) \to \mathcal{K}(X)$
+by $\mathcal{H}(A) := \bigcup_{i=1}^n T_i(A)$.
+\end{definition}
+
+\begin{proposition}[$\mathcal{H}$ is a contraction on shapes]
+\label{prop:hcontract}
+$d_H(\mathcal{H}(A), \mathcal{H}(B)) \leq c\, d_H(A,B)$ for
+$c := \max_i c_i < 1$.
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:unionlip},
+$d_H(\mathcal{H}(A), \mathcal{H}(B)) = d_H\left(\bigcup_i T_i(A), \bigcup_i T_i(B)\right)
+\leq \max_i d_H(T_i(A), T_i(B))$. By Lemma~\ref{lem:setcontract},
+$d_H(T_i(A), T_i(B)) \leq c_i\, d_H(A,B)$ for each $i$. Hence
+$d_H(\mathcal{H}(A), \mathcal{H}(B)) \leq \max_i c_i\, d_H(A,B) = c\, d_H(A,B)$.
+\end{proof}
+
+\section*{The Continuation Attractor Theorem}
+
+\begin{theorem}[Continuation Attractor Theorem, after Hutchinson]
+\label{thm:attractor}
+Let $T_1, \dots, T_n$ be contractions on a complete metric space $X$
+with constants $c_1, \dots, c_n$, and let $c := \max_i c_i < 1$. Then
+there exists a unique $A^\ast \in \mathcal{K}(X)$ with
+$\mathcal{H}(A^\ast) = A^\ast$, and for any $A_0 \in \mathcal{K}(X)$,
+\[
+d_H\big(\mathcal{H}^k(A_0), A^\ast\big) \leq \frac{c^k}{1-c}\, d_H(A_0, \mathcal{H}(A_0)) \xrightarrow{k \to \infty} 0.
+\]
+\end{theorem}
+\begin{proof}
+By Theorem~\ref{thm:complete}, $(\mathcal{K}(X), d_H)$ is complete. By
+Proposition~\ref{prop:hcontract}, $\mathcal{H}$ is a contraction on
+this complete metric space. The Banach Fixed Point Theorem then
+supplies a unique fixed point $A^\ast$ and the stated geometric
+convergence rate, applied directly to $\mathcal{H}$ on
+$(\mathcal{K}(X), d_H)$.
+\end{proof}
+
+\begin{remark}
+No part of this proof required inventing anything: completeness of
+$\mathcal{K}(X)$ is Theorem~\ref{thm:complete}, the contraction
+property of $\mathcal{H}$ is Proposition~\ref{prop:hcontract} built
+from two short lemmas, and the conclusion is the Banach Fixed Point
+Theorem, unmodified. This is the sense in which this chapter is
+mathematically conservative even though its subject, self-similar
+generated shape, sounds exotic: every piece was already sitting in
+the metric structure Chapter 6 of \emph{Continuation Geometry}
+built for an entirely different purpose.
+\end{remark}
+
+\section*{A worked attractor}
+
+\begin{example}[Two refusals]
+Let $X = [0,1]$, and let $T_1(x) := x/3$, $T_2(x) := x/3 + 2/3$, both
+contractions with constant $c = 1/3$. The attractor $A^\ast$ satisfying
+$A^\ast = T_1(A^\ast) \cup T_2(A^\ast)$ is the standard middle-thirds
+Cantor set.
+\end{example}
+
+\begin{remark}
+Read in the vocabulary of continuation, $T_1$ and $T_2$ are the two
+survivors of a repeated refusal: at every stage, whatever occupies the
+middle third of the current set of admissible outcomes is discarded,
+and the remaining two-thirds are each rescaled to stand in for the
+whole. What survives in the limit is neither of the two pieces nor
+their simple union at any finite stage, but the unique shape that
+reproduces itself exactly under the same rule that built it,
+uncountable, nowhere dense, and entirely determined by two contraction
+maps. Whether operators named Collapse or Refuse elsewhere in this
+corpus are literally instances of $T_i$ in this technical sense, maps
+satisfying the contraction inequality on some genuine underlying
+metric, is a claim about those specific constructions and is not
+asserted here; what is established is only that \emph{if} a family of
+continuation-narrowing operators can be shown to be contractions on
+$(\mathcal{K}(X), d_H)$, this theorem applies to them without
+modification.
+\end{remark}
+
+\section*{What this chapter does not yet claim}
+
+This chapter establishes that self-similar continuation structures are
+mathematically available, not that any particular structure this
+corpus has described informally is an instance of one. Two gaps in
+particular are worth naming rather than leaving implicit. First,
+nothing here says which operators arising from an actual continuation
+problem, as opposed to a hand-picked pair of affine maps on $[0,1]$,
+are genuinely contractions on a genuine metric; that has to be checked
+case by case, the way it would for any application of a fixed-point
+theorem. Second, and more speculatively, the question of whether a
+small, fixed family of primitive operators could generate \emph{every}
+admissible continuation geometry to arbitrary Hausdorff-distance
+accuracy, a continuation-geometric analogue of universal approximation,
+is not addressed by this theorem and is not claimed here. It is a
+genuine open question, and answering it is a natural place for this
+book to go next, once the machinery in the chapters between here and
+there, quotient maps and operator composition among them, has been
+built on equally solid ground.
+
+\chapter{Continuation Quotients}
+
+Two rivers can rise on opposite sides of a mountain range, cross
+entirely different terrain, pass through valleys that share nothing
+in common, and still arrive at the same confluence and become, from
+that point on, one river. Everything about their separate histories,
+which rocks each one wore smooth, which tributaries fed it, how long
+each took to descend, becomes irrelevant downstream of the merge. A
+boat launched below the confluence cannot tell which branch its water
+came from. Not because the information was hidden. Because it no
+longer makes a difference to anything the boat will experience from
+here on.
+
+The previous chapter showed that a continuation space can be grown
+from a small number of generating operators. The natural next
+question is what happens when two different generating histories,
+different sequences of operators, different starting points, produce
+the same continuation space at the end. When does that happen, and
+what, if anything, does it mean? The temptation is to reach
+immediately for language like information loss or memory collapse,
+language already used loosely elsewhere in this corpus. This chapter
+resists that temptation on purpose. It defines the relevant object
+first, proves what can be proved about it without reference to any
+interpretation, and only afterward asks what, if anything, has been
+lost.
+
+\section*{The continuation quotient}
+
+\begin{definition}[Continuation quotient]
+Let $H$ be a set of histories and let $\Gamma : H \to \mathcal{K}(X)$
+assign to each history its continuation space (or, following Chapter 6
+of \emph{Continuation Geometry}, its finite-horizon reachable set
+$R_T$ for a fixed horizon $T$). Define $h_1 \sim_\Gamma h_2$ iff
+$\Gamma(h_1) = \Gamma(h_2)$. This is an equivalence relation
+(reflexivity, symmetry, and transitivity all following immediately
+from equality of sets), and the continuation quotient is
+$H/{\sim_\Gamma}$, with quotient map $q : H \to H/{\sim_\Gamma}$
+sending $h$ to its equivalence class $[h]$.
+\end{definition}
+
+Nothing has been said yet about distinctions, memory, or loss. This is
+deliberate: the object exists, and has structure, independently of any
+of those interpretations.
+
+\begin{proposition}[Well-defined continuation projection]
+\label{prop:universal}
+There exists a unique map $\bar\Gamma : H/{\sim_\Gamma} \to \mathcal{K}(X)$
+such that $\Gamma = \bar\Gamma \circ q$.
+\end{proposition}
+\begin{proof}
+Define $\bar\Gamma([h]) := \Gamma(h)$. This is well-defined: if
+$[h_1] = [h_2]$, then $h_1 \sim_\Gamma h_2$, so
+$\Gamma(h_1) = \Gamma(h_2)$ by definition of $\sim_\Gamma$, so the
+value assigned to $[h_1] = [h_2]$ does not depend on which
+representative was chosen. By construction,
+$\bar\Gamma(q(h)) = \bar\Gamma([h]) = \Gamma(h)$ for every $h \in H$,
+so $\Gamma = \bar\Gamma \circ q$. For uniqueness, suppose
+$\bar\Gamma'$ also satisfies $\Gamma = \bar\Gamma' \circ q$. Since $q$
+is surjective, every element of $H/{\sim_\Gamma}$ is $q(h)$ for some
+$h$, and $\bar\Gamma'(q(h)) = \Gamma(h) = \bar\Gamma(q(h))$ for every
+such $h$, so $\bar\Gamma' = \bar\Gamma$.
+\end{proof}
+
+\begin{remark}
+This is routine, and it is worth saying plainly that it is routine:
+it is the universal property of a quotient set, applied to nothing
+more exotic than the map $\Gamma$ itself. What makes it worth stating
+is not its difficulty but what it licenses: from here on,
+$\bar\Gamma$ is a genuine function on the quotient, not merely a
+suggestive notation, and anything proved about $\bar\Gamma$ is a fact
+about the quotient set itself, not about any particular history used
+to reach a point in it.
+\end{remark}
+
+\section*{A structural lemma}
+
+The worked example below relies on the following fact about
+time-homogeneous, deterministic-image dynamics, worth isolating here.
+
+\begin{lemma}[One-step agreement propagates]
+\label{lem:propagate}
+Suppose $R_1(x) = R_1(y)$ for states $x, y$ under a time-homogeneous
+reachability map. Then $R_T(x) = R_T(y)$ for every $T \geq 1$.
+\end{lemma}
+\begin{proof}
+By induction on $T$. The case $T=1$ is the hypothesis. Suppose
+$R_T(x) = R_T(y)$. Since the dynamics are time-homogeneous,
+$R_{T+1}(x) = \bigcup_{z \in R_T(x)} R_1(z)$ and likewise for $y$; since
+$R_T(x) = R_T(y)$, these unions range over the same set of states $z$,
+so $R_{T+1}(x) = R_{T+1}(y)$.
+\end{proof}
+
+\begin{remark}
+This is the precise sense in which a collision, once it happens, is
+permanent under time-homogeneous dynamics: two states whose immediate
+futures coincide exactly will have every subsequent future coincide
+as well, since there is nothing left in either state's future to
+distinguish it from the other's.
+\end{remark}
+
+\section*{Quotient invariants}
+
+\begin{proposition}[Quotient invariance]
+\label{prop:invariance}
+Let $F : \mathcal{K}(X) \to Y$ be any function. Then
+$F \circ \Gamma : H \to Y$ factors through $q$: there is a unique
+$\bar{F} : H/{\sim_\Gamma} \to Y$ with $F \circ \Gamma = \bar{F} \circ q$.
+\end{proposition}
+\begin{proof}
+$F \circ \Gamma : H \to Y$ satisfies $(F \circ \Gamma)(h_1) = (F \circ \Gamma)(h_2)$
+whenever $h_1 \sim_\Gamma h_2$, since $\Gamma(h_1) = \Gamma(h_2)$ by
+definition of $\sim_\Gamma$ and $F$ is a function, hence single-valued.
+Apply Proposition~\ref{prop:universal} with $F \circ \Gamma$ in place
+of $\Gamma$ to obtain the factorization.
+\end{proof}
+
+\begin{corollary}
+Continuation volume $\operatorname{Vol}_T$, the distinction margin
+$A_{\mathcal D}^T$ relative to any fixed reference distinction, and
+boundary proximity $\delta$, all defined in \emph{Continuation
+Geometry} as functions of a reachable set or of a state's position
+relative to one, descend to well-defined functions on
+$H/{\sim_\Gamma}$.
+\end{corollary}
+\begin{proof}
+Each is of the form $F(\Gamma(h))$ or $F(R_T(x(h)))$ for a function
+$F$ depending only on the reachable set itself (Lebesgue measure of
+the set, Hausdorff distance to another fixed set, ambient distance
+from a fixed reference set), so Proposition~\ref{prop:invariance}
+applies directly to each.
+\end{proof}
+
+\begin{remark}
+This is a broader statement than it might first appear. It says that
+any quantity this book or its predecessor has defined, or will define,
+purely in terms of a reachable set, without reference to which
+history produced that set, is automatically constant on
+$\sim_\Gamma$-equivalence classes, with no further argument required
+each time a new such quantity is introduced. The work of checking
+invariance, done once here, does not need to be redone for every
+future functional built the same way.
+\end{remark}
+
+\section*{Finite checkability}
+
+Lemma~\ref{lem:propagate} shows that equal one-step images propagate
+forward forever. It says nothing about the converse: two states whose
+one-step images differ can still coincide at some later horizon.
+Nothing in this chapter has claimed otherwise, and the general
+question, whether continuation equivalence at every horizon can still
+be checked in finitely many steps despite this, deserves a correct
+answer rather than an implied one.
+
+\begin{proposition}[Eventual periodicity bounds the check]
+\label{prop:periodicity}
+If $X$ is finite, then for any $x \in X$ the sequence
+$R_1(x), R_2(x), R_3(x), \dots$ is eventually periodic, with both the
+pre-period and the period bounded by $2^{|X|}$. Consequently, whether
+$R_T(x) = R_T(y)$ holds for all sufficiently large $T$ can be
+determined by comparing $R_T(x)$ and $R_T(y)$ for $T$ ranging only up
+to $2 \cdot 2^{|X|}$.
+\end{proposition}
+\begin{proof}
+Each $R_T(x)$ is an element of $2^X$, which has $2^{|X|}$ elements, so
+the sequence $R_1(x), R_2(x), \dots$ takes at most $2^{|X|}$ distinct
+values; among its first $2^{|X|}+1$ terms, two must coincide by
+pigeonhole, $R_p(x) = R_q(x)$ for some $1 \leq p < q \leq 2^{|X|}+1$.
+Time-homogeneity means $R_{T+1} = \Psi(R_T)$ for the fixed map
+$\Psi(S) := \bigcup_{z \in S} \Phi(z)$, so $R_p(x) = R_q(x)$ gives
+$R_{p+j}(x) = \Psi^j(R_p(x)) = \Psi^j(R_q(x)) = R_{q+j}(x)$ for every
+$j \geq 0$: the sequence is periodic with period dividing $q - p \leq
+2^{|X|}$ from index $p \leq 2^{|X|}$ onward. The same bound applies to
+the sequence generated by $y$. Once both sequences have entered their
+eventual cycles, comparing them over one further full period, at most
+$2^{|X|}$ more steps, settles whether they agree from that point on.
+\end{proof}
+
+\begin{remark}
+This is the correct version of the claim that continuation
+equivalence is finitely checkable. It is a coarser bound than a sharp
+analysis of any particular system would give, since $2^{|X|}$ is a
+worst case over all possible dynamics on a state space of that size,
+but it is unconditional: no structural assumption on $\Phi$ beyond
+finiteness of $X$ and time-homogeneity is needed. The traffic light
+below reaches its own eventual behavior in four steps, far inside this
+bound, and it is worth seeing exactly how.
+\end{remark}
+
+\section*{The traffic light, revisited}
+
+Recall the traffic light of \emph{Continuation Geometry}, Chapter 10:
+states $(k, r) \in \{0,1,2,3\} \times \{0,1\}$, phase $k$ and pending
+request $r$. To compute $\Gamma$ properly requires treating the
+system's branching explicitly rather than leaving it implicit. Let
+$e \in \{0,1\}$ record whether a new pedestrian request arrives during
+a given step (exogenous, not controlled by the phase). The transition
+is
+\[
+\Phi((k,r), e) = \left( (k+1) \bmod 4,\ r' \right), \qquad
+r' = \begin{cases}
+0 & k+1 \equiv 0 \pmod 4 \text{ (clear on arrival at red)} \\
+1 & k+1 \not\equiv 0 \pmod 4 \text{ and } (r = 1 \text{ or } e = 1) \\
+0 & k+1 \not\equiv 0 \pmod 4 \text{ and } r = 0 \text{ and } e = 0.
+\end{cases}
+\]
+Let $H$ be the set of finite paths of the system, and
+$\Gamma(h) := R_1(x(h))$, the one-step reachable set from the
+endpoint of $h$, ranging over $e \in \{0,1\}$.
+
+\begin{proposition}[Exact computation of the traffic-light quotient at $T=1$]
+\label{prop:tlquotient}
+Under $\sim_\Gamma$, the eight states fall into exactly seven classes:
+the single nontrivial class $\{(3,0),(3,1)\}$, and six singleton
+classes, one for each remaining state.
+\end{proposition}
+\begin{proof}
+Compute $R_1$ for all eight states directly from $\Phi$. For
+$k \neq 3$, arrival is at a nonzero phase and the ordinary branching
+rule applies, $r' = 1$ iff $r=1$ or $e=1$:
+\begin{align*}
+R_1(0,0) &= \{(1,0),(1,1)\}, & R_1(0,1) &= \{(1,1)\}, \\
+R_1(1,0) &= \{(2,0),(2,1)\}, & R_1(1,1) &= \{(2,1)\}, \\
+R_1(2,0) &= \{(3,0),(3,1)\}, & R_1(2,1) &= \{(3,1)\}.
+\end{align*}
+For $k=3$, arrival is at phase $0$, so clearing fires unconditionally
+regardless of $r$ or $e$:
+\[
+R_1(3,0) = \{(0,0)\}, \qquad R_1(3,1) = \{(0,0)\}.
+\]
+Comparing all eight sets directly: the three size-two sets,
+$\{(1,0),(1,1)\}$, $\{(2,0),(2,1)\}$, $\{(3,0),(3,1)\}$, are pairwise
+distinct; the four remaining size-one sets, $\{(1,1)\}$, $\{(2,1)\}$,
+$\{(0,0)\}$ (appearing twice, from $(3,0)$ and $(3,1)$), and
+$\{(0,0)\}$ again, give exactly one coincidence, $R_1(3,0) = R_1(3,1)
+= \{(0,0)\}$, and no other.
+\end{proof}
+
+Now define the mechanical quotient $\sim_M$ independently of
+$\Gamma$, as the identification the design actually performs: the
+clearing rule fires on the transition \emph{into} phase $0$, so it is
+the two states about to make that transition, $(3,0)$ and $(3,1)$,
+that the design treats as interchangeable, both being followed
+unconditionally by $(0,0)$.
+
+\begin{proposition}[The design is exact at $T=1$]
+$\sim_M\ =\ \sim_\Gamma$.
+\end{proposition}
+\begin{proof}
+Both relations have exactly one nontrivial class, $\{(3,0),(3,1)\}$,
+and agree as singletons on every other state: $\sim_M$ by definition
+of the clearing rule, $\sim_\Gamma$ by Proposition~\ref{prop:tlquotient}.
+Two equivalence relations on the same finite set with identical
+partitions are equal.
+\end{proof}
+
+\begin{remark}
+It is worth being precise about which of two similar-sounding designs
+this result actually vindicates. Clearing on arrival at phase $0$
+(the rule above) is exact. A superficially similar alternative,
+clearing whenever the system is currently \emph{at} phase $0$ rather
+than arriving there, would instead identify $(0,0)$ and $(0,1)$. But
+$R_1(0,0) = \{(1,0),(1,1)\} \neq \{(1,1)\} = R_1(0,1)$: a state at the
+red light with no pending request can still branch toward either
+outcome next, while one with a pending request cannot, precisely
+because that request is about to be served. The alternative design
+would merge two states with genuinely different one-step futures,
+exactly the coarser, information-destroying case this chapter opened
+by distinguishing from the exact one. The two designs differ only in
+whether clearing is keyed to the transition or to the state, and only
+one of them is correct.
+\end{remark}
+
+\section*{What one horizon hides}
+
+Restricting Proposition~\ref{prop:tlquotient} to $T=1$ was not a
+simplification; it is what $\Gamma$ was defined to measure. But
+Proposition~\ref{prop:periodicity} guarantees the longer-horizon
+question has a definite, finitely checkable answer, and for this
+system that answer is worth computing directly rather than left as an
+abstract guarantee.
+
+\begin{proposition}[The request bit is eventually redundant everywhere]
+\label{prop:eventual}
+For each phase $k$, the pair $(k,0)$ and $(k,1)$ satisfies
+$R_T(k,0) = R_T(k,1)$ for all $T \geq 4 - k$, and not before.
+\end{proposition}
+\begin{proof}[Proof by direct computation]
+By Proposition~\ref{prop:tlquotient}, $(3,0) \sim_\Gamma (3,1)$ at
+$T=1 = 4-3$. Applying $\Psi$ once more,
+$R_2(2,0) = \Psi(R_1(2,0)) = \Psi(\{(3,0),(3,1)\})$ and
+$R_2(2,1) = \Psi(R_1(2,1)) = \Psi(\{(3,1)\})$; since
+$\Phi(3,0,e) = \Phi(3,1,e) = (0,0)$ for both $e$, both unions reduce
+to $\{(0,0)\}$, so $R_2(2,0) = R_2(2,1) = \{(0,0)\}$, matching
+$T = 2 = 4-2$. The same one-step displacement argument gives
+$R_3(1,0) = R_3(1,1)$ at $T=3=4-1$ and $R_4(0,0) = R_4(0,1)$ at
+$T=4=4-0$: each pair's images are, one step earlier, exactly the
+pair merged at the previous phase, so equality propagates forward by
+exactly one horizon per phase step. That equality does not hold
+earlier follows from the cardinality mismatch already established at
+$T=1$ in Proposition~\ref{prop:tlquotient}, propagated the same one
+step at a time: at $T = 4-k-1$, the images of $(k,0)$ and $(k,1)$ are
+the not-yet-merged pair one phase ahead.
+\end{proof}
+
+\begin{remark}
+This is the sharper and more interesting fact the single-horizon
+result was hiding. The request bit is not redundant in general; it is
+redundant \emph{by a deadline}, and that deadline is exactly the
+number of steps remaining until the light is guaranteed to cycle
+through its clearing transition, four steps for a state that has just
+left it, one step for a state about to enter it. Every state's
+request bit stops mattering to its continuation space at precisely
+the moment continuation stops being able to tell whether that request
+will still be pending when clearing finally arrives, and not one step
+before. The design clears the bit at the earliest possible moment,
+$T=1$ after arrival, which is also the latest moment at which failing
+to clear it would still have been observably wrong; every other
+phase's bit becomes redundant on its own, without any design
+intervention, simply because the light's own periodicity eventually
+answers the question the bit was tracking.
+\end{remark}
+
+\section*{What quotients do not yet explain}
+
+This chapter has shown when two histories are interchangeable from
+the standpoint of every quantity built purely from continuation
+spaces, and it has shown, in one worked case, that a designed
+identification can be checked against that standard exactly rather
+than merely defended by intuition. It has not yet said anything about
+what is lost when a quotient is coarser than $\sim_\Gamma$, only that
+the traffic light's particular quotient happens not to be. The next
+chapter takes up the coarser case directly: not whether information is
+destroyed, which this chapter's machinery can already detect, but how
+much, and by what measure.
+
+\chapter{Distinction Loss Under Quotients}
+
+A library catalog entry is a quotient of a book: title, author, and a
+handful of subject headings standing in for everything between the
+covers. A good catalog loses nothing a patron actually needs in order
+to decide whether to pull the book from the shelf. A bad one can lose
+quite a lot; a catalog that records only ``fiction'' or
+``nonfiction'' will happily file a memoir next to a novel and a field
+guide next to a textbook, and a patron relying on that heading alone
+has no way to tell them apart until the book is already in hand. The
+catalog entry is not wrong, exactly; it simply was not built to
+preserve the distinctions this particular patron cares about.
+
+The previous chapter showed how to check whether a given
+identification of histories is exact: whether it merges only
+histories whose continuation spaces already coincide, or whether it
+merges some that do not. That check was binary, exact or not. This
+chapter asks the sharper question a librarian actually has to answer.
+When an identification is not exact, how much is lost, and where
+exactly does the loss occur? The traffic light's badly designed
+alternative from the previous chapter turns out to have a precise
+answer, not just a qualitative one.
+
+\section*{Fibers and their content}
+
+\begin{definition}[Fiber, $\Gamma$-content, loss]
+For a quotient $q : H \to O$ and $o \in O$, the fiber over $o$ is
+$q^{-1}(o) \subseteq H$. Its $\Gamma$-content is
+$C_\Gamma(o) := \{\Gamma(h) : h \in q^{-1}(o)\}$, the set of distinct
+continuation spaces appearing in the fiber. The loss at $o$ is
+\[
+\mathcal{L}(o) := \log |C_\Gamma(o)|,
+\]
+so $\mathcal{L}(o) = 0$ exactly when every history mapping to $o$
+under $q$ shares a single continuation space.
+\end{definition}
+
+\begin{proposition}[Zero loss characterizes $\Gamma$-respecting quotients]
+\label{prop:zeroloss}
+$\mathcal{L}(o) = 0$ for every $o \in O$ if and only if $q$ refines
+$\sim_\Gamma$: $h_1 \sim_q h_2 \implies h_1 \sim_\Gamma h_2$.
+\end{proposition}
+\begin{proof}
+If $q$ refines $\sim_\Gamma$, then $h_1 \sim_q h_2$ implies
+$\Gamma(h_1) = \Gamma(h_2)$, so every fiber of $q$ lies inside a
+single $\sim_\Gamma$-class and has $|C_\Gamma(o)| = 1$, giving
+$\mathcal{L}(o) = 0$. Conversely, if $\mathcal{L}(o) = 0$ for every
+$o$, then every fiber has $|C_\Gamma(o)| = 1$, so any two histories in
+the same fiber share the same $\Gamma$-value: $h_1 \sim_q h_2 \implies
+\Gamma(h_1) = \Gamma(h_2) \implies h_1 \sim_\Gamma h_2$, so $q$
+refines $\sim_\Gamma$.
+\end{proof}
+
+\section*{The coarsest lossless quotient}
+
+\begin{theorem}[$\sim_\Gamma$ is the coarsest zero-loss quotient]
+\label{thm:coarsest}
+Every zero-loss quotient $q : H \to O$ refines $\sim_\Gamma$, and
+$\sim_\Gamma$ itself has zero loss everywhere. Consequently
+$\sim_\Gamma$ is, up to relabeling of $O$, the unique coarsest
+quotient of $H$ with zero loss.
+\end{theorem}
+\begin{proof}
+The first claim is Proposition~\ref{prop:zeroloss}. That
+$\sim_\Gamma$ itself has zero loss is immediate: by definition,
+$h_1 \sim_\Gamma h_2$ already means $\Gamma(h_1) = \Gamma(h_2)$, so
+every $\sim_\Gamma$-class has exactly one $\Gamma$-value. Since every
+zero-loss $q$ refines $\sim_\Gamma$, no zero-loss quotient can be
+strictly coarser than $\sim_\Gamma$, and $\sim_\Gamma$ achieves zero
+loss, so it is the coarsest one.
+\end{proof}
+
+\begin{remark}
+This is the quotient-theoretic form of a fact Chapter 5 of
+\emph{Continuation Geometry} established for sufficient statistics
+without this vocabulary. A sufficient statistic $\varphi$ there was
+required to satisfy $\varphi(H_t) = \varphi(H_t') \implies
+\Gamma(x_t \mid H_t) = \Gamma(x_t \mid H_t')$, which is exactly the
+condition that the quotient induced by $\varphi$ refines
+$\sim_\Gamma$. Theorem~\ref{thm:coarsest} says $\sim_\Gamma$ itself is
+the coarsest possible sufficient statistic: the most compressed
+summary of a history that still loses nothing continuation-relevant.
+Any coarser summary is not merely less detailed; by
+Proposition~\ref{prop:zeroloss}, it has strictly positive loss
+somewhere.
+\end{remark}
+
+\begin{proposition}[Coarsening never decreases loss]
+\label{prop:monotone}
+If $q'$ refines $q$ (every $q'$-fiber is contained in some $q$-fiber),
+then for every $q$-fiber $q^{-1}(o)$, expressed as a union of
+$q'$-fibers $q'^{-1}(o'_1), \dots, q'^{-1}(o'_k)$,
+\[
+\mathcal{L}_q(o) \geq \max_i \mathcal{L}_{q'}(o'_i).
+\]
+\end{proposition}
+\begin{proof}
+$C_\Gamma(o) = \bigcup_i C_{\Gamma}(o'_i)$, since the $\Gamma$-values
+appearing in $q^{-1}(o)$ are exactly those appearing in its
+constituent $q'$-fibers. A union of sets is at least as large as any
+one of them, so $|C_\Gamma(o)| \geq |C_\Gamma(o'_i)|$ for each $i$,
+and $\log$ is monotone increasing.
+\end{proof}
+
+\begin{remark}
+Merging two fibers can only add to the set of continuation spaces an
+observer sees when looking at the merged fiber; it can never remove
+one. This is the precise sense in which coarsening a quotient is a
+one-way trip toward loss: refining a lossy quotient can repair the
+loss, by splitting a mixed fiber back into pieces that each see only
+one $\Gamma$-value, but no further coarsening of an already-lossy
+quotient can undo the damage, only add to it or leave it unchanged.
+\end{remark}
+
+\section*{Distinction margin as a local loss detector}
+
+\begin{proposition}[Vanishing margin is fiber collision]
+For a distinction $\mathcal{D}$ and states $x, y$ in different cells
+of $\mathcal{D}$, $A_{\mathcal D}^T(x) = 0$ (Chapter 7 of
+\emph{Continuation Geometry}) if and only if $x$ and $y$ lie in the
+same fiber of the quotient induced by $\mathcal D$ but in different
+$\sim_\Gamma$-classes at horizon $T$: that is, $\mathcal D$ merges $x$
+and $y$ while $R_T(x) \neq R_T(y)$ for some witnessing $y$, or
+$R_T(x) = R_T(y)$ for the specific $y$ achieving the infimum.
+\end{proposition}
+\begin{proof}
+Recall $A_{\mathcal D}^T(x) := \inf_{y \notin D(x)} d_H(R_T(x), R_T(y))$.
+This infimum is $0$ exactly when some $y$ outside $x$'s
+$\mathcal{D}$-cell has $R_T(x) = R_T(y)$ (attained, under the
+compactness hypothesis already used in Chapter 7), which is exactly
+the statement that $x$ and that $y$ share a $\Gamma$-value at horizon
+$T$ despite $\mathcal D$ having placed them in different cells: they
+are $\sim_\Gamma$-equivalent (at horizon $T$) even though $\mathcal D$
+distinguishes them.
+\end{proof}
+
+\begin{remark}
+This gives the distinction margin of the first book a second reading.
+It was introduced there as a measure of how close a state sits to
+losing a distinction. Read through this chapter's vocabulary, it is
+something more specific: a pointwise diagnostic for whether the
+observer's chosen distinction $\mathcal{D}$, treated as its own
+quotient of the state space, disagrees with $\sim_\Gamma$ at that
+particular point. $A_{\mathcal D}^T(x) = 0$ does not merely mean $x$
+is close to indistinguishable from something outside its cell; by
+this chapter's Proposition~\ref{prop:zeroloss} applied locally, it
+means $\mathcal D$'s quotient has positive loss exactly there,
+whether or not it has loss anywhere else.
+\end{remark}
+
+\section*{The traffic light, quantified}
+
+Return to the two designs compared in the previous chapter: the
+correct one, clearing on arrival at phase $0$, and the alternative,
+clearing whenever currently at phase $0$.
+
+\begin{example}[Zero loss, and one bit]
+The correct design's quotient is $\sim_\Gamma$ itself (Proposition~4
+of the previous chapter), so by Theorem~\ref{thm:coarsest} its loss is
+$\mathcal{L}(o) = 0$ at every fiber $o$. The alternative design merges
+$(0,0)$ and $(0,1)$ into a single fiber $o_{\mathrm{bad}}$. Their
+$\Gamma$-values at $T=1$ are $R_1(0,0) = \{(1,0),(1,1)\}$ and
+$R_1(0,1) = \{(1,1)\}$, which are distinct, so
+$C_\Gamma(o_{\mathrm{bad}}) = \{\{(1,0),(1,1)\},\ \{(1,1)\}\}$, a set
+of size $2$, giving
+\[
+\mathcal{L}(o_{\mathrm{bad}}) = \log 2,
+\]
+exactly one bit, and $\mathcal{L}(o) = 0$ at every other fiber, since
+the alternative design agrees with the correct one everywhere except
+at this single merge.
+\end{example}
+
+\begin{remark}
+This is what the previous chapter's qualitative verdict, that the
+alternative design was coarser and information-destroying, actually
+amounts to once measured: not a diffuse degradation spread across the
+whole system, but a single, exactly located bit of loss, sitting at
+precisely the fiber where the alternative design merged two states
+that a patron of this particular library, a controller trying to
+plan four steps ahead, would still have wanted to tell apart. Every
+other fiber of the alternative design is, by coincidence or by the
+limited scope of its one design error, exactly as good as the correct
+one.
+\end{remark}
+
+\section*{What loss does not yet explain}
+
+This chapter can say, precisely, how much is lost by a given
+quotient and exactly where. It has nothing to say about why a
+particular coarser quotient might be chosen anyway, in full knowledge
+of the loss it incurs. A designer might prefer a one-bit-lossy
+traffic light if the saved bit of memory matters more than the
+distinction it would have preserved; a librarian might prefer the
+cheap two-category catalog if most patrons never need the finer one.
+Measuring loss and deciding whether a loss is worth paying for are
+different questions, and this chapter has only ever answered the
+first of them.
+
+\chapter{Continuation Operators}
+
+The first three chapters of this book have all, in their own way, been
+about nouns: a shape a system of contractions converges to, a
+partition of histories that share a future, a number measuring what a
+partition throws away. None of them named the verb. A contraction
+does something to a shape. A design decision, clearing a bit on
+arrival at a red light rather than while sitting at one, does
+something to a history. This chapter is about the doing: what counts
+as a legitimate move in this framework, and what survives when two
+different moves are composed into one.
+
+The two kinds of move already used in this book look, on the surface,
+like opposites. Chapter 1's contractions built detail up, each
+application adding a smaller, self-similar copy of the whole. Chapters
+2 and 3's quotients tore detail down, collapsing histories that had
+become, for every purpose this book has formalized, the same. It
+would be a missed opportunity to leave them looking like two
+unrelated tools. They are both instances of one idea, and this
+chapter's job is to say what that idea is.
+
+\section*{Operators and their composition}
+
+\begin{definition}[Continuation operator]
+A continuation operator on $X$ is a Lipschitz map
+$T : \mathcal{K}(X) \to \mathcal{K}(X)$: there is a constant
+$L \geq 0$ with $d_H(T(A), T(B)) \leq L\, d_H(A,B)$ for all
+$A, B \in \mathcal{K}(X)$. Write $L(T)$ for the smallest such constant.
+\end{definition}
+
+\begin{proposition}[Closure under composition]
+\label{prop:closure}
+If $T_1, T_2$ are continuation operators, so is $T_2 \circ T_1$, with
+$L(T_2 \circ T_1) \leq L(T_2)\, L(T_1)$.
+\end{proposition}
+\begin{proof}
+$d_H(T_2(T_1(A)), T_2(T_1(B))) \leq L(T_2)\, d_H(T_1(A), T_1(B)) \leq
+L(T_2)\, L(T_1)\, d_H(A,B)$.
+\end{proof}
+
+\begin{remark}
+This proof is one line because it has to be; the definition was
+chosen precisely so that composition would cost nothing further to
+verify. What makes the definition worth having is not this
+proposition but what it is a common home for. The contractions of
+Chapter 1 are continuation operators with $L(T) < 1$. The map
+$\Psi(A) := \bigcup_{z \in A} \Phi(z)$ used throughout Chapters 2 and
+3 to advance a reachable set by one step is a continuation operator
+too, generally with $L(\Psi) \geq 1$: it need not contract, but it is
+still Lipschitz whenever the underlying one-step map $\Phi$ is well
+behaved. Both belong to the same category. What distinguishes a
+generative operator from a reductive one is not the definition above;
+it is what happens under repeated composition, contraction toward a
+single attractor in one case, and, as the next section makes precise,
+collapse of distinctions in the other.
+\end{remark}
+
+\section*{Operators on histories, and what they respect}
+
+The operators above act on shapes directly. A different and equally
+natural kind of operator acts on histories: appending one more real
+transition, editing a codebase, applying a repair. The interesting
+question for an operator of this kind is not its Lipschitz constant
+but whether it interacts predictably with $\sim_\Gamma$.
+
+\begin{definition}[$\Gamma$-compatible operator]
+$T : H \to H$ is $\Gamma$-compatible if there is a map
+$\hat{T} : \mathcal{K}(X) \to \mathcal{K}(X)$ with
+$\Gamma(T(h)) = \hat{T}(\Gamma(h))$ for every $h \in H$: the
+continuation space of the transformed history depends on the original
+history only through its continuation space, not otherwise.
+\end{definition}
+
+\begin{proposition}[$\Gamma$-compatible operators descend to the quotient]
+\label{prop:descend}
+If $T$ is $\Gamma$-compatible, then $h_1 \sim_\Gamma h_2 \implies
+T(h_1) \sim_\Gamma T(h_2)$: $T$ induces a well-defined map
+$\bar{T} : H/{\sim_\Gamma} \to H/{\sim_\Gamma}$.
+\end{proposition}
+\begin{proof}
+This is Proposition~4 of the previous chapter (quotient invariance),
+applied to $F := \hat{T} \circ \Gamma$ in place of $\Gamma$ itself:
+$h_1 \sim_\Gamma h_2$ gives $\Gamma(h_1) = \Gamma(h_2)$, hence
+$\Gamma(T(h_1)) = \hat{T}(\Gamma(h_1)) = \hat{T}(\Gamma(h_2)) =
+\Gamma(T(h_2))$, so $T(h_1) \sim_\Gamma T(h_2)$.
+\end{proof}
+
+\begin{remark}
+This is the sense in which $\Gamma$-compatibility is the right
+condition to ask for: it says an operator cannot secretly depend on
+information that continuation equivalence has already declared
+irrelevant. An operator failing this condition would be able to treat
+two continuation-equivalent histories differently for reasons that
+have nothing to do with what either history can still become, which
+is exactly the kind of dependence Chapter 5 of \emph{Continuation
+Geometry} worried about under the name of history-dependence in the
+first place.
+\end{remark}
+
+\begin{example}[The traffic light's step operators]
+For $e \in \{0,1\}$, let $T_e : H \to H$ append the transition
+$\Phi(\cdot, e)$ to a history. Whether $T_e$ is $\Gamma$-compatible
+(at horizon $T=1$) needs checking only on the one nontrivial
+$\sim_\Gamma$-class found in Chapter 2, $\{(3,0),(3,1)\}$, since every
+other class is a singleton and compatibility there is automatic.
+Direct computation gives $T_0(3,0) = T_0(3,1) = (0,0)$ and
+$T_1(3,0) = T_1(3,1) = (0,0)$: both step operators send the two
+equivalent histories to the identical resulting state, not merely to
+states with equal $R_1$, so compatibility holds here in the strongest
+possible form.
+\end{example}
+
+\begin{remark}
+This is a narrow check, confined to the single class where there was
+anything to check, and it should not be read as a general fact about
+$T_0$ or $T_1$ on this system, only as a confirmation that neither
+step operator introduces a new dependence on which of $(3,0)$ or
+$(3,1)$ a history happened to pass through, at exactly the point
+where such a dependence would have mattered.
+\end{remark}
+
+\section*{The family $\Gamma_T$ and the operator $\Psi$}
+
+A different relationship, easy to conflate with $\Gamma$-compatibility
+but distinct from it, has been used without a name since Chapter 2. It
+concerns not an operator on histories but the relationship between the
+finite-horizon continuation spaces at consecutive horizons for one and
+the same history.
+
+\begin{remark}[$\Psi$ relates horizons, not histories]
+By construction, $R_{T+1}(x) = \bigcup_{z \in R_T(x)} \Phi(z) =
+\Psi(R_T(x))$, i.e.\ $\Gamma_{T+1} = \Psi \circ \Gamma_T$ as an
+identity between functions $H \to \mathcal{K}(X)$, where
+$\Gamma_T(h) := R_T(x(h))$. This is not an instance of
+Proposition~\ref{prop:descend}; no operator on $H$ is involved, only
+the fixed continuation operator $\Psi$ acting on the shape side, once
+for each increment of the horizon. It is this identity, not any
+property of an operator on histories, that did the real work in
+Lemma~2 of the previous chapter (one-step agreement propagates) and in
+the eventual-periodicity argument of Chapter 3: both are, in
+retrospect, statements about the orbit of a single reachable set
+under repeated application of the one continuation operator $\Psi$,
+dressed in the language of horizons rather than the language of
+operators used here.
+\end{remark}
+
+\section*{Two families, one category}
+
+\begin{corollary}
+Both the contractions of Chapter 1 and the operator $\Psi$ of Chapters
+2 and 3 are continuation operators in the sense of this chapter's
+first definition; they differ only in whether their Lipschitz
+constant is below $1$.
+\end{corollary}
+
+\begin{remark}
+This is worth stating plainly because it says the split this book
+opened with, generative operators building attractors versus
+reductive operators collapsing distinctions, is not a split in what
+kind of mathematical object is involved. It is a split in one number.
+A continuation operator with $L(T) < 1$ pulls every pair of shapes
+closer together under repeated application, which is exactly
+Chapter 1's mechanism for generating a unique self-similar attractor.
+A continuation operator with $L(T) \geq 1$ need not pull anything
+together at all, and $\Psi$ in particular does something else
+entirely on a finite state space: not converge to a single shape, but
+cycle, as the traffic light's own eventual periodicity already showed.
+Generation and collapse are not two theories. They are two regions of
+the same parameter.
+\end{remark}
+
+\section*{What operators do not yet explain}
+
+This chapter has said what a legitimate move is and shown that both
+of this book's central constructions are instances of it, but it has
+not asked which finite collections of operators are rich enough to
+produce every continuation geometry worth having, only that individual
+operators compose predictably once they exist. That question, closer
+to the universal-generation intuition this project began with, needs
+the vocabulary built here as a prerequisite, and is not attempted in
+this chapter.
+
+\chapter{Toward Universal Generation}
+
+A handful of letters generates every word in a dictionary that has
+not been written yet. A handful of chess rules generates every game
+that will ever be played under them, including games no one has
+conceived of. A small, fixed vocabulary reaching an unbounded space
+of outcomes is one of the oldest tricks available to any generative
+system, and it is worth asking, now that this book has a settled
+vocabulary for what a continuation operator is, whether continuation
+geometries have the same property. Can a small, fixed family of
+operators, chosen once and never enlarged, get arbitrarily close to
+any admissible continuation geometry at all?
+
+This chapter does not answer that question. It draws its boundary
+precisely enough to say exactly what would need to be true for the
+answer to be yes, proves the one direction that is actually within
+reach, and is honest about the direction that is not. The gap between
+those two is real mathematics, not a gap in effort, and closing it is
+left where it belongs: open.
+
+\section*{The conjecture, stated precisely}
+
+\begin{conjecture}[Universal continuation generation]
+\label{conj:universal}
+There exists a finite family of contractions $T_1, \dots, T_n$ on
+$X$, fixed once and independent of any particular target, such that
+for every nonempty compact $A \subseteq X$ and every $\varepsilon >
+0$, some composition $T_{i_k} \circ \cdots \circ T_{i_1}$ applied to
+some starting set satisfies $d_H(A, T_{i_k} \circ \cdots \circ
+T_{i_1}(\cdot)) < \varepsilon$.
+\end{conjecture}
+
+\begin{remark}
+This is stated as a conjecture and not as a theorem because it is
+one; nothing in this book has proved it, and nothing in this chapter
+will. What can be made precise is why it is hard, and that requires
+first showing what is \emph{not} hard.
+\end{remark}
+
+\section*{The Collage Theorem}
+
+\begin{theorem}[Collage Theorem]
+\label{thm:collage}
+Let $T_1, \dots, T_n$ be contractions with $\mathcal{H}(A) =
+\bigcup_i T_i(A)$ and maximum contraction constant $c < 1$, and let
+$A^\ast$ be the attractor of $\mathcal{H}$. Then for any nonempty
+compact $A$,
+\[
+d_H(A, A^\ast) \leq \frac{d_H(A, \mathcal{H}(A))}{1-c}.
+\]
+\end{theorem}
+\begin{proof}
+By the triangle inequality and $A^\ast = \mathcal{H}(A^\ast)$,
+\[
+d_H(A, A^\ast) \leq d_H(A, \mathcal{H}(A)) + d_H(\mathcal{H}(A), \mathcal{H}(A^\ast)).
+\]
+By Proposition~3 of Chapter 1 ($\mathcal{H}$ is a contraction on
+shapes), $d_H(\mathcal{H}(A), \mathcal{H}(A^\ast)) \leq c\, d_H(A,
+A^\ast)$. Substituting,
+\[
+d_H(A, A^\ast) \leq d_H(A, \mathcal{H}(A)) + c\, d_H(A, A^\ast),
+\]
+and rearranging, since $c < 1$, gives
+$(1-c)\, d_H(A,A^\ast) \leq d_H(A, \mathcal{H}(A))$, which is the
+claim.
+\end{proof}
+
+\begin{remark}
+Nothing here was invented for this chapter; the theorem is a direct
+three-line consequence of facts Chapter 1 already established, and it
+is worth noting how much it buys for how little it costs. It converts
+a question about the attractor, an object defined only as a limit, so
+generally hard to reason about directly, into a question about a
+single application of $\mathcal{H}$ to a set already in hand. Finding
+an operator family whose attractor is close to a target $A$ reduces to
+finding one whose \emph{one-step collage} $\mathcal{H}(A)$ is already
+close to $A$, an ordinary geometric fitting problem rather than a
+limiting one.
+\end{remark}
+
+\section*{Existence of an approximating family}
+
+\begin{theorem}[Every compact target is approximable]
+\label{thm:existence}
+For every nonempty compact $A \subseteq X = \mathbb{R}^n$ and every
+$\varepsilon > 0$, there exists a finite family of contractions
+(depending on $A$ and $\varepsilon$) whose attractor $A^\ast$
+satisfies $d_H(A, A^\ast) < \varepsilon$.
+\end{theorem}
+\begin{proof}[Proof sketch]
+Fix $c \in (0,1)$ and let $\{x_1, \dots, x_m\}$ be a finite
+$\delta$-net of $A$ for $\delta$ small relative to $\varepsilon(1-c)$,
+which exists since $A$ is compact, hence totally bounded. Fix a
+bounded universe $U \supseteq A$ and choose contractions $T_i$, each
+with ratio $c$ and fixed point $x_i$, scaled so that $T_i(U)$ lies
+within a small neighborhood of $x_i$ (achievable by taking the
+contraction ratio applied to $U$ small enough relative to $\delta$,
+which can be arranged independently for each $i$ while keeping the
+overall maximum ratio bounded away from $1$). The resulting collage
+$\mathcal{H}(A) = \bigcup_i T_i(A)$ then lies within a bounded
+multiple of $\delta$ of the net $\{x_1,\dots,x_m\}$, which is itself
+within $\delta$ of $A$, giving $d_H(A, \mathcal{H}(A))$ small relative
+to $\varepsilon(1-c)$. Theorem~\ref{thm:collage} then gives $d_H(A,
+A^\ast) < \varepsilon$. This is the standard construction underlying
+fractal image compression, given in full quantitative detail in
+\cite{barnsley1988}, and is not reproduced with complete constants
+here.
+\end{proof}
+
+\begin{remark}
+This is real progress, and it is worth being precise about exactly
+how much. It says the space of Hutchinson attractors is dense, in
+Hausdorff distance, in the space of nonempty compact subsets of $X$:
+nothing worth generating is permanently out of reach. What it does
+not say, and what Conjecture~\ref{conj:universal} actually asks for,
+is that a \emph{single} family, fixed before any target is known,
+suffices for every target. The construction above produces a
+different family for each new target and each new tolerance; as
+$\varepsilon \to 0$ or as $A$ grows more intricate, the number of
+generators $m$ used in the proof generally grows without bound. The
+existence theorem answers ``can this be reached at all,'' which
+Theorem~\ref{thm:existence} settles completely. The conjecture asks
+``can it be reached with tools chosen in advance,'' which is a
+categorically stronger demand, and this chapter has not moved that
+needle.
+\end{remark}
+
+\section*{What kind of gap this is}
+
+The distinction is not a technicality, and it has a name in
+neighboring fields worth being explicit about rather than gestured at.
+The Stone--Weierstrass theorem guarantees that polynomials are dense
+in the continuous functions on a compact interval: a fixed class of
+building blocks, closed under the operations that generate it, dense
+in everything worth approximating. A universal approximation theorem
+for neural networks says something structurally similar: networks
+built from a fixed activation function, with enough width, are dense
+in the continuous functions. Both are theorems about a fixed generator
+class being rich enough for every target, which is exactly the shape
+of Conjecture~\ref{conj:universal} and exactly what
+Theorem~\ref{thm:existence} does not provide, since its generator
+family is chosen after the target is known.
+
+\begin{remark}
+Whether an analogue of Stone--Weierstrass or universal approximation
+holds for continuation geometries specifically is not something this
+chapter's methods can settle, and it should not be assumed to transfer
+just because the surface shape of the claim resembles those theorems.
+Both classical results rely on structure, algebraic closure under
+multiplication for Stone--Weierstrass, compositional depth for neural
+networks, that has no established analogue here. Building that
+structure, or showing it cannot exist, is what would actually resolve
+Conjecture~\ref{conj:universal}, and it remains the open question this
+book set out to sharpen rather than close.
+\end{remark}
+
+\chapter*{What Remains}
+\addcontentsline{toc}{chapter}{What Remains}
+
+This book is unfinished. What follows is a roadmap, not a draft, so
+that continuation from here does not require reconstructing the plan
+from scratch.
+
+\section*{Chapter 6 (planned): State Insufficiency, Made Explicit}
+The sleep/coma motivation used informally since the project's earliest
+notes has never been built into an explicit toy system. The chapter
+owed is: construct an actual $(X, F, K)$ with two states $x_1, x_2$
+(or two histories $h_1, h_2$ landing on the same observable state)
+such that $\Gamma(x_1) \neq \Gamma(x_2)$, proved, not narrated. This
+is largely already implicit in \emph{Continuation Geometry}, Chapter
+5 (the sufficient-statistic material) and in this book's traffic-light
+examples, so the honest options are: (a) a short chapter distilling
+the sharpest existing instance into a clean standalone theorem, framed
+explicitly as ``state insufficiency,'' or (b) a note explaining why a
+separate chapter is not needed, since Chapter 5 of the first book
+already proves the general case. Decide which before writing anything
+new.
+
+\section*{Chapter 7 (planned): Semantic Manifolds}
+The most speculative and least-earned material still on the table.
+The goal, meaning as a continuation-equivalence class rather than a
+point in a fixed space of meanings, requires a specified equivalence
+before anything else: candidates include $d_H(\Gamma(h_1),
+\Gamma(h_2)) = 0$ (reusing $\sim_\Gamma$ directly, in which case this
+chapter may collapse into a corollary of Chapter 2 rather than needing
+new machinery) or some notion of isometry or homeomorphism between
+continuation spaces (a genuinely stronger and harder-to-work-with
+relation, not yet justified over the simpler one). Resist writing a
+Theorem with an undefined $\cong$ in it. Settle the equivalence first;
+if it turns out to just be $\sim_\Gamma$, say so plainly rather than
+introducing new notation to relabel an old idea.
+
+\section*{Chapter 8 (planned): Closing}
+A synthesis chapter in the register of \emph{Continuation Geometry}'s
+Chapter 11: what was established (Collage Theorem, quotient
+invariance, the operator/attractor unification of Chapter 4, the
+loss measure of Chapter 3), what was not (the universal generation
+conjecture, semantic manifolds if Chapter 7 does not resolve it), and
+an honest final assessment of whether ``generative'' turned out to be
+the right word for what this book actually built.
+
+\section*{Loose threads not yet assigned to a chapter}
+Two things surfaced during drafting and were deliberately not chased:
+whether operators named Collapse or Refuse elsewhere in this corpus
+are literally contractions in the sense of Chapter 1 (an empirical
+question about those specific constructions, not a mathematical one
+this book can settle from the armchair); and whether a coordination-
+geometry extension of Chapter 4's operator vocabulary, multiple
+agents' operators acting jointly on a shared continuation space, is
+worth its own chapter or belongs in a third volume alongside
+\emph{Continuation Geometry}'s own unfinished coordination-geometry
+business. Neither should be started without first deciding whether it
+belongs in this book at all.
+
+\newpage
+\addcontentsline{toc}{chapter}{References}
+
+\begin{thebibliography}{99}
+\bibitem{falconer2003}K.\ Falconer, \emph{Fractal Geometry:
+Mathematical Foundations and Applications}, 2nd ed., Wiley, 2003.
+\bibitem{barnsley1988}M.\ Barnsley, \emph{Fractals Everywhere},
+Academic Press, 1988.
+\bibitem{hutchinson1981}J.\ E.\ Hutchinson, ``Fractals and
+self-similarity,'' Indiana University Mathematics Journal, 30 (1981).
+\end{thebibliography}
+
+\end{document}
+

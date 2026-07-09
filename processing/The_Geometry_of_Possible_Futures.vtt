@@ -1,0 +1,1355 @@
+WEBVTT
+
+00:00.000 --> 00:07.760
+imagine uh imagine looking at two bodies resting in a quiet dimly lit room okay and just from a
+
+00:07.760 --> 00:14.320
+distance you know from a single snapshot in time they look completely identical like one is in this
+
+00:14.320 --> 00:21.020
+deep restful restorative sleep and the other is in a coma right but if you only have that one frame
+
+00:21.020 --> 00:25.720
+of existence you can't tell they are entirely indistinguishable i mean you couldn't tell them
+
+00:25.720 --> 00:31.360
+apart if your life depended on it but we inherently know right that they are vastly fundamentally
+
+00:31.360 --> 00:36.760
+different oh absolutely it's uh it's the absolute perfect illustration of a situation where the
+
+00:36.760 --> 00:42.940
+present moment is just a completely inadequate summary of reality yes because they are different
+
+00:42.940 --> 00:47.820
+not because of what they are in that exact fraction of a second but because of what they can become
+
+00:47.820 --> 00:53.840
+in the next hour or the next day or the next week exactly we as humans we have this massive bias
+
+00:53.840 --> 00:57.980
+toward the visible right we want to categorize things by their current state by what we can
+
+00:57.980 --> 01:02.820
+measure right in front of us but the truth of those two bodies the actual defining characteristic of
+
+01:02.820 --> 01:09.680
+their existence lies entirely in their potential and that image that invisible but just massive gulf
+
+01:09.680 --> 01:15.800
+between resting and being trapped that is the beating heart of today's deep dive so today we're
+
+01:15.800 --> 01:21.320
+opening up a stack of well highly theoretical deeply interdisciplinary academic research yeah we
+
+01:21.320 --> 01:27.600
+really are specifically we're looking at a july 2026 monograph it's titled continuation geometry
+
+01:27.600 --> 01:33.620
+it's by the author Flyxion and uh just to be totally clear to everyone listening this is a dense
+
+01:33.620 --> 01:40.000
+rigorous mathematical text very dense but our mission today is to take these theorems and use them to
+
+01:40.000 --> 01:43.860
+completely change how you look at complex systems i mean everything from the software running on your
+
+01:43.860 --> 01:49.600
+phone to the biological ecosystems outside your window to literally the trajectory of your own life and
+
+01:49.600 --> 01:55.840
+which is a huge promise i know yeah it is but we are going to shift from looking at what systems
+
+01:55.840 --> 02:02.440
+are in a frozen snapshot to looking at the shape of their um their fan of futures which is what the
+
+02:02.440 --> 02:08.160
+author calls their continuation space so by the end of this deep dive you the listener you're going to
+
+02:08.160 --> 02:15.240
+have a totally new mental model for understanding how options shrink how they grow or honestly how they
+
+02:15.240 --> 02:20.100
+collapse entirely without us even noticing which is an incredibly powerful lens assuming you can get
+
+02:20.100 --> 02:24.600
+through the math to actually see it right because what flitzstein does in this text is take what
+
+02:24.600 --> 02:30.100
+sounds like abstract almost i don't know poetic philosophy of this whole idea of a fan of futures
+
+02:30.100 --> 02:36.020
+and applies strict unforgiving mathematical geometry to it right like we aren't just talking about
+
+02:36.020 --> 02:41.480
+possibilities in some vague self-help kind of way no not at all we are talking about mapping them on a
+
+02:41.480 --> 02:45.920
+grid you know measuring their physical volume calculating the geometric distance between them
+
+02:45.920 --> 02:52.140
+and proving rigid theorems about when they survive and when they die okay so let's unpack this right from
+
+02:52.140 --> 02:58.140
+the core premise because when i read this it hit me like a ton of bricks the author says a system that
+
+02:58.140 --> 03:05.000
+has stopped changing hasn't necessarily stopped existing right but a system that has run out of ways to
+
+03:05.000 --> 03:11.580
+change has stopped existing they contrast that quiet room where nothing needs to happen which is rest
+
+03:11.580 --> 03:16.940
+with a quiet room where nothing can happen which is the end of a story it's the end of the continuation
+
+03:16.940 --> 03:25.200
+space like if you think about an old door hinge right as it slowly rusts over years its physical appearance
+
+03:25.200 --> 03:30.260
+barely changes from day to day a photograph of it yesterday looks pretty much like a photograph of it
+
+03:30.260 --> 03:36.860
+today it is a piece of metal exactly but it's fan of futures the set of possible movements it can
+
+03:36.860 --> 03:42.960
+actually make without snapping the metal is constantly quietly shrinking or uh think about
+
+03:42.960 --> 03:48.540
+a species in an isolated environment that loses a specific genetic variation oh that's a good one
+
+03:48.540 --> 03:53.160
+right because in the present moment if you are a biologist observing them the animals look fine
+
+03:53.160 --> 03:59.100
+they're eating they're sleeping reproducing population numbers might even be high exactly but
+
+03:59.100 --> 04:05.080
+their fan of futures has shrunk if the climate shifts in a way that requires that lost gene for
+
+04:05.080 --> 04:10.920
+survival their story is over even though they look perfectly healthy today and if you're listening
+
+04:10.920 --> 04:16.780
+to this and you know thinking about human interaction think about a heated argument like have you ever
+
+04:16.780 --> 04:22.140
+backed yourself into a rhetorical corner where you've committed to a position you just can't walk back
+
+04:22.140 --> 04:27.840
+from oh yeah we've all been there right you are still talking you're still physically existing in the
+
+04:27.840 --> 04:34.260
+argument but your fan of futures like the the ways you can gracefully resolve the conflict or change
+
+04:34.260 --> 04:39.920
+your mind without losing face has completely evaporated you are just a rusted hinge waiting to break
+
+04:39.920 --> 04:45.560
+that feeling of being trapped is exactly what this math formalizes and it reveals why engineers
+
+04:45.560 --> 04:51.520
+ecologists and economists are actually asking the exact same fundamental question just dressed up in
+
+04:51.520 --> 04:56.560
+different disciplinary jargon right because they're all looking at the future yeah an engineer asking if a
+
+04:56.560 --> 05:02.020
+suspension bridge will hold a sudden load or an ecologist asking if a coral reef can recover from a
+
+05:02.020 --> 05:07.720
+bleaching event or even a central banker asking if a market allocation is sustainable they are all
+
+05:07.720 --> 05:13.900
+looking at their respective systems and essentially asking does the fan of futures remain non-empty meaning
+
+05:13.900 --> 05:21.040
+is there a path forward exactly is there still at least one valid mathematically permissible path forward
+
+05:21.040 --> 05:26.540
+that doesn't violate the constraints of you know physical or economic reality go wait i have to jump
+
+05:26.540 --> 05:34.420
+in here because just surviving right just having a non-empty fan of futures that feels like a pretty bleak
+
+05:34.420 --> 05:41.220
+low bar it is i mean isn't there a huge massive difference between a patient who can recover and a patient who
+
+05:41.220 --> 05:46.540
+can barely recover like if i go to the doctor and they look at my chart and say well the good news is your
+
+05:46.540 --> 05:52.020
+fan of futures is technically non-empty i am not going to be popping champagne no you shouldn't be and i
+
+05:52.020 --> 05:57.740
+mean Flyxion would completely agree with you mere existence the simple geometric fact that there is
+
+05:57.740 --> 06:04.940
+some path forward however narrow is the absolute bare minimum it is necessary obviously but it is deeply
+
+06:04.940 --> 06:11.380
+insufficient for a thriving system and that is the actual project of this monograph the goal is to build
+
+06:11.380 --> 06:16.580
+a mathematical framework on top of that mere existence to measure the quality of those futures
+
+06:16.580 --> 06:21.780
+okay so measuring the quality yeah it's about answering things like how much actual room do you
+
+06:21.780 --> 06:28.680
+have to maneuver how easily can you be nudged back from the edge of disaster and crucially which of your
+
+06:28.680 --> 06:35.580
+internal memories survive into the future and which get quietly erased by the environment so we aren't just
+
+06:35.580 --> 06:41.040
+asking can we survive we're asking what does our survival actually look like exactly but to measure
+
+06:41.040 --> 06:46.760
+these futures to actually put hard numbers to them the author points out that this math didn't just drop
+
+06:46.760 --> 06:51.240
+out of the sky we have to look at where these ideas came from because it's actually the collision of
+
+06:51.240 --> 06:56.240
+two completely different academic family trees that well for a long time weren't really talking to each
+
+06:56.240 --> 07:03.020
+other at all right the monograph traces its roots to two distinct intellectual lineages the first is
+
+07:03.020 --> 07:09.140
+what Flyxion calls the persistence lineage the persistence lineage yeah and this one is old it is
+
+07:09.140 --> 07:15.300
+mathematically tidy and it has been refined for well over a century it includes milestones like
+
+07:15.300 --> 07:22.680
+henry poncari's recurrence theorem from the late 1800s alexander le punov's stability theory and more
+
+07:22.680 --> 07:27.960
+recently jean-pierre obin's viability theory okay that's a lot of heavy hitters it is and the
+
+07:27.960 --> 07:33.880
+persistence lineage is entirely singularly obsessed with the question of how does a system keep going
+
+07:33.880 --> 07:39.900
+given a set of harsh constraints can it survive it's basically the don't die lineage precisely
+
+07:39.900 --> 07:43.800
+it is all about avoiding the end state and the mathematicians who worked on this over the last
+
+07:43.800 --> 07:48.800
+hundred years they were incredibly precise they developed exact tools to prove whether a planet's
+
+07:48.800 --> 07:53.580
+orbit will eventually settle down or whether a controlled mechanical system can be kept within
+
+07:53.580 --> 07:58.840
+safe physical bounds indefinitely it's all about proving existence okay so that's the first one and
+
+07:58.840 --> 08:03.740
+then you have the second lineage which the text calls the possibility space lineage yeah and this
+
+08:03.740 --> 08:09.980
+one i mean this one is wild compared to the first it really is it's much younger it's messy and it's
+
+08:09.980 --> 08:17.520
+scattered across completely unrelated fields like biology computer science and architecture yeah i saw
+
+08:17.520 --> 08:24.180
+that like stewart kaufman's concept of the adjacent possible in evolutionary biology right which is this idea
+
+08:24.180 --> 08:29.460
+that evolution doesn't just jump anywhere it explores the rooms right next door to where it currently is
+
+08:29.460 --> 08:35.940
+exactly and it includes judea pearl's causal interventions in computer science basically asking
+
+08:35.940 --> 08:42.020
+what would have happened if a variable was altered and michael levin's work on bioelectric memory
+
+08:42.020 --> 08:48.440
+in regenerating organisms and perhaps most surprisingly for a math text it heavily references christopher
+
+08:48.440 --> 08:53.600
+alexander's architectural pattern languages which i loved yeah which might seem like an odd fit when we're
+
+08:53.600 --> 08:58.480
+talking about differential equations but it perfectly encapsulates the shift in perspective i love this
+
+08:58.480 --> 09:04.680
+specific example because it grounded the whole thing for me when an architect designs a building or say
+
+09:04.680 --> 09:10.560
+a city planner lays out a new neighborhood they aren't just making a static one-time choice about where
+
+09:10.560 --> 09:18.240
+the concrete goes right they're making a physical move that either invites or violently forecloses future
+
+09:18.240 --> 09:24.640
+patterns of community life like they are literally shaping the fan of futures for the people who will live
+
+09:24.640 --> 09:31.120
+there in 20 years exactly if they build wide sidewalks and central plazas will that layout allow for a farmer's
+
+09:31.120 --> 09:39.120
+market to spontaneously form a decade from now or if they zone it exclusively for massive parking lots and zero
+
+09:39.120 --> 09:46.400
+pedestrian access are they foreclosing the possibility of a walkable community forever right alexander was studying
+
+09:46.400 --> 09:52.720
+possibility spaces before we really had the rigorous dynamical math to formalize them the possibility
+
+09:52.720 --> 09:57.520
+space lineage isn't just asking the persistence question of can the system survive it's asking a
+
+09:57.520 --> 10:02.480
+much broader question what does the entire space of things it could become look like what is the shape
+
+10:02.480 --> 10:07.040
+the geometry of the room we are stepping into it makes me think of a game of chess oh that's a great way
+
+10:07.040 --> 10:11.520
+to look at it because if you were playing purely from the persistence lineage you were just playing to avoid
+
+10:11.520 --> 10:17.840
+checkmate you are sweating looking for that one single move that keeps your king alive for one more turn
+
+10:17.840 --> 10:23.760
+just trying not to lose right but if you are playing from the possibility space lineage you are looking at the
+
+10:23.760 --> 10:30.480
+entire board reading the flow of the game and seeing how many strategic avenues how many branching paths are
+
+10:30.480 --> 10:37.120
+actually open to you are you trapped in a corner merely surviving or do you control the center of the board with a
+
+10:37.120 --> 10:43.200
+massive sprawling fan of futures and for a long time you know the possibility space thinkers had great
+
+10:43.200 --> 10:50.320
+intuitions but they lacked the predictive hard theorems of the persistence mathematicians flitchton's
+
+10:50.320 --> 10:55.200
+monograph is the bridge between them building the bridge yeah but to build that bridge to mathematically
+
+10:55.200 --> 11:01.360
+prove a system can persist and have a rich possibility space without forcing us to simulate every single
+
+11:01.360 --> 11:06.880
+future move out to infinity well we have to talk about sea walls yes this is where we get into
+
+11:06.880 --> 11:12.800
+aubin's viability theory and the author uses this incredible visceral analogy of walking on the edge
+
+11:12.800 --> 11:19.680
+of a seawall it's a fantastic visual picture it you are walking on a narrow elevated concrete wall
+
+11:19.680 --> 11:25.600
+right next to a churning ocean when you fall off that wall you don't actually fall the instant your
+
+11:25.600 --> 11:31.840
+options narrow to zero you fall the instant after when the physics of your momentum and gravity push you
+
+11:31.840 --> 11:37.440
+into a direction that the concrete wall no longer supports and mathematically this is a profound
+
+11:37.440 --> 11:43.600
+insight if you want to know if a system is safe if you are safe on that seawall you don't need to
+
+11:43.600 --> 11:48.720
+computationally simulate the rest of your entire walk to the very end of the wall which would be
+
+11:48.720 --> 11:53.920
+impossible right it would take infinite computing power you just can't do it furthermore your exact
+
+11:53.920 --> 11:59.440
+position alone isn't enough information because standing dead in the middle of a wide wall and standing
+
+11:59.440 --> 12:05.520
+teetering on a clumbling edge well they might look identical if you just map your static gps coordinates
+
+12:05.520 --> 12:12.000
+why the snapshot problem again exactly what actually matters is the geometric overlap between two specific
+
+12:12.000 --> 12:17.600
+sets of vectors okay break those vectors down for us what are we actually comparing we are comparing the
+
+12:17.600 --> 12:24.080
+vectors of where you can go against the vectors of where physics is pushing you aubin's viability
+
+12:24.080 --> 12:29.440
+theorem proves that you can collapse the entire infinite question of the future into a single
+
+12:29.440 --> 12:36.160
+local immediate geometric test a local test so just right where you are standing yes at your exact
+
+12:36.160 --> 12:42.480
+current state you ask do the admissible velocities handed to you by the dynamics of the system which
+
+12:42.480 --> 12:49.440
+could be physics momentum the rules of a market do they intersect with what mathematicians call the
+
+12:49.440 --> 12:56.400
+contingent cone of the constraint set okay contingent cone is heavy jargon it is it is but conceptually
+
+12:56.400 --> 13:01.600
+it's quite simple the contingent cone is just the mathematical term for the directions that keep you
+
+13:01.600 --> 13:07.520
+on the wall okay it's the set of all directions that are tangent to or pointing inward from the boundary
+
+13:07.520 --> 13:11.920
+of safety so if i am standing on the edge of the seawall and all my physical momentum is pulling me
+
+13:11.920 --> 13:18.160
+outward toward the open ocean the set of directions physics is giving me does not overlap with the contingent
+
+13:18.160 --> 13:24.560
+cone of the wall right the intersection of those two things is completely empty i am doomed even if
+
+13:24.560 --> 13:29.680
+my shoes are still technically touching the concrete for one more millisecond the math says i have already
+
+13:29.680 --> 13:35.840
+failed exactly the elegance of this is how it turns an impossible computational task you know simulating
+
+13:35.840 --> 13:41.360
+infinite futures into a simple geometry check right at the boundary just checking the edge you don't
+
+13:41.360 --> 13:46.960
+calculate infinite futures you just look at the edge does the velocity field point inward or along the boundary
+
+13:46.960 --> 13:51.920
+or does it point strictly outward into the void if there's even one direction that points safely
+
+13:51.920 --> 13:58.320
+inward or along the tangent your continuation space is non-empty you are viable i see the elegance i
+
+13:58.320 --> 14:04.880
+really do but i have to push back here walking on a seawall is easy if the wind is perfectly calm
+
+14:04.880 --> 14:11.040
+and your shoes have perfect grip and you have the balance of a gymnast true but what if there's a sudden
+
+14:11.040 --> 14:17.840
+unpredictable gust of wind what if a rogue wave hits the wall i mean mere viability just knowing that
+
+14:17.840 --> 14:22.720
+a mathematically safe tangent exists if everything goes perfectly according to plan that doesn't
+
+14:22.720 --> 14:28.400
+account for getting shoved by the universe you've just hit on the exact reason why viability theory
+
+14:28.400 --> 14:33.680
+alone is insufficient when dealing with the real world okay because viability tells you a safe path
+
+14:33.680 --> 14:39.280
+exists in a vacuum it does not tell you how to select it especially when there is chaos and uncertainty
+
+14:39.280 --> 14:45.840
+to handle the rogue wave we have to introduce the adversary the adversary and the captain this is
+
+14:45.840 --> 14:51.520
+such a great framing in the text the text argues that a ship's captain who only knows that a safe
+
+14:51.520 --> 14:57.120
+route exists hasn't actually done her job not at all if i am on a ship and the captain gets on the
+
+14:57.120 --> 15:02.720
+loudspeaker and says folks there's a route that works if the sea remains perfectly flat and the wind
+
+15:02.720 --> 15:08.400
+never ever changes i am immediately looking for a life raft yeah you'd want to get off that boat a
+
+15:08.400 --> 15:13.920
+competent captain plots the route that survives the absolute worst weather the season could throw
+
+15:13.920 --> 15:18.640
+at them this marks the crucial transition in the math from the question of mere existence to the
+
+15:18.640 --> 15:25.680
+question of selection when a complex system has multiple viable paths when the mathematical map
+
+15:25.680 --> 15:30.880
+gives you several choices that all theoretically keep you on the seawall how do you pick the best one
+
+15:30.880 --> 15:37.680
+to solve this Flyxion introduces aubin's concept of guaranteed valuation guaranteed valuation yeah you
+
+15:37.680 --> 15:42.800
+mathematically split the future into two parts the part the system controls which is the menu of
+
+15:42.800 --> 15:48.880
+allotments or feedbacks and the part it absolutely does not control which are the adversaries perturbations
+
+15:48.880 --> 15:54.800
+the gusts of wind the gusts of wind the rogue waves so you're basically setting up a game theory
+
+15:54.800 --> 16:03.040
+scenario against the universe itself yes formally it is a controlled dynamical game and the objective is to
+
+16:03.040 --> 16:08.400
+select the control feedback that guarantees the best possible outcome against the absolute worst
+
+16:08.400 --> 16:13.920
+possible sequence of perturbations the adversary can throw at you the text has a concrete mathematical
+
+16:13.920 --> 16:18.320
+example of this that really clarified the difference between viable and robust for me the steering
+
+16:18.320 --> 16:24.000
+example yes imagine you have a simple system just a point on a number line and your entire goal is
+
+16:24.000 --> 16:29.840
+to steer to zero you have two different control systems like two steering wheels okay lay them out the first
+
+16:29.840 --> 16:36.240
+one just pushes constantly towards zero if you are at a positive number it pushes negative with a force
+
+16:36.240 --> 16:42.080
+of one if you're negative it pushes positive with a force of one just a constant push simple enough the
+
+16:42.080 --> 16:48.240
+second steering wheel uses what the text calls a sliding mode convention let's break down why these two
+
+16:48.240 --> 16:54.640
+steering wheels yield completely different futures because technically without an adversaire both of these
+
+16:54.640 --> 16:59.760
+feedbacks are perfectly viable right if you just leave them alone they'll both eventually get your
+
+16:59.760 --> 17:05.280
+point to zero but let's introduce our adversary let's say the adversary can introduce a small
+
+17:05.280 --> 17:11.680
+unpredictable perturbation they can push the system with a force of a little 0.5 in any direction
+
+17:11.680 --> 17:16.560
+at any time they want okay so the first steering wheel the constant push the adversary can just
+
+17:16.560 --> 17:21.200
+constantly push against you you're pushing towards zero with a force of one the adversary pushes away
+
+17:21.200 --> 17:27.920
+with a force of 0.5 yeah you are still making progress towards zero right you're netting 0.5 so what's the problem
+
+17:27.920 --> 17:33.360
+the problem appears when you look at the terminal cost over a long time horizon terminal cost yeah
+
+17:33.360 --> 17:38.720
+if the payoff function how you define success is the square distance from zero at some distant future
+
+17:38.720 --> 17:46.000
+time a smart adversary can exploit that simple constant push oh they don't just push against you
+
+17:46.000 --> 17:52.960
+constantly they carefully time their perturbations waiting for you to overshoot or drift to drive the
+
+17:52.960 --> 17:59.920
+terminal state arbitrarily far from the target as the time horizon grows the math proves that the
+
+17:59.920 --> 18:06.080
+guaranteed value the absolute worst case scenario for that first feedback is terrible it fails a
+
+18:06.080 --> 18:12.080
+captain's test wow but the sliding mode steering wheel behaves completely differently yes because sliding
+
+18:12.080 --> 18:18.240
+mode control doesn't just push blindly it dynamically adjusts its response based on the state the mathematics
+
+18:18.240 --> 18:23.200
+show that the rate of change of the square distance is strictly negative whenever you aren't at zero
+
+18:23.200 --> 18:28.240
+regardless of the adversary's 0.5 perturbation so it's always winning the control is designed to
+
+18:28.240 --> 18:34.240
+overpower the worst case perturbation at every single mathematical instant so the guaranteed worst case
+
+18:34.240 --> 18:40.240
+distance from zero is exactly zero it holds the system exactly at the target no matter what the universe does
+
+18:40.240 --> 18:47.280
+that is incredible so both were technically viable under the old persistence lineage but only one
+
+18:47.280 --> 18:52.640
+actually survived the possibility space of a hostile environment and that's why the worst case guarantee
+
+18:52.640 --> 18:58.400
+against an adversary isn't just some arbitrary pessimistic rule invented by anxious mathematicians
+
+18:58.400 --> 19:05.360
+it's the standard that naturally logically falls out of taking existence seriously in a universe that
+
+19:05.360 --> 19:11.200
+doesn't care about you yeah if you want your fan of futures to actually mean something you have to account
+
+19:11.200 --> 19:17.200
+for the futures where the wind is actively blowing against you okay so we know how to check the boundaries
+
+19:17.200 --> 19:22.240
+of the sea wall to see if we're viable and we know how to pick the safest route from where we stand
+
+19:22.240 --> 19:27.680
+using the captain's worst case logic but what if where we stand our current state doesn't actually
+
+19:27.680 --> 19:33.360
+tell us the whole truth about our system what if the map we're looking at is lying to us this is where
+
+19:33.360 --> 19:39.840
+things get computationally dangerous we are entering the problem of memory or history dependence the scar
+
+19:39.840 --> 19:45.040
+and the code base this is a phenomenal analogy it really is imagine two patches of human skin
+
+19:46.000 --> 19:51.520
+under a powerful microscope if you just look at the surface cells they look identical same cellular
+
+19:51.520 --> 19:59.520
+structure same basic composition but one is pristine tissue and the other is a scar right the pristine tissue
+
+19:59.520 --> 20:07.040
+has the normal full regenerative range of the human body if you cut it it heals nicely the scar however
+
+20:07.040 --> 20:14.400
+is structurally closed off from those regenerative futures it cannot heal the same way again from a purely
+
+20:14.400 --> 20:18.640
+state-based markovian perspective meaning a perspective that only looks at the present
+
+20:18.640 --> 20:24.000
+instant entirely oblivious to the past those two patches of skin are in the exact same state
+
+20:24.000 --> 20:28.240
+but their continuation spaces are entirely different and if you're a software engineer listening to this
+
+20:28.240 --> 20:33.040
+you know exactly what this feels like the text gives an example of two code bases oh this one is
+
+20:33.040 --> 20:38.080
+painfully accurate right they both compile perfectly they both do the exact same thing for the user
+
+20:38.080 --> 20:45.120
+if you run a git diff to compare the files today there are zero differences but one code base was
+
+20:45.120 --> 20:50.480
+built through a thousand small well-tested carefully documented commits over three years and the other
+
+20:50.480 --> 20:58.320
+one the other was achieved via a chaotic panic-driven undocumented rewrite over a caffeine-fueled weekend
+
+20:58.960 --> 21:05.120
+they look identical today but you know in your bones that their modification futures how easily you can
+
+21:05.120 --> 21:10.160
+add a new feature tomorrow without breaking everything are completely different well flake
+
+21:10.160 --> 21:15.120
+chichen is highlighting here is that sometimes the state fails to do its job how do you mean the
+
+21:15.120 --> 21:20.160
+fundamental assumption of differential equations and viability theory up to this point is that the
+
+21:20.160 --> 21:26.960
+future depends only on the present state it's a convenient fiction in reality the future often depends
+
+21:26.960 --> 21:32.880
+heavily on the specific path taken to arrive at that state the history matters so wait what does this
+
+21:32.880 --> 21:37.360
+actually mean for the math does this mean we have to track literally everything that has ever happened
+
+21:37.360 --> 21:43.360
+to a system because if i have to track every single keystroke of that chaotic weekend rewrite just to
+
+21:43.360 --> 21:48.960
+understand my software's future that sounds completely impossible the data storage alone would be infinite
+
+21:48.960 --> 21:54.640
+it generally is impossible which is why mathematicians introduce the concept of a sufficient statistic
+
+21:54.640 --> 22:00.000
+sufficient statistic sometimes you don't need the whole exhaustive history you just need
+
+22:00.000 --> 22:06.320
+a condensed mathematical summary of the history the text uses the example of tracking the running
+
+22:06.320 --> 22:13.040
+maximum of a financial asset like a stock price exactly if your system's available options say
+
+22:13.840 --> 22:20.320
+a specific type of options contract depend only on the highest price the stock ever reached you don't
+
+22:20.320 --> 22:26.080
+need to remember the millions of micro fluctuations over the last 10 years right you don't care about the dips
+
+22:26.080 --> 22:32.240
+you just need to remember one number the all-time high that single number is a sufficient statistic
+
+22:32.240 --> 22:38.240
+you append it to the current state and boom your system is markovian again you have a finite manageable
+
+22:38.240 --> 22:43.520
+state that includes the relevant history oh thank god okay so we just find the sufficient statistic
+
+22:43.520 --> 22:48.400
+for our system tack it onto our current state and we're back to doing normal math not so fast
+
+22:48.400 --> 22:54.240
+felicino doesn't let us off the hook that easily oh the monograph includes a rigorous mathematical proof
+
+22:54.240 --> 23:00.160
+showing that there exist systems where a finite sufficient statistic is literally impossible wait what
+
+23:00.160 --> 23:07.040
+yeah they construct a history dependent continuation problem a discrete system where the options available
+
+23:07.040 --> 23:13.360
+depend on the entire uncompressed history the proof shows that no finite range map can injectively
+
+23:13.360 --> 23:18.720
+absorb the unboundedly growing set of histories wait really so you can't just assume there's always a
+
+23:18.720 --> 23:24.000
+clever way to summarize the past exactly you cannot just wave a mathematical magic wand and say
+
+23:24.000 --> 23:28.720
+well let's assume there's a simple hidden variable that captures everything it is an empirical
+
+23:28.720 --> 23:34.320
+question for each individual system that's wild sometimes you get lucky and have a tidy sufficient
+
+23:34.320 --> 23:39.760
+statistic like a running maximum but you have to prove it not assume it if you can't prove it you are
+
+23:39.760 --> 23:45.760
+dealing with a system that is genuinely structurally carrying the weight of its entire past and your
+
+23:45.760 --> 23:52.160
+geometry has to reflect that infinite dimensional reality that is staggering the idea that some systems
+
+23:52.160 --> 23:58.480
+literally cannot forget without losing their core identity wow it's a lot to wrap your head around
+
+23:58.480 --> 24:04.640
+it really is but okay let's assume we have defined our state properly and we've managed to summarize its
+
+24:04.640 --> 24:11.360
+history if needed how do we actually measure the sheer size of the options we have left yeah how do we put a
+
+24:11.360 --> 24:17.920
+heart number on the volume of this fan of futures that brings us to the complexities of volume and distance
+
+24:17.920 --> 24:23.120
+and we have to start by throwing out the most obvious intuitive way a human being would try to
+
+24:23.120 --> 24:30.480
+measure it okay the two trailheads imagine you are standing at two different hiking trailheads both have
+
+24:30.480 --> 24:36.640
+signs pointing to five different marked trails right at the first trailhead the five paths immediately fan
+
+24:36.640 --> 24:42.080
+out in completely different directions north south east west and straight up the mountain but at the second
+
+24:42.080 --> 24:47.440
+trailhead there are also five paths but four of them run parallel to each other just 10 feet apart
+
+24:47.440 --> 24:52.720
+for five miles before finally splitting slightly if you just count the options if you just read the signs
+
+24:52.720 --> 24:59.040
+both trailheads give you five choices but your actual freedom your continuation space is vastly different
+
+24:59.040 --> 25:05.200
+at the second trailhead if you change your mind a mile in you essentially only have two real options
+
+25:05.200 --> 25:10.320
+stay on the parallel cluster or bushwhack to the one path that went a different way so just counting
+
+25:10.320 --> 25:15.920
+trajectories is useless we need to measure the actual room they take up the volume and how close they are to
+
+25:15.920 --> 25:22.880
+each other the distance but the author says the naive way of measuring this volume completely fails
+
+25:22.880 --> 25:28.080
+can you explain why without losing me in the equations i'll try the naive approach would be
+
+25:28.080 --> 25:33.280
+to put a probability measure like something called a wiener measure wiener measure yeah which is used to
+
+25:33.280 --> 25:39.200
+model brownian motion you'd put it directly on the infinite space of all possible future trajectories
+
+25:39.200 --> 25:44.960
+it feels natural because it handles continuous time but Flyxion provides a brief devastating proof
+
+25:45.920 --> 25:51.200
+why this is mathematically bankrupt for physical systems why because trajectories in our continuation
+
+25:51.200 --> 25:58.160
+spaces by definition must be absolutely continuous they have a bounded variation because they represent
+
+25:58.160 --> 26:03.600
+real physical velocities let's ground that bounded variation just means things can't instantly
+
+26:03.600 --> 26:09.760
+teleport back and forth infinitely fast yeah like a car can't be going 60 miles an hour forward and then
+
+26:09.760 --> 26:16.320
+instantaneously be going 60 miles an hour backward in the same microsecond exactly physical systems have
+
+26:16.320 --> 26:23.840
+inertia they have limits but a typical path under a wiener measure true brownian randomness like dust
+
+26:23.840 --> 26:30.640
+motes jittering in a sunbeam or idealized stock market ticks is nowhere differentiable and has
+
+26:30.640 --> 26:36.160
+unbounded variation meaning what visually if you zoomed in on it it would look infinitely jagged
+
+26:36.160 --> 26:41.360
+because of this fundamental mismatch between real physics and pure randomness the wiener measure
+
+26:41.360 --> 26:47.200
+assigns exactly zero probability to the set of absolutely continuous paths wait so if you try to
+
+26:47.200 --> 26:53.520
+measure your continuation space using that method the math just spits out zero every single time it
+
+26:53.520 --> 26:59.040
+just flat lines well the measure is blind to the type of paths that real systems take so how do we fix it
+
+26:59.040 --> 27:04.480
+we abandon the infinite horizon we measure finite horizon reachable sets using standard labesque measure
+
+27:04.480 --> 27:09.040
+the best measure okay what's the difference instead of asking the impossible question what is the
+
+27:09.040 --> 27:17.920
+volume of all possible infinite futures we ask a highly specific local question if i look exactly
+
+27:17.920 --> 27:24.000
+t seconds into the future what is the geometric volume of all the exact physical states i could
+
+27:24.000 --> 27:32.000
+possibly be in we measure a space of endpoints a physical area not a space of infinite paths and this
+
+27:32.000 --> 27:37.600
+leads to a mind-bending counter example in the text that really challenged my intuition the discrete
+
+27:37.600 --> 27:42.960
+system yeah because you would normally think that as time goes on your volume of futures always expands
+
+27:42.960 --> 27:48.720
+more time equals more room to make decisions right it's the intuition yeah but the text shows a three
+
+27:48.720 --> 27:54.080
+state discrete system where that isn't true at all you can start at state zero at step one you can go to
+
+27:54.080 --> 27:59.520
+state one or state two so your volume is doubled it's two right but from state one or state two the rules of
+
+27:59.520 --> 28:04.720
+the system dictate that your only option is to go back to state zero so at step two your volume
+
+28:04.720 --> 28:09.680
+shrinks back to one yes the reachable set folds back on itself the dynamics force converge it's
+
+28:09.680 --> 28:15.520
+exactly like folding dough oh i like that right you roll the dough out with a rolling pin that's your
+
+28:15.520 --> 28:20.400
+options expanding spreading out across the counter you have lots of surface area but then you take the
+
+28:20.400 --> 28:25.760
+edges and fold them back into the center all those different points on the edge of the dough all those
+
+28:25.760 --> 28:32.320
+completely different trajectories you took inevitably map back to the exact same dense spot in the middle
+
+28:32.320 --> 28:38.240
+time does not always equal more room it doesn't sometimes the dynamics of the universe literally
+
+28:38.240 --> 28:44.080
+fold your options back into a singularity which is a beautiful tactile analogy and it perfectly
+
+28:44.080 --> 28:51.040
+highlights why volume alone isn't enough we also need continuation distance if two states have reachable
+
+28:51.040 --> 28:56.320
+sets that are heavily folded into the same outcomes we need a mathematical way to measure how similar
+
+28:56.320 --> 29:02.400
+those futures actually are Flyxion uses something called the hausdorf distance walk us through how
+
+29:02.400 --> 29:08.320
+to do distance how does it measure that overlap imagine you have two overlapping shapes on a piece of paper
+
+29:08.320 --> 29:13.120
+the hausdorf distance doesn't just measure the distance between their centers it asks a worst case
+
+29:13.120 --> 29:19.920
+question if i pick a point in shape a how far do i have to travel to find the closest point in shape b
+
+29:19.920 --> 29:27.680
+and it finds the maximum of those minimum distances in our context it asks if i am in state a how far
+
+29:27.680 --> 29:32.560
+is my worst case outcome from the closest outcome i could have achieved if i had started in state b
+
+29:33.360 --> 29:39.200
+it gives us a strict metric for how completely two futures overlap okay so we can measure the volume
+
+29:39.200 --> 29:45.120
+of our futures and how far apart different futures are but having a massive volume of futures a huge piece
+
+29:45.120 --> 29:50.880
+of dough is completely useless if you don't actually care about the options in it right what if all your
+
+29:50.880 --> 29:55.680
+futures are practically the same to you even if they are technically different coordinates on a grid
+
+29:55.680 --> 30:01.360
+we need the math to care about meaning this is a massive pivot in the monograph this is where we cross
+
+30:01.360 --> 30:07.440
+from pure geometry into information theory and meaning we're looking at distinguishability and repair
+
+30:08.080 --> 30:13.760
+the story of the two manuscript restores this was profound yeah let's hear it imagine an ancient
+
+30:13.760 --> 30:20.720
+priceless one-of-a-kind historical manuscript and one page has a massive tear right through a crucial
+
+30:20.720 --> 30:26.720
+paragraph you give it to two different restorers the first restorer is a master of aesthetics they
+
+30:26.720 --> 30:32.720
+mix the perfect ink they match the 15th century handwriting exactly and they fill the tear with plausible
+
+30:32.720 --> 30:37.920
+sounding words it looks beautiful it looks intact but the historical truth of what was actually written
+
+30:37.920 --> 30:43.280
+there is gone forever and the second restorer takes a completely different approach right the
+
+30:43.280 --> 30:49.600
+second restorer goes to the archives they spend months finding a copyist letter from 100 years later
+
+30:49.600 --> 30:55.920
+that happens to quote that exact missing paragraph they recover the actual historical text and write it
+
+30:55.920 --> 31:02.880
+back in right now both restorers hand you back an intact page if your only metric is is the page whole
+
+31:02.880 --> 31:09.200
+does it look like a manuscript they both succeeded but only one restored what was actually lost in the
+
+31:09.200 --> 31:14.160
+rigorous language of the monograph this is the difference between repair as capture and true
+
+31:14.160 --> 31:19.440
+distinguishability repair is capture yeah repair is capture is just asking if there is a trajectory that
+
+31:19.440 --> 31:24.640
+lands back in the target set in this case a set of things that look like intact pages viability theory
+
+31:24.640 --> 31:30.480
+handles that easily but mere capture is completely blind it doesn't care about the content so how do we
+
+31:30.480 --> 31:37.200
+force the math to care about the content how do we mathematically mandate historical truth we have to
+
+31:37.200 --> 31:43.600
+explicitly define a distinction a distinction is simply a partition of the state space into cells
+
+31:43.600 --> 31:50.160
+that we the observers or the system designers care to treat as fundamentally different okay once we
+
+31:50.160 --> 31:56.240
+define that we calculate the distinction margin the distinction margin measures the distance using that
+
+31:56.240 --> 32:01.520
+hausdorf distance we just talked about between the future reachable set of our current state
+
+32:01.520 --> 32:06.800
+and the future reachable set of a state in a completely different cell if we pull back and connect
+
+32:06.800 --> 32:10.960
+this to the bigger picture connecting it to the bigger picture this is fundamentally about
+
+32:10.960 --> 32:17.120
+information entropy the math shows that if the distinction margin hits zero it means total
+
+32:17.120 --> 32:22.240
+information collapse the total collapse it means that the future reachable sets of two different
+
+32:22.240 --> 32:28.880
+states have perfectly exactly overlapped like the folded do the points from the edge have merged in the center
+
+32:28.880 --> 32:35.680
+exactly when the distinction margin is zero the system has completely irreversibly forgotten its past
+
+32:36.320 --> 32:42.080
+an observer looking at the future is available literally cannot tell which state the system started in
+
+32:42.080 --> 32:47.280
+wow regardless of what the system looks like right now the distinction has been erased from reality
+
+32:47.920 --> 32:53.440
+the aesthetic manuscript restorer created a state where the distinction margin collapsed to zero
+
+32:54.320 --> 33:00.800
+the future of that forged page is indistinguishable from the future of a hundred other plausible forgeries
+
+33:00.800 --> 33:05.840
+the information is dead that is terrifying when you think about it in terms of data
+
+33:05.840 --> 33:10.960
+or institutional memory or even human relationships definitely a system might look totally fine on the
+
+33:10.960 --> 33:15.280
+surface the servers are running the corporation is fully staffed the couple is still talking to each
+
+33:15.280 --> 33:21.600
+other but had his quietly irreversibly erased the very distinctions that made it useful or unique
+
+33:22.240 --> 33:27.760
+the options haven't shrunk in volume but they've shrunk in meaning yes and if we want to preserve
+
+33:27.760 --> 33:33.040
+these crucial distinctions while also moving efficiently and staying viable on the seawall and avoiding
+
+33:33.040 --> 33:40.720
+adversaries we are suddenly juggling a lot of very complex heavily competing goals which brings us to the
+
+33:40.720 --> 33:46.800
+problem of optimization yeah how do we juggle all these criteria without making terrible decisions
+
+33:47.520 --> 33:52.720
+the author uses the example of a hiking guide leading a diverse group of people right she has to
+
+33:52.720 --> 33:59.680
+consider the distance of the trail the steepness the weather exposure and the scenic views then it does
+
+33:59.680 --> 34:05.440
+but pareto dominance simply says that trail a is only objectively better than trail b if it is better
+
+34:05.440 --> 34:12.720
+or at least equal on every single criterion so if it's shorter less steep safer a and d more scenic
+
+34:12.720 --> 34:19.520
+right but if trail a is shorter but steeper than trail b then a and b are mathematically incomparable
+
+34:19.520 --> 34:24.400
+under pareto dominance they sit on different branches of the admissibility lattice oh i see you
+
+34:24.400 --> 34:29.760
+keep the criteria completely separate forcing the human decision maker or the control logic to confront
+
+34:29.760 --> 34:34.960
+the actual trade-offs rather than hiding them in an arbitrary weighted average that causes a hyper to
+
+34:34.960 --> 34:41.120
+have a heart attack a single scalar score is a last resort a necessary evil at the very end of the
+
+34:41.120 --> 34:47.440
+process not a default starting point the text highlights a specific dangerous example of using
+
+34:47.440 --> 34:52.960
+single proxy metrics with something called the tangential margin we talked earlier about ambient
+
+34:52.960 --> 34:57.280
+distance to the boundary like how many feet you are from the edge of the seawall right common sense says
+
+34:57.280 --> 35:02.160
+being further from the edge is always safer right common sense is wrong here ambient distance is
+
+35:02.160 --> 35:08.320
+completely independent of the tangential margin oh so the tangential margin measures how deeply your
+
+35:08.320 --> 35:15.120
+system's trajectory is actually pointing inward away from danger Flyxion proves geometrically that you can
+
+35:15.120 --> 35:20.880
+be very far from the edge of the seawall but your velocity is aimed dead at it like a missile so your
+
+35:20.880 --> 35:26.080
+tangential margin is terrible you are in immense danger because you're headed straight for it
+
+35:26.080 --> 35:32.000
+exactly conversely you can be literally balancing on the very edge of the seawall but your momentum
+
+35:32.000 --> 35:37.840
+is perfectly aligned parallel to the wall so your tangential margin is great and you are perfectly safe
+
+35:37.840 --> 35:43.040
+we love to use single metrics in the real world a ceo says oh we have 10 million dollars in the bank
+
+35:43.040 --> 35:48.000
+we're extremely far from bankruptcy happens all the time but if your burn rate is astronomical and
+
+35:48.000 --> 35:55.440
+pointing straight at the cliff that ambient distance is a dangerously misleading proxy the math rigorously
+
+35:55.440 --> 36:00.720
+proves it specifically Flyxion shows that the tangential margin only degenerates at a rate
+
+36:00.720 --> 36:05.360
+controlled by the lipschitz continuity of the dynamics and the boundaries normal direction okay
+
+36:05.360 --> 36:12.240
+lipschitz continuity translate that for us think of lipschitz continuity as a strict speed limit on how
+
+36:12.240 --> 36:18.240
+fast the rules of your universe can change okay it means the margin of safety shrinks based on how
+
+36:18.240 --> 36:24.560
+rapidly the physics of your system can shift and how sharply the boundary of safety can curve not simply how
+
+36:24.560 --> 36:30.880
+close you are to the edge if the rules can change violently and suddenly you are in danger no matter
+
+36:30.880 --> 36:36.160
+how much money is in the bank it is hard enough balancing these criteria for one person or one
+
+36:36.160 --> 36:43.680
+system but what happens when multiple systems multiple distinct agents have to share the exact same
+
+36:43.680 --> 36:50.880
+fan of futures you get coordination failure chips in a channel picture two massive cargo ships each ship
+
+36:50.880 --> 36:56.240
+on its own can easily navigate a specific narrow channel they're totally fine right they both have
+
+36:56.240 --> 37:01.440
+plenty of room their own viable paths but put them in the channel at the same time and suddenly they
+
+37:01.440 --> 37:06.320
+crash the physical room of the channel hasn't changed the water hasn't changed what change are their
+
+37:06.320 --> 37:11.840
+claims on it to model this mathematically Flyxion takes a minimal model that they had previously proposed
+
+37:11.840 --> 37:19.280
+points out its flaws and corrects it by aligning it with obin's fuzzy dynamical games fuzzy games yeah in this
+
+37:19.280 --> 37:24.640
+correct model the physical state dynamics the actual width of the channel the speed of the currents are
+
+37:24.640 --> 37:31.440
+shared by everyone no single agent controls the ocean but the agents must draw from a shared resource
+
+37:31.440 --> 37:37.760
+pool what the math calls the grand coalition's allotment to satisfy their own individual payoff requirements
+
+37:37.760 --> 37:43.360
+and here's where it gets really interesting because the math shows you could have a situation where every
+
+37:43.360 --> 37:49.520
+single agent's demand is entirely reasonable and achievable if they were alone but catastrophic
+
+37:49.520 --> 37:56.560
+together yes the text proves this with a stark simple example two agents each need a payoff of six to
+
+37:56.560 --> 38:02.480
+survive the total resource available in the shared environment is one okay if agent a takes point
+
+38:02.480 --> 38:08.640
+six of the resource they get their payoff of six if agent b is alone and takes point six they get six
+
+38:08.640 --> 38:14.880
+both demands are individually completely rational but they can't both take 0.6 that adds up to 1.2
+
+38:14.880 --> 38:20.720
+and the environment only has 1.0 to give exactly individual viability does not imply joint viability
+
+38:20.720 --> 38:26.160
+the environment itself is viable the individual demands are viable but the coordination absolutely
+
+38:26.160 --> 38:32.400
+fails oh this is where preference fields come in where agents try to negotiate what they want but Flyxion
+
+38:32.400 --> 38:40.000
+is extraordinarily careful to note that preferences only apply after admissibility is established you
+
+38:40.000 --> 38:44.400
+can't just pick what you want you have to pick what you want from the menu of what the shared environment
+
+38:44.400 --> 38:51.120
+allows and if the shared environment allows nothing that satisfies everyone you don't have a preference
+
+38:51.120 --> 38:56.960
+problem you have a hard geometric limit you have two departments fighting over a corporate budget that
+
+38:56.960 --> 39:02.000
+physically cannot sustain both of them we have covered so much abstract ground we've talked about
+
+39:02.000 --> 39:08.960
+comas sea walls forged manuscripts ships and corporate budgets but to prove this theory actually
+
+39:08.960 --> 39:14.320
+works to prove it isn't just mathematical naval gazing the author does something at the end of the
+
+39:14.320 --> 39:20.240
+monograph that i absolutely loved they didn't test it on a simulation of a galaxy or a global economy
+
+39:20.240 --> 39:27.040
+they built a tiny perfectly checkable universe the physics pendulum Flyxion notes that a physicist
+
+39:27.040 --> 39:31.680
+checks a new equation on a simple desk pendulum before pointing a billion dollar telescope
+
+39:31.680 --> 39:36.320
+about a galaxy makes sense because if the math fails on a pendulum you can hold in your hand
+
+39:36.320 --> 39:42.880
+it is definitely going to fail on a galaxy so Flyxion applies all this heavy infinite horizon measure
+
+39:42.880 --> 39:49.760
+theory to tiny 8-bit computer logic circuits which is brilliant because you can literally write out
+
+39:50.400 --> 39:56.800
+every single possible state on a single piece of paper first they look at a half adder which is just a
+
+39:56.800 --> 40:02.160
+basic combinational circuit that adds two bits together and the math correctly identifies it as
+
+40:02.160 --> 40:08.400
+the degenerate case right the volume of its futures is exactly one there is no choice no history no memory
+
+40:08.400 --> 40:13.840
+input goes in output comes out it's perfectly predictable and the geometry reflects that perfectly
+
+40:13.840 --> 40:19.520
+then they step up the complexity to a two-bit enabled counter suddenly you have a choice an enable pin
+
+40:19.520 --> 40:24.320
+that can be zero or one if you apply the volume mathematics here we see the volume of reachable
+
+40:24.320 --> 40:29.600
+sets start at one then grow to two then three and finally saturate at four because it's a two-bit
+
+40:29.600 --> 40:34.960
+system and four is the maximum number of states so the math just maps it out the math works perfectly
+
+40:34.960 --> 40:40.800
+mapping the exact geometric expansion of the possibility space frame by frame but the absolute
+
+40:40.800 --> 40:46.960
+masterpiece of this application is the four state traffic light with a memory bit it's a traffic
+
+40:46.960 --> 40:53.680
+light that cycles red yellow green and it has one single bit of memory to remember if a pedestrian
+
+40:53.680 --> 40:59.120
+push the crosswalk button this is where we see the terrifying concept of distinction collapse happen
+
+40:59.120 --> 41:05.520
+in action on a micro scale yes we define a distinction we care whether a pedestrian is waving or not
+
+41:05.520 --> 41:11.440
+we want the system to remember as the light cycles through green and yellow the memory bit is safely
+
+41:11.440 --> 41:18.880
+carried forward the distinction is preserved state a no pedestrian and state b pedestrian waiting have
+
+41:18.880 --> 41:24.000
+geometrically different futures but the instant the light turns red the system designed to clear that
+
+41:24.000 --> 41:29.200
+memory bit because the pedestrian is allowed to cross and mathematically at that exact instant
+
+41:29.200 --> 41:35.120
+the distinction margin drops to absolute zero erased the reachable future for the state light turning
+
+41:35.120 --> 41:40.720
+red no pedestrian is now perfectly geometrically identical to the reachable future for the state
+
+41:40.720 --> 41:47.360
+light turning red pedestrian was waiting the past is erased the folding dough has folded it is exactly like
+
+41:47.360 --> 41:53.440
+famous 8-bit video game bugs like in old games where they ran out of memory and suddenly two
+
+41:53.440 --> 41:58.160
+completely different enemy sprites would overwrite each other's data because they shared the same memory
+
+41:58.160 --> 42:04.560
+address oh exactly the system physically couldn't hold a distinction anymore so it collapsed and this heavy
+
+42:04.560 --> 42:12.720
+abstract geometry literally diagnoses that bug by mathematically pinpointing the exact frame where the future
+
+42:12.720 --> 42:19.200
+collapses it proves that the fan of futures isn't just a metaphor it is a sturdy computable mathematical
+
+42:19.200 --> 42:25.360
+reality that dictates the behavior of everything from a traffic light to an ecosystem okay let's bring this
+
+42:25.360 --> 42:31.120
+all home this has been a massive brain bending deep dive we've seen how Flyxion proved aubin's theorem
+
+42:31.120 --> 42:36.800
+under specific hypotheses showed that the captain's worst case guaranteed valuation is a necessary reality
+
+42:36.800 --> 42:40.720
+built a working finite horizon volume that avoids the pitfalls of infinite measures
+
+42:40.720 --> 42:45.840
+formalized the terrifying concept of distinction collapse and tested it all on small machines to
+
+42:45.840 --> 42:51.440
+prove it works yeah the fan of futures is real it is real and it is a lens that permanently changes
+
+42:51.440 --> 42:56.080
+how you see the world once you understand it and for you listening this isn't just about math think
+
+42:56.080 --> 43:03.200
+about your own work technical debt in software is just a shrinking continuation volume you still exist the
+
+43:03.200 --> 43:09.120
+code still runs today but you have fewer safe moves left for tomorrow exactly biological healing is a
+
+43:09.120 --> 43:16.160
+repair trajectory seeking a viable target morphology institutional reform is trying to find a shared
+
+43:16.160 --> 43:22.080
+state continuation that doesn't crash the ships in the channel they're all just different flavors of
+
+43:22.080 --> 43:27.440
+continuation geometry once you see the geometry of options you know the shape of the room you are
+
+43:27.440 --> 43:31.680
+standing in you really can't unsee it so i want to leave you with a final thought to mull over
+
+43:32.640 --> 43:38.960
+we started by looking at two bodies one in a coma one asleep indistinguishable the present and vastly
+
+43:38.960 --> 43:44.480
+different in their fan of futures if you look at your own life right now your career your relationships your
+
+43:44.480 --> 43:49.760
+organization are you currently optimizing for your immediate current state are you just trying
+
+43:49.760 --> 43:56.720
+to look good in the frozen snapshot of today exactly or are you optimizing to maximize the physical volume of
+
+43:56.720 --> 44:02.000
+your continuation space what if the most successful systems the most resilient lives
+
+44:02.000 --> 44:07.200
+aren't the ones currently sitting at perfect rest but the ones actively maintaining the widest most
+
+44:07.200 --> 44:13.040
+robust fan of futures that is the ultimate question this geometry demands we answer thanks for joining us on
+
+44:13.040 --> 44:23.520
+this deep dive
+
+44:23.520 --> 44:25.520
+you
+

@@ -1,0 +1,1724 @@
+1
+00:00:00,000 --> 00:00:09,520
+Imaginemos por un momento que el software de un semáforo inteligente, de esos modernos, decide borrar un solo segundo de su memoria.
+
+2
+00:00:10,120 --> 00:00:16,220
+Y como resultado directo de ese pequeño olvido, un peatón se queda esperando en la acera para siempre.
+
+3
+00:00:16,920 --> 00:00:19,720
+¡Wow! ¡Qué imagen tan frustrante!
+
+4
+00:00:19,720 --> 00:00:38,160
+O pensamos en un maestro internacional de ajedrez, o sea, alguien capaz de anticipar, no sé, 20 movimientos, y de repente pierde absolutamente todas sus habilidades y juega como un principiante solo porque alguien movió una sola pieza, digamos un centímetro fuera de su lugar habitual.
+
+5
+00:00:38,920 --> 00:00:41,320
+Sí, es un colapso total del sistema.
+
+6
+00:00:41,320 --> 00:00:50,320
+Exacto. Por lo general, cuando intentamos entender sistemas complejos, ya sea en la tecnología o en la propia mente humana, buscamos una fotografía, ¿verdad?
+
+7
+00:00:50,740 --> 00:00:58,460
+Queremos, pues, una imagen estática. Si algo se rompe, vamos y buscamos la pieza exacta que falló en ese instante preciso.
+
+8
+00:00:58,460 --> 00:01:09,700
+Y a ver, es una tendencia muy humana. Nos resulta profundamente reconfortante poder señalar un sistema, detenerlo en el tiempo y decir, ah, este es su estado actual.
+
+9
+00:01:09,700 --> 00:01:11,960
+Nos da una falsa ilusión de control.
+
+10
+00:01:12,500 --> 00:01:22,540
+Totalmente. Pero al adentrarnos en los documentos que tenemos hoy sobre la mesa para esta exploración, esa cámara fotográfica se hace añistas por completo.
+
+11
+00:01:23,380 --> 00:01:36,160
+Hoy vamos a analizar por qué nuestra obsesión con capturar el presente, esa visión estática del mundo, no solo es limitante, sino que literalmente está rompiendo nuestros sistemas más críticos.
+
+12
+00:01:36,540 --> 00:01:39,080
+Es un tema denso, pero fascinante.
+
+13
+00:01:39,080 --> 00:01:55,400
+Lo es. Estoy asombrada con este material. La misión de esta inmersión profunda es presentar un análisis a fondo de un conjunto de seis documentos técnicos, que la verdad son monumentales, escritos por el investigador conocido como flicción.
+
+14
+00:01:55,660 --> 00:01:57,560
+Ajá, el famoso flicción.
+
+15
+00:01:57,560 --> 00:02:13,200
+Radical. O sea, dejar de ver el mundo como una serie de estados desconectados, como fotografías, y empezar a entenderlo a través de historias y continuaciones. Básicamente ver procesos fluidos y futuros posibles.
+
+16
+00:02:13,200 --> 00:02:23,220
+¿Y el verdadero desafío intelectual de esta exploración? Digo, para nosotros hoy, es que vamos a conectar puntos que a simple vista parecen operar en universos paralelos.
+
+17
+00:02:23,440 --> 00:02:24,540
+Sí, de locos.
+
+18
+00:02:24,860 --> 00:02:33,380
+Empezaremos viendo cómo se construyen los lenguajes de programación modernos. Luego pasaremos a la psicología cognitiva de cómo los humanos ganamos experiencia.
+
+19
+00:02:33,380 --> 00:02:41,000
+Eh, rozaremos la crisis de la ciencia y la geometría matemática, y terminaremos explicando la biomecánica de cómo camina un robot.
+
+20
+00:02:41,340 --> 00:02:42,720
+Nada más y nada menos.
+
+21
+00:02:42,940 --> 00:02:51,860
+Exacto. Y lo increíble es que todo, absolutamente todo, está regido por la misma falla en nuestra forma de pensar y la misma solución matemática.
+
+22
+00:02:52,240 --> 00:03:00,240
+Ok, vamos a desempacar esto, empezando por el origen de esta frustración, que, según los textos, nace en el mundo de la programación.
+
+23
+00:03:00,780 --> 00:03:01,300
+Así es.
+
+24
+00:03:01,300 --> 00:03:07,020
+El autor plantea un escenario con el que, digamos, cualquier ingeniero de software ha lidiado alguna vez.
+
+25
+00:03:07,500 --> 00:03:15,720
+Abrir un archivo de código masivo en un lenguaje como C++ a Swift, y sentir que literalmente te aplasta el peso de la historia.
+
+26
+00:03:16,340 --> 00:03:19,340
+E introduce un concepto llamado gravedad de proveedor.
+
+27
+00:03:19,780 --> 00:03:21,820
+Ese término me parece brillante, la verdad.
+
+28
+00:03:22,180 --> 00:03:29,980
+Sí. Entonces, ¿cómo funciona esta gravedad y por qué convierte el acto de programar en, pues, un ejercicio de arqueología?
+
+29
+00:03:29,980 --> 00:03:39,420
+Bueno, y lo fascinante aquí es cómo redefine el concepto mismo de complejidad. En la ingeniería tradicional solemos dividir los problemas en dos.
+
+30
+00:03:39,640 --> 00:03:42,400
+Ajá. La esencial y la accidental, ¿no?
+
+31
+00:03:42,400 --> 00:03:53,560
+Exacto. La complejidad esencial, que es lo difícil que es el problema en sí que intentas resolver. Y la complejidad accidental, que es cuando tus herramientas son torpes.
+
+32
+00:03:53,560 --> 00:03:59,260
+Pero aquí, Flyxion introduce una tercera dimensión, que es la complejidad histórica.
+
+33
+00:03:59,660 --> 00:04:00,980
+Que es la que nadie menciona.
+
+34
+00:04:01,300 --> 00:04:11,600
+Claro. Lenguajes como C++ o Swift operan bajo una gravedad masiva dictada por un proveedor gigantesco, digamos, Apple, o un comité corporativo o internacional.
+
+35
+00:04:12,440 --> 00:04:16,840
+En esos ecosistemas de código, el mayor temor de todos es romper el pasado.
+
+36
+00:04:16,840 --> 00:04:19,180
+O sea, la compatibilidad hacia atrás.
+
+37
+00:04:19,300 --> 00:04:25,900
+Sí. Nunca, bajo ninguna circunstancia, quieren que un código escrito, no sé, hace 10 años, deje de funcionar hoy.
+
+38
+00:04:25,960 --> 00:04:32,760
+Lo cual, a ver, suena muy noble en teoría. Pero en la práctica significa que nunca puedes limpiar la casa.
+
+39
+00:04:32,760 --> 00:04:45,640
+Tienes los punteros de memoria originales de los años 80 conviviendo en el mismo espacio, con punteros inteligentes diseñados en 2011, que a su vez conviven con reglas semánticas de 2014.
+
+40
+00:04:46,500 --> 00:04:49,620
+El lenguaje se convierte en un fósil viviente.
+
+41
+00:04:50,340 --> 00:04:54,820
+Totalmente. Se genera un sistema que está aterrado de su propia historia.
+
+42
+00:04:55,280 --> 00:05:00,120
+Así que intenta gestionarla creando reglas de estado cada vez y más complicadas.
+
+43
+00:05:00,120 --> 00:05:07,880
+Y el contraste se hace con lenguajes como Python, que tienen lo que el texto llama gravedad de ecosistema.
+
+44
+00:05:08,520 --> 00:05:10,160
+Que es más distribuida, ¿verdad?
+
+45
+00:05:10,600 --> 00:05:21,500
+Exacto. Al ser impulsado por una comunidad distribuida, Python se permite hacer transiciones dolorosas pero necesarias, como el salto tan polémico de Python 2 a Python 3.
+
+46
+00:05:21,700 --> 00:05:24,840
+Ah, sí, que rompió un montón de código en su momento.
+
+47
+00:05:24,840 --> 00:05:34,680
+Sí, rompieron compatibilidad, causó dolores de cabeza, pero evitaron convertirse en un museo de reliquias de código. Lograron avanzar.
+
+48
+00:05:35,180 --> 00:05:43,940
+Y para solucionar este estancamiento a nivel fundamental, el autor no solo critica, sino que propone un lenguaje de programación completamente teórico.
+
+49
+00:05:44,780 --> 00:05:46,320
+Lo llama SpherePop.
+
+50
+00:05:46,860 --> 00:05:50,400
+SpherePop, sí. Un experimento mental fascinante.
+
+51
+00:05:50,400 --> 00:05:58,960
+Un lenguaje que invierte la regla de oro. En lugar de que el estado sea lo más importante, aquí la historia es el núcleo del universo.
+
+52
+00:05:59,740 --> 00:06:04,060
+Y supuestamente funciona con solo cuatro verbos, o primitivas.
+
+53
+00:06:04,660 --> 00:06:08,440
+¿Cómo construirías un software entero con solo cuatro instrucciones?
+
+54
+00:06:08,440 --> 00:06:22,560
+Pues, a ver, parecería imposible a primera vista, pero la lógica interna es impecable. Las cuatro primitivas son, primero, POP, que significa seleccionar una opción de múltiples futuros posibles.
+
+55
+00:06:22,960 --> 00:06:24,280
+Ok, elegir un camino.
+
+56
+00:06:24,280 --> 00:06:39,780
+Exacto. La segunda es Refuse, que es rechazar explícitamente un camino. La tercera es Bind, que es tomar una variable y atarla a un concepto para restringir el futuro. Y finalmente, Colapse.
+
+57
+00:06:40,000 --> 00:06:40,560
+Colapsar.
+
+58
+00:06:40,560 --> 00:06:51,320
+Sí, colapsar la historia en un estado temporal. En un sistema tradicional de programación, el código que vemos en pantalla es, digamos, la verdad absoluta de la máquina.
+
+59
+00:06:51,780 --> 00:06:52,920
+Lo que ves es lo que hay.
+
+60
+00:06:53,220 --> 00:07:04,380
+Claro. Pero en SpherePop, el código en pantalla es solo un colapse temporal. Es una sombra proyectada por una historia de decisiones mucho más rica que el sistema preserva en el fondo.
+
+61
+00:07:04,380 --> 00:07:16,640
+O sea, trata el código de la misma manera que el sistema de control de versiones Git trata nuestros proyectos. En Git, la historia de los commits, de los cambios que uno hace, es la verdadera base de datos.
+
+62
+00:07:16,800 --> 00:07:17,180
+Tal cual.
+
+63
+00:07:17,380 --> 00:07:32,000
+El archivo que tengo abierto en mi editor de texto en este preciso momento es medio irrelevante a largo plazo. Es solo una proyección momentánea. Por eso, en Git, si hay un error, no tienes que adivinar qué pasó haciendo arqueología.
+
+64
+00:07:32,000 --> 00:07:35,140
+La historia ya está documentada paso a paso.
+
+65
+00:07:35,580 --> 00:07:43,720
+Esa es la comparación perfecta. Al poner la historia en el centro del sistema, eliminas la necesidad de memorizar reyes oscuras de estado.
+
+66
+00:07:44,200 --> 00:07:48,920
+Pero, a ver, tengo que hacer la pregunta obligada. Como abogada del diablo.
+
+67
+00:07:49,380 --> 00:07:49,840
+Adelante.
+
+68
+00:07:49,840 --> 00:08:03,320
+Si en este lenguaje teórico nunca borramos la historia, o sea, si cada elección y cada rechazo se documentan perpetuamente, ¿no se agotará la memoria de la computadora en cuestión de, no sé, minutos?
+
+69
+00:08:03,860 --> 00:08:11,600
+Suena a tener un síndrome de acumulación compulsiva digital donde guardamos recibos del supermercado de hace 15 años por si acaso.
+
+70
+00:08:11,600 --> 00:08:18,300
+Claro, claro. Y esa es precisamente la objeción que haría cualquier ingeniero de sistemas tradicional al leer esto.
+
+71
+00:08:18,720 --> 00:08:25,180
+Pero, el modelo de SpherePop no ignora el problema de quedarse sin memoria. Simplemente cambia la forma en que lo pensamos.
+
+72
+00:08:25,380 --> 00:08:26,000
+A ver, ¿cómo?
+
+73
+00:08:26,320 --> 00:08:34,000
+En la programación orientada al estado, la recolección de basura, que es el proceso de liberar memoria, es una operación completamente ciega.
+
+74
+00:08:34,160 --> 00:08:34,540
+Ajá.
+
+75
+00:08:34,540 --> 00:08:41,240
+El sistema pregunta, ¿alguien está usando este objeto ahora mismo? No. Entonces lo borro. Así de simple.
+
+76
+00:08:41,960 --> 00:08:50,840
+En un sistema orientado a la historia, la pregunta es semántica. La pregunta es, ¿qué partes de esta historia ya no son causalmente relevantes para ningún futuro posible?
+
+77
+00:08:50,840 --> 00:09:06,720
+Ah, ok. Aquí es donde se pone realmente interesante. Porque no se trata de cuándo borrar algo por falta de espacio, sino de qué borrar sin alterar la lógica de las cosas que aún pueden suceder.
+
+78
+00:09:07,020 --> 00:09:07,540
+Exactamente.
+
+79
+00:09:07,540 --> 00:09:19,600
+Y lo que me vuela la cabeza, de verdad, es que el autor toma esta idea exacta de comprimir la historia en una computadora y la aplica directamente a la biología, específicamente al cerebro humano.
+
+80
+00:09:20,120 --> 00:09:24,800
+Cambiamos de máquinas de pronto a maestros de ajedrez y a mecánicos expertos.
+
+81
+00:09:24,800 --> 00:09:35,400
+Así es. Es un salto increíble. Si queremos entender cómo los humanos adquieran maestría, en cualquier disciplina, tenemos que entender cómo comprimen su propia historia.
+
+82
+00:09:35,940 --> 00:09:42,120
+El mito popular dice que un gran maestro de ajedrez, por ejemplo, tiene un cerebro que funciona como una supercomputadora.
+
+83
+00:09:42,260 --> 00:09:45,300
+Sí, que puede calcular miles de jugadas por segundo.
+
+84
+00:09:45,300 --> 00:09:54,340
+Exacto. Mucho más rápido que un novato. Pero los estudios cognitivos que cita Flyxion muestran que esto es totalmente falso. No calculan más rápido.
+
+85
+00:09:55,000 --> 00:10:01,220
+Entonces, si no están calculando más rápido en tiempo real, ¿qué es lo que están haciendo cuando miran el tablero?
+
+86
+00:10:01,220 --> 00:10:16,600
+Tienen una historia comprimida. A ver, pensemos en el novato. Cuando un principiante se enfrenta a un problema mecánico complejo o un tablero de ajedrez, opera con lo que el texto denomina una alta entropía de reparación.
+
+87
+00:10:17,080 --> 00:10:21,340
+Alta entropía de reparación. O sea, caos y duda.
+
+88
+00:10:21,340 --> 00:10:33,040
+Sí. Cada paso que da es incierto. Si se equivoca, tiene que retroceder paso a paso, reconstruyendo todo su proceso mental, porque su conocimiento está fragmentado.
+
+89
+00:10:33,760 --> 00:10:38,560
+El experto, en cambio, ha pasado años haciendo lo que llamamos práctica deliberada.
+
+90
+00:10:38,700 --> 00:10:50,360
+Que, para aclarar, no es solo repetir lo mismo una y otra vez de forma automática, sino cometer errores deliberados, analizarlos y registrar las correcciones.
+
+91
+00:10:50,360 --> 00:11:03,120
+Exacto. Acumulan una estructura histórica masiva de intentos, fallos y ajustes. Y luego, y aquí está la magia, el cerebro hace exactamente lo que hace ese lenguaje de programación que discutíamos.
+
+92
+00:11:03,860 --> 00:11:09,260
+Pregunta qué partes de esa historia ya no son causalmente relevantes y colapsa el resto.
+
+93
+00:11:09,520 --> 00:11:09,980
+¡Guau!
+
+94
+00:11:10,520 --> 00:11:16,780
+El cerebro del experto comprime miles de horas de ensayo y error en un solo operador cognitivo rapidísimo.
+
+95
+00:11:16,780 --> 00:11:33,740
+Esa debe ser la razón por la cual, cuando le preguntas a un verdadero maestro por qué tomó una decisión brillante en una fracción de segundo, muchas veces se queda sin palabras y te dice, no sé, fue intuición o simplemente sentí que era lo correcto.
+
+96
+00:11:34,040 --> 00:11:35,940
+Sí. Te responden con vaguedades.
+
+97
+00:11:35,940 --> 00:11:43,340
+Y como entrevistadora, a veces una piensa que están siendo esquivos o que quieren guardarse el secreto de su éxito para ellos solos.
+
+98
+00:11:43,980 --> 00:11:48,000
+Pero bajo este marco teórico, no están ocultando nada a propósito.
+
+99
+00:11:48,960 --> 00:11:55,640
+Literalmente, al colapsar la historia en su cerebro, perdieron el acceso a los datos originales no comprimidos.
+
+100
+00:11:56,260 --> 00:12:00,860
+El andamiaje de pasos intermedios fue borrado por la memoria para ahorrar recursos.
+
+101
+00:12:00,860 --> 00:12:07,140
+Tal cual. Y eso, aunque parezca una ventaja enorme, nos revela una vulnerabilidad gigantesca.
+
+102
+00:12:07,720 --> 00:12:13,920
+Si conectamos esto con el panorama general de cómo diseñamos sistemas, la compresión cognitiva tiene un precio altísimo.
+
+103
+00:12:14,520 --> 00:12:17,400
+Crea lo que Flyson define como el experto frágil.
+
+104
+00:12:18,200 --> 00:12:22,860
+Frágil. Pero si acaban de decir que son maestros, parecen invencibles en su campo.
+
+105
+00:12:23,260 --> 00:12:26,640
+Lo son, sí. Siempre y cuando las reglas del juego no cambien.
+
+106
+00:12:26,640 --> 00:12:32,820
+A ver, si a ese gran maestro de ajedrez le presentas un tablero donde las piezas han sido dispuestas al azar,
+
+107
+00:12:33,180 --> 00:12:38,940
+de maneras que jamás ocurrirían en una partida con reglas reales, su rendimiento colapsa estrepitosamente.
+
+108
+00:12:39,280 --> 00:12:40,800
+Vuelve a ser casi un novato.
+
+109
+00:12:41,200 --> 00:12:46,900
+Exacto. Como su cerebro comprimió la historia basándose estrictamente en las reglas del ajedrez convencional,
+
+110
+00:12:47,380 --> 00:12:53,080
+al alterar el entorno de esa manera, ya no tiene la estructura histórica, el paso a paso para adaptarse.
+
+111
+00:12:53,080 --> 00:12:58,440
+Comprimió tanto la ruta que si hay un desvío imprevisto, digamos, no sabe cómo recalcular.
+
+112
+00:12:58,680 --> 00:13:06,100
+Entonces, el conocimiento de un experto frágil es increíblemente rápido y eficiente en su estado actual.
+
+113
+00:13:06,760 --> 00:13:12,820
+Pero si el futuro inmediato no coincide con el pasado que su cerebro comprimió, se rompe.
+
+114
+00:13:13,180 --> 00:13:14,160
+Se quiebra por completo.
+
+115
+00:13:14,160 --> 00:13:19,520
+Y me encanta que usemos la palabra futuro, porque si la historia es el pasado,
+
+116
+00:13:19,820 --> 00:13:25,980
+el siguiente salto en el análisis de las fuentes es hacia lo que el autor llama la continuación.
+
+117
+00:13:26,540 --> 00:13:32,920
+O sea, el concepto de continuación, es decir, dejar de mirar hacia atrás y empezar a mirar hacia adelante.
+
+118
+00:13:32,920 --> 00:13:36,360
+Y te digo, ese es el eje central de toda la teoría.
+
+119
+00:13:37,220 --> 00:13:42,620
+El valor real de un sistema, ya sea un célebre humano, un bloque de código o incluso una institución,
+
+120
+00:13:43,120 --> 00:13:45,660
+no se mide por cuánta información retiene del pasado.
+
+121
+00:13:46,200 --> 00:13:51,180
+Se mide por su continuación, que se define como el espacio total de futuros posibles
+
+122
+00:13:51,180 --> 00:13:54,820
+que el sistema aún es capaz de alcanzar desde su posición actual.
+
+123
+00:13:54,820 --> 00:14:00,800
+Para aterrizar esto visualmente, el texto hace una distinción crucial entre dos tipos de errores
+
+124
+00:14:00,800 --> 00:14:06,860
+que cometemos al comprimir información, que son el déficit de continuación y el déficit ontológico.
+
+125
+00:14:07,200 --> 00:14:08,340
+Dos conceptos clave.
+
+126
+00:14:08,740 --> 00:14:13,520
+Sí. Y leyendo esto, se me ocurrió una analogía para no perdernos.
+
+127
+00:14:14,300 --> 00:14:20,400
+Pensemos en cuando uno empaca una maleta a toda velocidad, para ir, no sé, de viaje a la montaña.
+
+128
+00:14:20,400 --> 00:14:27,940
+Comprimo mi proceso de decisión y decido no llevar un suéter extra para que la maleta cierre de una vez por todes.
+
+129
+00:14:28,560 --> 00:14:31,720
+Llego a la montaña, hace un frío terrible y me congelo.
+
+130
+00:14:32,340 --> 00:14:34,300
+Eso sería un déficit de continuación.
+
+131
+00:14:34,940 --> 00:14:38,340
+Tomé un riesgo calculado, perdí una opción futura de abrigarme,
+
+132
+00:14:38,860 --> 00:14:40,780
+pero entiendo perfectamente que salió mal.
+
+133
+00:14:41,140 --> 00:14:42,300
+Sé que me falta un suéter.
+
+134
+00:14:42,540 --> 00:14:43,400
+Es un gran ejemplo.
+
+135
+00:14:44,120 --> 00:14:48,800
+Y para llevar esa idea de la maleta a un paso más allá, hacia el segundo concepto,
+
+136
+00:14:48,800 --> 00:14:53,520
+un déficit ontológico sería una falla catastrófica de comprensión básica.
+
+137
+00:14:54,200 --> 00:14:56,260
+Sería como si, al empacar a toda prisa,
+
+138
+00:14:56,640 --> 00:15:01,520
+comprimieras tanto la idea del viaje que tu cerebro directamente elimina el concepto mismo de vestirse.
+
+139
+00:15:01,840 --> 00:15:02,300
+¡Ay, Dios!
+
+140
+00:15:02,440 --> 00:15:04,100
+Llegas a la montaña sin pantalones.
+
+141
+00:15:04,600 --> 00:15:06,400
+Pero ni siquiera sabes que estás desnudo,
+
+142
+00:15:06,800 --> 00:15:11,860
+porque la distinción mental entre estar vestido y no estarlo desapareció por completo de tu sistema operativo.
+
+143
+00:15:12,480 --> 00:15:14,700
+El sistema simplemente no sabe que perdió algo.
+
+144
+00:15:15,260 --> 00:15:16,340
+No hay conciencia del error.
+
+145
+00:15:16,340 --> 00:15:23,120
+Y cuando aplicamos esto a sistemas reales y no a maletas, las consecuencias son impactantes.
+
+146
+00:15:23,500 --> 00:15:25,020
+Volviendo a Git por un segundo,
+
+147
+00:15:25,580 --> 00:15:31,440
+este sistema borra la historia de cuántas veces presionaste la tecla de borrar o si te equivocaste de letra.
+
+148
+00:15:31,640 --> 00:15:31,940
+Claro.
+
+149
+00:15:32,060 --> 00:15:35,060
+Eso es un déficit de continuación bajísimo,
+
+150
+00:15:35,600 --> 00:15:40,440
+porque al futuro de la programación no le importan lo más mínimo tus errores de tipeo.
+
+151
+00:15:40,440 --> 00:15:43,740
+Pero si hablamos de un archivo legal de un tribunal,
+
+152
+00:15:44,280 --> 00:15:49,160
+este conserva firmas físicas, sellos y metadatos notariales exactos,
+
+153
+00:15:49,360 --> 00:15:53,380
+porque está diseñado específicamente para un futuro de auditorías.
+
+154
+00:15:54,020 --> 00:15:57,800
+Perder una firma en ese contexto sería un déficit ontológico.
+
+155
+00:15:58,220 --> 00:16:01,280
+El documento perdería su calidad del legal por completo.
+
+156
+00:16:01,280 --> 00:16:05,240
+Y si conectamos esto con el panorama general,
+
+157
+00:16:05,740 --> 00:16:10,980
+el texto usa esta misma métrica de los déficits para explicar desastres en el mundo académico,
+
+158
+00:16:11,400 --> 00:16:13,840
+como la famosa crisis de replicación científica.
+
+159
+00:16:13,980 --> 00:16:18,160
+Claro, cuando decenas de estudios famosos, sobre todo de psicología,
+
+160
+00:16:18,440 --> 00:16:21,360
+no pudieron ser replicados en laboratorios modernos.
+
+161
+00:16:21,960 --> 00:16:24,360
+Siempre se asumió que era fraude o mala ciencia.
+
+162
+00:16:24,680 --> 00:16:24,940
+No.
+
+163
+00:16:24,940 --> 00:16:27,360
+Y, a ver, algunos lo fueron, sin duda.
+
+164
+00:16:27,940 --> 00:16:33,380
+Pero la gran mayoría falló por un déficit ontológico en el formato de publicación científica en sí.
+
+165
+00:16:34,240 --> 00:16:39,920
+En su afán por comprimir la información metodológica para que cupieran las páginas limitadas de una revista impresa,
+
+166
+00:16:40,360 --> 00:16:45,020
+los científicos recortaban secciones enteras sobre cómo prepararon el experimento.
+
+167
+00:16:45,040 --> 00:16:46,020
+Para ahorrar espacio.
+
+168
+00:16:46,400 --> 00:16:46,880
+Exacto.
+
+169
+00:16:47,380 --> 00:16:50,740
+Creían que estaban eliminando detalles irrelevantes, pura entropía,
+
+170
+00:16:50,740 --> 00:16:53,560
+pero en realidad estaban destruyendo las continuaciones,
+
+171
+00:16:54,000 --> 00:16:59,120
+los puentes que un científico del futuro iba a necesitar para repetir el experimento bajo las mismas condiciones.
+
+172
+00:16:59,660 --> 00:17:01,820
+El sistema perdió distinciones vitales,
+
+173
+00:17:02,200 --> 00:17:06,780
+y la comunidad ni siquiera se dio cuenta hasta décadas después, cuando todo empezó a colapsar.
+
+174
+00:17:07,020 --> 00:17:07,660
+¡Qué locura!
+
+175
+00:17:08,180 --> 00:17:14,500
+Hay otro ejemplo en la documentación que me pareció, digo, de una claridad aterradora para la vida diaria,
+
+176
+00:17:15,080 --> 00:17:18,520
+y es el del semáforo inteligente que mencionamos justo en la introducción.
+
+177
+00:17:18,520 --> 00:17:25,180
+El momento exacto en que un semáforo decide que ya no necesita recordar a un peatón.
+
+178
+00:17:25,380 --> 00:17:25,780
+Oh, sí.
+
+179
+00:17:26,300 --> 00:17:31,920
+Es un caso de estudio perfecto sobre cómo colapsar el estado de manera primatura destruye futuros posibles.
+
+180
+00:17:32,600 --> 00:17:33,840
+Tienes un semáforo inteligente.
+
+181
+00:17:34,300 --> 00:17:36,160
+Un peatón oprima el botón para cruzar.
+
+182
+00:17:36,580 --> 00:17:40,660
+El sistema registra un bit de información, o sea, sabe que hay alguien esperando.
+
+183
+00:17:40,900 --> 00:17:41,220
+Ajá.
+
+184
+00:17:41,220 --> 00:17:44,580
+Pero como el semáforo ya estaba en rojo para los autos de todas formas,
+
+185
+00:17:44,940 --> 00:17:48,840
+el sistema, operando bajo la lógica estática del presente, asume,
+
+186
+00:17:49,320 --> 00:17:51,620
+eh, bueno, los autos ya están detenidos ahora mismo,
+
+187
+00:17:51,880 --> 00:17:54,460
+así que el peatón cruzará de todos modos en este ciclo.
+
+188
+00:17:54,740 --> 00:17:56,740
+Y para ahorrar memoria, borra el bit.
+
+189
+00:17:56,940 --> 00:17:59,800
+Claro, porque desde el punto de vista del estado actual,
+
+190
+00:18:00,080 --> 00:18:03,500
+parece totalmente redundante mantener esa memoria viva.
+
+191
+00:18:03,960 --> 00:18:04,760
+Ya están en rojo.
+
+192
+00:18:04,760 --> 00:18:05,440
+Exacto.
+
+193
+00:18:05,660 --> 00:18:09,600
+Pero ¿qué pasa si en ese preciso microsegundo un vehículo de emergencia,
+
+194
+00:18:09,800 --> 00:18:13,520
+digamos una ambulancia, envía una señal de interrupción al semáforo
+
+195
+00:18:13,520 --> 00:18:15,560
+para cambiar las luces a verde y pasar rápido?
+
+196
+00:18:15,740 --> 00:18:16,380
+Ay, no.
+
+197
+00:18:16,620 --> 00:18:19,080
+La luz cambia, la ambulancia pasa a toda velocidad,
+
+198
+00:18:19,660 --> 00:18:21,620
+y cuando el sistema retoma su ciclo normal,
+
+199
+00:18:21,940 --> 00:18:24,000
+el peatón ha dejado de existir para la máquina.
+
+200
+00:18:24,180 --> 00:18:25,540
+Porque borró la solicitud.
+
+201
+00:18:26,060 --> 00:18:26,300
+Sí.
+
+202
+00:18:26,720 --> 00:18:30,820
+Como borró la historia de la solicitud asumiendo un futuro estático que nunca ocurrió,
+
+203
+00:18:30,820 --> 00:18:33,840
+el sistema sufre un déficit ontológico masivo
+
+204
+00:18:33,840 --> 00:18:37,780
+y la persona se queda en la acera esperando para siempre a que la luz cambie.
+
+205
+00:18:38,080 --> 00:18:39,140
+Es escalofriante.
+
+206
+00:18:39,640 --> 00:18:44,800
+Y frente a esta fragilidad sistémica en nuestra tecnología y nuestras instituciones,
+
+207
+00:18:45,280 --> 00:18:48,020
+la reacción miseral humana siempre es la misma, ¿verdad?
+
+208
+00:18:48,420 --> 00:18:53,720
+Decimos, necesitamos más reglas, necesitamos más leyes, más redundancia,
+
+209
+00:18:54,180 --> 00:18:56,860
+lo cual nos mete de lleno en la siguiente sección del texto,
+
+210
+00:18:56,860 --> 00:19:00,760
+el concepto de la ecología de las restricciones.
+
+211
+00:19:01,220 --> 00:19:02,600
+Un título tremendo.
+
+212
+00:19:02,600 --> 00:19:03,280
+Sí.
+
+213
+00:19:03,700 --> 00:19:06,960
+Si queremos proteger los futuros posibles, ponemos candados.
+
+214
+00:19:07,460 --> 00:19:11,060
+Pero el autor analiza estas reglas corporativas o sistémicas
+
+215
+00:19:11,060 --> 00:19:15,340
+como si fueran poblaciones de animalitos compitiendo en un ecosistema vivo.
+
+216
+00:19:15,760 --> 00:19:18,800
+Y separa dos conceptos que solemos confundir todo el tiempo,
+
+217
+00:19:19,220 --> 00:19:21,700
+que son viabilidad y diversidad.
+
+218
+00:19:22,100 --> 00:19:24,700
+Y esto plantea una pregunta importante para cualquier persona
+
+219
+00:19:24,700 --> 00:19:28,740
+que diseñe protocolos de seguridad, software o políticas públicas.
+
+220
+00:19:28,740 --> 00:19:34,660
+Tendemos a asumir casi ciegamente que apilar múltiples reglas de seguridad una encima de otra
+
+221
+00:19:34,660 --> 00:19:37,200
+automáticamente reduce el riesgo de fallo.
+
+222
+00:19:37,200 --> 00:19:38,520
+Sí, más es mejor.
+
+223
+00:19:38,520 --> 00:19:43,820
+Pero si esas restricciones no son verdaderamente independientes entre sí,
+
+224
+00:19:44,360 --> 00:19:49,980
+terminas creando lo que el análisis de FlyAction llama un monocultivo de restricciones.
+
+225
+00:19:49,980 --> 00:19:55,380
+Para aterrizarlo algo cotidiano, si sigo este instinto humano de que más es mejor,
+
+226
+00:19:55,880 --> 00:20:01,420
+podría, no sé, instalar cuatro candados masivos y relucientes en la puerta principal de mi casa.
+
+227
+00:20:01,920 --> 00:20:06,100
+Y cualquiera que los vea pensará, wow, esto es una fortaleza impenetrable.
+
+228
+00:20:06,380 --> 00:20:06,780
+Seguro.
+
+229
+00:20:06,780 --> 00:20:12,800
+Pero si resulta que los cuatro candados, los compré juntos, son exactamente del mismo fabricante,
+
+230
+00:20:13,080 --> 00:20:18,380
+del mismo lote de fábrica y tienen el mismo cilindro interno que resulta que puede abrirse
+
+231
+00:20:18,380 --> 00:20:20,780
+con la misma llave maestra que circula por ahí.
+
+232
+00:20:21,500 --> 00:20:24,120
+Pues en realidad no tengo cuatro candados de seguridad.
+
+233
+00:20:24,800 --> 00:20:30,140
+Tengo la ilusión estética de cuatro candados, pero la viabilidad matemática de uno solo.
+
+234
+00:20:30,340 --> 00:20:30,900
+Totalmente.
+
+235
+00:20:31,380 --> 00:20:36,340
+Si un ladrón descubre cómo vulnerar la cerradura de uno, los cuatro caen simultáneamente.
+
+236
+00:20:37,100 --> 00:20:38,120
+Exactamente eso.
+
+237
+00:20:38,720 --> 00:20:40,300
+Es un monocultivo de seguridad.
+
+238
+00:20:40,980 --> 00:20:45,560
+Y biológicamente, los monocultivos agrícolas son arrasados por una sola plaga.
+
+239
+00:20:46,220 --> 00:20:51,220
+En el mundo de la ingeniería de software o la burocracia humana, ocurre exactamente lo mismo.
+
+240
+00:20:51,940 --> 00:20:55,640
+El texto presenta un ejemplo fenomenal con inspectores de construcción.
+
+241
+00:20:55,860 --> 00:20:56,160
+A ver.
+
+242
+00:20:56,560 --> 00:21:01,900
+Imaginemos que envías a cinco inspectores diferentes a evaluar la integridad estructural de un puente nuevo.
+
+243
+00:21:01,900 --> 00:21:08,200
+A nivel de estado superficial, podrías decir que tienes cinco niveles de redundencia, cinco pares de ojos.
+
+244
+00:21:08,400 --> 00:21:09,160
+Suena muy seguro.
+
+245
+00:21:09,460 --> 00:21:13,840
+Pero si al investigar descubres que los cinco inspectores estudiaron en la misma universidad,
+
+246
+00:21:14,420 --> 00:21:21,320
+tomaron el mismo curso con el mismo profesor y usan exactamente la misma lista de verificación estandarizada,
+
+247
+00:21:21,760 --> 00:21:23,700
+tu diversidad real es cero.
+
+248
+00:21:24,000 --> 00:21:24,460
+¡Guau!
+
+249
+00:21:24,460 --> 00:21:33,520
+Si hay un punto ciego en ese plan de estudios universitario, los cinco inspectores, de manera totalmente independiente y sin ponerse de acuerdo,
+
+250
+00:21:34,040 --> 00:21:37,020
+pasarán por alto la misma grieta letal en el puente.
+
+251
+00:21:37,380 --> 00:21:45,080
+Pero a nivel de la burocracia corporativa, tú mandas el reporte diciendo que tienes un sistema robusto avalado por cinco personas.
+
+252
+00:21:45,700 --> 00:21:50,480
+Solemos pensar que estamos añadiendo seguridad cuando en realidad solo estamos agregando ruido y gasto.
+
+253
+00:21:50,480 --> 00:21:56,440
+De hecho, el autor entra en la matemática pura con ecuaciones para demostrar que si dentro de un sistema gigante
+
+254
+00:21:56,440 --> 00:22:03,520
+tienes un par de reglas que secretamente entran en conflicto, o sea, reglas que tiran en direcciones opuestas para resolver el mismo problema,
+
+255
+00:22:04,080 --> 00:22:06,260
+esas fuerzas se cancelan mutuamente en la ecuación.
+
+256
+00:22:06,960 --> 00:22:07,920
+Sí, se anulan.
+
+257
+00:22:07,920 --> 00:22:18,180
+Y debido a esa cancelación matemática, tú puedes mirar la arquitectura de tu empresa y ver una diversidad enorme de protocolos y manuales,
+
+258
+00:22:18,440 --> 00:22:28,900
+cuando en la práctica real, el 75% de tu sistema gigantesco podría reducirse a una sola regla repetida con cientos de sinónimos.
+
+259
+00:22:28,900 --> 00:22:37,340
+Y por eso este texto nos exige dejar de evaluar la robustez de nuestros sistemas por el peso físico de sus manuales o las líneas de código
+
+260
+00:22:37,340 --> 00:22:41,060
+y empezar a evaluarlos por su ortogonalidad matemática.
+
+261
+00:22:41,600 --> 00:22:48,860
+Las reglas verdaderamente útiles, las que salvan el sistema, son aquellas que fallan bajo condiciones radicalmente diferentes,
+
+262
+00:22:49,360 --> 00:22:53,720
+cubriendo los puntos ciegos de las demás y protegiendo continuaciones distintas.
+
+263
+00:22:53,720 --> 00:22:59,520
+Y justo cuando la cabeza te da vueltas pensando en inspectores, códigos y candados,
+
+264
+00:23:00,000 --> 00:23:06,360
+el autor hace un giro de timón espectacular, toma toda esta teoría abstracta de la historia continua,
+
+265
+00:23:06,860 --> 00:23:14,340
+la compresión y las continuaciones futuras, y la saca del papel para arrojarla de golpe a la física del mundo real,
+
+266
+00:23:14,900 --> 00:23:18,640
+a la biomecámica de la locomoción, el simple acto de caminar.
+
+267
+00:23:18,640 --> 00:23:25,560
+Es un cierre maestro para los documentos, porque, en última instancia, caminar de forma bípeda sobre dos piernas
+
+268
+00:23:25,560 --> 00:23:28,480
+es el desafío supremo de proteger un futuro posible.
+
+269
+00:23:28,760 --> 00:23:29,380
+¿Qué futuro?
+
+270
+00:23:29,680 --> 00:23:33,020
+El futuro específico en el que no te estrellas la cara contra el suelo.
+
+271
+00:23:33,620 --> 00:23:36,420
+Mantener el balance es gestionar futuros constantemente.
+
+272
+00:23:36,880 --> 00:23:43,660
+Y la forma en que los robots tradicionales intentan caminar es la perfecta ilustración de la trampa del Estado que venimos criticando.
+
+273
+00:23:43,660 --> 00:23:51,140
+Claro. El paradigma clásico de un robot caminante, los de hace unos años, es puro cálculo fotográfico.
+
+274
+00:23:51,640 --> 00:23:57,240
+El cerebro de la máquina escanea el terreno, calcula los ángulos trigonométricos necesarios,
+
+275
+00:23:57,860 --> 00:24:04,560
+dice, necesito que la rodilla derecha esté exactamente a 43 grados y el tobillo a 12,
+
+276
+00:24:04,940 --> 00:24:09,920
+y luego usa motores potentes para forzar la pierna hasta esa posición estática.
+
+277
+00:24:10,280 --> 00:24:10,920
+Exacto.
+
+278
+00:24:10,920 --> 00:24:18,560
+Llega allí, se equilibra temblando un poco, toma otra fotografía del mundo y vuelve a calcular el siguiente estado,
+
+279
+00:24:19,040 --> 00:24:20,300
+postura tras postura.
+
+280
+00:24:20,740 --> 00:24:23,400
+Es inmensamente ineficiente y torpe.
+
+281
+00:24:24,040 --> 00:24:26,260
+Pero los organismos biológicos no hacen eso.
+
+282
+00:24:26,680 --> 00:24:30,100
+Los animales operan bajo un paradigma centrado en la trayectoria,
+
+283
+00:24:30,560 --> 00:24:32,940
+gobernado por redes neuronales especializadas,
+
+284
+00:24:33,360 --> 00:24:36,020
+conocidas como generadores de patrones centrales.
+
+285
+00:24:36,020 --> 00:24:41,760
+Y aquí es donde la geometría matemática se cruza de manera brillante con la biología en la investigación de Flyxion.
+
+286
+00:24:42,300 --> 00:24:46,400
+Introduce una transformación geométrica teórica llamada amplituist.
+
+287
+00:24:46,400 --> 00:24:51,580
+Hey, esta parte es densa, así que requiere que vayamos un poco más despacio.
+
+288
+00:24:52,220 --> 00:24:58,440
+El amplituist, según entiendo, es una operación matemática que combina dos cosas muy simples.
+
+289
+00:24:59,020 --> 00:25:03,940
+Por un lado, una escala o amplitud, que dice qué tanto se estira algo,
+
+290
+00:25:04,340 --> 00:25:06,840
+y por otro, una rotación o giro.
+
+291
+00:25:06,840 --> 00:25:14,700
+¿Cómo es que algo tan abstracto de una pizarra matemática se traduce en mi pierna dando un paso real en la calle?
+
+292
+00:25:14,960 --> 00:25:18,440
+Pues piensa en el movimiento fluido de una extremidad biológica.
+
+293
+00:25:18,760 --> 00:25:21,320
+No se trata de lograr ángulos estáticos aislados.
+
+294
+00:25:21,800 --> 00:25:23,660
+La combinación continua de escala,
+
+295
+00:25:23,960 --> 00:25:29,740
+que en la anatomía de la pierna sería la extensión y contracción de los músculos para absorber el peso o empujar el suelo,
+
+296
+00:25:30,220 --> 00:25:34,040
+y la rotación, que es el giro físico de la cadera o la rodilla avanzando,
+
+297
+00:25:34,040 --> 00:25:37,100
+encapsula la naturaleza exacta de dar un paso.
+
+298
+00:25:37,420 --> 00:25:37,640
+Ok.
+
+299
+00:25:38,200 --> 00:25:43,120
+Y en lugar de tener una computadora central en el cerebro calculando cada posición como el robot,
+
+300
+00:25:43,520 --> 00:25:46,900
+el cuerpo usa algo llamado el modelo de osciladores de Kuramoto.
+
+301
+00:25:47,180 --> 00:25:49,340
+Espera, me atasco un poco aquí.
+
+302
+00:25:49,920 --> 00:25:52,040
+Si tengo todos estos osciladores biológicos,
+
+303
+00:25:52,960 --> 00:25:58,800
+que según leí son básicamente grupos de nervios en mis caderas, mis rodillas y tobillos,
+
+304
+00:25:59,360 --> 00:26:03,140
+latiendo a su propio ritmo como metrónomos independientes,
+
+305
+00:26:03,140 --> 00:26:08,660
+¿cómo es que no me convierto en un montón de músculos temblando en el suelo sin control?
+
+306
+00:26:09,320 --> 00:26:13,580
+¿Qué o quién orquesta todo ese caos si no hay un cálculo central?
+
+307
+00:26:14,220 --> 00:26:16,200
+Esa es la genialidad de la evolución.
+
+308
+00:26:16,900 --> 00:26:19,980
+No hay un director de orquesta central calculando la pose final.
+
+309
+00:26:20,640 --> 00:26:24,460
+La orquestación ocurre de forma distribuida por acoplamiento local y coherencia.
+
+310
+00:26:24,460 --> 00:26:26,420
+Pensemos en esos metrónomos.
+
+311
+00:26:26,960 --> 00:26:28,440
+Si los pones sobre una tabla móvil,
+
+312
+00:26:28,600 --> 00:26:31,640
+tarde o temprano la pequeña vibración que comparten a través de la madera
+
+313
+00:26:31,640 --> 00:26:33,660
+los obliga físicamente a sincronizarse,
+
+314
+00:26:34,060 --> 00:26:35,720
+a encontrar una coherencia compartida.
+
+315
+00:26:36,080 --> 00:26:38,460
+Ah, la sincronización espontánea.
+
+316
+00:26:38,740 --> 00:26:38,960
+Sí.
+
+317
+00:26:39,320 --> 00:26:42,300
+En el cuerpo humano esta coherencia ocurre de forma jerárquica.
+
+318
+00:26:42,860 --> 00:26:44,900
+Los osciladores de una sola articulación,
+
+319
+00:26:45,480 --> 00:26:46,320
+digamos el tobillo,
+
+320
+00:26:46,720 --> 00:26:49,380
+se sincronizan primero para generar una amplitud local.
+
+321
+00:26:49,380 --> 00:26:54,960
+Luego, esos movimientos conjuntos se sincronizan con las otras articulaciones
+
+322
+00:26:54,960 --> 00:26:56,100
+de esa misma pierna,
+
+323
+00:26:56,500 --> 00:26:58,820
+creando un patrón estable para toda la extremidad.
+
+324
+00:26:59,440 --> 00:27:00,040
+Y finalmente,
+
+325
+00:27:00,520 --> 00:27:02,760
+ambas piernas se sincronizan a través de la cadera
+
+326
+00:27:02,760 --> 00:27:05,060
+para generar la marcha del cuerpo completo.
+
+327
+00:27:05,560 --> 00:27:06,080
+Entonces,
+
+328
+00:27:06,980 --> 00:27:10,360
+¿qué significa todo esto a nivel filosófico de la teoría?
+
+329
+00:27:11,160 --> 00:27:15,140
+Es como el crecimiento de un helecho fractal en la naturaleza.
+
+330
+00:27:15,400 --> 00:27:16,100
+¡Qué buena imagen!
+
+331
+00:27:16,100 --> 00:27:19,160
+Es que no hay un plano maestro en la semilla
+
+332
+00:27:19,160 --> 00:27:23,600
+que le dicte a la planta en qué coordenadas tridimensionales exactas
+
+333
+00:27:23,600 --> 00:27:26,880
+debe colocar la punta de cada pequeña hoja al crecer.
+
+334
+00:27:27,500 --> 00:27:31,880
+Simplemente hay una regla biológica minúscula de escala y rotación,
+
+335
+00:27:32,320 --> 00:27:34,000
+un amplituist natural,
+
+336
+00:27:34,540 --> 00:27:37,320
+que se aplica sobre sí misma una y otra vez.
+
+337
+00:27:37,780 --> 00:27:41,040
+Y a partir de esa regla que se regenera continuamente en el tiempo,
+
+338
+00:27:41,600 --> 00:27:44,140
+florece una forma increíblemente compleja.
+
+339
+00:27:44,400 --> 00:27:48,740
+El balance al caminar no es una postura que logras y mantienes.
+
+340
+00:27:48,740 --> 00:27:53,980
+Es una historia que estás regenerando ininterrumpidamente a cada milisegundo que pasa.
+
+341
+00:27:54,180 --> 00:27:56,620
+Es una imagen hermosa y muy precisa.
+
+342
+00:27:57,400 --> 00:27:57,860
+Pero mira,
+
+343
+00:27:58,380 --> 00:28:01,480
+lo que separa a esta investigación técnica de la mera poesía
+
+344
+00:28:01,480 --> 00:28:04,120
+y lo que la convierte en ciencia de primer nivel
+
+345
+00:28:04,120 --> 00:28:07,980
+es que Flypexun establece reglas estrictas de falsabilidad.
+
+346
+00:28:08,780 --> 00:28:12,060
+Para que esta teoría geométrica del amplituist sea dada por cierta,
+
+347
+00:28:12,600 --> 00:28:14,940
+el autor propone pruebas empíricas de laboratorio
+
+348
+00:28:14,940 --> 00:28:16,900
+que podrían destruirla por completo.
+
+349
+00:28:17,380 --> 00:28:21,460
+Sí, esa es la prueba de fuego que me dejó helada cuando estaba leyendo.
+
+350
+00:28:21,940 --> 00:28:24,880
+El criterio de la caída de coherencia lo llama.
+
+351
+00:28:25,260 --> 00:28:25,800
+Así es.
+
+352
+00:28:26,500 --> 00:28:30,180
+La teoría predice que si el equilibrio no es una postura estática,
+
+353
+00:28:30,760 --> 00:28:34,940
+sino una sincronización matemática continua de estos osciladores nerviosos,
+
+354
+00:28:35,580 --> 00:28:35,940
+entonces,
+
+355
+00:28:36,600 --> 00:28:40,940
+mucho antes de que el cuerpo físico de una persona muestre cualquier signo mecánico de inestabilidad,
+
+356
+00:28:40,940 --> 00:28:42,380
+o sea,
+
+357
+00:28:42,500 --> 00:28:45,640
+mucho antes de que tropieces visiblemente y muevas los grasos.
+
+358
+00:28:45,940 --> 00:28:46,280
+Ajá.
+
+359
+00:28:46,660 --> 00:28:49,460
+La matemática interna tiene que fallar primero.
+
+360
+00:28:49,880 --> 00:28:50,320
+Exacto.
+
+361
+00:28:50,660 --> 00:28:54,940
+La coherencia medida de los osciladores debe caer precipitadamente en los datos.
+
+362
+00:28:55,480 --> 00:28:56,000
+Y él dice,
+
+363
+00:28:56,420 --> 00:28:58,880
+si un grupo de científicos en un laboratorio de marcha
+
+364
+00:28:58,880 --> 00:29:01,620
+le ponen sensores de electromiografía a una persona,
+
+365
+00:29:02,080 --> 00:29:03,640
+la hacen tropezar intencionalmente,
+
+366
+00:29:04,000 --> 00:29:08,020
+y no logran detectar esa caída invisible de coherencia en los datos milisegundos
+
+367
+00:29:08,020 --> 00:29:09,520
+antes del tropiezo físico real,
+
+368
+00:29:09,520 --> 00:29:10,800
+Se acaba la teoría.
+
+369
+00:29:11,200 --> 00:29:14,840
+Sí, entonces toda la estructura teólica del amplitudist y los osciladores
+
+370
+00:29:14,840 --> 00:29:16,920
+se desploma y es falsa.
+
+371
+00:29:17,420 --> 00:29:22,260
+Pone su propia existencia y todo este documento monumental en la línea de fuego.
+
+372
+00:29:23,020 --> 00:29:27,000
+Esa honestidad intelectual me parece brutal y refrescante.
+
+373
+00:29:27,500 --> 00:29:33,600
+Y es el broche de oro perfecto para recapitular el inmenso terreno conceptual que hemos cruzado hoy.
+
+374
+00:29:33,900 --> 00:29:35,240
+Porque vaya que fue un viaje.
+
+375
+00:29:35,660 --> 00:29:36,500
+Vaya que sí.
+
+376
+00:29:36,500 --> 00:29:41,720
+Empezamos desenterrando los fósiles del código en lenguajes como C++,
+
+377
+00:29:42,340 --> 00:29:46,820
+sistemas que están literalmente atrapados por el miedo a borrar su propia historia.
+
+378
+00:29:47,560 --> 00:29:51,700
+Luego analizamos cómo el cerebro humano de los ajedrecistas y los mecánicos
+
+379
+00:29:51,700 --> 00:29:55,500
+comprime los errores del pasado para tomar decisiones casi instantáneas,
+
+380
+00:29:55,500 --> 00:30:01,720
+volviéndose rapidísimos pero peligrosamente frágiles si las reglas del entorno cambian.
+
+381
+00:30:01,840 --> 00:30:02,500
+El experto frágil.
+
+382
+00:30:03,220 --> 00:30:03,400
+Sí.
+
+383
+00:30:04,020 --> 00:30:08,500
+Exploramos también la gestión del futuro y cómo, al podar la información equivocada,
+
+384
+00:30:09,500 --> 00:30:16,720
+al comprimir mal la maleta, generamos déficits ontológicos tan graves que hunden experimentos científicos enteros
+
+385
+00:30:16,720 --> 00:30:20,500
+o dejan peatones virtuales atrapados en semáforos ciegos.
+
+386
+00:30:20,860 --> 00:30:21,420
+Así es.
+
+387
+00:30:21,420 --> 00:30:28,520
+Desenmascaramos la ilusión matemática y burocrática de creer que tener 100 inspectores idénticos evaluando un puente
+
+388
+00:30:28,520 --> 00:30:30,460
+nos hace 100 veces más seguros.
+
+389
+00:30:31,000 --> 00:30:37,740
+Y, finalmente, demostramos que algo tan mundano, tan tangible como caminar sobre dos piernas sin caernos,
+
+390
+00:30:38,140 --> 00:30:40,280
+obedece exactamente al mismo principio.
+
+391
+00:30:40,700 --> 00:30:43,500
+Somos historias regenerándose en movimiento.
+
+392
+00:30:43,500 --> 00:30:47,580
+Y el hilo conductor en todos estos textos es innegable.
+
+393
+00:30:48,260 --> 00:30:53,100
+Ya sea en la arquitectura base de un software, en la sinapsis del aprendizaje humano profundo,
+
+394
+00:30:53,440 --> 00:30:55,940
+o en la biomecánica de evitar una caída en la calle,
+
+395
+00:30:56,360 --> 00:31:00,000
+el universo entero opera de forma mucho más robusta y elegante
+
+396
+00:31:00,000 --> 00:31:04,400
+cuando logramos soltar la necesidad humana de fotografiar estados fijos
+
+397
+00:31:04,400 --> 00:31:07,980
+y abrazamos la fluidez de las continuaciones y trayectorias.
+
+398
+00:31:08,560 --> 00:31:09,160
+Totalmente.
+
+399
+00:31:09,160 --> 00:31:16,160
+La realidad, digamos en su forma más pura y natural, no es un estante lleno de cajas etiquetadas estáticas.
+
+400
+00:31:16,700 --> 00:31:19,000
+Es un cauce fluido de futuros posibles.
+
+401
+00:31:19,280 --> 00:31:23,520
+Y justo antes de despedirnos de esta inmersión profunda,
+
+402
+00:31:24,000 --> 00:31:27,120
+nos gustaría dejar sobre la mesa un pensamiento final para ustedes,
+
+403
+00:31:27,660 --> 00:31:33,000
+basado en todo este intrincado mecanismo de compresión y memoria que describió Flaicción,
+
+404
+00:31:33,560 --> 00:31:38,580
+pero enfocado hacia adentro, hacia la vida cotidiana y emocional.
+
+405
+00:31:38,580 --> 00:31:45,460
+Cuando la mente humana entierra o, digamos, olvida ciertos detalles agudos de un trauma del pasado
+
+406
+00:31:45,460 --> 00:31:50,180
+o difumina los recuerdos de una relación o un proyecto que fracasó,
+
+407
+00:31:50,740 --> 00:31:53,020
+solemos pensar en ello como un error, ¿no?
+
+408
+00:31:53,420 --> 00:31:56,020
+Como una avería en nuestro disco duro emocional.
+
+409
+00:31:56,580 --> 00:31:58,540
+Claro, pensamos que la memoria nos falla.
+
+410
+00:31:58,640 --> 00:32:01,900
+Pero bajo esta óptica geométrica de los documentos de hoy,
+
+411
+00:32:02,340 --> 00:32:03,920
+¿qué tal si no es un fallo en lo absoluto?
+
+412
+00:32:03,920 --> 00:32:06,700
+¿Qué tal si es una compresión óptima?
+
+413
+00:32:07,020 --> 00:32:10,640
+Un mecanismo brillantemente diseñado por nuestra biología
+
+414
+00:32:10,640 --> 00:32:15,340
+para desechar la entropía de reparación y preparar la mente,
+
+415
+00:32:15,840 --> 00:32:19,820
+optimizándola para los futuros específicos que el cerebro cree que va a enfrentar mañana.
+
+416
+00:32:20,000 --> 00:32:22,600
+Uf, es una reflexión poderosísima.
+
+417
+00:32:23,000 --> 00:32:26,900
+Y te digo, la sombra que persigue a esa misma idea es inevitable.
+
+418
+00:32:26,900 --> 00:32:34,120
+Si nuestra memoria está altamente comprimida solo para sobrevivir a un futuro proyectado que esperamos,
+
+419
+00:32:34,500 --> 00:32:39,420
+¿qué nos sucede como individuos en el instante en que el futuro que finalmente llega a nuestra puerta
+
+420
+00:32:39,420 --> 00:32:42,020
+es radicalmente distinto al que esperábamos?
+
+421
+00:32:42,280 --> 00:32:43,760
+¡Wow! ¡Claro!
+
+422
+00:32:43,880 --> 00:32:48,560
+Si cambian de pronto las reglas no escritas de nuestro entorno afectivo o laboral sin previo aviso,
+
+423
+00:32:49,120 --> 00:32:53,180
+¿seremos capaces de descomprimir los matices de nuestro propio pasado para adaptarnos
+
+424
+00:32:53,180 --> 00:32:58,860
+o nos quebraremos emocionalmente como el experto frágil que olvidó los pasos intermedios de su propia vida?
+
+425
+00:32:59,080 --> 00:32:59,720
+Es fuerte.
+
+426
+00:33:00,360 --> 00:33:02,180
+Y la verdad, no tenemos la respuesta,
+
+427
+00:33:02,460 --> 00:33:08,280
+pero creo firmemente que es la pregunta que debemos mantener encendida al observar nuestros propios sistemas.
+
+428
+00:33:09,040 --> 00:33:15,440
+Porque tal vez no somos esa fotografía nítida y estática que muestra exactamente dónde se rompió la pieza, y ya.
+
+429
+00:33:16,160 --> 00:33:19,860
+Tal vez somos, en todo nuestro esplendor caútico, la historia invisible,
+
+430
+00:33:19,860 --> 00:33:24,360
+persistente y continua de cómo esa pieza está intentando curarse hacia el futuro.
+
+431
+00:33:25,060 --> 00:33:28,160
+Hasta la próxima y sigan cuestionando la fotografía.
+

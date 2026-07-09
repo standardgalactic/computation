@@ -1,0 +1,2024 @@
+1
+00:00:00,000 --> 00:00:02,100
+You know, I want you to try something for a second.
+
+2
+00:00:03,020 --> 00:00:08,620
+Think back to a really crucial, vivid memory from a few years ago.
+
+3
+00:00:08,720 --> 00:00:09,080
+Oh, sure.
+
+4
+00:00:09,220 --> 00:00:16,860
+Like maybe it's a conversation that completely changed your life trajectory or, I don't know, a sudden realization you had while you were traveling.
+
+5
+00:00:16,920 --> 00:00:17,220
+Right.
+
+6
+00:00:17,540 --> 00:00:21,060
+When you try to pull up that exact detail, what actually happens?
+
+7
+00:00:21,580 --> 00:00:28,300
+You realize pretty quickly that your brain didn't store like a perfect high definition video recording of the event.
+
+8
+00:00:28,400 --> 00:00:29,060
+No, not at all.
+
+9
+00:00:29,060 --> 00:00:38,080
+Instead, what you get is a feeling, a vague impression, a reconstruction that actually shifts slightly depending on, you know, what mood you're in today.
+
+10
+00:00:38,180 --> 00:00:38,620
+Exactly.
+
+11
+00:00:38,760 --> 00:00:38,960
+Yeah.
+
+12
+00:00:39,200 --> 00:00:45,220
+And we are so conditioned to think of our brains as faulty hard drives like, oh, I forgot the exact phrasing of what she said.
+
+13
+00:00:45,240 --> 00:00:46,520
+My memory is so flawed.
+
+14
+00:00:46,520 --> 00:00:55,820
+But what if that fuzziness, that exact lack of a perfect recording is actually the foundational reason why you are smarter than Chats GPT?
+
+15
+00:00:55,980 --> 00:00:57,840
+It totally flips the script, doesn't it?
+
+16
+00:00:57,900 --> 00:00:58,780
+It really does.
+
+17
+00:00:58,780 --> 00:00:59,000
+It really does.
+
+18
+00:00:59,060 --> 00:01:05,900
+I mean, we constantly judge ourselves against the standard of a machine, just assuming a perfect digital record is the absolute pinnacle of memory.
+
+19
+00:01:06,840 --> 00:01:11,560
+But biology isn't trying to be a database and failing.
+
+20
+00:01:11,800 --> 00:01:13,400
+It's doing something entirely different.
+
+21
+00:01:13,540 --> 00:01:13,780
+Right.
+
+22
+00:01:13,780 --> 00:01:19,460
+And as we are starting to realize, it's doing something vastly more sophisticated than just storing data.
+
+23
+00:01:19,560 --> 00:01:20,000
+Exactly.
+
+24
+00:01:20,620 --> 00:01:24,840
+And that brings us to the core mystery we are tearing apart today.
+
+25
+00:01:24,840 --> 00:01:35,840
+We're looking at the fundamental illusion of artificial intelligence and why current AI might be, well, structurally, mathematically incapable of ever actually experiencing the world the way we do.
+
+26
+00:01:35,980 --> 00:01:36,820
+It's a huge claim.
+
+27
+00:01:36,960 --> 00:01:37,420
+Huge.
+
+28
+00:01:37,420 --> 00:01:43,780
+And our map for this deep dive is a truly fascinating, incredibly dense theoretical paper by the author, Flyxion.
+
+29
+00:01:43,780 --> 00:01:49,020
+It's titled, Histories Become Operators, Biological Notes on Retained Admissibility.
+
+30
+00:01:49,120 --> 00:01:49,560
+Really awful.
+
+31
+00:01:49,560 --> 00:01:50,820
+Yeah, but so good.
+
+32
+00:01:50,820 --> 00:01:58,660
+This essay analyzes a deeply profound public conversation between two brilliant minds, scientists Michael Levin and Katrina Schleisman.
+
+33
+00:01:59,040 --> 00:02:01,100
+They tackle memory, agency, and learning.
+
+34
+00:02:01,100 --> 00:02:08,060
+And what makes Flyxion's paper so vital right now is that it isn't just a philosophical summary of their chat.
+
+35
+00:02:08,220 --> 00:02:09,180
+It's an extraction.
+
+36
+00:02:09,800 --> 00:02:09,940
+Right.
+
+37
+00:02:10,120 --> 00:02:10,300
+Yeah.
+
+38
+00:02:10,480 --> 00:02:19,100
+It pulls out these highly precise claims about how living things remember and adapt, and it plugs them into a formal mathematical framework.
+
+39
+00:02:19,320 --> 00:02:24,720
+It essentially creates a blueprint for understanding the gap between a biological mind and a silicon one.
+
+40
+00:02:24,720 --> 00:02:38,360
+Okay, let's unpack this, because if we're going to understand why today's AI is fundamentally stuck and how biology elegantly solves the problem AI is currently facing, we have to start by completely dismantling our assumptions.
+
+41
+00:02:38,580 --> 00:02:39,100
+Oh, absolutely.
+
+42
+00:02:39,280 --> 00:02:50,800
+We basically have to unlearn the standard engineering definition of memory, because, let's face it, the engineering habit is so deeply ingrained in us that we don't even realize we're using it as a metaphor for our own brains.
+
+43
+00:02:50,840 --> 00:02:51,380
+We really do.
+
+44
+00:02:51,380 --> 00:02:55,520
+I mean, we talk about processing information, storing memories, retrieving facts.
+
+45
+00:02:55,740 --> 00:02:56,380
+Like, we're computers.
+
+46
+00:02:56,720 --> 00:02:56,920
+Right.
+
+47
+00:02:57,220 --> 00:03:01,900
+But the traditional engineering model of memory is what Flyxion calls a fidelity problem.
+
+48
+00:03:02,580 --> 00:03:05,340
+Let's think about how a computer hard drive actually works.
+
+49
+00:03:06,120 --> 00:03:08,900
+You write a bit of data, a one or a zero.
+
+50
+00:03:09,060 --> 00:03:16,300
+The entire existential task of that computer system is to protect that exact bit from drifting.
+
+51
+00:03:16,300 --> 00:03:22,820
+Right, because if a one becomes a zero, your software crashes, or, I don't know, your bank account suddenly has a lot less money in it.
+
+52
+00:03:23,200 --> 00:03:23,560
+Exactly.
+
+53
+00:03:24,140 --> 00:03:34,380
+So engineers use redundancy, they use error correction codes, all to ensure that when you go to read that data a year later, you get the exact same bit back, perfect fidelity.
+
+54
+00:03:34,580 --> 00:03:34,680
+Right.
+
+55
+00:03:34,860 --> 00:03:37,500
+But here is the critical part that we often overlook.
+
+56
+00:03:38,140 --> 00:03:44,460
+In that engineering model, the meaning of the bit lives completely outside the storage medium.
+
+57
+00:03:44,460 --> 00:03:46,120
+Wait, what do you mean outside?
+
+58
+00:03:46,480 --> 00:03:49,940
+Meaning is assigned by the outside observer, the human user who reads it.
+
+59
+00:03:50,300 --> 00:03:53,120
+The hard drive doesn't know what a photo of your dog means, it doesn't care.
+
+60
+00:03:53,380 --> 00:03:57,280
+It just stores the pixels with perfect fidelity so you can derive meaning from it later.
+
+61
+00:03:57,460 --> 00:04:00,280
+Okay, so a hard drive is basically a perfect dumb vault.
+
+62
+00:04:00,460 --> 00:04:00,840
+Exactly.
+
+63
+00:04:00,840 --> 00:04:05,640
+But Michael Levin proposes a counter-premise for biology that is just mind-blowing.
+
+64
+00:04:06,180 --> 00:04:10,840
+He says a living system never actually has access to its own past, not directly.
+
+65
+00:04:11,180 --> 00:04:12,240
+It doesn't have a vault.
+
+66
+00:04:12,520 --> 00:04:15,480
+What it has instead are memory traces.
+
+67
+00:04:15,800 --> 00:04:18,520
+He describes them as messages from your past self.
+
+68
+00:04:18,520 --> 00:04:22,420
+Yes, and the reason for this is purely physical.
+
+69
+00:04:23,680 --> 00:04:30,520
+Biological substrates, the actual wetware of our brains, our cells, our proteins, they are inherently unreliable.
+
+70
+00:04:31,320 --> 00:04:32,200
+Because they're messy.
+
+71
+00:04:32,380 --> 00:04:37,300
+They are messy, they degrade, they drift, the temperature changes, the chemical gradients fluctuate constantly.
+
+72
+00:04:37,660 --> 00:04:42,140
+So evolution couldn't optimize for perfect, unchanging storage like a hard drive.
+
+73
+00:04:42,380 --> 00:04:46,080
+That would be a losing battle against the basic physics of biology.
+
+74
+00:04:46,080 --> 00:04:49,340
+Wait, so instead of fighting the messiness, evolution leaned into it.
+
+75
+00:04:49,520 --> 00:04:49,920
+Precisely.
+
+76
+00:04:50,420 --> 00:04:55,320
+Because evolution couldn't guarantee perfect storage, it optimized for something else entirely.
+
+77
+00:04:55,780 --> 00:04:57,080
+The creativity of the reading.
+
+78
+00:04:57,260 --> 00:04:57,760
+Oh, wow.
+
+79
+00:04:57,980 --> 00:05:05,960
+Biological memory preserves salience, meaning what actually matters, what is important for survival and adaptation, rather than perfect physical accuracy.
+
+80
+00:05:06,060 --> 00:05:07,260
+I'm trying to visualize this.
+
+81
+00:05:07,320 --> 00:05:10,620
+So it's not like opening a perfectly preserved PDF on your desktop.
+
+82
+00:05:10,620 --> 00:05:17,000
+It feels more like, imagine finding a cryptic diary entry left by a past version of yourself from 10 years ago.
+
+83
+00:05:17,100 --> 00:05:18,600
+That's a great way to think about it.
+
+84
+00:05:18,820 --> 00:05:19,100
+Right.
+
+85
+00:05:19,240 --> 00:05:23,100
+You don't just passively read it like a computer fetching a file.
+
+86
+00:05:23,220 --> 00:05:24,740
+You have to actively interpret it.
+
+87
+00:05:24,800 --> 00:05:25,180
+Right, yeah.
+
+88
+00:05:25,380 --> 00:05:27,380
+The words might say, I can't believe they did that.
+
+89
+00:05:27,480 --> 00:05:34,520
+And you have to sit there and reconstruct the meaning based on who you are now, what you know now, the context of your current life.
+
+90
+00:05:34,740 --> 00:05:36,780
+You're reading it through the lens of the present.
+
+91
+00:05:37,060 --> 00:05:39,520
+You are actively recreating the memory.
+
+92
+00:05:39,520 --> 00:05:41,440
+And the act of recreation is the key.
+
+93
+00:05:41,980 --> 00:05:46,240
+The organism is its own interpreter from the very first moment.
+
+94
+00:05:46,980 --> 00:05:48,360
+Evolution didn't build a vault.
+
+95
+00:05:48,820 --> 00:05:51,700
+It built an incredibly sophisticated interpretive engine.
+
+96
+00:05:52,000 --> 00:05:53,240
+Salience over fidelity.
+
+97
+00:05:53,580 --> 00:05:53,860
+Yes.
+
+98
+00:05:54,020 --> 00:06:03,900
+But I want to push on this because it's easy to just say biology interprets things, but the paper brings up a concrete example from developmental biology that really makes this unavoidable.
+
+99
+00:06:03,900 --> 00:06:12,680
+It compares standard embryogenesis, how an embryo normally develops, with the induced formation of these things called anthrobots.
+
+100
+00:06:12,780 --> 00:06:14,320
+Oh, the anthrobots are fascinating.
+
+101
+00:06:14,480 --> 00:06:15,620
+Can we really dig into this?
+
+102
+00:06:15,700 --> 00:06:19,400
+Because this example completely shattered my understanding of how DNA works.
+
+103
+00:06:19,400 --> 00:06:23,760
+It absolutely breaks the standard engineering metaphor of DNA.
+
+104
+00:06:24,300 --> 00:06:27,900
+So let's look at the work coming out of Michael Levin's lab.
+
+105
+00:06:28,560 --> 00:06:37,140
+Normally, if you take cells from a frog embryo specifically, the cells that are destined to become the skin of the frog, they know what to do.
+
+106
+00:06:37,200 --> 00:06:37,360
+Right.
+
+107
+00:06:37,480 --> 00:06:38,120
+They become skin.
+
+108
+00:06:38,420 --> 00:06:38,780
+Exactly.
+
+109
+00:06:38,940 --> 00:06:43,180
+They form a passive barrier on the outside of the tadpole to keep bacteria out.
+
+110
+00:06:43,180 --> 00:06:45,820
+That is their quote-unquote programmed job.
+
+111
+00:06:46,220 --> 00:06:46,240
+Right.
+
+112
+00:06:46,520 --> 00:06:47,920
+Standard embryogenesis.
+
+113
+00:06:48,080 --> 00:06:50,040
+But Levin's team did something incredible.
+
+114
+00:06:50,720 --> 00:06:56,820
+They scraped some of those skin cells off the embryo, dissociated them, and put them in a novel environment.
+
+115
+00:06:56,900 --> 00:06:57,880
+Like a Petri dish.
+
+116
+00:06:58,060 --> 00:06:58,840
+Yeah, a Petri dish.
+
+117
+00:06:58,960 --> 00:06:59,100
+Yeah.
+
+118
+00:06:59,160 --> 00:07:01,500
+Completely isolated from the rest of the embryo.
+
+119
+00:07:01,840 --> 00:07:05,400
+No muscle cells, no nerve cells, just skin cells alone together.
+
+120
+00:07:05,580 --> 00:07:11,540
+Okay, so going by the engineering mindset, if DNA is a blueprint, these cells should just sit there, right?
+
+121
+00:07:11,540 --> 00:07:18,240
+Maybe form a flat layer of skin in the dish, or just die because they are missing the rest of the blueprint's contact.
+
+122
+00:07:18,300 --> 00:07:18,740
+Exactly.
+
+123
+00:07:18,900 --> 00:07:19,720
+That's what you'd expect.
+
+124
+00:07:19,860 --> 00:07:21,140
+But that is not what happens.
+
+125
+00:07:21,320 --> 00:07:27,200
+Instead of forming a flat passive layer, these cells get together and reboot their multicellularity.
+
+126
+00:07:27,300 --> 00:07:27,560
+Reboot?
+
+127
+00:07:27,700 --> 00:07:34,820
+Yeah, they form entirely new independent living structures called xenobots or anthrobots if they're derived from human cells.
+
+128
+00:07:35,120 --> 00:07:36,880
+They form a spherical body.
+
+129
+00:07:37,060 --> 00:07:37,520
+Whoa.
+
+130
+00:07:37,520 --> 00:07:46,020
+And they take the little hairs, called cilia, which normally just move mucus around on the frog skin, and they use them as oars to swim around the dish.
+
+131
+00:07:46,120 --> 00:07:54,980
+They can navigate mazes, they can spontaneously sweep up loose material into piles, and if you cut them in half, they heal themselves.
+
+132
+00:07:55,220 --> 00:08:00,700
+And just to be completely clear, they have the exact same DNA as the normal frog skin cells.
+
+133
+00:08:01,060 --> 00:08:03,120
+Materially identical genetic information.
+
+134
+00:08:03,220 --> 00:08:03,400
+Yeah.
+
+135
+00:08:03,740 --> 00:08:06,020
+Not a single letter of the DNA was altered.
+
+136
+00:08:06,020 --> 00:08:07,440
+That is wild.
+
+137
+00:08:07,560 --> 00:08:07,940
+Isn't it?
+
+138
+00:08:08,080 --> 00:08:09,560
+The genome didn't change at all.
+
+139
+00:08:09,760 --> 00:08:14,520
+So if I give builders a blueprint, they build the exact same house every time, no matter where they are.
+
+140
+00:08:14,700 --> 00:08:22,340
+But here, the same genetic blueprint built a flat skin barrier one minute, and a swimming, navigating, healing robot the next.
+
+141
+00:08:22,440 --> 00:08:24,060
+Which means it isn't a blueprint at all.
+
+142
+00:08:24,380 --> 00:08:25,880
+The genome is a trace.
+
+143
+00:08:26,180 --> 00:08:26,980
+It's a constraint.
+
+144
+00:08:26,980 --> 00:08:31,920
+What changed was the interpretive context that the trace was being read in.
+
+145
+00:08:32,600 --> 00:08:39,940
+The cells found themselves in a new environment, and they creatively interpreted their genetic traces to solve a new problem.
+
+146
+00:08:40,520 --> 00:08:43,660
+How to survive as a completely novel organism.
+
+147
+00:08:44,040 --> 00:08:49,380
+We are talking about thousands of genes being expressed entirely differently between the two outcomes.
+
+148
+00:08:49,380 --> 00:08:55,380
+So it feels less like a strict architectural blueprint, and more like sheet music.
+
+149
+00:08:55,740 --> 00:08:56,400
+Ooh, I like that.
+
+150
+00:08:56,480 --> 00:08:57,360
+Like a jazz standard.
+
+151
+00:08:57,740 --> 00:09:03,460
+You can hand the exact same sheet music for autumn leaves to a classical symphony and a five-piece jazz band.
+
+152
+00:09:03,720 --> 00:09:06,860
+The notes on the page, the constraints, the DNA are identical.
+
+153
+00:09:07,120 --> 00:09:07,400
+Right.
+
+154
+00:09:07,400 --> 00:09:12,640
+But because the context is different, because the instruments and the environment are different, you get two completely different songs.
+
+155
+00:09:13,260 --> 00:09:16,120
+And crucially, neither is the wrong way to play the notes.
+
+156
+00:09:16,380 --> 00:09:20,420
+They are both entirely coherent expressions of the same underlying trace.
+
+157
+00:09:20,600 --> 00:09:21,760
+That's a brilliant analogy.
+
+158
+00:09:22,200 --> 00:09:23,660
+The environment is the orchestra.
+
+159
+00:09:24,200 --> 00:09:28,980
+The constraint is there, but the interpretation by the living agent creates the final form.
+
+160
+00:09:28,980 --> 00:09:40,780
+Okay, so if biological memory, whether it's DNA or our own memories of childhood, is this active, creative interpretation of traces by an agent living in a specific context,
+
+161
+00:09:41,400 --> 00:09:46,740
+what happens when a system has absolutely no traces of its own lived experience to interpret?
+
+162
+00:09:47,060 --> 00:09:52,240
+And this brings us right to the doorstep of Katrina Schleisman's critique of artificial intelligence.
+
+163
+00:09:52,300 --> 00:09:53,680
+Yes, this part is huge.
+
+164
+00:09:53,680 --> 00:10:01,060
+Because she looks at current large language models, the AIs we chat with every single day, and points out a massive structural deficit.
+
+165
+00:10:01,360 --> 00:10:09,780
+Right, because if you're using CAT-GPT right now, you might be thinking, wait, I upload my past chat logs, it remembers what I said yesterday, so my AI definitely has a memory.
+
+166
+00:10:10,240 --> 00:10:13,800
+But Schleisman draws a hard line between two types of memory, right?
+
+167
+00:10:14,260 --> 00:10:15,260
+Episodic and semantic.
+
+168
+00:10:15,460 --> 00:10:16,240
+Let's break those down.
+
+169
+00:10:16,660 --> 00:10:18,640
+Schleisman differentiates them beautifully.
+
+170
+00:10:19,180 --> 00:10:24,300
+Episodic memory is storing and creatively reconstructing specific lived experiences.
+
+171
+00:10:24,460 --> 00:10:25,580
+Like an episode of a TV show.
+
+172
+00:10:25,680 --> 00:10:26,440
+Yeah, exactly.
+
+173
+00:10:26,800 --> 00:10:33,040
+It's remembering your 10th birthday party, the smell of the cake, the specific feeling of excitement who is sitting next to you.
+
+174
+00:10:33,240 --> 00:10:35,120
+It is anchored in time and space to you.
+
+175
+00:10:35,440 --> 00:10:39,760
+Semantic memory, on the other hand, is the abstraction of general facts from those experiences.
+
+176
+00:10:40,320 --> 00:10:43,640
+It's knowing the general fact that humans celebrate birthdays with cake.
+
+177
+00:10:43,640 --> 00:10:49,400
+So, episodic is the movie of your life, and semantic is the Wikipedia article about life in general.
+
+178
+00:10:49,540 --> 00:10:49,860
+Exactly.
+
+179
+00:10:50,220 --> 00:10:54,480
+And her central point is that LLMs are essentially pure semantic memory.
+
+180
+00:10:55,200 --> 00:11:00,120
+They are a massively compressed, decontextualized store of general knowledge.
+
+181
+00:11:00,220 --> 00:11:02,720
+They have all the facts, but no life.
+
+182
+00:11:02,900 --> 00:11:03,140
+Right.
+
+183
+00:11:03,340 --> 00:11:04,660
+Here's where it gets really interesting.
+
+184
+00:11:04,660 --> 00:11:06,260
+They have no episodic layer.
+
+185
+00:11:06,680 --> 00:11:13,960
+An LLM has no actual record of what happened to it, when it happened, or under what specific lived conditions it learned a particular fact.
+
+186
+00:11:14,520 --> 00:11:19,460
+As Flyxion writes, AI is the limit case of memory missing its biological half.
+
+187
+00:11:19,740 --> 00:11:22,020
+It's all general facts, zero lived experience.
+
+188
+00:11:22,300 --> 00:11:27,720
+Biological memory relies on traces that must be interpreted in the present moment by an agent with a continuous existence.
+
+189
+00:11:27,860 --> 00:11:29,400
+Right, an agent that's actually there.
+
+190
+00:11:29,400 --> 00:11:32,800
+And current large models don't have those traces.
+
+191
+00:11:33,460 --> 00:11:38,340
+They just have the mathematical residue of their massive training data compressed into weights.
+
+192
+00:11:38,780 --> 00:11:43,680
+And those weights were never indexed to a particular lived episode in the first place.
+
+193
+00:11:44,160 --> 00:11:46,820
+The AI didn't, you know, experience reading the internet.
+
+194
+00:11:47,260 --> 00:11:50,420
+Data was just pushed through its architecture to update its parameters.
+
+195
+00:11:50,420 --> 00:11:58,040
+But wait, let me play devil's advocate here, because the AI industry is completely obsessed with fixing this exact problem right now.
+
+196
+00:11:58,040 --> 00:12:01,880
+What about things like RAG retrieval augmented generation?
+
+197
+00:12:02,120 --> 00:12:02,760
+Ah, yes.
+
+198
+00:12:03,040 --> 00:12:11,100
+Developers are constantly feeding an AI its past chat logs or giving it access to a personal database of your conversation, specifically so it remembers your history.
+
+199
+00:12:11,640 --> 00:12:15,460
+Doesn't giving it a database of its past chats give it an episodic memory?
+
+200
+00:12:15,460 --> 00:12:17,040
+It's a great question.
+
+201
+00:12:17,780 --> 00:12:21,280
+And the paper explicitly pushes back hard on this industry trend.
+
+202
+00:12:22,040 --> 00:12:31,780
+Appending conversational history into a retrieval store, like a vector database that the AI searches before it replies to you, is treating the symptom, not the underlying structure.
+
+203
+00:12:31,880 --> 00:12:40,780
+When you dump old chat logs into a database for the AI to search, you are just reintroducing that old engineering storage style fidelity.
+
+204
+00:12:41,300 --> 00:12:45,100
+You're just giving a giant semantic calculator a hard drive to search.
+
+205
+00:12:45,100 --> 00:12:46,680
+Because it's still just fetching data.
+
+206
+00:12:46,860 --> 00:12:48,580
+It's not experiencing the recall.
+
+207
+00:12:48,740 --> 00:12:49,120
+Exactly.
+
+208
+00:12:49,520 --> 00:12:53,640
+The missing ingredient in AI was never perfect fidelity or lack of data access.
+
+209
+00:12:54,320 --> 00:12:57,920
+The missing ingredient, as the paper points out, is indexicality.
+
+210
+00:12:58,440 --> 00:12:58,960
+Indexicality.
+
+211
+00:12:59,060 --> 00:12:59,240
+Okay.
+
+212
+00:12:59,660 --> 00:13:04,160
+Meaning tying a memory to a specific, uniquely lived past occasion.
+
+213
+00:13:04,380 --> 00:13:04,640
+Yes.
+
+214
+00:13:04,640 --> 00:13:15,680
+It's the difference between handing someone a printed transcript of a conversation they had yesterday versus them actually having the internal subjective memory of feeling that conversation happened.
+
+215
+00:13:15,800 --> 00:13:19,380
+Reading a transcript of your own life isn't the same as remembering it.
+
+216
+00:13:19,500 --> 00:13:20,040
+Precisely.
+
+217
+00:13:20,320 --> 00:13:33,580
+Which is why Schleisman and her colleague Eric Davis proposed that if we truly want autonomous agents, artificial systems that can actually act as teammates rather than just encyclopedias, we have to stop treating episodic recall as a tacked-on database search.
+
+218
+00:13:33,580 --> 00:13:35,120
+We need a structural change.
+
+219
+00:13:35,440 --> 00:13:35,780
+Exactly.
+
+220
+00:13:36,260 --> 00:13:49,400
+We have to structurally integrate episodic and semantic memory directly within the agent itself so that interpreting its own specific history becomes part of how the system physically processes the present moment.
+
+221
+00:13:49,400 --> 00:13:59,720
+Okay. So, if true biological memory isn't just a database lookup, and if our past isn't a strict blueprint telling us exactly what to do, how does our past guide our future?
+
+222
+00:14:00,140 --> 00:14:05,420
+If the frog DNA doesn't force the cells to become flat-skinned, what is it actually doing?
+
+223
+00:14:05,740 --> 00:14:08,400
+This is where we move into the paper's second major concept.
+
+224
+00:14:09,420 --> 00:14:11,060
+Constraint is not determination.
+
+225
+00:14:11,580 --> 00:14:11,920
+Okay.
+
+226
+00:14:12,160 --> 00:14:15,340
+And this is where we get the core conceptual equation of Flyxion's paper.
+
+227
+00:14:15,400 --> 00:14:18,120
+We promise no dry math reading, but let's talk about the concept.
+
+228
+00:14:18,120 --> 00:14:21,300
+The paper frames it as history becoming an operator.
+
+229
+00:14:21,580 --> 00:14:24,400
+Yes. History crystallized into operative constraint.
+
+230
+00:14:24,820 --> 00:14:25,920
+HT goes to FT.
+
+231
+00:14:26,260 --> 00:14:26,380
+Right.
+
+232
+00:14:26,820 --> 00:14:33,680
+What that means is that the history of a system, whether that's millions of years of evolution shaping a genome or the past 10 years of your personal memories,
+
+233
+00:14:34,240 --> 00:14:37,500
+acts as a geometric shape that narrows down the space of possible futures.
+
+234
+00:14:38,020 --> 00:14:40,280
+The paper calls this continuation geometry.
+
+235
+00:14:40,560 --> 00:14:41,580
+Continuation geometry.
+
+236
+00:14:41,580 --> 00:14:42,220
+Yeah.
+
+237
+00:14:42,740 --> 00:14:48,340
+The history defines what is mathematically admissible or possible for the system to do next.
+
+238
+00:14:48,600 --> 00:14:48,860
+Okay.
+
+239
+00:14:48,940 --> 00:14:51,100
+Let's visualize this continuation geometry.
+
+240
+00:14:51,760 --> 00:14:55,000
+Think of it like you are standing at the entrance of a long hallway.
+
+241
+00:14:55,680 --> 00:14:59,900
+The walls of that hallway represent your history, your memories, your genome.
+
+242
+00:15:00,420 --> 00:15:05,580
+Those walls absolutely prevent you from moving left or right through solid drywall.
+
+243
+00:15:05,960 --> 00:15:08,380
+You are heavily constrained by your past.
+
+244
+00:15:08,500 --> 00:15:09,220
+Very heavily.
+
+245
+00:15:09,220 --> 00:15:14,780
+But, and this is the crucial distinction, the walls do not dictate exactly how fast you walk forward.
+
+246
+00:15:15,100 --> 00:15:19,560
+They don't tell you whether you skip or crawl or walk backwards or do cartwheels down the hall.
+
+247
+00:15:19,940 --> 00:15:25,600
+You are mathematically constrained by the walls, but your exact path forward is not uniquely determined.
+
+248
+00:15:26,060 --> 00:15:28,080
+That is a perfect visualization.
+
+249
+00:15:28,260 --> 00:15:28,360
+Yeah.
+
+250
+00:15:28,400 --> 00:15:29,600
+Constraint without determination.
+
+251
+00:15:30,100 --> 00:15:33,900
+And what's fascinating here is where Michael Levin injects a highly critical nuance.
+
+252
+00:15:33,900 --> 00:15:42,840
+He argues that this narrowing down the building of those hallway walls isn't just a one-time objective filter that gets stamped onto the system from the outside.
+
+253
+00:15:43,120 --> 00:15:43,160
+Right.
+
+254
+00:15:43,340 --> 00:15:49,920
+A constraint is actually redone uniquely by each continuer reading the trace under their own local conditions.
+
+255
+00:15:50,280 --> 00:15:51,920
+Wait, I'm genuinely stuck here.
+
+256
+00:15:51,920 --> 00:16:00,460
+If my history creates a constraint, if my past builds the walls of the hallway, how do I have any real agency?
+
+257
+00:16:00,800 --> 00:16:07,160
+If the walls are already built by what happened to me yesterday, aren't my choices today already basically made for me?
+
+258
+00:16:07,800 --> 00:16:10,020
+It sounds like determinism with extra steps.
+
+259
+00:16:10,020 --> 00:16:13,580
+It would be if you were just a passive object bouncing down the hallway.
+
+260
+00:16:14,140 --> 00:16:17,700
+But Levin is adamant that interpretation is a locus of agency.
+
+261
+00:16:18,460 --> 00:16:26,800
+The continuer, the organism living in the present moment, is partly authoring what is admissible or possible in the very act of continuing.
+
+262
+00:16:27,340 --> 00:16:29,960
+It's an act of reconstruction, not a passive filter.
+
+263
+00:16:30,120 --> 00:16:31,200
+So the walls aren't fixed.
+
+264
+00:16:31,320 --> 00:16:32,940
+Well, think back to the cryptic diary entry.
+
+265
+00:16:33,080 --> 00:16:34,580
+The words on the page are the constraint.
+
+266
+00:16:34,920 --> 00:16:35,660
+They don't change.
+
+267
+00:16:35,740 --> 00:16:35,960
+Okay.
+
+268
+00:16:35,960 --> 00:16:41,240
+But how those words constrain your behavior today depends entirely on how you actively interpret them right now.
+
+269
+00:16:41,900 --> 00:16:43,900
+If it were a passive filter, the math would be easy.
+
+270
+00:16:44,340 --> 00:16:51,140
+But because the biological system is actively interpreting its own constraint in real time, it makes the math incredibly difficult.
+
+271
+00:16:51,300 --> 00:16:51,800
+I can imagine.
+
+272
+00:16:52,140 --> 00:16:57,140
+Two systems can inherit the exact same history, the exact same traces, like the frog cells,
+
+273
+00:16:57,440 --> 00:17:03,900
+and experience completely different admissible futures because the act of reading the constraint under different environmental conditions
+
+274
+00:17:03,900 --> 00:17:05,940
+changes how the constraint applies.
+
+275
+00:17:05,960 --> 00:17:07,260
+Okay, that clicks.
+
+276
+00:17:07,340 --> 00:17:14,620
+It's like you and I both reading the exact same cryptic diary entry, but because I live in a dense city and you live off-grid in the woods,
+
+277
+00:17:14,820 --> 00:17:20,620
+we interpret the advice totally differently and take completely different actions based on the exact same words.
+
+278
+00:17:20,740 --> 00:17:21,200
+Exactly.
+
+279
+00:17:21,460 --> 00:17:24,380
+We both authored our own future using the same constraint.
+
+280
+00:17:24,620 --> 00:17:26,360
+But this brings up a huge problem.
+
+281
+00:17:26,360 --> 00:17:35,980
+If a system is actively authoring its own interpretations, the original designer, whether that's an AI engineer in a lab or millions of years of evolution,
+
+282
+00:17:36,420 --> 00:17:39,240
+completely loses absolute control over the outcome.
+
+283
+00:17:39,440 --> 00:17:42,760
+Why on earth would evolution build a system that it can't perfectly control?
+
+284
+00:17:42,760 --> 00:17:45,920
+That trade-off is the third major principle in the paper.
+
+285
+00:17:46,880 --> 00:17:48,540
+Robustness is not control.
+
+286
+00:17:49,420 --> 00:17:54,920
+When you build a system that interprets its own traces rather than just deferring to an external reader,
+
+287
+00:17:55,520 --> 00:17:59,420
+the system's behavior stops being fully specifiable in advance.
+
+288
+00:18:00,320 --> 00:18:06,400
+The engineer, or evolution, can no longer guarantee the exact pixel-perfect output.
+
+289
+00:18:06,400 --> 00:18:10,620
+The price of self-interpreting memory is the death of micromanagement.
+
+290
+00:18:10,780 --> 00:18:11,200
+Exactly.
+
+291
+00:18:11,620 --> 00:18:18,420
+But what you get in return for giving up micromanagement is incredible robustness, resilience, and adaptive plasticity.
+
+292
+00:18:18,600 --> 00:18:20,280
+So it shifts the dynamic entirely.
+
+293
+00:18:20,440 --> 00:18:26,320
+It's the difference between typing code into a machine, where you demand and expect the exact same output every single time,
+
+294
+00:18:26,800 --> 00:18:29,360
+versus negotiating with a highly intelligent animal.
+
+295
+00:18:29,480 --> 00:18:30,640
+Oh, that's a good way to frame it.
+
+296
+00:18:30,720 --> 00:18:33,440
+Think of a working dog, like a highly trained border collie.
+
+297
+00:18:33,440 --> 00:18:36,780
+You give the collie a command to herd a flock of sheep into a pen.
+
+298
+00:18:37,280 --> 00:18:38,900
+You know the dog will act coherently.
+
+299
+00:18:39,100 --> 00:18:41,600
+It will accomplish the overarching goal based on its training.
+
+300
+00:18:41,980 --> 00:18:46,900
+But you absolutely cannot guarantee exactly which path the dog will take across the field.
+
+301
+00:18:46,980 --> 00:18:48,480
+Right, or which rock it will jump over.
+
+302
+00:18:48,720 --> 00:18:49,280
+Exactly.
+
+303
+00:18:49,560 --> 00:18:53,640
+Or how it will independently react if a wolf suddenly appears.
+
+304
+00:18:54,180 --> 00:18:56,700
+You sacrifice absolute micromanagement,
+
+305
+00:18:56,700 --> 00:19:04,460
+but you gain a system that can handle completely unpredictable, novel terrain that you never explicitly trained it for.
+
+306
+00:19:04,820 --> 00:19:06,480
+And this isn't just a philosophical metaphor.
+
+307
+00:19:07,100 --> 00:19:11,840
+This brings us to the most quantitative, rigorous piece of evidence discussed in the conversation,
+
+308
+00:19:12,520 --> 00:19:16,000
+citing work from Federico Pagotzi, who was also at Levin's lab.
+
+309
+00:19:16,500 --> 00:19:20,780
+They studied this exact trade-off using a concept called causal emergence.
+
+310
+00:19:21,240 --> 00:19:22,660
+Okay, causal emergence.
+
+311
+00:19:22,660 --> 00:19:23,620
+This sounds heavy.
+
+312
+00:19:23,620 --> 00:19:25,960
+How do we break this down without losing the plot?
+
+313
+00:19:26,120 --> 00:19:27,200
+What actually is it?
+
+314
+00:19:27,660 --> 00:19:31,720
+At its core, causal emergence is a measurable mathematical quantity.
+
+315
+00:19:32,540 --> 00:19:37,260
+It describes how much of a system's behavior is driven by its higher level whole system structure,
+
+316
+00:19:37,400 --> 00:19:41,340
+rather than just being driven by the sun of its microscopic individual parts.
+
+317
+00:19:41,600 --> 00:19:44,440
+So it's the forest acting as a unified forest,
+
+318
+00:19:44,560 --> 00:19:47,400
+rather than just a bunch of individual trees doing their own thing.
+
+319
+00:19:47,500 --> 00:19:47,860
+Exactly.
+
+320
+00:19:48,000 --> 00:19:49,620
+It's a measure of top-down agency.
+
+321
+00:19:49,620 --> 00:19:54,100
+When causal emergence is high, the macro state of the system is calling the shots,
+
+322
+00:19:54,480 --> 00:19:55,960
+dictating what the microparts do.
+
+323
+00:19:56,660 --> 00:19:59,320
+And Pagotzi's findings were absolutely remarkable.
+
+324
+00:19:59,920 --> 00:20:04,420
+They looked at artificial neural networks and found that systems with high causal emergence
+
+325
+00:20:04,420 --> 00:20:06,960
+are incredibly good at learning.
+
+326
+00:20:07,540 --> 00:20:12,620
+But even more interestingly, the very act of training these systems, giving them experiences,
+
+327
+00:20:13,060 --> 00:20:15,680
+increases their causal emergence even further.
+
+328
+00:20:16,540 --> 00:20:18,840
+Learning builds up the system's structural agency.
+
+329
+00:20:18,840 --> 00:20:23,620
+Okay, so you learn things, and your brain's architecture gets more integrated,
+
+330
+00:20:23,820 --> 00:20:24,660
+more top-down.
+
+331
+00:20:25,060 --> 00:20:26,320
+That makes intuitive sense.
+
+332
+00:20:26,620 --> 00:20:30,100
+But here's the part of the paper that forced me to put it down and just stare at the wall.
+
+333
+00:20:30,400 --> 00:20:31,080
+The memory wipe.
+
+334
+00:20:31,200 --> 00:20:31,520
+Yes.
+
+335
+00:20:32,000 --> 00:20:34,700
+The researchers took this system, they trained it,
+
+336
+00:20:34,820 --> 00:20:38,360
+they watched its causal emergence literally rise on the graph,
+
+337
+00:20:38,500 --> 00:20:42,740
+and then they forced the system to completely forget the specific content it just learned.
+
+338
+00:20:42,880 --> 00:20:44,540
+They wiped the specific memories.
+
+339
+00:20:44,900 --> 00:20:45,940
+And this is the punchline.
+
+340
+00:20:45,940 --> 00:20:50,300
+When they wiped the memories, the gain in causal emergence did not reverse.
+
+341
+00:20:50,620 --> 00:20:51,480
+It stayed high.
+
+342
+00:20:52,120 --> 00:20:57,000
+Levin calls this an asymmetric ratchet, pointing upwards in terms of intelligence and agency.
+
+343
+00:20:57,260 --> 00:20:59,860
+That is just staggeringly profound.
+
+344
+00:21:00,660 --> 00:21:01,720
+So what does this all mean?
+
+345
+00:21:02,280 --> 00:21:07,340
+The structural capacity to integrate information, the actual intelligence of the network,
+
+346
+00:21:07,920 --> 00:21:11,740
+survives the erasure of the data that caused the change in the first place.
+
+347
+00:21:11,840 --> 00:21:12,700
+Yeah, it's incredible.
+
+348
+00:21:12,700 --> 00:21:14,520
+The memory outlives the storage.
+
+349
+00:21:15,200 --> 00:21:17,860
+Just by having the experience of learning something,
+
+350
+00:21:18,300 --> 00:21:21,200
+the architecture of the system permanently upgraded itself.
+
+351
+00:21:21,660 --> 00:21:26,380
+And even when the specific facts were deleted, the structural upgrade remained.
+
+352
+00:21:26,600 --> 00:21:28,460
+It's a one-way street pointing upward.
+
+353
+00:21:28,660 --> 00:21:29,880
+It is profound.
+
+354
+00:21:30,260 --> 00:21:33,460
+But Levin is incredibly careful here to make a crucial caveat.
+
+355
+00:21:33,460 --> 00:21:39,500
+He stresses this isn't just some biological magic specific to living frog cells or human brains.
+
+356
+00:21:39,580 --> 00:21:41,060
+That's not just a biology thing.
+
+357
+00:21:41,180 --> 00:21:44,420
+No, this is a property of the mathematics of networks in general.
+
+358
+00:21:44,800 --> 00:21:51,280
+They found this asymmetric ratchet even in purely random networks that have absolutely no evolutionary history whatsoever.
+
+359
+00:21:52,040 --> 00:21:56,820
+It is a fundamental property of how complex networks process and integrate information over time.
+
+360
+00:21:56,820 --> 00:22:01,640
+Which is the perfect conceptual bridge to how we actually solve the AI problem.
+
+361
+00:22:01,820 --> 00:22:08,840
+Because the whole point of Flyxion's paper is arguing that we don't need to invent entirely new mystical branches of math
+
+362
+00:22:08,840 --> 00:22:11,740
+to understand these complex biological phenomena.
+
+363
+00:22:11,880 --> 00:22:12,040
+Right.
+
+364
+00:22:12,100 --> 00:22:12,980
+We don't need magic.
+
+365
+00:22:13,160 --> 00:22:13,520
+Exactly.
+
+366
+00:22:13,620 --> 00:22:15,500
+We don't need to just say biology is magic.
+
+367
+00:22:15,620 --> 00:22:20,920
+We just need to properly map these biological realities into an existing mathematical framework.
+
+368
+00:22:20,920 --> 00:22:26,100
+And that framework is called the recursive continuation theorem and it's adaptation hierarchy.
+
+369
+00:22:26,620 --> 00:22:26,720
+Right.
+
+370
+00:22:27,060 --> 00:22:34,980
+If we want to understand why AI is stuck and biology isn't, we have to look at the three nested levels of this adaptation hierarchy.
+
+371
+00:22:35,460 --> 00:22:37,180
+Let's systematically walk through them.
+
+372
+00:22:37,440 --> 00:22:39,000
+And we won't get bogged down in the algebra.
+
+373
+00:22:39,260 --> 00:22:40,540
+We'll focus on the mechanisms.
+
+374
+00:22:40,720 --> 00:22:41,140
+Yes, please.
+
+375
+00:22:41,380 --> 00:22:42,540
+Give me the functional reality.
+
+376
+00:22:42,860 --> 00:22:43,640
+What is level one?
+
+377
+00:22:43,900 --> 00:22:45,760
+Level one is called state modification.
+
+378
+00:22:46,180 --> 00:22:46,300
+Yeah.
+
+379
+00:22:46,300 --> 00:22:52,980
+Conceptually, this means you have a fixed rule and that fixed rule acts on a changing state under changing conditions.
+
+380
+00:22:53,420 --> 00:22:56,940
+Think of it like playing a video game where the underlying physics engine is totally locked.
+
+381
+00:22:57,580 --> 00:22:58,800
+Gravity is always gravity.
+
+382
+00:22:59,080 --> 00:23:00,860
+The speed of light is always the speed of light.
+
+383
+00:23:01,320 --> 00:23:02,300
+The game state changes.
+
+384
+00:23:02,460 --> 00:23:03,240
+Your character moves.
+
+385
+00:23:03,360 --> 00:23:04,100
+Enemies appear.
+
+386
+00:23:04,580 --> 00:23:08,140
+But the rules governing how they move are absolutely fixed.
+
+387
+00:23:08,520 --> 00:23:08,800
+Okay.
+
+388
+00:23:08,940 --> 00:23:10,760
+So fixed rules meeting new conditions.
+
+389
+00:23:10,760 --> 00:23:21,380
+If we map our earlier examples onto this, the developmental biology case, the frog genome and the antrobots, belongs right here in level one state modification.
+
+390
+00:23:22,040 --> 00:23:22,880
+Let's see if that fits.
+
+391
+00:23:23,220 --> 00:23:23,420
+Right.
+
+392
+00:23:23,500 --> 00:23:26,880
+Because the genome, which acts as the operator of the rule, didn't mutate.
+
+393
+00:23:27,220 --> 00:23:27,820
+It was fixed.
+
+394
+00:23:28,240 --> 00:23:31,740
+But the context, the environment of the petri dish, changed.
+
+395
+00:23:31,740 --> 00:23:38,740
+And that fixed rule operating in a new environment led to a totally different state, a swimming robot instead of a flat skin cell.
+
+396
+00:23:38,960 --> 00:23:39,260
+Precisely.
+
+397
+00:23:39,420 --> 00:23:42,920
+The rule was fixed, but the outcome varied radically based on the input.
+
+398
+00:23:43,580 --> 00:23:50,940
+Now, there is a fascinating complication cited in the paper here from a thinker named Heisinger who wrote a book called History Before Function.
+
+399
+00:23:51,480 --> 00:23:53,380
+He raises a very difficult question.
+
+400
+00:23:54,160 --> 00:23:57,580
+Are the rule and the history actually separable in biology?
+
+401
+00:23:57,780 --> 00:23:58,840
+What does that mean, separable?
+
+402
+00:23:58,840 --> 00:24:03,300
+Well, in our video game analogy, the code for gravity is clearly separate from the character jumping.
+
+403
+00:24:04,160 --> 00:24:11,340
+But Heisinger argues that in many biological structures, the rule and the history aren't two different things sitting in separate boxes.
+
+404
+00:24:11,780 --> 00:24:15,540
+They are a single, inseparable, ongoing physical computation.
+
+405
+00:24:15,820 --> 00:24:17,960
+Like the structure itself is the computation.
+
+406
+00:24:18,120 --> 00:24:18,580
+Exactly.
+
+407
+00:24:18,980 --> 00:24:22,300
+The protein folding is the history and the rule simultaneously.
+
+408
+00:24:22,300 --> 00:24:32,060
+The Flyxion paper acknowledges this fuzziness and sets it aside for analytical convenience so we can use the math, but it's a vital piece of friction to keep in mind.
+
+409
+00:24:32,680 --> 00:24:36,080
+Biology rarely has clean boundaries between the software and the hardware.
+
+410
+00:24:36,400 --> 00:24:37,060
+That's a great caveat.
+
+411
+00:24:37,340 --> 00:24:40,480
+Okay, so level one is a fixed rule changing the state.
+
+412
+00:24:40,760 --> 00:24:41,620
+What is level two?
+
+413
+00:24:41,880 --> 00:24:43,400
+Level two is parameter modification.
+
+414
+00:24:44,040 --> 00:24:47,120
+Here, the mechanism itself is updated based on the state and the environment.
+
+415
+00:24:47,120 --> 00:25:00,620
+Going back to our video game, imagine playing a game that watches how you play and actually rewrites its own core physics engine, literally changing the gravity while you are still holding the controller based on your play style.
+
+416
+00:25:00,960 --> 00:25:03,360
+Ah, so the rule is no longer fixed.
+
+417
+00:25:03,680 --> 00:25:08,120
+The system is rewriting its own rules based on its ongoing experience.
+
+418
+00:25:08,120 --> 00:25:13,180
+The mechanism updating the rule is what the math calls the G function, right?
+
+419
+00:25:13,420 --> 00:25:15,060
+Yes, the endogenous G function.
+
+420
+00:25:15,420 --> 00:25:20,440
+This maps perfectly to the Pagotzi causal emergence case we just talked about.
+
+421
+00:25:20,740 --> 00:25:21,860
+That belongs in level two.
+
+422
+00:25:22,440 --> 00:25:26,540
+When a nervous system learns, it physically changes its synaptic organization.
+
+423
+00:25:27,100 --> 00:25:30,060
+The learning process changes the physical mechanism itself.
+
+424
+00:25:30,560 --> 00:25:34,400
+And as we saw with the asymmetric upward ratchet, this revision is permanent.
+
+425
+00:25:34,660 --> 00:25:37,560
+It doesn't just symmetrically reverse when you forget the data.
+
+426
+00:25:37,560 --> 00:25:38,040
+Exactly.
+
+427
+00:25:38,500 --> 00:25:42,420
+You are permanently modifying the parameters of the system through the act of experiencing.
+
+428
+00:25:42,980 --> 00:25:46,040
+And just for structural completeness, level three is rule modification.
+
+429
+00:25:46,800 --> 00:25:51,640
+This is where the process that updates the mechanism that G function is itself subject to change.
+
+430
+00:25:51,960 --> 00:25:53,960
+The system changes the way it changes its rules.
+
+431
+00:25:54,100 --> 00:25:57,100
+So meta, that's like evolution modifying how evolution works.
+
+432
+00:25:57,220 --> 00:25:57,620
+Pretty much.
+
+433
+00:25:57,840 --> 00:26:03,680
+But for our purposes of comparing humans to AI, level one and level two are where the critical action is right now.
+
+434
+00:26:03,680 --> 00:26:11,980
+Because now that we have this adaptation hierarchy, we can finally diagnose exactly, structurally, what is missing from current artificial intelligence.
+
+435
+00:26:12,300 --> 00:26:18,680
+We can turn Katrina Schleisman's philosophical critique about episodic memory into a formal mathematical observation.
+
+436
+00:26:18,680 --> 00:26:22,920
+And this is formalized as observation 5.1 in the paper.
+
+437
+00:26:23,240 --> 00:26:28,540
+It diagnoses what we can call the training versus inference trap of modern large language models.
+
+438
+00:26:28,700 --> 00:26:31,900
+Let's break this down because this is the absolute crux of the issue.
+
+439
+00:26:31,900 --> 00:26:37,480
+When you interact with an LLM on your computer, you are interacting with it during its inference phase.
+
+440
+00:26:37,980 --> 00:26:39,460
+The system has an active state.
+
+441
+00:26:40,060 --> 00:26:43,980
+Its artificial neurons are firing as it calculates the next word in the chat with you.
+
+442
+00:26:44,440 --> 00:26:47,900
+But crucially, it has absolutely no endogenous G function.
+
+443
+00:26:48,280 --> 00:26:51,540
+It has no rule updating mechanism coupled to that live episode.
+
+444
+00:26:51,740 --> 00:26:59,480
+So what you're saying is while I am talking to ChatGPT, it is impossible for ChatGPT to rewrite its own internal rules based on our conversation.
+
+445
+00:26:59,480 --> 00:27:10,960
+Exactly. Any actual revision to the AI's core mechanisms, any change to its billions of synaptic weights, any fundamental learning, only happens during its initial training phase.
+
+446
+00:27:11,140 --> 00:27:16,380
+And that training phase happened months ago in a massive server farm completely offline.
+
+447
+00:27:16,540 --> 00:27:17,200
+Oh, wow.
+
+448
+00:27:17,300 --> 00:27:23,540
+That training is 100% structurally decoupled from any real-time conversation it is having with you right now.
+
+449
+00:27:23,720 --> 00:27:27,380
+It's just running a fixed level one state modification during the chat.
+
+450
+00:27:27,380 --> 00:27:33,440
+If we connect this to the bigger picture, the reason AI lacks an episodic layer isn't just because it has a bad memory.
+
+451
+00:27:34,000 --> 00:27:41,500
+It is the complete and total absence of rule modification machinery operating on the timescale of the system's lived experiences.
+
+452
+00:27:42,100 --> 00:27:47,200
+It fundamentally cannot do level two parameter modification while it is interacting with the world.
+
+453
+00:27:47,560 --> 00:27:48,460
+That is exactly it.
+
+454
+00:27:48,780 --> 00:27:51,800
+Biology revises its operator during the episode of continuation.
+
+455
+00:27:51,800 --> 00:27:59,360
+While you are living, while you are experiencing this deep dive right now, your physical rules, your synaptic weights are actively changing.
+
+456
+00:27:59,720 --> 00:28:02,060
+Your causal emergence is ratcheting up in real time.
+
+457
+00:28:02,360 --> 00:28:10,060
+AI, on the other hand, only revises itself between episodes during those massive, multi-million dollar offline training runs.
+
+458
+00:28:10,060 --> 00:28:13,660
+This is precisely why AI feels so frozen in time.
+
+459
+00:28:14,220 --> 00:28:19,640
+It is a brilliant, unbelievably massive semantic library, but it is statically frozen.
+
+460
+00:28:19,900 --> 00:28:23,060
+It is a snapshot of the internet from whenever its training run ended.
+
+461
+00:28:23,720 --> 00:28:30,020
+While biological organisms are continuously evolving and ratcheting upward in real time, the AI is stuck.
+
+462
+00:28:30,180 --> 00:28:37,140
+It is the formal difference between retained admissibility, which biology possesses, and merely stored content, which AI possesses.
+
+463
+00:28:37,140 --> 00:28:43,480
+Biology retains the structural capacity to act differently in the future based on the architectural changes built by the past.
+
+464
+00:28:44,060 --> 00:28:46,620
+AI just looks up the past in a static database.
+
+465
+00:28:46,780 --> 00:28:49,180
+What an unbelievably profound distinction.
+
+466
+00:28:49,600 --> 00:28:54,460
+We've covered a staggering amount of ground today, moving from philosophy to biology to network math.
+
+467
+00:28:54,920 --> 00:28:57,220
+Let's do a quick recap to lock this architecture in.
+
+468
+00:28:57,240 --> 00:28:57,600
+Good idea.
+
+469
+00:28:57,600 --> 00:29:00,300
+We learned that true memory isn't a hard drive.
+
+470
+00:29:00,580 --> 00:29:07,440
+It's an active, creative interpretation of traces left by your past self, optimized for salience, not fidelity.
+
+471
+00:29:08,240 --> 00:29:16,820
+We learned that historical constraints give us agency, narrowing our possibilities without determining our exact choices, much like walls guiding you down a hallway.
+
+472
+00:29:17,080 --> 00:29:17,200
+Right.
+
+473
+00:29:17,200 --> 00:29:23,340
+We saw that to gain incredible biological robustness, you have to trade away micromanagement and total control.
+
+474
+00:29:23,540 --> 00:29:25,120
+You have to let the dog off the leash.
+
+475
+00:29:25,720 --> 00:29:38,900
+And finally, we discovered that true intelligence, mapped mathematically, requires a system that alters its own operating rules in real time based on its lived experiences, something current AI is structurally walled off from doing.
+
+476
+00:29:38,900 --> 00:29:44,360
+But the beauty of Flyxion's paper is that it doesn't just wrap everything up neatly and pretend we have all the answers.
+
+477
+00:29:44,620 --> 00:29:47,800
+It actually leaves us with a grand unsolved mystery.
+
+478
+00:29:48,460 --> 00:29:52,700
+At the very end of the text, the author poses open question 6.1.
+
+479
+00:29:53,100 --> 00:29:56,620
+And this raises an incredibly important question for the future of intelligence.
+
+480
+00:29:56,840 --> 00:29:58,180
+I love a good unsolved mystery.
+
+481
+00:29:58,300 --> 00:29:58,860
+What is it?
+
+482
+00:29:59,280 --> 00:30:05,620
+Under what conditions does the learning mechanism, that G process we talked about, inherit irreversibility from its history?
+
+483
+00:30:05,940 --> 00:30:08,000
+Let's unpack that final provocation.
+
+484
+00:30:08,000 --> 00:30:14,800
+We know from Pagazzi's causal emergent study that learning permanently changes the structure of a network.
+
+485
+00:30:15,340 --> 00:30:20,540
+The structural gain, the intelligence upgrade, survives the erasure of the specific memories.
+
+486
+00:30:20,840 --> 00:30:22,480
+It permanently ratchets upward.
+
+487
+00:30:22,760 --> 00:30:24,540
+The massive provocation is this.
+
+488
+00:30:25,040 --> 00:30:30,800
+Is this path asymmetry, this permanent upward ratchet of intelligence where memory functionally outlives storage,
+
+489
+00:30:31,440 --> 00:30:37,020
+is it a universal mathematical law built into the very fabric of how the universe processes information?
+
+490
+00:30:37,020 --> 00:30:40,680
+Or is it a special, exceptionally rare physical condition?
+
+491
+00:30:40,780 --> 00:30:43,040
+Right, like maybe only biological things can do it.
+
+492
+00:30:43,120 --> 00:30:43,440
+Exactly.
+
+493
+00:30:43,620 --> 00:30:51,780
+And if it is rare, is it something we'll have to deliberately figure out how to engineer into future AI to make it truly capable of consciousness and lived experience?
+
+494
+00:30:52,140 --> 00:30:53,540
+That is the ultimate frontier.
+
+495
+00:30:53,540 --> 00:30:58,120
+Is the upward ratchet of intelligence a guarantee of complex networks?
+
+496
+00:30:58,340 --> 00:31:03,460
+Or is it a biological miracle that we haven't even begun to figure out how to code yet?
+
+497
+00:31:04,340 --> 00:31:07,840
+I want to leave you with this final thought, circling all the way back to where we started.
+
+498
+00:31:08,180 --> 00:31:14,700
+The next time you find yourself frustrated because you forgot a specific fact or name or crucial detail from years ago,
+
+499
+00:31:14,700 --> 00:31:16,420
+don't be hard on yourself.
+
+500
+00:31:16,620 --> 00:31:18,660
+Stop thinking of your brain as a broken hard dive.
+
+501
+00:31:18,860 --> 00:31:20,620
+Seriously, stop doing that.
+
+502
+00:31:20,980 --> 00:31:26,000
+Consider that the very act of having learned it, of having lived that experience in the first place,
+
+503
+00:31:26,340 --> 00:31:29,540
+may have permanently upgraded the physical architecture of your mind.
+
+504
+00:31:29,860 --> 00:31:35,040
+The specific data might be gone, but the structural gain, the intelligence, remains.
+
+505
+00:31:35,040 --> 00:31:38,520
+Thank you for joining this deep dive into the source material.
+
+506
+00:31:38,940 --> 00:31:39,580
+See you next time.
+

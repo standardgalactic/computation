@@ -2,7 +2,7 @@
 
 [Collapse Retention](https://standardgalactic.github.io/computation/collapse_retention.pdf)
 
-[Continuation Geometry](https://standardgalactic.github.io/computation/continuation_geometry.pdf)
+[Selective Retention and the Geometry of Continuation](https://standardgalactic.github.io/computation/continuation_geometry.pdf)
 
 
 [Correspondents and Residents](https://standardgalactic.github.io/computation/correspondents_and_residents.pdf) — *Incomplete*
@@ -11,9 +11,19 @@
 [Histories Become Operators](https://standardgalactic.github.io/computation/histories-become-operators.pdf)
 
 
+[Diagnostic Coordinates](https://standardgalactic.github.io/computation/diagnostic-coordinates.pdf)
+
+[Continuation Geometry](https://standardgalactic.github.io/computation/continuation_geometry_monograph.pdf)
+
+[Generative Continuation Geometry](https://standardgalactic.github.io/computation/generative_continuation_geometry.pdf) — *Incomplete*
+
+![](diagnostic-coordinates.png)
+![](rhyzomatic-future.png)
+![](youtronium-infographic.png)
+
 [Computation as Containment](https://github.com/standardgalactic/computation/blob/main/radiative-switch/README.md) — *Radiative Switch Computation*
 
-[Abstraction as Reduciton](https://github.com/standardgalactic/computation/blob/main/abstraction/README.md)
+[Abstraction as Reduction](https://github.com/standardgalactic/computation/blob/main/abstraction/README.md)
 
 [The Moon Should Not Be a Computer](https://standardgalactic.github.io/computation/moon-not-computer.pdf)
 
