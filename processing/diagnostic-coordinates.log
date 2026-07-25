@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.5.3)  8 JUL 2026 21:54
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023/Debian)  (format=lualatex 2026.7.24)  24 JUL 2026 22:24
  restricted system commands enabled.
 **diagnostic-coordinates.tex
 (./diagnostic-coordinates.tex
@@ -8,8 +8,8 @@ Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
 Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended c
 ollection.
-luaotfload | conf : Root cache directory is "/home/flyxion/.texlive2023/texmf-va
-r/luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "/home/bonobo/.texlive2023/texmf-var
+/luatex-cache/generic/names".
 luaotfload | init : Loading fontloader "fontloader-2023-08-19.lua" from kpse-res
 olved path "/usr/share/texlive/texmf-dist/tex/luatex/luaotfload/fontloader-2023-
 08-19.lua".
@@ -20,8 +20,8 @@ Inserting `luaotfload.node_processor' in `hpack_filter'.
 Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
 Inserting `luaotfload.define_font' in `define_font'.
 Lua-only attribute luaotfload_color_attribute = 2
-luaotfload | conf : Root cache directory is "/home/flyxion/.texlive2023/texmf-va
-r/luatex-cache/generic/names".
+luaotfload | conf : Root cache directory is "/home/bonobo/.texlive2023/texmf-var
+/luatex-cache/generic/names".
 Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
 Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
 Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
@@ -44,8 +44,8 @@ mf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
 File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
-luaotfload | db : Font names database loaded from /home/flyxion/.texlive2023/tex
-mf-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
+luaotfload | db : Font names database loaded from /home/bonobo/.texlive2023/texm
+f-var/luatex-cache/generic/names/luaotfload-names.luc.gz)
 \c@part=\count185
 \c@section=\count186
 \c@subsection=\count187
@@ -95,8 +95,8 @@ eX
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
-luaotfload | cache : Lookup cache loaded from /home/flyxion/.texlive2023/texmf-v
-ar/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
+luaotfload | cache : Lookup cache loaded from /home/bonobo/.texlive2023/texmf-va
+r/luatex-cache/generic/names/luaotfload-lookup-cache.luc.
 
 Package fontspec Info: Font family 'TeXGyrePagella(0)' created for font 'TeX
 (fontspec)             Gyre Pagella' with options [Ligatures=TeX].
@@ -1882,74 +1882,75 @@ Overfull \hbox (18.13823pt too wide) in paragraph at lines 99--100
 m/n/10.95 ,
  []
 
-[4] [5] [6] [7] [8] [9] [10] [11] [12]
+[4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
+Underfull \hbox (badness 10000) in paragraph at lines 572--575
 []\TU/TeXGyrePagella(0)/m/n/10.95 Fly-x-ion. \TU/TeXGyrePagella(0)/m/it/10.95 Th
 e Ecol-ogy of Dis-tinc-tions. \TU/TeXGyrePagella(0)/m/n/10.95 Ad-mis-si-bil-ity Pro-gram. [][]$\TU/lmtt/m/n/10.95 https:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
+Underfull \hbox (badness 10000) in paragraph at lines 572--575
 \TU/lmtt/m/n/10.95 //standardgalactic.github.io/spherepop/textbook/The_Ecology_o
 f_
  []
 
 
-Underfull \hbox (badness 1163) in paragraph at lines 268--271
+Underfull \hbox (badness 1163) in paragraph at lines 577--580
 []\TU/TeXGyrePagella(0)/m/n/10.95 Fly-x-ion. \TU/TeXGyrePagella(0)/m/it/10.95 Th
 e Con-tin-u-a-tion Ge-om-e-try of Cir-cuits. \TU/TeXGyrePagella(0)/m/n/10.95 In-
 de-pen-dent Re-searcher, 2026.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 268--271
+Underfull \hbox (badness 10000) in paragraph at lines 577--580
 [][]$\TU/lmtt/m/n/10.95 https://standardgalactic.github.io/robotics/continuation
 _geometry_of_
  []
 
-[13] (./diagnostic-coordinates.aux)
+[18] (./diagnostic-coordinates.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `diagnostic-coordinates.out' has not changed.
 
-(rerunfilecheck)             Checksum: D0DC39A182E71D8EEB142B23EB81F415;2961.
+(rerunfilecheck)             Checksum: 9156A74EC525BC2C1BFE72EAD60D1C87;4360.
 )
 
 Here is how much of LuaTeX's memory you used:
- 14618 strings out of 476553
+ 14642 strings out of 476553
  125240,1977958 words of node,token memory allocated
- 621 words of node memory still in use:
+ 773 words of node memory still in use:
    7 hlist, 2 vlist, 2 rule, 1 local_par, 4 glue, 4 kern, 1 penalty, 2 margin_ke
-rn, 5 glyph, 15 attribute, 55 glue_spec, 15 attribute_list, 1 write, 3 pdf_actio
+rn, 5 glyph, 53 attribute, 55 glue_spec, 53 attribute_list, 1 write, 3 pdf_actio
 n nodes
-   avail lists: 1:4,2:278,3:141,4:92,5:929,6:16,7:8413,8:85,9:235,10:14,11:745
- 36335 multiletter control sequences out of 65536+600000
+   avail lists: 1:4,2:310,3:161,4:92,5:887,6:23,7:8348,8:85,9:300,10:16,11:739
+ 36343 multiletter control sequences out of 65536+600000
  86 fonts using 10289015 bytes
- 79i,6n,89p,2072b,493s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,7n,89p,2072b,491s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf></usr/share/texm
 f/fonts/opentype/public/tex-gyre/texgyrepagella-italic.otf></usr/share/texmf/fon
 ts/opentype/public/tex-gyre/texgyrepagella-regular.otf></usr/share/texmf/fonts/o
 pentype/public/tex-gyre/texgyrepagella-bold.otf></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on diagnostic-coordinates.pdf (13 pages, 168478 bytes).
+lic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on diagnostic-coordinates.pdf (18 pages, 202716 bytes).
 
-PDF statistics: 228 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 52 named destinations out of 1000 (max. 131072)
- 97 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 284 PDF objects out of 1000 (max. 8388607)
+ 238 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 131072)
+ 145 words of extra memory for PDF output out of 10000 (max. 100000000)
 

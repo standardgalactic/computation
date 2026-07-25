@@ -176,6 +176,315 @@ An operator need not retain every distinction present in its generating history 
 
 This is stated as a proposition rather than proved from anything already established, and its justification is a motivated analogy rather than a derivation: Wilson's weak-emergence account of ordinary objects treats a higher-level entity's autonomy as arising from retaining a proper subset of its physical base's causal powers, not the full set, with additional lower-level powers contributing to descriptive completeness without contributing to the higher-level entity's own causal profile \cite{wilson2014}. The parallel suggested here is that repairability, like Wilson's causal autonomy, tracks selective sufficiency rather than maximal retention, but the two claims rest on different grounds, hers on Leibniz's Law applied to distinct power profiles, this one on the definition of scoped diagnostic sufficiency above, and the analogy should be read as motivating the proposition rather than establishing it.
 
+\section{Repair Warrant and the Null Intervention}
+
+Diagnostic sufficiency is not yet repair warrant. An operator may possess
+enough coordinates to identify a fault while lacking sufficient evidence
+that any available intervention will improve the state. This distinction
+is especially important when repair is itself capable of destroying
+structure that the incumbent still preserves. The Hamming example already
+exhibits the limiting case: an operator can diagnose according to every
+distinction available to it, apply the corresponding correction, and
+produce a state that passes its own verification procedure while being
+farther from the transmitted object than the state it replaced. Diagnosis
+therefore supplies a reason to consider intervention, not a license to
+intervene.
+
+\subsection{The reference class}
+
+To state this distinction formally, let $h$ denote the trajectory
+available at repair time. Two distinct objects are needed, answering two
+different questions.
+
+The first, $\mathcal{F}(h)$, is descriptive and history-relative:
+\[
+	\mathcal{F}(h) = \{\, f \mid h \oplus f \text{ remains admissible} \,\},
+\]
+the set of continuations still reachable given what has actually
+happened to $h$. This is the object used for admissibility equivalence,
+\[
+	h_1 \sim_{\mathrm{adm}} h_2
+	\quad\Longleftrightarrow\quad
+	\mathcal{F}(h_1) \cong \mathcal{F}(h_2),
+\]
+under whatever equivalence of continuation structures the surrounding
+framework adopts.
+
+The second object is normative and repair-relative, and must not be
+generated from $\mathcal{F}(h)$. If $h$ has already destroyed some
+admissible futures, those losses are facts about $\mathcal{F}(h)$; they
+must not automatically become the standard against which repair of $h$
+is judged, or a sufficiently damaged trajectory would make its own
+diminished future set the norm for its own repair.
+
+Instead, introduce a governing constraint structure $\Gamma_h$ and
+repair-time boundary data $B(h)$ --- the facts the intervention is not
+entitled to rewrite --- and define
+\[
+	\mathcal{R}_\Gamma(h)
+	=
+	\operatorname{Ext}_{\Gamma_h}\!\bigl(B(h)\bigr)
+	=
+	\{\, r \mid r \text{ extends } B(h) \text{ and } r \models \Gamma_h \,\}.
+\]
+$\Gamma_h$ requires its own provenance: the repair operator must not be
+permitted to infer $\Gamma_h$ solely from the damaged trajectory it is
+supposed to repair. It must come from an independently retained
+specification, invariant, contract, interface obligation, or other
+diagnostic coordinate. This is the same requirement the framework already
+places on diagnostic coordinates generally: repair requires retained
+information external to the damaged object, not derived from it.
+
+The discrepancy between $\mathcal{F}(h)$ and $\mathcal{R}_\Gamma(h)$ can
+itself be read as lost admissible reachability due to damage. Repair,
+under this reading, is not an attempt to make the past resemble some
+canonical past; it is an attempt, where possible, to restore continuation
+possibilities licensed by $\Gamma_h$ without falsifying irreversible
+boundary facts.
+
+\subsection{Structural diagnostics and marginal effect}
+
+A structural diagnostic is defined relative to $\mathcal{R}_\Gamma(h)$
+rather than to a single canonical history. Let
+\[
+	\delta_{\mathrm{dep}}\bigl(h, \mathcal{R}_\Gamma(h)\bigr)
+\]
+denote a structure-sensitive distance from $h$ to the admissible
+reference class, aggregated over multiple admissible references by a
+soft minimum. Schematically, if $d_{\mathrm{dep}}(h,r)$ is a
+dependency-sensitive trajectory distance and $\beta > 0$ controls
+concentration,
+\[
+	\delta_{\mathrm{dep}}\bigl(h, \mathcal{R}_\Gamma(h)\bigr)
+	=
+	-\frac{1}{\beta}
+	\log
+	\sum_{r \in \mathcal{R}_\Gamma(h)}
+	w_r \exp\!\left[-\beta\, d_{\mathrm{dep}}(h,r)\right],
+\]
+with nonnegative weights $w_r$ summing to one. A distance to a single
+distinguished history would measure fidelity to that history rather than
+departure from the admissible class, conflating structural resemblance
+with admissibility; the reference class is essential for exactly this
+reason. The structural diagnostic is consequently subordinate to
+admissibility, not a definition of admissibility equivalence itself.
+
+What matters for repair choice is not the incumbent value of this
+diagnostic but the marginal structural effect of a proposed intervention.
+
+\begin{definition}[Marginal Dependency Effect]
+	For a candidate intervention $a$, define
+	\[
+		\Delta_{\mathrm{dep}}\bigl(a \mid h, \mathcal{R}_\Gamma(h)\bigr)
+		=
+		\delta_{\mathrm{dep}}\bigl(h \oplus a, \mathcal{R}_\Gamma(h)\bigr)
+		-
+		\delta_{\mathrm{dep}}\bigl(h, \mathcal{R}_\Gamma(h)\bigr),
+	\]
+	where $h \oplus a$ is the trajectory obtained by appending intervention
+	$a$ to $h$.
+\end{definition}
+
+Thus $\Delta_{\mathrm{dep}} < 0$ indicates that the intervention moves the
+trajectory toward the admissible reference class, $\Delta_{\mathrm{dep}}
+= 0$ indicates no measured structural improvement, and
+$\Delta_{\mathrm{dep}} > 0$ indicates that the proposed repair increases
+structural violation. This prevents a fault already present in $h$ from
+being charged indiscriminately to every candidate repair.
+
+\subsection{The repair objective and the null intervention}
+
+Let $E(a \mid h)$ denote the direct expected cost of intervention, let
+$R(a \mid h)$ denote its irreversible or repair-induced risk, and let
+$M(a \mid h)$ denote the evidential margin supporting the claim that $a$
+improves upon the incumbent. For positive coefficients
+$\lambda, \mu, \nu$, define the repair objective
+\[
+	J(a \mid h)
+	=
+	E(a \mid h)
+	+ \lambda R(a \mid h)
+	+ \mu \, \Delta_{\mathrm{dep}}\bigl(a \mid h, \mathcal{R}_\Gamma(h)\bigr)
+	- \nu M(a \mid h).
+\]
+
+The available action set is required to contain the null intervention
+$\varnothing$, representing refusal to alter the incumbent. Define
+\[
+	E(\varnothing \mid h) = R(\varnothing \mid h)
+	= \Delta_{\mathrm{dep}}\bigl(\varnothing \mid h, \mathcal{R}_\Gamma(h)\bigr)
+	= M(\varnothing \mid h) = 0.
+\]
+It follows immediately that $J(\varnothing \mid h) = 0$.
+
+\begin{proposition}[Repair-Warrant Criterion]
+	Suppose $\varnothing$ belongs to the available action set
+	$\mathcal{A}(h)$. An intervention is warranted by the repair objective
+	only if there exists some $a \in \mathcal{A}(h)$ such that
+	$J(a \mid h) < 0$. If $J(a \mid h) \geq 0$ for every non-null available
+	intervention, the null intervention weakly minimizes $J$ and refusal is
+	warranted.
+\end{proposition}
+
+\begin{proof}
+	By definition $J(\varnothing \mid h) = 0$. If every non-null $a$
+	satisfies $J(a \mid h) \geq 0$, then $J(\varnothing \mid h) \leq
+	J(a \mid h)$ for every available action. Conversely, if some
+	intervention satisfies $J(a \mid h) < 0$, then it strictly improves upon
+	the null intervention according to the objective.
+\end{proof}
+
+Equivalently, refusal is warranted whenever every available non-null
+intervention satisfies
+\[
+	\mu \, \Delta_{\mathrm{dep}}\bigl(a \mid h, \mathcal{R}_\Gamma(h)\bigr)
+	- \nu M(a \mid h)
+	\;\geq\;
+	-E(a \mid h) - \lambda R(a \mid h).
+\]
+Detected error and warranted correction are formally distinct. A
+trajectory may be known to violate a constraint while every presently
+available correction remains worse, in expectation, than leaving the
+incumbent untouched. Refusal is therefore not the absence of a repair
+policy; it is an explicit member of the repair policy's action space.
+
+\subsection{Three independent gaps}
+
+Three recent results clarify why these distinctions cannot be collapsed
+into one another.
+
+\begin{proposition}[Constraint Satisfaction Does Not Imply Semantic Admissibility]
+	Formal satisfaction of an explicit constraint system does not in general
+	imply that the representations satisfying those constraints possess the
+	intended semantic grounding.
+\end{proposition}
+
+Differentiable neurosymbolic systems provide a concrete instance: a
+learner may satisfy the imposed logical constraints by exploiting a
+cognition shortcut in which neural outputs acquire semantically
+incorrect mappings to logical atoms. The resulting state is formally
+acceptable under the constraint language while failing the semantic
+interpretation for which those constraints were introduced. Constraint
+closure and semantic closure are therefore distinct requirements.
+
+\begin{proposition}[Structural Fidelity and Admissibility Equivalence Are Distinct]
+	Structural trajectory fidelity neither implies nor is implied by
+	admissibility equivalence.
+\end{proposition}
+
+A dependency-sensitive trajectory metric may assign zero distance only
+when two attributed dependency graphs are related by an appropriate
+structure-preserving isomorphism, even while remaining invariant under
+alternative topological serializations of the same dependency graph.
+Admissibility equivalence is coarser. Distinct internal histories may
+preserve the same admissible continuation structure without being
+dependency-isomorphic. Conversely, close or even exact structural
+fidelity to an exemplar does not by itself establish equality of
+admissible future sets. Hence
+\[
+	\delta_{\mathrm{dep}} = 0 \;\not\Rightarrow\; h_1 \sim_{\mathrm{adm}} h_2,
+	\qquad
+	h_1 \sim_{\mathrm{adm}} h_2 \;\not\Rightarrow\; \delta_{\mathrm{dep}} = 0.
+\]
+The role of $\delta_{\mathrm{dep}}$ in the repair objective is therefore
+diagnostic: it measures one class of structural violation without
+defining the equivalence relation over admissible histories.
+
+\begin{proposition}[Verification Does Not Imply Repair Warrant]
+	Acceptance of a repaired state by a fallible verifier does not in
+	general imply that performing the repair had positive value relative to
+	retaining the incumbent.
+\end{proposition}
+
+Noisy verify--repair loops provide the direct counterexample. When
+verification and repair are both imperfect, repeated correction can
+degrade an initially correct state even while the verifier continues to
+accept the resulting candidates. The relevant comparison is therefore
+not whether a candidate passes verification in isolation but whether the
+evidence discriminating candidate from incumbent is sufficient to
+overcome the expected costs and risks of intervention. In the present
+notation, verification acceptance need not entail
+$J(a \mid h) < J(\varnothing \mid h) = 0$.
+
+Together these failures establish three independent gaps:
+\[
+	\text{constraint satisfaction} \;\not\Rightarrow\; \text{semantic admissibility},
+\]
+\[
+	\text{structural trajectory fidelity} \;\not\Leftrightarrow\; \text{admissibility equivalence},
+\]
+\[
+	\text{verification acceptance} \;\not\Rightarrow\; \text{repair warrant}.
+\]
+They concern different stages of the repair problem. The first concerns
+whether the diagnostic and constraint vocabulary denotes what it is
+intended to denote. The second concerns whether structural resemblance
+supplies the correct equivalence relation over histories. The third
+concerns whether evidence of improvement is strong enough to justify an
+irreversible intervention. None can substitute for the others.
+
+The diagnostic-coordinate framework can therefore be sharpened once
+more. Diagnostic coordinates determine which faults can presently be
+distinguished. Structural diagnostics estimate whether a candidate
+intervention improves one relevant aspect of the trajectory. Evidential
+margin determines how confidently that improvement can be distinguished
+from verifier noise. Repair cost records what may be lost merely by
+intervening. Only their comparison against the null intervention
+produces repair warrant.
+
+\subsection{When no reference class exists}
+
+One boundary case deserves explicit treatment rather than silent
+assumption. It is possible that
+\[
+	\operatorname{Ext}_{\Gamma_h}\bigl(B(h)\bigr) = \varnothing,
+\]
+that no continuation is simultaneously compatible with the boundary data
+$B(h)$ already retained at $h$ and with the governing constraint
+structure $\Gamma_h$ itself. In that case $\mathcal{R}_\Gamma(h)$ is
+empty, $\delta_{\mathrm{dep}}\bigl(h, \mathcal{R}_\Gamma(h)\bigr)$ is
+undefined, and no available action has a well-defined $J$.
+
+This establishes only that vertical repair under the pair
+$\bigl(B(h), \Gamma_h\bigr)$ is undefined --- it does not by itself
+establish that $\Gamma_h$ is what must change. There are at least two
+conceptually different possibilities: the representational scheme
+encoded by $\Gamma_h$ is inadequate, or some member of $B(h)$ has been
+incorrectly classified as an irreversible boundary fact when it was in
+fact a revisable diagnostic commitment. Treating $\operatorname{Ext}_{\Gamma_h}(B(h)) = \varnothing$
+as automatically licensing revision of $\Gamma_h$ would grant $B(h)$ an
+epistemic infallibility the rest of this framework does not assume.
+
+Diagnostic sufficiency and repair warrant were both defined relative to
+a fixed pair $(B(h), \Gamma_h)$; their machinery presupposes that this
+pair admits some continuation against which intervention can be
+evaluated. When it does not, repair must first determine whether the
+obstruction lies in $\Gamma_h$, in the vocabulary through which
+$\Gamma_h$ is expressed, or in the classification of some retained
+condition as an irreversible boundary fact. If the facts in $B(h)$ are
+independently established as irreversible, then revision must occur on
+the $\Gamma_h$ side. In either case, repair has ceased to be movement
+within the fixed representational scheme. It has become horizontal.
+
+This yields three distinct reasons for refusal or escalation, rather
+than one overloaded failure condition:
+\begin{itemize}
+	\item $J(a \mid h) \geq 0$ for every non-null $a$: an admissible
+		reference class exists, but no intervention presently beats refusal;
+	\item $\mathcal{R}_\Gamma(h) = \varnothing$: the present repair frame
+		supplies no admissible comparison class at all;
+	\item inability to determine whether the obstruction belongs to $B(h)$
+		or to $\Gamma_h$: itself a diagnostic-coordinate deficiency, distinct
+		from either component actually being at fault.
+\end{itemize}
+
+Everything so far, including the objective above, permits interventions
+within an already-fixed representational scheme. Some failures, however,
+cannot be repaired using any coordinate type the operator currently
+possesses. This motivates a further distinction between vertical and
+horizontal repair.
+
+
 \section{Third Correction: Horizontal Repair}
 
 Everything so far treats repair as movement within an already-fixed representational scheme: coordinates are present or absent, sufficient or scoped, but in every case they are drawn from a vocabulary, ratios and timings for the recipe, syndrome bits for the decoder, that was fixed at the moment the operator was compressed. A different part of Wilson's talk, its opening discussion of progress in metaphysics and physics rather than the weak-emergence material used above, distinguishes vertical progress in a discipline, working out the internal consistency and consequences of accepted framework assumptions, from horizontal progress, jumping to an entirely different set of framework assumptions \cite{wilson2014}. That distinction is Wilson's own, stated about theoretical inquiry, not about repair; what follows transposes it, treating it as a motivated parallel for a first-order distinction about operators rather than as an application of anything Wilson herself argues about engineering. Repair admits the analogous split, and the two cases already on the table divide along it in a way worth making explicit.
