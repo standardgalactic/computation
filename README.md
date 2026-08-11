@@ -1,3 +1,5 @@
+[Monotonic Continuation](https://standardgalactic.github.io/computation/monotonic-continuation.pdf)
+
 [Against the Kitchen Sink](https://standardgalactic.github.io/computation/against_the_kitchen_sink.pdf)
 
 [Collapse Retention](https://standardgalactic.github.io/computation/collapse_retention.pdf)
