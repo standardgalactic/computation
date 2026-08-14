@@ -1,0 +1,9 @@
+\contentsline {chapter}{Overview}{3}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Git from First Principles}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Inside Git}{9}{chapter.2}%
+\contentsline {chapter}{\numberline {3}The Geometry of Git}{13}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Git Archaeology}{17}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Git in the Open}{21}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Git at Scale}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Git for Agents}{33}{chapter.7}%
+\contentsline {chapter}{Epilogue: What the Commit Became}{41}{chapter*.3}%
