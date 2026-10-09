@@ -1,0 +1,164 @@
+\part{The Mathematics of Context}
+
+\section{Introduction: Representation and Structural Correspondence}
+
+Programs, filesystems, shells, access-control policies, and the interactive worlds of video games share a recurring design problem. At any moment a participant occupies some context, and the context determines what can be seen, what can be named, what can be done, and where one can go next. A block of source code determines which identifiers resolve and to what. A directory determines which entries are listed and which paths are interpreted relative to it. A process determines an environment, a working directory, and a set of credentials. A level, a menu, or a room in an interactive world determines which objects are present, which controls are live, and which exits are open. The recurrence is striking enough to invite sweeping formulations, in which all of these are said to be trees, or hierarchies, or instances of a single structure, and in which the further step is sometimes taken that all mathematical languages are therefore equivalent. The purpose of this essay is to treat the recurrence as a mathematical question while declining the sweeping formulations, and to determine by definitions, theorems, and counterexamples how much common structure there is and what each comparison discards.
+
+Four claims need to be kept apart. The first is that two systems exhibit analogous organizational patterns, which is a report of resemblance and carries no mathematical content until the resemblance is made precise. The second is that the two systems admit mappings into a common abstract structure. The third is that those mappings preserve specified mathematical properties, such as reachability among contexts, distinctions among states, or restrictions on action. The fourth is that the systems are equivalent under a specified notion of equivalence. Only the first two are available at the outset, and the second is weaker than it appears, because every system maps to a one-point system in which nothing is distinguished and nothing is forbidden, so that the existence of a common abstraction is trivial unless the abstraction is required to retain something. The third and fourth claims require explicit conditions and proofs, and the results below are organized around the conditions under which each can be established and the counterexamples that show where each fails.
+
+The central research question is the following: under what conditions can heterogeneous formal systems be represented by a shared structure of contexts, observations, and admissible transformations? The answer developed here has a definite form. Relative to a specified family of observable structures, distinct systems possess a canonical common abstraction, namely a coarsest quotient of states that retains exactly the distinctions the family can detect, characterized by a universal property rather than selected by convenience. The differences between the systems are then characterized by what that abstraction necessarily forgets: the multiplicity of microstates behind each observable profile, the dynamics, the authority structure, and the orientation in which information flows between nested contexts. The thesis is therefore neither that all such systems are equivalent nor that nothing can be said in common, but that equivalence is always equivalence relative to a retained structure, and that the retained structure can be named, constructed, and proved canonical.
+
+Three levels of claim are distinguished throughout, and each numbered result carries its level. The first level consists of established results from category theory, sheaf theory, logic, and programming-language theory that serve as foundations; these are cited rather than reproved, except where a short proof clarifies how a general fact applies to contextual systems. The second level consists of results proved here, among them the commutation criterion for navigation and disclosure, the canonical presheaf with its universal properties, the terminal observed system, the relative equivalence theorem, the duality between regional and accumulative information flow, the representation theorem for tree systems, the lax treatment of authority, and the analysis of what is lost when a graph is replaced by a hierarchy. The third level consists of conjectures and open questions, which are labeled as such. Appendix~D inventories every result with its status. No claim is made concerning human cognition; whether people habitually employ these abstractions is an empirical question outside the scope of the mathematics.
+
+The contribution is positioned as follows. The categorical ingredients are standard: the canonical presheaf is an image factorization, the coarsest quotient is an intersection of kernels with its universal property, and the terminal observed system is the limit of the observation presheaf, as the labels on Theorems~\ref{thm:canonical}, \ref{thm:coarsest}, and~\ref{thm:terminalobs} record. What is proposed is a unifying representation framework in which these ingredients are applied jointly to context, observation, disclosure, authority, and transitions, together with comparative results that the ingredients alone do not supply. Three of these are the center of the essay. First, regional and accumulative information flow arise as dual product constructions on one decorated tree, and the refinement categories they generate are isomorphic only when the tree is a chain (Proposition~\ref{prop:orientation}). Second, observational equivalence and behavioral equivalence are kept visibly apart: Example~\ref{ex:flip} exhibits two systems with one observational abstraction, differing in a bounded counter, so that a translation exists in one direction and none exists in the other, and the example is the model case of the distinction between what an abstraction retains and what a stronger equivalence demands. Third, the representation theorem for tree systems (Theorem~\ref{thm:treerep}) is stated for specified observational models over a common tree and makes no claim of equivalence between filesystem and lexical-scope semantics. The framework is compared with institutions and with scope graphs in Appendix~E.
+
+The word context is used in at least two technical senses that must not be conflated. In the theory of programs a context is a term with a hole, and two terms are contextually equivalent when no context distinguishes their behavior \cite{morris}. Here a context is a position or region of a system from which observations are made and operations are attempted, such as a scope, a directory, a process, or a room. The two senses meet in Section~16, where quantification over all program contexts is seen as quantification over a family of observation contexts in the second sense.
+
+Part~I (Sections 2 to 4) develops the mathematics of context: contexts as objects of a preorder or category, the independence of knowledge, visibility, and authority, and the separation of navigation from disclosure. Part~II (Sections 5 to 8) examines four families of examples: filesystems and shells, lexical scope, access control, and interactive worlds. Part~III (Sections 9 to 11) introduces the presheaf of observations, the local-to-global reconstruction problem, and the quotient of states by observational equivalence. Part~IV (Sections 12 to 16) defines the category of contextual representation systems and studies translation, covering common abstractions, the distinction among surjectivity, fullness, faithfulness, and equivalence, translation among mathematical languages, and universality. Part~V (Sections 17 to 20) assembles the general construction and its representation theorems, analyzes preservation and loss, examines the limits of hierarchical representation, and concludes.
+
+\section{Contexts as Mathematical Objects}
+
+\begin{definition}[Context system]\label{def:ctxsys}
+A \emph{context system} is a triple $\cC=(C,\preceq,T)$ in which $C$ is a set of contexts, $\preceq\;\subseteq C\times C$ is a relation of nesting, read $c\preceq d$ as ``$c$ is nested in $d$'', and $T\subseteq C\times L\times C$ is a set of labeled navigation transitions over a set $L$ of labels.
+\end{definition}
+
+Nesting is naturally reflexive and transitive: every context lies within itself, and a context within a context within a third lies within the third. Reflexivity and transitivity make $\preceq$ a preorder. Antisymmetry is a further demand that fails in practice whenever two distinct contexts are mutually nested, as happens when two names denote one directory through a bind mount, or when a module is entered through two aliases. Retaining the preorder keeps both names, while passing to the poset quotient identifies them, which is harmless for questions about observations and harmful for questions about naming. The relation supplied by a presentation is usually not transitive but is the generating relation of its reflexive transitive closure, as with the parent-child edges of a directory tree, whose closure is the ancestor relation. The distinction between a generating relation and the preorder it generates returns in Section~19.
+
+Several shapes of nesting occur in practice and need to be distinguished. A nested hierarchy is one in which each context has a single immediate container. A graph with multiple parents arises from hard links, multiple inheritance, and shared modules. A graph with cycles arises from mutually recursive modules and from portals in interactive worlds; in the reflexive transitive closure a cycle collapses its vertices into one equivalence class, so a preorder cannot distinguish a cycle from a set of aliases. Overlapping contexts, such as two windows or two permission regions that intersect without either containing the other, are most naturally modeled as subsets of a set of locations ordered by inclusion, with intersection as meet whenever it exists, a point developed in Section~9. The hierarchical case admits a crisp characterization.
+
+\begin{proposition}[Rooted trees as posets; \stE]\label{prop:treeposet}
+A finite poset $(C,\preceq)$ is a rooted tree under the ancestor relation, with the root as greatest element, if and only if it has a greatest element and, for every $c\in C$, the set ${\uparrow}c=\{d: c\preceq d\}$ is a chain.
+\end{proposition}
+\begin{proof}
+In a rooted tree with $c\preceq d$ meaning that $d$ lies on the path from $c$ to the root, ${\uparrow}c$ is that path, which is a chain, and the root is greatest. Conversely, given a greatest element $\top$ and chains ${\uparrow}c$, the set ${\uparrow}c\setminus\{c\}$ is a finite chain, nonempty when $c\neq\top$ because it contains $\top$, so it has a least element, which is declared the parent of $c$. The resulting parent function defines a rooted tree whose ancestor relation is $\preceq$.
+\end{proof}
+
+The consequence used repeatedly is that in a rooted tree the ancestors of any node are linearly ordered, so a node with two incomparable ancestors cannot occur in any tree.
+
+\begin{proposition}[Categories from contexts; \stE]\label{prop:catfromctx}
+\begin{enumerate}[label=(\alph*)]
+\item A preorder $(C,\preceq)$ is a thin category $\cC_{\preceq}$ with a unique arrow $c\to d$ exactly when $c\preceq d$. Functors between such categories are monotone maps, and the category is skeletal exactly when $\preceq$ is antisymmetric.
+\item A directed graph $G$ generates a free category $\Path(G)$ whose arrows are finite directed paths, the empty path included, and a full functor $\Path(G)\to\Reach(G)$ onto the preorder of reachability, which is the identity on objects. This functor is faithful if and only if $G$ is acyclic and has at most one directed path between any two vertices.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Part (a) is the standard identification of a preorder with a category in which composition is transitivity and identities are reflexivity. For (b), $\Path(G)$ is full over $\Reach(G)$ because every reachable pair is joined by some path. The functor is faithful exactly when each hom-set of $\Path(G)$ has at most one element, which fails when two distinct paths join the same vertices, and fails at a vertex lying on a directed cycle, where the empty path and the cycle are distinct arrows $v\to v$.
+\end{proof}
+
+The distinction in part (b) between routes and reachability is the first instance of a pattern that organizes the essay: a representation can retain the arrow or only the fact that an arrow exists, and the two give different theories. A graph with vertices $h,a,b,r$ and edges $h\to a$, $h\to b$, $a\to r$, $b\to r$ has two arrows $h\to r$ in $\Path(G)$ and one in $\Reach(G)$; whether a system treats these as the same position depends on whether the route taken is part of the state. Section~5 shows that the logical working directory of a shell retains the route and the physical working directory retains only the endpoint.
+
+Two orders on the same set of contexts will be in play and must not be confused. The nesting preorder $\preceq$ records containment, while Section~9 introduces a refinement order recording which context observes more. For a filesystem viewed through subtrees the two coincide, and for lexical scope they are opposite, a fact whose consequences occupy Sections~13 and 17.
+
+\section{Scope, Visibility, and Authority}
+
+Fix a set $I$ of informational items, such as bindings, directory entries, or facts about a world, and a set $\Sigma$ of operations. To each context $c$ three subsets are assigned. The set $K(c)\subseteq I$ is the information available to an observer located at $c$. The set $V(c)\subseteq K(c)$ is the information exposed by a particular interface at $c$, subject to the design discipline that an interface cannot present what is unavailable. The set $A(c)\subseteq\Sigma$ is the set of operations admissible at $c$. Knowledge, presentation, and authority are independent in the precise sense that none determines the others. A hidden file lies in $K(c)$ but not $V(c)$ until a disclosure is performed; a read-only file lies in $V(c)$ while the write operation on it lies outside $A(c)$; an operation may be admissible at a context whose interface no longer displays the object it acts upon. The interesting question is how these assignments vary along the nesting relation, and the answer is that nesting alone constrains none of them.
+
+\begin{proposition}[No forced monotonicity; \stN]\label{prop:nomonotone}
+Let $c\prec d$ be strictly nested contexts, and let $I$ and $\Sigma$ be sufficiently large sets of information items and actions. For each of $K$, $V$, and $A$ and for each of the relations strict inclusion, reverse strict inclusion, equality, and incomparability, there exist assignments of subsets of $I$ or $\Sigma$ to $c$ and $d$ for which the values at $c$ and $d$ stand in that relation. For $V$ the assignments are required to satisfy $V(e)\subseteq K(e)$ at each context $e$, so the relation between $V(c)$ and $V(d)$ is realizable for each of the four relations but is not independent of the relation between $K(c)$ and $K(d)$; for example, $K(c)=\varnothing$ forces $V(c)=\varnothing$. Moreover, on a three-element chain $c_1\prec c_2\prec c_3$, each assignment can be neither monotone nor antitone.
+\end{proposition}
+\begin{proof}
+For the first claim, choose subsets of $I$ or $\Sigma$ realizing the desired relation; for $V$, choose $V(c)$ and $V(d)$ among the subsets of $K(c)$ and $K(d)$ respectively, which is possible for each relation because $V=K$ and $V=\varnothing$ are both permitted. For the second claim take $I=\{1,2,3,4\}$, $\Sigma=\{r,w,x\}$, and the following assignment.
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+ & $c_1$ & $c_2$ & $c_3$\\
+\midrule
+$K$ & $\{1,2\}$ & $\{1\}$ & $\{1,3\}$\\
+$V$ & $\{1\}$ & $\{1\}$ & $\{3\}$\\
+$A$ & $\{r\}$ & $\{w\}$ & $\{r,w,x\}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Here $K(c_1)\supsetneq K(c_2)\subsetneq K(c_3)$, while $V(c_2)$ and $V(c_3)$ are incomparable and $A(c_1)$ and $A(c_2)$ are incomparable. Hence none of the three assignments is monotone or antitone along the chain, and $V\subseteq K$ holds throughout.
+\end{proof}
+
+The finite counterexample is not an artifact. Lexical scope makes the information available to an inner block grow with depth, a sandbox or a changed root directory makes it shrink, a setuid program or a privilege-granting command makes authority grow on entry, and attenuation of a capability makes it shrink. Hierarchical context inclusion therefore entails no monotonicity of visibility or authority, and any claim that deeper contexts see less, or can do less, or see more, or can do more, is a property of a specific discipline rather than of nesting.
+
+The next definition fixes the primitive construction on which the remainder of the essay is built. It follows a deliberate convention about the direction of arrows: an arrow $u:c\to d$ means that $c$ is a restriction of $d$, so that $d$ is the observationally richer of the two. This convention is chosen so that observations restrict along arrows in the manner of a presheaf, and it is independent of the nesting order, which may agree with it or oppose it.
+
+\begin{definition}[Contextual representation system]\label{def:crs}
+A \emph{contextual representation system} is a quintuple
+\[
+\fR=(\cC,X,\Omega,\cA,\delta)
+\]
+together with an alphabet $\Sigma$ of actions, consisting of the following.
+\begin{enumerate}[label=(\arabic*)]
+\item A small category $\cC$ of contexts. An arrow $u:c\to d$ is a \emph{refinement arrow}: $c$ is a restriction of $d$.
+\item A set $X$ of underlying states.
+\item A presheaf $\Omega:\cC^{\op}\to\Set$ of observation spaces, with restriction maps $\Omega(u):\Omega(d)\to\Omega(c)$ for $u:c\to d$, together with observation maps $o_c:X\to\Omega(c)$.
+\item A context-indexed assignment of admissible actions $\cA:\Ob(\cC)\to\mathcal P(\Sigma)$.
+\item A partial transition function $\delta:X\times\Sigma\pfn X$.
+\end{enumerate}
+The observation maps must satisfy \emph{observation coherence}: for every arrow $u:c\to d$,
+\[
+o_c=\Omega(u)\circ o_d.
+\]
+\end{definition}
+
+Coherence is a modeling assumption, not a law of operating systems, and several real disciplines violate it as stated; Section~9 shows that the flat visible environment of a language with shadowing is one, and repairs it. The definition requires neither that authority nor that action sets increase with observational richness. Movement of an observer from one context to another is not an arrow of $\cC$; it is a transition of the system, represented by $\delta$ over a state space that records position, or by the explicit configuration spaces of Section~4. This keeps the arrows of $\cC$ for the single purpose of carrying the coherence of observations.
+
+\begin{theorem}[Observational refinement; \stN]\label{thm:refinement}
+For every context $c$ let $x\sk_c y$ if and only if $o_c(x)=o_c(y)$. Then for every arrow $u:c\to d$,
+\[
+{\sk_d}\;\subseteq\;{\sk_c}.
+\]
+\end{theorem}
+\begin{proof}
+If $x\sk_d y$ then $o_d(x)=o_d(y)$, and applying $\Omega(u)$ and using coherence gives $o_c(x)=\Omega(u)o_d(x)=\Omega(u)o_d(y)=o_c(y)$.
+\end{proof}
+
+This is the first substantive consequence of the definition: richer observations distinguish at least as many states as their restrictions. It is a statement about observation only, and it carries no implication for authority.
+
+\begin{proposition}[Independence of authority; \stN]\label{prop:authindep}
+Observational refinement implies neither $\cA(c)\subseteq\cA(d)$ nor $\cA(d)\subseteq\cA(c)$ for an arrow $u:c\to d$.
+\end{proposition}
+\begin{proof}
+Let $\cC$ have two objects $c,d$ and one non-identity arrow $u:c\to d$. Let $X=\{0,1\}$, $\Omega(d)=\{0,1\}$, $\Omega(c)=\{\ast\}$, with $\Omega(u)$ the constant map, $o_d=\id$, and $o_c$ constant. Coherence holds, and $\sk_d$ is the diagonal while $\sk_c$ identifies both states, consistent with Theorem~\ref{thm:refinement}. Let $\Sigma=\{a,b\}$ with $\cA(c)=\{a\}$ and $\cA(d)=\{b\}$. The two action sets are disjoint and nonempty, so neither inclusion holds.
+\end{proof}
+
+Proposition~\ref{prop:authindep} separates visibility from permission formally, and Section~7 shows that the order for which authority is monotone is a different order again, the order of delegation.
+
+\section{Navigation and Disclosure as Distinct Operators}
+
+An observer's situation is a pair consisting of a position and a disclosure state, the latter recording display options such as whether hidden entries are shown or whether filename extensions are displayed. Let $S$ be a set of disclosure states and let $\Conf=C\times S$ be the set of configurations. A navigation transition $t=(c,\ell,c')\in T$ induces a partial map
+\[
+N_t:\Conf\pfn\Conf,\qquad (c,s)\mapsto(c',\rho_t(s)),
+\]
+defined on $\{c\}\times S$, where $\rho_t:S\to S$ records the policy by which display settings are carried across the transition. A family $f=(f_c)_{c\in C}$ of partial maps $f_c:S\pfn S$ induces a disclosure operator
+\[
+D_f:\Conf\pfn\Conf,\qquad (c,s)\mapsto(c,f_c(s)),
+\]
+which changes the disclosure state within the same context. Both are typed as partial maps on $\Conf$, so that the composites $N_tD_f$ and $D_fN_t$ are meaningful and the question of commutation is well posed; without this typing the equation $ND=DN$ is shorthand and nothing more.
+
+\begin{proposition}[Commutation criterion; \stN]\label{prop:commute}
+Let $t=(c,\ell,c')$. If all maps involved are total on $S$, the composites $N_tD_f$ and $D_fN_t$ agree on $\{c\}\times S$ if and only if
+\[
+\rho_t\circ f_c=f_{c'}\circ\rho_t\quad\text{on }S.
+\]
+In particular:
+\begin{enumerate}[label=(\roman*)]
+\item if $\rho_t=\id_S$, navigation and disclosure commute exactly when $f_c=f_{c'}$;
+\item if $\rho_t$ is constant with value $s_0$, they commute exactly when $f_{c'}(s_0)=s_0$;
+\item if $f_c$ is defined at $s$ and $f_{c'}$ is undefined at $\rho_t(s)$, then $N_tD_f$ is defined at $(c,s)$ while $D_fN_t$ is not, so the composites differ as partial maps.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Computing, $N_tD_f(c,s)=(c',\rho_t(f_c(s)))$ and $D_fN_t(c,s)=(c',f_{c'}(\rho_t(s)))$, which are equal for all $s$ exactly when the displayed identity holds. Case (i) substitutes $\rho_t=\id$. Case (ii) gives $s_0=f_{c'}(s_0)$. Case (iii) is read off from the definitions of the composites as partial maps.
+\end{proof}
+
+The identity $\rho_t f_c=f_{c'}\rho_t$ is an intertwining condition, the statement that the policy $\rho_t$ is equivariant with respect to the disclosure operators on the two sides of the transition. Its failure has everyday instances. In a file manager that stores a ``show hidden entries'' setting per folder, $S=\{0,1\}^C$, $\rho_t=\id$, and $f_c$ toggles the coordinate of $c$; then $f_c\neq f_{c'}$ and the order of toggling and navigating matters, since toggling and then navigating carries the toggled state to the new folder's configuration while navigating and then toggling acts on the new folder's own coordinate. When the setting is global, $S=\{0,1\}$ and $f_c$ is the same toggle everywhere, and navigation and disclosure commute. When entering a folder resets the display to a default $s_0$ at which the toggle is not a fixed point, case (ii) shows that disclosure performed before navigation is always lost, whereas disclosure performed after navigation is not. A virtual folder with no notion of hidden entries realizes case (iii).
+
+Disclosure at a fixed context is governed by a refinement relation among observation maps, which is the same structure as Theorem~\ref{thm:refinement} at a single context.
+
+\begin{definition}[Disclosure refinement]\label{def:disclosure}
+At a fixed context $c$, let $o_c^{(0)}:X\to Y_0$ and $o_c^{(1)}:X\to Y_1$ be two observation maps. Observation~1 \emph{refines} observation~0 if there exists $r:Y_1\to Y_0$ with $o_c^{(0)}=r\circ o_c^{(1)}$.
+\end{definition}
+
+\begin{theorem}[Disclosure refinement; \stN]\label{thm:disclosure}
+If observation~1 refines observation~0 then $\ker(o_c^{(1)})\subseteq\ker(o_c^{(0)})$. The inclusion is strict exactly when the richer observation separates at least one pair of states that the coarser one identifies.
+\end{theorem}
+\begin{proof}
+If $o_c^{(1)}(x)=o_c^{(1)}(y)$ then applying $r$ gives $o_c^{(0)}(x)=o_c^{(0)}(y)$. Strictness is the statement that the two kernels differ, which is the existence of a pair in $\ker(o_c^{(0)})\setminus\ker(o_c^{(1)})$.
+\end{proof}
+
+This formalizes the difference between an ordinary directory listing and one that also reveals dotfiles, and equally the difference between a listing that shows base names and one that shows names with extensions: in each case the second observation determines the first by discarding detail, and the discarded detail is exactly what the strict inclusion of kernels measures. Disclosure moves along refinement within a context, whereas navigation moves between contexts, and Proposition~\ref{prop:commute} identifies when the two can be reordered.

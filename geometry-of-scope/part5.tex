@@ -1,0 +1,185 @@
+\part{Results and Interpretation}
+
+\section{A General Contextual Translation Construction}
+
+The preceding sections have introduced the components one at a time. Their assembly into a single construction is the following. A contextual representation system $\fR=(\cC,X,\Omega,\cA,\delta)$ supplies contexts and refinement arrows, local information assignments in the presheaf $\Omega$, observation and disclosure through the maps $o_c$ and their refinements, admissible operations through $\cA$ and $\delta$, and structure-preserving translations through $\CRS$. Each component carries assumptions, and the results depend on different subsets of them. Smallness of $\cC$ is needed for $\Omega$ to be a presheaf in $\Set$ and for $\Gamma(\Omega)$ to be a set. Coherence $o_c=\Omega(u)o_d$ is needed for every result about kernels, for the canonical presheaf $Q$, and for the profile map. Surjectivity of the observation maps is a normalization that can always be achieved by replacing $\Omega$ with $Q$, and it is what makes the observational structure equivalent to a family of partitions. Determinism and partiality of $\delta$ are needed for behavioral minimization and for the simulation condition (D). No assumption at all is placed on $\cA$, which is why authority is independent of observation. The table records which results use which assumptions.
+
+\begin{center}
+\small
+\begin{tabular}{lcccc}
+\toprule
+Result & coherence & surjective $o_c$ & $\delta$ & $\cA$\\
+\midrule
+Observational refinement (Thm.~\ref{thm:refinement}) & yes & no & no & no\\
+Canonical presheaf (Thm.~\ref{thm:canonical}) & yes & no & no & no\\
+Coarsest quotient (Thm.~\ref{thm:coarsest}) & yes & no & no & no\\
+Terminal observed system (Thm.~\ref{thm:terminalobs}) & yes & no & no & no\\
+Partition representation (Thm.~\ref{thm:partrep}) & yes & yes & no & no\\
+Tree representation (Thm.~\ref{thm:treerep}) & yes & yes & no & no\\
+Behavioral minimization (Prop.~\ref{prop:minimization}) & yes & no & yes & no\\
+Safety transfer (Prop.~\ref{prop:authority}) & yes & no & yes & yes\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The first representation theorem shows that the whole observational content of a system, up to equivalence of categories, is a family of equivalence relations indexed by the contexts. Let $\Obs$ be the category whose objects are quadruples $(\cC,X,\Omega,o)$ with coherent observations and every $o_c$ surjective, and whose morphisms are triples $(F,f,\eta)$ satisfying (T1) to (T3) and (O). Let $\Part$ be the category whose objects are triples $(\cC,X,{\approx})$ in which $\approx$ assigns to each context $c$ an equivalence relation $\approx_c$ on $X$ with ${\approx_d}\subseteq{\approx_c}$ for every arrow $c\to d$, and whose morphisms are pairs $(F,f)$ with $F:\cC\to\cC'$ a functor and $f:X\to X'$ a map such that $x\approx_cy$ implies $f(x)\approx'_{Fc}f(y)$.
+
+\begin{theorem}[Partition representation; \stN]\label{thm:partrep}
+The functor $K:\Obs\to\Part$ sending $(\cC,X,\Omega,o)$ to $(\cC,X,{\sk})$ and $(F,f,\eta)$ to $(F,f)$ is an equivalence of categories.
+\end{theorem}
+\begin{proof}
+$K$ is well defined on objects by Theorem~\ref{thm:refinement} and on morphisms by Theorem~\ref{thm:presindist}. It is faithful because $\eta_c$ is determined by $f$: surjectivity of $o_c$ and (O) force $\eta_c(o_c(x))=o'_{Fc}(f(x))$. It is full: given $(F,f)$ in $\Part$, define $\eta_c(o_c(x))=o'_{Fc}(f(x))$, which is well defined because $o_c(x)=o_c(y)$ means $x\sk_cy$, hence $f(x)\sk'_{Fc}f(y)$, which is $o'_{Fc}f(x)=o'_{Fc}f(y)$. Naturality of $\eta$ follows from coherence of $o$ and $o'$ and surjectivity of $o_d$, since $\eta_c\Omega(u)o_d(x)=\eta_co_c(x)=o'_{Fc}f(x)=\Omega'(Fu)o'_{Fd}f(x)=\Omega'(Fu)\eta_do_d(x)$. It is essentially surjective: given $(\cC,X,{\approx})$, the system with $\Omega(c)=X/{\approx_c}$, restriction maps the canonical projections, and $o_c$ the quotient maps, is coherent and is sent by $K$ to $(\cC,X,{\approx})$.
+\end{proof}
+
+The theorem identifies the common abstraction of all coherent observation structures: a set with a contravariant monotone assignment of partitions to contexts, that is, a functor $\cC^{\op}\to\mathrm{Eq}(X)$ into the lattice of equivalence relations on $X$ ordered by inclusion. This is the canonical presheaf of Theorem~\ref{thm:canonical} seen from the side of the state set.
+
+A second representation theorem treats the two tree-shaped classes of Section~13, and answers the question of when a presheaf on a tree is a region system or an accumulation system for some decoration. Let $T$ be a finite rooted tree with $\cC^{\downarrow}=(T,\preceq)$ and $\cC^{\uparrow}=(T,\preceq)^{\op}$ as before, and let $(T,L)$ be a decorated tree with all $L(p)$ nonempty. For a presheaf $\Omega$ on $\cC^{\downarrow}$, the restriction maps are $\Omega(p)\to\Omega(q)$ for $q\preceq p$, and for a node $p$ with children $c_1,\dots,c_k$ let $\rho_p:\Omega(p)\to\prod_i\Omega(c_i)$ be the joint restriction. For a presheaf $\Omega$ on $\cC^{\uparrow}$, the restriction maps are $\Omega(q)\to\Omega(p)$ for $q\preceq p$, and for a non-root node $q$ with parent $p$ let $r_q:\Omega(q)\to\Omega(p)$ be the restriction to the parent. A map of sets has \emph{uniform fibers} if all its fibers have the same cardinality.
+
+The theorem concerns specified observational models built over a common decorated tree, namely the region and accumulation systems of Section~13. It is not a translation between filesystem semantics and lexical-scope semantics, which differ further in path resolution, shadowing, execution, permissions, and state change, and it should not be read as an equivalence of those disciplines.
+
+\begin{theorem}[Representation of tree systems; \stN]\label{thm:treerep}
+\begin{enumerate}[label=(\alph*)]
+\item A presheaf $\Omega$ on $\cC^{\downarrow}$ with $\Omega(p)\neq\varnothing$ at each leaf $p$ is isomorphic to $\Omega^{\downarrow}(T,L)$ for some decoration $L$ if and only if, for every node $p$ with children, the map $\rho_p$ is surjective with uniform fibers. The cardinality of $L(p)$ is then the common fiber size of $\rho_p$, and $|L(p)|=|\Omega(p)|$ for a leaf.
+\item A presheaf $\Omega$ on $\cC^{\uparrow}$ with $\Omega(\mathrm{root})\neq\varnothing$ is isomorphic to $\Omega^{\uparrow}(T,L)$ for some decoration $L$ if and only if, for every non-root node $q$, the map $r_q$ is surjective with uniform fibers. The cardinality of $L(q)$ is then the common fiber size of $r_q$, and $|L(\mathrm{root})|=|\Omega(\mathrm{root})|$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) If $\Omega=\Omega^{\downarrow}(T,L)$ then $\Omega(p)=L(p)\times\prod_i\Omega(c_i)$ because the nodes nested in $p$ are $p$ together with the nodes nested in each child, and $\rho_p$ is the projection, which is surjective with every fiber in bijection with $L(p)$. Conversely, assume the fiber condition. Proceed by induction on the height of the subtree. For a leaf $p$ take $L(p)=\Omega(p)$ and $\theta_p=\id$. For a node $p$ with children choose a set $L(p)$ whose cardinality is the fiber size of $\rho_p$, and for each $y\in\prod_i\Omega(c_i)$ choose a bijection $\beta_y:\rho_p^{-1}(y)\to L(p)$. Define $\theta_p:\Omega(p)\to\prod_{q\preceq p}L(q)$ by
+\[
+\theta_p(z)=\bigl(\beta_{\rho_p(z)}(z),\ \theta_{c_1}(z|_{c_1}),\dots,\theta_{c_k}(z|_{c_k})\bigr),
+\]
+where $z|_{c_i}$ is the restriction of $z$ to $c_i$. Given a value $(\ell,w_1,\dots,w_k)$, the element $y=(\theta_{c_i}^{-1}(w_i))_i$ is determined by the inductive hypothesis, and $z=\beta_y^{-1}(\ell)$ is the unique preimage, so $\theta_p$ is bijective. Naturality for $q\preceq p$ follows by induction, because the restriction from $p$ to $q$ factors through a child of $p$ and $\theta_p$ contains the components $\theta_{c_i}$ of the children. (b) If $\Omega=\Omega^{\uparrow}(T,L)$ then $\Omega(q)=L(q)\times\Omega(p)$ for the parent $p$, and $r_q$ is the projection, which is surjective with fibers in bijection with $L(q)$. Conversely, take $L(\mathrm{root})=\Omega(\mathrm{root})$, and proceed downward from the root. For a node $q$ with parent $p$ choose $L(q)$ of the fiber cardinality of $r_q$, and for each $y\in\Omega(p)$ choose a bijection $\beta_y:r_q^{-1}(y)\to L(q)$. Define $\theta_q(z)=(\beta_{r_q(z)}(z),\theta_p(r_q(z)))\in L(q)\times\prod_{p'\succeq p}L(p')$, which is bijective by the same argument and natural because restriction from $q$ to any ancestor is a composite of restrictions to parents.
+\end{proof}
+
+\begin{corollary}[Common abstraction of filesystem and lexical scope; \stN]\label{cor:commonfsscope}
+A region system and an accumulation system over the same tree $T$ whose decorations have the same cardinalities are both recovered from the single datum $(T,|L|)$, the rooted tree with a cardinal at each node, by two different functors: the product over nodes nested in a context and the product over ancestors of a context. The decorated tree is canonical, since the cardinalities are recovered as fiber sizes by Theorem~\ref{thm:treerep}. The orientation of information flow is not part of the common datum, and by Proposition~\ref{prop:orientation} it cannot be recovered by an isomorphism of context categories when $T$ branches.
+\end{corollary}
+
+This is the representation proposition for a specified class: tree-shaped coherent systems with uniform local structure are decorated trees, in two dual forms. It makes the thesis of Section~1 precise for the filesystem and the lexical scope, whose common abstraction is the decorated tree and whose differences are the orientation of the product and the dynamics $\cA$ and $\delta$ that the abstraction does not carry.
+
+Canonical abstraction is also functorial in the system, which is what allows it to be used for comparison.
+
+\begin{proposition}[Functoriality of the canonical quotient; \stN]\label{prop:functorial}
+Let $\Phi=(F,f,\eta,\alpha):\fR\to\fS$ be a translation, let $\cU$ be a family of contexts of $\fR$, and let $\cU'$ be a family of contexts of $\fS$ with $\cU'\subseteq F(\cU)$. Then there is a unique map $f_{\cU}:X_{\cU}\to X'_{\cU'}$ with $q'_{\cU'}f=f_{\cU}q_{\cU}$. If $\Phi$ is state-surjective and observation-reflecting and $F(\cU)=\cU'$, then $f_{\cU}$ is a bijection.
+\end{proposition}
+\begin{proof}
+If $x\sk_{\cU}y$ then $x\sk_cy$ for all $c\in\cU$, so $f(x)\sk'_{Fc}f(y)$ by Theorem~\ref{thm:presindist}, hence $f(x)\sk'_{c'}f(y)$ for all $c'\in F(\cU)\supseteq\cU'$, and so $f(x)\sk'_{\cU'}f(y)$. This gives well-definedness, and uniqueness follows from surjectivity of $q_\cU$. For the second claim, $f_\cU$ is surjective because $f$ is, and if $f(x)\sk'_{\cU'}f(y)$ with $\cU'=F(\cU)$, then $f(x)\sk'_{Fc}f(y)$ for every $c\in\cU$, hence $x\sk_cy$ for every $c\in\cU$ by reflection.
+\end{proof}
+
+Two problems remain open at the level of the construction. A correspondence between two systems, specified as a span $\fR_1\leftarrow\fM\to\fR_2$, determines which parts are to be identified, and the finest common abstraction identifying them would be the pushout. Whether pushouts exist for spans of observation-reflecting translations is not established here.
+
+\begin{question}[Pushouts of correspondences]\label{q:pushout}
+Does $\Part$, and hence $\Obs$, have pushouts of spans in which one leg is observation-reflecting, and when they exist, do they have a description in terms of generated equivalence relations on the amalgamated state set?
+\end{question}
+
+\section{Preservation and Loss Under Translation}
+
+This section assembles the answers to the question of what survives translation, separating results proved from conjectures and illustrative correspondences. Each of the properties named in the outline admits a precise statement.
+
+\paragraph{Contextual reachability.} A translation preserves reachability and need not reflect it. Say a translation is \emph{bounded} if for every state $x$ and every action $a'\in\Sigma'$ with $\delta'(f(x),a')$ defined, there is $a\in\Sigma$ with $\alpha(a)=a'$ and $\delta(x,a)$ defined and $f(\delta(x,a))=\delta'(f(x),a')$.
+
+\begin{proposition}[Reachability; \stN]\label{prop:reach}
+Let $\Phi:\fR\to\fS$ be a translation. If $y$ is reachable from $x$ in $\fR$ then $f(y)$ is reachable from $f(x)$ in $\fS$. If $\Phi$ is bounded, then conversely, every state $z'$ reachable from $f(x)$ in $\fS$ is of the form $f(y)$ for some $y$ reachable from $x$ in $\fR$. Boundedness cannot be dropped.
+\end{proposition}
+\begin{proof}
+The first claim follows from (D) by induction on the length of a run, and the second by the same induction using boundedness. For the failure, let $\fR$ have states $\{0,1\}$ and no transitions, let $\fS$ have states $\{0,1\}$ and one transition $\delta'(0,a)=1$, and let $f=\id$ with the remaining components trivial. Condition (D) holds vacuously, the state $1$ is reachable from $f(0)=0$ in $\fS$, and $1$ is not reachable from $0$ in $\fR$, so boundedness fails and reachability is not reflected.
+\end{proof}
+
+\paragraph{Observable distinctions.} Theorem~\ref{thm:presindist} states that distinctions of the source are not created and Proposition~\ref{prop:reflection} characterizes when they are reflected: exactly when $\eta_c$ is injective on the image of $o_c$. Theorem~\ref{thm:relequiv} states that for state-surjective, observation-reflecting translations the canonical presheaves are isomorphic, and Corollary~\ref{cor:retains} identifies what the canonical abstraction forgets.
+
+\paragraph{Observationally equivalent contexts.} Two contexts $c,c'$ of a system are \emph{observationally equivalent} if ${\sk_c}={\sk_{c'}}$, equivalently if $Q(c)$ and $Q(c')$ are canonically isomorphic as quotients of $X$. Contexts that are isomorphic in $\cC$ are observationally equivalent, by Theorem~\ref{thm:refinement} applied in both directions, and the converse fails: two distinct directories that are aliases of one another through a bind mount, or two rooms that a game always keeps in the same state, are observationally equivalent without being connected by arrows. The criterion that identifies them is equality of kernels, which is the partition representation of Theorem~\ref{thm:partrep}, and passing to the quotient identifies them without changing the observational structure.
+
+\paragraph{Authority and prohibition.} Condition (A) is lax, and its consequences are one-sided. To state them it is necessary to say how a state determines its current context. Call a system \emph{positioned} if it carries a map $\mathrm{pos}:X\to\Ob(\cC)$, and say that a transition $x\xrightarrow{a}\delta(x,a)$ is \emph{admissible} if $a\in\cA(\mathrm{pos}(x))$. A translation of positioned systems is positioned if $F\circ\mathrm{pos}=\mathrm{pos}'\circ f$.
+
+\begin{proposition}[Authority, prohibition, and safety; \stN]\label{prop:authority}
+Let $\Phi:\fR\to\fS$ be a positioned translation.
+\begin{enumerate}[label=(\alph*)]
+\item Admissible transitions of $\fR$ are sent to admissible transitions of $\fS$: no permitted behavior is lost.
+\item (Safety transfer.) Let $B'\subseteq X'$ be a set of bad states and $B=f^{-1}(B')$. If no admissible run of $\fS$ from $f(x_0)$ reaches $B'$, then no admissible run of $\fR$ from $x_0$ reaches $B$.
+\item Prohibitions are not preserved. There exist a positioned translation $\fR\to\fS$ and a state set $B'$ such that $B=f^{-1}(B')$ is unreachable in $\fR$ and $B'$ is reachable in $\fS$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(a) If $x\xrightarrow{a}y$ is admissible then $\delta'(f(x),\alpha(a))=f(y)$ by (D) and $\alpha(a)\in\alpha(\cA(\mathrm{pos}(x)))\subseteq\cA'(F\mathrm{pos}(x))=\cA'(\mathrm{pos}'(f(x)))$ by (A) and positionedness. (b) is the contrapositive of the lifting of an admissible run of $\fR$ to an admissible run of $\fS$ by part (a). (c) Let $\fR$ have a single context $c$ with $\cA(c)=\{\texttt{use}\}$, states $\{0,1\}$ and actions $\{\texttt{use},\texttt{admin}\}$, with $\delta(0,\texttt{use})=0$ and $\delta(0,\texttt{admin})=1$, and initial state $0$. The action \texttt{admin} is not admissible, so the state $1$ is unreachable by admissible runs. Let $\fS$ be the same system with $\cA'(c)=\{\texttt{use},\texttt{admin}\}$ and $\Phi$ the identity on everything else, which satisfies (A) and (D). The state $1$ is reachable in $\fS$.
+\end{proof}
+
+Hence a translation that forgets authority over-approximates behavior and loses precisely the safety properties that rest on prohibitions: the coarse image can be used to prove safety of the source only if it already proves it, and it fails to prove it when the safety of the source depends on what the source forbids. For the general access-matrix model, the question whether a right can leak is undecidable \cite{hru}, so no uniform procedure computes the loss.
+
+\paragraph{Global reconstruction.} For translations that are the identity on a common site, the relation between the gluing behavior of source and target is as follows.
+
+\begin{proposition}[Reconstruction under translation; \stN]\label{prop:reconstruction}
+Let $\Phi:\fR\to\fS$ be a translation with $F=\id$ on a common context category and a covering sieve $S$.
+\begin{enumerate}[label=(\roman*)]
+\item If $\Phi$ is state-surjective and observation-reflecting then $Q\cong Q'$, so $Q$ is a sheaf for $S$ exactly when $Q'$ is.
+\item If $\Phi$ is observation-reflecting, the induced map $Q\to Q'$ is a monomorphism, so if $Q'$ is separated for $S$ then $Q$ is separated for $S$.
+\item Observation-reflecting, state-injective translations need not reflect gluing: there are $\fR,\fS$ with $Q'$ a sheaf for $S$ and $Q$ not.
+\item State-surjective translations that are not observation-reflecting need not reflect separation: there are $\fR,\fS$ with $Q'$ a sheaf for $S$ and $Q$ not separated.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+(i) is Theorem~\ref{thm:relequiv}. (ii) The maps $f_c:Q(c)\to Q'(c)$ are injective by reflection and natural, and a subpresheaf of a separated presheaf is separated, since two elements with equal restrictions to the cover have equal images in the target and hence are equal. (iii) Take $\fR$ to be the system of acyclic orientations of Example~\ref{ex:triangle}, $\fS$ the system of all eight orientations with the same $\Omega$, and $f$ the inclusion. The map is injective and observation-reflecting, every matching family for the cover by singletons is realized in $\fS$, and gluing fails in $\fR$. (iv) Take $\fR$ to be Example~\ref{ex:parity} and $\fS$ the system obtained by discarding the coordinate $p$ and the corresponding component of $\Omega(L)$, with $f$ the projection. The map is surjective and not observation-reflecting at $L$, and $Q'$ is a sheaf for the cover by $\{a\}$ and $\{b\}$ while $Q$ is not separated.
+\end{proof}
+
+\paragraph{Status.} The preservation results above are proved. Conjectures concerning the range of languages covered by the construction are collected in Section~19 and in the inventory of Appendix~D. The computational cost of deciding whether a translation exists between two finite systems is not addressed by any result here.
+
+\begin{question}[Complexity of translation]\label{q:complexity}
+What is the computational complexity of deciding, for finite systems $\fR$ and $\fS$, whether a translation $\fR\to\fS$ exists, under each of the variants of Definition~\ref{def:translation}?
+\end{question}
+
+\section{The Limits of Hierarchical Representation}
+
+A tree is the most economical structure for nested contexts, supporting induction on structure, a unique chain of ancestors, and canonical forms. Several features of the systems examined here are not trees, and each one represents information that a hierarchy either discards or must reintroduce by additional structure.
+
+\paragraph{Overlapping scopes and multiple parents.} A context with two incomparable containers, as in the diamond of Proposition~\ref{prop:graphgen}, has no unique chain of ancestors, so resolution needs a policy that linearizes the containers. Python's attribute lookup for classes uses the C3 linearization, so that for classes \texttt{A}, \texttt{B(A)}, \texttt{C(A)}, and \texttt{D(B,C)} the lookup order for \texttt{D} is \texttt{D}, \texttt{B}, \texttt{C}, \texttt{A}, \texttt{object} \cite{mro}. The linearization is an additional datum, not a consequence of the poset, and it can fail to exist: declaring a class with bases \texttt{A} and then \texttt{B(A)} in that order is rejected because no linear order is consistent with the constraints. A hierarchy of classes underdetermines resolution, and the underdetermination is resolved by structure the hierarchy does not contain.
+
+\paragraph{Cycles.} Mutually dependent modules form a cycle in the import graph. The reflexive transitive closure collapses a cycle to an equivalence class, which retains reachability and loses the order of entry, yet the behavior of a cyclic import depends on which module is entered first, since the second sees a partially initialized first. The behavior depends on the route and not only on the reachability relation, which is the distinction of Proposition~\ref{prop:catfromctx}.
+
+\paragraph{Non-tree navigation and state-dependent accessibility.} Portals and doors connect contexts in ways that do not respect any nesting, and the edge from one context to another may exist only in some states, so that the unguarded context graph over-approximates by Proposition~\ref{prop:overapprox}.
+
+\paragraph{Dynamically generated contexts.} When contexts are created by evaluation of code at run time or by procedural generation of levels, the set of contexts is a function of the state, and a representation with a fixed small category $\cC$ is not available. The remedy is to take $\cC$ to be the category of all potential contexts, with an observation that records whether a context currently exists, which moves the dynamics into the observation.
+
+\paragraph{Nonlocal constraints.} A constraint relating contexts in different branches, such as global uniqueness of names or acyclicity of dependencies, is not expressible along the edges of a tree, and Example~\ref{ex:triangle} exhibits its effect as a failure of gluing.
+
+The case of non-tree navigation can be treated exactly. For a rooted graph, the \emph{unfolding} is the tree whose nodes are finite directed paths from the root, with the parent of a path being the path with its last edge removed, and the map $\pi$ sends a path to its last vertex.
+
+\begin{proposition}[Unfolding is a bisimulation; \stE]\label{prop:unfold}
+For a rooted labeled transition system $(S,s_0,\to)$, the unfolding $T$ with edges labeled by the last transition is a tree-shaped system, and the relation $\{(p,\pi(p))\}$ is a bisimulation between $T$ and $S$. In particular the unfolding preserves traces and branching behavior \cite{sangiorgi}.
+\end{proposition}
+
+\begin{proposition}[Information lost by unfolding; \stN]\label{prop:unfoldloss}
+Let $\pi:T\to\Gamma$ be the unfolding of a rooted graph.
+\begin{enumerate}[label=(\alph*)]
+\item $\pi$ is injective on nodes if and only if the part of $\Gamma$ reachable from the root is a tree.
+\item If a cycle is reachable, then $T$ is infinite.
+\item If a vertex is reachable by two distinct routes then its preimage has at least two elements, so the sharing of that vertex is not visible in the structure of $T$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+Distinct paths with the same endpoint give distinct nodes with the same image, which is (a) and (c). A reachable cycle can be traversed arbitrarily often, giving infinitely many paths, which is (b).
+\end{proof}
+
+The preservation of bisimilarity in Proposition~\ref{prop:unfold} applies to the transition system whose configurations include all state, and it does not extend to a representation in which state is attached to the nodes of the tree. Placing a local state at each node of the unfolding creates independent copies of the state of a shared context. The condition that restores the system is descent.
+
+\begin{proposition}[Descent; \stN]\label{prop:descent}
+Let $R(\gamma)$ be a set of local values at each vertex $\gamma$ of $\Gamma$. A state on $\Gamma$ is a family $x\in\prod_\gamma R(\gamma)$, and its pullback along $\pi$ assigns $x(\pi(p))$ to each node $p$ of $T$. A family $y\in\prod_{p\in T}R(\pi(p))$ is a pullback if and only if it is constant on the fibers of $\pi$.
+\end{proposition}
+
+The constraint of constancy on fibers relates nodes in different branches of the tree and is not expressible by conditions along the edges of the tree. The following example shows that omitting it changes behavior.
+
+\begin{example}[Shared room reached by two routes]\label{ex:sharedroom}
+Let $\Gamma$ have vertices $h,a,b,r$ and edges $h\to a$, $h\to b$, $a\to r$, $b\to r$ together with the reverse edges, and let the room $r$ carry a bit $z\in\{0,1\}$ initially $0$, with an action \texttt{toggle} available at $r$ that flips $z$ and an observation at $r$ that reveals $z$. In the system over $\Gamma$ with the bit in the configuration, the run that goes $h\to a\to r$, toggles, returns to $h$, and goes $h\to b\to r$ observes $z=1$. In the tree $T$ with a local bit at each node, the nodes $har$ and $hbr$ carry independent bits, so the same sequence of actions observes $z=0$ at $hbr$. The two systems are therefore not bisimilar, although the unfolding of the configuration graph of $\Gamma$, with the bit in the configuration, is bisimilar to it by Proposition~\ref{prop:unfold}. The discrepancy is exactly the failure of descent.
+\end{example}
+
+\begin{conjecture}[Descent for dynamics]\label{conj:descent}
+Let $\pi:T\to\Gamma$ be the unfolding of a finite rooted graph. Let $\mathbf{Desc}(\pi)$ be the category whose objects are contextual representation systems over $T$ satisfying descent along $\pi$ at the level of states, in the sense of Proposition~\ref{prop:descent}, and whose transition function factors through the quotient of the state set by the fiber identifications, with the corresponding compatibility of the observation maps and of the authority assignment $\cA$ with those identifications; morphisms are translations that are identities on contexts. Then $\mathbf{Desc}(\pi)$ is equivalent to the category of contextual representation systems over $\Gamma$ with the same morphisms.
+\end{conjecture}
+
+The conjecture is the extension of Proposition~\ref{prop:descent} from states to dynamics. The state-level statement is proved, and the dynamics require a precise definition of equivariance that has not been supplied here. In summary, a tree representation is useful without being structurally complete: it preserves behavior up to bisimulation when state lives in the configuration, and it loses identity of repeated contexts, finiteness in the presence of cycles, and the nonlocal constraints that must be reintroduced as descent, guards, stacks, or linearizations.
+
+\section{Conclusion: Equivalence Relative to Abstraction}
+
+The central question was under what conditions heterogeneous formal systems can be represented by a shared structure of contexts, observations, and admissible transformations. The development has given the question a determinate answer in four parts. First, a common abstraction always exists in a trivial sense and is informative only relative to what it retains, since there is a terminal system that retains nothing and a disjoint union that retains everything while identifying nothing (Proposition~\ref{prop:trivialabs}). Second, relative to a chosen family of observations, a canonical abstraction exists and is characterized by universal properties: the canonical presheaf of observational distinctions is the coarsest presheaf quotient through which observations factor (Theorem~\ref{thm:canonical}), the quotient of states by a family of contexts is the coarsest compatible with the family (Theorem~\ref{thm:coarsest}), and the set of global sections is the terminal system observed through a fixed presheaf (Theorem~\ref{thm:terminalobs}). Third, translations preserve observational distinctions always and reflect them exactly when the observation map is injective on its image (Theorem~\ref{thm:presindist} and Proposition~\ref{prop:reflection}), preserve permitted behavior while discarding prohibitions (Proposition~\ref{prop:authority}), and preserve reachability when bounded (Proposition~\ref{prop:reach}). Fourth, surjective and even faithful representations establish equivalence only of the canonical presheaves (Theorem~\ref{thm:relequiv}), and the examples show that this leaves the dynamics, the authority structure, the multiplicity of microstates, and the orientation of information flow free to differ (Example~\ref{ex:flip}, Proposition~\ref{prop:orientation}).
+
+The difference between the existence of a common abstraction and the claim that all mathematical languages are equivalent is therefore a difference of quantifiers over structure. A common abstraction asserts that some structure is shared. Equivalence asserts that all relevant structure is shared, and a theory of what is relevant is what a notion of equivalence supplies: categorical equivalence of posets collapses to isomorphism (Proposition~\ref{prop:posetrigid}), equivalence of presheaf categories does the same (Corollary~\ref{cor:morita}), translation between logics may preserve provability in one direction without reflecting it (Proposition~\ref{prop:PAHA}), and computational universality equates languages only at the level of the function computed (Section~16). The statement that survives is the one with which the essay began: distinct mathematical languages can possess a canonical common abstraction relative to a specified family of observable structures, while their differences are characterized by the information and operations that the abstraction necessarily forgets. The statement is not a theorem about all languages; it is a method, and its range is the class of systems that can be presented as contextual representation systems, which includes the filesystems, lexical scope disciplines, access-control models, and transition systems treated here, and whose boundary is not yet known.
+
+Several directions follow. In categorical semantics, the category $\CRS$ and its observational reduct $\Part$ invite a study of limits and colimits, beginning with Question~\ref{q:pushout}, and of an internal logic for contextual systems in which the sheaf condition and its failures are logical notions. In contextual logic, the independence of knowledge, visibility, and authority suggests a modal treatment in which the three assignments are separate modalities, and the commutation criterion of Proposition~\ref{prop:commute} becomes an equation between modalities. In programming-language theory, the observation that full abstraction is the canonical quotient (Proposition~\ref{prop:fullabs}) suggests comparing scope disciplines by the kernel families they induce, and the representation theorem for trees (Theorem~\ref{thm:treerep}) suggests extending decorated trees to scope graphs with the guards and linearizations of Section~19. In mathematical representation, the relation of the present construction to frameworks for translation among logics, such as institutions, is outlined in Appendix~E and remains to be worked out, as do Question~\ref{q:interp} and the relation to simulation-based accounts of reasoning in Question~\ref{q:simulation}. Throughout, the results are stated with their hypotheses, and the conjectures are marked as such. The strongest version of the claim that heterogeneous formal systems are one structure is not supported by the mathematics, and the weaker versions are supported to exactly the degree that the retained structure is specified.

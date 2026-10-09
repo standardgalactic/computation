@@ -444,10 +444,10 @@ anything complex? Couldn't it just be a really dumb, heavy cast iron heater that
 randomly? And as long as it doesn't freeze the pipes by sheer brute force, we call it a successful
 computation. How is that computation? It just sounds like a rock. That is a critical pushback.
 You're essentially asking how we distinguish between genuine computation and a dumb, inert object.
-Flickshind addresses this using information theory in the mathematical appendix of the paper,
+Flyxion addresses this using information theory in the mathematical appendix of the paper,
 specifically dealing with constraint richness and Shannon entropy. Let's translate the math into
 something we can visualize for all our sakes. Sure. A system can be closed. It can successfully
-keep the pipes from freezing, but it can still be what Flickshind calls degenerate. Degenerate,
+keep the pipes from freezing, but it can still be what Flyxion calls degenerate. Degenerate,
 meaning mathematically boring or lacking complexity. Yes. Imagine a thick concrete bunker that safely
 settles into the exact same single thermal state, say 55 degrees every single day, regardless of whether
 it's sunny outside, snowing outside, or whether there are 10 people inside or zero people inside. Okay.

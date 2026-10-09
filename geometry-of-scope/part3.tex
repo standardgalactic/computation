@@ -1,0 +1,140 @@
+\part{Presheaves and Local Information}
+
+\section{Presheaf Semantics for Contextual Observation}
+
+A presheaf $F:\cC^{\op}\to\Set$ assigns to each context $c$ a set $F(c)$ of admissible local descriptions, observations, or states, and to each arrow $u:c\to d$ a restriction map $F(u):F(d)\to F(c)$ satisfying $F(\id_c)=\id_{F(c)}$ and $F(vu)=F(u)\circ F(v)$ for composable $u:c\to d$ and $v:d\to e$. Restriction is a map of descriptions of one and the same situation taken at a finer or coarser resolution, and it goes from the richer context to the poorer one. The observation presheaf $\Omega$ of Definition~\ref{def:crs} is of this kind, and coherence says that the observation maps $o_c:X\to\Omega(c)$ form a natural transformation from the constant presheaf on $X$ to $\Omega$. Two families of examples show how different the underlying systems can be while sharing this form.
+
+\begin{example}[Region systems]\label{ex:region}
+Let $L$ be a set of locations, let $(V_\ell)_{\ell\in L}$ be sets of local values, and let $X=\prod_{\ell\in L}V_\ell$. Let $\cC$ be a family of subsets of $L$ ordered by inclusion, with an arrow $U\to W$ whenever $U\subseteq W$, and put $\Omega(U)=\prod_{\ell\in U}V_\ell$, with $\Omega(U\to W)$ the projection and $o_U:X\to\Omega(U)$ the projection. Coherence is the composition of projections. Arrows point from smaller regions to larger ones, and larger regions are richer. A filesystem viewed through subtrees, where $\Omega(d)$ is the content of the subtree rooted at $d$, and a game world viewed through its rooms are both of this form, with locations the nodes or cells and the local values their attributes.
+\end{example}
+
+\begin{example}[Accumulation systems]\label{ex:accum}
+Let $T$ be a finite rooted tree ordered so that $q\preceq p$ when $q$ is nested in $p$, let $(L(p))_{p\in T}$ be sets of frames, and let $X=\prod_{p\in T}L(p)$. Let $\cC=T^{\op}$, with an arrow $p\to q$ whenever $q$ is nested in $p$, so that arrows point from outer scopes to inner ones, and put $\Omega(q)=\prod_{p\succeq q}L(p)$, the product over the chain of ancestors of $q$ including $q$. For the arrow $p\to q$, the map $\Omega(q)\to\Omega(p)$ is the projection onto the ancestors of $p$, and $o_q(x)=(x_p)_{p\succeq q}$. Coherence holds. Inner scopes are richer: the observation at $q$ includes the frames of every enclosing scope.
+\end{example}
+
+In Example~\ref{ex:region} the refinement arrows agree with nesting and in Example~\ref{ex:accum} they oppose it, which is the structural difference between a system of sections over regions and a system of environments built by accumulation. The second example uses frames, the full ancestor chain, and not the flat map of visible names, and this is forced by coherence.
+
+\begin{proposition}[Flat environments violate coherence; \stN]\label{prop:flat}
+In an accumulation system with an outer scope $p$ and an inner scope $q$ nested in $p$, each with frame set $\{0,1\}$ for a variable of the same name, define the flat observation by $o^{\mathrm{flat}}_p(x)=x_p$ and $o^{\mathrm{flat}}_q(x)=x_q$, so that the inner binding shadows the outer one. Then there is no restriction map $\Omega(q)\to\Omega(p)$ making the arrow $p\to q$ coherent, whereas the frame observations $o_p(x)=x_p$ and $o_q(x)=(x_p,x_q)$ are coherent.
+\end{proposition}
+\begin{proof}
+Coherence for the arrow $p\to q$ would force ${\sk_q}\subseteq{\sk_p}$ by Theorem~\ref{thm:refinement}. The flat relation $\sk_q$ identifies the states $(x_p,x_q)=(0,0)$ and $(1,0)$ because both have $x_q=0$, while $\sk_p$ separates them, so the inclusion fails. For the frame observations, $\Omega(q)=\{0,1\}^2\to\Omega(p)=\{0,1\}$ is the first projection, and $o_p=\Omega(u)\circ o_q$.
+\end{proof}
+
+This repairs the situation noted after Definition~\ref{def:crs}: the flat visible environment of a language with shadowing is not a coherent observation, and the coherent one retains shadowed bindings. It also shows why Proposition~\ref{prop:shadow} is the algebraic face of an observational fact, since non-injectivity of extension is exactly the loss of information that coherence forbids.
+
+The mathematical restriction of information must be distinguished from the act of navigating into a subcontext. A restriction map relates two descriptions of the same state at different resolutions, whereas navigation moves an observer. In an accumulation system, moving inward increases the information available to the observer, while the restriction map from the inner description to the outer one discards information. In a region system, moving into a subregion decreases the information available, and the restriction map to the subregion also decreases it. The presheaf encodes neither movement, only the consistency of descriptions across resolutions, and movement belongs to the transition structure.
+
+\begin{remark}[Class scopes separate nesting from refinement]
+In Python the body of a class statement is a scope, but names bound in it are not visible from the function bodies defined inside it \cite{pyref}. Taking the enclosing function as a parent, the class scope and each method scope are therefore siblings for the purpose of name resolution, even though textually the methods are nested in the class. The nesting preorder of the source text and the refinement order of the observation maps then differ, which is a concrete instance of the distinction between the two orders drawn in Section~2.
+\end{remark}
+
+\section{Local Consistency and Global Reconstruction}
+
+The passage from local descriptions to a global one requires a notion of covering. A \emph{sieve} on a context $c$ is a set $S$ of arrows with codomain $c$ closed under precomposition. A \emph{Grothendieck topology} $J$ assigns to each context a collection $J(c)$ of covering sieves satisfying the usual axioms \cite{maclanemoerdijk}. For a presheaf $P$ and a sieve $S$ on $c$, a \emph{matching family} is a family $(s_u)_{u\in S}$ with $s_u\in P(\mathrm{dom}\,u)$ and $P(v)(s_u)=s_{uv}$ whenever $uv\in S$, and $P$ is a \emph{sheaf for $S$} if every matching family has a unique \emph{amalgamation}, an element $s\in P(c)$ with $P(u)(s)=s_u$ for all $u\in S$. Uniqueness is the \emph{separation} condition, and existence is the \emph{gluing} condition. When contexts are regions with intersections and $S$ is generated by a family $U_i\subseteq W$, a family $(s_i)$ extends to a matching family exactly when $s_i$ and $s_j$ agree on $U_i\cap U_j$, which is the familiar condition of agreement on overlaps. The following is the standard criterion, stated for orientation.
+
+\begin{proposition}[Gluing criterion; \stE]\label{prop:gluing}
+For a Grothendieck topology $J$ and a covering sieve $S$ on $c$, compatible local data for $S$ admit a unique global datum exactly when the presheaf is a sheaf for $S$.
+\end{proposition}
+
+This is the definition of the sheaf condition and is not a new theorem. The contribution lies in determining which contextual systems satisfy it and in producing explicit failures. For a contextual representation system, the relevant presheaf is the canonical presheaf $Q$ of observational distinctions constructed in Section~11, and the question has two parts that the following definition separates.
+
+\begin{definition}[Failure modes of reconstruction]\label{def:failmodes}
+Let $S$ be a covering sieve on $c$ in a contextual representation system.
+\begin{enumerate}[label=(F\arabic*)]
+\item \emph{Incompatible information}: a family of local descriptions, not necessarily arising from any state, that disagree on an overlap, so that it is not a matching family.
+\item \emph{Missing information}: a matching family defined only on a proper subsieve of $S$, which may extend to $S$ in several ways or in none.
+\item \emph{Obstruction}: a matching family for $S$ that is not realized by any state.
+\item \emph{Ambiguity}: two distinct global descriptions at $c$, in particular two states distinguished at $c$, that determine the same matching family for $S$.
+\end{enumerate}
+\end{definition}
+
+The four cases correspond to different defects. Incompatible information is a defect of the data and rules out any global state. Missing information is a defect of coverage and is repaired by supplying more data. Obstruction is a defect of the system, in that locally consistent data cannot be globally realized because some constraint is invisible to every local context. Ambiguity is the dual defect, in that some global distinction is invisible to every local context. Incompatibility is immediate from coherence.
+
+\begin{proposition}[Disagreement excludes realization; \stN]\label{prop:disagree}
+If contexts $c_1,c_2$ have arrows $c_{12}\to c_1$ and $c_{12}\to c_2$ and local descriptions $s_1\in\Omega(c_1)$ and $s_2\in\Omega(c_2)$ have different restrictions to $c_{12}$, then no state $x$ satisfies both $o_{c_1}(x)=s_1$ and $o_{c_2}(x)=s_2$.
+\end{proposition}
+\begin{proof}
+By coherence both $o_{c_1}(x)$ and $o_{c_2}(x)$ restrict to $o_{c_{12}}(x)$.
+\end{proof}
+
+Obstruction and ambiguity are not excluded by coherence and are exhibited by finite examples. The first example is an obstruction.
+
+\begin{example}[Locally acyclic dependencies; obstruction]\label{ex:triangle}
+Let $E=\{e_1,e_2,e_3\}$ be the edges of a triangle on the vertices $1,2,3$, with $e_1=\{1,2\}$, $e_2=\{2,3\}$, and $e_3=\{3,1\}$. Let $\cC$ be the poset of subsets of $E$, with an arrow $U\to W$ when $U\subseteq W$, and let a sieve cover $W$ when the union of its domains is $W$, which is a Grothendieck topology on the subsets of a set. Let $X$ be the set of acyclic orientations of the triangle, which has six elements. Write an orientation of $e_i$ as $+$ when it points in the direction $1\to2\to3\to1$ and $-$ otherwise, let $\Omega(U)=\{+,-\}^U$, and let $o_U$ restrict an orientation to the edges in $U$. This is a region system. For the three singletons, $Q(\{e_i\})=\{+,-\}$ because each orientation of a single edge is realized, and $Q(\varnothing)$ is a point. The sieve $S$ on $E$ generated by the singletons has pairwise empty overlaps, so every triple of local orientations is a matching family, and $\Match_S(Q)$ has eight elements. The two families $(+,+,+)$ and $(-,-,-)$ are the directed cycles and are not realized by any acyclic orientation. Hence $Q$ satisfies separation but not gluing for $S$.
+\end{example}
+
+Read in terms of programs, the three edges are dependencies between pairs of modules. Each dependency considered alone is consistent, and each pair of dependencies is consistent, yet the global invariant that the dependency relation be acyclic is a nonlocal constraint that no local observation exposes. The second example is an ambiguity.
+
+\begin{example}[Global-only observable; ambiguity]\label{ex:parity}
+Let $L=\{a,b\}$ and $\cC$ the poset of subsets of $L$, with the same covering convention, and let $X=\{0,1\}^3$ with coordinates $(x_a,x_b,p)$. Let $\Omega(U)=\{0,1\}^U$ for $U\subsetneq L$ and $\Omega(L)=\{0,1\}^3$, with the evident projections and $o_U$ the corresponding projections of $X$. Then $\sk_L$ is the diagonal while the sieve $S$ on $L$ generated by $\{a\}$ and $\{b\}$ has $\bigcap\sk_{\{a\}}\cap\sk_{\{b\}}$ identifying any two states that agree on $x_a$ and $x_b$. The states $(0,0,0)$ and $(0,0,1)$ are distinguished at $L$ and have the same local classes at both members of $S$, so separation fails: the coordinate $p$ is an observable that is visible only at the top context.
+\end{example}
+
+Example~\ref{ex:triangle} exhibits a family of locally compatible descriptions that cannot be realized by any single underlying state, and Example~\ref{ex:parity} exhibits states that admit more than one global realization of the same family. These are the two failures that the gluing condition is designed to detect. Sheaf-theoretic formulations of this phenomenon in physics, in which empirical data are consistent on overlapping contexts yet admit no global assignment, are developed in the study of contextuality \cite{abramsky}, and for abelian-valued presheaves the obstruction to gluing is measured by \v{C}ech cohomology \cite{maclanemoerdijk}.
+
+\section{Hidden Information and Observational Equivalence}
+
+Given a contextual representation system, Theorem~\ref{thm:refinement} defines at each context the equivalence relation $x\sk_c y$ when $o_c(x)=o_c(y)$ and shows that these relations are nested along arrows. Their quotients assemble into a presheaf that is canonical in a precise sense. Distinct states may become indistinguishable under a restricted observation interface, and moving to a richer context or increasing disclosure, as in Theorem~\ref{thm:disclosure}, refines the relation and separates more states.
+
+\begin{theorem}[Canonical presheaf of observational distinctions; \stE, applied here]\label{thm:canonical}
+For a contextual representation system, let $Q(c)=X/{\sk_c}$ and, for an arrow $u:c\to d$, let $Q(u):Q(d)\to Q(c)$ be $[x]_d\mapsto[x]_c$.
+\begin{enumerate}[label=(\alph*)]
+\item $Q$ is a well-defined presheaf, and the quotient maps $p_c:X\to Q(c)$ form a natural transformation $p:\Delta X\Rightarrow Q$ with every component surjective.
+\item The observations factor as $o_c=\iota_c\circ p_c$ with $\iota_c:Q(c)\to\Omega(c)$ the injection $[x]_c\mapsto o_c(x)$, and $\iota:Q\Rightarrow\Omega$ is natural. This is the epi-mono factorization of $o:\Delta X\Rightarrow\Omega$ in the category of presheaves.
+\item (Universal property.) Let $P$ be a presheaf, $\pi:\Delta X\Rightarrow P$ a natural transformation with surjective components, and $\omega:P\Rightarrow\Omega$ a natural transformation with $o=\omega\pi$. Then there is a unique natural transformation $\theta:P\Rightarrow Q$ with $\theta\pi=p$, and $\iota\theta=\omega$. In this sense $Q$ is the coarsest presheaf quotient of $\Delta X$ through which the observations factor.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) Theorem~\ref{thm:refinement} gives ${\sk_d}\subseteq{\sk_c}$, so $Q(u)$ is well defined. Functoriality is $[x]_e\mapsto[x]_d\mapsto[x]_c$, equal to $Q(vu)$ for $u:c\to d$ and $v:d\to e$, and identities are clear. Naturality of $p$ is the definition of $Q(u)$. (b) Injectivity of $\iota_c$ is the definition of $\sk_c$, and $\Omega(u)\iota_d[x]_d=\Omega(u)o_d(x)=o_c(x)=\iota_cQ(u)[x]_d$ gives naturality. Epi and mono in the presheaf category are detected componentwise. (c) If $\pi_c(x)=\pi_c(y)$ then $o_c(x)=\omega_c\pi_c(x)=\omega_c\pi_c(y)=o_c(y)$, so $x\sk_c y$, and $\theta_c(\pi_c(x))=[x]_c$ is well defined and unique because $\pi_c$ is surjective. Naturality of $\theta$ follows from naturality of $\pi$ and $p$ and surjectivity of $\pi_d$, since $\theta_cP(u)\pi_d(x)=\theta_c\pi_c(x)=[x]_c=Q(u)\theta_d\pi_d(x)$. Finally $\iota\theta\pi=\iota p=o=\omega\pi$ and surjectivity of $\pi$ give $\iota\theta=\omega$.
+\end{proof}
+
+This is the bridge between context-relative observations and presheaf semantics: a system of coherent observations generates a presheaf of observational equivalence classes, and the presheaf is canonical. The factorization is an instance of image factorization in a presheaf topos and is not itself surprising. What it gives is a standard against which any proposed abstraction can be measured, as in Section~13.
+
+\begin{proposition}[Global indistinguishability; \stN]\label{prop:globalindist}
+Two states are indistinguishable at every context exactly when $(x,y)\in\bigcap_{c\in\Ob(\cC)}\sk_c$. The combined observation family separates states if and only if this intersection is the diagonal relation on $X$.
+\end{proposition}
+\begin{proof}
+Both statements are immediate from the definition of $\sk_c$ as the kernel of $o_c$.
+\end{proof}
+
+A canonical common abstraction depends on which contexts one chooses to observe through, and the next theorem identifies the abstraction relative to an arbitrary family of contexts and proves that it is universal. For a family $\cU\subseteq\Ob(\cC)$ put ${\sk_\cU}=\bigcap_{c\in\cU}{\sk_c}$, $X_\cU=X/{\sk_\cU}$, and let $q_\cU:X\to X_\cU$ be the quotient. A surjection $f:X\to Z$ is \emph{$\cU$-sound} if for every $c\in\cU$ the observation $o_c$ factors through $f$, that is, $o_c=g_c\circ f$ for some $g_c:Z\to\Omega(c)$. A family $\cU$ is \emph{generating} if every context $c$ admits an arrow $c\to d$ with $d\in\cU$.
+
+The canonical presheaf above and the coarsest quotient below are standard constructions, an image factorization in a presheaf category and an intersection of kernels, applied to observation maps. Their content is the identification of the factorization with the observational structure of a contextual system, and the quotient they produce is canonical relative to the chosen observations, not independent of them: enlarging or shrinking the family $\cU$ changes the quotient, and Appendix~C computes the change on a four-node example.
+
+\begin{theorem}[Coarsest quotient compatible with a family of contexts; \stN]\label{thm:coarsest}
+\begin{enumerate}[label=(\alph*)]
+\item $q_\cU$ is $\cU$-sound.
+\item Every $\cU$-sound surjection $f:X\to Z$ factors uniquely as $q_\cU=k\circ f$ for a map $k:Z\to X_\cU$. Equivalently, $q_\cU$ is the terminal object of the category whose objects are $\cU$-sound surjections out of $X$ and whose morphisms are maps commuting with them.
+\item If $\cU$ is generating then ${\sk_\cU}=\bigcap_{c\in\Ob(\cC)}{\sk_c}$, so the quotient is the global indistinguishability quotient and is determined by the members of $\cU$ alone.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(a) For $c\in\cU$, ${\sk_\cU}\subseteq{\sk_c}$, so $o_c$ is constant on classes of $\sk_\cU$ and induces $g_c:X_\cU\to\Omega(c)$ with $o_c=g_cq_\cU$. (b) If $f$ is $\cU$-sound then $\ker f\subseteq\ker o_c={\sk_c}$ for each $c\in\cU$, so $\ker f\subseteq{\sk_\cU}=\ker q_\cU$. Hence $k(f(x))=q_\cU(x)$ is well defined, and unique because $f$ is surjective. (c) For $c$ with an arrow $c\to d$, $d\in\cU$, Theorem~\ref{thm:refinement} gives ${\sk_d}\subseteq{\sk_c}$, so ${\sk_\cU}\subseteq{\sk_d}\subseteq{\sk_c}$.
+\end{proof}
+
+Part (c) shows that the canonical global abstraction is governed by the richest contexts, and these differ by system. For a filesystem viewed through subtrees the richest context is the root, so the global quotient is determined by the observation at the root. For a lexical accumulation system the richest contexts are the innermost scopes, so two states indistinguishable at every innermost scope are indistinguishable everywhere. The dependence on the orientation of arrows already appears at the level of what the canonical abstraction is built from.
+
+The relation to Section~10 is recorded as a criterion for $Q$ itself.
+
+\begin{proposition}[Gluing criterion for $Q$; \stN]\label{prop:Qglue}
+Let $S$ be a covering sieve on $c$ generated by arrows $u_i:c_i\to c$. Then $Q$ is a sheaf for $S$ if and only if
+\begin{enumerate}[label=(\roman*)]
+\item ${\sk_c}=\bigcap_i{\sk_{c_i}}$, and
+\item every matching family of $Q$ for $S$ is of the form $([x]_{c_i})_i$ for some state $x\in X$.
+\end{enumerate}
+Condition~(i) fails in Example~\ref{ex:parity} and condition~(ii) fails in Example~\ref{ex:triangle}.
+\end{proposition}
+\begin{proof}
+Elements $[x]_c$ and $[y]_c$ have the same restrictions to every $c_i$ exactly when $(x,y)\in\bigcap_i{\sk_{c_i}}$, so separation is the inclusion $\bigcap_i{\sk_{c_i}}\subseteq{\sk_c}$, and the reverse inclusion holds by Theorem~\ref{thm:refinement}. An amalgamation of a matching family is a class $[x]_c$ with $[x]_{c_i}$ equal to the prescribed class for every $i$, which exists exactly when some state $x$ realizes the family. The two examples were computed in Section~10.
+\end{proof}
+
+A system with dynamics has a further equivalence beyond static observation: two states may be indistinguishable now and still be separated by some sequence of actions. Call an equivalence relation $R$ on $X$ a \emph{$\delta$-congruence} if $x\,R\,y$ implies, for every $a\in\Sigma$, that $\delta(x,a)$ is defined exactly when $\delta(y,a)$ is, and that then $\delta(x,a)\,R\,\delta(y,a)$.
+
+\begin{proposition}[Behavioral minimization; \stE]\label{prop:minimization}
+Among $\delta$-congruences contained in $\bigcap_c{\sk_c}$ there is a largest, written $\approx$. The quotient $\fR/{\approx}=(\cC,X/{\approx},\Omega,\cA,\delta_{\approx})$ with $\delta_{\approx}([x],a)=[\delta(x,a)]$ is a contextual representation system, and $\approx$ is the identity relation on it.
+\end{proposition}
+\begin{proof}
+The transitive closure of the union of all $\delta$-congruences contained in $\bigcap_c{\sk_c}$ is an equivalence relation contained in $\bigcap_c{\sk_c}$, because the latter is transitive, and it is a $\delta$-congruence by applying the defining condition along a chain. It is therefore the largest. The operation $\delta_\approx$ is well defined by the congruence property, the observations descend because $\approx$ is contained in each $\sk_c$, and maximality gives that no nontrivial congruence remains on the quotient.
+\end{proof}
+
+This is Moore-machine minimization with the profile of observations at all contexts as output \cite{moore,sangiorgi}, and it identifies the canonical abstraction of a system with dynamics as its behaviorally reduced quotient.

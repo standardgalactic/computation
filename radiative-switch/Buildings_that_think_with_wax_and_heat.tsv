@@ -445,10 +445,10 @@ start	end	text
 2342480	2347600	randomly? And as long as it doesn't freeze the pipes by sheer brute force, we call it a successful
 2347600	2352800	computation. How is that computation? It just sounds like a rock. That is a critical pushback.
 2352800	2359600	You're essentially asking how we distinguish between genuine computation and a dumb, inert object.
-2360160	2364480	Flickshind addresses this using information theory in the mathematical appendix of the paper,
+2360160	2364480	Flyxion addresses this using information theory in the mathematical appendix of the paper,
 2365200	2369840	specifically dealing with constraint richness and Shannon entropy. Let's translate the math into
 2369840	2375040	something we can visualize for all our sakes. Sure. A system can be closed. It can successfully
-2375040	2380240	keep the pipes from freezing, but it can still be what Flickshind calls degenerate. Degenerate,
+2375040	2380240	keep the pipes from freezing, but it can still be what Flyxion calls degenerate. Degenerate,
 2380240	2387200	meaning mathematically boring or lacking complexity. Yes. Imagine a thick concrete bunker that safely
 2387200	2393440	settles into the exact same single thermal state, say 55 degrees every single day, regardless of whether
 2393440	2398240	it's sunny outside, snowing outside, or whether there are 10 people inside or zero people inside. Okay.

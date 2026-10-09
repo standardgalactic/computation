@@ -1,0 +1,48 @@
+\contentsline {part}{I\hspace {1em}The Mathematics of Context}{3}{part.1}%
+\contentsline {section}{\numberline {1}Introduction: Representation and Structural Correspondence}{3}{section.1}%
+\contentsline {section}{\numberline {2}Contexts as Mathematical Objects}{5}{section.2}%
+\contentsline {section}{\numberline {3}Scope, Visibility, and Authority}{7}{section.3}%
+\contentsline {section}{\numberline {4}Navigation and Disclosure as Distinct Operators}{9}{section.4}%
+\contentsline {part}{II\hspace {1em}Hierarchical and Computational Representations}{11}{part.2}%
+\contentsline {section}{\numberline {5}Filesystems and Shell Environments}{11}{section.5}%
+\contentsline {section}{\numberline {6}Lexical Scope and Abstract Syntax Trees}{13}{section.6}%
+\contentsline {section}{\numberline {7}Access Control and Contextual Authority}{15}{section.7}%
+\contentsline {section}{\numberline {8}Interactive Worlds as Transition Systems}{16}{section.8}%
+\contentsline {part}{III\hspace {1em}Presheaves and Local Information}{18}{part.3}%
+\contentsline {section}{\numberline {9}Presheaf Semantics for Contextual Observation}{18}{section.9}%
+\contentsline {section}{\numberline {10}Local Consistency and Global Reconstruction}{19}{section.10}%
+\contentsline {section}{\numberline {11}Hidden Information and Observational Equivalence}{21}{section.11}%
+\contentsline {part}{IV\hspace {1em}Functorial Translation}{24}{part.4}%
+\contentsline {section}{\numberline {12}Categories of Representational Systems}{24}{section.12}%
+\contentsline {section}{\numberline {13}Common Abstractions and Forgetful Functors}{25}{section.13}%
+\contentsline {section}{\numberline {14}Surjectivity, Fullness, Faithfulness, and Equivalence}{29}{section.14}%
+\contentsline {section}{\numberline {15}Translation Between Mathematical Languages}{31}{section.15}%
+\contentsline {section}{\numberline {16}Universality and Its Limits}{33}{section.16}%
+\contentsline {part}{V\hspace {1em}Results and Interpretation}{34}{part.5}%
+\contentsline {section}{\numberline {17}A General Contextual Translation Construction}{35}{section.17}%
+\contentsline {section}{\numberline {18}Preservation and Loss Under Translation}{38}{section.18}%
+\contentsline {paragraph}{Contextual reachability.}{38}{section*.2}%
+\contentsline {paragraph}{Observable distinctions.}{38}{section*.3}%
+\contentsline {paragraph}{Observationally equivalent contexts.}{38}{section*.4}%
+\contentsline {paragraph}{Authority and prohibition.}{39}{section*.5}%
+\contentsline {paragraph}{Global reconstruction.}{39}{section*.6}%
+\contentsline {paragraph}{Status.}{40}{section*.7}%
+\contentsline {section}{\numberline {19}The Limits of Hierarchical Representation}{40}{section.19}%
+\contentsline {paragraph}{Overlapping scopes and multiple parents.}{40}{section*.8}%
+\contentsline {paragraph}{Cycles.}{40}{section*.9}%
+\contentsline {paragraph}{Non-tree navigation and state-dependent accessibility.}{41}{section*.10}%
+\contentsline {paragraph}{Dynamically generated contexts.}{41}{section*.11}%
+\contentsline {paragraph}{Nonlocal constraints.}{41}{section*.12}%
+\contentsline {section}{\numberline {20}Conclusion: Equivalence Relative to Abstraction}{42}{section.20}%
+\contentsline {section}{\numberline {A}Definitions and Notation}{44}{appendix.A}%
+\contentsline {section}{\numberline {B}Finite Examples and Counterexamples for Visibility, Disclosure, and Access Control}{44}{appendix.B}%
+\contentsline {section}{\numberline {C}Worked Translations Among Filesystem, Lexical-Scope, and Transition-System Models}{45}{appendix.C}%
+\contentsline {paragraph}{Filesystem as region system.}{46}{section*.17}%
+\contentsline {paragraph}{Lexical scope as accumulation system.}{46}{section*.18}%
+\contentsline {paragraph}{Game world as transition system.}{46}{section*.19}%
+\contentsline {paragraph}{What each model retains.}{46}{section*.20}%
+\contentsline {section}{\numberline {D}Formal Inventory: Propositions, Counterexamples, and Open Questions}{47}{appendix.D}%
+\contentsline {section}{\numberline {E}Related Frameworks and Bibliographic Notes}{49}{appendix.E}%
+\contentsline {paragraph}{Comparison with institutions.}{49}{section*.21}%
+\contentsline {paragraph}{Comparison with scope graphs and coalgebraic semantics.}{50}{section*.22}%
+\contentsline {paragraph}{Simulation-based accounts of physical reasoning.}{50}{section*.23}%

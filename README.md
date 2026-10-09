@@ -1,3 +1,5 @@
+[The Geometry of Scope](https://standardgalactic.github.io/computation/geometry-of-scope.pdf)
+
 [Monotonic Continuation](https://standardgalactic.github.io/computation/monotonic-continuation.pdf)
 
 [Against the Kitchen Sink](https://standardgalactic.github.io/computation/against_the_kitchen_sink.pdf)

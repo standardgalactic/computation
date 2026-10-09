@@ -107,7 +107,7 @@ just trying not to lose right but if you are playing from the possibility space 
 entire board reading the flow of the game and seeing how many strategic avenues how many branching paths are
 actually open to you are you trapped in a corner merely surviving or do you control the center of the board with a
 massive sprawling fan of futures and for a long time you know the possibility space thinkers had great
-intuitions but they lacked the predictive hard theorems of the persistence mathematicians flitchton's
+intuitions but they lacked the predictive hard theorems of the persistence mathematicians Flyxion's
 monograph is the bridge between them building the bridge yeah but to build that bridge to mathematically
 prove a system can persist and have a rich possibility space without forcing us to simulate every single
 future move out to infinity well we have to talk about sea walls yes this is where we get into

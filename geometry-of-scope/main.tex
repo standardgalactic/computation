@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=1.2in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{tikz-cd}
+\usepackage{booktabs,enumitem,longtable}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+
+\linespread{1.07}
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0.2em}
+\setlist{itemsep=0.2em,topsep=0.3em}
+
+% ---------- theorem environments ----------
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{question}[theorem]{Question}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% status tags: established / proved here
+\newcommand{\stE}{\textsc{established}}
+\newcommand{\stN}{\textsc{proved here}}
+
+% ---------- macros ----------
+\newcommand{\cC}{\mathcal C}
+\newcommand{\cD}{\mathcal D}
+\newcommand{\cN}{\mathcal N}
+\newcommand{\cA}{\mathcal A}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\cT}{\mathcal T}
+\newcommand{\fR}{\mathfrak R}
+\newcommand{\fS}{\mathfrak S}
+\newcommand{\fT}{\mathfrak T}
+\newcommand{\fM}{\mathfrak M}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\CRS}{\mathbf{CRS}}
+\newcommand{\Obs}{\mathbf{Obs}}
+\newcommand{\Part}{\mathbf{Part}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\Ob}{\mathrm{Ob}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Path}{\operatorname{Path}}
+\newcommand{\Reach}{\operatorname{Reach}}
+\newcommand{\res}{\operatorname{res}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\Match}{\operatorname{Match}}
+\newcommand{\pfn}{\rightharpoonup}
+\newcommand{\sk}{\sim}
+\newcommand{\Conf}{\mathrm{Conf}}
+
+\title{The Geometry of Scope\\[0.5em]\large Context, Visibility, and Translation Across Formal Systems}
+\author{Flyxion\\[0.2em]\small Independent Researcher}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent Formal languages, operating systems, computational environments, and interactive virtual worlds employ different mechanisms for organizing context, visibility, and permissible operations. Despite their differences, many admit representations in terms of nested or overlapping domains, locally available information, transition relations, and structure-preserving mappings. This essay develops a mathematical framework for comparing such systems without presupposing their equivalence. The primitive construction is a contextual representation system, consisting of a small category of contexts, a set of underlying states, a presheaf of context-indexed observations coherent with the restriction arrows, an assignment of admissible actions, and a partial transition function. Knowledge, presentation, and authority are shown to be independent assignments, so that hierarchical containment alone forces no monotonicity of visibility or permission, and navigation between contexts is separated from disclosure within a context by an explicit commutation criterion. Filesystems, shell environments, lexical scope, access control, and game worlds are treated as instances, and the orientation of information flow is identified as the structural feature that distinguishes sections over regions from environments built by accumulation. For every system, a canonical presheaf of observational distinctions is constructed and characterized by a universal property, the coarsest quotient of the state space compatible with a chosen family of contexts is characterized in the same way, and the terminal system observed through a fixed observation presheaf is identified with its global sections. Failures of local-to-global reconstruction are classified and exhibited by finite examples. Translations between systems are then analyzed by what they preserve, reflect, collapse, or invent: observational distinctions are preserved by every translation and reflected exactly under an injectivity condition, authority is preserved only in a lax direction that discards prohibitions, and surjectivity on states yields a common abstraction without yielding equivalence. A representation theorem for tree-shaped systems shows that a filesystem and a lexical scope discipline arise from one decorated rooted tree by dual product constructions. The essay closes by separating a common abstraction from categorical equivalence, from translation of proof theories, and from computational universality, and argues that equivalence of heterogeneous formal systems is always equivalence relative to the structure that a chosen abstraction retains.
+\end{abstract}
+
+\tableofcontents
+\bigskip
+
+\input{part1}
+\input{part2}
+\input{part3}
+\input{part4}
+\input{part5}
+\input{appendices}
+
+\end{document}

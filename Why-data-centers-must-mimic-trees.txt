@@ -20,13 +20,13 @@ Get ready, because we are completely flipping the script on the physical archite
 
 It's titled Xylomorphic Computation. And we really need to set expectations clearly up front here, because this isn't some fluffy tech blog post about, you know, buying carbon offsets or making servers 5 percent more energy efficient. No, not at all. 
 
-This is a formidable piece of theoretical physics and infrastructure engineering. We are going to be diving into categorical resource theory, thermodynamics, partial differential equations and the fundamental laws of the universe applied to silicon. Yeah, the central thesis Fliction puts forward is that if we want our digital infrastructure to survive its own thermodynamic appetite, if we want the AI revolution to not simply burn itself out, we have to stop treating computation like a factory that produces a product and a waste stream.
+This is a formidable piece of theoretical physics and infrastructure engineering. We are going to be diving into categorical resource theory, thermodynamics, partial differential equations and the fundamental laws of the universe applied to silicon. Yeah, the central thesis Flyxion puts forward is that if we want our digital infrastructure to survive its own thermodynamic appetite, if we want the AI revolution to not simply burn itself out, we have to stop treating computation like a factory that produces a product and a waste stream.
 
 We have to start treating it like a living, self-sustaining organism, specifically a tree. Right. And the author doesn't just use this as a poetic metaphor either.
 
 They use some of the heaviest math available to prove it is structurally mandatory. So our mission today is to understand that math, to grasp why a data center in space is just a terrible idea, and to figure out how a computer can somehow grow its own replacement parts. But to get to the tree, we actually have to start with a concept from 1961.
 
-Landauer's principle. Right. Because the paper launches its argument by attacking something Fliction calls the heat misclassification.
+Landauer's principle. Right. Because the paper launches its argument by attacking something Flyxion calls the heat misclassification.
 
 Now, I hear Landauer's principle thrown around a lot when people talk about microchips, usually as a sort of ultimate speed limit for computers. But let's actually break down the mechanics of it. Why does a computer get hot? It's not just bad wiring or friction from the cooling fans.
 
@@ -50,7 +50,7 @@ It bleeds out into the surrounding environment as physical heat. Landauer mathem
 
 Wow. It is a non-negotiable law of the universe. No matter if we build computers out of silicon, carbon nanotubes or biological neurons, erasing information will always generate heat. 
 
-Which leads directly to the classification inversion Flixentian talks about. Because we are conditioned to think of heat as a mistake. If my car engine gets too hot, it's losing efficiency, right? The heat is energy that failed to turn into forward motion.
+Which leads directly to the classification inversion Flyxion talks about. Because we are conditioned to think of heat as a mistake. If my car engine gets too hot, it's losing efficiency, right? The heat is energy that failed to turn into forward motion.
 
 Yes, exactly. But in a computer, the forward motion is just abstract logic. It doesn't physically go anywhere.
 
@@ -66,11 +66,11 @@ It has no physical mass or potential energy stored at the end. Oh, I see. So 100
 
 Heat. Electricity goes in, invisible math happens, and heat comes out every single time. Every single time.
 
-Which brings us back to that space heater you mentioned. Flixion introduces a concept here that completely rewrites how you look at household appliances. Consider the standard resistive space heater sitting in a living room.
+Which brings us back to that space heater you mentioned. Flyxion introduces a concept here that completely rewrites how you look at household appliances. Consider the standard resistive space heater sitting in a living room.
 
 You plug it into the wall. It draws electrical current through a high resistance wire and it gets hot. What is it actually doing thermodynamically? Well, it's converting electricity directly into heat to warm my feet.
 
-Thermodynamically, it is converting electricity directly into entropy without doing any intermediate informational work. Because of this, Flixion classifies the common space heater as a degenerate computer. Wait, wait, I need to wrap my head around this.
+Thermodynamically, it is converting electricity directly into entropy without doing any intermediate informational work. Because of this, Flyxion classifies the common space heater as a degenerate computer. Wait, wait, I need to wrap my head around this.
 
 You're saying my space heater is just a terribly lazy laptop. Basically, yes. It's pulling the exact same electricity from the grid, reaching the exact same terminal state of physical heat.
 
@@ -94,11 +94,11 @@ When you draw a system boundary tightly around just the server rack, the heat lo
 
 If heat isn't waste, but the unavoidable terminal state of the computational process, we have to completely rethink the architecture. We can't build standalone factories anymore. Which brings us to the title of the paper.
 
-If we aren't building factories that just burn energy and dump waste, what should we be building? And Fliction points to biology. Specifically, the paper introduces xylomorphic computation. Right.
+If we aren't building factories that just burn energy and dump waste, what should we be building? And Flyxion points to biology. Specifically, the paper introduces xylomorphic computation. Right.
 
 Let's break down that word, because it sounds intimidating, but the roots are actually pretty organic. The terminology is incredibly deliberate here. Xylomorphic comes from the Greek words xylon, meaning wood, and morphe, meaning form or structure.
 
-It refers directly to the way an arboreal system, a tree operates. Let's trace the actual metabolism of a tree, because people say things are like a tree all the time just to mean they are green or eco-friendly. But Fliction means something very specific mechanically here.
+It refers directly to the way an arboreal system, a tree operates. Let's trace the actual metabolism of a tree, because people say things are like a tree all the time just to mean they are green or eco-friendly. But Flyxion means something very specific mechanically here.
 
 Very specific. A tree absorbs solar radiation. It uses that energy to perform chemical computation photosynthesis.
 
@@ -138,7 +138,7 @@ The data center generates a massive economic and energetic surplus. The money is
 
 Stage three, print, is taking that surplus feedstock, the recovered materials, and the utility revenue and using it to purchase, manufacture, and install the next generation of replacement servers when the current ones finally die. So the data center's own physical exhaustion, its heat, and its wear and tear literally pays for and powers its own physical renewal. It's a closed loop.
 
-And Fliction connects this to a concept from theoretical biology, right? Stuart Kaufman's collectively autocatalytic sets, or CAS. Yes. Kaufman's theory is beautiful.
+And Flyxion connects this to a concept from theoretical biology, right? Stuart Kaufman's collectively autocatalytic sets, or CAS. Yes. Kaufman's theory is beautiful.
 
 It originally explains how life might have emerged from dead chemicals. The idea is that in a complex soup of molecules, no single molecule can copy itself. Molecule A can't make another molecule A. But molecule A can act as a catalyst to help build molecule B, and B catalyzes C, and C catalyzes A. The individual components aren't self-replicating, but the entire set as a cluck of network catalyzes its own production rules.
 
@@ -146,7 +146,7 @@ So the server can't build a server. The district heating pipe can't build a pipe
 
 That is the essence of it, yes. That is incredibly elegant. But, you know, elegance doesn't keep the lights on.
 
-How do we know if this actually works in practice? How do we mathematically prove if our hypothetical city tree is growing or if it's quietly dying from the inside? This is where Flitching leaves philosophy behind and draws a brutal, strictly mathematical line in the sand. The paper introduces a fundamental order parameter to measure the health of this loop. They call it lambda.
+How do we know if this actually works in practice? How do we mathematically prove if our hypothetical city tree is growing or if it's quietly dying from the inside? This is where Flyxion leaves philosophy behind and draws a brutal, strictly mathematical line in the sand. The paper introduces a fundamental order parameter to measure the health of this loop. They call it lambda.
 
 Lambda. Now, my first instinct when I hear about a metric for data center health is to think of energy efficiency, like PUE, power usage effectiveness, which the industry loves to brag about. Is lambda just a better version of an energy star rating? No, and it's vital to separate the two.
 
@@ -188,11 +188,11 @@ It doesn't scale linearly. But lambda works perfectly across scales. Yes.
 
 Yes, if you calculate the lambda for a single GPU and the lambda for a thousand server data center and the lambda for the entire global Internet grid, the parameter remains a perfectly accurate diagnostic tool for the stability of the entire structure. It scales infinitely. So to really put the power of the lambda equation to the test, we need to apply it to something massive.
 
-And Fliction aims it directly at one of the most heavily funded, futuristic tech pipe dreams in Silicon Valley right now, the orbital data center. Yeah, the idea of putting massive data centers into low Earth orbit or building server farms in the permanently shadowed craters of the moon is gaining immense traction. It's everywhere right now.
+And Flyxion aims it directly at one of the most heavily funded, futuristic tech pipe dreams in Silicon Valley right now, the orbital data center. Yeah, the idea of putting massive data centers into low Earth orbit or building server farms in the permanently shadowed craters of the moon is gaining immense traction. It's everywhere right now.
 
 And the venture capital logic seems unassailable at a glance, right? The Earth is running out of energy and the atmosphere is getting too hot. So put the computers in space, power them with infinite, unfiltered solar energy arrays and let them radiate their waste heat out into the infinite cold of the cosmos. It sounds like an ultimate solution to the terrestrial energy crisis.
 
-It sounds like sci-fi perfection, but Fliction absolutely eviscerates this idea. The paper states with mathematical certainty that orbital computation is thermodynamically non-xylomorphic by construction. It declares that a space data center's lambda is strictly greater than or equal to one.
+It sounds like sci-fi perfection, but Flyxion absolutely eviscerates this idea. The paper states with mathematical certainty that orbital computation is thermodynamically non-xylomorphic by construction. It declares that a space data center's lambda is strictly greater than or equal to one.
 
 It is permanently, irreversibly expansive. Why? I mean, if space is so incredibly cold, why is heat a problem? Because space isn't actually cold in the way we intuitively understand cold. Space is empty. 
 
@@ -212,7 +212,7 @@ The mass of the radiators alone makes the physics impossible. The International 
 
 But let's play devil's advocate for a second. Let's say a tech billionaire says, I don't care if the radiators are the size of a city. Rockets at Starship are bringing launch costs down to pennies on the dollar.
 
-I'm going to mine asteroids to build the radiators and the solar energy is completely free. Fliction anticipates this, right? They call it the cost compression fallacy. The cost compression fallacy is the belief that if you make the inputs cheap enough, you can ignore the structure of the system.
+I'm going to mine asteroids to build the radiators and the solar energy is completely free. Flyxion anticipates this, right? They call it the cost compression fallacy. The cost compression fallacy is the belief that if you make the inputs cheap enough, you can ignore the structure of the system.
 
 But Lambda doesn't care about your profit margins. Lambda is about the structure of physical dissipation. Even if your solar energy is completely free and your rocket launches cost zero dollars, a space data center takes the energy, performs the math and expels 100 percent of its thermal entropy out into the infinite void of the universe.
 
@@ -234,11 +234,11 @@ Modern distributed A.I. training requires thousands of GPUs constantly talking t
 
 The processors spend 99 percent of their time waiting for the speed of light. You literally cannot train a frontier A.I. model across lunar distance. So the Space Data Center is thermodynamically doomed to expand its entropy dependence, physically impossible to maintain without infinite external inputs and too slow to actually do the A.I. tasks it was built to solve.
 
-It's an absolute dead end, which forcefully grounds us back on Earth. If the vacuum of space breaks the lambda math, what are the actual physical dials we can turn here on the surface to get our lambda below one? To map out the terrestrial solution, FlickShin models the Earth's compute infrastructure as a continuous system of partial differential equations, a PDE system. Let's pause to make sure everyone is on the same page.
+It's an absolute dead end, which forcefully grounds us back on Earth. If the vacuum of space breaks the lambda math, what are the actual physical dials we can turn here on the surface to get our lambda below one? To map out the terrestrial solution, Flyxion models the Earth's compute infrastructure as a continuous system of partial differential equations, a PDE system. Let's pause to make sure everyone is on the same page.
 
 A partial differential equation isn't just a static algebra formula. It's a way to mathematically model how multiple different things like the spread of heat through a metal plate or the flow of a fluid are changing simultaneously across space and time. Exactly. 
 
-It maps continuous interacting change. FlickShin's PDE model distills the entire infrastructure down to three fundamental interacting variables. The first is rho, which represents the usable physical substrate, the actual servers, the silicon, the copper wires.
+It maps continuous interacting change. Flyxion's PDE model distills the entire infrastructure down to three fundamental interacting variables. The first is rho, which represents the usable physical substrate, the actual servers, the silicon, the copper wires.
 
 OK, rho is the hardware. The second is theta, which is the excess thermal field, the heat generated by the computation. And the third is M, which represents the ongoing degradation, the physical wear and tear of the substrate.
 
@@ -260,7 +260,7 @@ The trains slow down. Efficiency drops, which lowers revenue, which further decr
 
 You must design infrastructure where the repair capacity inherently overwhelms the physical degradation. And the third dial is Da, the diffusion to reaction ratio. What does that one track? Da measures geographical mixing.
 
-Are the resources, the spare parts, the economic capital, the technicians moving fast enough across the geographic space to reach the places where the degradation is happening? If a server farm in a remote desert breaks down, but the spare parts are trapped in a warehouse thousands of miles away, your diffusion is too slow to support the reaction. I want to focus on a very specific, fascinating moment in the paper involving these PDEs. Fliction doesn't just leave these as abstract concepts.
+Are the resources, the spare parts, the economic capital, the technicians moving fast enough across the geographic space to reach the places where the degradation is happening? If a server farm in a remote desert breaks down, but the spare parts are trapped in a warehouse thousands of miles away, your diffusion is too slow to support the reaction. I want to focus on a very specific, fascinating moment in the paper involving these PDEs. Flyxion doesn't just leave these as abstract concepts.
 
 They run a specific numerical simulation for a steady state system and they find a terrifyingly exact threshold. Let's talk about the 36 percent line. Right. 
 

@@ -1,0 +1,3260 @@
+WEBVTT
+
+00:00.000 --> 00:03.240
+So imagine you have this highly sensitive digital file.
+
+00:03.440 --> 00:08.960
+Like, let's say it's a document with literally all your passwords, your bank routing numbers, I mean, just everything.
+
+00:09.360 --> 00:11.320
+Right. Your entire life just sitting in a file.
+
+00:11.520 --> 00:13.800
+Exactly. And obviously, you want to keep it safe.
+
+00:14.080 --> 00:17.020
+So you lock it inside this high-security digital vault.
+
+00:17.240 --> 00:17.640
+Makes sense.
+
+00:18.040 --> 00:19.320
+But you don't stop there, right?
+
+00:19.640 --> 00:22.240
+You take that vault and you put it inside another vault.
+
+00:22.600 --> 00:28.540
+Then you, like, bury that second vault ten folders deep inside some hidden directory on a really secure server.
+
+00:28.540 --> 00:30.540
+And you probably feel incredibly safe doing that.
+
+00:30.720 --> 00:38.180
+Oh, absolutely. I mean, visually, mathematically, you feel like you have created this impenetrable fortress of nested layers.
+
+00:38.960 --> 00:50.820
+But what if I told you that in the bizarre, totally hidden architecture of computer science, putting that file deeper into the vault might have just accidentally granted it the power to delete your entire hard drive?
+
+00:51.360 --> 00:57.680
+It is a genuinely terrifying thought. But mathematically speaking, it is entirely possible.
+
+00:57.680 --> 01:00.600
+Wait, really? Just by putting it deeper in a folder?
+
+01:01.200 --> 01:08.120
+Yes. Because, well, we rely so heavily on our physical intuition when we interact with computers.
+
+01:08.680 --> 01:14.560
+But digital geometry, it absolutely does not obey the laws of physical space.
+
+01:14.800 --> 01:18.740
+And that profound disconnect is exactly what we are exploring today.
+
+01:18.980 --> 01:25.240
+You know, usually when we think about physical architecture, there is this expectation of just, well, absolute rigidity.
+
+01:25.240 --> 01:26.360
+Right, like a building.
+
+01:26.600 --> 01:33.020
+Yeah. You look at a blueprint, the walls are these thick black lines, and the architect just points and says, you know, there is the room.
+
+01:33.280 --> 01:36.900
+That is the boundary. You are either inside the room or you are outside the room.
+
+01:37.100 --> 01:39.620
+It's binary. It's clean. It's comforting.
+
+01:40.260 --> 01:45.280
+I mean, human beings just really like things to be visible and categorized into neat little containers.
+
+01:45.280 --> 01:50.960
+Exactly. And we carry that exact same physical expectation right into our digital lives.
+
+01:51.360 --> 01:57.920
+When you, the listener, double-click a folder on your computer, your brain naturally tells you that you are now inside that folder.
+
+01:58.120 --> 01:59.720
+You feel physically located in it.
+
+01:59.800 --> 02:05.220
+Right. When you run a Python script, you expect the code to execute inside its little block.
+
+02:05.480 --> 02:10.860
+When your character walks through a dungeon door in a video game, you absolutely expect to be inside the next room.
+
+02:10.860 --> 02:13.960
+But what if inside is just a hallucination?
+
+02:14.160 --> 02:22.760
+Oh, it is a hallucination. It's a very useful one, obviously designed by programmers to keep us from totally losing our minds, but a hallucination nonetheless.
+
+02:23.160 --> 02:24.580
+So it's just a UI trick.
+
+02:24.880 --> 02:32.880
+Basically, yeah. Because when you step into the actual mathematical world of computational contexts, that beautiful rigid blueprint completely shatters.
+
+02:33.300 --> 02:37.840
+We are actually looking at an architectural landscape that is, well, it's highly deceptive.
+
+02:37.840 --> 02:41.160
+It is the absolute definition of an architectural illusion.
+
+02:41.820 --> 02:44.700
+And that is exactly our mission for today's deep dive.
+
+02:45.040 --> 02:52.720
+We are taking a giant magnifying glass to a brilliant, independent, 2026 paper called The Geometry of Scope.
+
+02:53.120 --> 02:59.740
+Yep. Subtitled Context, Visibility, and Translation Across Formal Systems by a researcher named Flyxion.
+
+03:00.220 --> 03:04.760
+Right. And our goal today is to really dissect this idea of context.
+
+03:04.760 --> 03:12.940
+Every single time you open a folder or write a line of code or explore a virtual world, you are interacting with context.
+
+03:13.260 --> 03:13.840
+And it's everywhere.
+
+03:14.340 --> 03:21.760
+It is. So we are going to explore the hidden mathematical framework that links all these wildly diverse digital worlds together.
+
+03:21.760 --> 03:34.320
+And by the end of this hour, I promise we are going to prove to you that these spaces are entirely different, totally bizarre geometric shapes that are just masquerading as simple, familiar trees.
+
+03:34.860 --> 03:36.680
+Masquerading is really the perfect word for it.
+
+03:37.020 --> 03:44.720
+I mean, we intuitively think of our digital environments like folders, file systems, game levels as these nested branching trees.
+
+03:44.940 --> 03:45.980
+Right. Like a family tree.
+
+03:45.980 --> 03:50.740
+Exactly. A root folder, branching into subfolders, branching into individual files.
+
+03:51.320 --> 03:56.640
+But to truly understand the math of context, we first have to completely abandon that assumption.
+
+03:57.020 --> 04:01.300
+Okay. Let's unpack this because I need to push back on this fundamental premise right away.
+
+04:01.720 --> 04:04.320
+Why is it so wrong to just think of my files as a tree?
+
+04:04.660 --> 04:05.580
+Well, because...
+
+04:05.580 --> 04:11.860
+Like I turn on my computer, I open my C drive, I click into my documents folder, and I open my taxes folder.
+
+04:11.960 --> 04:15.460
+That is a straight line down a branch. It's a tree. What is the problem with that model?
+
+04:15.460 --> 04:20.400
+Well, it's not a problem if your system is exclusively a classic nested hierarchy.
+
+04:20.800 --> 04:24.520
+In a pure hierarchy, you have what mathematicians actually call a rooted tree.
+
+04:25.380 --> 04:26.420
+Okay. Rooted tree.
+
+04:26.540 --> 04:31.940
+Yeah. Meaning every single context, every single folder has exactly one immediate container.
+
+04:32.500 --> 04:36.000
+Your taxes folder has exactly one parent, which is the documents folder.
+
+04:36.440 --> 04:38.860
+The documents folder has one parent, the C drive.
+
+04:39.440 --> 04:41.080
+Right. That works perfectly.
+
+04:41.540 --> 04:42.640
+It works. Yes.
+
+04:42.640 --> 04:46.440
+But let me ask you, have you ever created a shortcut on your desktop?
+
+04:47.240 --> 04:50.060
+Oh, of course. Literally all the time my desktop is a mess.
+
+04:50.280 --> 04:52.340
+Or maybe a hard link in a Unix system.
+
+04:52.760 --> 04:59.940
+The thing is, when you do that, you suddenly have a file or a directory that effectively exists in multiple places at the exact same time.
+
+05:00.280 --> 05:02.000
+Oh, I see where you're going with this.
+
+05:02.000 --> 05:07.760
+Right. It can be accessed from the desktop, and it can also be accessed from deep within the system drive.
+
+05:08.360 --> 05:13.720
+So the moment you introduce that hard link, that file suddenly has two incomparable parents.
+
+05:14.100 --> 05:17.460
+Wow. Okay, yeah, that completely breaks the tree shape, doesn't it?
+
+05:17.720 --> 05:18.140
+Completely.
+
+05:18.140 --> 05:24.580
+Mathematically, a structure where a single node has more than one parent simply cannot be a tree.
+
+05:25.500 --> 05:29.920
+The rigid geometry breaks, and it becomes what we call a directed graph.
+
+05:30.520 --> 05:31.000
+Oh, I see.
+
+05:31.460 --> 05:33.420
+So it's a graph with multiple parents.
+
+05:33.980 --> 05:35.840
+And it's not just files, either.
+
+05:36.480 --> 05:39.600
+If I think about programming, what about like a shared module?
+
+05:39.880 --> 05:40.940
+That's a perfect example.
+
+05:40.940 --> 05:49.820
+Like if I write a piece of code that calculates dates, and three completely different software applications on my server all pull from that exact same date module,
+
+05:50.000 --> 05:51.940
+that module doesn't just live on one branch.
+
+05:52.000 --> 05:54.240
+It's plugged into all three programs simultaneously.
+
+05:54.520 --> 05:54.980
+Precisely.
+
+05:55.440 --> 06:01.860
+And if we try to map that as a tree, we are just forcing a complex web into a shape that absolutely doesn't fit.
+
+06:02.440 --> 06:06.700
+But, you know, it gets even weirder when you introduce graphs with cycles.
+
+06:07.560 --> 06:08.000
+Cycles.
+
+06:08.340 --> 06:09.220
+Like loops.
+
+06:09.480 --> 06:10.860
+Yes, exactly, loops.
+
+06:10.940 --> 06:14.600
+Think about mutually recursive modules in software architecture.
+
+06:15.440 --> 06:18.600
+Module A absolutely cannot function without calling module B.
+
+06:19.400 --> 06:22.260
+But module B cannot function without calling module A.
+
+06:22.700 --> 06:23.180
+Oh, man.
+
+06:23.260 --> 06:24.660
+They just point right back at each other.
+
+06:24.880 --> 06:25.220
+They do.
+
+06:25.800 --> 06:31.580
+Or, you know, to use a more spatial example that might be easier to visualize, think about portals in a video game.
+
+06:31.880 --> 06:33.340
+Oh, like the actual game Portal.
+
+06:33.780 --> 06:35.900
+Or really any game with non-Euclidean geometry.
+
+06:36.240 --> 06:36.460
+Right.
+
+06:36.460 --> 06:41.420
+So you walk through a door on the left side of room A and you instantly end up in room B.
+
+06:41.920 --> 06:46.300
+You walk through a door in room B and you are instantly deposited right back into room A.
+
+06:46.300 --> 06:50.800
+Okay, if I tried to draw that as a tree diagram, I would literally lose my mind.
+
+06:50.800 --> 06:57.180
+I draw room A, then I draw a line down to room B, then I draw a line down to room A again, then room B.
+
+06:57.460 --> 06:59.920
+You'd just be drawing an infinite vine down the page.
+
+06:59.920 --> 07:01.600
+Yeah, it would literally never stop.
+
+07:01.820 --> 07:06.460
+Which is exactly why the tree model is a complete mathematical failure for these types of systems.
+
+07:07.440 --> 07:11.920
+In graph theory, when we map out everywhere you can possibly reach from a given starting point...
+
+07:12.640 --> 07:14.640
+Which is what, the whole universe of options?
+
+07:15.080 --> 07:15.940
+Basically, yeah.
+
+07:16.240 --> 07:19.140
+The formal term is the reflexive transitive closure.
+
+07:19.800 --> 07:25.760
+When you map that out, a cycle collapses all of those interconnected rooms into one single equivalence class.
+
+07:26.120 --> 07:29.840
+Meaning they're basically treated as the same mathematical blob.
+
+07:30.160 --> 07:30.540
+Exactly.
+
+07:31.220 --> 07:37.120
+A basic tree structure just cannot distinguish a cycle of portals from a simple list of aliases.
+
+07:37.920 --> 07:39.700
+The geometry completely breaks down.
+
+07:40.160 --> 07:43.300
+So, the tree illusion is dead.
+
+07:43.920 --> 07:46.820
+We are living in a world of complex, tangled graphs.
+
+07:46.820 --> 07:52.840
+But if the structure is this tangled, how does the computer actually know where I am at any given moment?
+
+07:53.220 --> 07:54.580
+That is the million-dollar question.
+
+07:54.940 --> 07:58.500
+Because Flyxion talks about this in Proposition 2.3, right?
+
+07:58.500 --> 08:03.120
+Detailing this really sharp distinction between a route and an endpoint.
+
+08:03.500 --> 08:06.320
+What is the computer actually calculating in the background?
+
+08:06.820 --> 08:11.480
+So, this is a massive divide in how digital systems understand location.
+
+08:12.440 --> 08:14.900
+Let's say our system is that tangled directed graph.
+
+08:15.640 --> 08:19.600
+The computer can actually record your location in one of two very distinct ways.
+
+08:19.600 --> 08:20.340
+Okay.
+
+08:20.800 --> 08:21.620
+What are they?
+
+08:22.100 --> 08:24.760
+Well, it can record the actual path you took to get there.
+
+08:25.100 --> 08:27.540
+Like the sequence of links you clicked, which is the route.
+
+08:28.620 --> 08:31.460
+Or, it can just record the reachability.
+
+08:31.960 --> 08:34.280
+The final node you landed on, which is the endpoint.
+
+08:34.660 --> 08:35.600
+Just the destination.
+
+08:35.600 --> 08:36.320
+Exactly.
+
+08:36.760 --> 08:40.120
+And the mathematical theories for these two approaches are fundamentally different.
+
+08:40.860 --> 08:50.940
+Flyxion states that a functor from the path category to the reachability preorder is only faithful if the graph has at most one directed path between any two vertices.
+
+08:51.400 --> 08:52.140
+Whoa, whoa, hold on.
+
+08:52.620 --> 08:56.720
+A functor, reachability preorder, you completely lost me there.
+
+08:57.300 --> 08:58.800
+Let's bring this back to Earth.
+
+08:59.100 --> 09:00.120
+Let me try an analogy.
+
+09:00.500 --> 09:01.220
+Okay, go for it.
+
+09:01.220 --> 09:12.540
+Is this like the difference between giving someone turn-by-turn directions to a restaurant, like take a left on Main, a right on Oak, and go through the alley, versus just texting them the exact GPS coordinates of the restaurant?
+
+09:13.140 --> 09:14.780
+That's actually a really good start, yeah.
+
+09:15.020 --> 09:20.380
+But let's push the analogy a bit further to understand why the computer actually cares which one you use.
+
+09:20.560 --> 09:20.920
+Okay.
+
+09:21.660 --> 09:24.760
+Let's say you take the turn-by-turn route through the alley, right?
+
+09:25.000 --> 09:26.740
+And your friend takes the main highway.
+
+09:26.740 --> 09:32.080
+But you both end up at the exact same GPS coordinates, sitting at a table in the restaurant.
+
+09:32.640 --> 09:34.120
+Right, we're at the exact same endpoint.
+
+09:34.480 --> 09:34.860
+Exactly.
+
+09:35.360 --> 09:43.120
+Now, if the system only tracks the endpoint, the GPS coordinates, it completely discards the entire history of how you got there.
+
+09:43.500 --> 09:45.680
+It just knows user is at table 5.
+
+09:46.220 --> 09:49.500
+Right, which seems totally fine if all we care about is eating dinner.
+
+09:49.740 --> 09:50.920
+Why does it matter how I got there?
+
+09:50.920 --> 09:57.440
+But what if taking the highway required paying a toll, and taking the alley required knowing a secret password?
+
+09:58.340 --> 09:59.140
+Oh, I see.
+
+09:59.580 --> 09:59.800
+Right.
+
+10:00.020 --> 10:06.620
+If the computer wants to let you retrace your steps or reverse your actions, the endpoint model fails catastrophically.
+
+10:07.140 --> 10:11.240
+It literally doesn't know if it should ask you for the toll or the password on your way out.
+
+10:11.240 --> 10:19.500
+But, if it tracks the route, the exact arrows you traversed in that graph, it retains the entire history of your journey.
+
+10:20.180 --> 10:21.660
+Okay, I totally see that now.
+
+10:22.200 --> 10:30.340
+So, if there is only one single road to the restaurant, the GPS coordinate and the turn-by-turn directions effectively contain the exact same amount of useful information.
+
+10:30.760 --> 10:31.100
+Yes.
+
+10:31.100 --> 10:37.540
+And that is exactly what I meant by the math only being faithful if there is, at most, one directed path.
+
+10:38.000 --> 10:38.360
+Right.
+
+10:39.080 --> 10:47.780
+But the moment you have two ways to get to the same file, like a shortcut on your desktop and the actual file buried deep in your C drive, the endpoint model loses vital information.
+
+10:48.360 --> 10:48.780
+Exactly.
+
+10:48.780 --> 10:58.400
+A system that tracks the route will treat arriving via the desktop shortcut as a completely different mathematical state than arriving via the C drive deep dive.
+
+10:58.400 --> 11:02.220
+Even though you are looking at the exact same document.
+
+11:02.660 --> 11:03.400
+That makes total sense.
+
+11:03.560 --> 11:09.960
+And we're going to see how that route versus endpoint confusion causes actual chaos in file systems a bit later.
+
+11:10.260 --> 11:16.340
+But before we get there, we really need to talk about what you can actually do once you've arrived at your destination.
+
+11:16.600 --> 11:16.780
+Right.
+
+11:16.880 --> 11:17.360
+The permissions.
+
+11:18.000 --> 11:18.220
+Yeah.
+
+11:18.660 --> 11:21.040
+So, we know where we are in a context structure.
+
+11:21.400 --> 11:24.240
+The natural next question is, what can we do there?
+
+11:24.240 --> 11:28.400
+And this brings us to a concept the paper calls the independence principle.
+
+11:28.800 --> 11:32.740
+I have to say, this part totally upended how I think about digital permissions.
+
+11:33.380 --> 11:38.440
+It is incredibly counterintuitive to how human beings normally organize space.
+
+11:39.560 --> 11:45.300
+Phlyoxian introduces these three independent subsets that exist at literally any given context.
+
+11:45.660 --> 11:45.880
+Okay.
+
+11:46.040 --> 11:46.860
+Lay them out for us.
+
+11:47.160 --> 11:49.960
+So, first we have K, which represents knowledge.
+
+11:50.540 --> 11:53.720
+This is all the information available at that specific location.
+
+11:53.720 --> 11:54.760
+K is knowledge.
+
+11:54.980 --> 11:55.320
+Got it.
+
+11:55.860 --> 12:01.080
+And we have V, which is visibility, or basically the presentation of that knowledge to the user.
+
+12:01.680 --> 12:06.720
+And finally, we have A, which is authority, meaning the actions you are actually permitted to execute.
+
+12:07.200 --> 12:07.440
+Okay.
+
+12:07.560 --> 12:10.400
+So, K is knowledge, V is visibility, A is authority.
+
+12:10.760 --> 12:11.300
+Simple enough.
+
+12:11.500 --> 12:20.320
+And the really critical theorem here, Proposition 3.1, states there is no forced monotonicity between these subsets and the depth of the hierarchy.
+
+12:20.960 --> 12:21.200
+Okay.
+
+12:21.240 --> 12:22.140
+Let's unpack this.
+
+12:22.140 --> 12:24.840
+What is no forced monotonicity?
+
+12:25.180 --> 12:26.040
+Break that down for us.
+
+12:26.100 --> 12:28.340
+What exactly is monotonicity in this context?
+
+12:29.060 --> 12:36.040
+Well, monotonicity in mathematics basically describes a function that moves consistently in one single direction.
+
+12:36.380 --> 12:39.920
+It either only ever increases or it only ever decreases.
+
+12:40.280 --> 12:41.880
+So, it never zigzags.
+
+12:41.880 --> 12:42.540
+Exactly.
+
+12:42.700 --> 12:43.440
+No zigzagging.
+
+12:43.720 --> 12:45.100
+Think about physical space.
+
+12:45.420 --> 12:55.780
+If you put a small box inside a medium box and put that inside a large box, the physical capacity of those boxes decreases monotonically.
+
+12:56.000 --> 12:58.060
+The deeper you go, the smaller the volume.
+
+12:58.260 --> 13:00.780
+It is a strict rule of physics.
+
+13:00.780 --> 13:01.700
+Right.
+
+13:01.700 --> 13:03.140
+It's like Russian nesting dolls.
+
+13:03.260 --> 13:07.600
+The innermost doll is always, strictly, undeniably the smallest.
+
+13:07.800 --> 13:09.000
+It has to be or it wouldn't fit.
+
+13:09.440 --> 13:09.760
+Exactly.
+
+13:10.560 --> 13:18.340
+And because we use these physical metaphors like folders for our digital lives, we naturally assume digital hierarchies work the exact same way.
+
+13:18.480 --> 13:19.060
+We totally do.
+
+13:19.060 --> 13:28.360
+We just assume that as you go deeper into a nested structure, your visibility must shrink sequentially or your authority must be reduced sequentially.
+
+13:29.040 --> 13:31.560
+But Phyachesis proves that is a complete myth.
+
+13:32.200 --> 13:33.620
+A very dangerous myth, honestly.
+
+13:34.000 --> 13:43.460
+Hierarchical containment, just being nested inside something else, enforces zero mathematical rules about how knowledge, visibility, or authority behave.
+
+13:44.000 --> 13:45.380
+They are completely independent.
+
+13:46.160 --> 13:47.940
+Completely independent assignments.
+
+13:47.940 --> 13:50.820
+Okay, let's make this really concrete for the listener.
+
+13:51.360 --> 13:53.040
+Think about a hidden file on your computer.
+
+13:53.760 --> 13:56.000
+That file exists in K, right?
+
+13:56.080 --> 13:57.880
+The total knowledge available in that folder.
+
+13:58.300 --> 14:01.020
+The hard drive physically knows the file is sitting right there.
+
+14:01.180 --> 14:01.380
+Right.
+
+14:01.460 --> 14:02.620
+The system knows it's there.
+
+14:03.020 --> 14:11.080
+But unless you have specifically gone into your settings and clicked, you know, show hidden files, it does not exist in V, the visibility.
+
+14:11.880 --> 14:12.320
+Exactly.
+
+14:12.820 --> 14:14.740
+Visibility is just a subset of knowledge.
+
+14:14.740 --> 14:21.820
+The graphical interface can't show you a file that doesn't exist, but it can absolutely hide things that do exist.
+
+14:21.820 --> 14:24.300
+And then imagine a read-only file.
+
+14:24.300 --> 14:26.000
+It is in V, right?
+
+14:26.080 --> 14:28.480
+You can clearly see the icon sitting right there on your desktop.
+
+14:28.860 --> 14:33.300
+But if you try to hit delete or try to edit it, the computer throws an error.
+
+14:33.960 --> 14:37.200
+The delete action is just not in A, your authority.
+
+14:37.200 --> 14:38.200
+Exactly.
+
+14:38.200 --> 14:44.860
+And to prove just how wild this gets, Valetian provides this brilliant finite counterexample in the paper.
+
+14:45.400 --> 14:47.680
+They construct a basic three-element chain.
+
+14:48.260 --> 14:49.100
+Okay, walk us through it.
+
+14:49.700 --> 14:57.100
+So context one is the outer layer, context two is nested inside one, and context three is nested inside two.
+
+14:57.860 --> 15:01.460
+It is a strict hierarchy, exactly like your Russian nesting dolls.
+
+15:01.460 --> 15:05.960
+Okay, I'm picturing three nesting dolls. Outer, middle, inner.
+
+15:06.500 --> 15:09.880
+Now, let's look at how knowledge is assigned in their mathematical proof.
+
+15:10.500 --> 15:14.440
+The total universe of information items are just the numbers one, two, three, and four.
+
+15:14.860 --> 15:16.120
+Keep it simple. I like it.
+
+15:16.360 --> 15:20.600
+So at the outermost layer, context one, the knowledge is the set one, two.
+
+15:21.100 --> 15:26.560
+You open the doll, step deeper into context two, and the knowledge shrinks to just the set one.
+
+15:26.560 --> 15:31.560
+Okay, that makes perfect sense so far. We went deeper, the box got smaller, we see less.
+
+15:31.700 --> 15:33.740
+It feels like a very secure sandbox.
+
+15:34.340 --> 15:39.680
+But then, you open the middle doll and step deeper again, into the innermost layer, context three.
+
+15:40.280 --> 15:44.440
+And suddenly, out of nowhere, the knowledge set expands to one, three.
+
+15:45.220 --> 15:45.760
+Wait, what?
+
+15:46.280 --> 15:54.520
+It shrunk from one, two down to just one, but then it bounced back up and grabbed a completely new piece of data, the three?
+
+15:54.520 --> 16:01.260
+Yes. The available information went from one, two, to one, and then suddenly to one, three.
+
+16:01.920 --> 16:06.440
+That completely breaks the idea of a smooth, predictable, monotonic reduction.
+
+16:06.980 --> 16:08.260
+It totally zigzagged.
+
+16:08.500 --> 16:12.940
+It did. It is neither consistently increasing nor consistently decreasing.
+
+16:13.300 --> 16:15.800
+That completely ruins the nesting doll metaphor.
+
+16:16.140 --> 16:20.960
+The innermost doll somehow holds an object that the outer dolls didn't even know existed.
+
+16:20.960 --> 16:25.440
+And it gets so much worse when you apply this erratic behavior to authority.
+
+16:26.320 --> 16:31.180
+In Flyxion's example, the authority at the outermost layer is just the right to read.
+
+16:31.560 --> 16:35.820
+At the middle layer, it changes to just the right to write.
+
+16:36.380 --> 16:36.700
+Okay.
+
+16:36.880 --> 16:42.060
+And at the deepest, innermost layer, you suddenly have the right to read, write, and execute.
+
+16:42.440 --> 16:43.080
+Oh my God.
+
+16:43.540 --> 16:46.020
+The security implications of this are just staggering.
+
+16:46.020 --> 16:50.060
+Going back to my hook at the beginning of the show, you know, the vault inside the vault.
+
+16:50.460 --> 16:50.540
+Right.
+
+16:51.000 --> 17:01.360
+It is this massive human bias to assume that if you put a program into a sandbox, like a nested subfolder, it strictly has less power than the parent folder.
+
+17:01.660 --> 17:02.860
+Yes, everyone assumes that.
+
+17:03.020 --> 17:07.220
+But mathematically, nesting alone enforces zero rules about authority.
+
+17:07.220 --> 17:15.740
+You could step into a deeper, buried subfolder, execute a file, and suddenly trigger a script that grants you root access to the entire machine.
+
+17:16.220 --> 17:20.740
+What's fascinating here is that that is precisely the danger Flyxion is highlighting.
+
+17:21.140 --> 17:27.180
+If you rely on the geometry of the tree to enforce your security, you are relying on an illusion.
+
+17:27.800 --> 17:30.760
+It's just a feeling of safety, not actual math.
+
+17:30.760 --> 17:31.240
+Exactly.
+
+17:31.780 --> 17:37.820
+The Unix operating system actually has a feature called a set UID program that behaves exactly like this.
+
+17:38.520 --> 17:45.840
+You execute a file that is buried deep down in the hierarchy, but upon entry, your authority suddenly spikes to match the file's owner.
+
+17:46.260 --> 17:47.700
+Who might be the sysadmin.
+
+17:48.000 --> 17:48.520
+Exactly.
+
+17:48.520 --> 17:53.100
+Your power violently expands, completely ignoring the depth of the hierarchy.
+
+17:54.120 --> 18:00.240
+The geometry of scope proves that treating an execution environment like a physical container is a massive vulnerability.
+
+18:00.760 --> 18:05.340
+Okay, so knowledge, visibility, and authority are totally independent of depth.
+
+18:05.520 --> 18:08.000
+The nesting dolls are lying to us.
+
+18:08.440 --> 18:15.620
+But if these attributes are separate from where you physically are in the system, how do those things change when you actually move around?
+
+18:15.620 --> 18:18.340
+I mean, I'm navigating through folders on my computer all day long.
+
+18:19.220 --> 18:22.080
+That brings us to a really fascinating mathematical puzzle.
+
+18:22.620 --> 18:25.540
+The difference between moving and squinting.
+
+18:25.780 --> 18:26.620
+Moving and squinting.
+
+18:26.620 --> 18:32.740
+Or as Flyxion informally defines it in Proposition 4.1, the commutation criteria.
+
+18:33.300 --> 18:45.900
+This explores the strict mathematical separation between navigating, which is changing your context, moving from folder to folder, and disclosing, which is changing your visibility settings within a context.
+
+18:45.900 --> 18:55.280
+So navigating is double-clicking a new folder, disclosing is toggling a setting like hitting a keyboard shortcut to show hidden files, or show file extensions?
+
+18:55.780 --> 18:56.100
+Correct.
+
+18:56.600 --> 19:00.220
+And the big mathematical question is, do these two operations commute?
+
+19:00.880 --> 19:01.320
+Commute?
+
+19:01.860 --> 19:02.080
+Yeah.
+
+19:02.220 --> 19:07.580
+In basic algebra, operations commute if changing their order doesn't change the final result.
+
+19:07.680 --> 19:10.620
+Like 3 plus 5 is 8, 5 plus 3 is also 8.
+
+19:11.080 --> 19:12.080
+The order doesn't matter.
+
+19:12.180 --> 19:12.420
+Right.
+
+19:12.520 --> 19:13.220
+Addition commutes.
+
+19:13.220 --> 19:22.700
+But in a digital system, does navigating and then disclosing yield the exact same mathematical state as disclosing and then navigating?
+
+19:23.220 --> 19:23.380
+Okay.
+
+19:23.560 --> 19:26.400
+Let me try another analogy here to wrap my head around this.
+
+19:27.100 --> 19:29.300
+Think about wearing a pair of polarized sunglasses.
+
+19:30.120 --> 19:30.440
+Okay.
+
+19:30.640 --> 19:31.020
+Sunglasses.
+
+19:31.680 --> 19:33.840
+Those sunglasses are your disclosure setting, right?
+
+19:33.940 --> 19:38.300
+They change your visibility, cutting out glare so you can see hidden things in the water.
+
+19:38.300 --> 19:47.780
+Now, do you put the sunglasses on before you walk from the beach into a glaring room, or do you put them on after you cross the threshold into the room?
+
+19:48.280 --> 19:54.900
+That's close, but it's actually a bit more dangerous than just sunglasses, because sunglasses only affect you, the observer.
+
+19:55.300 --> 19:55.600
+True.
+
+19:55.600 --> 20:00.100
+But what if the act of disclosing actually interacts with the rules of the room itself?
+
+20:01.040 --> 20:07.760
+The question Proposition 4.1 asks is, does crossing the threshold mathematically force the sunglasses off your face?
+
+20:08.360 --> 20:11.900
+Or does the room refuse to let you in if you're already wearing them?
+
+20:12.900 --> 20:16.880
+So if I put them on, then walk in, am I still wearing them?
+
+20:17.220 --> 20:19.660
+Does the system actually respect my choice?
+
+20:19.660 --> 20:23.200
+It all depends on what Flyxion calls the intertwining condition.
+
+20:24.240 --> 20:29.440
+It's really about how the system's policy carries your display settings across a geometric transition.
+
+20:30.340 --> 20:33.740
+The paper breaks this down by looking at three real-world file manager behaviors.
+
+20:34.300 --> 20:35.540
+Let's actually walk through them.
+
+20:35.720 --> 20:37.720
+Let's do it. Walk me through the first scenario.
+
+20:38.280 --> 20:40.380
+So, scenario one is the global toggle.
+
+20:41.300 --> 20:44.960
+In this system, your sunglasses are effectively super-glued to your face.
+
+20:45.640 --> 20:47.160
+Okay. I like that.
+
+20:47.160 --> 20:50.520
+The show hidden file setting is a global variable.
+
+20:51.340 --> 20:55.500
+If you turn it on in folder A and then navigate to folder B, it stays on.
+
+20:56.220 --> 21:00.100
+In this scenario, navigating and disclosing absolutely do commute.
+
+21:00.400 --> 21:02.220
+Because the order doesn't change anything.
+
+21:02.420 --> 21:02.820
+Exactly.
+
+21:03.240 --> 21:06.140
+Because whether you toggle the setting and then move to folder B,
+
+21:06.540 --> 21:08.860
+or you move to folder B and then toggle the setting,
+
+21:09.280 --> 21:11.480
+the final mathematical state is identical.
+
+21:12.080 --> 21:15.000
+You're standing in folder B with hidden files visible.
+
+21:15.420 --> 21:16.940
+Okay. That's the easy one.
+
+21:17.160 --> 21:17.520
+Right.
+
+21:17.700 --> 21:19.520
+Three plus five equals five plus three.
+
+21:19.860 --> 21:20.600
+Order doesn't matter.
+
+21:21.000 --> 21:21.280
+Right.
+
+21:22.220 --> 21:24.860
+But scenario two is the per-folder toggle.
+
+21:25.840 --> 21:29.580
+Here, the system remembers a specific preference for each individual folder.
+
+21:29.580 --> 21:31.640
+You are standing in folder A.
+
+21:32.220 --> 21:34.140
+You toggle show hidden files on.
+
+21:34.620 --> 21:35.980
+Then you navigate to folder B.
+
+21:36.700 --> 21:37.500
+What happens?
+
+21:38.460 --> 21:38.900
+Oh, wait.
+
+21:39.040 --> 21:40.200
+Folder B has its own memory.
+
+21:40.720 --> 21:45.140
+So, if folder B was previously set by me to hide files,
+
+21:45.280 --> 21:47.600
+I cross the threshold and the files instantly disappear.
+
+21:48.140 --> 21:52.260
+It's like the room has its own lighting rules that completely override my sunglasses.
+
+21:52.260 --> 21:52.900
+Exactly.
+
+21:52.900 --> 21:55.820
+In this case, the operations do not commute.
+
+21:56.540 --> 22:00.400
+If you toggle the setting in folder A and then move to folder B,
+
+22:00.700 --> 22:04.780
+you arrive and you are subjected to folder B's default visibility.
+
+22:05.260 --> 22:05.640
+Right.
+
+22:05.640 --> 22:09.180
+But if you move to folder B first and then hit the toggle,
+
+22:09.520 --> 22:12.240
+you are actively changing folder B's setting to show.
+
+22:12.960 --> 22:16.820
+The final state of your visibility is completely different depending on the sequence of operations.
+
+22:17.520 --> 22:20.100
+Move, then toggle, yields visibility.
+
+22:20.740 --> 22:22.780
+Toggle, then move, yields blindness.
+
+22:23.460 --> 22:23.680
+Wow.
+
+22:23.800 --> 22:23.980
+Okay.
+
+22:24.060 --> 22:25.280
+And it gets even more strict, right?
+
+22:25.360 --> 22:27.120
+The paper mentions a third scenario?
+
+22:27.480 --> 22:27.760
+Yes.
+
+22:27.960 --> 22:28.740
+The default reset.
+
+22:29.640 --> 22:33.720
+This is a highly restrictive system where entering literally any new context
+
+22:33.720 --> 22:38.080
+automatically wipes your visibility settings right back to a strict factory default.
+
+22:38.540 --> 22:38.900
+Ouch.
+
+22:39.300 --> 22:39.500
+Yeah.
+
+22:39.780 --> 22:43.040
+If you toggle show hidden files on and then you move,
+
+22:43.040 --> 22:46.400
+the very act of navigating destroys your disclosure setting.
+
+22:47.180 --> 22:49.280
+The threshold rips the sunglasses right off your face.
+
+22:50.140 --> 22:52.620
+But if you move first and then toggle the setting,
+
+22:53.120 --> 22:55.780
+the disclosure survives because you've already crossed the threshold.
+
+22:56.580 --> 22:58.380
+I get the theory, but I have to ask, like,
+
+22:58.460 --> 23:00.900
+why does this level of pedantic math matter?
+
+23:01.500 --> 23:04.580
+Outside of a theoretical paper, who actually cares if the operations commute?
+
+23:05.100 --> 23:09.360
+A programmer who is trying not to destroy a company's data cares immensely.
+
+23:09.520 --> 23:10.240
+Okay, fair point.
+
+23:10.540 --> 23:14.680
+If a programmer assumes these operations commute when they mathematically don't,
+
+23:15.200 --> 23:18.420
+they will introduce incredibly subtle, devastating bugs.
+
+23:18.980 --> 23:21.100
+Give me a real-world example of that.
+
+23:21.100 --> 23:23.880
+Okay, imagine you write an automated backup script.
+
+23:24.560 --> 23:28.020
+The script's job is to navigate into a highly secured directory,
+
+23:28.580 --> 23:31.560
+reveal the hidden system files, and back them up to a server.
+
+23:31.840 --> 23:32.460
+Simple enough?
+
+23:32.620 --> 23:32.840
+Right.
+
+23:32.840 --> 23:36.540
+If you write that script for an operating system that uses a global toggle,
+
+23:36.920 --> 23:41.660
+you can program it to issue the reveal command first and then navigate into the directory.
+
+23:41.940 --> 23:42.820
+It works perfectly.
+
+23:43.100 --> 23:44.520
+Because it's super glued to your face.
+
+23:44.720 --> 23:45.120
+Exactly.
+
+23:45.700 --> 23:50.880
+But a year later, your company ports that script to a new server that uses a per-folder toggle,
+
+23:51.380 --> 23:52.680
+or a reset policy.
+
+23:53.080 --> 23:54.380
+Oh no, I see where this is going.
+
+23:54.380 --> 23:55.020
+Exactly.
+
+23:55.340 --> 24:00.060
+The script runs, it issues the reveal command, then it navigates into the secure directory.
+
+24:00.560 --> 24:04.000
+But crossing that threshold wipes the visibility setting.
+
+24:04.340 --> 24:05.380
+So it's blind again.
+
+24:05.520 --> 24:05.780
+Yes.
+
+24:06.000 --> 24:11.940
+The script looks around, sees no files, backs up a completely empty folder, and reports success.
+
+24:12.620 --> 24:13.720
+It silently fails.
+
+24:14.480 --> 24:18.920
+And when the server crashes a month later, you realize your backups are entirely empty.
+
+24:18.920 --> 24:20.320
+That is horrifying.
+
+24:20.700 --> 24:25.680
+A catastrophic failure, just because the programmer didn't realize that navigating and disclosing
+
+24:25.680 --> 24:27.600
+don't commute on the new system.
+
+24:27.820 --> 24:30.880
+You really have to know the hidden geometry of the room you're walking into.
+
+24:30.960 --> 24:31.480
+You really do.
+
+24:31.900 --> 24:33.680
+And that is actually the perfect segue.
+
+24:34.220 --> 24:37.180
+Because Flyxion doesn't just leave this as abstract math.
+
+24:37.560 --> 24:42.400
+They apply this framework to four incredibly different digital environments that we use every
+
+24:42.400 --> 24:45.740
+single day to prove just how diverse these geometries really are.
+
+24:45.900 --> 24:46.160
+Yes.
+
+24:46.400 --> 24:47.460
+The four case studies.
+
+24:47.460 --> 24:53.200
+Flyxion uses these to definitively prove that treating all digital environments as equivalent
+
+24:53.200 --> 24:56.080
+trees is a massive mathematical falsehood.
+
+24:56.340 --> 24:58.900
+They operate under entirely different laws of physics.
+
+24:59.300 --> 25:00.720
+Okay, let's break these down.
+
+25:01.420 --> 25:04.860
+Case study one focuses on file systems and shells.
+
+25:05.580 --> 25:07.700
+This covers proposition 5.1.
+
+25:08.440 --> 25:12.380
+The paper contrasts the permanence and scope of three very common Unix commands.
+
+25:12.380 --> 25:18.560
+You've got cd for change directory, launching a subshell, and change mod for changing file
+
+25:18.560 --> 25:19.040
+permissions.
+
+25:19.800 --> 25:23.900
+Most people who use the command line use these commands basically interchangeably, without
+
+25:23.900 --> 25:25.820
+ever thinking about their structural differences.
+
+25:26.480 --> 25:30.840
+But Flyxion points out they operate on entirely different mathematical planes.
+
+25:31.400 --> 25:31.740
+How so?
+
+25:31.740 --> 25:37.480
+Well, when you type cd to change your directory, you are merely changing the geometric position
+
+25:37.480 --> 25:38.820
+of your current process.
+
+25:38.820 --> 25:42.220
+You are simply moving your observer to a new room.
+
+25:42.220 --> 25:42.620
+Right.
+
+25:42.720 --> 25:43.840
+I'm just walking down the hall.
+
+25:44.340 --> 25:48.840
+But when you launch a subshell, which is a child process spawned from your main terminal,
+
+25:49.180 --> 25:50.100
+you aren't just moving.
+
+25:50.640 --> 25:54.060
+You are creating a scoped extension of the entire process tree.
+
+25:54.280 --> 25:54.600
+Okay.
+
+25:54.600 --> 25:58.000
+The child receives a snapshot copy of the parent's universe.
+
+25:58.500 --> 26:00.480
+But here is the really critical difference.
+
+26:01.220 --> 26:05.940
+Any changes you make to the environment inside that subshell completely vanish the moment you
+
+26:05.940 --> 26:06.520
+type exit.
+
+26:06.740 --> 26:07.160
+Oh, wow.
+
+26:07.580 --> 26:07.800
+Yeah.
+
+26:08.160 --> 26:10.900
+The subshell is literally a temporary pocket dimension.
+
+26:11.320 --> 26:14.500
+It collapses and leaves the parent universe totally unharmed.
+
+26:14.620 --> 26:14.900
+Okay.
+
+26:15.060 --> 26:17.180
+So cd is moving within the world.
+
+26:17.660 --> 26:20.600
+Subshell is creating a temporary parallel universe.
+
+26:21.200 --> 26:22.580
+What about chamod?
+
+26:23.040 --> 26:23.280
+Right.
+
+26:23.280 --> 26:27.740
+Chamod modifies the shared physical file system itself.
+
+26:28.240 --> 26:31.840
+It changes the mathematical authority assignment of a shared component.
+
+26:32.600 --> 26:36.080
+Its effects persist forever or until explicitly changed again.
+
+26:36.580 --> 26:41.540
+And those effects are seen by every single process on the system, not just your personal pocket
+
+26:41.540 --> 26:41.980
+universe.
+
+26:42.740 --> 26:44.340
+And here's where it gets really fun.
+
+26:44.560 --> 26:48.700
+The paper points out a specific sequence of commands that proves these actions absolutely
+
+26:48.700 --> 26:49.700
+do not commute.
+
+26:49.960 --> 26:50.580
+They do not.
+
+26:51.000 --> 26:52.520
+Let's say you own a directory.
+
+26:52.520 --> 26:59.260
+You can type cd to move into that directory and then type chamod 000 to strip all read,
+
+26:59.400 --> 27:00.980
+write, and execute permissions from it.
+
+27:01.080 --> 27:01.940
+That works, right?
+
+27:02.040 --> 27:06.160
+You are standing inside a room and you successfully board up the doors and windows from the inside.
+
+27:06.320 --> 27:07.280
+It works perfectly.
+
+27:07.280 --> 27:11.100
+But try reversing that mathematical order.
+
+27:11.600 --> 27:11.840
+Right.
+
+27:11.840 --> 27:20.500
+If you are standing outside the directory and you type change mod 000 first, you just boarded up the doors and windows from the outside.
+
+27:21.020 --> 27:27.160
+If you then try to type cd to move into the directory, the computer will explicitly deny you access.
+
+27:27.160 --> 27:28.160
+Exactly.
+
+27:28.160 --> 27:33.620
+The sequence cd then change mod succeeds, but change mod then cd completely crashes.
+
+27:33.620 --> 27:35.360
+It's a phenomenal illustration.
+
+27:35.360 --> 27:40.360
+Painting a door shut while you are inside the room versus painting it shut while you are outside the room.
+
+27:40.360 --> 27:47.100
+It definitively proves that changing your geometric position and changing the authority of the shared environment do not commute.
+
+27:47.100 --> 27:50.940
+They interact in strict, highly directional ways.
+
+27:51.500 --> 27:51.740
+Okay.
+
+27:51.940 --> 27:53.620
+That's case study one, the file system.
+
+27:54.180 --> 28:00.400
+Case study two dives into the world of programming, lexical scope, specifically looking at the Python programming language.
+
+28:00.700 --> 28:00.940
+Yes.
+
+28:01.000 --> 28:03.140
+This is covered in Proposition 6.3.
+
+28:03.140 --> 28:06.820
+When you write code, your variables exist within scopes.
+
+28:07.460 --> 28:09.200
+A function has a local scope.
+
+28:09.620 --> 28:11.380
+The file itself has a global scope.
+
+28:11.880 --> 28:18.640
+If you ask Python what the variable x equals, it has to resolve that name by hunting through the graph of scopes.
+
+28:18.980 --> 28:19.220
+Right.
+
+28:19.680 --> 28:24.360
+But how it hunts is entirely up to the language's specific resolution policy.
+
+28:24.800 --> 28:27.420
+And Python's policy is notoriously weird, right?
+
+28:27.420 --> 28:32.940
+The paper talks about how it doesn't just blindly walk up the tree of ancestors looking for the variable.
+
+28:33.700 --> 28:34.600
+Oh, far from it.
+
+28:34.920 --> 28:38.300
+Python uses a two-pass system that confuses beginners endlessly.
+
+28:39.160 --> 28:45.820
+Python actually classifies every single variable in a function body at compile time, before it even runs the code.
+
+28:46.040 --> 28:47.620
+Okay, wait, so it looks ahead.
+
+28:47.880 --> 28:48.140
+Yes.
+
+28:48.840 --> 28:51.220
+The paper gives a really great simple example of this.
+
+28:51.900 --> 28:54.880
+Imagine you declare a global variable at the top of your file.
+
+28:55.260 --> 28:56.020
+x equals 1.
+
+28:56.020 --> 28:56.580
+Got it.
+
+28:57.060 --> 28:57.900
+x is 1.
+
+28:58.240 --> 28:59.360
+Then you define a function.
+
+29:00.080 --> 29:03.240
+Inside the function, on the very first line, you tell it to print x.
+
+29:03.960 --> 29:06.580
+But on the very next line, you assign x equals 2.
+
+29:07.320 --> 29:11.040
+Logically, as a human reading top to bottom, you'd think it just prints 1.
+
+29:11.520 --> 29:16.960
+Because x is 1 globally, and when it hits the print statement, it hasn't even reached the x equals 2 line yet.
+
+29:17.320 --> 29:18.120
+That's what you'd think.
+
+29:18.120 --> 29:23.420
+But if you run that code, Python actually crashes and throws an unbound local error.
+
+29:23.660 --> 29:24.500
+Wait, why?
+
+29:24.880 --> 29:27.440
+Because Python scans the entire function body first.
+
+29:27.820 --> 29:35.140
+It sees x equals 2 sitting at the bottom, so it classifies x as a local variable for the entire function, including the lines above it.
+
+29:35.260 --> 29:35.660
+Oh, wow.
+
+29:35.660 --> 29:36.220
+Yeah.
+
+29:36.600 --> 29:45.660
+So when it actually executes the print x at the top, it looks for the local x, sees that it hasn't been assigned a value yet in the execution flow, and crashes.
+
+29:46.260 --> 29:54.180
+It explicitly refuses to look outside the function for the global x, because the compile time scan already locked x into the local context.
+
+29:54.500 --> 29:55.740
+That is wild.
+
+29:55.740 --> 29:59.680
+The resolution policy isn't just a simple path up the tree.
+
+29:59.900 --> 30:05.280
+It is this complex interaction between a static scan and dynamic execution.
+
+30:05.600 --> 30:06.240
+It really is.
+
+30:06.900 --> 30:12.920
+And the paper also discusses shadowing in Python, stating that it is mathematically non-injective.
+
+30:13.100 --> 30:17.240
+Okay, I need an ELI-5 on non-injective, because that sounds like advanced calculus.
+
+30:17.720 --> 30:19.680
+It's actually a fundamental concept of mapping.
+
+30:19.680 --> 30:26.140
+A mathematical operation is injective if you can perfectly reverse-engineer the input by looking at the output.
+
+30:26.720 --> 30:30.080
+Every unique input gives a completely unique output.
+
+30:30.780 --> 30:31.640
+Okay, give me an example.
+
+30:32.080 --> 30:32.240
+Sure.
+
+30:32.500 --> 30:39.440
+If I have a function that multiplies by 2, and the output is 10, you can reverse-engineer that the input was absolutely 5.
+
+30:39.680 --> 30:40.740
+That's injective.
+
+30:41.060 --> 30:42.340
+Okay, makes perfect sense.
+
+30:42.340 --> 30:48.740
+Now, shadowing is when you declare a variable inside a function with the exact same name as a variable outside the function.
+
+30:49.240 --> 30:52.260
+The inner one shadows or hides the outer one.
+
+30:52.500 --> 30:52.700
+Right.
+
+30:52.760 --> 30:53.920
+You do this all the time in coding.
+
+30:54.060 --> 31:00.500
+You have a global count equals 10, but inside a specific loop, you make a local count equals 0.
+
+31:00.700 --> 31:01.040
+Exactly.
+
+31:01.640 --> 31:04.060
+You're overriding it for that specific block of code.
+
+31:04.380 --> 31:10.240
+But mathematically, the operation of extending an environment by shadowing a variable is non-injective.
+
+31:10.840 --> 31:11.840
+Let's look at why.
+
+31:11.840 --> 31:12.440
+Okay.
+
+31:13.180 --> 31:15.340
+See, I have two completely different global environments.
+
+31:15.840 --> 31:17.580
+Environment A has x equals 5.
+
+31:18.280 --> 31:20.180
+Environment B has x equals 99.
+
+31:21.000 --> 31:26.500
+Now, I apply a local extension to both of them that shadows x with a local x equals 2.
+
+31:27.000 --> 31:29.680
+What does environment A output if I ask for x?
+
+31:30.200 --> 31:31.380
+Well, it outputs 2.
+
+31:31.740 --> 31:32.020
+Right.
+
+31:32.160 --> 31:33.480
+And what does environment B output?
+
+31:33.900 --> 31:35.440
+It also outputs 2.
+
+31:35.720 --> 31:37.200
+Ah, I see it.
+
+31:37.200 --> 31:46.820
+Looking at the output 2, I have absolutely no mathematical way to reverse engineer whether the original hidden global environment had a 5 or a 99.
+
+31:46.820 --> 31:48.920
+The history is completely destroyed.
+
+31:49.240 --> 31:49.600
+Exactly.
+
+31:49.600 --> 31:54.080
+The observable lookup behavior does not determine the environment that was extended.
+
+31:54.860 --> 31:58.180
+Multiple distinct inputs result in the exact same output.
+
+31:58.900 --> 32:00.560
+Therefore, it is non-injective.
+
+32:00.560 --> 32:02.980
+And that's totally different from how folders work.
+
+32:02.980 --> 32:06.100
+This is a massive structural difference from a file system.
+
+32:06.780 --> 32:17.380
+In a file system, if you create a file named report.pdf in a subfolder, it doesn't obliterate your ability to access a different report.pdf in the parent folder if you use the full path.
+
+32:17.380 --> 32:19.960
+The file system preserves the history.
+
+32:20.540 --> 32:22.060
+Lexical scope destroys it.
+
+32:22.620 --> 32:22.820
+Okay.
+
+32:23.340 --> 32:25.120
+Moving from coding to security.
+
+32:25.940 --> 32:29.320
+Case study 3 looks at access control and proposition 7.1.
+
+32:29.540 --> 32:37.860
+We touched on this earlier with the sandbox example, but the paper gets very precise about the types of mathematical orders we are dealing with when we talk about authority.
+
+32:38.360 --> 32:38.660
+Yes.
+
+32:39.080 --> 32:43.920
+When we analyze execution contexts and security, we aren't just dealing with one tree.
+
+32:43.920 --> 32:50.940
+There are actually three distinct mathematical orders operating simultaneously, layered right on top of each other.
+
+32:51.340 --> 32:51.360
+Okay.
+
+32:51.440 --> 32:51.940
+Three orders.
+
+32:52.720 --> 32:54.180
+First, there is containment.
+
+32:54.820 --> 32:57.660
+This is the geometric nesting we've been talking about.
+
+32:57.760 --> 32:59.880
+Folders inside folders, scopes inside scopes.
+
+32:59.960 --> 33:00.140
+Right.
+
+33:00.260 --> 33:01.560
+The physical feeling hierarchy.
+
+33:02.160 --> 33:04.440
+Second, there is the spawn order.
+
+33:05.020 --> 33:07.500
+This is the family tree of processes tracking lineage.
+
+33:08.080 --> 33:10.820
+Process A launches process B, which launches process C.
+
+33:11.080 --> 33:11.340
+Okay.
+
+33:11.400 --> 33:13.020
+So a family tree of execution.
+
+33:13.020 --> 33:16.120
+And third, there is the delegation order.
+
+33:16.780 --> 33:17.380
+Delegation.
+
+33:17.880 --> 33:21.700
+Meaning the passing of actual authority or permissions from one entity to another?
+
+33:22.020 --> 33:22.380
+Correct.
+
+33:22.740 --> 33:22.980
+Okay.
+
+33:23.580 --> 33:27.240
+And proposition 7.1 proves a crucial security theorem.
+
+33:28.360 --> 33:31.920
+Authority might only decrease strictly along the delegation order.
+
+33:32.500 --> 33:33.220
+Just delegation.
+
+33:33.220 --> 33:33.900
+Yes.
+
+33:33.900 --> 33:37.240
+It is mathematically guaranteed to be monotonic there.
+
+33:37.580 --> 33:43.480
+If I only possess the power to read a file, I mathematically cannot delegate the power to write to you.
+
+33:44.040 --> 33:47.380
+I can only pass on a subset of my own existing authority.
+
+33:47.920 --> 33:56.160
+But, and this is where the security assumptions break down again, authority does not have to decrease along the containment order or the spawn order.
+
+33:56.160 --> 33:56.680
+Exactly.
+
+33:56.680 --> 33:56.960
+Exactly.
+
+33:57.320 --> 34:00.100
+You can actually spawn something far more powerful than yourself.
+
+34:01.160 --> 34:03.040
+The paper outlines a really vivid scenario.
+
+34:03.820 --> 34:06.140
+Imagine you have a standard user shell.
+
+34:06.400 --> 34:07.240
+Let's call it U.
+
+34:07.440 --> 34:07.720
+Okay.
+
+34:07.900 --> 34:08.460
+Shell U.
+
+34:09.020 --> 34:11.080
+That shell launches two things.
+
+34:11.640 --> 34:14.460
+A highly restricted sandbox child process.
+
+34:14.600 --> 34:15.400
+Let's call it L.
+
+34:15.400 --> 34:19.840
+And a program with elevated privileges, like a system admin tool.
+
+34:20.000 --> 34:20.780
+Let's call it S.
+
+34:20.780 --> 34:21.240
+Okay.
+
+34:21.440 --> 34:24.020
+So U is the parent, L and S are the children.
+
+34:24.980 --> 34:28.540
+Both L and S are nested physically inside U's directory structure.
+
+34:29.060 --> 34:29.820
+That's containment.
+
+34:30.580 --> 34:33.000
+Both L and S were launched directly by U.
+
+34:33.460 --> 34:34.400
+That's spawn.
+
+34:34.920 --> 34:36.240
+But look at their authority.
+
+34:36.980 --> 34:37.540
+Right.
+
+34:37.800 --> 34:41.160
+The sandbox L has strictly less authority than U.
+
+34:41.160 --> 34:46.280
+But the admin tool S has significantly more authority than U.
+
+34:46.760 --> 34:48.320
+Even though U is the one who spawned it.
+
+34:48.460 --> 34:49.640
+Even though U spawned it.
+
+34:49.880 --> 34:53.540
+And even though S is geometrically contained inside U.
+
+34:54.340 --> 35:01.760
+The admin tool draws its elevated authority from its own file permissions, or from external system capabilities, not from the user that launched it.
+
+35:02.200 --> 35:04.360
+So it bypasses the parent.
+
+35:04.880 --> 35:10.060
+Therefore, authority is mathematically completely decoupled from the tree of containment and the tree of spawning.
+
+35:10.060 --> 35:20.240
+So for a cybersecurity analyst, this means if they are auditing a system and only looking at a diagram of what folders are inside what folders, the containment tree, they are flying completely blind.
+
+35:20.380 --> 35:25.180
+They have to map the invisible delegation network, which might look completely different than the folder structure.
+
+35:26.020 --> 35:29.040
+If you assume depth equals security, you will get hacked.
+
+35:29.720 --> 35:30.920
+It is a mathematical certainty.
+
+35:31.560 --> 35:32.160
+All right.
+
+35:32.200 --> 35:33.120
+The final case study.
+
+35:33.380 --> 35:34.100
+Interactive worlds.
+
+35:35.020 --> 35:35.720
+Video games.
+
+35:36.700 --> 35:38.940
+This is propositions 8.1 and 8.2.
+
+35:38.940 --> 35:41.260
+I found this part fascinating.
+
+35:41.480 --> 35:44.260
+How exactly do video games break the math of context?
+
+35:45.040 --> 35:48.180
+They break it beautifully through something called modal returns.
+
+35:48.840 --> 35:49.860
+Modal returns.
+
+35:50.500 --> 35:50.720
+Yeah.
+
+35:51.000 --> 35:52.800
+Let's say you are playing a massive RPG.
+
+35:53.300 --> 35:55.060
+You are exploring a deep dungeon.
+
+35:55.780 --> 35:57.460
+That is your current spatial context.
+
+35:58.240 --> 36:00.300
+Suddenly you press a button to open your inventory.
+
+36:01.340 --> 36:03.340
+Opening the menu shifts your context.
+
+36:03.840 --> 36:06.860
+You are no longer in the dungeon, mathematically speaking.
+
+36:06.860 --> 36:10.180
+You are now navigating the logical context of the menu.
+
+36:10.660 --> 36:11.100
+Right.
+
+36:11.500 --> 36:13.800
+The game pauses and I'm sorting my potions.
+
+36:14.120 --> 36:14.260
+No.
+
+36:14.680 --> 36:16.880
+What happens when you press the button to close the menu?
+
+36:17.680 --> 36:18.880
+Where do you actually go?
+
+36:19.600 --> 36:20.780
+Well, back to the game.
+
+36:21.440 --> 36:21.680
+Right.
+
+36:21.700 --> 36:24.240
+But you don't go to a fixed hard-coded geometric node.
+
+36:24.900 --> 36:26.040
+You return to your origin.
+
+36:26.040 --> 36:32.280
+The action, close, dynamically targets whatever context you were standing in before you opened
+
+36:32.280 --> 36:32.660
+the menu.
+
+36:33.600 --> 36:34.600
+Oh, I see the problem.
+
+36:35.060 --> 36:38.320
+If I open the menu in the dungeon, hitting close takes me back to the dungeon.
+
+36:38.720 --> 36:43.040
+But if I open the exact same menu while standing in the town shop, hitting close takes me back
+
+36:43.040 --> 36:43.620
+to the shop.
+
+36:44.260 --> 36:48.220
+Mathematically, this is an absolute nightmare to model on a standard directed graph.
+
+36:48.880 --> 36:52.980
+In a normal graph, an action is an arrow pointing from node A to node B.
+
+36:53.120 --> 36:54.480
+Always pointing to the same place.
+
+36:54.480 --> 36:55.080
+Exactly.
+
+36:55.740 --> 36:59.380
+But here, the target of the close action is not a function of the menu itself.
+
+37:00.000 --> 37:02.520
+The menu doesn't have a fixed arrow pointing anywhere.
+
+37:02.960 --> 37:06.480
+The return target is dynamically pulled from a memory stack.
+
+37:06.900 --> 37:11.620
+And Flyxion points out that this makes game graphs theoretically non-finite.
+
+37:12.120 --> 37:13.640
+Yes, proposition 8.2.
+
+37:14.100 --> 37:16.920
+Imagine menus that can open other menus.
+
+37:17.480 --> 37:18.880
+You open the main inventory.
+
+37:19.500 --> 37:21.600
+From there, you open a submenu for potions.
+
+37:21.600 --> 37:26.060
+From there, you open a detailed lore screen to examine a specific potion.
+
+37:26.680 --> 37:28.080
+You're just drilling down deeper and deeper.
+
+37:28.560 --> 37:29.720
+You are building a stack.
+
+37:30.080 --> 37:36.840
+If the game doesn't place a hard-coded limit on how deep that stack can go, say, letting
+
+37:36.840 --> 37:42.440
+you infinitely loop between examining a potion and opening a glossary term, the context component
+
+37:42.440 --> 37:45.040
+is mathematically no longer a finite state machine.
+
+37:45.040 --> 37:48.900
+It becomes a push-down system capable of infinite depth.
+
+37:48.900 --> 37:54.700
+So a simple, everyday video game inventory menu is mathematically vastly more complex than
+
+37:54.700 --> 37:59.500
+a standard computer directory structure because it has to remember an infinitely expanding
+
+37:59.500 --> 38:01.140
+chain of where you came from.
+
+38:01.280 --> 38:01.720
+Precisely.
+
+38:02.460 --> 38:05.640
+Now, synthesize all four of these case studies for a moment.
+
+38:06.160 --> 38:10.480
+We have file systems with their permanent shared state and strict directional commutation.
+
+38:10.700 --> 38:10.940
+Right.
+
+38:10.940 --> 38:16.240
+We have lexical scopes with their non-injective shadowing that completely destroys history.
+
+38:17.080 --> 38:20.620
+We have access control with its independent invisible delegation order.
+
+38:21.180 --> 38:24.600
+And we have video games with their infinite modal return stacks.
+
+38:25.260 --> 38:27.520
+You literally cannot treat them as the same thing.
+
+38:27.720 --> 38:28.340
+You cannot?
+
+38:29.240 --> 38:32.020
+They are entirely different geometric realities.
+
+38:33.000 --> 38:37.940
+Calling them all trees is like calling a bicycle, a nuclear submarine, and a Boeing 747
+
+38:37.940 --> 38:42.860
+vehicles, and assuming they all steer exactly the same way just because they transport you.
+
+38:43.040 --> 38:43.360
+Wow.
+
+38:44.360 --> 38:48.700
+Okay, so contexts are vastly, wildly diverse.
+
+38:48.960 --> 38:49.960
+They are different shapes.
+
+38:50.140 --> 38:52.260
+But here is the next logical hurdle.
+
+38:52.720 --> 38:56.680
+Despite being different shapes, they all have to share information up and down their structures.
+
+38:57.280 --> 38:59.580
+When a system is running, data has to flow.
+
+38:59.960 --> 39:00.260
+Always.
+
+39:00.540 --> 39:04.960
+This brings us to section five of the paper, the direction of information flow.
+
+39:04.960 --> 39:11.080
+And we finally get to talk about pre-sheaves, which I admit sounds like a very fancy type
+
+39:11.080 --> 39:12.620
+of French bread, but I know it's not.
+
+39:12.980 --> 39:14.140
+Sadly, no carbs involved.
+
+39:14.520 --> 39:19.940
+So a pre-sheave is actually this incredibly dense mathematical tool pulled straight from
+
+39:19.940 --> 39:20.700
+category theory.
+
+39:21.140 --> 39:28.100
+To explain it simply, it is a way to assign data or local descriptions to different contexts
+
+39:28.100 --> 39:34.180
+and rigorously map how that data restricts or changes as you move between those contexts.
+
+39:34.180 --> 39:39.840
+It mathematically encodes how descriptions remain consistent when you look at them at different
+
+39:39.840 --> 39:40.380
+resolutions.
+
+39:40.980 --> 39:44.140
+Okay, so it tracks local data as we zoom in and out.
+
+39:44.340 --> 39:44.880
+Exactly.
+
+39:45.760 --> 39:51.600
+And Flyxion uses pre-sheaves to prove a massive structural divide between two fundamental types
+
+39:51.600 --> 39:55.680
+of systems, regional systems and accumulation systems.
+
+39:55.820 --> 39:57.800
+This is Proposition 13.7.
+
+39:58.220 --> 40:00.000
+Let's unpack regional systems first.
+
+40:00.020 --> 40:00.460
+What are they?
+
+40:00.460 --> 40:02.580
+Regional systems are spatial.
+
+40:03.300 --> 40:06.420
+Things like file systems or geometric game maps.
+
+40:07.120 --> 40:11.920
+In a regional system, the universe is the whole disk or the whole world map.
+
+40:12.140 --> 40:13.040
+Okay, the big picture.
+
+40:13.260 --> 40:18.720
+As you move deeper into the system, say moving from the root C drive into a specific buried
+
+40:18.720 --> 40:23.540
+subfolder, the amount of information you can actively observe actually decreases.
+
+40:23.940 --> 40:24.240
+Right.
+
+40:24.240 --> 40:28.300
+If I'm searching at the root drive, I am searching millions of files.
+
+40:28.860 --> 40:34.080
+But if I move deep into a folder named Receipts 2024, my scope severely narrows.
+
+40:34.400 --> 40:38.100
+I am only observing the contents of that specific tiny subtree.
+
+40:38.380 --> 40:38.780
+Exactly.
+
+40:39.240 --> 40:41.440
+The arrows of information flow point outward.
+
+40:42.120 --> 40:44.360
+The larger the region, the richer the observation.
+
+40:44.940 --> 40:47.380
+Moving inward is a process of restriction.
+
+40:48.080 --> 40:51.100
+Now contrast that with accumulation systems.
+
+40:51.100 --> 40:52.980
+Accumulation systems.
+
+40:53.820 --> 40:57.680
+Like lexical scope encoding, where we were shadowing variables earlier?
+
+40:57.940 --> 40:58.180
+Yes.
+
+40:58.960 --> 41:01.560
+Think about writing a deeply nested function in Python.
+
+41:02.260 --> 41:06.240
+At the outermost, global level, you can only see global variables.
+
+41:06.980 --> 41:11.700
+But as you nest a function inside a function inside a function, the innermost function can
+
+41:11.700 --> 41:17.240
+see its own local variables, plus the variables of its parent function, plus the global variables
+
+41:17.240 --> 41:18.320
+of the entire file.
+
+41:18.320 --> 41:19.860
+Oh, wow.
+
+41:19.980 --> 41:21.160
+So it's the exact opposite.
+
+41:21.540 --> 41:26.340
+As I move deeper into the structure, the amount of information I observe actually increases.
+
+41:26.580 --> 41:28.040
+I am accumulating context.
+
+41:28.580 --> 41:29.100
+Exactly.
+
+41:29.680 --> 41:31.680
+You see, the entire ancestor chain.
+
+41:32.100 --> 41:35.060
+This is what Flyarion calls the orientation duality.
+
+41:35.700 --> 41:38.740
+In a regional system, moving inward decreases information.
+
+41:39.320 --> 41:42.860
+In an accumulation system, moving inward increases information.
+
+41:43.300 --> 41:45.200
+Here's where it gets really interesting for me.
+
+41:45.360 --> 41:46.940
+I was trying to visualize this.
+
+41:46.940 --> 41:50.460
+It's like comparing a microscope to a telescope, right?
+
+41:50.660 --> 41:51.320
+Oh, I like that.
+
+41:51.580 --> 41:53.920
+They are essentially the same physical structure, right?
+
+41:54.020 --> 41:56.220
+They are both tubes with lenses at either end.
+
+41:56.400 --> 42:00.140
+But they flow information in perfectly opposite directions.
+
+42:00.280 --> 42:02.660
+A microscope is a regional system.
+
+42:03.500 --> 42:05.320
+It zooms in, restricting your view.
+
+42:05.720 --> 42:10.960
+It cuts out the rest of the universe to focus on a tiny, restricted subtree on a glass slide.
+
+42:10.960 --> 42:14.880
+Moving inward decreases the scope of reality you see.
+
+42:15.600 --> 42:15.820
+Yes.
+
+42:16.020 --> 42:17.320
+That is spot on.
+
+42:17.980 --> 42:20.140
+But a telescope looks deeper into the sky.
+
+42:20.340 --> 42:23.360
+And as it looks deeper, it acts as an accumulation system.
+
+42:23.560 --> 42:30.040
+It is gathering and accumulating more light from the past, expanding the visible information the further out it looks.
+
+42:30.040 --> 42:33.760
+That is an excellent way to conceptualize the orientation duality.
+
+42:33.760 --> 42:41.380
+The hardware, the tube and the lenses, or in our case, the nodes and branches of the digital tree, is structurally identical.
+
+42:42.140 --> 42:46.880
+But the orientation of the information flow completely changes the reality of what is observed.
+
+42:46.880 --> 42:50.160
+So the structure alone isn't enough to define the system.
+
+42:51.100 --> 42:58.020
+Flyxion proves mathematically that you can build a file system and a lexical scope on the exact same structural tree.
+
+42:58.400 --> 43:04.220
+But because the arrows of information flow point in opposite directions, by proposition 13.7,
+
+43:04.600 --> 43:08.240
+no mathematical isomorphism can ever map one to the other.
+
+43:08.760 --> 43:13.780
+If the tree has any branching at all, they are fundamentally, irreconcilably different beasts.
+
+43:13.780 --> 43:20.300
+Okay, so if the flow of information is so heavily dependent on the geometry and direction, it leads to a huge question.
+
+43:20.740 --> 43:24.540
+Can we ever truly understand the whole system just by looking at its local parts?
+
+43:24.860 --> 43:25.860
+That is the ultimate question.
+
+43:26.100 --> 43:30.720
+If I am only looking through the microscope, can I reliably deduce what the telescope sees?
+
+43:31.120 --> 43:34.860
+This brings us to section 6 of the paper, The Local to Global Puzzle.
+
+43:35.100 --> 43:38.480
+This section deals with the concept of global reconstruction.
+
+43:38.960 --> 43:41.460
+It asks a profound question about reality.
+
+43:41.460 --> 43:50.460
+If you gather enough local snapshots of a system, can you seamlessly glue them together to construct the objective global truth?
+
+43:51.220 --> 43:55.800
+And to figure this out, the paper brings in growth and deke topologies and the gluing criterion.
+
+43:56.340 --> 43:58.240
+Look, you have to ELI-5 this for me.
+
+43:58.380 --> 44:00.400
+What on earth is a growth and deke topology?
+
+44:00.700 --> 44:02.220
+Don't let the name intimidate you.
+
+44:02.860 --> 44:08.520
+In simple terms, a topology is a way of defining what constitutes a cover for a space.
+
+44:08.520 --> 44:12.960
+Imagine you have a massive map of the world, but it's torn into a hundred pieces.
+
+44:13.520 --> 44:14.660
+Okay, a puzzle, basically.
+
+44:15.280 --> 44:20.260
+A growth and deke topology defines the mathematical rules for how those local patches overlap.
+
+44:21.180 --> 44:25.560
+The gluing criterion asks, do the overlapping edges match up perfectly?
+
+44:26.100 --> 44:32.120
+And if they do match up, does the resulting stitched together map represent a physically possible globe?
+
+44:32.120 --> 44:36.360
+Okay, so it's the math of stitching local views into a global reality.
+
+44:37.160 --> 44:42.400
+And Flyxion walks us through mathematical failure modes where this gluing process completely falls apart.
+
+44:42.840 --> 44:45.240
+Let's look at the first failure mode, obstruction.
+
+44:45.860 --> 44:50.300
+This is example 10.4 in the paper, the locally acyclic dependencies.
+
+44:50.840 --> 44:53.260
+This is a classic architectural paradox.
+
+44:54.100 --> 44:56.220
+Imagine a system with three software modules.
+
+44:56.600 --> 44:58.920
+Module 1, Module 2, and Module 3.
+
+44:58.920 --> 45:02.060
+We have a strict global rule for this system.
+
+45:02.640 --> 45:05.100
+Dependencies must flow in one direction.
+
+45:05.600 --> 45:06.940
+No infinite loops are allowed.
+
+45:07.300 --> 45:08.140
+Right, no cycles.
+
+45:08.420 --> 45:10.820
+So you take a local snapshot of Module 1 and 2.
+
+45:11.520 --> 45:13.780
+You see that Module 1 depends on Module 2.
+
+45:14.320 --> 45:15.500
+That is a straight line.
+
+45:15.840 --> 45:16.880
+It's totally legal.
+
+45:17.120 --> 45:17.320
+Right.
+
+45:17.760 --> 45:19.560
+Local snapshot A is good.
+
+45:19.640 --> 45:20.200
+No loops there.
+
+45:20.560 --> 45:22.780
+Then you take a local snapshot of Module 2 and 3.
+
+45:23.500 --> 45:25.340
+Module 2 depends on Module 3.
+
+45:26.100 --> 45:28.260
+Local snapshot B is also perfectly legal.
+
+45:28.260 --> 45:29.400
+Just a straight line.
+
+45:29.920 --> 45:30.300
+Still good.
+
+45:30.960 --> 45:33.820
+Finally, you take a snapshot of Module 3 and 1.
+
+45:34.520 --> 45:36.360
+Module 3 depends on Module 1.
+
+45:37.240 --> 45:39.880
+Local snapshot C is also perfectly legal on its own.
+
+45:40.460 --> 45:40.820
+Wait a minute.
+
+45:41.420 --> 45:48.420
+If 1 depends on 2 and 2 depends on 3, and 3 depends on 1, that's a massive infinite loop.
+
+45:48.800 --> 45:49.160
+Exactly.
+
+45:49.520 --> 45:51.320
+But here is the terrifying part mathematically.
+
+45:51.320 --> 45:57.880
+If you are an observer who only has access to local contexts, you literally cannot see the loop.
+
+45:58.540 --> 46:01.560
+Every individual pair of dependencies looks mathematically sound.
+
+46:02.380 --> 46:07.140
+The local data is entirely consistent on all the overlaps where you try to glue them together.
+
+46:07.140 --> 46:14.280
+But when you synthesize them to form a global reality, they form an impossible, unrealizable cycle.
+
+46:14.280 --> 46:16.880
+This is literally an M.C. Escher drawing.
+
+46:17.320 --> 46:19.740
+Is this like taking close-up photos of an Escher staircase?
+
+46:20.240 --> 46:24.140
+If I take a picture of just two steps, it looks like a normal, functional staircase.
+
+46:24.860 --> 46:27.060
+Every individual step obeys gravity.
+
+46:27.340 --> 46:27.540
+Yes.
+
+46:27.740 --> 46:28.620
+Locally, it's perfect.
+
+46:29.300 --> 46:31.480
+Every local snapshot is physically possible.
+
+46:31.840 --> 46:38.160
+But when you stitch the photos together and zoom out, the geometry loops back on itself in a way that completely breaks physics.
+
+46:38.320 --> 46:39.860
+The building shouldn't exist.
+
+46:39.860 --> 46:42.860
+That is the exact visual representation of an obstruction.
+
+46:43.440 --> 46:45.980
+The local views are perfectly mathematically consistent.
+
+46:46.680 --> 46:48.940
+But the global realization is impossible.
+
+46:49.760 --> 46:58.020
+The global invariant, the rule that says no cycles, is a non-local constraint that is completely invisible to every single local observer.
+
+46:58.760 --> 47:00.260
+Okay, so that's an obstruction.
+
+47:00.580 --> 47:00.820
+Right.
+
+47:00.980 --> 47:04.500
+The puzzle pieces fit together perfectly, but the resulting picture is a lie.
+
+47:04.980 --> 47:06.980
+What about the other failure mode, ambiguity?
+
+47:07.980 --> 47:09.380
+Example 10.5.
+
+47:09.860 --> 47:12.260
+Ambiguity is the exact opposite problem.
+
+47:12.780 --> 47:17.600
+This is when the global reality has a secret variable that none of the local snapshots can see.
+
+47:18.380 --> 47:20.920
+Flyxion calls it the global-only observable.
+
+47:21.240 --> 47:24.260
+How does something exist globally but remain totally invisible locally?
+
+47:24.900 --> 47:26.260
+Let's build a really simple system.
+
+47:26.840 --> 47:29.620
+Imagine two local contexts, A and B.
+
+47:30.160 --> 47:37.200
+And imagine a global state that consists of three variables, X, Y, and a secret parity bit, P.
+
+47:37.200 --> 47:37.660
+Okay.
+
+47:38.060 --> 47:39.680
+X, Y, and secret P.
+
+47:40.120 --> 47:45.940
+The rules of visibility in this system dictate that context A can only ever see the variable X.
+
+47:46.660 --> 47:49.780
+Context B can only ever see the variable Y.
+
+47:50.500 --> 47:53.220
+Neither of them has the mathematical authority to see P.
+
+47:53.220 --> 47:56.820
+Okay, so P is literally a ghost to the local context?
+
+47:56.820 --> 47:59.880
+Now, imagine two distinct global realities.
+
+48:00.380 --> 48:04.140
+Reality 1 is the state where X is 0, Y is 0, P is 0.
+
+48:04.600 --> 48:09.200
+Reality 2 is the state where X is 0, Y is 0, P is 1.
+
+48:09.200 --> 48:14.080
+These are two entirely different global realities because the parity bit is different.
+
+48:14.900 --> 48:19.380
+But if you ask context A what it sees in reality 1, it says X is 0.
+
+48:19.720 --> 48:23.620
+If you ask it what it sees in reality 2, it says X is 0.
+
+48:24.040 --> 48:25.480
+It cannot tell the difference.
+
+48:26.040 --> 48:28.960
+And context B says Y is 0 for both realities as well.
+
+48:29.380 --> 48:29.720
+Exactly.
+
+48:30.160 --> 48:35.880
+So you have two completely distinct global realities that look exactly mathematically identical
+
+48:35.880 --> 48:38.060
+from every single local viewpoint.
+
+48:38.060 --> 48:43.880
+The local data stitches together perfectly, but it fails to uniquely identify the true global state.
+
+48:44.260 --> 48:45.260
+So what is the takeaway here?
+
+48:45.360 --> 48:46.420
+What does this mean for us?
+
+48:46.600 --> 48:52.660
+This raises a massive philosophical and mathematical question regarding contextuality.
+
+48:53.460 --> 49:01.020
+We mathematically cannot always trust local snapshots to glue together to a single coherent global reality.
+
+49:01.300 --> 49:06.600
+The absolute truth of the system might exist purely in the unobservable global layer.
+
+49:06.600 --> 49:09.520
+That is deeply unsettling.
+
+49:10.240 --> 49:14.760
+If local systems are this messy, this prone to Escher paradoxes and hidden variables,
+
+49:15.100 --> 49:17.980
+what happens when we try to translate between them?
+
+49:18.560 --> 49:20.440
+I mean, computer scientists do this every day.
+
+49:20.700 --> 49:21.380
+They absolutely do.
+
+49:21.500 --> 49:26.400
+They translate an app from iOS to Android or from Python to C++.
+
+49:26.400 --> 49:30.960
+And they assure everyone that the translated system is mathematically equivalent.
+
+49:31.960 --> 49:35.060
+Is this equivalence just a comforting lie?
+
+49:35.560 --> 49:38.200
+That brings us to Section 7, Lost in Translation.
+
+49:38.200 --> 49:41.600
+It's not necessarily a lie, but it is highly conditional.
+
+49:42.260 --> 49:48.980
+Flyxion spends this section rigorously defining what translation actually means in a geometric framework.
+
+49:49.540 --> 49:55.660
+When you move a complex system into a new language or a new architecture, what survives the journey?
+
+49:56.020 --> 49:57.140
+And what dies?
+
+49:57.140 --> 50:03.680
+Well, first off, the paper points out that finding a common abstraction between two systems is essentially a parlor trick.
+
+50:03.940 --> 50:05.420
+It's too easy to be meaningful.
+
+50:05.800 --> 50:05.920
+Right.
+
+50:06.620 --> 50:11.860
+Mathematically, you can always map any two systems to what is called a trivial terminal abstraction.
+
+50:12.380 --> 50:18.240
+This is a theoretical mathematical universe with exactly one state and one context,
+
+50:18.740 --> 50:21.720
+where absolutely everything is visible and absolutely nothing is forbidden.
+
+50:21.720 --> 50:22.320
+Okay.
+
+50:22.720 --> 50:24.460
+So it's a completely open sandbox.
+
+50:24.840 --> 50:26.860
+It is a completely useless mapping.
+
+50:27.360 --> 50:28.220
+But it proves a point.
+
+50:28.700 --> 50:33.560
+Just because you can find a common abstraction doesn't mean the systems are actually equivalent in practice.
+
+50:34.000 --> 50:39.000
+To have a meaningful translation, we have to look very closely at what specific structures are preserved.
+
+50:39.800 --> 50:43.680
+So in a good functional translation, what is actually preserved?
+
+50:44.000 --> 50:47.300
+Generally, observational indistinguishability is preserved.
+
+50:47.300 --> 50:53.080
+If two states look identical to a user in the source system, they should look identical in the target system.
+
+50:53.580 --> 50:54.060
+That makes sense.
+
+50:54.760 --> 50:57.260
+Contextual reachability is also usually preserved.
+
+50:58.300 --> 51:04.180
+If you can navigate from context A to context B in the original app, you should be able to do it in the translated app.
+
+51:04.600 --> 51:06.060
+The positive actions survive.
+
+51:06.600 --> 51:07.620
+But what is lost?
+
+51:08.200 --> 51:15.180
+What is lost is the multiplicity of microstates, the fine-grained timing dynamics, and most critically, prohibitions.
+
+51:16.080 --> 51:16.640
+Prohibitions.
+
+51:16.760 --> 51:19.880
+This is Proposition 18.2, the safety transfer laws.
+
+51:20.240 --> 51:24.620
+This is perhaps the most practical, terrifying warning in the entire paper for software engineers.
+
+51:25.420 --> 51:29.380
+Let's say you have a highly secure legacy system, System A.
+
+51:30.380 --> 51:32.100
+It has strict geometric rules.
+
+51:32.440 --> 51:34.380
+It explicitly forbids certain actions.
+
+51:34.680 --> 51:37.940
+For instance, an unprivileged user cannot write to the system core.
+
+51:38.160 --> 51:38.360
+Right.
+
+51:38.360 --> 51:44.820
+Now, you translate system A into a coarser, more modern abstraction, System B, to run on the web.
+
+51:45.180 --> 51:45.440
+Okay.
+
+51:45.900 --> 51:49.480
+I port my super-secure banking app to a web portal.
+
+51:50.080 --> 51:54.960
+Flyxion proves mathematically that translations inherently only preserve permitted behaviors.
+
+51:55.420 --> 51:55.580
+Why?
+
+51:56.240 --> 52:00.420
+Because a translation maps positive structures, nodes, and edges in a graph.
+
+52:00.940 --> 52:07.020
+If system A has an edge that allows a user to read a file, the compiler translates that edge into system B.
+
+52:07.020 --> 52:07.420
+Okay.
+
+52:08.100 --> 52:13.900
+But, prohibitions, the rule that user A cannot open file C, aren't objects.
+
+52:14.400 --> 52:16.200
+They are the absence of an edge.
+
+52:16.680 --> 52:17.560
+They are negative space.
+
+52:18.520 --> 52:20.580
+Translation tools look for objects to map.
+
+52:21.160 --> 52:26.160
+And you mathematically cannot map a boundary if the new system's geometry is a fundamentally different shape.
+
+52:26.720 --> 52:28.480
+So what does this all mean?
+
+52:28.480 --> 52:35.680
+If you translate a highly secure system into a core substraction, you might be able to mathematically prove the app works.
+
+52:36.260 --> 52:40.280
+The permitted features, logging in, transferring money, they all function perfectly.
+
+52:40.540 --> 52:40.760
+Yes.
+
+52:40.920 --> 52:41.880
+The functionality works.
+
+52:42.440 --> 52:49.320
+But, because the negative space didn't map, you accidentally stripped away the exact structural rules that kept the hackers out.
+
+52:49.700 --> 52:50.160
+Exactly.
+
+52:50.160 --> 52:54.040
+The math of translation completely discards the negative space.
+
+52:54.040 --> 52:59.680
+It's like translating a nuanced 500-page legal contract into a one-page summary for a child.
+
+53:00.160 --> 53:01.700
+The summary might accurately say,
+
+53:02.160 --> 53:04.160
+Bob agrees to build the house.
+
+53:04.760 --> 53:07.080
+The permitted action is perfectly preserved.
+
+53:07.240 --> 53:07.360
+Right.
+
+53:07.360 --> 53:11.280
+But the summary completely drops the 50 pages of clauses that say,
+
+53:11.740 --> 53:16.080
+Bob is strictly prohibited from using cheap, flammable materials and cannot work on Sundays.
+
+53:16.720 --> 53:20.300
+You preserve the action, but you completely lost the safety boundary.
+
+53:20.560 --> 53:21.820
+That is a perfect analogy.
+
+53:22.500 --> 53:24.580
+The coarse image over-approximates behavior.
+
+53:25.240 --> 53:32.300
+You can only use a translated model to prove a system is safe if the original system's safety didn't rely on what it forbade.
+
+53:32.860 --> 53:36.140
+But cybersecurity is almost entirely about what is forbidden.
+
+53:36.460 --> 53:36.860
+Exactly.
+
+53:37.360 --> 53:45.460
+The math tells us that relying on a translated abstraction for security proofs is incredibly dangerous because the negative space just doesn't transfer.
+
+53:45.740 --> 53:46.000
+Wow.
+
+53:46.680 --> 53:48.460
+We are covering so much ground here.
+
+53:48.560 --> 53:49.440
+Let's bring it all home.
+
+53:50.000 --> 53:50.920
+Section 8.
+
+53:51.300 --> 53:52.680
+The limits of the tree.
+
+53:53.040 --> 53:55.720
+We are going to look at unfolding and descent.
+
+53:56.160 --> 53:58.280
+To close the loop on this deep dive,
+
+53:58.700 --> 54:01.880
+Phlyoxian takes this classic tree structure we all rely on,
+
+54:02.120 --> 54:03.780
+the one we started the hour defending,
+
+54:03.780 --> 54:07.720
+and pushes it until the math literally snaps in half.
+
+54:08.040 --> 54:08.240
+Yes.
+
+54:08.420 --> 54:13.160
+The final section explores the ultimate mathematical limits of hierarchical representation.
+
+54:14.160 --> 54:18.200
+Why do computer scientists try to force everything into a tree in the first place?
+
+54:18.420 --> 54:19.320
+Because it's easier?
+
+54:19.740 --> 54:20.580
+Historically, yes.
+
+54:21.080 --> 54:25.260
+Early hardware and file systems needed simple, predictable memory allocation.
+
+54:25.260 --> 54:29.400
+Trees are computationally cheap, graphs are expensive and messy.
+
+54:29.680 --> 54:32.700
+But as we've seen, reality is a graph.
+
+54:33.000 --> 54:33.180
+Right.
+
+54:33.720 --> 54:38.460
+And we already discussed how things like Python's multiple inheritance completely break the tree.
+
+54:38.460 --> 54:43.700
+If class D inherits from class B and class C, which both inherit from class A,
+
+54:44.180 --> 54:45.480
+that's a diamond shape, not a tree.
+
+54:45.720 --> 54:46.100
+Exactly.
+
+54:46.860 --> 54:50.440
+And because the tree fails, Python has to use an external algorithm,
+
+54:50.800 --> 54:52.360
+the C3 linearization,
+
+54:52.660 --> 54:55.900
+to artificially flatten that diamond into a straight line,
+
+54:56.300 --> 54:58.220
+just so it knows which method to execute.
+
+54:58.480 --> 54:59.960
+So the hierarchy needs help.
+
+55:00.220 --> 55:00.520
+Yes.
+
+55:00.700 --> 55:03.820
+The hierarchy itself underdetermines reality.
+
+55:04.280 --> 55:06.580
+The tree isn't smart enough to resolve the conflict,
+
+55:06.580 --> 55:11.480
+so Python has to stable X for math on top of it to decide which parent wins.
+
+55:12.060 --> 55:13.640
+The tree needs external life support.
+
+55:14.180 --> 55:16.620
+But the most vivid example in the paper of the tree failing
+
+55:16.620 --> 55:20.540
+is when we try to force a complex network to actually become a tree
+
+55:20.540 --> 55:23.140
+through a mathematical process called unfolding.
+
+55:23.320 --> 55:25.260
+This is example 19.4.
+
+55:25.720 --> 55:28.980
+Walk me through how unfolding works and how it completely breaks.
+
+55:29.300 --> 55:31.120
+Let's go back to video games.
+
+55:31.280 --> 55:32.320
+Imagine a game map.
+
+55:32.940 --> 55:34.520
+We have a starting hub room.
+
+55:34.520 --> 55:39.220
+From the hub, you can take a left path to room A or a right path to room B.
+
+55:40.000 --> 55:44.700
+And both room A and room B have a door that leads to the exact same boss room.
+
+55:45.180 --> 55:46.420
+Okay, so it's a diamond shape again.
+
+55:46.720 --> 55:48.160
+Hub connects to A and B.
+
+55:48.560 --> 55:50.080
+A and B converge on the boss room.
+
+55:50.500 --> 55:53.900
+Now, in the boss room, there is a physical switch on the wall.
+
+55:53.900 --> 55:57.240
+If you flip it, a global light turns on.
+
+55:57.820 --> 56:00.020
+The mathematical bit changes from zero to one.
+
+56:00.420 --> 56:00.560
+Got it.
+
+56:00.760 --> 56:01.120
+I'm with you.
+
+56:01.440 --> 56:05.180
+Now, a compiler or a computer scientist comes along and says,
+
+56:05.760 --> 56:06.680
+I hate graphs.
+
+56:07.140 --> 56:08.360
+They are too hard to process.
+
+56:08.580 --> 56:12.140
+I want to represent this game as a pure mathematical tree.
+
+56:12.800 --> 56:13.080
+Oh, no.
+
+56:13.740 --> 56:16.780
+To do that, they have to perform an unfolding.
+
+56:17.660 --> 56:19.700
+They trace every possible path from the root.
+
+56:20.560 --> 56:23.800
+Path one is hub to room A to boss room.
+
+56:24.120 --> 56:26.240
+Okay, that's the left branch of our new tree.
+
+56:26.780 --> 56:29.900
+And path two is hub to room B to boss room.
+
+56:30.100 --> 56:31.200
+That is the right branch.
+
+56:31.900 --> 56:33.920
+But remember the strict rule of a tree.
+
+56:34.820 --> 56:36.680
+Branches can never, ever merge.
+
+56:37.280 --> 56:42.860
+So, to make this a tree, the unfolding process has to literally duplicate the boss room.
+
+56:43.660 --> 56:46.260
+There is now one boss room at the end of the left branch,
+
+56:46.820 --> 56:50.680
+and a completely separate, independent boss room at the end of the right branch.
+
+56:50.680 --> 56:55.440
+But wait, in the reality of the game, it's supposed to be the exact same room.
+
+56:55.940 --> 56:57.140
+In the original graph, it is.
+
+56:57.400 --> 57:02.200
+But in the unfolded tree representation, they are two mathematically distinct nodes.
+
+57:02.900 --> 57:03.820
+And here's the paradox.
+
+57:04.560 --> 57:06.440
+Say you play the game in the tree version.
+
+57:06.820 --> 57:10.060
+You go left through room A into the left boss room.
+
+57:10.600 --> 57:11.440
+You flip the switch.
+
+57:12.120 --> 57:12.820
+The light turns on.
+
+57:13.220 --> 57:14.040
+The bit is one.
+
+57:14.400 --> 57:15.320
+Okay, I flipped it.
+
+57:15.620 --> 57:17.200
+Then you walk all the way back to the hub,
+
+57:17.840 --> 57:18.800
+take the right path,
+
+57:19.500 --> 57:20.300
+go through room B,
+
+57:20.860 --> 57:22.200
+and enter the right boss room.
+
+57:22.780 --> 57:23.860
+What state is the switch in?
+
+57:25.480 --> 57:25.920
+It's...
+
+57:25.920 --> 57:27.480
+Wait, it's off.
+
+57:27.680 --> 57:29.900
+Because it's a completely independent copy of the room,
+
+57:30.380 --> 57:32.040
+I toggled the switch in the left universe,
+
+57:32.180 --> 57:33.960
+but the right universe doesn't know about it.
+
+57:34.240 --> 57:35.540
+The state didn't share.
+
+57:36.020 --> 57:36.420
+Exactly.
+
+57:37.240 --> 57:42.580
+Forcing the graph into a tree created two completely separate isolated realities of that room.
+
+57:42.720 --> 57:45.600
+The sharing of the context is completely lost.
+
+57:46.140 --> 57:48.520
+The tree destroyed the truth of the system.
+
+57:48.520 --> 57:51.040
+So how do computers actually fix this?
+
+57:51.120 --> 57:52.880
+Because obviously games work.
+
+57:52.980 --> 57:56.300
+You don't have parallel boss rooms in most games.
+
+57:56.300 --> 58:00.900
+To fix this, you have to introduce a massive mathematical patch called the descent condition.
+
+58:01.400 --> 58:03.520
+This is proposition 19.3.
+
+58:03.520 --> 58:05.340
+What exactly is descent?
+
+58:05.340 --> 58:05.440
+What exactly is descent?
+
+58:06.500 --> 58:09.440
+Descent is essentially heavy mathematical duct tape.
+
+58:09.980 --> 58:14.240
+Use it to force those two separate tree branches to act as one shared reality again.
+
+58:14.240 --> 58:18.580
+It is an external rule that constantly monitors the tree and says,
+
+58:18.580 --> 58:25.160
+Hey, if the bit changes in the left boss room, instantly teleport that change to the right boss room.
+
+58:25.520 --> 58:28.380
+Because structurally they are supposed to be the exact same place.
+
+58:28.380 --> 58:35.720
+So forcing a network into a tree structure is like taking a 3D globe and forcing it onto a flat 2D map.
+
+58:36.220 --> 58:41.520
+To make it flat, you have to tear the continents apart or stretch the oceans massively.
+
+58:41.520 --> 58:43.820
+You completely ruin the geometry.
+
+58:44.640 --> 58:50.340
+And descent is the mathematical tape you use to remind the map that Russia and Alaska are actually touching.
+
+58:50.660 --> 58:53.720
+Even though you drew them on completely opposite sides of the paper.
+
+58:54.040 --> 58:56.380
+That is a beautiful way to visualize it.
+
+58:57.080 --> 59:02.640
+A tree representation is mathematically useful for simple computation, but it is structurally incomplete.
+
+59:03.380 --> 59:05.700
+It loses the identity of repeated contexts.
+
+59:05.700 --> 59:14.760
+It forces you to staple descent conditions, guards, and linearizations all over it just to make it simulate the actual complex graph it's trying to represent.
+
+59:15.160 --> 59:19.360
+Okay, we have covered an incredible amount of mathematical and conceptual ground today.
+
+59:19.920 --> 59:21.480
+Let's synthesize this journey.
+
+59:22.180 --> 59:31.100
+What Flyxion has shown us is that context, the digital spaces we interact with every day, is not just an inert bucket that you throw files or code into.
+
+59:31.420 --> 59:34.960
+It is a highly active, bizarre geometric structure.
+
+59:34.960 --> 59:39.840
+It mathematically dictates what you know, what you can see, and what you are allowed to do.
+
+59:40.060 --> 59:40.460
+Exactly.
+
+59:41.200 --> 59:49.240
+And the rules governing those structures, whether it's a Unix shell, a Python script, or a video game inventory, are wildly, fundamentally different.
+
+59:49.600 --> 59:53.800
+We really have to stop treating digital architecture as a single, uniform hierarchy.
+
+59:54.540 --> 59:56.980
+The tree is a comforting lie that we tell ourselves.
+
+59:56.980 --> 01:00:07.980
+The reality is a multidimensional geometry of scope, filled with obstructions, non-injective shadows, and directional information flows that can hide infinite loops and secret variables.
+
+01:00:08.240 --> 01:00:11.300
+It really changes how you look at a simple folder on your desktop.
+
+01:00:11.300 --> 01:00:20.760
+But to leave you, the listener, with one final provocative thought, at the very end of the paper, Flyxion introduces Proposition 16.3.
+
+01:00:21.480 --> 01:00:23.560
+Contexts migrate into data.
+
+01:00:24.220 --> 01:00:28.640
+They look at advanced compiler techniques, specifically something called closure conversion.
+
+01:00:28.640 --> 01:00:30.260
+Yes, closure conversion.
+
+01:00:30.680 --> 01:00:32.760
+This is where the math gets truly existential.
+
+01:00:33.500 --> 01:00:46.100
+In these compiler techniques, the entire nested geometry of the source code, all those carefully constructed scopes, the trees, the graphs, the inner and outer boundaries, is completely stripped away during compilation.
+
+01:00:46.780 --> 01:00:47.800
+Stripped away completely?
+
+01:00:47.800 --> 01:00:48.400
+Yes.
+
+01:00:48.780 --> 01:00:56.700
+The compiler flattens all of that beautiful, complex geometry into a single, flat data argument and ships it off to the machine to execute.
+
+01:00:57.220 --> 01:00:58.900
+Which is a profound realization.
+
+01:00:59.360 --> 01:01:04.300
+The computer's processor ultimately doesn't care about the tree or the graph or the nesting dolls.
+
+01:01:04.500 --> 01:01:07.560
+It just processes a flat list of instructions.
+
+01:01:07.960 --> 01:01:08.380
+Exactly.
+
+01:01:09.040 --> 01:01:11.980
+The geometry is entirely erased at the lowest level.
+
+01:01:11.980 --> 01:01:24.940
+So, if the very geometry of your context can be mathematically flattened out of existence and packed into a flat variable, does context even objectively exist inside the machine?
+
+01:01:24.940 --> 01:01:36.760
+Or, is this entire geometry of scope we've spent the hour talking about, the folders, the boundaries, the inside and outside, the vaults within vaults, just a comfortable, multidimensional illusion?
+
+01:01:37.500 --> 01:01:45.800
+Is it just a digital projection generated entirely for the benefit of the human mind, to keep us from losing our sanity in a sea of flat, contextless data?
+
+01:01:46.340 --> 01:01:47.900
+I will let you mull that over.
+
+01:01:48.920 --> 01:01:52.280
+A fascinating, slightly terrifying question to end on.
+
+01:01:53.200 --> 01:01:54.860
+Thanks for diving deep with us today.
+
+01:01:54.940 --> 01:01:57.020
+We'll see you next time on the Edge of the Elysian.
+

@@ -1784,7 +1784,7 @@ You're essentially asking how we distinguish between genuine computation and a d
 
 447
 00:39:20,160 --> 00:39:24,480
-Flickshind addresses this using information theory in the mathematical appendix of the paper,
+Flyxion addresses this using information theory in the mathematical appendix of the paper,
 
 448
 00:39:25,200 --> 00:39:29,840
@@ -1796,7 +1796,7 @@ something we can visualize for all our sakes. Sure. A system can be closed. It c
 
 450
 00:39:35,040 --> 00:39:40,240
-keep the pipes from freezing, but it can still be what Flickshind calls degenerate. Degenerate,
+keep the pipes from freezing, but it can still be what Flyxion calls degenerate. Degenerate,
 
 451
 00:39:40,240 --> 00:39:47,200

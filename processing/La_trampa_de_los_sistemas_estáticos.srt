@@ -408,7 +408,7 @@ Si conectamos esto con el panorama general de cómo diseñamos sistemas, la comp
 
 103
 00:12:14,520 --> 00:12:17,400
-Crea lo que Flyson define como el experto frágil.
+Crea lo que Flyxion define como el experto frágil.
 
 104
 00:12:18,200 --> 00:12:22,860
@@ -892,7 +892,7 @@ Pero si esas restricciones no son verdaderamente independientes entre sí,
 
 224
 00:19:44,360 --> 00:19:49,980
-terminas creando lo que el análisis de FlyAction llama un monocultivo de restricciones.
+terminas creando lo que el análisis de Flyxion llama un monocultivo de restricciones.
 
 225
 00:19:49,980 --> 00:19:55,380
@@ -1376,7 +1376,7 @@ y lo que la convierte en ciencia de primer nivel
 
 345
 00:28:04,120 --> 00:28:07,980
-es que Flypexun establece reglas estrictas de falsabilidad.
+es que Flyxion establece reglas estrictas de falsabilidad.
 
 346
 00:28:08,780 --> 00:28:12,060

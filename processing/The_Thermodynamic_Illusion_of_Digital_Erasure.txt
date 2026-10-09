@@ -412,7 +412,7 @@ Have you ever cleaned out your garage, thrown away a random cable because you di
 That's a continuation deficit.
 You optimized for space, but failed the future query.
 This framework history, compression, continuation, and ontological deficits, it suddenly explains so much more than software architecture.
-To prove this, Flixionet applies the triad to the real world through three stunning case studies.
+To prove this, Flyxion applies the triad to the real world through three stunning case studies.
 The first compares Git to legal archives.
 We celebrated Git earlier as the champion of unbounded history, but Flyxion points out a crucial nuance.
 Git actively, intentionally throws away massive amounts of history.
@@ -475,7 +475,7 @@ The original authors weren't necessarily acting in malicious bad faith.
 They were simply optimizing their data retention for an academic system that rewarded publication over replication.
 The recent movement toward open data, pre-registration of hypotheses, and publishing raw data sets is essentially the scientific community waking up, realizing it had assumed the wrong distribution of future queries, and frantically adjusting its lambda dial to require less compression.
 It is a systemic correction of an ontological deficit.
-But this revelation leads us to the final, unsettling shift in flictions trilogy.
+But this revelation leads us to the final, unsettling shift in Flyxion trilogy.
 The postscript of the third essay reveals the ultimate limit of all this elegant math.
 If the entire value of our memories, whether it's digital code, biological synapses, or scientific journals, depends entirely on what the future is going to ask of them, who gets to decide what the future looks like?
 This raises an important question.

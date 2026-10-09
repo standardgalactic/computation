@@ -101,7 +101,7 @@ start	end	text
 716260	720860	El andamiaje de pasos intermedios fue borrado por la memoria para ahorrar recursos.
 720860	727140	Tal cual. Y eso, aunque parezca una ventaja enorme, nos revela una vulnerabilidad gigantesca.
 727720	733920	Si conectamos esto con el panorama general de cómo diseñamos sistemas, la compresión cognitiva tiene un precio altísimo.
-734520	737400	Crea lo que Flyson define como el experto frágil.
+734520	737400	Crea lo que Flyxion define como el experto frágil.
 738200	742860	Frágil. Pero si acaban de decir que son maestros, parecen invencibles en su campo.
 743260	746640	Lo son, sí. Siempre y cuando las reglas del juego no cambien.
 746640	752820	A ver, si a ese gran maestro de ajedrez le presentas un tablero donde las piezas han sido dispuestas al azar,
@@ -222,7 +222,7 @@ start	end	text
 1174660	1177200	automáticamente reduce el riesgo de fallo.
 1177200	1178520	Sí, más es mejor.
 1178520	1183820	Pero si esas restricciones no son verdaderamente independientes entre sí,
-1184360	1189980	terminas creando lo que el análisis de FlyAction llama un monocultivo de restricciones.
+1184360	1189980	terminas creando lo que el análisis de Flyxion llama un monocultivo de restricciones.
 1189980	1195380	Para aterrizarlo algo cotidiano, si sigo este instinto humano de que más es mejor,
 1195880	1201420	podría, no sé, instalar cuatro candados masivos y relucientes en la puerta principal de mi casa.
 1201920	1206100	Y cualquiera que los vea pensará, wow, esto es una fortaleza impenetrable.
@@ -343,7 +343,7 @@ start	end	text
 1677400	1677860	Pero mira,
 1678380	1681480	lo que separa a esta investigación técnica de la mera poesía
 1681480	1684120	y lo que la convierte en ciencia de primer nivel
-1684120	1687980	es que Flypexun establece reglas estrictas de falsabilidad.
+1684120	1687980	es que Flyxion establece reglas estrictas de falsabilidad.
 1688780	1692060	Para que esta teoría geométrica del amplituist sea dada por cierta,
 1692600	1694940	el autor propone pruebas empíricas de laboratorio
 1694940	1696900	que podrían destruirla por completo.
