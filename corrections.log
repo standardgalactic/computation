@@ -1,0 +1,88 @@
+
+================================================================
+Flyxion correction run - 2026-10-28 07:25:21
+Backup snapshot: backup_20261028_072521
+================================================================
+
+[name/concept] ./How_Shared_Objects_Build_Online_Community.txt
+  L740: For this final section, affliction does something truly mind-bending.
+        -> For this final section, Flyxion does something truly mind-bending.
+  [propagate] ./How_Shared_Objects_Build_Online_Community.vtt: "this final section, affliction does something truly" -> "this final section, Flyxion does something truly"
+
+[name/concept] ./Why_Video_Is_No_Longer_Evidence.txt
+  L188: kept as-is [c]: Okay, I want to dig into this because we really need to separate this from simple fiction.
+  L298: kept as-is [c]: And crucially, these aren't presented as cinematic fiction.
+
+[substitution] ./Why_Video_Is_No_Longer_Evidence.vtt
+  L73: We are unpacking this rather intense, honestly very dense, 2026 paper by an independent researcher named Flexion.
+  L115: And according to Flexion, there are three massive substitutions happening in our media diet right now.
+  L259: Fleibergson formalizes this as Proposition 1, the provenance condition.
+  L526: And Flexion calls that epistemic surprise.
+  L619: But Flyoxian points out that this synthetic rescue simulates moral satisfaction without anyone actually taking responsibility for a real animal.
+  L868: That sounds crazy, but Phyxian makes a very deliberate connection here to Carl Sagan and his famous work, The Demon-Hunted World.
+  (6 line(s) changed)
+
+[substitution] ./How_Shared_Objects_Build_Online_Community.vtt
+  L187: Flaxen points directly to Boyd and Ellison's famous 2007 definition of social network sites.
+  L328: Flexion traces the origin of this highway mentality back to early telecommunications.
+  L355: So, if the feed is just a giant digital post office, what is Flexion's alternative?
+  L406: Flexion pulls in a foundational concept from the study of cooperative work,
+  L550: And Fleixson anticipates this.
+  L637: And Flixian would entirely agree with you.
+  L841: But the holy grail of this era, and the absolute perfect example of Flexion's object-centered sociality, was a program called Plato Notes.
+  L952: And that tertian is exactly what Flixion highlights next.
+  L1408: To understand why this feels so profoundly unjust to the users, Flaxion breaks down the governance of shared computational objects into a highly useful four-part tuple.
+  L1645: To answer that, Floxion conducts a comparative architectural analysis of three massive systems.
+  L1921: Flexion cites an earlier 2023 essay titled,
+  L1969: Flexion examines systems like Google's Notebook LM,
+  L2026: To explain this mechanically, Flixen breaks down human interaction with media into three layers of shared reference.
+  L2245: But fliction points out that this is just a historical accident based on the limitations
+  L2251: The paper references a totally separate 2023 proposal written by fliction for an auditory
+  L2311: It applies through a concept Flixion calls the SpherePOP framework.
+  L2452: What Flexian's paper shows us definitively is that social media is not a ranked feed.
+  (17 line(s) changed)
+
+[substitution] ./How_Shared_Objects_Build_Online_Community.txt
+  L62: Flaxen points directly to Boyd and Ellison's famous 2007 definition of social network sites.
+  L109: Flexion traces the origin of this highway mentality back to early telecommunications.
+  L118: So, if the feed is just a giant digital post office, what is Flexion's alternative?
+  L135: Flexion pulls in a foundational concept from the study of cooperative work,
+  L183: And Fleixson anticipates this.
+  L212: And Flixian would entirely agree with you.
+  L280: But the holy grail of this era, and the absolute perfect example of Flexion's object-centered sociality, was a program called Plato Notes.
+  L317: And that tertian is exactly what Flixion highlights next.
+  L469: To understand why this feels so profoundly unjust to the users, Flaxion breaks down the governance of shared computational objects into a highly useful four-part tuple.
+  L548: To answer that, Floxion conducts a comparative architectural analysis of three massive systems.
+  L640: Flexion cites an earlier 2023 essay titled,
+  L656: Flexion examines systems like Google's Notebook LM,
+  L675: To explain this mechanically, Flixen breaks down human interaction with media into three layers of shared reference.
+  L748: But fliction points out that this is just a historical accident based on the limitations
+  L750: The paper references a totally separate 2023 proposal written by fliction for an auditory
+  L770: It applies through a concept Flixion calls the SpherePOP framework.
+  L817: What Flexian's paper shows us definitively is that social media is not a ranked feed.
+  (17 line(s) changed)
+
+[substitution] ./Why_Video_Is_No_Longer_Evidence.txt
+  L24: We are unpacking this rather intense, honestly very dense, 2026 paper by an independent researcher named Flexion.
+  L38: And according to Flexion, there are three massive substitutions happening in our media diet right now.
+  L86: Fleibergson formalizes this as Proposition 1, the provenance condition.
+  L175: And Flexion calls that epistemic surprise.
+  L206: But Flyoxian points out that this synthetic rescue simulates moral satisfaction without anyone actually taking responsibility for a real animal.
+  L289: That sounds crazy, but Phyxian makes a very deliberate connection here to Carl Sagan and his famous work, The Demon-Hunted World.
+  (6 line(s) changed)
+
+[substitution] ./learning_inventory/scripts/nb_match.json
+  (0 line(s) changed)
+
+==== Candidate Variants (none found) ====
+
+==== Summary ====
+Files scanned        : 6
+Files updated        : 5
+Files unchanged      : 1
+Unique candidates    : 0
+Elapsed time         : 17s
+
+================================================================
+Run complete at 2026-10-28 07:25:38
+================================================================

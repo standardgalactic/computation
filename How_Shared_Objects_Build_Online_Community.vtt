@@ -1,0 +1,2564 @@
+WEBVTT
+
+00:00.000 --> 00:07.640
+You know, usually when we talk about a medical diagnosis, there is this expectation of extreme
+
+00:07.640 --> 00:14.520
+precision. Like, you break your arm, right? Right, you go get an x-ray. Exactly. The x-ray shows that
+
+00:14.520 --> 00:19.260
+jagged white line and the doctor just points at the screen and says, well, there it is. It is
+
+00:19.260 --> 00:24.960
+entirely binary. It is either broken or not broken. You can literally see the exact point of failure.
+
+00:24.960 --> 00:31.620
+Yeah, and it's clean. But then you step into the world of complex systemic issues,
+
+00:32.160 --> 00:38.680
+say neurodevelopment or certain types of trauma. And suddenly that x-ray machine is completely
+
+00:38.680 --> 00:45.400
+useless. Right. You're looking at a diagnostic landscape that is just entirely murky. You have
+
+00:45.400 --> 00:51.460
+a tool that is fundamentally the wrong instrument for the job, but, you know, it is the only tool
+
+00:51.460 --> 00:56.080
+you have ever been taught to use. You're basically trying to measure water volume with a ruler.
+
+00:56.640 --> 01:02.060
+The tool simply does not map to the reality of the condition you are observing. Okay, so let's
+
+01:02.060 --> 01:07.940
+unpack this. Today, we are taking that exact same murky diagnostic lens and we are pointing it
+
+01:07.940 --> 01:14.980
+straight at something you probably look at every single day. Your phone. Yes, we are going to
+
+01:14.980 --> 01:20.540
+completely dismantle and radically redefine what social media actually is. We are moving far,
+
+01:20.540 --> 01:25.520
+far away from the toxic, doom-scrolling feeds that you are probably picturing right now in your head.
+
+01:25.520 --> 01:30.920
+And instead, we are going to discover the hidden architecture of true online communities.
+
+01:31.460 --> 01:35.480
+It requires a fundamental shift in how we perceive digital interaction.
+
+01:36.100 --> 01:41.760
+To do this, we are using a really groundbreaking October 2026 paper by the independent researcher
+
+01:41.760 --> 01:49.760
+Flyxion. It is titled, The Sociality of Computation, From Educational Systems to Persistent Digital Worlds.
+
+01:49.760 --> 01:55.480
+And what Flyxion does so effectively here is argue that our current universally accepted
+
+01:55.480 --> 02:00.340
+definition of social media is, in fact, a massive misdiagnosis.
+
+02:00.560 --> 02:01.400
+A misdiagnosis.
+
+02:01.700 --> 02:04.540
+Yes, we have been looking at the wrong symptoms for decades.
+
+02:04.860 --> 02:10.680
+So our mission today for this deep dive is to show you that you aren't actually trapped in the
+
+02:10.680 --> 02:12.800
+age of algorithmically ranked feeds.
+
+02:13.020 --> 02:13.260
+Right.
+
+02:13.260 --> 02:17.840
+You might be listening to this right now thinking, well, I kind of like my TikTok algorithm.
+
+02:18.380 --> 02:20.080
+It knows exactly what I want to see.
+
+02:20.540 --> 02:23.220
+And that is perfectly fine for passive entertainment.
+
+02:23.360 --> 02:24.120
+Sure. Absolutely.
+
+02:24.660 --> 02:30.120
+But if you are looking for connection for real community, that endless stream of broadcasted
+
+02:30.120 --> 02:31.460
+takes is a dead end.
+
+02:31.460 --> 02:37.980
+By understanding what Flyxion calls shared computational objects, you are going to get a literal map.
+
+02:38.300 --> 02:42.880
+A map to finding and maybe even building better, more enduring spaces online.
+
+02:43.260 --> 02:46.040
+The core thesis is highly optimistic, actually.
+
+02:46.280 --> 02:46.700
+It is.
+
+02:47.120 --> 02:52.760
+Flyxion argues that sociality, the actual forming of durable communities, that feeling of belonging
+
+02:52.760 --> 02:57.660
+to a collective, it does not emerge from user profiles and ranked feeds.
+
+02:57.800 --> 03:00.080
+Wait, so if it doesn't come from feeds, where does it come from?
+
+03:00.080 --> 03:03.120
+It emerges from shared history and accessible objects.
+
+03:03.460 --> 03:08.760
+It is about what we build, modify, and maintain together, rather than just what we broadcast
+
+03:08.760 --> 03:09.500
+at each other.
+
+03:09.720 --> 03:10.240
+I love that.
+
+03:10.680 --> 03:15.140
+But to get there, we have to start by tearing down your preconceived notions of what social
+
+03:15.140 --> 03:16.220
+media even is.
+
+03:16.300 --> 03:17.300
+We have to clear the slate.
+
+03:17.480 --> 03:17.740
+Right.
+
+03:18.120 --> 03:21.560
+When I say social media, what is the architecture that immediately pops into your head?
+
+03:22.000 --> 03:24.140
+For almost everyone listening, it is identical.
+
+03:24.740 --> 03:28.100
+It is Facebook, X, Instagram, TikTok.
+
+03:28.100 --> 03:32.700
+And that dominant architecture relies on very specific, rigid components.
+
+03:33.260 --> 03:34.600
+First, you have a personal profile.
+
+03:34.920 --> 03:37.000
+Which acts as your digital identity card.
+
+03:37.140 --> 03:37.460
+Exactly.
+
+03:37.820 --> 03:41.860
+Then you have a formalized list of connections, your friends, your followers, subscribers.
+
+03:42.460 --> 03:44.160
+And crucially, you have the feed.
+
+03:44.560 --> 03:44.840
+Right.
+
+03:45.060 --> 03:46.060
+A ranked stream of posts.
+
+03:46.440 --> 03:46.680
+Right.
+
+03:46.680 --> 03:50.180
+And it is not just casual users who think this way.
+
+03:50.320 --> 03:55.020
+There is a massive academic precedent that locked this exact definition into place.
+
+03:55.420 --> 03:55.460
+Yeah.
+
+03:55.620 --> 04:01.920
+Flyxion points directly to Boyd and Ellison's famous 2007 definition of social network sites.
+
+04:02.580 --> 04:06.040
+Boyd and Ellison essentially codified the era of Web 2.0.
+
+04:06.040 --> 04:12.680
+They stated that a social network is a web-based service where individuals construct a public
+
+04:12.680 --> 04:14.060
+or semi-public profile.
+
+04:14.700 --> 04:17.660
+Articulate a list of other users with whom they share a connection.
+
+04:18.260 --> 04:22.360
+And view their list of connections and those made by others within the system.
+
+04:22.820 --> 04:24.540
+That was the gold standard definition.
+
+04:25.100 --> 04:29.020
+Which, to be fair, was an incredibly useful definition back in 2007.
+
+04:29.520 --> 04:33.980
+It helped researchers wrap their heads around what MySpace and early Facebook were doing.
+
+04:33.980 --> 04:37.880
+It described the phenomenon of that specific moment perfectly.
+
+04:38.560 --> 04:44.960
+But Fleikerson argues that carrying this definition forward into the modern era is a massive category error.
+
+04:45.500 --> 04:46.680
+Okay, a category error.
+
+04:46.900 --> 04:47.780
+Break that down for us.
+
+04:48.060 --> 04:50.560
+A category error is a philosophical concept.
+
+04:50.900 --> 04:55.740
+It means you fundamentally misunderstand the ontological nature of the thing you are observing.
+
+04:56.100 --> 04:58.940
+So we are just categorizing the entire internet wrong.
+
+04:59.340 --> 05:00.220
+Essentially, yes.
+
+05:00.220 --> 05:06.280
+By defining online sociality strictly through the lens of profiles, follower graphs, and feeds,
+
+05:06.860 --> 05:12.340
+we are mistaking one specific historical branch of social computing for the trunk of the entire tree.
+
+05:12.520 --> 05:12.880
+Oh, I see.
+
+05:13.540 --> 05:16.960
+We are looking at a single offshoot of digital evolution and declaring,
+
+05:17.120 --> 05:19.080
+hey, this is the entire species.
+
+05:19.540 --> 05:20.040
+Precisely.
+
+05:20.200 --> 05:20.660
+Precisely.
+
+05:21.120 --> 05:26.200
+And by making that error, we end up completely ignoring massive, genuinely social systems
+
+05:26.200 --> 05:28.360
+that millions of people use every single day.
+
+05:28.360 --> 05:30.140
+Right. Think about Wikipedia.
+
+05:30.580 --> 05:34.240
+Or think about GitHub, where developers literally build the world's software.
+
+05:34.720 --> 05:35.580
+Or YouTube.
+
+05:36.140 --> 05:39.880
+Or massive multiplayer digital worlds like Minecraft and EVE Online.
+
+05:40.140 --> 05:42.580
+What do all of those platforms actually have in common?
+
+05:43.300 --> 05:49.080
+None of them rely on prominent personal profiles or personal broadcast-style feeds as their main thing.
+
+05:49.380 --> 05:54.020
+Yet they account for a staggering fraction of the sustained collaborative activity on the internet.
+
+05:54.640 --> 05:56.400
+It is wild to really think about it.
+
+05:56.400 --> 05:58.620
+Take Wikipedia as an example.
+
+05:59.320 --> 06:05.840
+It sustains deeply complex cooperation among thousands of people who, frankly, frequently do not know each other at all.
+
+06:06.140 --> 06:08.160
+Right. They aren't following each other's personal lives.
+
+06:08.220 --> 06:10.260
+They don't care what the other editor had for breakfast.
+
+06:10.500 --> 06:10.720
+No.
+
+06:11.120 --> 06:14.760
+They communicate almost entirely through the object they are jointly producing,
+
+06:14.900 --> 06:17.080
+which is the encyclopedic article itself.
+
+06:17.080 --> 06:23.840
+So, thinking social media is only feeds is like saying a city is only made of highways,
+
+06:24.440 --> 06:30.880
+while completely ignoring the public squares, the libraries, the construction sites where people actually gather to do things.
+
+06:31.100 --> 06:33.200
+That is a highly accurate way to visualize it.
+
+06:33.560 --> 06:37.980
+The highways, the feeds, they just move traffic from point A to point B at high speed.
+
+06:38.380 --> 06:40.760
+But the squares are where the city actually happens.
+
+06:40.760 --> 06:41.480
+Exactly.
+
+06:42.100 --> 06:47.600
+Flyxion traces the origin of this highway mentality back to early telecommunications.
+
+06:47.940 --> 06:54.240
+The dominant model of online social life descends directly from the telephone exchange and the postal service.
+
+06:54.460 --> 06:57.500
+It operates on what we'd call a communication channel model.
+
+06:57.820 --> 06:58.060
+Right.
+
+06:58.380 --> 07:03.500
+I write a letter, I put your address on it, the post office routes it, and you receive it.
+
+07:03.660 --> 07:07.000
+The medium is just a passive carrier of the message.
+
+07:07.000 --> 07:13.160
+And even when you post publicly on a modern feed, say, you know, you send out a tweet or a status update,
+
+07:13.580 --> 07:18.120
+you are essentially just sending a broadcast message to an aggregated audience.
+
+07:18.760 --> 07:24.140
+It is still fundamentally a system of people throwing discrete messages at other people.
+
+07:24.720 --> 07:29.640
+So, if the feed is just a giant digital post office, what is Flyxion's alternative?
+
+07:29.820 --> 07:31.880
+How do we redefine the city square?
+
+07:32.440 --> 07:35.280
+The alternative is an object-centered model.
+
+07:35.580 --> 07:36.700
+Okay, object-centered.
+
+07:36.700 --> 07:41.160
+Instead of communication being mediated by messages traveling between persons,
+
+07:41.880 --> 07:46.300
+the sociality is mediated by persistent digital objects.
+
+07:46.880 --> 07:49.200
+So, let's go back to editing a Wikipedia article.
+
+07:49.440 --> 07:53.460
+When you make a contribution there, you aren't addressing the next reader directly.
+
+07:54.100 --> 07:56.340
+You might not know or care who the next reader is.
+
+07:56.480 --> 07:58.100
+You are addressing the article.
+
+07:58.560 --> 08:04.520
+Your relationship with the next person to come along is mediated entirely by the altered state of that shared thing.
+
+08:04.700 --> 08:05.100
+Exactly.
+
+08:05.100 --> 08:06.920
+It is not me talking to you.
+
+08:07.060 --> 08:10.720
+It is me walking into a room, painting a wall blue, and leaving.
+
+08:11.380 --> 08:13.660
+Then you walk into the room and experience a blue wall.
+
+08:14.140 --> 08:14.440
+Yes.
+
+08:15.140 --> 08:16.980
+And to ground this mechanically,
+
+08:17.240 --> 08:21.300
+Flyxion pulls in a foundational concept from the study of cooperative work,
+
+08:21.560 --> 08:22.940
+dating back to 1989.
+
+08:22.940 --> 08:26.820
+Star and Grissimer's concept of boundary objects.
+
+08:26.820 --> 08:33.980
+I want to spend some real time on this because understanding the boundary object is basically the key to this entire deep dive.
+
+08:34.540 --> 08:36.780
+What exactly did Star and Grissimer study?
+
+08:36.780 --> 08:45.480
+They conducted a sociological study of a natural history museum, specifically the Museum of Vertebrate Zoology at UC Berkeley in its early years.
+
+08:45.480 --> 08:51.940
+They looked at how wildly different groups of people managed to cooperate to build this museum,
+
+08:52.100 --> 08:56.640
+even though they fundamentally disagreed on what the museum's actual purpose was.
+
+08:56.880 --> 08:59.380
+Because you had a crazy mix of people involved in this, right?
+
+08:59.380 --> 09:03.980
+You had amateur bird watchers out in the field, professional academic biologists.
+
+09:04.400 --> 09:05.600
+University administrators.
+
+09:06.060 --> 09:07.560
+And professional trappers and hunters.
+
+09:07.800 --> 09:08.160
+Exactly.
+
+09:08.640 --> 09:13.160
+The administrator's primary goal is just to balance a budget and keep the university happy.
+
+09:13.160 --> 09:17.120
+The biologist wants to publish a groundbreaking taxonomy paper.
+
+09:17.700 --> 09:20.880
+The amateur bird watcher is doing it for the love of nature and conservation.
+
+09:21.620 --> 09:25.040
+And the trapper simply wants to get paid a bounty for a physical specimen.
+
+09:25.680 --> 09:30.160
+They have completely divergent, sometimes totally conflicting worldviews.
+
+09:30.260 --> 09:34.400
+If they sat in a room and tried to talk to each other, they would probably argue constantly.
+
+09:34.980 --> 09:37.580
+But they didn't have to talk to each other directly to cooperate.
+
+09:37.660 --> 09:37.800
+No.
+
+09:38.560 --> 09:42.880
+They collaborated successfully through what Star and Grissimer called boundary objects.
+
+09:43.160 --> 09:48.040
+The physical specimens themselves, the standardized field notes, the maps of the territory.
+
+09:48.880 --> 09:50.120
+Okay, break that down for me.
+
+09:50.760 --> 09:53.240
+How does a dead bird act as a boundary object?
+
+09:53.940 --> 09:57.820
+A boundary object is something that is plastic enough to adapt to the local,
+
+09:58.020 --> 09:59.720
+specific needs of different communities,
+
+09:59.920 --> 10:03.480
+but robust enough to maintain a common identity across all of them.
+
+10:03.900 --> 10:04.460
+That makes sense.
+
+10:04.560 --> 10:07.020
+To the trapper, the dead bird is a commodity.
+
+10:07.360 --> 10:08.280
+It represents a paycheck.
+
+10:08.920 --> 10:13.140
+To the administrator, that exact same bird is a line item on an expense report.
+
+10:13.160 --> 10:19.080
+And to the biologist, it is a crucial data point proving a species mutation.
+
+10:19.880 --> 10:24.380
+So the shared object makes coordination possible among parties whose purposes differ,
+
+10:24.700 --> 10:30.720
+because the object can be interpreted in multiple ways while remaining physically the same thing.
+
+10:31.100 --> 10:31.360
+Yes.
+
+10:31.540 --> 10:32.740
+It acts as an anchor.
+
+10:33.160 --> 10:36.660
+It anchors all these disparate motivations into a single shared reality.
+
+10:36.660 --> 10:43.060
+And mapping this to the digital world, the boundary object isn't a stuffed bird in a drawer.
+
+10:43.280 --> 10:46.180
+It is a digital flashcard on a learning platform.
+
+10:46.380 --> 10:48.560
+It is a repository of code on GitHub.
+
+10:49.120 --> 10:52.360
+Or a digital castle built on a Minecraft server.
+
+10:52.780 --> 10:53.480
+Exactly right.
+
+10:54.140 --> 10:57.700
+But wait, if any digital thing we interact with is a boundary object,
+
+10:57.700 --> 11:02.900
+doesn't the definition of social media become so broad that it is basically meaningless?
+
+11:03.420 --> 11:06.420
+Like, is a parking meter app social media?
+
+11:06.900 --> 11:09.140
+Is my digital thermostat social media?
+
+11:09.560 --> 11:11.360
+That is a very crucial pushback.
+
+11:11.740 --> 11:13.440
+And Flyxion anticipates this.
+
+11:13.980 --> 11:18.900
+The paper sets up a rigorous stress test to pinpoint exactly when computational infrastructure
+
+11:18.900 --> 11:22.880
+crosses the threshold into becoming a genuinely social medium.
+
+11:23.240 --> 11:24.780
+Okay, walk us through these scenarios.
+
+11:24.780 --> 11:25.980
+Scenario one.
+
+11:26.620 --> 11:29.340
+Imagine two people sitting in the exact same physical room.
+
+11:29.980 --> 11:34.280
+Each person is holding a separate offline calculator doing their own math homework.
+
+11:34.800 --> 11:37.200
+Is that a social computational system?
+
+11:37.640 --> 11:38.360
+Obviously not.
+
+11:38.800 --> 11:40.440
+I mean, they are co-located physically.
+
+11:40.940 --> 11:43.600
+But digitally, they are in isolated universes.
+
+11:44.040 --> 11:44.340
+Correct.
+
+11:44.860 --> 11:45.600
+Scenario two.
+
+11:46.240 --> 11:49.680
+Someone fills out a complex web form, maybe a tax return, and hits submit.
+
+11:49.980 --> 11:54.500
+The data is saved to a secure, private, encrypted database sitting on a server somewhere.
+
+11:54.780 --> 11:56.260
+No one else has access to it.
+
+11:56.700 --> 11:57.440
+Still not social.
+
+11:57.760 --> 11:58.760
+There is no access.
+
+11:59.000 --> 12:00.700
+There is no shared visibility at all.
+
+12:00.940 --> 12:01.200
+Right.
+
+12:01.800 --> 12:02.720
+Now, scenario three.
+
+12:03.280 --> 12:08.700
+I create a highly detailed open access spreadsheet on a cloud server and publish the link publicly.
+
+12:08.700 --> 12:10.620
+Okay, this is where it gets nuanced.
+
+12:11.480 --> 12:15.360
+You have created the structural capacity for sociality.
+
+12:15.940 --> 12:16.440
+It is public.
+
+12:16.900 --> 12:17.600
+It is accessible.
+
+12:18.920 --> 12:27.560
+But if I create that spreadsheet and I tweet the link and literally zero people ever click it, is it social media?
+
+12:28.560 --> 12:30.240
+I would argue no.
+
+12:30.860 --> 12:33.080
+It is just a lonely file sitting on a server.
+
+12:33.080 --> 12:35.420
+And Flyxion would entirely agree with you.
+
+12:35.620 --> 12:37.860
+It is only structurally available.
+
+12:38.280 --> 12:47.320
+But the moment you open that link and you see that I am currently typing in cell A1 and I change a formula that alters the graph you are currently looking at on your screen.
+
+12:47.560 --> 12:47.840
+Boom.
+
+12:48.340 --> 12:51.300
+Now we have achieved realized social generativity.
+
+12:51.680 --> 12:52.040
+Exactly.
+
+12:52.600 --> 12:56.700
+Because your reality was just altered by my action on the shared object.
+
+12:56.960 --> 12:59.880
+The shared object is the locus of the interaction.
+
+13:00.380 --> 13:02.260
+It absolutely requires three things.
+
+13:02.260 --> 13:09.660
+Accessibility, observable changes, and what the paper terms, cross-participant consequence.
+
+13:10.220 --> 13:11.760
+Cross-participant consequence.
+
+13:12.360 --> 13:18.980
+Meaning my action must fundamentally alter what you can perceive, what you can interpret, or what you can do next.
+
+13:19.260 --> 13:19.600
+Yes.
+
+13:20.240 --> 13:24.820
+And this realization completely shatters the timeline of internet history we have all been taught.
+
+13:24.980 --> 13:25.220
+Right.
+
+13:25.220 --> 13:31.060
+We have this mythology that social media was invented by Mark Zuckerberg in a Harvard dorm room in 2004.
+
+13:31.560 --> 13:34.620
+Or maybe Tom Anderson with MySpace in 2003.
+
+13:35.020 --> 13:43.060
+But if we define social media as cross-participant consequence on shared objects, we have to travel way back to the 1960s.
+
+13:43.060 --> 13:47.340
+And we have to look at a field that nobody associates with the birth of digital communities.
+
+13:47.820 --> 13:48.300
+Education.
+
+13:49.020 --> 13:49.420
+Education.
+
+13:50.240 --> 13:50.940
+Not defense.
+
+13:51.420 --> 13:52.840
+Not communication software.
+
+13:53.480 --> 13:55.420
+But giant mechanical textbooks.
+
+13:56.060 --> 13:58.880
+This is one of the most fascinating historical corrections in the paper.
+
+13:59.160 --> 14:03.060
+The true birthplace of digital sociality was educational infrastructure.
+
+14:03.680 --> 14:05.100
+Specifically a system called Plato.
+
+14:05.100 --> 14:07.440
+Okay, let's set the scene for the listener here.
+
+14:07.560 --> 14:12.860
+Because when we say computer in 1960, we are talking about a sleek laptop.
+
+14:13.180 --> 14:13.620
+Not at all.
+
+14:14.340 --> 14:18.540
+Plato stands for Programmed Logic for Automatic Teaching Operations.
+
+14:18.960 --> 14:21.980
+It was developed at the University of Illinois starting in 1960.
+
+14:22.440 --> 14:27.120
+We are talking about massive, room-sized, mainframe computers.
+
+14:27.480 --> 14:31.420
+And the designers of Plato had zero intention of building a social network, right?
+
+14:31.420 --> 14:31.640
+Zero.
+
+14:31.640 --> 14:37.400
+The system was built strictly and exclusively to deliver automated instruction to students.
+
+14:38.080 --> 14:42.440
+To facilitate this, the engineers built a specific programming language called Tudor.
+
+14:42.720 --> 14:43.360
+Tudor, okay.
+
+14:43.700 --> 14:52.480
+Tudor was designed to be highly accessible so that professors and instructors who were not computer scientists could write interactive lesson materials and quizzes.
+
+14:53.060 --> 14:56.820
+And by the early 1970s, they had advanced the hardware significantly.
+
+14:57.000 --> 15:01.460
+They were using these iconic glowing orange plasma display terminals.
+
+15:01.640 --> 15:02.820
+Yes, the orange screens.
+
+15:03.360 --> 15:08.800
+They could mix text and vector graphics on the same screen, which was totally revolutionary at the time.
+
+15:08.980 --> 15:16.180
+But the critical architectural feature of Plato was that all these terminals were connected to a central mainframe with shared memory.
+
+15:16.440 --> 15:17.420
+Ah, shared memory.
+
+15:17.420 --> 15:26.260
+And because the Tudor language was so accessible, the users, the students and the amateurs using the terminals, did what humans always do.
+
+15:26.680 --> 15:29.060
+They engaged in creative appropriation.
+
+15:29.560 --> 15:33.140
+They accidentally birthed the precursor to modern online communities.
+
+15:33.780 --> 15:36.420
+They were supposed to be doing automated calculus drills.
+
+15:36.760 --> 15:36.960
+Right.
+
+15:36.960 --> 15:40.640
+But instead, they realized, wait, this machine remembers what I type.
+
+15:41.000 --> 15:43.320
+And someone on another terminal can see it.
+
+15:44.040 --> 15:45.900
+So they started building worlds.
+
+15:46.820 --> 15:50.540
+They built some of the first multiplayer digital games in human history.
+
+15:51.220 --> 15:56.220
+Games like Empire, which was an incredibly complex multiplayer space strategy game.
+
+15:56.220 --> 15:59.500
+Or Avatar, an early graphical role-playing game.
+
+15:59.860 --> 16:02.440
+Or Air Fight, a 3D flight simulator.
+
+16:03.220 --> 16:05.980
+And these weren't just cute little weekend side projects.
+
+16:06.180 --> 16:07.000
+Far from it.
+
+16:07.940 --> 16:15.900
+Encyclopedic accounts of the Plato system report that these specific games logged more than a million contact hours each by the users.
+
+16:16.160 --> 16:17.420
+Let that sink in.
+
+16:17.420 --> 16:25.880
+A million hours of user engagement in the 1970s, long before the personal computer revolution even happened.
+
+16:26.660 --> 16:29.060
+And the innovation extended far beyond gaming, too.
+
+16:29.780 --> 16:34.100
+In 1973, a user named Doug Brown wrote a program called Talkomatic.
+
+16:34.460 --> 16:37.540
+It was essentially the world's first real-time chat room.
+
+16:37.900 --> 16:40.400
+You could have up to five people typing simultaneously, right?
+
+16:40.580 --> 16:40.880
+Yes.
+
+16:41.060 --> 16:46.000
+And each person's text appeared in a separate horizontal window on that orange plasma screen.
+
+16:46.000 --> 16:54.280
+But the holy grail of this era, and the absolute perfect example of Flyxion's object-centered sociality, was a program called Plato Notes.
+
+16:54.660 --> 16:56.280
+Created by David R. Woolley.
+
+16:57.360 --> 17:00.540
+What was the original intended purpose of Plato Notes?
+
+17:01.040 --> 17:07.360
+It was designed to be a dry, utilitarian tool for users to report system bugs to the mainframe administrators.
+
+17:07.660 --> 17:09.340
+A simple log of faults.
+
+17:09.620 --> 17:09.800
+Right.
+
+17:09.800 --> 17:12.880
+You would type, Terminal 4's screen is flickering.
+
+17:13.480 --> 17:16.300
+Or, the math drill crashed on question 7.
+
+17:16.720 --> 17:20.900
+You submit it, the admin reads it, fixes it, and that is it.
+
+17:21.580 --> 17:25.260
+But the users immediately grasped the affordance of the object.
+
+17:25.660 --> 17:28.020
+The system provided a persistent shared file.
+
+17:28.200 --> 17:28.720
+It was public.
+
+17:29.320 --> 17:34.680
+And crucially, it did not enforce any technical restrictions on what kind of text could be entered into that file.
+
+17:34.680 --> 17:38.460
+It didn't have an AI checking to make sure your text was actually a bug report.
+
+17:39.100 --> 17:40.860
+It just saved whatever text you put in.
+
+17:41.240 --> 17:43.260
+So participants started using it for other things.
+
+17:43.500 --> 17:46.180
+They started discussing strategies for the game Empire.
+
+17:46.620 --> 17:48.820
+They started discussing campus life.
+
+17:49.260 --> 17:50.380
+They debated philosophy.
+
+17:50.720 --> 17:52.460
+The interactions just accumulated.
+
+17:53.120 --> 17:56.180
+People began recognizing each other's handles and writing styles.
+
+17:56.380 --> 17:57.880
+They formed actual relationships.
+
+17:58.360 --> 18:04.360
+Plato Notes organically transformed from a bug reporting tool into a vibrant, general-purpose forum.
+
+18:04.920 --> 18:08.040
+Eventually organizing itself into discrete threads and topics.
+
+18:08.040 --> 18:10.720
+It was the direct ancestor of Reddit.
+
+18:11.340 --> 18:12.780
+Of bulletin board systems.
+
+18:13.060 --> 18:14.160
+Of modern forums.
+
+18:14.840 --> 18:15.400
+Exactly.
+
+18:16.200 --> 18:17.740
+But, hold on.
+
+18:17.800 --> 18:19.460
+Let me play devil's advocate here for a second.
+
+18:20.280 --> 18:26.380
+You have people essentially hijacking a multi-million dollar institutional machine just to hang out and play space games.
+
+18:27.000 --> 18:28.180
+That is what was happening.
+
+18:28.780 --> 18:30.020
+This wasn't a public utility.
+
+18:30.600 --> 18:31.840
+It was owned by a university.
+
+18:32.060 --> 18:33.880
+It was funded heavily by institutions.
+
+18:34.460 --> 18:37.180
+Including the military and the National Science Foundation.
+
+18:37.180 --> 18:41.580
+They didn't pour millions into mainframe development so college kids could chat all night.
+
+18:42.260 --> 18:45.500
+And that tertian is exactly what Flyxion highlights next.
+
+18:45.800 --> 18:51.360
+When educational computing resources are appropriated and become spaces for independent social organization,
+
+18:51.360 --> 18:55.640
+a profound conflict arises regarding institutional governance.
+
+18:55.980 --> 18:56.720
+Especially then.
+
+18:57.260 --> 19:04.700
+The Plato system existed during the 1960s and 70s, which were periods of intense, often volatile political activity on university campuses.
+
+19:04.700 --> 19:09.360
+Yeah, so you had the anti-war movement, the civil rights movement, massive cultural upheaval.
+
+19:09.980 --> 19:17.300
+And according to historical records cited in the paper, users were utilizing Plato's systems to organize protests against the Vietnam War.
+
+19:17.300 --> 19:21.380
+And later to host deep, ongoing discussions about the Watergate scandal.
+
+19:21.600 --> 19:25.280
+Which put the university in an incredibly difficult position.
+
+19:25.780 --> 19:33.900
+Historical accounts show that the institutional funders were not pleased that their expensive computing resources were being used to facilitate political dissent.
+
+19:33.900 --> 19:35.480
+So what did the administration do?
+
+19:36.220 --> 19:37.900
+They responded with strict crackdowns.
+
+19:38.780 --> 19:42.700
+They threatened to pull funding specifically to shut down the Watergate discussion forums.
+
+19:43.160 --> 19:43.260
+Wow.
+
+19:43.600 --> 19:52.280
+Furthermore, to combat the million plus hours being spent on games like Empire, administrators deployed a script literally named The Enforcer.
+
+19:52.600 --> 19:54.660
+The Enforcer. That sounds ominous.
+
+19:54.660 --> 20:00.060
+It actively monitored the system and terminated game processes during peak educational hours.
+
+20:00.820 --> 20:05.440
+It is the ultimate my house, my rules scenario, played out on the very first digital frontier.
+
+20:06.380 --> 20:08.340
+The institution controls the physical servers.
+
+20:08.980 --> 20:09.800
+They control the funding.
+
+20:10.360 --> 20:15.580
+So the moment the community's behavior deviates from the institution's goals, they just pull the plug on those specific objects.
+
+20:16.000 --> 20:22.580
+It demonstrates that the architecture provides the affordance, but the institution holds the ultimate power of eviction.
+
+20:22.580 --> 20:34.080
+The Plato case definitively proves that the functions we associate with social media forums, real-time chat, multiplayer, co-presence, are not inherent to communication networks.
+
+20:34.560 --> 20:34.620
+No.
+
+20:34.940 --> 20:40.040
+They were generated by a shared educational environment long before the public web even existed.
+
+20:40.280 --> 20:40.540
+Right.
+
+20:41.240 --> 20:41.560
+Okay.
+
+20:41.700 --> 20:46.200
+So the Plato story proves this happens in early isolated mainframes.
+
+20:46.200 --> 20:53.000
+But what happens when you expose this object-centered behavior to the modern, hyper-competitive internet?
+
+20:53.680 --> 20:56.340
+To see that, we have to jump forward in time to 2010.
+
+20:56.940 --> 21:04.200
+We are looking at a platform called Memrise because this case study shows exactly how this dynamic plays out on a microscopic level today.
+
+21:04.480 --> 21:04.780
+Right.
+
+21:05.200 --> 21:07.180
+Memrise launched as a language learning app.
+
+21:07.400 --> 21:09.900
+Its core mechanic was based on spaced repetition.
+
+21:10.580 --> 21:13.520
+Spaced repetition is an algorithmic scheduling technique.
+
+21:13.520 --> 21:19.300
+It tests you on vocabulary just as you are about to forget it, moving the knowledge into long-term memory.
+
+21:19.900 --> 21:22.040
+But it wasn't just a top-down curriculum, right?
+
+21:22.120 --> 21:27.680
+It grew into a platform where users could build comprehensive community courses on literally anything.
+
+21:28.000 --> 21:35.200
+You had courses on advanced mathematics, global geography, programming languages, obscure scientific terminology.
+
+21:35.600 --> 21:38.680
+It became a massive, generalized learning infrastructure.
+
+21:38.680 --> 21:47.140
+And the atomic unit of this entire infrastructure, the shared boundary object at the center of the universe, was the humble digital flashcard.
+
+21:47.680 --> 21:50.740
+The flashcard is an ideal boundary object.
+
+21:51.400 --> 21:52.440
+It is strictly bounded.
+
+21:52.880 --> 21:53.760
+It is reusable.
+
+21:54.240 --> 21:56.520
+It has a clear prompt and a correct answer.
+
+21:57.280 --> 22:03.240
+But Memrise included a very specific feature on their flashcards called a MEM, M-E-M.
+
+22:03.340 --> 22:04.760
+Short for mnemonic device.
+
+22:05.200 --> 22:06.580
+And visually, what was this?
+
+22:06.580 --> 22:10.840
+It was just a blank annotation text box attached to the bottom of the flashcard.
+
+22:11.800 --> 22:16.860
+The intended pedagogical function of the MEM was to allow users to create and share memory aids.
+
+22:17.480 --> 22:25.460
+You might upload a funny image or write a clever pun or share a short story that associates the foreign vocabulary word with a concept you already know.
+
+22:25.880 --> 22:35.200
+But, just like David R. Woolley's bug reports on Play-Doh, the MEM was a public, free text field attached to a highly trafficked object.
+
+22:35.200 --> 22:37.740
+Right. It didn't force you to write a mnemonic.
+
+22:38.180 --> 22:40.700
+It could bear any content its authors chose.
+
+22:41.020 --> 22:45.100
+Which led to a phenomenon Flaclysia describes using a biological concept.
+
+22:46.260 --> 22:47.940
+Stigmurgic coordination.
+
+22:48.760 --> 22:49.280
+Stigmurgy.
+
+22:49.640 --> 22:49.960
+Yes.
+
+22:50.300 --> 22:53.320
+I know this term originates from entomology, right?
+
+22:53.380 --> 22:54.020
+The study of insects?
+
+22:54.020 --> 23:02.100
+Yes. The term was coined by the French biologist Pierre-Paul Grasset in 1959 to describe the building behavior of termites.
+
+23:02.340 --> 23:07.600
+Let's ride this metaphor because it perfectly explains the mechanics of what happened on Memrise.
+
+23:08.180 --> 23:13.360
+How did termites build those massive, complex mounds without a foreman shouting orders?
+
+23:13.360 --> 23:15.760
+They do it without any direct communication.
+
+23:16.280 --> 23:19.380
+A termite doesn't walk up to another termite and say, hey, put a wall here.
+
+23:19.620 --> 23:19.740
+Right.
+
+23:20.080 --> 23:24.760
+Instead, they coordinate entirely by modifying their shared physical environment.
+
+23:25.240 --> 23:30.460
+A single termite will deposit a tiny pellet of mud that is infused with a specific pheromone.
+
+23:30.740 --> 23:32.400
+Okay, so the environment is altered.
+
+23:32.760 --> 23:33.140
+Exactly.
+
+23:33.680 --> 23:37.880
+That modified environment, the pheromone-laced mud pellet, acts as a stimulus.
+
+23:37.880 --> 23:47.800
+When the next termite wanders by and senses that specific pheromone gradient, it triggers an instinct to place their mud pellet on top of the first one, adding their own pheromones.
+
+23:48.020 --> 23:50.400
+So the coordination happens through the object.
+
+23:50.820 --> 23:53.240
+The environment itself is the instruction manual.
+
+23:53.580 --> 23:54.140
+Precisely.
+
+23:54.460 --> 23:57.300
+And this maps perfectly to the digital flashcard.
+
+23:57.840 --> 24:05.840
+When a user on Memrise studies a difficult Russian verb and they leave a helpful joke in the mem field, they are the termite leaving the pheromone pellet.
+
+24:06.040 --> 24:06.680
+I love this.
+
+24:06.680 --> 24:08.560
+The next learner comes along.
+
+24:09.260 --> 24:11.000
+They are struggling with the exact same verb.
+
+24:11.740 --> 24:12.500
+They see the joke.
+
+24:12.980 --> 24:13.680
+It helps them.
+
+24:14.300 --> 24:15.640
+So they click the upvote button.
+
+24:16.300 --> 24:19.680
+And that upvote makes the mem more visually prominent for the next learner.
+
+24:20.340 --> 24:23.120
+Maybe they leave a reply explaining the etymology of the verb.
+
+24:23.840 --> 24:32.380
+You are coordinating your learning, building shared knowledge, and creating a distinct social space without ever sending a direct message to another user.
+
+24:32.380 --> 24:37.140
+You are communicating entirely through the structural modification of the shared object.
+
+24:37.140 --> 24:40.780
+And this creates a vastly different user experience than a feed.
+
+24:41.520 --> 24:48.180
+On Twitter or TikTok, a ranking algorithm pushes a piece of content at you based on engagement metrics.
+
+24:48.600 --> 24:49.400
+You look at it.
+
+24:49.840 --> 24:51.100
+You scroll past it.
+
+24:51.100 --> 24:54.000
+And it is essentially gone forever into the abyss.
+
+24:54.840 --> 24:56.060
+You will likely never see it again.
+
+24:56.060 --> 25:04.000
+But on Memrise, because of the spaced repetition algorithm, you return to the exact same flashcard repeatedly over weeks and months.
+
+25:04.000 --> 25:06.080
+Here's where it gets really interesting.
+
+25:06.460 --> 25:12.980
+It is like leaving notes in the margins of a library book, but it is a library book that thousands of people are reading simultaneously.
+
+25:13.300 --> 25:13.440
+Yes.
+
+25:13.980 --> 25:22.020
+You are entering a room where generations of learners have struggled with the exact same concept, and they have left graffiti on the walls to help you out.
+
+25:22.580 --> 25:25.800
+The community builds up through sheer recurrence and shared struggle.
+
+25:25.800 --> 25:34.280
+However, Memrise also implemented a feature that perfectly illustrates a critical, often fatal design flaw in many modern platforms.
+
+25:34.780 --> 25:39.540
+They forcefully coupled the social graph with the comparison graph.
+
+25:39.780 --> 25:41.700
+Okay, let's untangle those two terms.
+
+25:41.900 --> 25:42.860
+What is a social graph?
+
+25:43.300 --> 25:52.400
+A social graph represents who you are genuinely interested in, who you want to follow, whose progress you want to monitor, whose mnemonic jokes you enjoy.
+
+25:52.680 --> 25:54.840
+It is a map of your social attention.
+
+25:55.800 --> 25:56.980
+And the comparison graph.
+
+25:57.380 --> 26:01.760
+The comparison graph determines who you are competing against on a leaderboard.
+
+26:02.040 --> 26:03.820
+It maps your relative standing.
+
+26:04.720 --> 26:07.720
+Now, on Memrise, these were not two separate systems.
+
+26:08.420 --> 26:08.780
+Uh-oh.
+
+26:09.100 --> 26:14.460
+To compete with someone on the weekly points leaderboard, you had to click Follow on their profile.
+
+26:14.700 --> 26:19.300
+Okay, so to see how I rank against the top German learners in the world, I follow them.
+
+26:19.500 --> 26:21.640
+That makes sense on the surface, but what was the catch?
+
+26:21.640 --> 26:26.380
+The catch was that Memrise hard-capped the number of people you could follow at 500.
+
+26:26.640 --> 26:27.040
+Oh, wow.
+
+26:27.500 --> 26:37.380
+So if I hit my 500 limit, and a new prodigy shows up on the platform, and I want to see how I stack up against them, wait, I have to unfollow someone else to make room.
+
+26:37.380 --> 26:42.500
+Yes, and this completely contaminates the social meaning of the follow mechanism.
+
+26:43.280 --> 26:48.620
+Unfollowing someone is no longer just a social gesture of disinterest or a way to clean up your feed.
+
+26:48.840 --> 26:53.660
+It becomes a strategic, gamified move to revise your competitive reference class.
+
+26:54.140 --> 26:54.360
+Right.
+
+26:54.360 --> 26:55.660
+Let me make sure I've got this.
+
+26:55.660 --> 27:06.280
+If I follow a really prolific learner who studies 10 hours a day, their massive point total raises the average standard against which my own progress is ranked on my personal leaderboard.
+
+27:06.560 --> 27:07.000
+Exactly.
+
+27:07.700 --> 27:12.920
+You are effectively penalizing your own competitive standing by broadening your social attention.
+
+27:13.540 --> 27:19.080
+It forces the user to choose between having friends and having an accurate, motivating leaderboard.
+
+27:19.420 --> 27:21.900
+You have to curate your friends list as a weapon.
+
+27:21.900 --> 27:29.560
+It is a sociological governance decision built right into the code, and it fundamentally alters human behavior on the platform.
+
+27:30.200 --> 27:35.500
+Which brings us to the most precarious reality of relying on centralized digital spaces.
+
+27:36.040 --> 27:41.680
+What happens when the company that owns the server decides they don't like the graffiti in the library books anymore?
+
+27:42.160 --> 27:45.880
+This is where the story of Memrise takes a dark turn for its community.
+
+27:45.880 --> 27:52.480
+Between 2021 and 2024, the company ruled out a series of massive structural changes.
+
+27:52.800 --> 27:52.900
+Right.
+
+27:53.300 --> 27:55.760
+They systematically removed the community MEMS.
+
+27:56.220 --> 27:59.300
+They shut down the community forum where people discussed the courses.
+
+27:59.820 --> 28:08.080
+And eventually, they moved all the user-created community courses off the main app entirely, separating them into a hard-to-find web-only interface.
+
+28:08.080 --> 28:12.160
+The paper formally terms this event affordance foreclosure.
+
+28:13.120 --> 28:20.200
+It is the unilateral elimination of a platform capability that supports user activity beyond the operator's preferred official use.
+
+28:20.840 --> 28:24.380
+Now, to be objective, Memrise wasn't doing this just to be evil.
+
+28:24.860 --> 28:27.820
+They had standard, rational business reasons for this pivot.
+
+28:28.040 --> 28:28.360
+Absolutely.
+
+28:29.120 --> 28:32.520
+The paper outlines several common rationales for affordance foreclosure.
+
+28:32.860 --> 28:34.620
+Product specialization is one.
+
+28:34.620 --> 28:42.200
+The company may have wanted to pivot strictly to selling premium, officially curated language courses rather than hosting amateur content.
+
+28:42.720 --> 28:45.220
+Moderation costs are a massive factor, too.
+
+28:45.540 --> 28:53.380
+Anytime you allow user-generated free text, you have to actively police it for spam, abuse, and illegal content, which requires expensive human labor.
+
+28:53.740 --> 28:55.120
+And finally, commercial positioning.
+
+28:55.120 --> 29:04.280
+It is often much easier to sell a subscription to a sleek, controlled, predictable product than to a chaotic, user-generated bazaar.
+
+29:04.620 --> 29:06.580
+We aren't debating the business logic here.
+
+29:06.980 --> 29:09.760
+But the social impact was devastating.
+
+29:10.180 --> 29:11.940
+It annihilated the shared space.
+
+29:11.940 --> 29:20.400
+The deep annotations, the inside jokes, the etymological debates were users that spent years building localized reputations.
+
+29:20.800 --> 29:23.420
+All of it was suddenly rendered inaccessible.
+
+29:23.420 --> 29:34.160
+To understand why this feels so profoundly unjust to the users, Flyxion breaks down the governance of shared computational objects into a highly useful four-part tuple.
+
+29:34.780 --> 29:37.760
+Auth, rev, appeal, and exit.
+
+29:37.980 --> 29:38.180
+Right.
+
+29:38.700 --> 29:38.940
+Okay.
+
+29:39.180 --> 29:42.720
+Break out the ELF Y5 for this framework because it is brilliant.
+
+29:43.160 --> 29:44.140
+Let's start with auth.
+
+29:44.820 --> 29:47.000
+Auth stands for authorial authority.
+
+29:47.000 --> 29:50.260
+It answers the question, who is permitted to contribute?
+
+29:50.680 --> 29:54.480
+Who is allowed to write a mem or build a flashcard or upload an image?
+
+29:55.280 --> 29:57.980
+In the golden age of Memrise, the users head off.
+
+29:58.540 --> 29:59.440
+Anyone could contribute.
+
+29:59.780 --> 30:00.060
+Correct.
+
+30:00.760 --> 30:04.180
+The second component is REV, which stands for revisionary authority.
+
+30:04.940 --> 30:10.440
+This is meta authority who has the power to change the fundamental rules of the system itself,
+
+30:10.640 --> 30:14.780
+who can alter the algorithm or remove a feature or delete a database.
+
+30:14.780 --> 30:17.500
+That is exclusively the platform operator.
+
+30:17.800 --> 30:19.780
+The company holds 100% of the REV tut.
+
+30:20.440 --> 30:21.340
+The third is appeal.
+
+30:22.060 --> 30:28.320
+If the operator uses their REV tut to make a change you hate, what is the formal mechanism for contesting that decision?
+
+30:28.920 --> 30:32.540
+For almost all social media, appeal basically means shouting into the void on Twitter
+
+30:32.540 --> 30:36.760
+or starting a change.org petition that the company will completely ignore.
+
+30:37.220 --> 30:40.760
+There is no binding legal mechanism for users to overrule the operator.
+
+30:41.060 --> 30:41.420
+Exactly.
+
+30:41.840 --> 30:43.660
+And the final component is exit.
+
+30:43.660 --> 30:50.540
+When you finally decide to leave or when you are forced out, what are you technically and legally allowed to take with you?
+
+30:50.860 --> 30:55.520
+Can you export your data, your social graph, your reputation in a format that works elsewhere?
+
+30:56.420 --> 30:57.700
+So what does this all mean?
+
+30:58.280 --> 31:02.840
+What this tuple reveals is the massive chasm between three distinct concepts.
+
+31:03.420 --> 31:06.360
+Authorship, stewardship, and ownership.
+
+31:06.740 --> 31:07.240
+Precisely.
+
+31:07.240 --> 31:09.600
+The users provided the authorship.
+
+31:09.880 --> 31:10.620
+They wrote the content.
+
+31:10.920 --> 31:12.720
+The community provided the stewardship.
+
+31:13.060 --> 31:16.400
+They upvoted, moderated, and maintained the cultural norms of the space.
+
+31:16.880 --> 31:19.200
+But the company retained absolute ownership.
+
+31:19.440 --> 31:23.720
+The unilateral, unchallengeable power to delete the entire ecosystem overnight.
+
+31:23.720 --> 31:29.620
+So, if I spend five years of my life meticulously building a specialized course on organic chemistry,
+
+31:30.100 --> 31:34.700
+and I build a massive reputation helping thousands of students in the MEMS,
+
+31:34.820 --> 31:37.500
+I am ultimately just a digital tenant.
+
+31:38.180 --> 31:39.480
+I don't own my house.
+
+31:40.480 --> 31:44.620
+I am waiting to be evicted because the landlord decided they wanted to bulldoze my apartment building
+
+31:44.620 --> 31:46.480
+and put up a premium parking lot.
+
+31:46.480 --> 31:49.300
+That is the harsh reality of centralized platforms.
+
+31:49.860 --> 31:54.180
+The users have localized auth, but the operator holds absolute rev.
+
+31:54.820 --> 32:00.280
+There is virtually no appeal, and the exit is usually limited to downloading a useless,
+
+32:00.640 --> 32:02.660
+unformatted CSV file of your data.
+
+32:03.020 --> 32:04.900
+But it doesn't have to be this way.
+
+32:05.120 --> 32:07.540
+And this is where the paper draws an incredible contrast.
+
+32:08.340 --> 32:09.920
+Let's go back to Plato for a second.
+
+32:10.500 --> 32:13.240
+The commercial life of the Plato system eventually wound down.
+
+32:13.440 --> 32:15.920
+Controlled Data Corporation stopped supporting it.
+
+32:15.920 --> 32:18.400
+The physical mainframes were decommissioned.
+
+32:18.480 --> 32:19.920
+The landlord tore down the building.
+
+32:20.120 --> 32:20.320
+Right.
+
+32:21.140 --> 32:22.400
+But the community survived.
+
+32:23.240 --> 32:27.780
+In 2004, a group of dedicated former users resurrected the Plato system online
+
+32:27.780 --> 32:31.840
+using an open-source emulator, a project they called CyberOne.
+
+32:32.060 --> 32:32.660
+And what happened?
+
+32:33.200 --> 32:37.080
+Within six months, hundreds of former users who hadn't spoken in years
+
+32:37.080 --> 32:41.400
+found the emulator, signed up, and seamlessly recreated their community.
+
+32:41.820 --> 32:43.940
+They picked up right where they left off.
+
+32:43.940 --> 32:47.700
+Why did the Plato community survive the destruction of their original hardware
+
+32:47.700 --> 32:52.500
+while the Memrise community courses fractured and died when features were changed?
+
+32:52.700 --> 32:52.760
+Why?
+
+32:53.240 --> 32:58.660
+Because the CyberOne revival preserved the mechanism, the objects, and the access together.
+
+32:59.140 --> 33:02.140
+It was an exact replication of the shared environment.
+
+33:02.140 --> 33:06.200
+In contrast, when Memrise faced immense user backlash
+
+33:06.200 --> 33:11.540
+and eventually brought back a heavily revised version of the Memrise feature in 2026,
+
+33:11.740 --> 33:13.780
+the original community did not return.
+
+33:14.320 --> 33:14.980
+They just moved on.
+
+33:15.500 --> 33:19.060
+You cannot just restore a graphical button on a user interface
+
+33:19.060 --> 33:23.560
+and expect a dispersed, disillusioned community to instantly materialize.
+
+33:23.560 --> 33:26.560
+A software feature is just a technical mechanism,
+
+33:26.780 --> 33:32.480
+but a social function is a living relationship between that mechanism and a trusting community.
+
+33:33.120 --> 33:37.920
+Once the trust is broken and the shared history is severed, the sociality dies.
+
+33:38.200 --> 33:40.520
+Which naturally leads to the biggest question.
+
+33:41.100 --> 33:44.960
+If centralized platforms are essentially digital dictatorships,
+
+33:45.160 --> 33:48.380
+where we can be evicted at any time, what are the alternatives?
+
+33:48.380 --> 33:53.480
+How do the most resilient, enduring platforms on the Internet actually function under the hood?
+
+33:54.180 --> 33:59.840
+To answer that, Flyxion conducts a comparative architectural analysis of three massive systems.
+
+34:00.440 --> 34:04.100
+Wikipedia, GitHub, and Multiplayer Digital Worlds.
+
+34:04.480 --> 34:04.800
+Okay.
+
+34:05.120 --> 34:10.820
+These systems prove beyond a doubt that object-centered sociality is not only possible at scale,
+
+34:10.980 --> 34:13.700
+it is vastly more robust than the feed model.
+
+34:13.980 --> 34:15.020
+Let's start with Wikipedia.
+
+34:15.020 --> 34:19.180
+It is the purest, most successful, large-scale example of this theory in existence.
+
+34:19.940 --> 34:23.060
+On Wikipedia, the shared object is the encyclopedic article.
+
+34:23.680 --> 34:26.060
+There is no feed of your friend's recent edits.
+
+34:26.660 --> 34:31.260
+And crucially, Wikipedia proves that you do not need rich, prominent personal profiles
+
+34:31.260 --> 34:34.300
+to organize a massive, complex social project.
+
+34:34.880 --> 34:39.060
+Many of the most prolific and respected editors on Wikipedia operate under pseudonyms.
+
+34:39.600 --> 34:40.800
+Many don't even have accounts.
+
+34:41.020 --> 34:43.480
+They edit solely under anonymous IP addresses.
+
+34:43.480 --> 34:49.960
+If Wikipedia is the ultimate example of healthy sociality, why is it notoriously hostile to new users?
+
+34:50.760 --> 34:56.800
+Doesn't the talk page just become a different kind of toxic feed for power users who want to guard their territory?
+
+34:57.240 --> 34:58.600
+That is a very fair critique.
+
+34:59.040 --> 35:00.460
+Wikipedia is not a utopia.
+
+35:00.980 --> 35:03.020
+It has intense internal politics.
+
+35:03.340 --> 35:05.620
+But the nature of the conflict is different.
+
+35:06.260 --> 35:08.440
+On a Twitter feed, conflict is performative.
+
+35:08.760 --> 35:11.360
+It is designed to generate engagement from an audience.
+
+35:11.680 --> 35:11.860
+Right.
+
+35:11.860 --> 35:15.540
+On a Wikipedia talk page, the conflict is teleological.
+
+35:16.240 --> 35:18.740
+It is aimed at resolving the state of the shared object.
+
+35:19.400 --> 35:22.340
+The editors have standing, not because they have a million followers,
+
+35:22.740 --> 35:27.740
+but because their history of localized edits is a durable, verifiable record of stewardship.
+
+35:28.380 --> 35:31.880
+The pristine, public article you read is merely the visible surface.
+
+35:32.340 --> 35:38.320
+Beneath it lies a deep, turbulent history of conflict, cooperation, vandalism, and reversion.
+
+35:38.320 --> 35:39.880
+Then there is GitHub.
+
+35:41.160 --> 35:46.200
+For anyone not in software engineering, GitHub is basically social media for developers.
+
+35:46.660 --> 35:54.780
+But instead of posting photos of your lunch to get likes, your feed is the actual blood, sweat, and tears of the technical work you are doing together.
+
+35:54.780 --> 36:00.800
+On GitHub, the repositories, the folders holding the code, are the shared boundary objects.
+
+36:01.400 --> 36:06.260
+The social mechanisms are things like pull requests, commits, and issue trackers.
+
+36:06.460 --> 36:07.620
+Break down a pull request.
+
+36:08.060 --> 36:09.920
+How is submitting code a social act?
+
+36:09.920 --> 36:15.660
+When a developer writes a new feature and submits a pull request, they are proposing a change to the shared object.
+
+36:16.000 --> 36:18.440
+But it is not just a blind file transfer.
+
+36:18.800 --> 36:23.220
+It is a highly formalized communicative act addressed to the project maintainers.
+
+36:23.360 --> 36:23.480
+Right.
+
+36:23.700 --> 36:31.440
+It says, I have observed a need, I have done this work, and I request that you integrate my reality into the shared reality.
+
+36:31.440 --> 36:39.540
+The platform organizes reputation, mentorship, and debate entirely around the shared work, rather than around personal broadcasting.
+
+36:40.100 --> 36:41.080
+And what about YouTube?
+
+36:41.860 --> 36:43.620
+Where does video fit into this framework?
+
+36:44.460 --> 36:46.240
+YouTube is a fascinating hybrid.
+
+36:46.660 --> 36:51.080
+The video itself functions as a publication, a static object broadcast to many.
+
+36:51.580 --> 36:57.440
+But the comment thread beneath the video is a form of annotation, structurally similar to the memes on Memrise.
+
+36:57.860 --> 37:01.140
+So the comments are socially attached to the primary object.
+
+37:01.440 --> 37:06.560
+Furthermore, reaction videos or musical remixes are a form of collaborative production.
+
+37:07.360 --> 37:10.860
+YouTube certainly employs aggressive, feed-like recommendation algorithms.
+
+37:11.220 --> 37:15.960
+But the core social interaction is still deeply anchored to persistent objects.
+
+37:16.440 --> 37:17.980
+And then my personal favorite category.
+
+37:18.800 --> 37:19.680
+Multiplayer games.
+
+37:20.120 --> 37:22.760
+Minecraft, EVE Online, Roblox.
+
+37:23.080 --> 37:25.280
+This is where Phloxion's theory gets visceral.
+
+37:25.600 --> 37:30.500
+This is where we observe sociality through co-presence and consequential action.
+
+37:30.500 --> 37:40.380
+If you and I are logged into the same persistent Minecraft server, and I spend five hours building a massive stone wall across a valley, I have fundamentally altered your reality.
+
+37:40.920 --> 37:47.040
+The next time I log in, I literally have to walk around your wall, or spend 20 minutes mining a tunnel through it.
+
+37:47.780 --> 37:49.140
+I never sent you a chat message.
+
+37:49.420 --> 37:50.740
+I didn't tag you in a post.
+
+37:51.240 --> 37:53.060
+We might not even speak the same language.
+
+37:53.060 --> 37:58.800
+But my physical action in the digital space was deeply, causally consequential to your experience.
+
+37:59.240 --> 37:59.640
+Exactly.
+
+38:00.100 --> 38:01.820
+The action is the communication.
+
+38:02.400 --> 38:06.340
+Phloxion categorizes these diverse mechanisms into four distinct buckets.
+
+38:07.000 --> 38:08.740
+Publication, like a YouTube video.
+
+38:09.460 --> 38:11.800
+Annotation, like a comment or a mem.
+
+38:12.760 --> 38:15.020
+Collaboration, like a GitHub pull request.
+
+38:15.480 --> 38:18.160
+And co-presence, like building a wall in Minecraft.
+
+38:18.160 --> 38:23.100
+And none of those four mechanisms resemble scrolling a ranked feed of hot takes.
+
+38:23.320 --> 38:23.660
+No.
+
+38:24.500 --> 38:31.940
+And underlying all of these robust platforms is a critical computer science concept that Phloxion highlights called event sourcing.
+
+38:32.480 --> 38:35.060
+Yes, event sourcing and the resulting history dependence.
+
+38:35.760 --> 38:36.800
+This is vital to understand.
+
+38:36.800 --> 38:43.740
+In a traditional database, if you change your address, the system deletes your old address and overwrites it with the new one.
+
+38:44.140 --> 38:45.800
+The past is just erased.
+
+38:45.800 --> 38:49.040
+But in an event sourced architecture, it works differently.
+
+38:49.580 --> 38:51.180
+Think of it like a bank account ledger.
+
+38:51.580 --> 38:54.200
+Your bank doesn't just store a single number representing your balance.
+
+38:54.420 --> 38:58.540
+They store an immutable list of every single transaction you have ever made.
+
+38:59.200 --> 39:06.460
+Your current balance of $500 is just a temporary projection, calculated by adding and subtracting that entire history of events.
+
+39:06.760 --> 39:07.220
+Precisely.
+
+39:07.640 --> 39:11.600
+GitHub operates exactly like this, through the Git version control system.
+
+39:12.300 --> 39:14.780
+Wikipedia operates like this through its revision history.
+
+39:14.780 --> 39:19.720
+The true state of the system is the entire sequence of events that have ever happened.
+
+39:20.440 --> 39:23.920
+The history isn't just a backup file kept in case of a server crash.
+
+39:24.340 --> 39:27.460
+The history is the actual substance of the community.
+
+39:27.980 --> 39:29.920
+It is the proof of their shared labor.
+
+39:30.560 --> 39:37.220
+Which is why losing that history, or even losing the symbolic identity attached to that history, is so devastating to a community.
+
+39:37.220 --> 39:42.620
+The paper briefly touches on Twitter's rebranding to X in 2023 as an example of this.
+
+39:43.280 --> 39:43.400
+Right.
+
+39:43.980 --> 39:49.560
+Elon Musk buys the platform, kills the iconic blue bird, and changes the name to a single letter.
+
+39:50.240 --> 39:53.040
+Flyxion cites an earlier 2023 essay titled,
+
+39:53.040 --> 40:00.440
+What the Birds are Tweeting, which argues that over 15 years, Twitter had built a highly coherent metaphorical vocabulary.
+
+40:01.180 --> 40:04.620
+You had the bird logo, you sent tweets, you read your timeline.
+
+40:04.980 --> 40:07.000
+If a post was popular, it took flight.
+
+40:07.420 --> 40:09.240
+It was a whole conceptual universe.
+
+40:09.780 --> 40:12.620
+That vocabulary wasn't just a corporate branding label.
+
+40:12.620 --> 40:16.540
+It was deeply intertwined with how the platform shaped its social practices.
+
+40:17.420 --> 40:23.780
+The sudden unilateral erasure of that conceptual metaphor by the owner is a form of affordance foreclosure.
+
+40:24.180 --> 40:30.300
+It is the loss of a shared symbolic identity, which instantly degrades the community's sense of belonging to that space.
+
+40:30.620 --> 40:30.940
+Exactly.
+
+40:31.520 --> 40:36.720
+Okay, so we have firmly established how human-made shared objects build community.
+
+40:37.080 --> 40:41.860
+We see it in the code of GitHub, the talk pages of wikis, the walls of Minecraft.
+
+40:41.860 --> 40:49.240
+But we have to address the massive generative elephant in the room, artificial intelligence.
+
+40:49.640 --> 40:49.720
+Right.
+
+40:50.240 --> 40:58.140
+What happens to our shared digital reality when generative AI can instantly create infinite, perfectly personalized objects?
+
+40:58.640 --> 41:02.880
+This is where the paper becomes incredibly prescient about our immediate future.
+
+41:03.920 --> 41:07.040
+Flyxion examines systems like Google's Notebook LM,
+
+41:07.040 --> 41:19.480
+which can take a dense textbook or a stack of unstructured research papers and instantly transform them into a massive deck of learning cards or a custom quiz or even a generated audio discussion.
+
+41:19.480 --> 41:23.980
+On the surface, if I am a student or teacher, that sounds like a miracle.
+
+41:24.380 --> 41:28.820
+It completely eliminates the grueling labor of creating those shared boundary objects.
+
+41:28.940 --> 41:34.280
+We don't need a hundred volunteers to spend a month meticulously building a memorized course anymore.
+
+41:34.840 --> 41:37.800
+The AI generates it flawlessly in five seconds.
+
+41:37.800 --> 41:38.660
+It does.
+
+41:39.340 --> 41:41.900
+And the utilitarian value of that is undeniable.
+
+41:42.580 --> 41:47.020
+But it introduces a profound structural threat to sociality.
+
+41:47.520 --> 41:50.740
+The phenomenon of personalized generation.
+
+41:51.160 --> 41:52.200
+Personalized generation.
+
+41:52.860 --> 42:00.720
+If a centralized AI analyzes my profile and generates a completely custom flashcard deck tailored precisely to my learning style,
+
+42:00.720 --> 42:05.540
+and then it generates a completely different, uniquely tailored deck for you,
+
+42:06.460 --> 42:09.420
+the shared boundary object ceases to exist.
+
+42:09.980 --> 42:11.380
+But wait, let me push back hard on this.
+
+42:11.780 --> 42:16.800
+Isn't hyper-personalization the absolute holy grail of educational technology?
+
+42:17.320 --> 42:19.700
+Every teacher wants to give individualized instruction.
+
+42:20.420 --> 42:25.860
+Why is having my own perfectly tailored textbook suddenly a dystopian threat to society?
+
+42:26.140 --> 42:29.880
+Because if we do not have a shared object, we cannot have a shared reality.
+
+42:29.880 --> 42:36.400
+To explain this mechanically, Flyxion breaks down human interaction with media into three layers of shared reference.
+
+42:37.180 --> 42:38.440
+Walk us through the three layers.
+
+42:39.100 --> 42:43.860
+Layer one is the authoritative object, the actual source text, or the physical specimen.
+
+42:44.740 --> 42:49.640
+Layer two is the presentation, how that object is formatted or displayed to the user.
+
+42:50.460 --> 42:54.780
+Layer three is the interpretation, what the user thinks the object means.
+
+42:55.440 --> 42:57.280
+Okay, let's use a concrete example.
+
+42:57.560 --> 42:59.100
+We are both studying Shakespeare.
+
+42:59.100 --> 43:03.160
+We both buy the exact same Penguin Classics edition of Hamlet.
+
+43:03.680 --> 43:07.620
+That physical text is layer one, the authoritative object.
+
+43:07.980 --> 43:08.200
+Correct.
+
+43:08.900 --> 43:12.800
+Now, imagine you are reading the paperback version, but I am legally blind,
+
+43:12.940 --> 43:15.680
+so I am listening to an unabridged audiobook version.
+
+43:16.060 --> 43:18.440
+We are experiencing different presentations.
+
+43:19.120 --> 43:19.960
+That is layer two.
+
+43:20.480 --> 43:22.460
+And layer three is interpretation.
+
+43:22.460 --> 43:28.660
+We get into a heated argument because I think Hamlet is feigning madness as a tactical strategy.
+
+43:29.040 --> 43:32.140
+And you think he is genuinely suffering a psychotic break.
+
+43:32.560 --> 43:33.000
+Exactly.
+
+43:33.640 --> 43:38.460
+Disagreeing on interpretation at layer three is the normal, healthy condition of human discourse.
+
+43:39.000 --> 43:40.100
+It is why we have discussions.
+
+43:40.640 --> 43:41.300
+We argue.
+
+43:41.300 --> 43:42.820
+We cite evidence from the text.
+
+43:43.040 --> 43:44.560
+We try to persuade each other.
+
+43:45.020 --> 43:47.220
+But what does generative AI do to this stack?
+
+43:48.260 --> 43:53.340
+Personalized generation violently attacks layer one, but it tries to hide the damage.
+
+43:53.860 --> 43:56.420
+Imagine an AI tutor is assigned to help us study.
+
+43:57.460 --> 44:01.000
+The AI knows that student A struggles with complex 16th century vocabulary,
+
+44:01.000 --> 44:04.720
+so it silently rewrites Hamlet into the modern vernacular.
+
+44:05.580 --> 44:07.940
+The AI knows student B has a short attention span,
+
+44:08.060 --> 44:11.160
+so it silently summarizes entire acts into bullet points.
+
+44:11.660 --> 44:13.960
+But the system interface still just calls it Hamlet.
+
+44:14.080 --> 44:14.380
+Yes.
+
+44:14.980 --> 44:19.320
+If the system silently rewrites the text to pander to our individual profiles,
+
+44:19.840 --> 44:23.500
+but presents it as if we are looking at the same authoritative object,
+
+44:23.680 --> 44:27.140
+we lose the fundamental ability to have a productive disagreement.
+
+44:27.340 --> 44:27.680
+Oh, wow.
+
+44:27.680 --> 44:32.700
+If we try to debate Hamlet's motivations, we will literally be talking past each other.
+
+44:33.240 --> 44:35.440
+The bridge between our minds, the shared object,
+
+44:35.560 --> 44:39.840
+has been quietly burned by the algorithm to optimize for our individual comfort.
+
+44:40.340 --> 44:43.780
+We are arguing about entirely different things, but we don't realize it.
+
+44:44.040 --> 44:47.160
+We are trapped in our own private generated bubbles.
+
+44:47.420 --> 44:49.420
+That is terrifying.
+
+44:49.780 --> 44:54.260
+It means if we apply this to history or civics or news,
+
+44:54.260 --> 44:58.180
+you could have two people violently arguing over a political concept,
+
+44:58.740 --> 45:02.640
+completely unaware that the AI dynamically rewrote their source materials
+
+45:02.640 --> 45:05.300
+to cater to their pre-existing political biases.
+
+45:06.000 --> 45:10.180
+It erases the common ground required for communication to even occur.
+
+45:10.540 --> 45:17.140
+This is why the paper forcefully argues that a learning network can only act as a distributed epistemic institution,
+
+45:17.140 --> 45:22.880
+which is a fancy way of saying a community that collectively evaluates what is true and what is false,
+
+45:22.880 --> 45:26.620
+if the AI is forced to maintain strict interpretive restraint.
+
+45:27.100 --> 45:28.300
+Interpretive restraint.
+
+45:29.060 --> 45:32.480
+How does a developer actually build that into code?
+
+45:32.580 --> 45:33.580
+What does it mean mechanically?
+
+45:33.580 --> 45:39.400
+It means the system architecture must rigidly preserve the difference between the observed signal,
+
+45:40.080 --> 45:43.400
+the generated representation, and the attributed meaning.
+
+45:44.020 --> 45:46.900
+If an AI hallucinates a connection between two concepts,
+
+45:47.300 --> 45:52.200
+the user interface must loudly and explicitly label it as a generated interpretation,
+
+45:52.640 --> 45:55.720
+not as a factual extraction derived from the source text.
+
+45:55.960 --> 46:00.540
+The system must maintain a transparent, verifiable record of provenance.
+
+46:00.540 --> 46:05.020
+It must say, I generated this specific analogy because of prompt X.
+
+46:05.440 --> 46:05.820
+Exactly.
+
+46:06.680 --> 46:08.620
+If the system hides its generative hand,
+
+46:09.100 --> 46:12.900
+hyper-personalization destroys the intersubjectivity of the community.
+
+46:13.380 --> 46:16.920
+Okay, so we have completely decoupled social media from the feed.
+
+46:18.000 --> 46:22.820
+We have decoupled it from the necessity of human authorship navigating the AI minefield.
+
+46:23.580 --> 46:27.720
+For this final section, Flyxion does something truly mind-bending.
+
+46:27.720 --> 46:32.240
+Let's decouple social media from the screen entirely.
+
+46:32.940 --> 46:36.880
+What's fascinating here is the philosophical and technical exploration
+
+46:36.880 --> 46:39.880
+of the historical contingency of visual interfaces.
+
+46:40.560 --> 46:44.520
+We all assume that to use a computer to participate in digital society,
+
+46:44.820 --> 46:46.100
+you must have a screen.
+
+46:46.200 --> 46:47.740
+You must look at a glowing rectangle.
+
+46:48.000 --> 46:48.120
+Right.
+
+46:48.120 --> 46:52.960
+But Flyxion points out that this is just a historical accident based on the limitations
+
+46:52.960 --> 46:55.540
+of early hardware choices and cathode ray tubes.
+
+46:56.540 --> 47:02.540
+The paper references a totally separate 2023 proposal written by Flyxion for an auditory
+
+47:02.540 --> 47:06.020
+operating system, an operating system that you only hear.
+
+47:06.280 --> 47:11.480
+It is based on the ancient mnemonic technique known as the memory palace or the method of loci.
+
+47:11.480 --> 47:17.600
+In this proposed purely auditory environment, data entities and system states do not have
+
+47:17.600 --> 47:18.260
+visual icons.
+
+47:18.580 --> 47:21.440
+They have characteristic acoustic identities.
+
+47:22.300 --> 47:27.260
+So instead of looking for a little yellow folder icon on a desktop, you might hear a specific
+
+47:27.260 --> 47:30.240
+sequence of bird calls to represent a directory.
+
+47:30.520 --> 47:30.880
+Exactly.
+
+47:31.340 --> 47:35.260
+The spatial relationships of the data are mapped to a 3D audio soundscape.
+
+47:35.860 --> 47:37.640
+Distance is conveyed by loudness.
+
+47:37.640 --> 47:40.020
+A file you use often sounds close.
+
+47:40.500 --> 47:42.700
+An archived file sounds faint and far away.
+
+47:43.440 --> 47:46.760
+Urgency or error states are conveyed by pitch and rhythm.
+
+47:47.480 --> 47:51.680
+And the presence of other users in the system is conveyed by environmental sounds, perhaps
+
+47:51.680 --> 47:54.960
+the rustling of leaves or the hum of a distant train.
+
+47:55.700 --> 47:56.000
+Yes.
+
+47:56.660 --> 47:56.960
+Okay.
+
+47:57.420 --> 48:00.600
+This sounds like an incredible accessibility tool for the visually impaired.
+
+48:00.960 --> 48:03.880
+But how does this apply to redefining social media?
+
+48:03.880 --> 48:08.360
+It applies through a concept Flyxion calls the SpherePOP framework.
+
+48:09.040 --> 48:15.240
+This framework forces us to separate observation, interpretation, representation, and communication.
+
+48:15.700 --> 48:20.340
+The core insight is that the social structure of a digital environment is not identical to
+
+48:20.340 --> 48:21.520
+its sensory presentation.
+
+48:22.680 --> 48:28.080
+The actual social structure is made of the data objects, the user actions, and the event-sourced
+
+48:28.080 --> 48:28.500
+histories.
+
+48:28.500 --> 48:33.260
+The visual screen is just one arbitrary way to represent that underlying structure to
+
+48:33.260 --> 48:33.880
+a human brain.
+
+48:34.440 --> 48:36.520
+Sound is another perfectly valid way.
+
+48:37.480 --> 48:41.060
+So, it is like we have been confusing the window with the actual house.
+
+48:41.680 --> 48:45.560
+The screen on my iPhone is just one specific window peering into the database.
+
+48:46.340 --> 48:50.320
+The actual social media, the community, is the house itself.
+
+48:50.720 --> 48:54.100
+And you can walk through the front door of that house using just your ears.
+
+48:54.100 --> 48:56.200
+That is the perfect analogy.
+
+48:56.780 --> 49:00.220
+Imagine navigating an auditory Wikipedia using the system.
+
+49:00.420 --> 49:03.160
+You walk into the directory for climate change.
+
+49:03.340 --> 49:08.700
+Because that specific article is a highly contested, frequently edited, heavily trafficked
+
+49:08.700 --> 49:09.460
+shared object.
+
+49:09.780 --> 49:12.400
+It has a massive amount of event history.
+
+49:13.240 --> 49:14.500
+So, acoustically, what would that be like?
+
+49:14.960 --> 49:18.040
+You might hear a bustling, chaotic crowd of signals.
+
+49:18.520 --> 49:20.800
+Heavy construction sounds representing edits.
+
+49:20.800 --> 49:23.580
+It's urgent high pitches representing reverts.
+
+49:23.940 --> 49:26.800
+A dense hum of presence representing active readers.
+
+49:27.680 --> 49:29.860
+You can physically hear the social tension and collaboration.
+
+49:30.520 --> 49:34.820
+But if you navigate away to an obscure page about a minor 14th century poet that hasn't
+
+49:34.820 --> 49:36.160
+been edited in 10 years.
+
+49:36.540 --> 49:38.040
+The soundscape changes entirely.
+
+49:38.340 --> 49:39.560
+It is just a quiet echo.
+
+49:40.000 --> 49:40.800
+A faint breeze.
+
+49:41.620 --> 49:46.080
+The depth of the history and the intensity of the social activity are communicated entirely
+
+49:46.080 --> 49:47.520
+through the auditory environment.
+
+49:47.520 --> 49:50.760
+Without you ever reading a single word of text on the screen.
+
+49:51.660 --> 49:52.260
+That is incredible.
+
+49:52.980 --> 49:54.720
+The event history is shared universally.
+
+49:55.460 --> 49:57.220
+But the presentation is entirely flexible.
+
+49:57.940 --> 50:03.000
+It means a person using a standard visual screen, a person using a text-based screen reader,
+
+50:03.520 --> 50:08.740
+and a person immersed in this purely 3D auditory interface can all inhabit the exact same social
+
+50:08.740 --> 50:09.100
+world.
+
+50:09.300 --> 50:13.560
+They can interact with the exact same shared objects and collaborate perfectly as long as
+
+50:13.560 --> 50:16.660
+that underlying event history is preserved and translated accurately.
+
+50:16.660 --> 50:21.340
+It fundamentally forces us to expand what it means to be online.
+
+50:22.300 --> 50:24.840
+The visual medium is just one option for representation.
+
+50:25.740 --> 50:27.860
+True sociality is substrate independent.
+
+50:28.560 --> 50:31.240
+It lives in the shared history, not in the pixels.
+
+50:31.700 --> 50:32.400
+Exactly right.
+
+50:33.000 --> 50:36.460
+Okay, let's tie all these incredible threads together.
+
+50:37.220 --> 50:42.720
+What Flyxion's paper shows us definitively is that social media is not a ranked feed.
+
+50:43.360 --> 50:46.020
+It is not a carefully curated personal profile.
+
+50:46.020 --> 50:49.420
+It is not a like button or a retweet or a follower count.
+
+50:50.180 --> 50:54.000
+Social media is an emergent property of shared worlds.
+
+50:54.000 --> 50:59.020
+It exists in the margins of digital flashcards where strangers help each other memorize verbs.
+
+50:59.220 --> 51:03.760
+It exists in the complex commit logs of open source software repositories on GitHub.
+
+51:04.520 --> 51:10.440
+It exists in the blocky player-built architecture of digital games, the heated talk pages of wikis,
+
+51:10.640 --> 51:14.740
+and potentially in the spatial auditory echoes of future operating systems.
+
+51:14.740 --> 51:22.100
+So, the next time you unlock your phone and open an app, I want you to ask yourself a critical question.
+
+51:22.100 --> 51:28.360
+Am I just consuming a ranked feed, or am I actually modifying a shared object?
+
+51:29.360 --> 51:36.540
+Are you just a passive audience member sitting in a digital theater, or are you an active builder in a shared world?
+
+51:36.540 --> 51:43.240
+It is the stark difference between a system mathematically designed to extract your attention for advertising revenue,
+
+51:43.440 --> 51:48.120
+and a system structurally designed to host your collaboration and preserve your labor.
+
+51:48.520 --> 51:52.700
+And that leads me to one final, deeply provocative thought I want to leave you with today.
+
+51:53.380 --> 51:58.140
+If true social connection relies on these shared objects and their deeply retained histories,
+
+51:58.640 --> 52:02.560
+what happens to our digital ghosts when the servers finally shut down?
+
+52:02.560 --> 52:04.740
+It is a profound sociological question.
+
+52:05.180 --> 52:05.720
+Think about it.
+
+52:06.380 --> 52:11.880
+A hundred years from now, will future digital archaeologists dig up our algorithms and our feeds?
+
+52:12.740 --> 52:12.940
+No.
+
+52:13.740 --> 52:15.440
+The feed changes every millisecond.
+
+52:15.640 --> 52:17.120
+It leaves no durable trace.
+
+52:17.220 --> 52:18.880
+It is ephemeral by its very design.
+
+52:19.040 --> 52:19.280
+Right.
+
+52:19.680 --> 52:25.920
+Or, will the only proof that we even existed on this network be the digital boundary objects we collectively built?
+
+52:26.440 --> 52:27.740
+The wikis we argued over.
+
+52:27.820 --> 52:29.460
+The code we carefully annotated.
+
+52:29.840 --> 52:31.420
+The Minecraft worlds we modified.
+
+52:31.420 --> 52:34.720
+The artifacts of our shared histories will be the only things that endure.
+
+52:35.540 --> 52:37.720
+The feed erases you the moment you scroll past.
+
+52:38.220 --> 52:40.980
+The shared object immortalizes you in its history.
+
+52:41.700 --> 52:44.420
+Remember the muddy waters of the medical diagnosis we started with.
+
+52:45.000 --> 52:47.160
+It is time to throw out the broken x-ray machine.
+
+52:47.800 --> 52:49.800
+Stop looking for your community in a feed.
+
+52:50.240 --> 52:51.520
+Start looking for the objects.
+
+52:52.000 --> 52:53.200
+Start looking for the architecture.
+
+52:54.160 --> 52:56.180
+Thank you so much for joining us on this deep dive.
+
+52:56.460 --> 52:57.280
+We'll see you next time.
+

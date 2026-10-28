@@ -1,3 +1,7 @@
+[The Counterfeit Observation](https://standardgalactic.github.io/computation/counterfeit-observation.pdf)
+
+[The Sociality of Computation](https://standardgalactic.github.io/computation/sociality-of-computation.pdf)
+
 [The Geometry of Scope](https://standardgalactic.github.io/computation/geometry-of-scope.pdf)
 
 [Monotonic Continuation](https://standardgalactic.github.io/computation/monotonic-continuation.pdf)

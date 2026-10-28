@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conceptual Network of a Learning Record</title>
+<style>
+:root{
+  --bg:#fbfaf7; --panel:#ffffff; --ink:#1f2328; --muted:#5d6570; --line:#d9d6cd; --edge:#8a8f98; --theme:#3a3f47;
+  --accent:#1f5f8b;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#15171a; --panel:#1d2024; --ink:#e8e6e1; --muted:#a2a8b0; --line:#34383e; --edge:#7d838c; --theme:#c9ccd1; --accent:#7fb4dc; }
+}
+:root[data-theme="dark"]{ --bg:#15171a; --panel:#1d2024; --ink:#e8e6e1; --muted:#a2a8b0; --line:#34383e; --edge:#7d838c; --theme:#c9ccd1; --accent:#7fb4dc; }
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:1.45rem;margin:0 0 4px;font-weight:650}
+.sub{color:var(--muted);margin:0 0 16px;max-width:70ch}
+.controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:center;padding:12px 14px;background:var(--panel);border:1px solid var(--line);border-radius:10px;margin-bottom:14px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{border:0;background:transparent;color:var(--ink);padding:7px 14px;font:inherit;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+label.chk{display:inline-flex;gap:6px;align-items:center;cursor:pointer}
+select{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:4px 6px}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:14px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px}
+#stage{position:relative}
+svg{display:block;width:100%;height:auto}
+.stats{display:flex;gap:22px;padding:10px 14px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;flex-wrap:wrap}
+.stats b{color:var(--ink)}
+#side{padding:14px;max-height:680px;overflow:auto}
+#side h2{font-size:1.05rem;margin:0 0 6px}
+#side h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:14px 0 6px;font-weight:600}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;border:1px solid var(--line);font-size:.8rem;margin:0 4px 4px 0;color:var(--muted)}
+ul.plain{list-style:none;margin:0;padding:0}
+ul.plain li{padding:3px 0;border-bottom:1px solid var(--line);font-size:.88rem;display:flex;justify-content:space-between;gap:10px}
+ul.plain li span.r{color:var(--muted);white-space:nowrap}
+.note{font-size:.85rem;color:var(--muted);margin-top:12px;max-width:80ch}
+.edge{stroke:var(--edge);stroke-linecap:round}
+.node{cursor:pointer}
+.node text{fill:var(--ink);font-size:11.5px;paint-order:stroke;stroke:var(--bg);stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+.node:focus{outline:none}
+.node:focus-visible circle,.node:focus-visible polygon{stroke:var(--ink)}
+.dim{opacity:.2}
+.edge.dim{opacity:.06}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Conceptual Network of a Learning Record</h1>
+  <p class="sub">481 recorded entries from university coursework, a handwritten lecture notebook and edX enrollments. Disciplines are linked where one entry carries a primary and a secondary label. Themes are an interpretive layer assigned from title keywords, separate from the discipline labels.</p>
+
+  <div class="controls">
+    <div class="seg" role="group" aria-label="Network view">
+      <button id="m-disc" aria-pressed="true">Disciplines</button>
+      <button id="m-theme" aria-pressed="false">Themes</button>
+    </div>
+    <label class="chk"><input type="checkbox" id="s-U" checked> University 2000 to 2005</label>
+    <label class="chk"><input type="checkbox" id="s-N" checked> Lecture notebook</label>
+    <label class="chk"><input type="checkbox" id="s-E" checked> edX</label>
+    <label>Minimum shared entries
+      <select id="minw"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+    </label>
+  </div>
+
+  <div class="grid">
+    <div class="card" id="stage">
+      <svg id="svg" viewBox="0 0 900 640" role="img" aria-label="Network diagram"></svg>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="card" id="side">
+      <h2>Select a node</h2>
+      <p class="note">Click a discipline or theme to see its entries and what it connects to. Click empty space to clear.</p>
+    </div>
+  </div>
+  <p class="note" id="viewnote"></p>
+</div>
+
+<script>
+const D = __DATA__;
+const W = 900, H = 640;
+const SRCNAME = {U:"University", N:"Notebook", E:"edX"};
+const PALETTE = ["#1f6f8b","#c4572d","#6b8e23","#8a4f9e","#b8860b","#2f7f6f","#a63d5a","#4b6cb7","#8c6d46","#5f8a3d","#b5517a","#3d7ea6","#9a6a1f","#6a5acd","#2e8b57","#a0522d"];
+const state = {mode:"disc", src:{U:true,N:true,E:true}, minw:1, sel:null};
+const discList = [...new Set(D.entries.flatMap(e=>[e.p,e.q].filter(Boolean)))].sort();
+const colorOf = id => id.startsWith("T:") ? "var(--theme)" : PALETTE[discList.indexOf(id) % PALETTE.length];
+const labelOf = id => id.startsWith("T:") ? id.slice(2) : (D.short[id] || id);
+const svg = document.getElementById("svg");
+const NS = "http://www.w3.org/2000/svg";
+const el = (n, a={}, t) => { const x = document.createElementNS(NS, n); for (const k in a) x.setAttribute(k, a[k]); if (t!==undefined) x.textContent = t; return x; };
+
+function build(){
+  const ents = D.entries.filter(e => state.src[e.s]);
+  const nodes = new Map(), edges = new Map();
+  const node = (id) => { if(!nodes.has(id)) nodes.set(id,{id,n:0,ents:[],kind:id.startsWith("T:")?"t":"d"}); return nodes.get(id); };
+  const bump = (a,b,e) => { const k=[a,b].sort().join("||"); if(!edges.has(k)) edges.set(k,{a,b,w:0,titles:[]}); const x=edges.get(k); x.w++; x.titles.push(e.t); };
+  for (const e of ents){
+    const p = node(e.p); p.n++; p.ents.push({e,role:"primary"});
+    if (state.mode==="disc"){
+      if (e.q){ const q=node(e.q); q.ents.push({e,role:"secondary"}); bump(e.p,e.q,e); }
+    } else {
+      for (const t of e.th){ const tn=node("T:"+t); tn.n++; tn.ents.push({e,role:"theme"}); bump(e.p,"T:"+t,e); }
+    }
+  }
+  const E = [...edges.values()].filter(x => x.w >= state.minw);
+  return {nodes:[...nodes.values()], edges:E, total:ents.length};
+}
+
+function layout(nodes, edges){
+  const N = nodes.length;
+  const isT = n => n.kind==="t";
+  const nd = nodes.filter(n=>!isT(n)), nt = nodes.filter(isT);
+  nodes.forEach(n=>{ n.r = (isT(n)?7:9) + (isT(n)?2.6:4.0)*Math.sqrt(n.n); if(n.r>(isT(n)?26:36))n.r=(isT(n)?26:36); n.vx=0; n.vy=0; });
+  nd.forEach((n,i)=>{ const a=2*Math.PI*i/nd.length; const R=nt.length?{x:330,y:250}:{x:320,y:240}; n.x=W/2+Math.cos(a)*R.x; n.y=H/2+Math.sin(a)*R.y; });
+  nt.forEach((n,i)=>{ const a=2*Math.PI*i/nt.length+0.3; n.x=W/2+Math.cos(a)*130; n.y=H/2+Math.sin(a)*100; });
+  const byId = new Map(nodes.map(n=>[n.id,n]));
+  const ITER = 420;
+  for (let it=0; it<ITER; it++){
+    const cool = 1 - it/ITER;
+    for (let i=0;i<N;i++) for (let j=i+1;j<N;j++){
+      const a=nodes[i], b=nodes[j]; let dx=a.x-b.x, dy=a.y-b.y; let d2=dx*dx+dy*dy+0.01; const d=Math.sqrt(d2);
+      const f = 90000/d2; const ux=dx/d, uy=dy/d;
+      a.vx+=ux*f; a.vy+=uy*f; b.vx-=ux*f; b.vy-=uy*f;
+      const min = a.r+b.r+70; if (d<min){ const push=(min-d)*0.5; a.vx+=ux*push; a.vy+=uy*push; b.vx-=ux*push; b.vy-=uy*push; }
+    }
+    for (const e of edges){
+      const a=byId.get(e.a), b=byId.get(e.b); if(!a||!b) continue;
+      let dx=b.x-a.x, dy=b.y-a.y; const d=Math.sqrt(dx*dx+dy*dy)+0.01;
+      const target = 190 - Math.min(e.w,8)*6; const k = 0.006*Math.min(1+Math.log(1+e.w),3);
+      const f=(d-target)*k; const ux=dx/d, uy=dy/d;
+      a.vx+=ux*f; a.vy+=uy*f; b.vx-=ux*f; b.vy-=uy*f;
+    }
+    for (const n of nodes){
+      n.vx += (W/2-n.x)*0.0025; n.vy += (H/2-n.y)*0.0035;
+      n.x += n.vx*0.55*cool; n.y += n.vy*0.55*cool; n.vx*=0.6; n.vy*=0.6;
+      n.x = Math.max(90, Math.min(W-90, n.x)); n.y = Math.max(45, Math.min(H-50, n.y));
+    }
+  }
+}
+
+let G = null;
+function render(){
+  G = build(); layout(G.nodes, G.edges);
+  svg.replaceChildren();
+  const byId = new Map(G.nodes.map(n=>[n.id,n]));
+  const gE = el("g"), gN = el("g"); svg.append(gE, gN);
+  G.edges.forEach(e=>{
+    const a=byId.get(e.a), b=byId.get(e.b); if(!a||!b) return;
+    const l = el("line",{x1:a.x,y1:a.y,x2:b.x,y2:b.y,"class":"edge","stroke-width":1+Math.min(e.w,12)*0.9,"stroke-opacity":0.45});
+    l.dataset.a=e.a; l.dataset.b=e.b;
+    const t = el("title",{},`${labelOf(e.a)} and ${labelOf(e.b)}: ${e.w} shared entries`); l.append(t);
+    gE.append(l);
+  });
+  G.nodes.forEach(n=>{
+    const g = el("g",{"class":"node",tabindex:0,role:"button","aria-label":labelOf(n.id)}); g.dataset.id=n.id;
+    let shape;
+    if (n.kind==="t"){ const s=n.r*1.35; shape = el("polygon",{points:`${n.x},${n.y-s} ${n.x+s},${n.y} ${n.x},${n.y+s} ${n.x-s},${n.y}`,fill:"var(--bg)",stroke:"var(--theme)","stroke-width":2.5,"stroke-linejoin":"round"}); n.rr = s; }
+    else shape = el("circle",{cx:n.x,cy:n.y,r:n.r,fill:colorOf(n.id),"fill-opacity":n.n? .88 : .35,stroke:"var(--bg)","stroke-width":2});
+    g.append(shape);
+    g.append(el("text",{x:n.x,y:n.y+(n.rr||n.r)+14,"text-anchor":"middle"},labelOf(n.id)));
+    g.append(el("title",{},`${labelOf(n.id)}: ${n.n} entries`));
+    g.addEventListener("click",ev=>{ev.stopPropagation(); select(n.id);});
+    g.addEventListener("keydown",ev=>{ if(ev.key==="Enter"||ev.key===" "){ev.preventDefault(); select(n.id);} });
+    gN.append(g);
+  });
+  svg.onclick = () => select(null);
+  const stats = document.getElementById("stats");
+  stats.replaceChildren();
+  const add = (v,l)=>{ const s=document.createElement("span"); const b=document.createElement("b"); b.textContent=v; s.append(b," "+l); stats.append(s); };
+  add(G.total,"entries shown"); add(G.nodes.length, state.mode==="disc"?"disciplines":"nodes"); add(G.edges.length,"links");
+  document.getElementById("viewnote").textContent = state.mode==="disc"
+    ? "Disciplines view: node size is the number of entries with that primary label. A link means entries labelled with both disciplines; entries with no defensible second domain contribute no link, so absence of a link is not evidence of no relationship."
+    : "Themes view: diamonds are interpretive themes assigned from title keywords, circles are primary disciplines. A link counts entries of that discipline carrying that theme. Themes are non-exclusive and reflect titles only, not course content.";
+  select(state.sel && byId.has(state.sel) ? state.sel : null);
+}
+
+function select(id){
+  state.sel = id;
+  const side = document.getElementById("side"); side.replaceChildren();
+  const mk = (t,txt,cls)=>{const x=document.createElement(t); if(txt!==undefined)x.textContent=txt; if(cls)x.className=cls; return x;};
+  svg.querySelectorAll(".node,.edge").forEach(x=>x.classList.remove("dim"));
+  if (!id){ side.append(mk("h2","Select a node"), mk("p","Click a discipline or theme to see its entries and what it connects to. Click empty space to clear.","note")); return; }
+  const n = G.nodes.find(x=>x.id===id); if(!n){ select(null); return; }
+  const linked = new Set([id]);
+  const conns = [];
+  G.edges.forEach(e=>{ if(e.a===id||e.b===id){ const o=e.a===id?e.b:e.a; linked.add(o); conns.push({o,w:e.w}); } });
+  svg.querySelectorAll(".node").forEach(x=>{ if(!linked.has(x.dataset.id)) x.classList.add("dim"); });
+  svg.querySelectorAll(".edge").forEach(x=>{ if(x.dataset.a!==id && x.dataset.b!==id) x.classList.add("dim"); });
+  side.append(mk("h2",labelOf(id)));
+  const bySrc = {U:0,N:0,E:0}; n.ents.forEach(x=>bySrc[x.e.s]++);
+  const pills = mk("div"); Object.keys(bySrc).forEach(k=>pills.append(mk("span",`${SRCNAME[k]} ${bySrc[k]}`,"pill"))); side.append(pills);
+  side.append(mk("h3","Connected to"));
+  if(!conns.length) side.append(mk("p","No links at the current filter.","note"));
+  const ul = mk("ul","","plain"); ul.className="plain";
+  conns.sort((a,b)=>b.w-a.w).forEach(c=>{ const li=mk("li"); li.append(mk("span",labelOf(c.o)), mk("span",String(c.w),"r")); ul.append(li); });
+  side.append(ul);
+  side.append(mk("h3",`Entries (${n.ents.length})`));
+  const ul2 = mk("ul","","plain"); ul2.className="plain";
+  const seen = new Map();
+  n.ents.forEach(x=>{ const k=x.e.t+"|"+x.role; if(!seen.has(k)) seen.set(k,{t:x.e.t,role:x.role,s:x.e.s,c:0}); seen.get(k).c++; });
+  [...seen.values()].sort((a,b)=>a.t.localeCompare(b.t)).forEach(x=>{ const li=mk("li"); li.append(mk("span",x.t+(x.c>1?` (x${x.c})`:"")), mk("span",`${SRCNAME[x.s]}${x.role==="secondary"?", secondary":""}`,"r")); ul2.append(li); });
+  side.append(ul2);
+}
+
+const setMode = m => { state.mode=m; state.sel=null; document.getElementById("m-disc").setAttribute("aria-pressed",m==="disc"); document.getElementById("m-theme").setAttribute("aria-pressed",m==="theme"); render(); };
+document.getElementById("m-disc").onclick = ()=>setMode("disc");
+document.getElementById("m-theme").onclick = ()=>setMode("theme");
+["U","N","E"].forEach(k=>document.getElementById("s-"+k).onchange = ev => { state.src[k]=ev.target.checked; render(); });
+document.getElementById("minw").onchange = ev => { state.minw = +ev.target.value; render(); };
+render();
+</script>
+</body>
+</html>

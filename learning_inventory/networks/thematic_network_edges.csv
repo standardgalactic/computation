@@ -1,0 +1,55 @@
+﻿theme_a,theme_b,shared_entries,distinct_titles,example_courses
+Computation,Information,28,21,Text Analytics 2: Visualizing Natural Language Processing; Text Analytics 1: Introduction to Natural Language Processing; Computer Vision and Image Processing Fundamentals; Boltzmann Law: Physics to Computing; Excel avanzado: importación y análisis de datos; ¡Conceptos básicos de Python para Data Science!; Introduction to Predictive Analytics using Python; Python Basics for Data Science
+Computation,Machine Learning,20,14,Introduction to Machine Learning; Deep Learning Fundamentals with Keras; Machine Learning; Machine Learning Fundamentals; Essential Math for Machine Learning: R Edition; Essential Math for Machine Learning: Python Edition; Dynamic Programming: Applications In Machine Learning and Genomics; FA18: Machine Learning
+Knowledge and Method,Mind and Cognition,12,11,Philosophies of Mind; Research Methods in Psychology; The Science of Everyday Thinking; Philosophy and Critical Thinking; Question Everything: Scientific Thinking in Real Life; Thinking Theoretically; Your Deceptive Mind; Your Deceptive Mind: Critical Thinking
+Computation,Formal Reasoning,10,7,Automata Theory; Mathematical and Computational Methods; Análisis estadístico con Excel; Probability and Statistics in Data Science using Python; Essential Math for Machine Learning: R Edition; Essential Math for Machine Learning: Python Edition; Data Science Research Methods: Python Edition
+Complex Systems,Evolution and Development,10,3,AP® Biology - Part 4: Ecology; Ecological Planet; Big History
+Formal Reasoning,Information,9,7,Statistical Thinking for Data Science and Analytics; Probability and Statistics in Data Science using Python; Statistical Predictive Modelling and Applications; Data Science Research Methods: R Edition; Data Science: Inference and Modeling; Data Science Research Methods: Python Edition; Data Science: Probability
+History and Society,Language and Meaning,7,7,Latin American Experience; Japanese Foundations — Michel Thomas Method; Japanese Foundations — Michel Thomas; Michel Thomas: Egyptian Arabic; Pimsleur Egyptian Arabic; Michel Thomas Japanese; Michel Thomas Arabic — Egypt
+Computation,Language and Meaning,6,5,Natural Language Processing: Foundations; Text Analytics 2: Visualizing Natural Language Processing; Text Analytics 1: Introduction to Natural Language Processing; C Programming: Language Foundations; Natural Language Processing (NLP)
+Formal Reasoning,Machine Learning,5,3,Statistical Learning; Essential Math for Machine Learning: R Edition; Essential Math for Machine Learning: Python Edition
+Evolution and Development,Physical Structure and Scale,5,1,Physics of History
+Constraint and Optimization,Formal Reasoning,4,3,Mathematical Optimization for Engineers; Observation Theory: Estimating the Unknown; Introduction to Discrete Choice Models
+Formal Reasoning,Modeling and Simulation,4,4,Basics of Scientific Visualization in Mathematical Modeling of Systems; Statistical Predictive Modelling and Applications; Data Science: Inference and Modeling; Mathematical Modelling Basics
+Information,Modeling and Simulation,4,4,Databases: Modeling and Theory; Statistical Predictive Modelling and Applications; Successfully Evaluating Predictive Modelling; Data Science: Inference and Modeling
+Complex Systems,Formal Reasoning,4,1,Ecological Planet
+Evolution and Development,Formal Reasoning,4,1,Ecological Planet
+Formal Reasoning,Mind and Cognition,3,3,Introduction to Statistical Analysis in Psychology; Physiological Psychology; Research Methods in Psychology
+History and Society,Mind and Cognition,3,3,History of Psychology; Fundamentals of Social Psychology; Advanced Social Psychology
+Formal Reasoning,Knowledge and Method,3,3,Research Methods in Psychology; Data Science Research Methods: R Edition; Data Science Research Methods: Python Edition
+Information,Language and Meaning,3,3,Text Analytics 2: Visualizing Natural Language Processing; Text Analytics 1: Introduction to Natural Language Processing; Speech Recognition Systems
+Complex Systems,Constraint and Optimization,3,3,Thermodynamics and Phase Equilibria; Sustainable Living; Fundamentals of Sustainable Living
+Information,Machine Learning,3,3,Dynamic Programming: Applications In Machine Learning and Genomics; Data Science: Machine Learning; Machine Learning for Data Science and Analytics
+Evolution and Development,History and Society,3,3,History of Innovation; Human Prehistory and the First Civilizations; Archeology
+Knowledge and Method,Language and Meaning,3,2,Argumentation; From Plato to Postmodernism: The Role of the Author
+Computation,Learning and Education,2,2,Deep Learning through Transformative Pedagogy; Data Structures: An Active Learning Approach
+Computation,Mind and Cognition,2,2,C Programming: Modular Programming and Memory Management; Computational Neuroscience: Neuronal Dynamics of Cognition
+Constraint and Optimization,Physical Structure and Scale,2,2,Thermodynamics and Phase Equilibria; Boltzmann Law: Physics to Computing
+Formal Reasoning,Language and Meaning,2,2,"Language, Proof and Logic; Rhetoric, Poetics, Logic"
+Constraint and Optimization,Information,2,2,Boltzmann Law: Physics to Computing; Dynamic Programming: Applications In Machine Learning and Genomics
+Computation,Constraint and Optimization,2,2,Boltzmann Law: Physics to Computing; Dynamic Programming: Applications In Machine Learning and Genomics
+Information,Knowledge and Method,2,2,Data Science Research Methods: R Edition; Data Science Research Methods: Python Edition
+Computation,Modeling and Simulation,2,2,Computer Graphics; Computing in Python I: Fundamentals and Procedural Programming
+Evolution and Development,Information,2,2,Dynamic Programming: Applications In Machine Learning and Genomics; DNA: Biology’s Genetic Code
+History and Society,Knowledge and Method,2,2,Science in the Twentieth Century; Modern Mind
+Evolution and Development,Language and Meaning,1,1,Language Change and Genetic Classification
+Learning and Education,Mind and Cognition,1,1,Learning
+Language and Meaning,Learning and Education,1,1,Introduction to Second Language Education
+Complex Systems,Physical Structure and Scale,1,1,Thermodynamics and Phase Equilibria
+Modeling and Simulation,Physical Structure and Scale,1,1,From Atoms to Materials: Predictive Theory and Simulations
+Information,Physical Structure and Scale,1,1,Boltzmann Law: Physics to Computing
+Computation,Physical Structure and Scale,1,1,Boltzmann Law: Physics to Computing
+Complex Systems,Computation,1,1,Computational Neuroscience: Neuronal Dynamics of Cognition
+Complex Systems,Mind and Cognition,1,1,Computational Neuroscience: Neuronal Dynamics of Cognition
+Computation,Evolution and Development,1,1,Dynamic Programming: Applications In Machine Learning and Genomics
+Evolution and Development,Machine Learning,1,1,Dynamic Programming: Applications In Machine Learning and Genomics
+Constraint and Optimization,Evolution and Development,1,1,Dynamic Programming: Applications In Machine Learning and Genomics
+Constraint and Optimization,Machine Learning,1,1,Dynamic Programming: Applications In Machine Learning and Genomics
+Information,Learning and Education,1,1,Big Data and Education
+Information,Mind and Cognition,1,1,Speech Recognition Systems
+Language and Meaning,Mind and Cognition,1,1,Speech Recognition Systems
+Computation,Knowledge and Method,1,1,Data Science Research Methods: Python Edition
+Complex Systems,History and Society,1,1,Unexpected Economics
+Knowledge and Method,Physical Structure and Scale,1,1,"Albert Einstein: Physicist, Philosopher, Humanitarian — Don Howard"
+Formal Reasoning,History and Society,1,1,Biological Anthropology
+Evolution and Development,Mind and Cognition,1,1,Biology and Human Behavior

@@ -1,0 +1,39 @@
+﻿discipline_a,discipline_b,shared_classified_entries,distinct_titles,example_courses
+"Biology, Neuroscience and Health",Psychology and Cognitive Science,6,5,Health Psychology; Physiological Psychology; Computational Neuroscience: Neuronal Dynamics of Cognition; Addiction; Understanding the Brain
+"AI, Machine Learning and Data Science",Languages and Linguistics,6,5,Natural Language Processing: Foundations; Text Analytics 2: Visualizing Natural Language Processing; Text Analytics 1: Introduction to Natural Language Processing; Natural Language Processing (NLP); Speech Recognition Systems
+Computer Science and Programming,Mathematics and Statistics,6,5,LAFF-On Programming for High Performance; Basics of Scientific Visualization in Mathematical Modeling of Systems; Mathematical and Computational Methods; Information Theory; Science of Information
+"Biology, Neuroscience and Health",Engineering and Applied Technology,5,5,"Introduction to Biomedical Imaging; Image Processing and Analysis for Life Scientists; Basic Steps in Magnetic Resonance; Fundamentals of Biomedical Imaging : Magnetic Resonance Imaging (MRI); Fundamentals of Biomedical Imaging: Ultrasounds, X-ray, positron emission tomography (PET) and applications"
+History,Physics and Astronomy,5,1,Big History
+General Science and Interdisciplinary,History,5,1,Physics of History
+"Philosophy, Logic and Critical Thinking",Psychology and Cognitive Science,4,4,Philosophies of Mind; The Science of Everyday Thinking; Your Deceptive Mind; Your Deceptive Mind: Critical Thinking
+Engineering and Applied Technology,History,4,3,Inventions; Greek and Roman Technology; History of Innovation
+"Biology, Neuroscience and Health",Earth and Environmental Science,4,1,Ecological Planet
+Education and Pedagogy,Languages and Linguistics,3,3,Introduction to Second Language Education; Advanced Studies in ESL Education; Field Experience in TESL
+"AI, Machine Learning and Data Science",Engineering and Applied Technology,3,3,Data Science and Agile Systems Engineering; IoT Programming and Big Data (T3 2019); Enabling Technologies for Data Science and Analytics: The Internet of Things
+"Arts, Music and Literature",Computer Science and Programming,3,3,Creative Coding; Basic 3D Modeling using Blender; Basic 3D Animation using Blender
+Psychology and Cognitive Science,Social Sciences and Economics,2,2,Fundamentals of Social Psychology; Advanced Social Psychology
+Mathematics and Statistics,"Philosophy, Logic and Critical Thinking",2,2,"Symbolic Logic I / Propositional Calculus; Language, Proof and Logic"
+Engineering and Applied Technology,Mathematics and Statistics,2,1,Mathematical Optimization for Engineers
+Chemistry and Materials,Physics and Astronomy,2,2,Thermodynamics and Phase Equilibria; From Atoms to Materials: Predictive Theory and Simulations
+Earth and Environmental Science,Engineering and Applied Technology,2,2,Urban Sewage Treatment; Drinking Water Treatment
+"Arts, Music and Literature",Languages and Linguistics,2,2,"1984 — Spanish audiobook, approximately 0.7× speed; Árbol de ciencia — James"
+"Arts, Music and Literature",Psychology and Cognitive Science,2,2,How Colors Affect You; Music and the Brain
+"Biology, Neuroscience and Health",History,2,2,The Human Factor: Domestication; Domestication
+Chemistry and Materials,Engineering and Applied Technology,2,1,Nanotechnology
+History,Social Sciences and Economics,2,2,"United States and the Middle East; Middle East, 1914–2001"
+"Biology, Neuroscience and Health",Physics and Astronomy,2,2,The Search for Intelligent Life; The Search for Intelligent Life in Space
+Mathematics and Statistics,Psychology and Cognitive Science,1,1,Introduction to Statistical Analysis in Psychology
+History,Psychology and Cognitive Science,1,1,History of Psychology
+Mathematics and Statistics,Social Sciences and Economics,1,1,Introduction to Discrete Choice Models
+Computer Science and Programming,Earth and Environmental Science,1,1,GIS Foundations
+Computer Science and Programming,Physics and Astronomy,1,1,Boltzmann Law: Physics to Computing
+"Biology, Neuroscience and Health",Social Sciences and Economics,1,1,Antivaccination and Vaccine Hesitancy
+Computer Science and Programming,Engineering and Applied Technology,1,1,Embedded Systems - Shape The World: Microcontroller Input/Output
+"Arts, Music and Literature",Chemistry and Materials,1,1,Science in Art: The Chemistry of Art Materials and Conservation
+"Biology, Neuroscience and Health",Computer Science and Programming,1,1,Dynamic Programming: Applications In Machine Learning and Genomics
+"AI, Machine Learning and Data Science",Education and Pedagogy,1,1,Big Data and Education
+"Arts, Music and Literature",Engineering and Applied Technology,1,1,Music Technology Foundations
+"Philosophy, Logic and Critical Thinking",Physics and Astronomy,1,1,"Albert Einstein: Physicist, Philosopher, Humanitarian — Don Howard"
+History,Languages and Linguistics,1,1,Diario de Che Guevara
+Languages and Linguistics,"Philosophy, Logic and Critical Thinking",1,1,El problema del dolor — C. S. Lewis
+"Philosophy, Logic and Critical Thinking",Social Sciences and Economics,1,1,Political Ideas

@@ -1,0 +1,854 @@
+You know, usually when we talk about a medical diagnosis, there is this expectation of extreme
+precision. Like, you break your arm, right? Right, you go get an x-ray. Exactly. The x-ray shows that
+jagged white line and the doctor just points at the screen and says, well, there it is. It is
+entirely binary. It is either broken or not broken. You can literally see the exact point of failure.
+Yeah, and it's clean. But then you step into the world of complex systemic issues,
+say neurodevelopment or certain types of trauma. And suddenly that x-ray machine is completely
+useless. Right. You're looking at a diagnostic landscape that is just entirely murky. You have
+a tool that is fundamentally the wrong instrument for the job, but, you know, it is the only tool
+you have ever been taught to use. You're basically trying to measure water volume with a ruler.
+The tool simply does not map to the reality of the condition you are observing. Okay, so let's
+unpack this. Today, we are taking that exact same murky diagnostic lens and we are pointing it
+straight at something you probably look at every single day. Your phone. Yes, we are going to
+completely dismantle and radically redefine what social media actually is. We are moving far,
+far away from the toxic, doom-scrolling feeds that you are probably picturing right now in your head.
+And instead, we are going to discover the hidden architecture of true online communities.
+It requires a fundamental shift in how we perceive digital interaction.
+To do this, we are using a really groundbreaking October 2026 paper by the independent researcher
+Flyxion. It is titled, The Sociality of Computation, From Educational Systems to Persistent Digital Worlds.
+And what Flyxion does so effectively here is argue that our current universally accepted
+definition of social media is, in fact, a massive misdiagnosis.
+A misdiagnosis.
+Yes, we have been looking at the wrong symptoms for decades.
+So our mission today for this deep dive is to show you that you aren't actually trapped in the
+age of algorithmically ranked feeds.
+Right.
+You might be listening to this right now thinking, well, I kind of like my TikTok algorithm.
+It knows exactly what I want to see.
+And that is perfectly fine for passive entertainment.
+Sure. Absolutely.
+But if you are looking for connection for real community, that endless stream of broadcasted
+takes is a dead end.
+By understanding what Flyxion calls shared computational objects, you are going to get a literal map.
+A map to finding and maybe even building better, more enduring spaces online.
+The core thesis is highly optimistic, actually.
+It is.
+Flyxion argues that sociality, the actual forming of durable communities, that feeling of belonging
+to a collective, it does not emerge from user profiles and ranked feeds.
+Wait, so if it doesn't come from feeds, where does it come from?
+It emerges from shared history and accessible objects.
+It is about what we build, modify, and maintain together, rather than just what we broadcast
+at each other.
+I love that.
+But to get there, we have to start by tearing down your preconceived notions of what social
+media even is.
+We have to clear the slate.
+Right.
+When I say social media, what is the architecture that immediately pops into your head?
+For almost everyone listening, it is identical.
+It is Facebook, X, Instagram, TikTok.
+And that dominant architecture relies on very specific, rigid components.
+First, you have a personal profile.
+Which acts as your digital identity card.
+Exactly.
+Then you have a formalized list of connections, your friends, your followers, subscribers.
+And crucially, you have the feed.
+Right.
+A ranked stream of posts.
+Right.
+And it is not just casual users who think this way.
+There is a massive academic precedent that locked this exact definition into place.
+Yeah.
+Flyxion points directly to Boyd and Ellison's famous 2007 definition of social network sites.
+Boyd and Ellison essentially codified the era of Web 2.0.
+They stated that a social network is a web-based service where individuals construct a public
+or semi-public profile.
+Articulate a list of other users with whom they share a connection.
+And view their list of connections and those made by others within the system.
+That was the gold standard definition.
+Which, to be fair, was an incredibly useful definition back in 2007.
+It helped researchers wrap their heads around what MySpace and early Facebook were doing.
+It described the phenomenon of that specific moment perfectly.
+But Fleikerson argues that carrying this definition forward into the modern era is a massive category error.
+Okay, a category error.
+Break that down for us.
+A category error is a philosophical concept.
+It means you fundamentally misunderstand the ontological nature of the thing you are observing.
+So we are just categorizing the entire internet wrong.
+Essentially, yes.
+By defining online sociality strictly through the lens of profiles, follower graphs, and feeds,
+we are mistaking one specific historical branch of social computing for the trunk of the entire tree.
+Oh, I see.
+We are looking at a single offshoot of digital evolution and declaring,
+hey, this is the entire species.
+Precisely.
+Precisely.
+And by making that error, we end up completely ignoring massive, genuinely social systems
+that millions of people use every single day.
+Right. Think about Wikipedia.
+Or think about GitHub, where developers literally build the world's software.
+Or YouTube.
+Or massive multiplayer digital worlds like Minecraft and EVE Online.
+What do all of those platforms actually have in common?
+None of them rely on prominent personal profiles or personal broadcast-style feeds as their main thing.
+Yet they account for a staggering fraction of the sustained collaborative activity on the internet.
+It is wild to really think about it.
+Take Wikipedia as an example.
+It sustains deeply complex cooperation among thousands of people who, frankly, frequently do not know each other at all.
+Right. They aren't following each other's personal lives.
+They don't care what the other editor had for breakfast.
+No.
+They communicate almost entirely through the object they are jointly producing,
+which is the encyclopedic article itself.
+So, thinking social media is only feeds is like saying a city is only made of highways,
+while completely ignoring the public squares, the libraries, the construction sites where people actually gather to do things.
+That is a highly accurate way to visualize it.
+The highways, the feeds, they just move traffic from point A to point B at high speed.
+But the squares are where the city actually happens.
+Exactly.
+Flyxion traces the origin of this highway mentality back to early telecommunications.
+The dominant model of online social life descends directly from the telephone exchange and the postal service.
+It operates on what we'd call a communication channel model.
+Right.
+I write a letter, I put your address on it, the post office routes it, and you receive it.
+The medium is just a passive carrier of the message.
+And even when you post publicly on a modern feed, say, you know, you send out a tweet or a status update,
+you are essentially just sending a broadcast message to an aggregated audience.
+It is still fundamentally a system of people throwing discrete messages at other people.
+So, if the feed is just a giant digital post office, what is Flyxion's alternative?
+How do we redefine the city square?
+The alternative is an object-centered model.
+Okay, object-centered.
+Instead of communication being mediated by messages traveling between persons,
+the sociality is mediated by persistent digital objects.
+So, let's go back to editing a Wikipedia article.
+When you make a contribution there, you aren't addressing the next reader directly.
+You might not know or care who the next reader is.
+You are addressing the article.
+Your relationship with the next person to come along is mediated entirely by the altered state of that shared thing.
+Exactly.
+It is not me talking to you.
+It is me walking into a room, painting a wall blue, and leaving.
+Then you walk into the room and experience a blue wall.
+Yes.
+And to ground this mechanically,
+Flyxion pulls in a foundational concept from the study of cooperative work,
+dating back to 1989.
+Star and Grissimer's concept of boundary objects.
+I want to spend some real time on this because understanding the boundary object is basically the key to this entire deep dive.
+What exactly did Star and Grissimer study?
+They conducted a sociological study of a natural history museum, specifically the Museum of Vertebrate Zoology at UC Berkeley in its early years.
+They looked at how wildly different groups of people managed to cooperate to build this museum,
+even though they fundamentally disagreed on what the museum's actual purpose was.
+Because you had a crazy mix of people involved in this, right?
+You had amateur bird watchers out in the field, professional academic biologists.
+University administrators.
+And professional trappers and hunters.
+Exactly.
+The administrator's primary goal is just to balance a budget and keep the university happy.
+The biologist wants to publish a groundbreaking taxonomy paper.
+The amateur bird watcher is doing it for the love of nature and conservation.
+And the trapper simply wants to get paid a bounty for a physical specimen.
+They have completely divergent, sometimes totally conflicting worldviews.
+If they sat in a room and tried to talk to each other, they would probably argue constantly.
+But they didn't have to talk to each other directly to cooperate.
+No.
+They collaborated successfully through what Star and Grissimer called boundary objects.
+The physical specimens themselves, the standardized field notes, the maps of the territory.
+Okay, break that down for me.
+How does a dead bird act as a boundary object?
+A boundary object is something that is plastic enough to adapt to the local,
+specific needs of different communities,
+but robust enough to maintain a common identity across all of them.
+That makes sense.
+To the trapper, the dead bird is a commodity.
+It represents a paycheck.
+To the administrator, that exact same bird is a line item on an expense report.
+And to the biologist, it is a crucial data point proving a species mutation.
+So the shared object makes coordination possible among parties whose purposes differ,
+because the object can be interpreted in multiple ways while remaining physically the same thing.
+Yes.
+It acts as an anchor.
+It anchors all these disparate motivations into a single shared reality.
+And mapping this to the digital world, the boundary object isn't a stuffed bird in a drawer.
+It is a digital flashcard on a learning platform.
+It is a repository of code on GitHub.
+Or a digital castle built on a Minecraft server.
+Exactly right.
+But wait, if any digital thing we interact with is a boundary object,
+doesn't the definition of social media become so broad that it is basically meaningless?
+Like, is a parking meter app social media?
+Is my digital thermostat social media?
+That is a very crucial pushback.
+And Flyxion anticipates this.
+The paper sets up a rigorous stress test to pinpoint exactly when computational infrastructure
+crosses the threshold into becoming a genuinely social medium.
+Okay, walk us through these scenarios.
+Scenario one.
+Imagine two people sitting in the exact same physical room.
+Each person is holding a separate offline calculator doing their own math homework.
+Is that a social computational system?
+Obviously not.
+I mean, they are co-located physically.
+But digitally, they are in isolated universes.
+Correct.
+Scenario two.
+Someone fills out a complex web form, maybe a tax return, and hits submit.
+The data is saved to a secure, private, encrypted database sitting on a server somewhere.
+No one else has access to it.
+Still not social.
+There is no access.
+There is no shared visibility at all.
+Right.
+Now, scenario three.
+I create a highly detailed open access spreadsheet on a cloud server and publish the link publicly.
+Okay, this is where it gets nuanced.
+You have created the structural capacity for sociality.
+It is public.
+It is accessible.
+But if I create that spreadsheet and I tweet the link and literally zero people ever click it, is it social media?
+I would argue no.
+It is just a lonely file sitting on a server.
+And Flyxion would entirely agree with you.
+It is only structurally available.
+But the moment you open that link and you see that I am currently typing in cell A1 and I change a formula that alters the graph you are currently looking at on your screen.
+Boom.
+Now we have achieved realized social generativity.
+Exactly.
+Because your reality was just altered by my action on the shared object.
+The shared object is the locus of the interaction.
+It absolutely requires three things.
+Accessibility, observable changes, and what the paper terms, cross-participant consequence.
+Cross-participant consequence.
+Meaning my action must fundamentally alter what you can perceive, what you can interpret, or what you can do next.
+Yes.
+And this realization completely shatters the timeline of internet history we have all been taught.
+Right.
+We have this mythology that social media was invented by Mark Zuckerberg in a Harvard dorm room in 2004.
+Or maybe Tom Anderson with MySpace in 2003.
+But if we define social media as cross-participant consequence on shared objects, we have to travel way back to the 1960s.
+And we have to look at a field that nobody associates with the birth of digital communities.
+Education.
+Education.
+Not defense.
+Not communication software.
+But giant mechanical textbooks.
+This is one of the most fascinating historical corrections in the paper.
+The true birthplace of digital sociality was educational infrastructure.
+Specifically a system called Plato.
+Okay, let's set the scene for the listener here.
+Because when we say computer in 1960, we are talking about a sleek laptop.
+Not at all.
+Plato stands for Programmed Logic for Automatic Teaching Operations.
+It was developed at the University of Illinois starting in 1960.
+We are talking about massive, room-sized, mainframe computers.
+And the designers of Plato had zero intention of building a social network, right?
+Zero.
+The system was built strictly and exclusively to deliver automated instruction to students.
+To facilitate this, the engineers built a specific programming language called Tudor.
+Tudor, okay.
+Tudor was designed to be highly accessible so that professors and instructors who were not computer scientists could write interactive lesson materials and quizzes.
+And by the early 1970s, they had advanced the hardware significantly.
+They were using these iconic glowing orange plasma display terminals.
+Yes, the orange screens.
+They could mix text and vector graphics on the same screen, which was totally revolutionary at the time.
+But the critical architectural feature of Plato was that all these terminals were connected to a central mainframe with shared memory.
+Ah, shared memory.
+And because the Tudor language was so accessible, the users, the students and the amateurs using the terminals, did what humans always do.
+They engaged in creative appropriation.
+They accidentally birthed the precursor to modern online communities.
+They were supposed to be doing automated calculus drills.
+Right.
+But instead, they realized, wait, this machine remembers what I type.
+And someone on another terminal can see it.
+So they started building worlds.
+They built some of the first multiplayer digital games in human history.
+Games like Empire, which was an incredibly complex multiplayer space strategy game.
+Or Avatar, an early graphical role-playing game.
+Or Air Fight, a 3D flight simulator.
+And these weren't just cute little weekend side projects.
+Far from it.
+Encyclopedic accounts of the Plato system report that these specific games logged more than a million contact hours each by the users.
+Let that sink in.
+A million hours of user engagement in the 1970s, long before the personal computer revolution even happened.
+And the innovation extended far beyond gaming, too.
+In 1973, a user named Doug Brown wrote a program called Talkomatic.
+It was essentially the world's first real-time chat room.
+You could have up to five people typing simultaneously, right?
+Yes.
+And each person's text appeared in a separate horizontal window on that orange plasma screen.
+But the holy grail of this era, and the absolute perfect example of Flyxion's object-centered sociality, was a program called Plato Notes.
+Created by David R. Woolley.
+What was the original intended purpose of Plato Notes?
+It was designed to be a dry, utilitarian tool for users to report system bugs to the mainframe administrators.
+A simple log of faults.
+Right.
+You would type, Terminal 4's screen is flickering.
+Or, the math drill crashed on question 7.
+You submit it, the admin reads it, fixes it, and that is it.
+But the users immediately grasped the affordance of the object.
+The system provided a persistent shared file.
+It was public.
+And crucially, it did not enforce any technical restrictions on what kind of text could be entered into that file.
+It didn't have an AI checking to make sure your text was actually a bug report.
+It just saved whatever text you put in.
+So participants started using it for other things.
+They started discussing strategies for the game Empire.
+They started discussing campus life.
+They debated philosophy.
+The interactions just accumulated.
+People began recognizing each other's handles and writing styles.
+They formed actual relationships.
+Plato Notes organically transformed from a bug reporting tool into a vibrant, general-purpose forum.
+Eventually organizing itself into discrete threads and topics.
+It was the direct ancestor of Reddit.
+Of bulletin board systems.
+Of modern forums.
+Exactly.
+But, hold on.
+Let me play devil's advocate here for a second.
+You have people essentially hijacking a multi-million dollar institutional machine just to hang out and play space games.
+That is what was happening.
+This wasn't a public utility.
+It was owned by a university.
+It was funded heavily by institutions.
+Including the military and the National Science Foundation.
+They didn't pour millions into mainframe development so college kids could chat all night.
+And that tertian is exactly what Flyxion highlights next.
+When educational computing resources are appropriated and become spaces for independent social organization,
+a profound conflict arises regarding institutional governance.
+Especially then.
+The Plato system existed during the 1960s and 70s, which were periods of intense, often volatile political activity on university campuses.
+Yeah, so you had the anti-war movement, the civil rights movement, massive cultural upheaval.
+And according to historical records cited in the paper, users were utilizing Plato's systems to organize protests against the Vietnam War.
+And later to host deep, ongoing discussions about the Watergate scandal.
+Which put the university in an incredibly difficult position.
+Historical accounts show that the institutional funders were not pleased that their expensive computing resources were being used to facilitate political dissent.
+So what did the administration do?
+They responded with strict crackdowns.
+They threatened to pull funding specifically to shut down the Watergate discussion forums.
+Wow.
+Furthermore, to combat the million plus hours being spent on games like Empire, administrators deployed a script literally named The Enforcer.
+The Enforcer. That sounds ominous.
+It actively monitored the system and terminated game processes during peak educational hours.
+It is the ultimate my house, my rules scenario, played out on the very first digital frontier.
+The institution controls the physical servers.
+They control the funding.
+So the moment the community's behavior deviates from the institution's goals, they just pull the plug on those specific objects.
+It demonstrates that the architecture provides the affordance, but the institution holds the ultimate power of eviction.
+The Plato case definitively proves that the functions we associate with social media forums, real-time chat, multiplayer, co-presence, are not inherent to communication networks.
+No.
+They were generated by a shared educational environment long before the public web even existed.
+Right.
+Okay.
+So the Plato story proves this happens in early isolated mainframes.
+But what happens when you expose this object-centered behavior to the modern, hyper-competitive internet?
+To see that, we have to jump forward in time to 2010.
+We are looking at a platform called Memrise because this case study shows exactly how this dynamic plays out on a microscopic level today.
+Right.
+Memrise launched as a language learning app.
+Its core mechanic was based on spaced repetition.
+Spaced repetition is an algorithmic scheduling technique.
+It tests you on vocabulary just as you are about to forget it, moving the knowledge into long-term memory.
+But it wasn't just a top-down curriculum, right?
+It grew into a platform where users could build comprehensive community courses on literally anything.
+You had courses on advanced mathematics, global geography, programming languages, obscure scientific terminology.
+It became a massive, generalized learning infrastructure.
+And the atomic unit of this entire infrastructure, the shared boundary object at the center of the universe, was the humble digital flashcard.
+The flashcard is an ideal boundary object.
+It is strictly bounded.
+It is reusable.
+It has a clear prompt and a correct answer.
+But Memrise included a very specific feature on their flashcards called a MEM, M-E-M.
+Short for mnemonic device.
+And visually, what was this?
+It was just a blank annotation text box attached to the bottom of the flashcard.
+The intended pedagogical function of the MEM was to allow users to create and share memory aids.
+You might upload a funny image or write a clever pun or share a short story that associates the foreign vocabulary word with a concept you already know.
+But, just like David R. Woolley's bug reports on Play-Doh, the MEM was a public, free text field attached to a highly trafficked object.
+Right. It didn't force you to write a mnemonic.
+It could bear any content its authors chose.
+Which led to a phenomenon Flaclysia describes using a biological concept.
+Stigmurgic coordination.
+Stigmurgy.
+Yes.
+I know this term originates from entomology, right?
+The study of insects?
+Yes. The term was coined by the French biologist Pierre-Paul Grasset in 1959 to describe the building behavior of termites.
+Let's ride this metaphor because it perfectly explains the mechanics of what happened on Memrise.
+How did termites build those massive, complex mounds without a foreman shouting orders?
+They do it without any direct communication.
+A termite doesn't walk up to another termite and say, hey, put a wall here.
+Right.
+Instead, they coordinate entirely by modifying their shared physical environment.
+A single termite will deposit a tiny pellet of mud that is infused with a specific pheromone.
+Okay, so the environment is altered.
+Exactly.
+That modified environment, the pheromone-laced mud pellet, acts as a stimulus.
+When the next termite wanders by and senses that specific pheromone gradient, it triggers an instinct to place their mud pellet on top of the first one, adding their own pheromones.
+So the coordination happens through the object.
+The environment itself is the instruction manual.
+Precisely.
+And this maps perfectly to the digital flashcard.
+When a user on Memrise studies a difficult Russian verb and they leave a helpful joke in the mem field, they are the termite leaving the pheromone pellet.
+I love this.
+The next learner comes along.
+They are struggling with the exact same verb.
+They see the joke.
+It helps them.
+So they click the upvote button.
+And that upvote makes the mem more visually prominent for the next learner.
+Maybe they leave a reply explaining the etymology of the verb.
+You are coordinating your learning, building shared knowledge, and creating a distinct social space without ever sending a direct message to another user.
+You are communicating entirely through the structural modification of the shared object.
+And this creates a vastly different user experience than a feed.
+On Twitter or TikTok, a ranking algorithm pushes a piece of content at you based on engagement metrics.
+You look at it.
+You scroll past it.
+And it is essentially gone forever into the abyss.
+You will likely never see it again.
+But on Memrise, because of the spaced repetition algorithm, you return to the exact same flashcard repeatedly over weeks and months.
+Here's where it gets really interesting.
+It is like leaving notes in the margins of a library book, but it is a library book that thousands of people are reading simultaneously.
+Yes.
+You are entering a room where generations of learners have struggled with the exact same concept, and they have left graffiti on the walls to help you out.
+The community builds up through sheer recurrence and shared struggle.
+However, Memrise also implemented a feature that perfectly illustrates a critical, often fatal design flaw in many modern platforms.
+They forcefully coupled the social graph with the comparison graph.
+Okay, let's untangle those two terms.
+What is a social graph?
+A social graph represents who you are genuinely interested in, who you want to follow, whose progress you want to monitor, whose mnemonic jokes you enjoy.
+It is a map of your social attention.
+And the comparison graph.
+The comparison graph determines who you are competing against on a leaderboard.
+It maps your relative standing.
+Now, on Memrise, these were not two separate systems.
+Uh-oh.
+To compete with someone on the weekly points leaderboard, you had to click Follow on their profile.
+Okay, so to see how I rank against the top German learners in the world, I follow them.
+That makes sense on the surface, but what was the catch?
+The catch was that Memrise hard-capped the number of people you could follow at 500.
+Oh, wow.
+So if I hit my 500 limit, and a new prodigy shows up on the platform, and I want to see how I stack up against them, wait, I have to unfollow someone else to make room.
+Yes, and this completely contaminates the social meaning of the follow mechanism.
+Unfollowing someone is no longer just a social gesture of disinterest or a way to clean up your feed.
+It becomes a strategic, gamified move to revise your competitive reference class.
+Right.
+Let me make sure I've got this.
+If I follow a really prolific learner who studies 10 hours a day, their massive point total raises the average standard against which my own progress is ranked on my personal leaderboard.
+Exactly.
+You are effectively penalizing your own competitive standing by broadening your social attention.
+It forces the user to choose between having friends and having an accurate, motivating leaderboard.
+You have to curate your friends list as a weapon.
+It is a sociological governance decision built right into the code, and it fundamentally alters human behavior on the platform.
+Which brings us to the most precarious reality of relying on centralized digital spaces.
+What happens when the company that owns the server decides they don't like the graffiti in the library books anymore?
+This is where the story of Memrise takes a dark turn for its community.
+Between 2021 and 2024, the company ruled out a series of massive structural changes.
+Right.
+They systematically removed the community MEMS.
+They shut down the community forum where people discussed the courses.
+And eventually, they moved all the user-created community courses off the main app entirely, separating them into a hard-to-find web-only interface.
+The paper formally terms this event affordance foreclosure.
+It is the unilateral elimination of a platform capability that supports user activity beyond the operator's preferred official use.
+Now, to be objective, Memrise wasn't doing this just to be evil.
+They had standard, rational business reasons for this pivot.
+Absolutely.
+The paper outlines several common rationales for affordance foreclosure.
+Product specialization is one.
+The company may have wanted to pivot strictly to selling premium, officially curated language courses rather than hosting amateur content.
+Moderation costs are a massive factor, too.
+Anytime you allow user-generated free text, you have to actively police it for spam, abuse, and illegal content, which requires expensive human labor.
+And finally, commercial positioning.
+It is often much easier to sell a subscription to a sleek, controlled, predictable product than to a chaotic, user-generated bazaar.
+We aren't debating the business logic here.
+But the social impact was devastating.
+It annihilated the shared space.
+The deep annotations, the inside jokes, the etymological debates were users that spent years building localized reputations.
+All of it was suddenly rendered inaccessible.
+To understand why this feels so profoundly unjust to the users, Flyxion breaks down the governance of shared computational objects into a highly useful four-part tuple.
+Auth, rev, appeal, and exit.
+Right.
+Okay.
+Break out the ELF Y5 for this framework because it is brilliant.
+Let's start with auth.
+Auth stands for authorial authority.
+It answers the question, who is permitted to contribute?
+Who is allowed to write a mem or build a flashcard or upload an image?
+In the golden age of Memrise, the users head off.
+Anyone could contribute.
+Correct.
+The second component is REV, which stands for revisionary authority.
+This is meta authority who has the power to change the fundamental rules of the system itself,
+who can alter the algorithm or remove a feature or delete a database.
+That is exclusively the platform operator.
+The company holds 100% of the REV tut.
+The third is appeal.
+If the operator uses their REV tut to make a change you hate, what is the formal mechanism for contesting that decision?
+For almost all social media, appeal basically means shouting into the void on Twitter
+or starting a change.org petition that the company will completely ignore.
+There is no binding legal mechanism for users to overrule the operator.
+Exactly.
+And the final component is exit.
+When you finally decide to leave or when you are forced out, what are you technically and legally allowed to take with you?
+Can you export your data, your social graph, your reputation in a format that works elsewhere?
+So what does this all mean?
+What this tuple reveals is the massive chasm between three distinct concepts.
+Authorship, stewardship, and ownership.
+Precisely.
+The users provided the authorship.
+They wrote the content.
+The community provided the stewardship.
+They upvoted, moderated, and maintained the cultural norms of the space.
+But the company retained absolute ownership.
+The unilateral, unchallengeable power to delete the entire ecosystem overnight.
+So, if I spend five years of my life meticulously building a specialized course on organic chemistry,
+and I build a massive reputation helping thousands of students in the MEMS,
+I am ultimately just a digital tenant.
+I don't own my house.
+I am waiting to be evicted because the landlord decided they wanted to bulldoze my apartment building
+and put up a premium parking lot.
+That is the harsh reality of centralized platforms.
+The users have localized auth, but the operator holds absolute rev.
+There is virtually no appeal, and the exit is usually limited to downloading a useless,
+unformatted CSV file of your data.
+But it doesn't have to be this way.
+And this is where the paper draws an incredible contrast.
+Let's go back to Plato for a second.
+The commercial life of the Plato system eventually wound down.
+Controlled Data Corporation stopped supporting it.
+The physical mainframes were decommissioned.
+The landlord tore down the building.
+Right.
+But the community survived.
+In 2004, a group of dedicated former users resurrected the Plato system online
+using an open-source emulator, a project they called CyberOne.
+And what happened?
+Within six months, hundreds of former users who hadn't spoken in years
+found the emulator, signed up, and seamlessly recreated their community.
+They picked up right where they left off.
+Why did the Plato community survive the destruction of their original hardware
+while the Memrise community courses fractured and died when features were changed?
+Why?
+Because the CyberOne revival preserved the mechanism, the objects, and the access together.
+It was an exact replication of the shared environment.
+In contrast, when Memrise faced immense user backlash
+and eventually brought back a heavily revised version of the Memrise feature in 2026,
+the original community did not return.
+They just moved on.
+You cannot just restore a graphical button on a user interface
+and expect a dispersed, disillusioned community to instantly materialize.
+A software feature is just a technical mechanism,
+but a social function is a living relationship between that mechanism and a trusting community.
+Once the trust is broken and the shared history is severed, the sociality dies.
+Which naturally leads to the biggest question.
+If centralized platforms are essentially digital dictatorships,
+where we can be evicted at any time, what are the alternatives?
+How do the most resilient, enduring platforms on the Internet actually function under the hood?
+To answer that, Flyxion conducts a comparative architectural analysis of three massive systems.
+Wikipedia, GitHub, and Multiplayer Digital Worlds.
+Okay.
+These systems prove beyond a doubt that object-centered sociality is not only possible at scale,
+it is vastly more robust than the feed model.
+Let's start with Wikipedia.
+It is the purest, most successful, large-scale example of this theory in existence.
+On Wikipedia, the shared object is the encyclopedic article.
+There is no feed of your friend's recent edits.
+And crucially, Wikipedia proves that you do not need rich, prominent personal profiles
+to organize a massive, complex social project.
+Many of the most prolific and respected editors on Wikipedia operate under pseudonyms.
+Many don't even have accounts.
+They edit solely under anonymous IP addresses.
+If Wikipedia is the ultimate example of healthy sociality, why is it notoriously hostile to new users?
+Doesn't the talk page just become a different kind of toxic feed for power users who want to guard their territory?
+That is a very fair critique.
+Wikipedia is not a utopia.
+It has intense internal politics.
+But the nature of the conflict is different.
+On a Twitter feed, conflict is performative.
+It is designed to generate engagement from an audience.
+Right.
+On a Wikipedia talk page, the conflict is teleological.
+It is aimed at resolving the state of the shared object.
+The editors have standing, not because they have a million followers,
+but because their history of localized edits is a durable, verifiable record of stewardship.
+The pristine, public article you read is merely the visible surface.
+Beneath it lies a deep, turbulent history of conflict, cooperation, vandalism, and reversion.
+Then there is GitHub.
+For anyone not in software engineering, GitHub is basically social media for developers.
+But instead of posting photos of your lunch to get likes, your feed is the actual blood, sweat, and tears of the technical work you are doing together.
+On GitHub, the repositories, the folders holding the code, are the shared boundary objects.
+The social mechanisms are things like pull requests, commits, and issue trackers.
+Break down a pull request.
+How is submitting code a social act?
+When a developer writes a new feature and submits a pull request, they are proposing a change to the shared object.
+But it is not just a blind file transfer.
+It is a highly formalized communicative act addressed to the project maintainers.
+Right.
+It says, I have observed a need, I have done this work, and I request that you integrate my reality into the shared reality.
+The platform organizes reputation, mentorship, and debate entirely around the shared work, rather than around personal broadcasting.
+And what about YouTube?
+Where does video fit into this framework?
+YouTube is a fascinating hybrid.
+The video itself functions as a publication, a static object broadcast to many.
+But the comment thread beneath the video is a form of annotation, structurally similar to the memes on Memrise.
+So the comments are socially attached to the primary object.
+Furthermore, reaction videos or musical remixes are a form of collaborative production.
+YouTube certainly employs aggressive, feed-like recommendation algorithms.
+But the core social interaction is still deeply anchored to persistent objects.
+And then my personal favorite category.
+Multiplayer games.
+Minecraft, EVE Online, Roblox.
+This is where Phloxion's theory gets visceral.
+This is where we observe sociality through co-presence and consequential action.
+If you and I are logged into the same persistent Minecraft server, and I spend five hours building a massive stone wall across a valley, I have fundamentally altered your reality.
+The next time I log in, I literally have to walk around your wall, or spend 20 minutes mining a tunnel through it.
+I never sent you a chat message.
+I didn't tag you in a post.
+We might not even speak the same language.
+But my physical action in the digital space was deeply, causally consequential to your experience.
+Exactly.
+The action is the communication.
+Phloxion categorizes these diverse mechanisms into four distinct buckets.
+Publication, like a YouTube video.
+Annotation, like a comment or a mem.
+Collaboration, like a GitHub pull request.
+And co-presence, like building a wall in Minecraft.
+And none of those four mechanisms resemble scrolling a ranked feed of hot takes.
+No.
+And underlying all of these robust platforms is a critical computer science concept that Phloxion highlights called event sourcing.
+Yes, event sourcing and the resulting history dependence.
+This is vital to understand.
+In a traditional database, if you change your address, the system deletes your old address and overwrites it with the new one.
+The past is just erased.
+But in an event sourced architecture, it works differently.
+Think of it like a bank account ledger.
+Your bank doesn't just store a single number representing your balance.
+They store an immutable list of every single transaction you have ever made.
+Your current balance of $500 is just a temporary projection, calculated by adding and subtracting that entire history of events.
+Precisely.
+GitHub operates exactly like this, through the Git version control system.
+Wikipedia operates like this through its revision history.
+The true state of the system is the entire sequence of events that have ever happened.
+The history isn't just a backup file kept in case of a server crash.
+The history is the actual substance of the community.
+It is the proof of their shared labor.
+Which is why losing that history, or even losing the symbolic identity attached to that history, is so devastating to a community.
+The paper briefly touches on Twitter's rebranding to X in 2023 as an example of this.
+Right.
+Elon Musk buys the platform, kills the iconic blue bird, and changes the name to a single letter.
+Flyxion cites an earlier 2023 essay titled,
+What the Birds are Tweeting, which argues that over 15 years, Twitter had built a highly coherent metaphorical vocabulary.
+You had the bird logo, you sent tweets, you read your timeline.
+If a post was popular, it took flight.
+It was a whole conceptual universe.
+That vocabulary wasn't just a corporate branding label.
+It was deeply intertwined with how the platform shaped its social practices.
+The sudden unilateral erasure of that conceptual metaphor by the owner is a form of affordance foreclosure.
+It is the loss of a shared symbolic identity, which instantly degrades the community's sense of belonging to that space.
+Exactly.
+Okay, so we have firmly established how human-made shared objects build community.
+We see it in the code of GitHub, the talk pages of wikis, the walls of Minecraft.
+But we have to address the massive generative elephant in the room, artificial intelligence.
+Right.
+What happens to our shared digital reality when generative AI can instantly create infinite, perfectly personalized objects?
+This is where the paper becomes incredibly prescient about our immediate future.
+Flyxion examines systems like Google's Notebook LM,
+which can take a dense textbook or a stack of unstructured research papers and instantly transform them into a massive deck of learning cards or a custom quiz or even a generated audio discussion.
+On the surface, if I am a student or teacher, that sounds like a miracle.
+It completely eliminates the grueling labor of creating those shared boundary objects.
+We don't need a hundred volunteers to spend a month meticulously building a memorized course anymore.
+The AI generates it flawlessly in five seconds.
+It does.
+And the utilitarian value of that is undeniable.
+But it introduces a profound structural threat to sociality.
+The phenomenon of personalized generation.
+Personalized generation.
+If a centralized AI analyzes my profile and generates a completely custom flashcard deck tailored precisely to my learning style,
+and then it generates a completely different, uniquely tailored deck for you,
+the shared boundary object ceases to exist.
+But wait, let me push back hard on this.
+Isn't hyper-personalization the absolute holy grail of educational technology?
+Every teacher wants to give individualized instruction.
+Why is having my own perfectly tailored textbook suddenly a dystopian threat to society?
+Because if we do not have a shared object, we cannot have a shared reality.
+To explain this mechanically, Flyxion breaks down human interaction with media into three layers of shared reference.
+Walk us through the three layers.
+Layer one is the authoritative object, the actual source text, or the physical specimen.
+Layer two is the presentation, how that object is formatted or displayed to the user.
+Layer three is the interpretation, what the user thinks the object means.
+Okay, let's use a concrete example.
+We are both studying Shakespeare.
+We both buy the exact same Penguin Classics edition of Hamlet.
+That physical text is layer one, the authoritative object.
+Correct.
+Now, imagine you are reading the paperback version, but I am legally blind,
+so I am listening to an unabridged audiobook version.
+We are experiencing different presentations.
+That is layer two.
+And layer three is interpretation.
+We get into a heated argument because I think Hamlet is feigning madness as a tactical strategy.
+And you think he is genuinely suffering a psychotic break.
+Exactly.
+Disagreeing on interpretation at layer three is the normal, healthy condition of human discourse.
+It is why we have discussions.
+We argue.
+We cite evidence from the text.
+We try to persuade each other.
+But what does generative AI do to this stack?
+Personalized generation violently attacks layer one, but it tries to hide the damage.
+Imagine an AI tutor is assigned to help us study.
+The AI knows that student A struggles with complex 16th century vocabulary,
+so it silently rewrites Hamlet into the modern vernacular.
+The AI knows student B has a short attention span,
+so it silently summarizes entire acts into bullet points.
+But the system interface still just calls it Hamlet.
+Yes.
+If the system silently rewrites the text to pander to our individual profiles,
+but presents it as if we are looking at the same authoritative object,
+we lose the fundamental ability to have a productive disagreement.
+Oh, wow.
+If we try to debate Hamlet's motivations, we will literally be talking past each other.
+The bridge between our minds, the shared object,
+has been quietly burned by the algorithm to optimize for our individual comfort.
+We are arguing about entirely different things, but we don't realize it.
+We are trapped in our own private generated bubbles.
+That is terrifying.
+It means if we apply this to history or civics or news,
+you could have two people violently arguing over a political concept,
+completely unaware that the AI dynamically rewrote their source materials
+to cater to their pre-existing political biases.
+It erases the common ground required for communication to even occur.
+This is why the paper forcefully argues that a learning network can only act as a distributed epistemic institution,
+which is a fancy way of saying a community that collectively evaluates what is true and what is false,
+if the AI is forced to maintain strict interpretive restraint.
+Interpretive restraint.
+How does a developer actually build that into code?
+What does it mean mechanically?
+It means the system architecture must rigidly preserve the difference between the observed signal,
+the generated representation, and the attributed meaning.
+If an AI hallucinates a connection between two concepts,
+the user interface must loudly and explicitly label it as a generated interpretation,
+not as a factual extraction derived from the source text.
+The system must maintain a transparent, verifiable record of provenance.
+It must say, I generated this specific analogy because of prompt X.
+Exactly.
+If the system hides its generative hand,
+hyper-personalization destroys the intersubjectivity of the community.
+Okay, so we have completely decoupled social media from the feed.
+We have decoupled it from the necessity of human authorship navigating the AI minefield.
+For this final section, Flyxion does something truly mind-bending.
+Let's decouple social media from the screen entirely.
+What's fascinating here is the philosophical and technical exploration
+of the historical contingency of visual interfaces.
+We all assume that to use a computer to participate in digital society,
+you must have a screen.
+You must look at a glowing rectangle.
+Right.
+But Flyxion points out that this is just a historical accident based on the limitations
+of early hardware choices and cathode ray tubes.
+The paper references a totally separate 2023 proposal written by Flyxion for an auditory
+operating system, an operating system that you only hear.
+It is based on the ancient mnemonic technique known as the memory palace or the method of loci.
+In this proposed purely auditory environment, data entities and system states do not have
+visual icons.
+They have characteristic acoustic identities.
+So instead of looking for a little yellow folder icon on a desktop, you might hear a specific
+sequence of bird calls to represent a directory.
+Exactly.
+The spatial relationships of the data are mapped to a 3D audio soundscape.
+Distance is conveyed by loudness.
+A file you use often sounds close.
+An archived file sounds faint and far away.
+Urgency or error states are conveyed by pitch and rhythm.
+And the presence of other users in the system is conveyed by environmental sounds, perhaps
+the rustling of leaves or the hum of a distant train.
+Yes.
+Okay.
+This sounds like an incredible accessibility tool for the visually impaired.
+But how does this apply to redefining social media?
+It applies through a concept Flyxion calls the SpherePOP framework.
+This framework forces us to separate observation, interpretation, representation, and communication.
+The core insight is that the social structure of a digital environment is not identical to
+its sensory presentation.
+The actual social structure is made of the data objects, the user actions, and the event-sourced
+histories.
+The visual screen is just one arbitrary way to represent that underlying structure to
+a human brain.
+Sound is another perfectly valid way.
+So, it is like we have been confusing the window with the actual house.
+The screen on my iPhone is just one specific window peering into the database.
+The actual social media, the community, is the house itself.
+And you can walk through the front door of that house using just your ears.
+That is the perfect analogy.
+Imagine navigating an auditory Wikipedia using the system.
+You walk into the directory for climate change.
+Because that specific article is a highly contested, frequently edited, heavily trafficked
+shared object.
+It has a massive amount of event history.
+So, acoustically, what would that be like?
+You might hear a bustling, chaotic crowd of signals.
+Heavy construction sounds representing edits.
+It's urgent high pitches representing reverts.
+A dense hum of presence representing active readers.
+You can physically hear the social tension and collaboration.
+But if you navigate away to an obscure page about a minor 14th century poet that hasn't
+been edited in 10 years.
+The soundscape changes entirely.
+It is just a quiet echo.
+A faint breeze.
+The depth of the history and the intensity of the social activity are communicated entirely
+through the auditory environment.
+Without you ever reading a single word of text on the screen.
+That is incredible.
+The event history is shared universally.
+But the presentation is entirely flexible.
+It means a person using a standard visual screen, a person using a text-based screen reader,
+and a person immersed in this purely 3D auditory interface can all inhabit the exact same social
+world.
+They can interact with the exact same shared objects and collaborate perfectly as long as
+that underlying event history is preserved and translated accurately.
+It fundamentally forces us to expand what it means to be online.
+The visual medium is just one option for representation.
+True sociality is substrate independent.
+It lives in the shared history, not in the pixels.
+Exactly right.
+Okay, let's tie all these incredible threads together.
+What Flyxion's paper shows us definitively is that social media is not a ranked feed.
+It is not a carefully curated personal profile.
+It is not a like button or a retweet or a follower count.
+Social media is an emergent property of shared worlds.
+It exists in the margins of digital flashcards where strangers help each other memorize verbs.
+It exists in the complex commit logs of open source software repositories on GitHub.
+It exists in the blocky player-built architecture of digital games, the heated talk pages of wikis,
+and potentially in the spatial auditory echoes of future operating systems.
+So, the next time you unlock your phone and open an app, I want you to ask yourself a critical question.
+Am I just consuming a ranked feed, or am I actually modifying a shared object?
+Are you just a passive audience member sitting in a digital theater, or are you an active builder in a shared world?
+It is the stark difference between a system mathematically designed to extract your attention for advertising revenue,
+and a system structurally designed to host your collaboration and preserve your labor.
+And that leads me to one final, deeply provocative thought I want to leave you with today.
+If true social connection relies on these shared objects and their deeply retained histories,
+what happens to our digital ghosts when the servers finally shut down?
+It is a profound sociological question.
+Think about it.
+A hundred years from now, will future digital archaeologists dig up our algorithms and our feeds?
+No.
+The feed changes every millisecond.
+It leaves no durable trace.
+It is ephemeral by its very design.
+Right.
+Or, will the only proof that we even existed on this network be the digital boundary objects we collectively built?
+The wikis we argued over.
+The code we carefully annotated.
+The Minecraft worlds we modified.
+The artifacts of our shared histories will be the only things that endure.
+The feed erases you the moment you scroll past.
+The shared object immortalizes you in its history.
+Remember the muddy waters of the medical diagnosis we started with.
+It is time to throw out the broken x-ray machine.
+Stop looking for your community in a feed.
+Start looking for the objects.
+Start looking for the architecture.
+Thank you so much for joining us on this deep dive.
+We'll see you next time.

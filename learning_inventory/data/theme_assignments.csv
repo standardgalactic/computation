@@ -1,0 +1,699 @@
+﻿entry_id,source,title,primary_discipline,theme,matched_term
+E001,University of New Brunswick transcript,Effective Oral Communications,Languages and Linguistics,Language and Meaning,communications
+E002,University of New Brunswick transcript,Introduction to Calculus I,Mathematics and Statistics,Formal Reasoning,calculus
+E003,University of New Brunswick transcript,Introduction to Logic,"Philosophy, Logic and Critical Thinking",Formal Reasoning,logic
+E004,University of New Brunswick transcript,Elements of Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E005,University of New Brunswick transcript,Introductory Spanish I,Languages and Linguistics,Language and Meaning,spanish
+E006,University of New Brunswick transcript,Introduction to Computers and Systems,Computer Science and Programming,Computation,computer
+E007,University of New Brunswick transcript,Introduction to Calculus I,Mathematics and Statistics,Formal Reasoning,calculus
+E008,University of New Brunswick transcript,Elements of Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E009,University of New Brunswick transcript,Mexican Society,Social Sciences and Economics,History and Society,mexican
+E010,University of New Brunswick transcript,Introductory Spanish II,Languages and Linguistics,Language and Meaning,spanish
+E011,University of New Brunswick transcript,Introduction to Modern Literature,"Arts, Music and Literature",Language and Meaning,literature
+E012,University of New Brunswick transcript,Latin American Experience,History,Language and Meaning,latin
+E012,University of New Brunswick transcript,Latin American Experience,History,History and Society,latin american
+E013,University of New Brunswick transcript,Introduction to Linguistics I,Languages and Linguistics,Language and Meaning,linguistic
+E014,University of New Brunswick transcript,Introduction to Psychology I,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E015,University of New Brunswick transcript,Introduction to Sociology,Social Sciences and Economics,History and Society,sociolog
+E016,University of New Brunswick transcript,Intermediate Spanish I,Languages and Linguistics,Language and Meaning,spanish
+E017,University of New Brunswick transcript,Greek Myth and Religion,History,History and Society,greek myth
+E018,University of New Brunswick transcript,Introduction to Computer Programming in Java,Computer Science and Programming,Computation,computer
+E019,University of New Brunswick transcript,Introduction to Modern Literature,"Arts, Music and Literature",Language and Meaning,literature
+E020,University of New Brunswick transcript,Introduction to Linguistics II,Languages and Linguistics,Language and Meaning,linguistic
+E021,University of New Brunswick transcript,Introduction to Psychology II,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E022,University of New Brunswick transcript,Language Change and Genetic Classification,Languages and Linguistics,Evolution and Development,language change
+E022,University of New Brunswick transcript,Language Change and Genetic Classification,Languages and Linguistics,Language and Meaning,language
+E023,University of New Brunswick transcript,Introduction to Ancient Greek I,Languages and Linguistics,History and Society,ancient
+E024,University of New Brunswick transcript,Introduction to Statistical Analysis in Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E024,University of New Brunswick transcript,Introduction to Statistical Analysis in Psychology,Psychology and Cognitive Science,Formal Reasoning,statistic
+E025,University of New Brunswick transcript,Health Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E026,University of New Brunswick transcript,Learning,Psychology and Cognitive Science,Mind and Cognition,learning
+E026,University of New Brunswick transcript,Learning,Psychology and Cognitive Science,Learning and Education,learning
+E027,University of New Brunswick transcript,Language Variations I / Basic,Languages and Linguistics,Language and Meaning,language
+E028,University of New Brunswick transcript,Metaphysics / Epistemology,"Philosophy, Logic and Critical Thinking",Knowledge and Method,metaphysics
+E029,University of New Brunswick transcript,Child Development,Psychology and Cognitive Science,Evolution and Development,child development
+E030,University of New Brunswick transcript,Cognitive Processes,Psychology and Cognitive Science,Mind and Cognition,cognitive
+E031,University of New Brunswick transcript,History of Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E031,University of New Brunswick transcript,History of Psychology,Psychology and Cognitive Science,History and Society,history
+E032,University of New Brunswick transcript,Intermediate Spanish II,Languages and Linguistics,Language and Meaning,spanish
+E033,University of New Brunswick transcript,Introduction to Second Language Education,Education and Pedagogy,Language and Meaning,language
+E033,University of New Brunswick transcript,Introduction to Second Language Education,Education and Pedagogy,Learning and Education,education
+E034,University of New Brunswick transcript,Introduction to Latin I,Languages and Linguistics,Language and Meaning,latin
+E035,University of New Brunswick transcript,Introduction to Philosophy,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E036,University of New Brunswick transcript,Contemporary Philosophy,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E037,University of New Brunswick transcript,Fundamentals of Social Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E037,University of New Brunswick transcript,Fundamentals of Social Psychology,Psychology and Cognitive Science,History and Society,social psychology
+E038,University of New Brunswick transcript,Perception,Psychology and Cognitive Science,Mind and Cognition,perception
+E039,University of New Brunswick transcript,Physiological Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E039,University of New Brunswick transcript,Physiological Psychology,Psychology and Cognitive Science,Formal Reasoning,logic
+E040,University of New Brunswick transcript,Advanced Studies in ESL Education,Education and Pedagogy,Learning and Education,esl 
+E041,University of New Brunswick transcript,Field Experience in TESL,Education and Pedagogy,Learning and Education,tesl
+E042,University of New Brunswick transcript,Introduction to Latin II,Languages and Linguistics,Language and Meaning,latin
+E043,University of New Brunswick transcript,Introduction to Philosophy,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E044,University of New Brunswick transcript,Contemporary Philosophy,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E045,University of New Brunswick transcript,Ancient History / Greek and Roman People,History,History and Society,ancient
+E046,University of New Brunswick transcript,Intermediate Latin I,Languages and Linguistics,Language and Meaning,latin
+E047,University of New Brunswick transcript,Phonetics and Phonology,Languages and Linguistics,Language and Meaning,phonetics
+E048,University of New Brunswick transcript,Symbolic Logic I / Propositional Calculus,"Philosophy, Logic and Critical Thinking",Formal Reasoning,logic
+E049,University of New Brunswick transcript,Theories of Personality,Psychology and Cognitive Science,Mind and Cognition,personality
+E050,University of New Brunswick transcript,Fundamentals of Spanish Language and Culture,Languages and Linguistics,Language and Meaning,spanish
+E051,University of New Brunswick transcript,Intermediate Latin II,Languages and Linguistics,Language and Meaning,latin
+E052,University of New Brunswick transcript,Philosophies of Mind,"Philosophy, Logic and Critical Thinking",Mind and Cognition,philosophies of mind
+E052,University of New Brunswick transcript,Philosophies of Mind,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E053,University of New Brunswick transcript,Early Christian Philosophy,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E054,University of New Brunswick transcript,Research Methods in Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E054,University of New Brunswick transcript,Research Methods in Psychology,Psychology and Cognitive Science,Formal Reasoning,research methods
+E054,University of New Brunswick transcript,Research Methods in Psychology,Psychology and Cognitive Science,Knowledge and Method,research methods
+E055,University of New Brunswick transcript,Advanced Social Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E055,University of New Brunswick transcript,Advanced Social Psychology,Psychology and Cognitive Science,History and Society,social psychology
+E056,University of New Brunswick transcript,Changing Behaviour,Psychology and Cognitive Science,Learning and Education,changing behaviour
+E057,edX dashboard,Introduction to Kubernetes,Computer Science and Programming,Computation,kubernetes
+E058,edX dashboard,A Hands-on Introduction to Engineering Simulations,Engineering and Applied Technology,Modeling and Simulation,simulation
+E059,edX dashboard,Mathematical Optimization for Engineers,Mathematics and Statistics,Constraint and Optimization,optimization
+E059,edX dashboard,Mathematical Optimization for Engineers,Mathematics and Statistics,Formal Reasoning,math
+E060,edX dashboard,Natural Language Processing: Foundations,"AI, Machine Learning and Data Science",Computation,natural language
+E060,edX dashboard,Natural Language Processing: Foundations,"AI, Machine Learning and Data Science",Language and Meaning,language
+E061,edX dashboard,Arabic for non-Arabic speakers,Languages and Linguistics,Language and Meaning,arabic
+E062,edX dashboard,Google AI for Anyone,"AI, Machine Learning and Data Science",Computation,ai
+E063,edX dashboard,Introduction to ChatGPT,"AI, Machine Learning and Data Science",Computation,chatgpt
+E064,edX dashboard,Introduction to Java Programming: Starting to code in Java,Computer Science and Programming,Computation,java
+E065,edX dashboard,Introduction to Cloud Infrastructure Technologies,Computer Science and Programming,Computation,cloud
+E066,edX dashboard,Introduction to Java Programming – Part 1,Computer Science and Programming,Computation,java
+E067,edX dashboard,Statistical Thinking for Data Science and Analytics,Mathematics and Statistics,Information,data science
+E067,edX dashboard,Statistical Thinking for Data Science and Analytics,Mathematics and Statistics,Formal Reasoning,statistic
+E068,edX dashboard,LAFF-On Programming for High Performance,Computer Science and Programming,Computation,programming
+E069,edX dashboard,Compilers,Computer Science and Programming,Computation,compilers
+E070,edX dashboard,Deep Learning through Transformative Pedagogy,Education and Pedagogy,Computation,deep learning
+E070,edX dashboard,Deep Learning through Transformative Pedagogy,Education and Pedagogy,Learning and Education,pedagog
+E071,edX dashboard,Accessible Gamification,Education and Pedagogy,Learning and Education,gamification
+E072,edX dashboard,"Introduction to Object-Oriented Programming with Java III: Exceptions, Data Structures, Recursion, and GUIs",Computer Science and Programming,Computation,programming
+E073,edX dashboard,Introduction to Object-Oriented Programming with Java II: Object-Oriented Programming and Algorithms,Computer Science and Programming,Computation,programming
+E074,edX dashboard,Introduction to Object-Oriented Programming with Java I: Foundations and Syntax Basics,Computer Science and Programming,Computation,programming
+E075,edX dashboard,Text Analytics 2: Visualizing Natural Language Processing,"AI, Machine Learning and Data Science",Information,analytics
+E075,edX dashboard,Text Analytics 2: Visualizing Natural Language Processing,"AI, Machine Learning and Data Science",Computation,natural language
+E075,edX dashboard,Text Analytics 2: Visualizing Natural Language Processing,"AI, Machine Learning and Data Science",Language and Meaning,text analytics
+E076,edX dashboard,Text Analytics 1: Introduction to Natural Language Processing,"AI, Machine Learning and Data Science",Information,analytics
+E076,edX dashboard,Text Analytics 1: Introduction to Natural Language Processing,"AI, Machine Learning and Data Science",Computation,natural language
+E076,edX dashboard,Text Analytics 1: Introduction to Natural Language Processing,"AI, Machine Learning and Data Science",Language and Meaning,text analytics
+E077,edX dashboard,Introduction to DevOps and Site Reliability Engineering,Computer Science and Programming,Computation,devops
+E078,edX dashboard,Introduction to WebAssembly,Computer Science and Programming,Computation,webassembly
+E079,edX dashboard,Data Science and Agile Systems Engineering,"AI, Machine Learning and Data Science",Information,data science
+E080,edX dashboard,Pre-University Calculus,Mathematics and Statistics,Formal Reasoning,calculus
+E081,edX dashboard,Observation Theory: Estimating the Unknown,Mathematics and Statistics,Constraint and Optimization,observation theory
+E081,edX dashboard,Observation Theory: Estimating the Unknown,Mathematics and Statistics,Formal Reasoning,observation theory
+E082,edX dashboard,DevOps Basics for Everyone,Computer Science and Programming,Computation,devops
+E083,edX dashboard,Linux Tools for Software Development,Computer Science and Programming,Computation,linux
+E084,edX dashboard,Building Microservice Platforms with TARS,Computer Science and Programming,Computation,microservice
+E085,edX dashboard,"Unix Tools: Data, Software and Production Engineering",Computer Science and Programming,Computation,unix
+E086,edX dashboard,Shell Programming - A necessity for all Programmers,Computer Science and Programming,Computation,shell
+E087,edX dashboard,Introduction to Kubernetes,Computer Science and Programming,Computation,kubernetes
+E088,edX dashboard,Introduction to Node.js,Computer Science and Programming,Computation,node.js
+E089,edX dashboard,How to Code: Complex Data,Computer Science and Programming,Computation,how to code
+E090,edX dashboard,Introduction to Machine Learning,"AI, Machine Learning and Data Science",Computation,machine learning
+E090,edX dashboard,Introduction to Machine Learning,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E091,edX dashboard,Linux Commands & Shell Scripting Basics,Computer Science and Programming,Computation,linux
+E092,edX dashboard,Introduction to Object-Oriented Programming with Java I: Foundations and Syntax Basics,Computer Science and Programming,Computation,programming
+E093,edX dashboard,Fundamentals of C++,Computer Science and Programming,Computation,c++
+E094,edX dashboard,Linear Algebra - Foundations to Frontiers,Mathematics and Statistics,Formal Reasoning,algebra
+E095,edX dashboard,Introduction to Discrete Choice Models,Mathematics and Statistics,Constraint and Optimization,discrete choice
+E095,edX dashboard,Introduction to Discrete Choice Models,Mathematics and Statistics,Formal Reasoning,discrete
+E096,edX dashboard,How to Code: Simple Data,Computer Science and Programming,Computation,how to code
+E097,edX dashboard,LAFF-On Programming for High Performance,Computer Science and Programming,Computation,programming
+E098,edX dashboard,Building Cloud Native and Multicloud Applications,Computer Science and Programming,Computation,cloud
+E099,edX dashboard,Introduction to Jenkins,Computer Science and Programming,Computation,jenkins
+E100,edX dashboard,Introduction to Serverless on Kubernetes,Computer Science and Programming,Computation,kubernetes
+E101,edX dashboard,"Fundamentals of Containers, Kubernetes, and Red Hat OpenShift",Computer Science and Programming,Computation,kubernetes
+E102,edX dashboard,"Introduction to Containers, Kubernetes, and OpenShift",Computer Science and Programming,Computation,kubernetes
+E103,edX dashboard,Computer Vision and Image Processing Fundamentals,"AI, Machine Learning and Data Science",Information,computer vision
+E103,edX dashboard,Computer Vision and Image Processing Fundamentals,"AI, Machine Learning and Data Science",Computation,computer
+E104,edX dashboard,The Science of Everyday Thinking,Psychology and Cognitive Science,Mind and Cognition,everyday thinking
+E104,edX dashboard,The Science of Everyday Thinking,Psychology and Cognitive Science,Knowledge and Method,everyday thinking
+E105,edX dashboard,GIS Foundations,Earth and Environmental Science,Computation,gis foundations
+E106,edX dashboard,Introduction to Biomedical Imaging,Engineering and Applied Technology,Information,imaging
+E107,edX dashboard,Image Processing and Analysis for Life Scientists,Engineering and Applied Technology,Information,image processing
+E108,edX dashboard,Basics of Scientific Visualization in Mathematical Modeling of Systems,Mathematics and Statistics,Formal Reasoning,math
+E108,edX dashboard,Basics of Scientific Visualization in Mathematical Modeling of Systems,Mathematics and Statistics,Modeling and Simulation,scientific visualization
+E109,edX dashboard,C Programming: Modular Programming and Memory Management,Computer Science and Programming,Mind and Cognition,memory
+E109,edX dashboard,C Programming: Modular Programming and Memory Management,Computer Science and Programming,Computation,programming
+E110,edX dashboard,Advanced Data Structures,Computer Science and Programming,Computation,data structures
+E111,edX dashboard,Introduction to Data Structures,Computer Science and Programming,Computation,data structures
+E112,edX dashboard,Advanced Programming in C++,Computer Science and Programming,Computation,programming
+E113,edX dashboard,Sparse Representations in Image Processing: From Theory to Practice,Engineering and Applied Technology,Information,sparse representations
+E114,edX dashboard,Sparse Representations in Signal and Image Processing: Fundamentals,Engineering and Applied Technology,Information,sparse representations
+E115,edX dashboard,JavaScript Introduction,Computer Science and Programming,Computation,javascript
+E116,edX dashboard,Introduction to Linux,Computer Science and Programming,Computation,linux
+E117,edX dashboard,Databases: Modeling and Theory,Computer Science and Programming,Information,database
+E117,edX dashboard,Databases: Modeling and Theory,Computer Science and Programming,Modeling and Simulation,modeling
+E118,edX dashboard,Databases: Advanced Topics in SQL,Computer Science and Programming,Information,database
+E119,edX dashboard,Automata Theory,Computer Science and Programming,Computation,automata
+E119,edX dashboard,Automata Theory,Computer Science and Programming,Formal Reasoning,automata
+E120,edX dashboard,Thermodynamics and Phase Equilibria,Chemistry and Materials,Constraint and Optimization,thermodynamics
+E120,edX dashboard,Thermodynamics and Phase Equilibria,Chemistry and Materials,Complex Systems,dynamics
+E120,edX dashboard,Thermodynamics and Phase Equilibria,Chemistry and Materials,Physical Structure and Scale,thermodynamics
+E121,edX dashboard,"Language, Proof and Logic","Philosophy, Logic and Critical Thinking",Language and Meaning,language
+E121,edX dashboard,"Language, Proof and Logic","Philosophy, Logic and Critical Thinking",Formal Reasoning,proof
+E122,edX dashboard,Compilers,Computer Science and Programming,Computation,compilers
+E123,edX dashboard,Procedural Modelling,Computer Science and Programming,Modeling and Simulation,procedural
+E124,edX dashboard,Deep Learning Fundamentals with Keras,"AI, Machine Learning and Data Science",Computation,deep learning
+E124,edX dashboard,Deep Learning Fundamentals with Keras,"AI, Machine Learning and Data Science",Machine Learning,deep learning
+E125,edX dashboard,Mathematical Optimization for Engineers,Mathematics and Statistics,Constraint and Optimization,optimization
+E125,edX dashboard,Mathematical Optimization for Engineers,Mathematics and Statistics,Formal Reasoning,math
+E126,edX dashboard,From Atoms to Materials: Predictive Theory and Simulations,Chemistry and Materials,Physical Structure and Scale,atoms
+E126,edX dashboard,From Atoms to Materials: Predictive Theory and Simulations,Chemistry and Materials,Modeling and Simulation,simulation
+E127,edX dashboard,Big Data Analytics Using Spark,"AI, Machine Learning and Data Science",Information,big data
+E128,edX dashboard,Boltzmann Law: Physics to Computing,Physics and Astronomy,Information,boltzmann
+E128,edX dashboard,Boltzmann Law: Physics to Computing,Physics and Astronomy,Constraint and Optimization,boltzmann
+E128,edX dashboard,Boltzmann Law: Physics to Computing,Physics and Astronomy,Computation,computing
+E128,edX dashboard,Boltzmann Law: Physics to Computing,Physics and Astronomy,Physical Structure and Scale,physics
+E129,edX dashboard,Introduction to the Theoretical System of Socialism with Chinese Characteristics — 中国特色社会主义理论体系概论,Social Sciences and Economics,History and Society,socialism
+E130,edX dashboard,Mathematical and Computational Methods,Mathematics and Statistics,Computation,computational
+E130,edX dashboard,Mathematical and Computational Methods,Mathematics and Statistics,Formal Reasoning,math
+E132,edX dashboard,Data Science: R Basics,"AI, Machine Learning and Data Science",Information,data science
+E133,edX dashboard,Paradigms of Computer Programming – Abstraction and Concurrency,Computer Science and Programming,Computation,paradigms
+E134,edX dashboard,Paradigms of Computer Programming – Fundamentals,Computer Science and Programming,Computation,paradigms
+E135,edX dashboard,Procedural Modelling,Computer Science and Programming,Modeling and Simulation,procedural
+E136,edX dashboard,C Programming: Language Foundations,Computer Science and Programming,Computation,programming
+E136,edX dashboard,C Programming: Language Foundations,Computer Science and Programming,Language and Meaning,language
+E137,edX dashboard,JavaScript Introduction,Computer Science and Programming,Computation,javascript
+E138,edX dashboard,Introduction to Programming in C++,Computer Science and Programming,Computation,programming
+E139,edX dashboard,Análisis estadístico con Excel,Mathematics and Statistics,Computation,excel
+E139,edX dashboard,Análisis estadístico con Excel,Mathematics and Statistics,Formal Reasoning,estadístic
+E140,edX dashboard,Excel avanzado: importación y análisis de datos,"AI, Machine Learning and Data Science",Information,análisis de datos
+E140,edX dashboard,Excel avanzado: importación y análisis de datos,"AI, Machine Learning and Data Science",Computation,excel
+E141,edX dashboard,Foundations for Excellence in Teaching Online,Education and Pedagogy,Learning and Education,teaching
+E142,edX dashboard,Excel: Fundamentos y herramientas,Computer Science and Programming,Computation,excel
+E143,edX dashboard,Excel: gestión de datos,Computer Science and Programming,Computation,excel
+E144,edX dashboard,Introduction to Astrophysics,Physics and Astronomy,Physical Structure and Scale,astro
+E145,edX dashboard,Computational Neuroscience: Neuronal Dynamics of Cognition,"Biology, Neuroscience and Health",Mind and Cognition,neuro
+E145,edX dashboard,Computational Neuroscience: Neuronal Dynamics of Cognition,"Biology, Neuroscience and Health",Computation,computational
+E145,edX dashboard,Computational Neuroscience: Neuronal Dynamics of Cognition,"Biology, Neuroscience and Health",Complex Systems,dynamics
+E146,edX dashboard,Data Structures Fundamentals,Computer Science and Programming,Computation,data structures
+E147,edX dashboard,RiceX Linear Algebra Part 1,Mathematics and Statistics,Formal Reasoning,algebra
+E148,edX dashboard,Linear Algebra I: Linear Equations,Mathematics and Statistics,Formal Reasoning,algebra
+E149,edX dashboard,Relativity and Astrophysics,Physics and Astronomy,Physical Structure and Scale,relativity
+E150,edX dashboard,"Belong / Appartenir: Community, Race, and Space in the U.S. and France",Social Sciences and Economics,History and Society,belong
+E151,edX dashboard,On-Ramp to AP® French Language and Culture,Languages and Linguistics,Language and Meaning,french
+E152,edX dashboard,Italian Language and Culture: Beginner (2019-2020),Languages and Linguistics,Language and Meaning,italian
+E153,edX dashboard,Imparare il latino attraverso lo studio dei papiri,Languages and Linguistics,Language and Meaning,latin
+E154,edX dashboard,Urban Sewage Treatment,Engineering and Applied Technology,Constraint and Optimization,sewage
+E155,edX dashboard,AI Applications with Watson,"AI, Machine Learning and Data Science",Computation,ai
+E156,edX dashboard,AI Chatbots without programming,"AI, Machine Learning and Data Science",Computation,ai
+E157,edX dashboard,Aplicaciones de ciencias de datos en los negocios actuales,"AI, Machine Learning and Data Science",Information,ciencias de datos
+E158,edX dashboard,Análisis de datos empresariales con R,"AI, Machine Learning and Data Science",Information,análisis de datos
+E159,edX dashboard,Introducción a R,"AI, Machine Learning and Data Science",Computation,introducción a r
+E160,edX dashboard,Visualizing Data with Python,"AI, Machine Learning and Data Science",Computation,python
+E161,edX dashboard,¡Conceptos básicos de Python para Data Science!,"AI, Machine Learning and Data Science",Information,data science
+E161,edX dashboard,¡Conceptos básicos de Python para Data Science!,"AI, Machine Learning and Data Science",Computation,python
+E162,edX dashboard,Basics of Computing and Programming,Computer Science and Programming,Computation,computing
+E163,edX dashboard,Introduction to Predictive Analytics using Python,"AI, Machine Learning and Data Science",Information,predictive analytics
+E163,edX dashboard,Introduction to Predictive Analytics using Python,"AI, Machine Learning and Data Science",Computation,python
+E164,edX dashboard,Python Basics for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E164,edX dashboard,Python Basics for Data Science,"AI, Machine Learning and Data Science",Computation,python
+E165,edX dashboard,Introduction to Watson AI,"AI, Machine Learning and Data Science",Computation,watson
+E166,edX dashboard,AI for Everyone: Master the Basics,"AI, Machine Learning and Data Science",Computation,ai
+E167,edX dashboard,Drinking Water Treatment,Engineering and Applied Technology,Constraint and Optimization,water treatment
+E168,edX dashboard,Embedded Systems - Shape The World: Microcontroller Input/Output,Engineering and Applied Technology,Computation,embedded
+E169,edX dashboard,Machine Learning,"AI, Machine Learning and Data Science",Computation,machine learning
+E169,edX dashboard,Machine Learning,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E170,edX dashboard,Philosophy and Critical Thinking,"Philosophy, Logic and Critical Thinking",Mind and Cognition,critical thinking
+E170,edX dashboard,Philosophy and Critical Thinking,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E171,edX dashboard,Introduction to Water and Climate,Earth and Environmental Science,Complex Systems,climate
+E172,edX dashboard,"Unix Tools: Data, Software and Production Engineering",Computer Science and Programming,Computation,unix
+E173,edX dashboard,C Programming: Getting Started,Computer Science and Programming,Computation,programming
+E174,edX dashboard,Artificial Intelligence (AI),"AI, Machine Learning and Data Science",Computation,artificial intelligence
+E175,edX dashboard,Data Science: Productivity Tools,"AI, Machine Learning and Data Science",Information,data science
+E176,edX dashboard,Fundamentals of Red Hat Enterprise Linux,Computer Science and Programming,Computation,linux
+E177,edX dashboard,Linux Basics: The Command Line Interface,Computer Science and Programming,Computation,linux
+E178,edX dashboard,Blockchain Technology,Computer Science and Programming,Computation,blockchain
+E179,edX dashboard,Introduction to Hyperledger Blockchain Technologies,Computer Science and Programming,Computation,hyperledger
+E180,edX dashboard,CS50's Computer Science for Lawyers,Computer Science and Programming,Computation,computer
+E181,edX dashboard,Machine Learning Fundamentals,"AI, Machine Learning and Data Science",Computation,machine learning
+E181,edX dashboard,Machine Learning Fundamentals,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E182,edX dashboard,CSS Basics,Computer Science and Programming,Computation,css
+E183,edX dashboard,Natural Language Processing (NLP),"AI, Machine Learning and Data Science",Computation,natural language
+E183,edX dashboard,Natural Language Processing (NLP),"AI, Machine Learning and Data Science",Language and Meaning,language
+E184,edX dashboard,Introduction to Java Programming: Fundamental Data Structures and Algorithms,Computer Science and Programming,Computation,java
+E185,edX dashboard,Introduction to Java Programming: Writing Good Code,Computer Science and Programming,Computation,java
+E186,edX dashboard,Introducción a la programación en Java: empezando a programar,Computer Science and Programming,Computation,java
+E187,edX dashboard,Introducción a la programación en Java: escribiendo buen código,Computer Science and Programming,Computation,java
+E188,edX dashboard,Introduction to Java Programming: Starting to code in Java,Computer Science and Programming,Computation,java
+E189,edX dashboard,Probability and Statistics in Data Science using Python,Mathematics and Statistics,Information,data science
+E189,edX dashboard,Probability and Statistics in Data Science using Python,Mathematics and Statistics,Computation,python
+E189,edX dashboard,Probability and Statistics in Data Science using Python,Mathematics and Statistics,Formal Reasoning,probability
+E190,edX dashboard,Statistical Learning,"AI, Machine Learning and Data Science",Formal Reasoning,statistic
+E190,edX dashboard,Statistical Learning,"AI, Machine Learning and Data Science",Machine Learning,statistical learning
+E191,edX dashboard,Introduction to Networking,Computer Science and Programming,Computation,networking
+E192,edX dashboard,Computer Hardware and Operating Systems,Computer Science and Programming,Computation,computer
+E193,edX dashboard,Basics of Computing and Programming,Computer Science and Programming,Computation,computing
+E194,edX dashboard,Essentials of Data Literacy,"AI, Machine Learning and Data Science",Information,data literacy
+E195,edX dashboard,Introduction to Data Science,"AI, Machine Learning and Data Science",Information,data science
+E196,edX dashboard,Statistics: Unlocking the World of Data,Mathematics and Statistics,Formal Reasoning,statistic
+E197,edX dashboard,Statistical Predictive Modelling and Applications,"AI, Machine Learning and Data Science",Information,predictive model
+E197,edX dashboard,Statistical Predictive Modelling and Applications,"AI, Machine Learning and Data Science",Formal Reasoning,statistic
+E197,edX dashboard,Statistical Predictive Modelling and Applications,"AI, Machine Learning and Data Science",Modeling and Simulation,modelling
+E198,edX dashboard,Successfully Evaluating Predictive Modelling,"AI, Machine Learning and Data Science",Information,predictive model
+E198,edX dashboard,Successfully Evaluating Predictive Modelling,"AI, Machine Learning and Data Science",Modeling and Simulation,modelling
+E199,edX dashboard,Introduction to Predictive Analytics using Python,"AI, Machine Learning and Data Science",Information,predictive analytics
+E199,edX dashboard,Introduction to Predictive Analytics using Python,"AI, Machine Learning and Data Science",Computation,python
+E200,edX dashboard,Introduction to Python: Absolute Beginner,Computer Science and Programming,Computation,python
+E201,edX dashboard,Introduction to Linear Models and Matrix Algebra,Mathematics and Statistics,Formal Reasoning,algebra
+E202,edX dashboard,Analyzing Big Data with Microsoft R,"AI, Machine Learning and Data Science",Information,big data
+E203,edX dashboard,Essential Math for Machine Learning: R Edition,Mathematics and Statistics,Computation,machine learning
+E203,edX dashboard,Essential Math for Machine Learning: R Edition,Mathematics and Statistics,Formal Reasoning,math
+E203,edX dashboard,Essential Math for Machine Learning: R Edition,Mathematics and Statistics,Machine Learning,machine learning
+E204,edX dashboard,The Science of Happiness,Psychology and Cognitive Science,Mind and Cognition,happiness
+E205,edX dashboard,Data Science Research Methods: R Edition,"AI, Machine Learning and Data Science",Information,data science
+E205,edX dashboard,Data Science Research Methods: R Edition,"AI, Machine Learning and Data Science",Formal Reasoning,research methods
+E205,edX dashboard,Data Science Research Methods: R Edition,"AI, Machine Learning and Data Science",Knowledge and Method,research methods
+E206,edX dashboard,Introduction to R for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E207,edX dashboard,Data Science: Inference and Modeling,Mathematics and Statistics,Information,data science
+E207,edX dashboard,Data Science: Inference and Modeling,Mathematics and Statistics,Formal Reasoning,inference
+E207,edX dashboard,Data Science: Inference and Modeling,Mathematics and Statistics,Modeling and Simulation,modeling
+E208,edX dashboard,Data Science: Visualization,"AI, Machine Learning and Data Science",Information,data science
+E209,edX dashboard,"Introducción al griego clásico: lengua, nombres y mitología",Languages and Linguistics,Language and Meaning,griego
+E210,edX dashboard,Data Science: R Basics,"AI, Machine Learning and Data Science",Information,data science
+E211,edX dashboard,IoT Programming and Big Data (T3 2019),"AI, Machine Learning and Data Science",Information,big data
+E211,edX dashboard,IoT Programming and Big Data (T3 2019),"AI, Machine Learning and Data Science",Computation,programming
+E212,edX dashboard,Pre-University Calculus,Mathematics and Statistics,Formal Reasoning,calculus
+E213,edX dashboard,Statistics and R,Mathematics and Statistics,Formal Reasoning,statistic
+E214,edX dashboard,Enabling Technologies for Data Science and Analytics: The Internet of Things,"AI, Machine Learning and Data Science",Information,data science
+E215,edX dashboard,Computer Graphics,Computer Science and Programming,Computation,computer
+E215,edX dashboard,Computer Graphics,Computer Science and Programming,Modeling and Simulation,graphics
+E216,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Computation,machine learning
+E216,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Formal Reasoning,math
+E216,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Machine Learning,machine learning
+E218,edX dashboard,Python for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E218,edX dashboard,Python for Data Science,"AI, Machine Learning and Data Science",Computation,python
+E219,edX dashboard,Science in Art: The Chemistry of Art Materials and Conservation,Chemistry and Materials,Physical Structure and Scale,chemistry
+E220,edX dashboard,Basic Steps in Magnetic Resonance,Engineering and Applied Technology,Information,magnetic resonance
+E221,edX dashboard,Fundamentals of Biomedical Imaging : Magnetic Resonance Imaging (MRI),Engineering and Applied Technology,Information,imaging
+E222,edX dashboard,"Fundamentals of Biomedical Imaging: Ultrasounds, X-ray, positron emission tomography (PET) and applications",Engineering and Applied Technology,Information,imaging
+E223,edX dashboard,CS50's AP® Computer Science Principles,Computer Science and Programming,Computation,computer
+E225,edX dashboard,AP® Biology - Part 4: Ecology,"Biology, Neuroscience and Health",Evolution and Development,ecolog
+E225,edX dashboard,AP® Biology - Part 4: Ecology,"Biology, Neuroscience and Health",Complex Systems,ecolog
+E226,edX dashboard,AP® Biology - Part 3: Evolution & Diversity,"Biology, Neuroscience and Health",Evolution and Development,evolution
+E227,edX dashboard,AP® Biology - Part 2: Genetics,"Biology, Neuroscience and Health",Evolution and Development,genetic
+E229,edX dashboard,Dynamic Programming: Applications In Machine Learning and Genomics,Computer Science and Programming,Information,genomics
+E229,edX dashboard,Dynamic Programming: Applications In Machine Learning and Genomics,Computer Science and Programming,Constraint and Optimization,dynamic programming
+E229,edX dashboard,Dynamic Programming: Applications In Machine Learning and Genomics,Computer Science and Programming,Evolution and Development,genomics
+E229,edX dashboard,Dynamic Programming: Applications In Machine Learning and Genomics,Computer Science and Programming,Computation,programming
+E229,edX dashboard,Dynamic Programming: Applications In Machine Learning and Genomics,Computer Science and Programming,Machine Learning,machine learning
+E230,edX dashboard,DNA: Biology’s Genetic Code,"Biology, Neuroscience and Health",Information,genetic code
+E230,edX dashboard,DNA: Biology’s Genetic Code,"Biology, Neuroscience and Health",Evolution and Development,dna
+E231,edX dashboard,FA18: Machine Learning,"AI, Machine Learning and Data Science",Computation,machine learning
+E231,edX dashboard,FA18: Machine Learning,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E232,edX dashboard,Machine Learning Fundamentals,"AI, Machine Learning and Data Science",Computation,machine learning
+E232,edX dashboard,Machine Learning Fundamentals,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E233,edX dashboard,Machine Learning,"AI, Machine Learning and Data Science",Computation,machine learning
+E233,edX dashboard,Machine Learning,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E234,edX dashboard,Machine Learning,"AI, Machine Learning and Data Science",Computation,machine learning
+E234,edX dashboard,Machine Learning,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E235,edX dashboard,Applications in Communication Acoustics,Engineering and Applied Technology,Information,acoustics
+E236,edX dashboard,Data Science: Machine Learning,"AI, Machine Learning and Data Science",Information,data science
+E236,edX dashboard,Data Science: Machine Learning,"AI, Machine Learning and Data Science",Computation,machine learning
+E236,edX dashboard,Data Science: Machine Learning,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E237,edX dashboard,Space Mission Design and Operations,Engineering and Applied Technology,Constraint and Optimization,space mission
+E238,edX dashboard,Question Everything: Scientific Thinking in Real Life,"Philosophy, Logic and Critical Thinking",Mind and Cognition,scientific thinking
+E238,edX dashboard,Question Everything: Scientific Thinking in Real Life,"Philosophy, Logic and Critical Thinking",Knowledge and Method,question everything
+E239,edX dashboard,"Fundamentals of Neuroscience, Part 1: The Electrical Properties of the Neuron","Biology, Neuroscience and Health",Mind and Cognition,neuro
+E240,edX dashboard,Data Structures: An Active Learning Approach,Computer Science and Programming,Computation,data structures
+E240,edX dashboard,Data Structures: An Active Learning Approach,Computer Science and Programming,Learning and Education,active learning
+E241,edX dashboard,Mathematical Modelling Basics,Mathematics and Statistics,Formal Reasoning,math
+E241,edX dashboard,Mathematical Modelling Basics,Mathematics and Statistics,Modeling and Simulation,modelling
+E242,edX dashboard,Big Data and Education,Education and Pedagogy,Information,big data
+E242,edX dashboard,Big Data and Education,Education and Pedagogy,Learning and Education,education
+E243,edX dashboard,Algorithmic Design and Techniques,Computer Science and Programming,Computation,algorithm
+E244,edX dashboard,Speech Recognition Systems,"AI, Machine Learning and Data Science",Information,speech recognition
+E244,edX dashboard,Speech Recognition Systems,"AI, Machine Learning and Data Science",Mind and Cognition,cognition
+E244,edX dashboard,Speech Recognition Systems,"AI, Machine Learning and Data Science",Language and Meaning,speech recognition
+E245,edX dashboard,Computer Vision and Image Analysis,"AI, Machine Learning and Data Science",Information,computer vision
+E245,edX dashboard,Computer Vision and Image Analysis,"AI, Machine Learning and Data Science",Computation,computer
+E246,edX dashboard,Visualizing Data with Python,"AI, Machine Learning and Data Science",Computation,python
+E247,edX dashboard,Data Science Research Methods: Python Edition,"AI, Machine Learning and Data Science",Information,data science
+E247,edX dashboard,Data Science Research Methods: Python Edition,"AI, Machine Learning and Data Science",Computation,python
+E247,edX dashboard,Data Science Research Methods: Python Edition,"AI, Machine Learning and Data Science",Formal Reasoning,research methods
+E247,edX dashboard,Data Science Research Methods: Python Edition,"AI, Machine Learning and Data Science",Knowledge and Method,research methods
+E248,edX dashboard,Data Science: Productivity Tools,"AI, Machine Learning and Data Science",Information,data science
+E249,edX dashboard,Using Python for Research,Computer Science and Programming,Computation,python
+E250,edX dashboard,Creative Coding,Computer Science and Programming,Modeling and Simulation,creative coding
+E251,edX dashboard,Infrastructure as Code,Computer Science and Programming,Computation,infrastructure as code
+E252,edX dashboard,Developing Planet-Scale Applications in Azure Cosmos DB,Computer Science and Programming,Computation,cosmos db
+E253,edX dashboard,Data Science: Probability,Mathematics and Statistics,Information,data science
+E253,edX dashboard,Data Science: Probability,Mathematics and Statistics,Formal Reasoning,probability
+E254,edX dashboard,Fat Chance: Probability from the Ground Up,Mathematics and Statistics,Formal Reasoning,fat chance
+E255,edX dashboard,Probability and Statistics in Data Science using Python,Mathematics and Statistics,Information,data science
+E255,edX dashboard,Probability and Statistics in Data Science using Python,Mathematics and Statistics,Computation,python
+E255,edX dashboard,Probability and Statistics in Data Science using Python,Mathematics and Statistics,Formal Reasoning,probability
+E256,edX dashboard,Predictive Analytics,"AI, Machine Learning and Data Science",Information,predictive analytics
+E257,edX dashboard,Machine Learning Fundamentals,"AI, Machine Learning and Data Science",Computation,machine learning
+E257,edX dashboard,Machine Learning Fundamentals,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E258,edX dashboard,Introduction to Python for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E258,edX dashboard,Introduction to Python for Data Science,"AI, Machine Learning and Data Science",Computation,python
+E259,edX dashboard,The Beauty and Joy of Computing - AP® CS Principles Part 2,Computer Science and Programming,Computation,computing
+E260,edX dashboard,The Beauty and Joy of Computing - AP® CS Principles Part 1,Computer Science and Programming,Computation,computing
+E261,edX dashboard,Statistical Thinking for Data Science and Analytics,Mathematics and Statistics,Information,data science
+E261,edX dashboard,Statistical Thinking for Data Science and Analytics,Mathematics and Statistics,Formal Reasoning,statistic
+E262,edX dashboard,Machine Learning for Data Science and Analytics,"AI, Machine Learning and Data Science",Information,data science
+E262,edX dashboard,Machine Learning for Data Science and Analytics,"AI, Machine Learning and Data Science",Computation,machine learning
+E262,edX dashboard,Machine Learning for Data Science and Analytics,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E263,edX dashboard,Analytics in Python,"AI, Machine Learning and Data Science",Information,analytics
+E263,edX dashboard,Analytics in Python,"AI, Machine Learning and Data Science",Computation,python
+E264,edX dashboard,Python for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E264,edX dashboard,Python for Data Science,"AI, Machine Learning and Data Science",Computation,python
+E266,edX dashboard,CS For All: Introduction to Computer Science and Python Programming,Computer Science and Programming,Computation,computer
+E267,edX dashboard,Advanced Algorithmics and Graph Theory with Python,Computer Science and Programming,Computation,algorithm
+E268,edX dashboard,Deep Learning with Python and PyTorch,"AI, Machine Learning and Data Science",Computation,deep learning
+E268,edX dashboard,Deep Learning with Python and PyTorch,"AI, Machine Learning and Data Science",Machine Learning,deep learning
+E269,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Computation,machine learning
+E269,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Formal Reasoning,math
+E269,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Machine Learning,machine learning
+E270,edX dashboard,CS50's Introduction to Game Development,Computer Science and Programming,Computation,game development
+E271,edX dashboard,Utopedia: Educación para la sociedad del conocimiento,Education and Pedagogy,Learning and Education,educación
+E272,edX dashboard,Caer o No caer. El Secreto de las Estructuras.,Engineering and Applied Technology,Constraint and Optimization,estructuras
+E273,edX dashboard,Bases Matemáticas: Números y terminología,Mathematics and Statistics,Formal Reasoning,matemáticas
+E274,edX dashboard,Análisis de Datos: Llévalo al MAX (),"AI, Machine Learning and Data Science",Information,análisis de datos
+E275,edX dashboard,Introduction to Python: Fundamentals,Computer Science and Programming,Computation,python
+E276,edX dashboard,Natural Language Processing (NLP),"AI, Machine Learning and Data Science",Computation,natural language
+E276,edX dashboard,Natural Language Processing (NLP),"AI, Machine Learning and Data Science",Language and Meaning,language
+E277,edX dashboard,Analyzing Data with Python,"AI, Machine Learning and Data Science",Computation,python
+E278,edX dashboard,Basic 3D Modeling using Blender,Computer Science and Programming,Modeling and Simulation,modeling
+E279,edX dashboard,Basic 3D Animation using Blender,Computer Science and Programming,Modeling and Simulation,blender
+E280,edX dashboard,Introduction to Functional Programming,Computer Science and Programming,Computation,functional
+E281,edX dashboard,Deep Learning Explained,"AI, Machine Learning and Data Science",Computation,deep learning
+E281,edX dashboard,Deep Learning Explained,"AI, Machine Learning and Data Science",Machine Learning,deep learning
+E282,edX dashboard,Python Data Structures,Computer Science and Programming,Computation,python
+E283,edX dashboard,Algorithmic Design and Techniques,Computer Science and Programming,Computation,algorithm
+E284,edX dashboard,Data Structures Fundamentals,Computer Science and Programming,Computation,data structures
+E285,edX dashboard,"Introduction to Python: Creating Scalable, Robust, Interactive Code",Computer Science and Programming,Computation,python
+E287,edX dashboard,Linear Algebra - Foundations to Frontiers,Mathematics and Statistics,Formal Reasoning,algebra
+E288,edX dashboard,Foundations of Data Science: Computational Thinking with Python,"AI, Machine Learning and Data Science",Information,data science
+E288,edX dashboard,Foundations of Data Science: Computational Thinking with Python,"AI, Machine Learning and Data Science",Computation,computational
+E289,edX dashboard,Analytics in Python,"AI, Machine Learning and Data Science",Information,analytics
+E289,edX dashboard,Analytics in Python,"AI, Machine Learning and Data Science",Computation,python
+E290,edX dashboard,Introduction to Linux,Computer Science and Programming,Computation,linux
+E291,edX dashboard,Using Python for Research,Computer Science and Programming,Computation,python
+E292,edX dashboard,Introduction to Python: Fundamentals,Computer Science and Programming,Computation,python
+E293,edX dashboard,Introduction to Programming Using Python,Computer Science and Programming,Computation,programming
+E294,edX dashboard,Python for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E294,edX dashboard,Python for Data Science,"AI, Machine Learning and Data Science",Computation,python
+E295,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Computation,machine learning
+E295,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Formal Reasoning,math
+E295,edX dashboard,Essential Math for Machine Learning: Python Edition,Mathematics and Statistics,Machine Learning,machine learning
+E296,edX dashboard,Principles of Machine Learning,"AI, Machine Learning and Data Science",Computation,machine learning
+E296,edX dashboard,Principles of Machine Learning,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E297,edX dashboard,Introduction to Python for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E297,edX dashboard,Introduction to Python for Data Science,"AI, Machine Learning and Data Science",Computation,python
+E298,edX dashboard,Programming with Python for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E298,edX dashboard,Programming with Python for Data Science,"AI, Machine Learning and Data Science",Computation,programming
+E299,edX dashboard,Python Basics for Data Science,"AI, Machine Learning and Data Science",Information,data science
+E299,edX dashboard,Python Basics for Data Science,"AI, Machine Learning and Data Science",Computation,python
+E300,edX dashboard,Computing in Python IV: Objects & Algorithms,Computer Science and Programming,Computation,computing
+E301,edX dashboard,Computing in Python III: Data Structures,Computer Science and Programming,Computation,computing
+E302,edX dashboard,Computing in Python II: Control Structures,Computer Science and Programming,Computation,computing
+E303,edX dashboard,Computing in Python I: Fundamentals and Procedural Programming,Computer Science and Programming,Computation,computing
+E303,edX dashboard,Computing in Python I: Fundamentals and Procedural Programming,Computer Science and Programming,Modeling and Simulation,procedural
+E304,edX dashboard,Blockchain for Business - An Introduction to Hyperledger Technologies,Computer Science and Programming,Computation,blockchain
+E305,edX dashboard,Machine Learning with Python: A Practical Introduction,"AI, Machine Learning and Data Science",Computation,machine learning
+E305,edX dashboard,Machine Learning with Python: A Practical Introduction,"AI, Machine Learning and Data Science",Machine Learning,machine learning
+E306,Handwritten lecture notebook,Inventions,History,Evolution and Development,inventions
+E307,Handwritten lecture notebook,Math Is Power,Mathematics and Statistics,Formal Reasoning,math
+E308,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Evolution and Development,ecolog
+E308,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Formal Reasoning,logic
+E308,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Complex Systems,ecolog
+E309,Handwritten lecture notebook,Earth at the Crossroads,Earth and Environmental Science,Complex Systems,earth at the crossroads
+E310,Handwritten lecture notebook,Addiction,"Biology, Neuroscience and Health",Mind and Cognition,addiction
+E311,Handwritten lecture notebook,Gravity,Physics and Astronomy,Physical Structure and Scale,gravity
+E312,Handwritten lecture notebook,Modern History,History,History and Society,history
+E313,Handwritten lecture notebook,Cosmology,Physics and Astronomy,Physical Structure and Scale,cosmology
+E314,Handwritten lecture notebook,Science of Self: Genetics,"Biology, Neuroscience and Health",Evolution and Development,genetic
+E315,Handwritten lecture notebook,Oceanography,Earth and Environmental Science,Complex Systems,oceanograph
+E316,Handwritten lecture notebook,Information Theory,Mathematics and Statistics,Information,information
+E316,Handwritten lecture notebook,Information Theory,Mathematics and Statistics,Computation,information theory
+E317,Handwritten lecture notebook,Unexpected Economics,Social Sciences and Economics,Complex Systems,economics
+E317,Handwritten lecture notebook,Unexpected Economics,Social Sciences and Economics,History and Society,economics
+E318,Handwritten lecture notebook,History of Life,"Biology, Neuroscience and Health",Evolution and Development,history of life
+E319,Handwritten lecture notebook,Shape of Nature,General Science and Interdisciplinary,Complex Systems,shape of nature
+E320,Handwritten lecture notebook,Art of Teaching,Education and Pedagogy,Learning and Education,teaching
+E321,Handwritten lecture notebook,Algebra I,Mathematics and Statistics,Formal Reasoning,algebra
+E322,Handwritten lecture notebook,Algebra II,Mathematics and Statistics,Formal Reasoning,algebra
+E323,Handwritten lecture notebook,Discrete Mathematics,Mathematics and Statistics,Formal Reasoning,discrete
+E324,Handwritten lecture notebook,History of Native America,History,History and Society,history
+E325,Handwritten lecture notebook,Thinking Theoretically,"Philosophy, Logic and Critical Thinking",Mind and Cognition,thinking theoretically
+E325,Handwritten lecture notebook,Thinking Theoretically,"Philosophy, Logic and Critical Thinking",Knowledge and Method,thinking theoretically
+E326,Handwritten lecture notebook,Understanding Japan,Social Sciences and Economics,History and Society,japan
+E327,Handwritten lecture notebook,Japanese Foundations — Michel Thomas Method,Languages and Linguistics,Language and Meaning,japanese
+E327,Handwritten lecture notebook,Japanese Foundations — Michel Thomas Method,Languages and Linguistics,History and Society,japan
+E328,Handwritten lecture notebook,History of Life,"Biology, Neuroscience and Health",Evolution and Development,history of life
+E329,Handwritten lecture notebook,Comparative Education,Education and Pedagogy,Learning and Education,education
+E330,Handwritten lecture notebook,Cosmology,Physics and Astronomy,Physical Structure and Scale,cosmology
+E331,Handwritten lecture notebook,Nature of Matter,Physics and Astronomy,Physical Structure and Scale,nature of matter
+E332,Handwritten lecture notebook,The Origin and Evolution of Earth,Earth and Environmental Science,Evolution and Development,origin
+E333,Handwritten lecture notebook,"Hearing, Touching, Tasting",Psychology and Cognitive Science,Mind and Cognition,"hearing, touching"
+E334,Handwritten lecture notebook,The Higgs Boson and Beyond,Physics and Astronomy,Physical Structure and Scale,higgs
+E335,Handwritten lecture notebook,Modern Physics for Non-Scientists,Physics and Astronomy,Physical Structure and Scale,physics
+E336,Handwritten lecture notebook,Physics in Your Life,Physics and Astronomy,Physical Structure and Scale,physics
+E337,Handwritten lecture notebook,High School Chemistry,Chemistry and Materials,Physical Structure and Scale,chemistry
+E338,Handwritten lecture notebook,Oceanography,Earth and Environmental Science,Complex Systems,oceanograph
+E339,Handwritten lecture notebook,Addiction,"Biology, Neuroscience and Health",Mind and Cognition,addiction
+E340,Handwritten lecture notebook,Peoples and Cultures of the World — Edward Fischer,Social Sciences and Economics,History and Society,cultures
+E341,Handwritten lecture notebook,"Albert Einstein: Physicist, Philosopher, Humanitarian — Don Howard",Physics and Astronomy,Physical Structure and Scale,einstein
+E341,Handwritten lecture notebook,"Albert Einstein: Physicist, Philosopher, Humanitarian — Don Howard",Physics and Astronomy,Knowledge and Method,philosoph
+E342,Handwritten lecture notebook,"1984 — Spanish audiobook, approximately 0.7× speed",Languages and Linguistics,Language and Meaning,spanish
+E353,Handwritten lecture notebook,Cosmology,Physics and Astronomy,Physical Structure and Scale,cosmology
+E354,Handwritten lecture notebook,Understanding Gravity,Physics and Astronomy,Physical Structure and Scale,gravity
+E355,Handwritten lecture notebook,Dark Matter and Energy,Physics and Astronomy,Physical Structure and Scale,dark matter
+E356,Handwritten lecture notebook,Big History,History,Evolution and Development,big history
+E356,Handwritten lecture notebook,Big History,History,Complex Systems,big history
+E357,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Evolution and Development,physics of history
+E357,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Physical Structure and Scale,physics
+E359,Handwritten lecture notebook,Physics and Our Universe,Physics and Astronomy,Physical Structure and Scale,physics
+E360,Handwritten lecture notebook,How Colors Affect You,Psychology and Cognitive Science,Mind and Cognition,colors affect
+E361,Handwritten lecture notebook,The Higgs Boson and Beyond,Physics and Astronomy,Physical Structure and Scale,higgs
+E362,Handwritten lecture notebook,Music and the Brain,Psychology and Cognitive Science,Mind and Cognition,brain
+E363,Handwritten lecture notebook,Understanding the Universe: An Introduction to Astronomy,Physics and Astronomy,Physical Structure and Scale,universe
+E364,Handwritten lecture notebook,Organic Chemistry,Chemistry and Materials,Physical Structure and Scale,chemistry
+E365,Handwritten lecture notebook,History of Life,"Biology, Neuroscience and Health",Evolution and Development,history of life
+E366,Handwritten lecture notebook,History of Ancient Israel,History,History and Society,history
+E367,Handwritten lecture notebook,Ancient and Medieval History,History,History and Society,ancient
+E368,Handwritten lecture notebook,The Human Factor: Domestication,"Biology, Neuroscience and Health",Evolution and Development,domestication
+E370,Handwritten lecture notebook,Elemental Matters,Chemistry and Materials,Physical Structure and Scale,elemental
+E371,Handwritten lecture notebook,Nature of Matter,Physics and Astronomy,Physical Structure and Scale,nature of matter
+E372,Handwritten lecture notebook,Science Wars,"Philosophy, Logic and Critical Thinking",Knowledge and Method,science wars
+E374,Handwritten lecture notebook,Your Deceptive Mind,Psychology and Cognitive Science,Mind and Cognition,deceptive mind
+E374,Handwritten lecture notebook,Your Deceptive Mind,Psychology and Cognitive Science,Knowledge and Method,deceptive mind
+E375,Handwritten lecture notebook,Big Data,"AI, Machine Learning and Data Science",Information,big data
+E376,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Evolution and Development,ecolog
+E376,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Formal Reasoning,logic
+E376,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Complex Systems,ecolog
+E378,Handwritten lecture notebook,Nanotechnology,Engineering and Applied Technology,Physical Structure and Scale,nanotechnology
+E379,Handwritten lecture notebook,Science of Information,Mathematics and Statistics,Information,information
+E380,Handwritten lecture notebook,Understanding the Brain,"Biology, Neuroscience and Health",Mind and Cognition,brain
+E381,Handwritten lecture notebook,History of Innovation,History,Evolution and Development,innovation
+E381,Handwritten lecture notebook,History of Innovation,History,History and Society,history
+E382,Handwritten lecture notebook,Precalculus and Trigonometry,Mathematics and Statistics,Formal Reasoning,calculus
+E383,Handwritten lecture notebook,Your Deceptive Mind: Critical Thinking,Psychology and Cognitive Science,Mind and Cognition,deceptive mind
+E383,Handwritten lecture notebook,Your Deceptive Mind: Critical Thinking,Psychology and Cognitive Science,Knowledge and Method,deceptive mind
+E384,Handwritten lecture notebook,Understanding Japan,Social Sciences and Economics,History and Society,japan
+E386,Handwritten lecture notebook,Planets and Sun,Physics and Astronomy,Physical Structure and Scale,planets
+E387,Handwritten lecture notebook,Stars and Galaxies,Physics and Astronomy,Physical Structure and Scale,stars
+E388,Handwritten lecture notebook,"Terror of History — Mystics, Heretics, and Witch Burning",History,History and Society,history
+E389,Handwritten lecture notebook,History of Science: Antiquity,History,Knowledge and Method,history of science
+E390,Handwritten lecture notebook,History of Science: 1700–1900,History,Knowledge and Method,history of science
+E391,Handwritten lecture notebook,Big History,History,Evolution and Development,big history
+E391,Handwritten lecture notebook,Big History,History,Complex Systems,big history
+E392,Handwritten lecture notebook,Human Prehistory and the First Civilizations,History,Evolution and Development,prehistory
+E392,Handwritten lecture notebook,Human Prehistory and the First Civilizations,History,History and Society,history
+E393,Handwritten lecture notebook,Precalculus and Trigonometry,Mathematics and Statistics,Formal Reasoning,calculus
+E394,Handwritten lecture notebook,Japanese Foundations — Michel Thomas,Languages and Linguistics,Language and Meaning,japanese
+E394,Handwritten lecture notebook,Japanese Foundations — Michel Thomas,Languages and Linguistics,History and Society,japan
+E395,Handwritten lecture notebook,Change and Motion,Physics and Astronomy,Physical Structure and Scale,change and motion
+E396,Handwritten lecture notebook,History of Egypt,History,History and Society,history
+E397,Handwritten lecture notebook,Herodotus' Histories,History,History and Society,herodotus
+E398,Handwritten lecture notebook,Cosmology,Physics and Astronomy,Physical Structure and Scale,cosmology
+E399,Handwritten lecture notebook,Political Ideas,Social Sciences and Economics,History and Society,political
+E400,Handwritten lecture notebook,High School Chemistry,Chemistry and Materials,Physical Structure and Scale,chemistry
+E401,Handwritten lecture notebook,Turning Points in Modern History,History,History and Society,history
+E403,Handwritten lecture notebook,Power of Math,Mathematics and Statistics,Formal Reasoning,math
+E404,Handwritten lecture notebook,Elemental Matters,Chemistry and Materials,Physical Structure and Scale,elemental
+E406,Handwritten lecture notebook,Cosmology,Physics and Astronomy,Physical Structure and Scale,cosmology
+E407,Handwritten lecture notebook,Geology: Origin and Evolution of Earth,Earth and Environmental Science,Evolution and Development,origin
+E409,Handwritten lecture notebook,Joy of Thinking,"Philosophy, Logic and Critical Thinking",Mind and Cognition,joy of thinking
+E409,Handwritten lecture notebook,Joy of Thinking,"Philosophy, Logic and Critical Thinking",Knowledge and Method,joy of thinking
+E410,Handwritten lecture notebook,History of Life,"Biology, Neuroscience and Health",Evolution and Development,history of life
+E411,Handwritten lecture notebook,Linguistic Myths,Languages and Linguistics,Language and Meaning,linguistic
+E412,Handwritten lecture notebook,Michel Thomas: Egyptian Arabic,Languages and Linguistics,Language and Meaning,michel thomas
+E412,Handwritten lecture notebook,Michel Thomas: Egyptian Arabic,Languages and Linguistics,History and Society,egypt
+E413,Handwritten lecture notebook,Living Languages Arabic,Languages and Linguistics,Language and Meaning,language
+E414,Handwritten lecture notebook,50 Languages Arabic,Languages and Linguistics,Language and Meaning,language
+E415,Handwritten lecture notebook,Berlitz Arabic,Languages and Linguistics,Language and Meaning,berlitz
+E416,Handwritten lecture notebook,Quantum Physics,Physics and Astronomy,Physical Structure and Scale,quantum
+E417,Handwritten lecture notebook,Arabic on the Move,Languages and Linguistics,Language and Meaning,arabic
+E418,Handwritten lecture notebook,Elemental Matters,Chemistry and Materials,Physical Structure and Scale,elemental
+E419,Handwritten lecture notebook,Michel Thomas Spanish,Languages and Linguistics,Language and Meaning,michel thomas
+E420,Handwritten lecture notebook,Paul Noble Spanish,Languages and Linguistics,Language and Meaning,paul noble
+E421,Handwritten lecture notebook,Pimsleur Egyptian Arabic,Languages and Linguistics,Language and Meaning,pimsleur
+E421,Handwritten lecture notebook,Pimsleur Egyptian Arabic,Languages and Linguistics,History and Society,egypt
+E422,Handwritten lecture notebook,Cosmology,Physics and Astronomy,Physical Structure and Scale,cosmology
+E423,Handwritten lecture notebook,Michel Thomas Arabic,Languages and Linguistics,Language and Meaning,michel thomas
+E424,Handwritten lecture notebook,50 Languages Arabic,Languages and Linguistics,Language and Meaning,language
+E425,Handwritten lecture notebook,Michel Thomas Japanese,Languages and Linguistics,Language and Meaning,michel thomas
+E425,Handwritten lecture notebook,Michel Thomas Japanese,Languages and Linguistics,History and Society,japan
+E426,Handwritten lecture notebook,Eastern Arabic I,Languages and Linguistics,Language and Meaning,arabic
+E427,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Evolution and Development,ecolog
+E427,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Formal Reasoning,logic
+E427,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Complex Systems,ecolog
+E428,Handwritten lecture notebook,50 Languages Arabic,Languages and Linguistics,Language and Meaning,language
+E429,Handwritten lecture notebook,Arabic,Languages and Linguistics,Language and Meaning,arabic
+E430,Handwritten lecture notebook,Great Ideas of Classical Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E431,Handwritten lecture notebook,United States and the Middle East,History,History and Society,middle east
+E432,Handwritten lecture notebook,"Middle East, 1914–2001",History,History and Society,middle east
+E433,Handwritten lecture notebook,Michel Thomas Arabic — Egypt,Languages and Linguistics,Language and Meaning,michel thomas
+E433,Handwritten lecture notebook,Michel Thomas Arabic — Egypt,Languages and Linguistics,History and Society,egypt
+E434,Handwritten lecture notebook,Redefining Reality,"Philosophy, Logic and Critical Thinking",Knowledge and Method,redefining reality
+E435,Handwritten lecture notebook,Modern Science,General Science and Interdisciplinary,Knowledge and Method,modern science
+E436,Handwritten lecture notebook,Big History,History,Evolution and Development,big history
+E436,Handwritten lecture notebook,Big History,History,Complex Systems,big history
+E437,Handwritten lecture notebook,Argumentation,"Philosophy, Logic and Critical Thinking",Language and Meaning,argumentation
+E437,Handwritten lecture notebook,Argumentation,"Philosophy, Logic and Critical Thinking",Knowledge and Method,argumentation
+E438,Handwritten lecture notebook,Classical Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E439,Handwritten lecture notebook,History of Life,"Biology, Neuroscience and Health",Evolution and Development,history of life
+E440,Handwritten lecture notebook,Cultural Anthropology,Social Sciences and Economics,History and Society,anthropology
+E441,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Evolution and Development,physics of history
+E441,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Physical Structure and Scale,physics
+E442,Handwritten lecture notebook,Physics in Your Life / Everyday Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E443,Handwritten lecture notebook,The Search for Intelligent Life,Physics and Astronomy,Evolution and Development,intelligent life
+E444,Handwritten lecture notebook,How the Earth Works,Earth and Environmental Science,Complex Systems,how the earth works
+E445,Handwritten lecture notebook,Philosophy of Science,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E446,Handwritten lecture notebook,The Higgs Boson and Beyond,Physics and Astronomy,Physical Structure and Scale,higgs
+E447,Handwritten lecture notebook,Sustainable Living,Earth and Environmental Science,Constraint and Optimization,sustainable living
+E447,Handwritten lecture notebook,Sustainable Living,Earth and Environmental Science,Complex Systems,sustainable
+E448,Handwritten lecture notebook,Understanding Diversity,Social Sciences and Economics,History and Society,understanding diversity
+E450,Handwritten lecture notebook,Global History,History,History and Society,history
+E451,Handwritten lecture notebook,Oceanography,Earth and Environmental Science,Complex Systems,oceanograph
+E452,Handwritten lecture notebook,Meteorology,Earth and Environmental Science,Complex Systems,meteorology
+E453,Handwritten lecture notebook,Genetics,"Biology, Neuroscience and Health",Evolution and Development,genetic
+E454,Handwritten lecture notebook,Complex Systems,General Science and Interdisciplinary,Complex Systems,complex systems
+E456,Handwritten lecture notebook,History of Science: Antiquity–1700,History,Knowledge and Method,history of science
+E457,Handwritten lecture notebook,History of Science: 1700–1900,History,Knowledge and Method,history of science
+E458,Handwritten lecture notebook,American Mind,History,History and Society,american mind
+E459,Handwritten lecture notebook,Physics in Your Life,Physics and Astronomy,Physical Structure and Scale,physics
+E460,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Evolution and Development,physics of history
+E460,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Physical Structure and Scale,physics
+E461,Handwritten lecture notebook,Philosophy of Science,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E462,Handwritten lecture notebook,Nature of Matter,Physics and Astronomy,Physical Structure and Scale,nature of matter
+E463,Handwritten lecture notebook,How the Earth Works,Earth and Environmental Science,Complex Systems,how the earth works
+E464,Handwritten lecture notebook,Inventions,History,Evolution and Development,inventions
+E465,Handwritten lecture notebook,Nature of Matter,Physics and Astronomy,Physical Structure and Scale,nature of matter
+E466,Handwritten lecture notebook,Planet Earth,Earth and Environmental Science,Complex Systems,planet earth
+E467,Handwritten lecture notebook,Higgs Boson,Physics and Astronomy,Physical Structure and Scale,higgs
+E468,Handwritten lecture notebook,Big History,History,Evolution and Development,big history
+E468,Handwritten lecture notebook,Big History,History,Complex Systems,big history
+E469,Handwritten lecture notebook,The Perfect Theory,Physics and Astronomy,Physical Structure and Scale,perfect theory
+E470,Handwritten lecture notebook,36 Big Ideas,General Science and Interdisciplinary,Knowledge and Method,36 big ideas
+E471,Handwritten lecture notebook,How Information Grows,General Science and Interdisciplinary,Information,information
+E472,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Evolution and Development,physics of history
+E472,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Physical Structure and Scale,physics
+E473,Handwritten lecture notebook,Brief History,History,History and Society,history
+E474,Handwritten lecture notebook,Dark Matter and Energy,Physics and Astronomy,Physical Structure and Scale,dark matter
+E475,Handwritten lecture notebook,Earth at the Crossroads,Earth and Environmental Science,Complex Systems,earth at the crossroads
+E476,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Evolution and Development,ecolog
+E476,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Formal Reasoning,logic
+E476,Handwritten lecture notebook,Ecological Planet,Earth and Environmental Science,Complex Systems,ecolog
+E477,Handwritten lecture notebook,Stars and Planets,Physics and Astronomy,Physical Structure and Scale,stars
+E478,Handwritten lecture notebook,Galaxies,Physics and Astronomy,Physical Structure and Scale,galaxies
+E479,Handwritten lecture notebook,The Joy of Thinking,"Philosophy, Logic and Critical Thinking",Mind and Cognition,joy of thinking
+E479,Handwritten lecture notebook,The Joy of Thinking,"Philosophy, Logic and Critical Thinking",Knowledge and Method,joy of thinking
+E480,Handwritten lecture notebook,Modern Science,General Science and Interdisciplinary,Knowledge and Method,modern science
+E481,Handwritten lecture notebook,Science Wars,"Philosophy, Logic and Critical Thinking",Knowledge and Method,science wars
+E482,Handwritten lecture notebook,Big History,History,Evolution and Development,big history
+E482,Handwritten lecture notebook,Big History,History,Complex Systems,big history
+E483,Handwritten lecture notebook,Brief History,History,History and Society,history
+E484,Handwritten lecture notebook,Building Great Sentences,Languages and Linguistics,Language and Meaning,sentences
+E485,Handwritten lecture notebook,Cosmology,Physics and Astronomy,Physical Structure and Scale,cosmology
+E486,Handwritten lecture notebook,Archeology,History,Evolution and Development,archeology
+E486,Handwritten lecture notebook,Archeology,History,History and Society,archeology
+E487,Handwritten lecture notebook,Existentialism,"Philosophy, Logic and Critical Thinking",Knowledge and Method,existentialism
+E489,Handwritten lecture notebook,Music & Math,Mathematics and Statistics,Formal Reasoning,math
+E491,Handwritten lecture notebook,Nanotechnology,Engineering and Applied Technology,Physical Structure and Scale,nanotechnology
+E492,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Evolution and Development,physics of history
+E492,Handwritten lecture notebook,Physics of History,General Science and Interdisciplinary,Physical Structure and Scale,physics
+E493,Handwritten lecture notebook,Superstring Theory,Physics and Astronomy,Physical Structure and Scale,superstring
+E494,Handwritten lecture notebook,"Astronomy, Stars, Galaxies...",Physics and Astronomy,Physical Structure and Scale,astro
+E495,Handwritten lecture notebook,Effective Communication Skills,Languages and Linguistics,Language and Meaning,communication skills
+E496,Handwritten lecture notebook,How Conversation Works,Languages and Linguistics,Language and Meaning,conversation
+E497,Handwritten lecture notebook,Memory and the Human Lifespan,Psychology and Cognitive Science,Mind and Cognition,memory and the
+E498,Handwritten lecture notebook,Analysis & Critique,"Philosophy, Logic and Critical Thinking",Language and Meaning,analysis & critique
+E499,Handwritten lecture notebook,Cognitive Behavioral Therapy: Techniques for Retraining Your Brain,Psychology and Cognitive Science,Mind and Cognition,cognitive behavioral
+E500,Handwritten lecture notebook,Consciousness and Its Implications,"Philosophy, Logic and Critical Thinking",Mind and Cognition,consciousness
+E501,Handwritten lecture notebook,Fundamentals of Sustainable Living,Earth and Environmental Science,Constraint and Optimization,sustainable living
+E501,Handwritten lecture notebook,Fundamentals of Sustainable Living,Earth and Environmental Science,Complex Systems,sustainable
+E502,Handwritten lecture notebook,From Plato to Postmodernism: The Role of the Author,"Arts, Music and Literature",Language and Meaning,role of the author
+E502,Handwritten lecture notebook,From Plato to Postmodernism: The Role of the Author,"Arts, Music and Literature",Knowledge and Method,from plato
+E503,Handwritten lecture notebook,The History of Science from Antiquity to 1700,History,Knowledge and Method,history of science
+E504,Handwritten lecture notebook,The History of Science 1700-1900,History,Knowledge and Method,history of science
+E505,Handwritten lecture notebook,Money and Banking,Social Sciences and Economics,History and Society,money and banking
+E506,Handwritten lecture notebook,Being Human,"Biology, Neuroscience and Health",Mind and Cognition,being human
+E507,Handwritten lecture notebook,Classical Mythology,History,History and Society,mythology
+E508,Handwritten lecture notebook,Doctors: History of Medicine,History,History and Society,history
+E509,Handwritten lecture notebook,Great Ideas of Classical Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E510,Handwritten lecture notebook,The African Experience,History,History and Society,african experience
+E511,Handwritten lecture notebook,Ancient Greek Civilization,History,History and Society,ancient
+E512,Handwritten lecture notebook,Biological Anthropology,"Biology, Neuroscience and Health",Formal Reasoning,logic
+E512,Handwritten lecture notebook,Biological Anthropology,"Biology, Neuroscience and Health",History and Society,anthropology
+E513,Handwritten lecture notebook,Biology and Human Behavior,"Biology, Neuroscience and Health",Evolution and Development,biology and human
+E513,Handwritten lecture notebook,Biology and Human Behavior,"Biology, Neuroscience and Health",Mind and Cognition,human behavio
+E514,Handwritten lecture notebook,Change and Motion,Mathematics and Statistics,Physical Structure and Scale,change and motion
+E515,Handwritten lecture notebook,Foundations of Western Civilization,History,History and Society,civiliz
+E516,Handwritten lecture notebook,Foundations of Western Civilization II,History,History and Society,civiliz
+E517,Handwritten lecture notebook,Great Ideas of Philosophy,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E518,Handwritten lecture notebook,Great Ideas of Psychology,Psychology and Cognitive Science,Mind and Cognition,psycholog
+E519,Handwritten lecture notebook,The Joy of Thinking,"Philosophy, Logic and Critical Thinking",Mind and Cognition,joy of thinking
+E519,Handwritten lecture notebook,The Joy of Thinking,"Philosophy, Logic and Critical Thinking",Knowledge and Method,joy of thinking
+E520,Handwritten lecture notebook,Natural Law and Human Nature,"Philosophy, Logic and Critical Thinking",Knowledge and Method,natural law
+E521,Handwritten lecture notebook,Passions: Philosophy and the Intelligence of Emotions,"Philosophy, Logic and Critical Thinking",Mind and Cognition,passions
+E521,Handwritten lecture notebook,Passions: Philosophy and the Intelligence of Emotions,"Philosophy, Logic and Critical Thinking",Knowledge and Method,philosoph
+E522,Handwritten lecture notebook,Conflict Management,Social Sciences and Economics,History and Society,conflict management
+E523,Handwritten lecture notebook,Inexplicable Universe,Physics and Astronomy,Physical Structure and Scale,universe
+E524,Handwritten lecture notebook,Impossible: Physics Beyond the Edge,Physics and Astronomy,Physical Structure and Scale,physics
+E525,Handwritten lecture notebook,Rise of Humans: Great Scientific Debates,"Biology, Neuroscience and Health",Evolution and Development,rise of humans
+E526,Handwritten lecture notebook,Quantum Mechanics,Physics and Astronomy,Physical Structure and Scale,quantum
+E527,Handwritten lecture notebook,"Quantum: Einstein, Bohr, and the Great Debate",Physics and Astronomy,Physical Structure and Scale,quantum
+E528,Handwritten lecture notebook,Science in the Twentieth Century,History,Knowledge and Method,science in the twentieth
+E528,Handwritten lecture notebook,Science in the Twentieth Century,History,History and Society,twentieth century
+E529,Handwritten lecture notebook,The Nature of Matter,Chemistry and Materials,Physical Structure and Scale,nature of matter
+E530,Handwritten lecture notebook,Amazing Quantum,Physics and Astronomy,Physical Structure and Scale,quantum
+E531,Handwritten lecture notebook,Game Theory,Mathematics and Statistics,Formal Reasoning,game theory
+E532,Handwritten lecture notebook,How Ideas Spread,Social Sciences and Economics,History and Society,how ideas spread
+E533,Handwritten lecture notebook,Meteorology,Earth and Environmental Science,Complex Systems,meteorology
+E534,Handwritten lecture notebook,How the Earth Works,Earth and Environmental Science,Complex Systems,how the earth works
+E535,Handwritten lecture notebook,High School Math,Mathematics and Statistics,Formal Reasoning,high school math
+E537,Handwritten lecture notebook,Geometry,Mathematics and Statistics,Formal Reasoning,geometry
+E539,Handwritten lecture notebook,"Rhetoric, Poetics, Logic","Philosophy, Logic and Critical Thinking",Language and Meaning,rhetoric
+E539,Handwritten lecture notebook,"Rhetoric, Poetics, Logic","Philosophy, Logic and Critical Thinking",Formal Reasoning,logic
+E540,Handwritten lecture notebook,Buddhism,"Philosophy, Logic and Critical Thinking",History and Society,buddhism
+E541,Handwritten lecture notebook,God,"Philosophy, Logic and Critical Thinking",History and Society,god
+E542,Handwritten lecture notebook,Modern Mind,History,Knowledge and Method,modern mind
+E542,Handwritten lecture notebook,Modern Mind,History,History and Society,modern mind
+E543,Handwritten lecture notebook,Argumentation,"Philosophy, Logic and Critical Thinking",Language and Meaning,argumentation
+E543,Handwritten lecture notebook,Argumentation,"Philosophy, Logic and Critical Thinking",Knowledge and Method,argumentation
+E544,Handwritten lecture notebook,New Testament,History,History and Society,new testament
+E546,Handwritten lecture notebook,The Long 19th Century: European History from 1789 to 1917,History,History and Society,history
+E547,Handwritten lecture notebook,Psychology of Behaviour,Psychology and Cognitive Science,Mind and Cognition,psychology of
+E548,Handwritten lecture notebook,Geology: Origin and Evolution of Earth,Earth and Environmental Science,Evolution and Development,origin
+E549,Handwritten lecture notebook,Negotiation: Getting the Best Deal,Social Sciences and Economics,History and Society,negotiation
+E550,Handwritten lecture notebook,Planets and the Sun,Physics and Astronomy,Physical Structure and Scale,planets
+E551,Handwritten lecture notebook,Quest for Meaning,"Philosophy, Logic and Critical Thinking",Knowledge and Method,quest for meaning
+E552,Handwritten lecture notebook,The Search for Intelligent Life in Space,Physics and Astronomy,Evolution and Development,intelligent life
+E553,Handwritten lecture notebook,Modern Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E554,Handwritten lecture notebook,Everyday Physics,Physics and Astronomy,Physical Structure and Scale,physics
+E555,Handwritten lecture notebook,Domestication,"Biology, Neuroscience and Health",Evolution and Development,domestication
+E556,Handwritten lecture notebook,Courtroom Cases,Social Sciences and Economics,History and Society,courtroom
+E557,Handwritten lecture notebook,Abiogenesis,"Biology, Neuroscience and Health",Evolution and Development,abiogenesis
+E558,Handwritten lecture notebook,Mental Math,Mathematics and Statistics,Formal Reasoning,mental math
+E559,Handwritten lecture notebook,Reality,"Philosophy, Logic and Critical Thinking",Knowledge and Method,reality
+E560,Handwritten lecture notebook,Angelic Doctor: Thomas Aquinas,"Philosophy, Logic and Critical Thinking",Knowledge and Method,angelic doctor
+E561,Handwritten lecture notebook,Entanglement,Physics and Astronomy,Physical Structure and Scale,entanglement
+E562,Handwritten lecture notebook,Scientific Ideas That Changed the World,General Science and Interdisciplinary,Knowledge and Method,scientific ideas that changed
+E563,Handwritten lecture notebook,"Blancanieves, Pulgarcito...",Languages and Linguistics,Language and Meaning,blancanieves
+E564,Handwritten lecture notebook,Arabic,Languages and Linguistics,Language and Meaning,arabic
+E565,Handwritten lecture notebook,Probability,Mathematics and Statistics,Formal Reasoning,probability

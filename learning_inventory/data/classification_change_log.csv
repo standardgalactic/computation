@@ -1,0 +1,99 @@
+﻿entry_id,source,title,field,old_value,new_value,reason
+E001,University of New Brunswick transcript,Effective Oral Communications,primary,Education and Pedagogy,Languages and Linguistics,Communication skills course; not a pedagogy course
+E011,University of New Brunswick transcript,Introduction to Modern Literature,primary,"Arts, Literature and Music","Arts, Music and Literature",Label normalization
+E014,University of New Brunswick transcript,Introduction to Psychology I,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E019,University of New Brunswick transcript,Introduction to Modern Literature,primary,"Arts, Literature and Music","Arts, Music and Literature",Label normalization
+E021,University of New Brunswick transcript,Introduction to Psychology II,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E024,University of New Brunswick transcript,Introduction to Statistical Analysis in Psychology,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E024,University of New Brunswick transcript,Introduction to Statistical Analysis in Psychology,secondary,,Mathematics and Statistics,Statistics
+E025,University of New Brunswick transcript,Health Psychology,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E025,University of New Brunswick transcript,Health Psychology,secondary,,"Biology, Neuroscience and Health",Physiological or health content
+E026,University of New Brunswick transcript,Learning,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E029,University of New Brunswick transcript,Child Development,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E030,University of New Brunswick transcript,Cognitive Processes,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E031,University of New Brunswick transcript,History of Psychology,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E031,University of New Brunswick transcript,History of Psychology,secondary,,History,Title names history
+E033,University of New Brunswick transcript,Introduction to Second Language Education,secondary,,Languages and Linguistics,Language teaching
+E037,University of New Brunswick transcript,Fundamentals of Social Psychology,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E037,University of New Brunswick transcript,Fundamentals of Social Psychology,secondary,,Social Sciences and Economics,Social behavior
+E038,University of New Brunswick transcript,Perception,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E039,University of New Brunswick transcript,Physiological Psychology,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E039,University of New Brunswick transcript,Physiological Psychology,secondary,,"Biology, Neuroscience and Health",Physiological or health content
+E040,University of New Brunswick transcript,Advanced Studies in ESL Education,secondary,,Languages and Linguistics,Language teaching
+E041,University of New Brunswick transcript,Field Experience in TESL,secondary,,Languages and Linguistics,Language teaching
+E048,University of New Brunswick transcript,Symbolic Logic I / Propositional Calculus,secondary,,Mathematics and Statistics,Formal logic
+E049,University of New Brunswick transcript,Theories of Personality,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E052,University of New Brunswick transcript,Philosophies of Mind,secondary,,Psychology and Cognitive Science,Philosophy of mind meets cognitive science
+E054,University of New Brunswick transcript,Research Methods in Psychology,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E055,University of New Brunswick transcript,Advanced Social Psychology,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E055,University of New Brunswick transcript,Advanced Social Psychology,secondary,,Social Sciences and Economics,Social behavior
+E056,University of New Brunswick transcript,Changing Behaviour,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Psychology course identified by course code PSYC
+E081,edX dashboard,Observation Theory: Estimating the Unknown,secondary,Engineering and Applied Technology,,No defensible second domain from the title
+E104,edX dashboard,The Science of Everyday Thinking,primary,"Philosophy, Logic and Critical Thinking",Psychology and Cognitive Science,Cognitive science of reasoning
+E104,edX dashboard,The Science of Everyday Thinking,secondary,Social Sciences and Economics,"Philosophy, Logic and Critical Thinking",Reasoning
+E108,edX dashboard,Basics of Scientific Visualization in Mathematical Modeling of Systems,secondary,,Computer Science and Programming,Title names computation or visualization
+E128,edX dashboard,Boltzmann Law: Physics to Computing,secondary,,Computer Science and Programming,Title names computing
+E130,edX dashboard,Mathematical and Computational Methods,secondary,,Computer Science and Programming,Title names computation or visualization
+E145,edX dashboard,Computational Neuroscience: Neuronal Dynamics of Cognition,secondary,Computer Science and Programming,Psychology and Cognitive Science,Title names cognition
+E150,edX dashboard,"Belong / Appartenir: Community, Race, and Space in the U.S. and France",secondary,History,,No defensible second domain from the title
+E168,edX dashboard,Embedded Systems - Shape The World: Microcontroller Input/Output,secondary,,Computer Science and Programming,Microcontroller programming
+E204,edX dashboard,The Science of Happiness,primary,Social Sciences and Economics,Psychology and Cognitive Science,Psychology of well-being
+E204,edX dashboard,The Science of Happiness,secondary,"Biology, Neuroscience and Health",,No defensible second domain from the title
+E215,edX dashboard,Computer Graphics,secondary,"Arts, Music and Literature",,No defensible second domain from the title
+E227,edX dashboard,AP® Biology - Part 2: Genetics,secondary,Mathematics and Statistics,,No defensible second domain from the title
+E237,edX dashboard,Space Mission Design and Operations,secondary,Physics and Astronomy,,No defensible second domain from the title
+E242,edX dashboard,Big Data and Education,secondary,,"AI, Machine Learning and Data Science",Title names big data
+E244,edX dashboard,Speech Recognition Systems,secondary,,Languages and Linguistics,Speech and language
+E310,Handwritten lecture notebook,Addiction,secondary,,Psychology and Cognitive Science,Brain and behavior
+E314,Handwritten lecture notebook,Science of Self: Genetics,secondary,Mathematics and Statistics,,No defensible second domain from the title
+E315,Handwritten lecture notebook,Oceanography,secondary,"Biology, Neuroscience and Health",,No defensible second domain from the title
+E317,Handwritten lecture notebook,Unexpected Economics,secondary,History,,No defensible second domain from the title
+E318,Handwritten lecture notebook,History of Life,secondary,Earth and Environmental Science,,No defensible second domain from the title
+E319,Handwritten lecture notebook,Shape of Nature,secondary,Earth and Environmental Science,,No defensible second domain from the title
+E326,Handwritten lecture notebook,Understanding Japan,secondary,History,,No defensible second domain from the title
+E328,Handwritten lecture notebook,History of Life,secondary,Earth and Environmental Science,,No defensible second domain from the title
+E333,Handwritten lecture notebook,"Hearing, Touching, Tasting",primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Sensory perception
+E337,Handwritten lecture notebook,High School Chemistry,secondary,Physics and Astronomy,,No defensible second domain from the title
+E338,Handwritten lecture notebook,Oceanography,secondary,"Biology, Neuroscience and Health",,No defensible second domain from the title
+E339,Handwritten lecture notebook,Addiction,secondary,,Psychology and Cognitive Science,Brain and behavior
+E345,Handwritten lecture notebook,Artículos — Del Valle,secondary,"Arts, Music and Literature",,No defensible second domain from the title
+E346,Handwritten lecture notebook,Diario de Che Guevara,secondary,"Arts, Music and Literature",History,Revolutionary diary; historical document
+E347,Handwritten lecture notebook,Donde se fue — Guevara,secondary,"Arts, Music and Literature",,No defensible second domain from the title
+E348,Handwritten lecture notebook,D'Orgeville — Sade,secondary,"Arts, Music and Literature",,No defensible second domain from the title
+E349,Handwritten lecture notebook,Ángeles tutelares,secondary,"Arts, Music and Literature",,No defensible second domain from the title
+E350,Handwritten lecture notebook,La experiencia del dolor,secondary,"Arts, Music and Literature",,No defensible second domain from the title
+E351,Handwritten lecture notebook,El problema del dolor — C. S. Lewis,secondary,"Arts, Music and Literature","Philosophy, Logic and Critical Thinking",C. S. Lewis on suffering; philosophical and theological argument
+E352,Handwritten lecture notebook,Leyes de Murphy,secondary,"Arts, Music and Literature",,No defensible second domain from the title
+E358,Handwritten lecture notebook,Greek and Roman Technology,secondary,"Biology, Neuroscience and Health",Engineering and Applied Technology,Title names technology
+E360,Handwritten lecture notebook,How Colors Affect You,primary,"Arts, Music and Literature",Psychology and Cognitive Science,Psychology of color perception
+E360,Handwritten lecture notebook,How Colors Affect You,secondary,,"Arts, Music and Literature",Color in art and design
+E362,Handwritten lecture notebook,Music and the Brain,primary,"Biology, Neuroscience and Health",Psychology and Cognitive Science,Music cognition; title names brain and music perception
+E364,Handwritten lecture notebook,Organic Chemistry,secondary,Physics and Astronomy,,No defensible second domain from the title
+E365,Handwritten lecture notebook,History of Life,secondary,Earth and Environmental Science,,No defensible second domain from the title
+E370,Handwritten lecture notebook,Elemental Matters,secondary,Physics and Astronomy,,No defensible second domain from the title
+E374,Handwritten lecture notebook,Your Deceptive Mind,primary,"Philosophy, Logic and Critical Thinking",Psychology and Cognitive Science,Cognitive biases and reasoning errors; critical thinking kept as secondary
+E374,Handwritten lecture notebook,Your Deceptive Mind,secondary,Social Sciences and Economics,"Philosophy, Logic and Critical Thinking",Critical thinking
+E380,Handwritten lecture notebook,Understanding the Brain,secondary,,Psychology and Cognitive Science,Brain and behavior
+E383,Handwritten lecture notebook,Your Deceptive Mind: Critical Thinking,primary,"Philosophy, Logic and Critical Thinking",Psychology and Cognitive Science,Cognitive biases and reasoning errors; critical thinking kept as secondary
+E383,Handwritten lecture notebook,Your Deceptive Mind: Critical Thinking,secondary,Social Sciences and Economics,"Philosophy, Logic and Critical Thinking",Critical thinking
+E384,Handwritten lecture notebook,Understanding Japan,secondary,History,,No defensible second domain from the title
+E385,Handwritten lecture notebook,Understanding the Earth,primary,Social Sciences and Economics,Earth and Environmental Science,Title corrected from Understanding the Economy; earth science
+E385,Handwritten lecture notebook,Understanding the Earth,secondary,History,,No defensible second domain from the title
+E389,Handwritten lecture notebook,History of Science: Antiquity,secondary,"Philosophy, Logic and Critical Thinking",,No defensible second domain from the title
+E390,Handwritten lecture notebook,History of Science: 1700–1900,secondary,"Philosophy, Logic and Critical Thinking",,No defensible second domain from the title
+E400,Handwritten lecture notebook,High School Chemistry,secondary,Physics and Astronomy,,No defensible second domain from the title
+E404,Handwritten lecture notebook,Elemental Matters,secondary,Physics and Astronomy,,No defensible second domain from the title
+E409,Handwritten lecture notebook,Joy of Thinking,secondary,Mathematics and Statistics,,No defensible second domain from the title
+E410,Handwritten lecture notebook,History of Life,secondary,Earth and Environmental Science,,No defensible second domain from the title
+E418,Handwritten lecture notebook,Elemental Matters,secondary,Physics and Astronomy,,No defensible second domain from the title
+E435,Handwritten lecture notebook,Modern Science,secondary,"Philosophy, Logic and Critical Thinking",,No defensible second domain from the title
+E439,Handwritten lecture notebook,History of Life,secondary,Earth and Environmental Science,,No defensible second domain from the title
+E451,Handwritten lecture notebook,Oceanography,secondary,"Biology, Neuroscience and Health",,No defensible second domain from the title
+E453,Handwritten lecture notebook,Genetics,secondary,Mathematics and Statistics,,No defensible second domain from the title
+E454,Handwritten lecture notebook,Complex Systems,secondary,Mathematics and Statistics,,No defensible second domain from the title
+E456,Handwritten lecture notebook,History of Science: Antiquity–1700,secondary,"Philosophy, Logic and Critical Thinking",,No defensible second domain from the title
+E457,Handwritten lecture notebook,History of Science: 1700–1900,secondary,"Philosophy, Logic and Critical Thinking",,No defensible second domain from the title
+E471,Handwritten lecture notebook,How Information Grows,secondary,Social Sciences and Economics,,No defensible second domain from the title
+E473,Handwritten lecture notebook,Brief History,primary,Physics and Astronomy,History,"Identified as Stearns, A Brief History of the World (Great Courses, 36 lectures); world history, not physics"
+E479,Handwritten lecture notebook,The Joy of Thinking,secondary,Mathematics and Statistics,,No defensible second domain from the title
+E480,Handwritten lecture notebook,Modern Science,secondary,"Philosophy, Logic and Critical Thinking",,No defensible second domain from the title
