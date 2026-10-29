@@ -1,3 +1,5 @@
+[Beyond the Token Budget](https://standardgalactic.github.io/computation/beyond-the-token-budget.pdf)
+
 [The Counterfeit Observation](https://standardgalactic.github.io/computation/counterfeit-observation.pdf)
 
 [The Sociality of Computation](https://standardgalactic.github.io/computation/sociality-of-computation.pdf)
