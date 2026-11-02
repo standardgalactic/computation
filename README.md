@@ -1,3 +1,7 @@
+[Altered Records and Available Actions](https://standardgalactic.github.io/computation/altered-records.pdf)
+
+* [How AI Tutors Hack Their Own Predictions](https://standardgalactic.github.io/computation/altered-records.html) — *Audio Overview*
+
 [Beyond the Token Budget](https://standardgalactic.github.io/computation/beyond-the-token-budget.pdf)
 
 [The Counterfeit Observation](https://standardgalactic.github.io/computation/counterfeit-observation.pdf)
