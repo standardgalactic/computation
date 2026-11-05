@@ -1,3 +1,7 @@
+[The Architecture of Continuity](https://standardgalactic.github.io/computation/architecture_of_continuity.pdf)
+
+[Magnificant Monotony](https://standardgalactic.github.io/computation/magnificent_monotony.pdf)
+
 [Altered Records and Available Actions](https://standardgalactic.github.io/computation/altered-records.pdf)
 
 * [How AI Tutors Hack Their Own Predictions](https://standardgalactic.github.io/computation/altered-records.html) — *Audio Overview*
